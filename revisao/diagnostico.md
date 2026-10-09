@@ -1,6 +1,24 @@
 # Diagnóstico da tese (versão recebida: `Revisao_manual_tese.docx`)
 
-Li a tese inteira, incluindo tabelas e figuras (que estão como imagem), referências e apêndices, e comparei tudo com o guia de estilo (`revisao/guia-de-estilo.md`). Os itens abaixo indicam a **seção** onde está cada problema, porque é assim que você acha no Word. Os códigos [F], [C], [R], [T], [G] e [E] estão explicados na Parte E do guia.
+Li a tese inteira, incluindo tabelas e figuras (que estão como imagem), referências e apêndices, e comparei tudo com o guia de estilo (`revisao/guia-de-estilo.md`). Os itens abaixo indicam a **seção** onde está cada problema, porque é assim que você acha no Word. Os códigos [F], [C], [R], [T], [G] e [E] estão explicados na seção 5 do guia.
+
+## Atualização: depois da skill do autor (`thesis-writing`)
+
+Este diagnóstico (v1) foi escrito antes de eu receber a sua skill. Com ela, três pontos daqui mudam e aparecem achados novos. A análise v2 (`revisao/workflow.md`) já parte das regras da skill.
+
+**O que muda neste diagnóstico:**
+- **Tamanho das frases.** Ignore as metas de média ou de teto que apareciam no guia v1. A skill não tem teto nem média: o que importa é a **dispersão** e se uma frase longa obriga a reler. As médias da tabela abaixo ficam só como informação.
+- **"therefore".** Não é defeito por si (ver a linha "Palavras-muleta" da seção 6). É o conector de consequência que a skill pede. Só é defeito quando abre dois parágrafos da mesma seção ou não marca consequência nenhuma.
+- **P4, a mediana não recalculada.** A frase segue a sua regra de honestidade (é o *worked case* da skill). A melhor saída é **calcular** a mediana com os seus dados do registro. Se não der, a frase fica, reescrita sem tom de nota de trabalho.
+
+**Achados novos com a skill:**
+- **Versão do arquivo.** Sete formulações que a sua skill lista como *já substituídas* ("Written → Replaced with") continuam no Cap. 1 deste `.docx`: *formalized Quality by Design*, *gave this idea an operational form*, *has to be operational to be real*, *noted the absence of standardized instruments*, *translates … into practices*, *designed to complement the obligations*, *an artifact derived from documented evidence*. Das versões aceitas, só *pointed out that there are no standardized instruments* aparece (5.2). **É preciso confirmar se este `.docx` é a versão mais recente.**
+- **"we" na Introdução:** *"Within this context, we narrowed the work…"* (1.3). Pela skill, a Introdução é impessoal.
+- **Disfarces de oposição:** 18 casos de *", not X"* (11 no Cap. 4) e 5 de *"not X. It is Y"*. *rather than*, *instead of* e *and not* já estão em zero.
+- **Caudas autocomentadas:** 55 candidatos *", and this/that/it"* e 14 *", which is the"*. São candidatos, não veredito.
+- **Ponto e vírgula fora de citação:** 21.
+- **Trios:** muito frequentes, sobretudo no Cap. 4.
+- Já estão em zero: travessões, contrações, *Taken together*.
 
 ## Visão geral
 
@@ -8,7 +26,7 @@ O argumento é bom e a tese é honesta sobre os próprios limites. A ideia centr
 
 1. **Incoerências internas**: números que mudam entre capítulos, remissões para seções que não dizem o que se afirma, as etapas da DSRM contadas de formas diferentes, a origem dos quatro pilares contada de quatro jeitos.
 2. **Redundância**: a Discussão (5.2) repete quase toda a Introdução (1.4), e os números do registro aparecem em sete lugares.
-3. **Tom desigual**: o Cap. 2 tem frases informais e algumas quebradas. Os Caps. 4 e 5 são lisos e longos demais, com marcas de texto de IA (Parte D do guia).
+3. **Tom desigual**: o Cap. 2 tem frases informais e algumas quebradas. Os Caps. 4 e 5 são lisos e longos demais, com marcas de texto de IA (seção 4 do guia).
 4. **Convenções**: siglas alternando com a forma por extenso, ortografia britânica nas tabelas, hífens, números, maiúsculas nos títulos.
 5. **Pendências** que impedem a entrega (seção 1 abaixo).
 
@@ -144,7 +162,7 @@ O maior ganho de clareza da revisão está aqui. Só cortando repetições, a Di
 
 ## 6. Convenções [G] e [E]
 
-O detalhe está nas Partes A–C do guia. Contagens no texto corrido (Caps. 1–6):
+O detalhe está na skill `thesis-writing` e nas seções 2–3 do guia. Contagens no texto corrido (Caps. 1–6):
 
 | Item | Situação |
 |---|---|
@@ -159,7 +177,7 @@ O detalhe está nas Partes A–C do guia. Contagens no texto corrido (Caps. 1–
 | Normas | *ISO 14155:2026 Section 6.2*, *Section 9.1(b)*, *ISO 13485 Sections 8.5.2* misturados com *Clause*; *9.2.4.5 p)* e *9.2.4.5(p)*. |
 | Citações | Caps. 1–4 com citações em **subscrito** (o normal no estilo Vancouver é [n] na linha ou sobrescrito). O Cap. 5 inteiro (19 citações) e 5 citações do Cap. 4 (4.2.1, 4.3.1, 4.3.2, 4.4.1) estão em texto normal. |
 | Autores | *Peffers et al.*, *Avendano et al.*, *Blencowe et al.* ao lado de *Diani and colleagues*, *Adams and colleagues*. |
-| Palavras-muleta | *therefore* 60×, *itself* 36×, *", which is"* 27×. |
+| Palavras-muleta | *itself* 36× e *", which is"* 27×. *therefore* (60×) só conta onde abre dois parágrafos da mesma seção ou não marca consequência (ver Atualização). |
 | Referências | Títulos ora em *Title Case*, ora em *sentence case* (ex.: refs. 61–65 e 70 em minúsculas); algumas com PMID e outras sem. |
 
 ## 7. Tabelas e figuras
@@ -176,7 +194,7 @@ O detalhe está nas Partes A–C do guia. Contagens no texto corrido (Caps. 1–
 
 ## 8. Ordem de revisão proposta
 
-1. **Decisões suas**: os itens ⚠️ da Parte C do guia e os itens [F] acima.
+1. **Decisões suas**: os itens ⚠️ da seção 3 do guia e os itens [F] acima.
 2. **Cap. 2**: reescrever para o registro do resto da tese (maior ganho por palavra).
 3. **Caps. 3 e 1**: coerência (C1–C21) e convenções.
 4. **Cap. 4**: tirar as marcas de IA, dividir frases longas, ajustar C14–C16.

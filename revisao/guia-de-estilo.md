@@ -1,145 +1,105 @@
 # Guia de estilo da revisão
 
-Estas são as regras que uso para revisar a tese. Elas vêm de três fontes:
+A regra principal da revisão é a **skill do autor**, `thesis-writing`: `.claude/skills/thesis-writing/SKILL.md`. O Felipe escreveu essa skill a partir do workshop CBM, e ela tem três partes: prosa científica, estrutura do argumento, evidência e entrega.
 
-1. **Workshop CBM**: *Writing a clear scientific message*, da Dra. Carolina Borges Merjane (`original/Roche_workshop-CBM_script_removed.pdf`).
-2. **Skills de escrita instaladas**: `writing-skills:orwells-rules` e `writing-skills:plain-language` para clareza; `apodictic` (*AI-prose calibration*) e `ghost-writer:consistency-check` para padrões de texto de IA e coerência entre capítulos.
-3. **O que a própria tese já faz bem**: onde o texto já tem uma convenção estável, eu sigo a convenção e não invento outra.
-
-A regra que está acima de todas é a do workshop: *"Can a knowledgeable reader understand exactly what I mean on the first reading, with no ambiguity?"* Quando uma regra deixa o texto mais rígido ou menos preciso, a clareza ganha (é a "regra 6" de Orwell).
+Este guia não repete a skill. Ele guarda só o que é **específico desta tese**:
+1. a ordem de precedência entre as regras;
+2. os conflitos entre a skill e as outras skills, já resolvidos;
+3. a terminologia fixa;
+4. os padrões que encontrei no texto, ligados à regra correspondente;
+5. os códigos usados para marcar cada mudança.
 
 ---
 
-## Parte A: gramática (workshop CBM)
+## 1. Precedência
 
-### A1. Voz ativa
-- Prefira a voz ativa com sujeito explícito: *"We compared…"*, *"ISO 14155:2026 assigns…"*, *"Table 3.1 lists…"*.
-- A passiva é aceitável nos Métodos quando o agente é óbvio ou irrelevante (*"Facility names were normalized"*).
-- Evite a passiva que esconde quem interpreta: *"It is suggested that…"* → *"We suggest that…"* ou *"Our results suggest…"*.
-- Tabelas e figuras são sujeito no presente: *"Table 4.1 maps…"*, e não *"…is mapped in Table 4.1"*.
+Segue a seção *Rule precedence* da skill:
 
-### A2. Tempos verbais (pela função da frase)
-| Função | Tempo | Exemplo na tese |
+1. Exigências da Universidade de Lisboa, da faculdade e do mestrado.
+2. O manual de estilo escolhido para as referências (Vancouver, se for o padrão do curso).
+3. **`thesis-writing`, a skill do autor.**
+4. Workshop CBM (`original/Roche_workshop-CBM_script_removed.pdf`), que é a fonte da skill. Uso onde a skill não fala.
+5. Skills genéricas: `orwells-rules`, `plain-language`, `humanizer` e as auditorias de prosa do `apodictic`. Servem **só como lentes de detecção**. Uma regra delas nunca se sobrepõe às dos níveis 1–4.
+6. Onde ainda sobrarem duas opções válidas, escolho uma e mantenho igual na tese inteira.
+
+## 2. Conflitos resolvidos
+
+Estes pontos do meu guia v1 e das skills genéricas batem de frente com a skill do autor. A skill do autor vence.
+
+| Regra conflitante | De onde vinha | O que vale |
 |---|---|---|
-| O que fizemos ou encontramos | passado simples | *"We searched…"*, *"The analysis identified five gaps"* |
-| Conhecimento estabelecido, o que as normas dizem | presente simples | *"ISO 14155:2026 places clinical quality management in Clause 9"* |
-| Interpretação dos resultados (Discussão) | presente simples | *"These findings indicate…"* |
-| Estudos anteriores com relevância atual | *present perfect* | *"Several studies have described site-level quality management as reactive"* |
-| Sequência de eventos passados | *past perfect* | *"…after the research for this thesis had started"* |
-| Referência a tabela ou figura | presente simples | *"Figure 4.1 shows…"* |
+| Teto de 30 palavras por frase; média-alvo de 18–20 | meu guia v1 | **Sem teto e sem média.** A frase tem o tamanho que a ideia pede. O que se mede é a **dispersão** (desvio-padrão, frase mais longa), e só como diagnóstico. Frase longa só é defeito quando obriga a reler. |
+| Frases com até 25 palavras; Flesch ≥ 60 | `plain-language` | Descartado pelo mesmo motivo. |
+| *therefore* como palavra-muleta (60×) | meu guia v1 | *therefore* é conector de consequência legítimo. A skill **pede** que cadeias de consequência sejam ligadas e fechem com um conector. O defeito é outro: o mesmo conector abrir dois parágrafos na mesma seção, ou um conector que não marca consequência nenhuma. |
+| Falar com o leitor por "you" | `plain-language` | Proibida a segunda pessoa. |
+| Passiva abaixo de 10% das frases | `orwells-rules` | Passiva permitida onde a ação ou o objeto importam mais que o agente (Métodos). Nunca alternar a voz para o mesmo agente em frases vizinhas. |
+| "we" em todos os capítulos | meu guia v1 | **Introdução em terceira pessoa impessoal**, sem "we". **Da Metodologia em diante**, primeira pessoa do plural. |
+| Ponto e vírgula entre orações independentes ligadas | meu guia v1 | Ponto e vírgula **só** dentro de parênteses de citação ou em itens de lista complexos. No resto, ponto final. |
+| Trocar travessão por dois-pontos ou parênteses | `humanizer` | Dois-pontos no meio da frase só antes de lista, exemplo ou definição genuínos, depois de uma afirmação completa. Na prática, ponto ou vírgula. |
+| Abrir com uma frase que gera curiosidade | `scott-adams` | Fora: o parágrafo começa pela substância. |
+| Trocar palavra técnica por palavra simples | `orwells-rules`, `plain-language` | Termo definido, regulatório ou técnico fica **exato**, mesmo quando existe palavra mais simples ("one object, one name"). A simplificação vale para o vocabulário de ligação e de descrição ao redor. |
+| Retirar a frase *"We have not recalculated the median…"* (P4) | meu diagnóstico v1 | É a aplicação deliberada da regra de honestidade da skill (o *worked case* dela). Fica a decisão: **calcular** a mediana a partir dos seus dados do registro, o que é o melhor, ou reescrever a frase sem o tom de nota de trabalho. Inventar um número nunca é opção. |
 
-Também é preciso evitar trocar de tempo dentro da mesma frase, como em *"sites would find problems … and then corrected them"*.
+## 3. Terminologia fixa da tese
 
-### A3. Menos preposições
-- Troque nominalizações por verbos: *"performed an analysis of"* → *"analyzed"*.
-- Quebre cadeias de *of*: *"the analysis of the effect of the treatment on the growth of…"*.
-- Use o adjetivo ou substantivo atributivo quando ficar claro: *"the cells in the liver"* → *"liver cells"*, sem empilhar mais de três substantivos.
-
-### A4. Menos modificadores
-- Corte intensificadores vazios: *genuinely*, *substantially*, *materially*, *exactly*, *directly*, *clearly*, *particularly*.
-- Troque o modificador pelo dado quando ele existir (*"a substantial registry base"* → *"996 records"*).
-- Não empilhe modificadores.
-
-### A5. Pontuação
-- Vírgula serial (de Oxford) **sempre**: *"temperature, pH, and cell density"*.
-- Ponto e vírgula só entre orações independentes muito ligadas. Na dúvida, use ponto final.
-- Travessão (—): evitar no corpo do texto.
-- Hífen em modificadores compostos **antes** do substantivo (*"a site-level framework"*, *"day-to-day operations"*) e sem hífen depois dele (*"at site level"*).
-- Prefixos sem hífen, salvo vogal dupla ou ambiguidade: *nonhospital*, *nonacademic*, *interobserver*, *preclinical*, mas *re-consent*, *anti-inflammatory*.
-- Sem contrações e sem ponto de exclamação.
-
-## Parte B: estilo (workshop CBM)
-
-### B1. Fio narrativo
-Pergunta → métodos → resultados → conclusões. Cada parágrafo tem uma função e começa por ela. Cada seção diz o que entrega e entrega isso, sem repetir o que outra seção já entregou.
-
-### B2. Frases
-- Uma ideia por frase. **Teto suave de 30 palavras**; acima de 35, a frase deve ser dividida, a não ser que seja uma lista.
-- Concordância: *data are*, *criteria are*, *the team was*, *a total of 46 investigations were*.
-- Nada de particípio solto (*dangling participle*): *"Using the registry, 235 organizations were identified"* → *"Using the registry, we identified 235 organizations"*.
-- *Respectively* só para pareamento em ordem, no fim da oração.
-
-### B3. Ortografia: inglês americano
-O corpo da tese já é americano (*center*, *orthopedic*, *standardized*, *enrollment*, *analyze*). Ficam como estão:
-- nomes próprios: *International Council for **Harmonisation***, *ROMIO (**Randomised** Oesophagectomy…)*;
-- títulos de referências, que mantêm a grafia publicada.
-
-O que precisa ser uniformizado: *orthopaedic* (2×) e as **tabelas e figuras em imagem**, que usam grafia britânica (*centre*, *standardised*, *programme*, *authorisation*, *enrolment*, *recognise*, *theatre*, *afterwards*).
-
-### B4. Números
-- Algarismos para medidas, dados e estatística (*46 investigations*, *27.7%*, *p = 0.03*).
-- Por extenso de um a nove no texto corrido (*five gaps*, *seven phases*, *four pillars*).
-- **Algarismos de 10 para cima** (*12 domains*, *24 instruments*, *12 design requirements*). Hoje a tese alterna entre *twenty-four* e *24*.
-- Nunca começar frase com algarismo (*"Sixty of the 65…"*).
-- O mesmo formato para valores comparáveis na mesma frase.
-- Ponto decimal (27.7%) e vírgula de milhar (1,111).
-
-### B5. Maiúsculas
-- Com maiúscula quando numerado: *Section 3.2*, *Table 4.1*, *Figure 4.1*, *Chapter 3*, *Appendix A*, *Phase 2*, *Clause 10.3*.
-- Pilares e instrumentos com maiúscula, porque são nomes próprios do framework: *Governance*, *Risk Management*, *Site Risk Register*.
-- Métodos e conceitos comuns em minúscula: *failure mode and effects analysis*, *risk-based monitoring*.
-- **Títulos de seção:** um só padrão. Proponho *sentence case* (*"1.1 Historical overview and recent updates"*), que já é a maioria nos níveis 2 e 3.
-
-### B6. Abreviaturas
-- Definir na primeira ocorrência do corpo do texto (o Abstract conta à parte) e **depois usar sempre a sigla**.
-- Não redefinir: ISO e MDR estão definidas duas ou três vezes.
-- Não alternar: *CtQ* aparece 43× e *Critical-to-Quality* por extenso 8×; *PI* e *principal investigator*; *CAPA* e *corrective and preventive action*; *CIP*, *CRO*, *RBM* e *AE*, todos nas duas formas.
-- Siglas dos 24 instrumentos: no texto corrido, use o nome do instrumento (*the Site Risk Register*). As siglas ficam nas tabelas e figuras, como pede o workshop: *"Readers should not need a glossary to follow your paper"*.
-
-## Parte C: terminologia fixa da tese
-
-Esta é a tabela que trava a consistência. As decisões marcadas com ⚠️ precisam do seu OK.
+A regra da skill é *"One object, one name"*. Os itens ⚠️ ainda esperam a sua decisão; os ✔ já estão decididos pela skill.
 
 | Conceito | Forma única | Hoje aparece também como |
 |---|---|---|
-| O artefato inteiro | **framework** | *architecture*, *model*, *quality architecture* (Abstract e Resumo falam em "architecture"/"arquitetura"; o título diz "Framework") ⚠️ |
-| Pilar 2 | **Risk Management** | *RBQM* (Abstract, Seção 2.5.1, Resumo) |
-| As cinco condições estruturais (Seções 1.3, 3.4.1 e 5.3) | ⚠️ *irreversibility*, *operator dependence*, *unit-level traceability*, *follow-up burden*, *measurement reliability* | *persistent traceability*, *the operational weight of follow-up*, *limited classification reliability* |
-| Instrumento de curva de aprendizagem | **Surgeon Learning Curve Tracking Log** | *Surgical Learning Curve Tracking*, *learning curve log*, *learning-curve log* |
-| Instrumento de supervisão do PI | **PI Oversight Template** | *PI Oversight Plan* (Tabela 4.1), *oversight plan* |
-| Instrumento de treinamento | **Training Record Evaluation and Release** | *…and Training Release* (Figura 4.2) |
-| Resultado relatado pelo paciente | ⚠️ **PROM** (*patient-reported outcome measure*) | *PRO*, *PROs*, *PROMs* |
-| Partes de normas | ISO → *Clause*; ICH → *Section*; MDR → *Article* / *Annex XV, Chapter II, Section 3.x* | *ISO 14155:2026 Section 6.2*, *Section 9.1(b)*, *ISO 13485 Sections 8.5.2* |
-| Formato de subcláusula | *Clause 9.2.4.5(p)* | *9.2.4.5 p)* |
-| Brochura | **Investigator's Brochure** | *Investigator Brochure* |
+| O artefato inteiro | ⚠️ **framework** | *architecture*, *model*, *quality architecture* (Abstract e Resumo falam em "architecture"/"arquitetura"; o título diz "Framework") |
+| Pilar 2 | ⚠️ **Risk Management** | *RBQM* (Abstract, Seção 2.5.1, Resumo) |
+| As cinco condições estruturais | ⚠️ *irreversibility*, *operator dependence*, *unit-level traceability*, *follow-up burden*, *measurement reliability* | *persistent traceability*, *the operational weight of follow-up*, *limited classification reliability* |
+| Resultado relatado pelo paciente | ⚠️ **PROM** | *PRO*, *PROs*, *PROMs* |
+| Instrumentos | Nome exato da Tabela 4.4: *Surgeon Learning Curve Tracking Log*, *PI Oversight Template*, *Training Record Evaluation and Release* | *Surgical Learning Curve Tracking*, *learning curve log*, *PI Oversight Plan*, *…and Training Release* |
+| Partes de normas | ISO → *Clause*; ICH → *Section*; MDR → *Article* / *Annex XV, Chapter II, Section 3.x*; formato *Clause 9.2.4.5(p)* | *ISO 14155:2026 Section 6.2*, *9.2.4.5 p)* |
+| Brochura | *Investigator's Brochure* | *Investigator Brochure* |
 | Citação de autores | *Peffers et al.* | *Diani and colleagues*, *Adams and colleagues* |
-| Citações | **[1, 2]** em texto normal | subscrito no .docx, e algumas sem subscrito ([1], [76]) |
-| Centro | *site* (genérico); *target center* (o centro-alvo) | *centre* nas tabelas |
-| Prefixos | *nonhospital*, *nonacademic*, *interobserver* ⚠️ | *non-hospital*, *non hospital*, *non-academic*, *inter-observer* |
+| Citações | [1, 2] em texto normal | subscrito no .docx nos Caps. 1–4 |
+| ✔ Ortografia | Inglês americano; nomes próprios mantêm a grafia oficial (*International Council for Harmonisation*) | *orthopaedic* (2×), grafia britânica nas tabelas em imagem |
+| ✔ Prefixos | Sem hífen: *nonhospital*, *nonacademic*, *interobserver*, *predefined*, *intraoperative*. Exceção: termos regulatórios consagrados (*post-market clinical follow-up*) | *non-hospital*, *non hospital*, *non-academic*, *inter-observer* |
+| ✔ Números | Algarismos para dados e valores (*12 domains*, *24 instruments*, *89%*); por extenso de um a nove no texto corrido; nunca começar frase com algarismo | *twenty-four*, *twelve* por extenso |
+| ✔ Siglas | Definir na primeira menção e nunca mais voltar à forma por extenso | *Critical-to-Quality* 8× após a definição, *principal investigator*, *CAPA*/*corrective and preventive action* etc. |
 
-## Parte D: padrões de "texto de IA" a evitar
+## 4. Padrões encontrados nesta tese → regra da skill
 
-A tese é tecnicamente sólida, mas tem marcas típicas de texto gerado ou polido por modelo de linguagem. O protocolo *AI-prose calibration* do `apodictic` chama isso de **fluência sem atrito**: frases corretas que qualquer paráfrase substituiria sem perda. Estes são os padrões que achei e o que fazer com cada um.
+Estes exemplos saem do texto atual. A seção da skill indica qual regra cada um viola.
 
-| # | Padrão | Exemplos na tese | Tratamento |
-|---|---|---|---|
-| D1 | **Molde "X is harder than…"** | *"Turning that principle into a workable schedule is harder than it sounds"*, *"Doing this well is harder than listing…"*, *"Building that evidence is harder than…"*, *"Executing that review well is harder than scheduling it"*, *"Closing that interval is harder than…"*, *"The harder question is…"*, *"The harder task is…"* (7×, quase todos no Cap. 4) | Dizer qual é a dificuldade, sem o molde. No máximo uma vez na tese. |
-| D2 | **Correctio ("não é X, é Y")** | *"What is missing is not a rule. It is a layer"*; *"These five gaps are not defects…"*; *"Paper is the floor of the design, not its endpoint"* | Afirmar Y diretamente. Guardar a forma para um ou dois momentos que realmente precisam dela. |
-| D3 | **Aforismo de fecho de parágrafo** | *"Verification comes too late."*; *"A control that the site never executes protects no one…"*; *"What the protocol cannot standardize, the site has to govern."* | No máximo um por seção. Os outros viram afirmação comum ou saem. |
-| D4 | **Palavras-muleta** | *therefore* (60×), *itself* (36×), *", which is"* (27×), *genuine/genuinely* (6×), *the one…* | Cortar onde a lógica já é óbvia; variar o conector ou reestruturar a frase. |
-| D5 | **Ressalva defensiva repetida** | *"This is a result limited to…, not proof that…"*, *"…is a hypothesis we did not test"*, *"Nobody has demonstrated…"* (repetido nas Seções 2.2, 3.2, 4.x, 5.x) | Juntar as ressalvas nas Seções 2.6 e 5.7 e deixar no corpo só a que muda a leitura da frase. |
-| D6 | **Metacomentário de rascunho** | *"our earlier set of five indicators"* (4.5); *"an extension added to the original set"* e *"inherited from … an earlier instrument"* (Figura 4.5); *"We have not recalculated the median…"* (5.7); *"Section 3.4.4 has to state which of the two governs the argument"* (5.7) | Remover. São notas de trabalho que ficaram no texto. |
-| D7 | **Abstração personificada** | *"The comparison does more than describe the gap"*; *"the operational architecture that the instruments would be glad the site has"* | Devolver o agente humano: *"We…"*, ou o documento como sujeito literal. |
-| D8 | **Eco de estrutura** | Parágrafos seguidos que abrem com *"Whether…"*, *"Nobody…"*, *"A site that…"*; listas sempre em trios | Variar a abertura e usar o número de itens que existe, sem forçar o trio. |
-| D9 | **Frases longas encadeadas** | Caps. 4 e 5: média de 22–24 palavras por frase e ~100 frases com mais de 35 palavras | Dividir. Mirar a média em 18–20, com variação natural de tamanho. |
-| D10 | **Costura de registro** (*register seam*) | O Cap. 2 tem frases informais ou quebradas (*"Although very important their main focus is still mainly drug investigational products, so we needed to go after…"*), e os Caps. 4 e 5 têm prosa lisa e longa | Levar tudo para o mesmo registro: acadêmico, direto, com "we", sem coloquialismo e sem floreio. |
+| Padrão nesta tese | Exemplos | Regra da skill |
+|---|---|---|
+| **Construção de oposição** e seus disfarces | *"What is missing is not a rule. It is a layer."*; *"Paper is the floor of the design, not its endpoint"*; *"These are general functions, not required positions"*. São 18 casos de *", not X"* e 5 de *"not X. It is Y"*. | *The opposition construction*; *`rather than` and every disguise of it* |
+| **Molde de frase feita para soar bem** | *"X is harder than it sounds/than Y"* (7×, quase todos no Cap. 4) | *Two tests before delivering* ("Does any sentence exist because it sounded good?") |
+| **Aforismo e fecho que repete** | *"Verification comes too late."*; *"A control that the site never executes protects no one…"*; *"What the protocol cannot standardize, the site has to govern."* | *A closing sentence that merely repeats…*; *Aphorism and epigram* |
+| **Cauda autocomentada** | Candidatos: *", and this/that/it …"* (55) e *", which is the …"* (14), a maioria nos Caps. 4 e 5. É preciso conferir caso a caso: a busca dá candidatos, não veredito. | *The self-commenting tail* |
+| **Trios por cadência** | Em todo o texto, com concentração no Cap. 4 (a contagem automática dá centenas de candidatos, inclusive listas legítimas de 4 ou mais itens) | *Grouping: the list of three is a default shape* |
+| **Frases curtas enfáticas em sequência** | *"Verification comes too late."* (3.4.3), *"The difference matters in practice."* (1.1); 26–29 frases com menos de 8 palavras por capítulo nos Caps. 2–4 | *Short assertive sentences* (primeiro ligar, depois testar se dá para apagar) |
+| **Afirmação maior que a evidência** | *"so nothing in the framework is invented"* (3.5); *"No standard tells an investigational site how to run a quality system"* (3.2.1) | *Proportionality of the claim* |
+| **Metacomentário e história do rascunho** | *"our earlier set of five indicators"* (4.5); legenda da Figura 4.5 (*"earlier instrument"*, *"original set"*); *"Section 3.4.4 has to state…"* (5.7) | *Meta-commentary about the writing* |
+| **Abertura que anuncia** | *"Two findings limit what this work has achieved."* (1.4.1); *"Three limitations apply to the work as a whole."* (2.6); *"Nine checks define the scope…"* (4.4.1) | *The announcing opener* |
+| **"we" na Introdução** | *"Within this context, we narrowed the work…"* (1.3) | *Fixed conventions* (Introdução impessoal) |
+| **Ponto e vírgula fora de citação** | 21 ocorrências (Cap. 4: 10) | *Punctuation* |
+| **Costura de registro** | Cap. 2 informal e com frases quebradas; Caps. 4 e 5 lisos e longos | *The governing instruction* (prosa B2–C1, plana, precisa) |
+| **Repetição do mesmo caminho de desenvolvimento** | interpretação convencional → rejeição → reformulação → consequência, em seções vizinhas dos Caps. 4 e 5 | *Vary the development path* |
 
-O que torna o texto mais humano, nesta tese:
-- **Tomar posição** com o dado na mão. A tese já faz isso bem na comparação com a *Clinical Trial Site Performance Measure*: *"A reader who asks which set is better evidenced should prefer the validated one"*.
-- **Ser concreto**: um número, uma cláusula, um exemplo do ombro, no lugar da formulação geral.
-- **Variar o ritmo**: frases curtas ao lado de médias, e nem todo parágrafo fechando com uma sentença de efeito.
+Já estão em zero na versão atual: *rather than*, *instead of*, *and not*, *Taken together*, travessões, contrações.
 
-## Parte E: como cada mudança é marcada
-
-Toda alteração proposta leva um código:
+## 5. Códigos de cada mudança
 
 | Código | Tipo |
 |---|---|
 | **[F]** | Fato, número ou referência (precisa da sua confirmação) |
-| **[C]** | Coerência entre seções (contradição, remissão errada) |
-| **[R]** | Redundância (texto repetido em outra seção) |
-| **[T]** | Tom (padrões da Parte D, registro) |
-| **[G]** | Gramática (Parte A) |
-| **[E]** | Estilo e convenções (Partes B e C) |
+| **[C]** | Coerência entre seções |
+| **[R]** | Redundância |
+| **[A]** | Estrutura do argumento (oposição, caminho de desenvolvimento, proporcionalidade) |
+| **[T]** | Tom e registro |
+| **[G]** | Gramática e mecânica |
+| **[E]** | Estilo e convenções |
 
-Mudanças **[F]** nunca entram sem você confirmar. O conteúdo técnico e o argumento são seus. A revisão mexe em **como** as coisas são ditas, e quando acha um problema de conteúdo, aponta.
+Mudanças **[F]** nunca entram sem você confirmar. A skill é explícita: nunca inventar número, citação, fonte, ano ou precisão.
+
+## 6. Convenções de entrega
+
+Seguem *Document conventions for deliverables* e *How to report* da skill:
+- **Arquivos:** `.docx`, justificado, recuo de primeira linha de 720 twips, sem linha em branco entre parágrafos, estilos Heading 1 e Heading 2 do Word.
+- **Idioma:** respostas para você em português; texto acadêmico em inglês.
+- **Fechamento de cada entrega:** resumo numerado das ações e perguntas em sequência.
+- **Plano:** o plano é discutido e fechado antes de qualquer arquivo ser gerado.

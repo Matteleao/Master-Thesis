@@ -3,7 +3,7 @@
 **Tese:** *Translating ICH E6(R3) into Practice: A Site-Centered Operational Quality Management Framework for Shoulder Medical Device Clinical Investigations*
 Felipe Gregorio Lima — Mestrado em Engenharia Farmacêutica, Universidade de Lisboa (2025/2026)
 
-Este repositório guarda a tese e o trabalho de revisão de escrita: tom, coerência interna, redundâncias, uniformidade e aplicação das regras de escrita científica do workshop da Dra. Carolina Borges Merjane (CBM Science).
+Este repositório guarda a tese e o trabalho de revisão de escrita: tom, coerência interna, redundâncias, uniformidade e aplicação das regras de escrita científica. As regras vêm da skill do próprio autor (`thesis-writing`), construída a partir do workshop da Dra. Carolina Borges Merjane (CBM Science).
 
 ## Estrutura
 
@@ -12,7 +12,9 @@ Este repositório guarda a tese e o trabalho de revisão de escrita: tom, coerê
 | `original/` | Arquivos exatamente como foram recebidos (a tese em `.docx` e o PDF do workshop). Não são editados. |
 | `tese/` | A tese convertida para texto (Markdown), um arquivo por capítulo. É a cópia de trabalho: cada revisão vira um commit, então dá para ver o antes e o depois de cada frase. |
 | `tese/figuras/` | Tabelas e figuras extraídas do `.docx` (no Word elas estão como imagem). |
-| `revisao/guia-de-estilo.md` | As regras que a revisão segue: workshop CBM + skills de escrita + padrões de "texto de IA" a evitar. |
+| `.claude/skills/thesis-writing/SKILL.md` | **A skill de escrita do autor** (prosa científica, estrutura do argumento, evidência e entrega). É a regra principal da revisão e é carregada automaticamente por qualquer sessão do Claude neste repositório. |
+| `revisao/guia-de-estilo.md` | A camada específica desta tese: precedência entre regras, conflitos resolvidos entre a skill do autor e as skills genéricas, terminologia fixa e padrões encontrados no texto. |
+| `revisao/workflow.md` | A ordem de uso das skills na análise e na reescrita, com os pares de triangulação. |
 | `revisao/diagnostico.md` | O diagnóstico da versão original: incoerências, erros factuais, redundâncias, tom e estilo, com a localização de cada problema. |
 
 ## Observações sobre a conversão para texto
