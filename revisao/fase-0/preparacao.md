@@ -61,6 +61,8 @@ Gero assim que você der o OK geral da Fase 0.
 
 ## C. Voz: ditados
 
+> **Status:** ditados recebidos (`ditados-transcricao.md`). Os dois perfis e a comparação estão em `perfil-de-voz.md`, aguardando a sua validação. A seção D daquele arquivo traz uma nova proposta de tese central (A5), tirada do ditado 1.
+
 Você não tem textos científicos escritos à mão e prefere ditar. Então a amostra vai ser **o seu jeito de explicar em voz alta**, transcrito.
 
 **Como gravar:**

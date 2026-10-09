@@ -184,4 +184,4 @@ A análise são **10 execuções independentes**, cada uma lendo a tese inteira 
 9. `orwells-rules` + `plain-language`
 10. `thesis-writing` (lente do autor)
 
-Cada execução roda como um agente separado, em paralelo, e eu faço a Fase 6 com os resultados. Custo estimado, ondas e esforço por lente: ver `revisao/fase-0-preparacao.md`, seção D (análise completa em torno de US$ 30–60).
+Cada execução roda como um agente separado, em paralelo, e eu faço a Fase 6 com os resultados. Custo estimado, ondas e esforço por lente: ver `revisao/fase-0/preparacao.md`, seção D (análise completa em torno de US$ 30–60).

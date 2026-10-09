@@ -15,6 +15,7 @@ Este repositório guarda a tese e o trabalho de revisão de escrita: tom, coerê
 | `.claude/skills/thesis-writing/SKILL.md` | **A skill de escrita do autor** (prosa científica, estrutura do argumento, evidência e entrega). É a regra principal da revisão e é carregada automaticamente por qualquer sessão do Claude neste repositório. |
 | `revisao/guia-de-estilo.md` | A camada específica desta tese: precedência entre regras, conflitos resolvidos entre a skill do autor e as skills genéricas, terminologia fixa e padrões encontrados no texto. |
 | `revisao/workflow.md` | A ordem de uso das skills na análise e na reescrita, com os pares de triangulação. |
+| `revisao/fase-0/` | Preparação: definição do projeto, ditados do autor (amostra de voz) e perfil de voz. |
 | `revisao/diagnostico.md` | O diagnóstico da versão original: incoerências, erros factuais, redundâncias, tom e estilo, com a localização de cada problema. |
 
 ## Observações sobre a conversão para texto

@@ -177,7 +177,7 @@ O detalhe está na skill `thesis-writing` e nas seções 2–3 do guia. Contagen
 | Normas | *ISO 14155:2026 Section 6.2*, *Section 9.1(b)*, *ISO 13485 Sections 8.5.2* misturados com *Clause*; *9.2.4.5 p)* e *9.2.4.5(p)*. |
 | Citações | Caps. 1–4 com citações em **subscrito** (o normal no estilo Vancouver é [n] na linha ou sobrescrito). O Cap. 5 inteiro (19 citações) e 5 citações do Cap. 4 (4.2.1, 4.3.1, 4.3.2, 4.4.1) estão em texto normal. |
 | Autores | *Peffers et al.*, *Avendano et al.*, *Blencowe et al.* ao lado de *Diani and colleagues*, *Adams and colleagues*. |
-| Palavras-muleta | *itself* 36× e *", which is"* 27×. *therefore* (60×) só conta onde abre dois parágrafos da mesma seção ou não marca consequência (ver Atualização). |
+| Palavras-muleta | *", which is"* 27×. *itself* (36×) é traço da voz do autor (aparece 15× nos ditados, calque de "próprio"): corta-se só quando é ênfase vazia. *therefore* (60×) só conta onde abre dois parágrafos da mesma seção ou não marca consequência (ver Atualização). |
 | Referências | Títulos ora em *Title Case*, ora em *sentence case* (ex.: refs. 61–65 e 70 em minúsculas); algumas com PMID e outras sem. |
 
 ## 7. Tabelas e figuras
