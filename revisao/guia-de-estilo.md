@@ -42,23 +42,28 @@ Estes pontos do meu guia v1 e das skills genéricas batem de frente com a skill 
 
 ## 3. Terminologia fixa da tese
 
-A regra da skill é *"One object, one name"*. Os itens ⚠️ ainda esperam a sua decisão; os ✔ já estão decididos pela skill.
+A regra da skill é *"One object, one name"*. Todos os itens abaixo estão decididos (✔), pela skill ou por você.
 
 | Conceito | Forma única | Hoje aparece também como |
 |---|---|---|
-| O artefato inteiro | ⚠️ **framework** | *architecture*, *model*, *quality architecture* (Abstract e Resumo falam em "architecture"/"arquitetura"; o título diz "Framework") |
-| Pilar 2 | ⚠️ **Risk Management** | *RBQM* (Abstract, Seção 2.5.1, Resumo) |
-| As cinco condições estruturais | ⚠️ *irreversibility*, *operator dependence*, *unit-level traceability*, *follow-up burden*, *measurement reliability* | *persistent traceability*, *the operational weight of follow-up*, *limited classification reliability* |
-| Resultado relatado pelo paciente | ⚠️ **PROM** | *PRO*, *PROs*, *PROMs* |
-| Instrumentos | Nome exato da Tabela 4.4: *Surgeon Learning Curve Tracking Log*, *PI Oversight Template*, *Training Record Evaluation and Release* | *Surgical Learning Curve Tracking*, *learning curve log*, *PI Oversight Plan*, *…and Training Release* |
-| Partes de normas | ISO → *Clause*; ICH → *Section*; MDR → *Article* / *Annex XV, Chapter II, Section 3.x*; formato *Clause 9.2.4.5(p)* | *ISO 14155:2026 Section 6.2*, *9.2.4.5 p)* |
-| Brochura | *Investigator's Brochure* | *Investigator Brochure* |
-| Citação de autores | *Peffers et al.* | *Diani and colleagues*, *Adams and colleagues* |
-| Citações | [1, 2] em texto normal | subscrito no .docx nos Caps. 1–4 |
+| ✔ O artefato inteiro | **framework** (decisão do autor: é o termo do título) | *architecture*, *model*, *quality architecture* (Abstract e Resumo falam em "architecture"/"arquitetura") |
+| ✔ Pilar 2 e o conceito | **Risk Management** quando o texto nomeia **o pilar** (títulos de seção, tabelas, figuras, "the Risk Management pillar"). **RBQM** quando o texto fala **da abordagem** (*risk-based quality management*) que o pilar aplica. São dois objetos com dois nomes, então a regra "one object, one name" continua valendo. | *RBQM* como nome do pilar (Abstract, Seção 2.5.1, Resumo) |
+| ✔ As cinco condições estruturais | *irreversibility*, *operator dependence*, *unit-level traceability*, *follow-up burden*, *measurement reliability* | *traceability*, *persistent traceability*, *follow-up*, *the operational weight of follow-up*, *limited classification reliability* |
+| ✔ Resultado relatado pelo paciente | **PROM** (*patient-reported outcome measure*) | *PRO*, *PROs* |
+| ✔ Instrumentos | Nome exato da Tabela 4.4: *Surgeon Learning Curve Tracking Log*, *PI Oversight Template*, *Training Record Evaluation and Release* | *Surgical Learning Curve Tracking*, *learning curve log*, *PI Oversight Plan*, *…and Training Release* |
+| ✔ Partes de normas | ISO → *Clause*; ICH → *Section*; MDR → *Article* / *Annex XV, Chapter II, Section 3.x*; formato *Clause 9.2.4.5(p)* | *ISO 14155:2026 Section 6.2*, *9.2.4.5 p)* |
+| ✔ Brochura | *Investigator's Brochure* | *Investigator Brochure* |
+| ✔ Citação de autores | *Peffers et al.* | *Diani and colleagues*, *Adams and colleagues* |
+| ✔ Citações | [1, 2] em texto normal | subscrito no .docx nos Caps. 1–4 |
 | ✔ Ortografia | Inglês americano; nomes próprios mantêm a grafia oficial (*International Council for Harmonisation*) | *orthopaedic* (2×), grafia britânica nas tabelas em imagem |
 | ✔ Prefixos | Sem hífen: *nonhospital*, *nonacademic*, *interobserver*, *predefined*, *intraoperative*. Exceção: termos regulatórios consagrados (*post-market clinical follow-up*) | *non-hospital*, *non hospital*, *non-academic*, *inter-observer* |
 | ✔ Números | Algarismos para dados e valores (*12 domains*, *24 instruments*, *89%*); por extenso de um a nove no texto corrido; nunca começar frase com algarismo | *twenty-four*, *twelve* por extenso |
 | ✔ Siglas | Definir na primeira menção e nunca mais voltar à forma por extenso | *Critical-to-Quality* 8× após a definição, *principal investigator*, *CAPA*/*corrective and preventive action* etc. |
+
+### Outras decisões do autor
+
+- **Versão definitiva:** o `original/Revisao_manual_tese.docx` passa a ser a versão de trabalho definitiva. As substituições que a skill registra como já aceitas (tabela *Lowering the register across a whole chapter*) serão aplicadas na reescrita.
+- **Dados do registro e números da tese:** são assumidos como corretos. Onde o texto não bate com os próprios números, **o texto é que se ajusta** (ex.: "one in four" na Conclusão passa a refletir 38/235). Se você trouxer dados corrigidos depois, eles entram como mudança [F].
 
 ## 4. Padrões encontrados nesta tese → regra da skill
 
