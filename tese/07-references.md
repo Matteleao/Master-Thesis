@@ -2,7 +2,7 @@
 
 1.  European Medicines Agency. Reflection paper on risk based quality management in clinical trials. London: European Medicines Agency; 2013 Nov. Report No.: EMA/269011/2013.
 
-2.  Bhatt A. Quality of Clinical Trials: A Moving Target. Perspectives in Clinical Research. 2011;2(4):124–8. doi:10.4103/2229-3485.86880 PubMed PMID: 22145123.
+2.  Bhatt A. Quality of Clinical Trials: A Moving Target. Perspectives in Clinical Research. 2011;2(4):124–8. doi:10.4103/2229-3485.86880 PubMed PMID: 22145122.
 
 3.  International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use. ICH harmonised guideline: Integrated addendum to ICH E6(R1): Guideline for Good Clinical Practice E6(R2). Geneva: ICH; 2016.
 
@@ -40,9 +40,9 @@
 
 20. Avendano JP, Sudah SY, Gencarelli P, Imam N, Manzi JE, Ghajar M, et al. The Learning Curve for Anatomic and Reverse Total Shoulder Arthroplasty: A Systematic Review. JSES Reviews, Reports, and Techniques. 2023;3:150–9. doi:10.1016/j.xrrt.2022.12.001
 
-21. Daher M, Ilyas MH, Gonzalez-Morgado D, Steinmann SP, Abboud JA, Kassam HF. Defining Surgeon Experience Thresholds for Outcomes and Complications in Shoulder Arthroplasty. Journal of Shoulder and Elbow Arthroplasty. 2026;10(1–2):100020. doi:10.1016/j.jsea.2026.100020 PubMed PMID: 42182085.
+21. Daher M, Ilyas MH, Gonzalez-Morgado D, Steinmann SP, Abboud JA, Kassam HF. Defining Surgeon Experience Thresholds for the Reduction in Complications and Revisions after Shoulder Arthroplasty: A Meta-Analysis of 332,542 Patients. Journal of Shoulder and Elbow Arthroplasty. 2026;10(1–2):100020. doi:10.1016/j.jsea.2026.100020 PubMed PMID: 42182085.
 
-22. Taniguchi S, Hirakawa Y, Manaka T, Nakazawa K, Ito Y, Terai H. Assistant Experience Enhances Surgical Efficiency and Postoperative Outcomes in Reverse Shoulder Arthroplasty. Journal of Shoulder and Elbow Surgery. 2026. doi:10.1016/j.jse.2026.06.020 PubMed PMID: 42398667.
+22. Taniguchi S, Hirakawa Y, Manaka T, Nakazawa K, Ito Y, Terai H. Assistant Experience Enhances the Learning Curve in Reverse Total Shoulder Arthroplasty: A Comparative Cumulative Sum Analysis of 3 Surgeons. Journal of Shoulder and Elbow Surgery. 2026;35(11):2763–70. doi:10.1016/j.jse.2026.06.020 PubMed PMID: 42398667.
 
 23. Somerson JS, Bartush KC, Shroff JB, Bhandari M, Zelle BA. Loss to Follow-up in Orthopaedic Clinical Trials: A Systematic Review. International Orthopaedics. 2016;40(11):2213–9. doi:10.1007/s00264-016-3212-5 PubMed PMID: 27142421.
 
@@ -50,9 +50,9 @@
 
 25. Sidor ML, Zuckerman JD, Lyon T, Koval K, Cuomo F, Schoenberg N. The Neer Classification System for Proximal Humeral Fractures: An Assessment of Interobserver Reliability and Intraobserver Reproducibility. The Journal of Bone and Joint Surgery American Volume. 1993;75(12):1745–50. doi:10.2106/00004623-199312000-00002 PubMed PMID: 8258543.
 
-26. Shukla DR, McLaughlin RJ, Lee J, Cofield RH, Sperling JW, Sánchez-Sotelo J. Intraobserver and Interobserver Reliability of the Walch Classification Using Two- and Three-Dimensional Computed Tomography for Primary Glenohumeral Arthritis. Journal of Shoulder and Elbow Surgery. 2019;28(4):625–30. doi:10.1016/j.jse.2018.09.021 PubMed PMID: 30528438.
+26. Shukla DR, McLaughlin RJ, Lee J, Cofield RH, Sperling JW, Sánchez-Sotelo J. Intraobserver and Interobserver Reliability of the Modified Walch Classification Using Radiographs and Computed Tomography. Journal of Shoulder and Elbow Surgery. 2019;28(4):625–30. doi:10.1016/j.jse.2018.09.021 PubMed PMID: 30528438.
 
-27. Chelli M, Gasbarro G, Lavoué V, Gauci MO, Raynier JL, Trojani C, et al. The Reliability of the Neer Classification for Proximal Humeral Fractures: A Systematic Review. JSES International. 2022;6(3):331–7. doi:10.1016/j.jseint.2022.02.006 PubMed PMID: 35572425.
+27. Chelli M, Gasbarro G, Lavoué V, Gauci MO, Raynier JL, Trojani C, et al. The Reliability of the Neer Classification for Proximal Humeral Fractures: A Survey of Orthopedic Shoulder Surgeons. JSES International. 2022;6(3):331–7. doi:10.1016/j.jseint.2022.02.006 PubMed PMID: 35572425.
 
 28. Bakobaki JM, Rauchenberger M, Joffe N, McCormack S, Stenning S, Meredith S. The Potential for Central Monitoring Techniques to Replace On-site Monitoring: Findings from an International Multi-centre Clinical Trial. Clinical Trials. 2012;9(2):257–64. doi:10.1177/1740774511427325 PubMed PMID: 22064687.
 
@@ -64,17 +64,17 @@
 
 32. Meeker-O’Connell A, Sam LM, Bergamo N, Little JA. TransCelerate’s Clinical Quality Management System: From a Vision to a Conceptual Framework. Therapeutic Innovation & Regulatory Science. 2016;50(4):397–413. doi:10.1177/2168479016651300 PubMed PMID: 30227025.
 
-33. Meeker-O’Connell A, Glessner C, Behm M, Mulinde J, Roach N, Sweeney F, et al. Enhancing Clinical Evidence by Proactively Building Quality into Clinical Trials. Clinical Trials. 2016;13(4):439–44. doi:10.1177/1740774516643491 PubMed PMID: 27108014; PubMed Central PMCID: PMC4952025.
+33. Meeker-O’Connell A, Glessner C, Behm M, Mulinde J, Roach N, Sweeney F, et al. Enhancing Clinical Evidence by Proactively Building Quality into Clinical Trials. Clinical Trials. 2016;13(4):439–44. doi:10.1177/1740774516643491 PubMed PMID: 27098014; PubMed Central PMCID: PMC4952025.
 
 34. Medical Device Innovation Consortium. Medical device supplement to the CTTI quality by design project: Critical to quality (CTQ) factors principles document. Medical Device Innovation Consortium; 2016.
 
 35. Butterworth JW, Boshier PR, Mavroveli S, van Lanschot JBB, Sasako M, Reynolds JV, et al. Challenges to Quality Assurance of Surgical Interventions in Clinical Oncology Trials: A Systematic Review. European Journal of Surgical Oncology. 2021;47(4):748–56. doi:10.1016/j.ejso.2020.10.002 PubMed PMID: 33059943.
 
-36. Blencowe NS, Skilton A, Blazeby J, Avery K, Brierley R, Gaunt D, et al. Protocol for Developing Quality Assurance Measures to Use in Surgical Trials: An Example from the ROMIO Study. BMJ Open. 2019;9(3):e026209. doi:10.1136/bmjopen-2018-026209 PubMed PMID: 30826769; PubMed Central PMCID: PMC6429900.
+36. Blencowe NS, Skilton A, Gaunt D, Brierley R, Hollowood A, Dwerryhouse S, et al. Protocol for Developing Quality Assurance Measures to Use in Surgical Trials: An Example from the ROMIO Study. BMJ Open. 2019;9(3):e026209. doi:10.1136/bmjopen-2018-026209 PubMed PMID: 30826769; PubMed Central PMCID: PMC6429900.
 
 37. Butterworth JW, Boshier PR, Mavroveli S, Reynolds JV, Kim YW, Hanna GB. A Proposed Framework of Strategies to Overcome Challenges to Surgical Quality Assurance in Oncology Trials (SQA-Onc.). European Journal of Surgical Oncology. 2025;51(5):109593. doi:10.1016/j.ejso.2025.109593 PubMed PMID: 39826446.
 
-38. van der Aa DC, Henckens SPG, Bonjer HJ, Tuynman JB, Besselink MG, Blencowe NS, et al. A Framework for Surgical Quality Assurance (SQA) in Randomized Controlled Trials in Gastrointestinal Surgery: An International Delphi Consensus Study. eClinicalMedicine. 2025;90:103634. doi:10.1016/j.eclinm.2025.103634 PubMed PMID: 41206560; PubMed Central PMCID: PMC12661345.
+38. van der Aa DC, Henckens SPG, Bonjer HJ, Tuynman JB, Besselink MG, Blencowe NS, et al. A Framework for Surgical Quality Assurance (SQA) in Randomized Controlled Trials in Gastrointestinal Surgery: An International Delphi Consensus Study. eClinicalMedicine. 2025;90:103634. doi:10.1016/j.eclinm.2025.103634 PubMed PMID: 41324018; PubMed Central PMCID: PMC12661345.
 
 39. Kingsmore DB, Edgar B, Aitken E, Calder F, Franchin M, Geddes C, et al. Quality Assurance in Surgical Trials of Arteriovenous Grafts for Haemodialysis: A Systematic Review, a Narrative Exploration and Expert Recommendations. The Journal of Vascular Access. 2024;26(2):389–99. doi:10.1177/11297298241236521 PubMed PMID: 38501338.
 
@@ -150,7 +150,7 @@
 
 75. Feehan AK, Garcia-Diaz J. Investigator Responsibilities in Clinical Research. Ochsner Journal. 2020;20(1):44–9. doi:10.31486/toj.19.0085
 
-76. Vale M, Leite F, Madeira C. Risk Management in Clinical Trials: Assessment of Current Practices at Portuguese Clinical Trial Sites. Risk Management and Healthcare Policy. 2023;16:2353–65. doi:10.2147/RMHP.S426411 PubMed PMID: 37881165; PubMed Central PMCID: PMC10595157.
+76. Vale M, Leite F, Madeira C. Risk Management in Clinical Trials: Assessment of Current Practices at Portuguese Clinical Trial Sites. Risk Management and Healthcare Policy. 2023;16:2187–96. doi:10.2147/RMHP.S426411 PubMed PMID: 37881165; PubMed Central PMCID: PMC10595157.
 
 77. Testa EJ, Lowe JT, Namdari S, Gillespie RJ, Sears BW, Johnston PS, et al. Operative Duration-Based Learning Period Analysis for Reverse and Total Shoulder Arthroplasty: A Multicenter Study. Shoulder & Elbow. 2018;12(1 Suppl):23–30. doi:10.1177/1758573218811635
 
