@@ -94,7 +94,7 @@ Comparadas também com os itens C e R do diagnóstico v1 e com o passe de contin
 
 | | Lente | Leitor |
 |---|---|---|
-| 4A | `ghost-writer:review` (5 × `demolish-persona`) | **Editor**: estrutura e prosa.<br>**Leitor-alvo**: orientadora e júri.<br>**Leitor hostil**: o **arguente** da defesa.<br>**Especialista**: regulatory affairs / qualidade clínica de dispositivos médicos.<br>**Fora do público**: engenheiro sem experiência em pesquisa clínica. |
+| 4A | `ghost-writer:review` (5 × `demolish-persona`) | **Editor**: estrutura e prosa.<br>**Leitor-alvo**: orientadora e coorientador, que conhecem o trabalho.<br>**Leitor hostil**: o **arguente** no perfil mais provável, um professor de regulamentação com experiência em ensaios clínicos (não necessariamente de dispositivos cirúrgicos).<br>**Especialista**: o **arguente** no outro perfil possível, um médico ortopedista com experiência em estudos clínicos (realismo do bloco cirúrgico, curva de aprendizagem, imagem).<br>**Fora do público**: um colega do mestrado em Engenharia Farmacêutica sem experiência em investigação clínica. |
 | 4B | `apodictic:argument-audits` → `argument-persuasion` (na mesma execução da 2A) | Matriz de públicos: para quem cada parte do argumento funciona e para quem não funciona. |
 
 **Triangulação:** 4A × 4B.

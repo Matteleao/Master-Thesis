@@ -13,13 +13,13 @@ A seção **C** compara as duas e traduz o resultado em regras para a reescrita,
 
 ## A. Leitura do `voice-profiler`
 
-**Identidade central.** Um engenheiro que explica de trás para frente: começa pelo que disparou o problema (a revisão da ICH E6, o relato do coorientador cirurgião), chega no problema e só então responde. Tem tom de quem defende um colega de trabalho, o centro pequeno, com argumentos práticos.
+**Identidade central.** Um engenheiro que explica de trás para frente: começa pelo que disparou o problema (a revisão da ICH E6), chega no problema e só então responde. Tem tom de quem defende um colega de trabalho, o centro pequeno, com argumentos práticos.
 
 **Ritmo.** Frases longas, emendadas por *and*, *because* e *so*, que fecham com uma frase curta de resumo: *"But they usually don't. They are most of the time overlooked."* Na fala, a média é de 27 palavras, com variação enorme (de 1 a 134). Isso é fala; não é meta para a tese.
 
 **Como abre:**
 - **Contexto antes da resposta.** *"So this whole thesis came out because there was a huge update on one of the main guideline…"* e, mais tarde, *"But this was a little bit of contextualization to answer directly your question"*.
-- **Origem concreta.** O problema entra por uma pessoa e uma situação: *"brought to attention by my co-supervisor, who is a surgeon…"*.
+- **Origem concreta.** O problema entra por um fato concreto: uma revisão de guideline, uma área específica (dispositivos cirúrgicos).
 - **Repete a pergunta antes de responder.** *"So, question two: explain how the instruments work in action…"*
 
 **Como fecha:**
@@ -125,9 +125,9 @@ E **divergem** em um: o `voice-profiler` trata o fecho curto de resumo como marc
 Isto não é perfil de voz, mas apareceu nos ditados e entra na análise:
 
 1. **"up to 30% of all the trials were done in this kind of center"**: a tese mede **organizações**, não estudos (65 de 235 organizações, 27,7%). Na tese, o número tem que continuar dizendo "organizações". [F, proporcionalidade]
-2. **"it might add up to, like, 10, 15 minutes"**: é uma estimativa sua, não medida. A tese hoje diz que ninguém mediu o tempo. Se entrar no texto, entra como estimativa do autor. [F]
-3. **Templates:** você descreveu o *Intraoperative Checklist and Device Log* seção por seção (A a K). Então os templates existem, mas os Apêndices A–X estão como *"[Template pending]"*. Pode me mandar? [P2 do diagnóstico]
-4. **A origem do problema:** o relato do coorientador cirurgião é o "problema de prática observado" que a DSRM pede na entrada (2.1.1), e a tese não diz de onde veio. Uma frase nos Métodos resolve. [A, decisão sua]
-5. **A tese central nas suas palavras** (proposta para A5, já seguindo a sua skill):
+2. **"it might add up to, like, 10, 15 minutes"**: é estimativa verbal e **não entra na tese** (decisão do autor). Na tese, a formulação fica genérica e marcada como expectativa.
+3. **Templates:** existem (você descreveu o *Intraoperative Checklist and Device Log* seção por seção), mas ainda não podem ser enviados. Os Apêndices A–X continuam pendentes.
+4. **A origem do problema** (corrigido pelo autor): veio da **leitura das guidelines**, que revelou lacunas, e **não** se faz referência ao coorientador. A 2.1.1 diz hoje *"originates from an observed problem of practice"*; na reescrita, a frase passa a dizer que o problema vem das lacunas identificadas nas guidelines. [C]
+5. **A tese central nas suas palavras** (**aprovada pelo autor**):
 
 > ICH E6(R3) and ISO 14155:2026 give the investigational site a larger share of the responsibility for quality, but most of the instruments reviewed here were built for the sponsor. This thesis derives a site-level quality framework that complements the sponsor's system, so that a site can act on the risks the sponsor cannot see in time and can show how it controlled its own conduct.

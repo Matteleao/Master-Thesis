@@ -2,6 +2,20 @@
 
 Nada desta fase foi gerado ainda. Sua skill pede para fechar o plano antes de gerar arquivos. Este documento traz o que eu consigo **propor a partir da própria tese** e o que **só você pode responder**. Quando estiver fechado, eu gero os arquivos e partimos para as análises.
 
+## Decisões já tomadas (resposta do autor, 10/10/2026)
+
+| Item | Decisão |
+|---|---|
+| **A1. Estrutura** | **Reestruturação livre**, inclusive entre capítulos (ex.: reduzir a 5.2). |
+| **A2. Arguente** | Ainda não definido. Pode ser (a) alguém que leciona regulamentação e tem experiência em ensaios clínicos, não necessariamente com dispositivos cirúrgicos, ou (b) um médico ortopedista. As personas da Fase 4 cobrem os dois perfis. |
+| **A3. Regulamento** | Limite de **40.000 palavras**; citação **Vancouver**; Resumo de **~300 palavras**. A tese já foi feita para essas regras. Medição atual: Resumo 292, Abstract 270, tese inteira ~38.050 palavras (corpo 33.036, mais pré-textuais, referências e apêndices). A reescrita não pode passar do limite. Os templates dos apêndices ainda vão entrar, então a margem real é menor que 2 mil palavras. |
+| **A4. Prazo** | Final de outubro de 2026. |
+| **A5. Tese central** | **Aprovada** a versão tirada do ditado 1 (`perfil-de-voz.md`, seção D, item 5). |
+| **Economias** | **Duas ondas**, e esforço extra só nas lentes de julgamento. |
+| **Tempo de preenchimento (10–15 min)** | É estimativa verbal do autor e **não entra na tese**. Na tese, a formulação fica genérica e marcada como expectativa: o preenchimento pode prolongar algumas atividades, e espera-se que os benefícios superem esse custo de tempo. |
+| **Origem do problema** | O problema foi identificado pela **leitura das guidelines**, que revelou lacunas. **Nenhuma referência** ao coorientador como origem. Isso afeta a 2.1.1, que hoje diz *"originates from an observed problem of practice"*: a frase passa a dizer que o problema vem das lacunas identificadas nas guidelines. |
+| **Templates dos apêndices** | Existem, mas ainda não podem ser enviados. Na análise, os apêndices ficam fora do escopo de escrita. |
+
 A Fase 0 tem três partes:
 
 | Parte | O que produz | Depende de você para |
