@@ -1,4 +1,6 @@
-# Fase 0: preparação (para fecharmos juntos)
+# Fase 0: preparação
+
+> **Status: fechada em 10/10/2026.** Arquivos gerados em `revisao/projeto/`: `book.config.json` (configuração do ghost-writer), `style-rules.md` (regras R1–R26) e `contrato-apodictic.md` (tese central, o que a tese não afirma, não negociáveis). Perfil de voz aprovado por omissão; ele só é usado na reescrita.
 
 Nada desta fase foi gerado ainda. Sua skill pede para fechar o plano antes de gerar arquivos. Este documento traz o que eu consigo **propor a partir da própria tese** e o que **só você pode responder**. Quando estiver fechado, eu gero os arquivos e partimos para as análises.
 
