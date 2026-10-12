@@ -1,0 +1,37 @@
+{
+  "title": "Translating ICH E6(R3) into Practice: A Site-Centered Operational Quality Management Framework for Shoulder Medical Device Clinical Investigations",
+  "subtitle": "Master's dissertation, Pharmaceutical Engineering, Universidade de Lisboa (2025/2026)",
+  "genre": "other",
+  "preset": "essay",
+  "language": "pt",
+  "language_note": "Replies to the author in Portuguese. Academic text stays in English, as required by the author's skill thesis-writing (.claude/skills/thesis-writing/SKILL.md), which overrides every generic writing rule.",
+  "target_reader": "The examination jury of a master's defense: the supervisor and co-supervisor, and an examiner who is either a lecturer in regulation with clinical-trial experience or an orthopedic surgeon with clinical-study experience.",
+  "version": "1.0",
+  "central_claim": "ICH E6(R3) and ISO 14155:2026 give the investigational site a larger share of the responsibility for quality, but most of the instruments reviewed here were built for the sponsor. This thesis derives a site-level quality framework that complements the sponsor's system, so that a site can act on the risks the sponsor cannot see in time and can show how it controlled its own conduct.",
+  "author_voice": {
+    "voice_source": "dictation (revisao/fase-0/ditados-transcricao.md), two profiles compared in revisao/fase-0/perfil-de-voz.md",
+    "tone": "calm, earnest, practical; confident about the problem, modest about the limits",
+    "register": "academic, plain B2-C1 English with exact technical terms (thesis-writing governing instruction)",
+    "pov": "third person impersonal in the Introduction; first person plural from the Methodology onward",
+    "rhythm": "length follows the chain of consequence; keep natural spread; no target mean or ceiling",
+    "vocabulary": "plain connective vocabulary; exact regulatory and technical terms; correct mild non-native flavor allowed, wrong Portuguese calques corrected",
+    "signature_phrases": ["complementary to the sponsor", "contemporaneous records", "trace it back to the origin", "critical steps", "component-level traceability"],
+    "signature_moves": ["context and origin before the claim", "mechanism then consequence", "concession then remedy", "concrete failure case as proof"],
+    "avoid": ["everything prohibited in thesis-writing", "fillers (like, basically, actually, pretty, a little bit, kind of)", "metaphors", "vague evaluative words (great, huge)", "Portuguese calques (suffered an update, attend the requests, as better as)", "second person"],
+    "reference_authors": []
+  },
+  "structure": {
+    "outline_file": "outline.md",
+    "chapters_dir": "../../tese/",
+    "style_rules_file": "style-rules.md"
+  },
+  "constraints": {
+    "word_limit_total": 40000,
+    "abstract_word_limit": 300,
+    "citation_style": "Vancouver",
+    "deadline": "2026-10-31",
+    "restructuring": "free, including across chapters"
+  },
+  "preset_digest": null,
+  "writing_log": []
+}

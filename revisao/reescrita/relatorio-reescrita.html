@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Relat��rio da reescrita</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  :root{--bg:#fbfaf7;--fg:#1f1f1c;--muted:#5c5a52;--line:#d9d5ca;--head:#efece4;--accent:#7a4e12}
+  @media (prefers-color-scheme: dark){:root{--bg:#1b1a17;--fg:#ebe8e0;--muted:#a8a498;--line:#3b3934;--head:#26251f;--accent:#e0a95a}}
+  html{background:var(--bg)}
+  body{background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;max-width:920px;margin:0 auto;padding:24px 16px 64px}
+  h1{font-size:1.6em;margin:.2em 0 .6em}
+  h2{font-size:1.25em;margin:1.8em 0 .5em;padding-bottom:.25em;border-bottom:1px solid var(--line)}
+  p,li{margin:.4em 0}
+  strong{color:var(--accent)}
+  code{font-size:.9em;background:var(--head);padding:.05em .35em;border-radius:4px}
+  .tw{overflow-x:auto;margin:.8em 0}
+  table{border-collapse:collapse;width:100%;font-size:.92em}
+  th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+  th{background:var(--head)}
+  td:first-child{white-space:nowrap}
+  </style>
+</head>
+<body>
+
+<h1 id="relatório-da-reescrita-10102026">Relatório da reescrita
+(10/10/2026)</h1>
+<h2 id="o-que-foi-entregue">O que foi entregue</h2>
+<ul>
+<li><code>entrega/tese-revisada.docx</code>: a tese inteira reescrita. O
+texto está justificado, com recuo de 720 twips na primeira linha, sem
+linha em branco entre parágrafos, e os títulos usam Heading 1/2/3.</li>
+<li><code>tese/*.md</code>: os mesmos capítulos em texto. É a cópia de
+trabalho; o <code>git diff</code> mostra cada mudança.</li>
+<li><code>revisao/reescrita/alteracoes-tabelas-figuras.md</code>: o que
+só você pode mudar nas imagens.</li>
+</ul>
+<h2 id="tamanho">Tamanho</h2>
+<div class="tw"><table>
+<thead>
+<tr class="header">
+<th>Capítulo</th>
+<th>Antes</th>
+<th>Depois</th>
+<th>Diferença</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 Introduction</td>
+<td>3.128</td>
+<td>3.106</td>
+<td>−22</td>
+</tr>
+<tr class="even">
+<td>2 Methodology</td>
+<td>3.868</td>
+<td>3.680</td>
+<td>−188</td>
+</tr>
+<tr class="odd">
+<td>3 Gaps and requirements</td>
+<td>4.793</td>
+<td>4.582</td>
+<td>−211</td>
+</tr>
+<tr class="even">
+<td>4 Results</td>
+<td>11.718</td>
+<td>11.457</td>
+<td>−261</td>
+</tr>
+<tr class="odd">
+<td>5 Discussion</td>
+<td>8.774</td>
+<td>7.286</td>
+<td>−1.488</td>
+</tr>
+<tr class="even">
+<td>6 Conclusion</td>
+<td>768</td>
+<td>662</td>
+<td>−106</td>
+</tr>
+<tr class="odd">
+<td><strong>Corpo</strong></td>
+<td><strong>33.049</strong></td>
+<td><strong>30.773</strong></td>
+<td><strong>−2.276</strong></td>
+</tr>
+<tr class="even">
+<td>Tese inteira (com referências e listas)</td>
+<td>~38.050</td>
+<td>~35.770</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Resumo: 298 palavras. Abstract: 282. Os dois ficam abaixo de 300.</p>
+<h2 id="decisões-suas-como-foram-aplicadas">Decisões suas, como foram
+aplicadas</h2>
+<div class="tw"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Decisão</th>
+<th>Onde entrou</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P1</td>
+<td>O framework organiza deveres que já existem e acrescenta um elemento
+(a curva de aprendizagem); a rastreabilidade mostra coerência, não
+necessidade</td>
+<td>2.5, 3.5, 5.1, 6. A frase <em>“nothing in the framework is
+invented”</em> saiu.</td>
+</tr>
+<tr class="even">
+<td>P2</td>
+<td>Lacuna 3 estreita: observação, caso a caso, da proficiência de cada
+operador</td>
+<td>3.2.1, 3.4.2, 4.2.3, 5.1 e a Tabela 3.1 (lista de imagens). A
+Cláusula 10.6 virou dever de pessoal.</td>
+</tr>
+<tr class="odd">
+<td>P3</td>
+<td>O centro é a parte presente quando o dado nasce; a deteção mais cedo
+é hipótese; a posse se justifica pela continuidade e pela capacidade de
+mostrar o próprio controle</td>
+<td>4.3, 4.3.1, 5.3, 5.4, 6</td>
+</tr>
+<tr class="even">
+<td>P4</td>
+<td>Sai o <em>“probably unrealistic”</em>; a Conclusão não aceita a via
+híbrida; sai a <em>“same regulatory surface”</em></td>
+<td>5.5: o patrocinador aparece só como apoio opcional (modelos e
+treino), com o centro operando e guardando os registros. A Conclusão não
+menciona a via híbrida.</td>
+</tr>
+<tr class="odd">
+<td>P5</td>
+<td>O Tipo B é o centro-alvo; o Tipo C são os centros menores, com os
+mesmos problemas agravados</td>
+<td>1.3, 3.4.5 (reescrita inteira, com as três características), 4.1,
+4.7.1, legenda da Tabela 4.2, 5.5, 6, Resumo e Abstract. Os tipos A, B e
+C ficam como categorias de desenho, não derivadas do registro.</td>
+</tr>
+<tr class="even">
+<td>P6</td>
+<td>Sai a remissão à definição na 2.4.2</td>
+<td>3.4.4 (continua <em>“publicly identifiable”</em>)</td>
+</tr>
+<tr class="odd">
+<td>P7</td>
+<td>Contexto europeu; dados dos EUA por disponibilidade</td>
+<td>3.4.4 e 5.7. A nota <em>“has to state”</em> saiu, e a 5.3 deixou de
+afirmar o que a 3.4.4 não dizia. A frase diz <em>“the supervising team
+has its regulatory experience there”</em>, sem tratar isso como origem
+do problema.</td>
+</tr>
+<tr class="even">
+<td>P8</td>
+<td>Ignorar; tirar os <em>“five complexity strata”</em></td>
+<td>5.6 e 6. A 4.3.2 fala em critérios definidos pelo centro antes do
+primeiro caso, sem número de estratos.</td>
+</tr>
+<tr class="odd">
+<td>P9</td>
+<td>DR10: substituto nomeado</td>
+<td>3.4.5, 4.2.2 (RACI com <em>backup</em>) e as Tabelas 3.4 e 4.1
+(lista de imagens)</td>
+</tr>
+<tr class="even">
+<td>P10</td>
+<td>Decisão externa quando o PI é o cirurgião avaliado</td>
+<td>5.5</td>
+</tr>
+<tr class="odd">
+<td>P11</td>
+<td>Nenhuma alegação de reprodutibilidade</td>
+<td>2.6: admite que um só pesquisador fez as etapas qualitativas</td>
+</tr>
+<tr class="even">
+<td>P12</td>
+<td>Descartado</td>
+<td>A frase <em>“Organizational size was analyzed separately”</em> saiu
+da 2.4.2, porque essa análise nunca é reportada</td>
+</tr>
+<tr class="odd">
+<td>P13</td>
+<td><strong>Não aplicado</strong>: fica para a sua ideia</td>
+<td>(pergunta no fim)</td>
+</tr>
+<tr class="even">
+<td>P14</td>
+<td>Decidido por mim</td>
+<td>Saiu o marcador de ética da 2.4.1. Saiu o MDIC das <em>“queries
+older than sixty days”</em> (4.4.1, 4.5.6); fica só o EMA [1]. O cartão
+de implante saiu da 3.3, da 3.4.1 e da 5.3, para não afirmar o que eu
+não consigo conferir na norma.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="correções-de-fato-parte-2-do-registro">Correções de fato (Parte
+2 do registro)</h2>
+<ul>
+<li><strong>Feitas no texto:</strong> F1 (Delphi 71), F2 (<em>about one
+in six</em>), F4 ([37, 39, 41]), F5 ([41], <em>underdeveloped</em>), F7
+(Anexo XV, Cap. II, 3.14 + Art. 80(2); <em>immediately</em> na 3.2), F8
+(três PMIDs, quatro títulos, autores de [36], páginas de [76]), F10, F11
+(MDIC 2016), F12 (Anexo ZA da edição EN ISO), F14, F15, F16 (Fair Market
+Value e anti-indução saíram), F17 (Diani = RBM do patrocinador), F18,
+F19, F20, F21 (<em>same assessors</em> saiu), F22, F23, F24 (MDCG 2020-1
+saiu; não tinha número de referência), F25 (classe III, Regra 8, Art.
+61(4)).</li>
+<li><strong>F9:</strong> tirei a oração do <em>“funder guidance”</em> em
+vez de incluir a referência nova, porque uma referência nova obrigaria a
+renumerar tudo de [71] em diante. As 90 referências seguem citadas na
+ordem de primeira aparição (conferido por script).</li>
+<li><strong>Só na imagem:</strong> F3, F6, F13 (lista de imagens).</li>
+</ul>
+<h2 id="coerência-argumento-e-redundância-partes-3-e-4">Coerência,
+argumento e redundância (Partes 3 e 4)</h2>
+<p>Todos os itens C1–C30, A1–A20 e R1–R8 foram aplicados no texto, com
+exceção dos que dependem das imagens (C8, C9, C18 só na legenda, C20
+parcial), que estão na lista de imagens. Pontos que valem destacar:</p>
+<ul>
+<li><strong>C6:</strong> as tabelas foram renumeradas (4.3 → 4.2, 4.4 →
+4.3) no texto, nas legendas e na lista de tabelas.</li>
+<li><strong>C12:</strong> a 5.2 agora faz a comparação componente a
+componente que a 2.3.3 promete (SCR × SQA, SLCT sem contraparte, SRR ×
+[76], indicadores × CT-SPM item a item).</li>
+<li><strong>C16:</strong> os 24 instrumentos são nomeados na prosa do
+Cap. 4 onde são descritos.</li>
+<li><strong>C29:</strong> a lacuna é definida uma vez na 2.2.3 e cobre o
+caso da lacuna 3.</li>
+<li><strong>R1/R2:</strong> a 5.2 e a 5.3 deixaram de recontar a 1.4 e a
+3.4 (−1.488 palavras na Discussão).</li>
+<li><strong>A17:</strong> os seis indicadores <strong>não</strong>
+viraram tabela. Preferi enxugar a prosa, para não criar uma tabela nova
+que mudaria de novo a numeração.</li>
+</ul>
+<h2 id="estilo-parte-6-conferido-por-script">Estilo (Parte 6), conferido
+por script</h2>
+<ul>
+<li><em>rather than</em> e disfarces: zero no texto. As tabelas ainda
+têm alguns, que estão na lista de imagens.</li>
+<li><em>architecture</em>: zero. Travessões, exclamações, contrações e
+<em>Taken together</em>: zero. Grafia britânica: zero no texto (as
+imagens ainda têm alguns casos).</li>
+<li>Ponto e vírgula: só nos itens da lista de registros mínimos da
+4.7.2, que já têm vírgulas internas.</li>
+<li>Siglas: as que eram usadas só uma vez (CT, ICC, QMS, DSR) saíram.
+Das que voltavam à forma por extenso no Cap. 5, as que o script
+encontrou foram corrigidas.</li>
+<li>Remissões internas (Seção, Tabela, Figura, Capítulo): todas apontam
+para algo que existe (conferido por script).</li>
+<li>Frases: o comprimento médio fica entre 20 e 27 palavras, com
+desvio-padrão em torno de 10, e a mais longa tem 53. O detector ainda
+acha muitas séries de três no Cap. 4, mas a maior parte são listas de
+cláusulas e de itens de instrumento. Eu converti as séries que eram
+ritmo e deixei as que são conteúdo contado.</li>
+</ul>
+<h2 id="o-que-eu-não-consegui-verificar">O que eu não consegui
+verificar</h2>
+<ol type="1">
+<li>O texto da <strong>Cláusula 10.6 da ISO 14155:2026</strong>, que
+manda manter a equipe adequada. Usei a mesma formulação que já estava na
+4.2.3.</li>
+<li>A numeração <strong>ICH E6(R3) Section 3.12.2</strong> para a
+análise de causa raiz e o CAPA do patrocinador. Ela vem da lente de
+fatos; vale conferir.</li>
+<li>O <strong>Art. 61(4)</strong> do MDR (investigação obrigatória para
+implantáveis e classe III, com exceções) e a <strong>Regra 8</strong>
+(próteses de ombro na classe III). Ambos estão de acordo com o texto do
+MDR que eu conheço, mas não foram conferidos de novo nesta sessão.</li>
+</ol>
+</body>
+</html>
