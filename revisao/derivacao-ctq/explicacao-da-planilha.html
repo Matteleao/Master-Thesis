@@ -7,160 +7,340 @@
 <style>
 :root{
   --bg:#fbfaf7; --card:#ffffff; --ink:#1f2328; --muted:#5b6370; --line:#e4e1da;
-  --accent:#1f4e79; --accent-soft:#e8f0f8;
+  --accent:#1f4e79; --accent-soft:#e8f0f8; --head:#f3f1ec;
   --green:#2e7d32; --green-soft:#e8f5e9; --amber:#a15c00; --amber-soft:#fff4e5; --red:#b3261e; --red-soft:#fdecea;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#16181c; --card:#1e2126; --ink:#e7e9ec; --muted:#a3abb7; --line:#30343b;
-    --accent:#8db8e8; --accent-soft:#1f2c3b;
+    --accent:#8db8e8; --accent-soft:#1f2c3b; --head:#24282e;
     --green:#81c784; --green-soft:#1d2e20; --amber:#ffb74d; --amber-soft:#33281a; --red:#ef9a9a; --red-soft:#3a2120;
   }
 }
 :root[data-theme="dark"]{
   --bg:#16181c; --card:#1e2126; --ink:#e7e9ec; --muted:#a3abb7; --line:#30343b;
-  --accent:#8db8e8; --accent-soft:#1f2c3b;
+  --accent:#8db8e8; --accent-soft:#1f2c3b; --head:#24282e;
   --green:#81c784; --green-soft:#1d2e20; --amber:#ffb74d; --amber-soft:#33281a; --red:#ef9a9a; --red-soft:#3a2120;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-main{max-width:860px;margin:0 auto;padding:32px 16px 80px}
-h1{font-size:1.9rem;line-height:1.25;margin:0 0 8px}
-h2{font-size:1.35rem;margin:48px 0 12px;padding-top:8px;border-top:1px solid var(--line)}
-h3{font-size:1.08rem;margin:24px 0 8px}
-p{margin:0 0 14px}
-.lead{font-size:1.1rem;color:var(--muted)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:16px 0}
-.big{font-size:1.15rem}
-.tag{display:inline-block;font-size:.8rem;font-weight:600;padding:2px 10px;border-radius:999px;white-space:nowrap}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:920px;margin:0 auto;padding:32px 16px 80px}
+h1{font-size:1.8rem;line-height:1.25;margin:0 0 8px}
+h2{font-size:1.3rem;margin:56px 0 6px;padding-top:12px;border-top:2px solid var(--line)}
+h3{font-size:1rem;margin:22px 0 8px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+p{margin:0 0 12px}
+.lead{font-size:1.05rem;color:var(--muted)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0}
+.box p:last-child{margin:0}
+.kv{display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 14px}
+.kv dt{font-weight:600;color:var(--muted)}
+.kv dd{margin:0}
+@media (max-width:560px){.kv{grid-template-columns:minmax(0,1fr)}.kv dd{margin-bottom:8px}}
+.tablewrap{overflow-x:auto;margin:8px 0 14px}
+table{width:100%;border-collapse:collapse;font-size:.93rem;background:var(--card)}
+th,td{text-align:left;vertical-align:top;padding:8px 10px;border:1px solid var(--line)}
+th{background:var(--head);font-weight:600}
+td:first-child{font-weight:600;white-space:nowrap}
+.example td:first-child{font-weight:400;color:var(--muted)}
+.example td:last-child{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86rem}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em;background:var(--accent-soft);padding:1px 5px;border-radius:4px}
+.tag{display:inline-block;font-size:.8rem;font-weight:600;padding:1px 9px;border-radius:999px;white-space:nowrap}
 .g{background:var(--green-soft);color:var(--green)} .a{background:var(--amber-soft);color:var(--amber)} .r{background:var(--red-soft);color:var(--red)}
-.funnel{display:grid;gap:8px;margin:18px 0}
-.step{display:grid;grid-template-columns:minmax(0,1fr);gap:4px}
-.bar{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:6px;padding:10px 14px}
-.bar b{font-size:1.25rem;color:var(--accent)}
-.bar small{display:block;color:var(--muted)}
-table{width:100%;border-collapse:collapse;font-size:.95rem}
-th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--line)}
-th{color:var(--muted);font-weight:600}
-.tablewrap{overflow-x:auto}
-code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;background:var(--accent-soft);padding:1px 5px;border-radius:4px}
-.trace{border-left:3px solid var(--line);margin:0;padding:0 0 0 16px}
-.trace li{margin:0 0 12px}
-ol,ul{padding-left:22px}
-.note{color:var(--muted);font-size:.95rem}
-.decision{border-left:4px solid var(--amber);background:var(--amber-soft);border-radius:8px;padding:14px 16px;margin:12px 0}
-.decision b{color:var(--amber)}
+.map{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:14px 0}
+.map a{display:block;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:8px 10px;font-size:.9rem}
+.map a b{display:block;color:var(--accent)}
+.tip{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:8px;padding:10px 14px;margin:12px 0}
+.warn{border-left:4px solid var(--amber);background:var(--amber-soft);border-radius:8px;padding:10px 14px;margin:12px 0}
 </style>
 </head>
 <body>
 <main>
 
-<h1>Guia da planilha da derivação dos domínios CtQ</h1>
-<p class="lead">O que é cada aba, como ler uma linha e o que o resultado muda na tese. Ler este guia leva uns 15 minutos.</p>
+<h1>Guia da planilha, aba por aba</h1>
+<p class="lead">Arquivo: <code>revisao/derivacao-ctq/derivacao-ctq-site.xlsx</code>. Para cada aba: para que ela serve, de onde vêm os dados, o que significa cada coluna e uma linha de exemplo tirada da própria planilha.</p>
 
-<div class="card big">
-<b>Em uma frase:</b> a planilha pega tudo o que as três normas exigem de uma investigação clínica, vê quem cada exigência obriga (o centro ou o patrocinador) e, no fim, mostra quais áreas de trabalho o centro precisa controlar. Essas áreas são os domínios CtQ da Tabela 3.2.
+<div class="box">
+<p><b>A planilha inteira em uma frase:</b> ela executa o procedimento das Seções 2.2.2 e 2.2.3 da tese. Copia o que as três normas exigem, junta o que é igual, vê quem cada exigência obriga (o centro ou o patrocinador) e termina nos domínios CtQ e nas lacunas.</p>
 </div>
 
-<h2>1. A ideia, sem jargão</h2>
-<p>Pense numa peneira com quatro telas. Entra em cima uma pilha grande de exigências das normas. A cada tela, sai o que não interessa para o centro. Embaixo sobram poucas áreas de trabalho, que são o que o centro precisa controlar.</p>
-
-<div class="funnel" role="img" aria-label="Funil de 211 exigências até 11 domínios">
-  <div class="step"><div class="bar" style="width:100%"><b>211</b> exigências copiadas das normas<small>E6(R3): 77 · MDR: 57 · ISO 14155: 77 (aba 1)</small></div></div>
-  <div class="step"><div class="bar" style="width:82%"><b>45</b> assuntos, depois de juntar as repetidas<small>"consentimento" aparece nas três normas e vira um assunto só (aba 4)</small></div></div>
-  <div class="step"><div class="bar" style="width:64%"><b>31</b> assuntos que dependem do centro<small>saem os 14 que só o patrocinador controla, como estatística e seguro (aba 5)</small></div></div>
-  <div class="step"><div class="bar" style="width:46%"><b>11</b> áreas de trabalho, que são os domínios<small>cobrem os 12 domínios da Tabela 3.2 (aba 6)</small></div></div>
+<h3>A ordem das abas é a ordem do procedimento</h3>
+<div class="map">
+<a href="#a0"><b>Aba 0</b>Leia-me</a>
+<a href="#a1"><b>Aba 1</b>Copiar as exigências</a>
+<a href="#a2"><b>Aba 2</b>Separar os mecanismos</a>
+<a href="#a3"><b>Aba 3</b>Conferir contra a E8</a>
+<a href="#a4"><b>Aba 4</b>Juntar e classificar</a>
+<a href="#a4b"><b>Aba 4b</b>Classificar os mecanismos</a>
+<a href="#a5"><b>Aba 5</b>Filtrar e agrupar</a>
+<a href="#a6"><b>Aba 6</b>Testar os domínios</a>
+<a href="#a7"><b>Aba 7</b>O que muda na tese</a>
 </div>
 
-<p>Corre por fora uma segunda pilha: as exigências que dizem <i>como</i> controlar a qualidade, e não <i>o que</i> controlar. Foram 40, e ficaram separadas (abas 2 e 4b). É delas que saem as lacunas da Tabela 3.1. A seção 4 deste guia explica por quê.</p>
+<div class="tip"><b>Os códigos que ligam as abas:</b>
+<code>E6-001</code>, <code>MDR-001</code> e <code>ISO-001</code> são exigências copiadas (abas 1).
+<code>A01</code> a <code>A45</code> são assuntos (abas 1, 3, 4 e 5).
+<code>G1</code> a <code>G12</code> são domínios (abas 5 e 6).
+<code>M-01</code> a <code>M-40</code> são mecanismos (aba 2).
+<code>MG1</code> a <code>MG8</code> são grupos de mecanismos (abas 2 e 4b).
+Para seguir qualquer coisa de uma aba para outra, filtre pelo código.</div>
 
-<h2>2. Seis palavras que a planilha usa</h2>
+<!-- ============ ABA 0 ============ -->
+<h2 id="a0">Aba 0 · Leia-me</h2>
+<dl class="kv box">
+<dt>Para que serve</dt><dd>É o resumo do que foi feito: quais partes de cada norma foram lidas, a regra para uma exigência entrar na planilha, as decisões que tomei e os números finais.</dd>
+<dt>Linhas</dt><dd>12, uma por tópico.</dd>
+</dl>
 <div class="tablewrap"><table>
-<tr><th>Palavra</th><th>Quer dizer</th><th>Exemplo</th></tr>
-<tr><td><b>Candidato</b></td><td>Uma exigência copiada de uma norma, com o número da cláusula e o texto literal.</td><td>ISO 10.6 g): "document and explain any deviation from the approved CIP"</td></tr>
-<tr><td><b>Atributo</b></td><td>O assunto da exigência: aquilo que, se falhar, prejudica o paciente ou os dados.</td><td>"Desvios documentados e acompanhados"</td></tr>
-<tr><td><b>Atributo consolidado</b></td><td>O mesmo assunto juntado das três normas numa linha só. Tem código <code>A01</code> a <code>A45</code>.</td><td><code>A11</code> junta a E6(R3) 2.5.3, o MDR Anexo XV II.3.10 e a ISO 10.6 g)</td></tr>
-<tr><td><b>Mecanismo</b></td><td>Uma exigência sobre <i>como</i> controlar a qualidade, e não sobre o que controlar.</td><td>Ciclo de risco, monitoria, auditoria, CAPA</td></tr>
-<tr><td><b>Parte obrigada</b></td><td>Quem a norma manda cumprir: investigador/PI (o centro), patrocinador ou ninguém em especial.</td><td>ISO 10.6 g) obriga o PI; MDR II.3.10 põe no CIP, que é do patrocinador</td></tr>
-<tr><td><b>Domínio</b></td><td>Um grupo de atributos da mesma área de trabalho do centro.</td><td>G4 "Gestão e rastreabilidade do dispositivo"</td></tr>
+<tr><th>Coluna</th><th>O que significa</th></tr>
+<tr><td>Tópico</td><td>O assunto da nota (por exemplo "Fontes lidas" ou "Escopo do MDR").</td></tr>
+<tr><td>Descrição</td><td>A explicação. Leia com atenção as linhas "Escopo do MDR" e "Juízos que são do autor", que trazem decisões que você precisa confirmar.</td></tr>
 </table></div>
 
-<h2>3. O caminho de um assunto pela planilha</h2>
-<p>O jeito mais fácil de entender a planilha é seguir um assunto do começo ao fim. O exemplo aqui é o <b>consentimento informado</b>.</p>
-<ol class="trace">
-<li><b>Aba 1 (Candidatos).</b> Filtre a coluna "Atributo consolidado" por <code>A02</code>. Aparecem dez linhas: três da E6(R3) (Principle 2.1, 2.8.3, 2.8.7), quatro do MDR (Anexo XV II.3.13, Art. 62(4)(f), Art. 63(1), Art. 63(2)(c)) e três da ISO (5.2, 5.8.1, 10.5 c)). Cada linha traz o texto literal da cláusula.</li>
-<li><b>Aba 3 (Cobertura E8).</b> Essas linhas cobrem a consideração nº 5 da E8(R1), "proteção dos direitos dos participantes". A aba só confirma que nenhuma das 18 considerações da E8 ficou sem exigência correspondente.</li>
-<li><b>Aba 4 (Matriz de atributos).</b> A linha <code>A02</code> mostra, lado a lado, as cláusulas e quem cada norma obriga. As três obrigam o investigador ou alguém qualificado da equipe dele, então a categoria é <span class="tag g">Fortemente harmonizado</span>.</li>
-<li><b>Aba 5 (Filtro).</b> O consentimento é colhido no centro, então o locus é "o centro controla". A decisão é <b>Keep</b> e o assunto vai para o grupo <code>G3</code>.</li>
-<li><b>Aba 6 (Domínios).</b> O grupo G3 passa nos quatro critérios da 2.2.2 (proporcionalidade, parcimônia, responsabilidade atribuída e conhecimento existente) e corresponde ao domínio 3 da Tabela 3.2.</li>
-</ol>
-<p>Todo assunto faz esse mesmo caminho. Alguns param na aba 5, porque só o patrocinador controla, como o envio de relatórios às autoridades (<code>A14</code>).</p>
-
-<h2>4. As três cores da aba 4</h2>
-<p>A aba 4 aplica a regra da Seção 2.2.3. Para cada assunto, a pergunta é: as três normas obrigam o centro da mesma maneira?</p>
+<!-- ============ ABA 1 ============ -->
+<h2 id="a1">Aba 1 · Candidatos</h2>
+<dl class="kv box">
+<dt>Para que serve</dt><dd>É a matéria-prima. Cada linha é uma exigência copiada de uma norma, que eu chamo de <b>candidato</b>. É o primeiro passo da 2.2.2: ler as normas e anotar tudo o que, se falhar, prejudica o paciente ou os dados.</dd>
+<dt>Linhas</dt><dd>211: 77 da ICH E6(R3), 57 do MDR e 77 da ISO 14155:2026.</dd>
+<dt>Regra para entrar</dt><dd>A exigência trata de uma característica da investigação cuja falha afetaria a proteção do participante ou a confiabilidade dos resultados. Essa é a definição de CtQ da E8(R1), Seção 3.2.</dd>
+</dl>
 <div class="tablewrap"><table>
-<tr><th>Categoria</th><th>Quer dizer</th><th>Quantos</th><th>Exemplo</th></tr>
-<tr><td><span class="tag g">Fortemente harmonizado</span></td><td>As três normas obrigam a mesma parte, do mesmo jeito.</td><td>7</td><td>Consentimento, qualificação do investigador, conformidade com o CIP</td></tr>
-<tr><td><span class="tag a">Parcialmente harmonizado</span></td><td>Todas concordam no princípio, mas uma obriga outra parte, usa outros termos ou não diz nada.</td><td>23</td><td>Desvios (<code>A11</code>): a E6(R3) e a ISO obrigam o investigador, mas o MDR só pede uma política de desvios no CIP, que é do patrocinador</td></tr>
-<tr><td><span class="tag r">Sem obrigação para o centro</span></td><td>Nenhuma das três normas manda o centro fazer isso.</td><td>15</td><td>Curva de aprendizagem (<code>A45</code>): só a ISO A.7(g) fala dela, e como item que o patrocinador planeja no CIP</td></tr>
+<tr><th>Coluna</th><th>O que significa</th><th>Valores possíveis</th></tr>
+<tr><td>ID</td><td>O código da linha. O prefixo indica a norma.</td><td><code>E6-001</code>…, <code>MDR-001</code>…, <code>ISO-001</code>…</td></tr>
+<tr><td>Instrumento</td><td>A norma de onde a exigência veio.</td><td>ICH E6(R3), MDR, ISO 14155:2026</td></tr>
+<tr><td>Cláusula</td><td>O número exato da cláusula na norma. É o que vai entre parênteses quando você citar na tese.</td><td>"2.5.3", "Annex XV, Ch. II, 3.10", "10.6 g)"</td></tr>
+<tr><td>Escopo MDR</td><td>Só se aplica ao MDR. Diz se a linha está no Anexo XV ou fora dele, num artigo. Serve para filtrar caso você decida usar só o Anexo XV.</td><td>"Annex XV", "Art. 63 (outside Annex XV)"; vazia para E6 e ISO</td></tr>
+<tr><td>Trecho literal</td><td>O texto exato da norma, copiado por script e conferido contra o PDF. Pode ir para a tese entre aspas.</td><td>Texto em inglês</td></tr>
+<tr><td>Atributo (nossas palavras)</td><td>O que a exigência pede, resumido em uma frase minha.</td><td>"Every deviation documented and explained"</td></tr>
+<tr><td>Parte obrigada</td><td>Quem a norma manda cumprir. <b>É a coluna mais importante</b>, porque o resto da análise depende dela.</td><td>Investigator, PI, Sponsor, All parties, Not specified</td></tr>
+<tr><td>Considerações E8(R1) §7 cobertas (nº)</td><td>Quais das 18 considerações da E8(R1), Seção 7, essa exigência atende. Os números estão na ordem da própria E8; a aba 3 traz o texto de cada uma.</td><td>"5, 7" = considerações 5 e 7</td></tr>
+<tr><td>Atributo consolidado</td><td>O assunto ao qual a linha pertence. Linhas de normas diferentes sobre a mesma coisa recebem o mesmo código. É esse código que liga a aba 1 à aba 4.</td><td><code>A01</code> a <code>A45</code> + nome</td></tr>
 </table></div>
+<h3>Exemplo real (linha ISO-061)</h3>
+<div class="tablewrap"><table class="example">
+<tr><td>ID</td><td>ISO-061</td></tr>
+<tr><td>Instrumento</td><td>ISO 14155:2026</td></tr>
+<tr><td>Cláusula</td><td>10.6 d)</td></tr>
+<tr><td>Trecho literal</td><td>ensure that the investigational device is used solely by authorized users as specified in 7.2, and in accordance with the CIP and instructions for use,</td></tr>
+<tr><td>Atributo</td><td>Device used only by authorised users per CIP and IFU</td></tr>
+<tr><td>Parte obrigada</td><td>PI</td></tr>
+<tr><td>Considerações E8</td><td>5, 7</td></tr>
+<tr><td>Atributo consolidado</td><td>A16 Storage, handling, and use of the investigational product/device…</td></tr>
+</table></div>
+<p><b>Como ler:</b> a ISO, na cláusula 10.6 d), manda o PI garantir que só usuários autorizados usem o dispositivo. Isso atende às considerações 5 (proteção do participante) e 7 (competências) da E8. O assunto é o <code>A16</code>, uso do dispositivo conforme o protocolo.</p>
+<div class="tip"><b>Truque:</b> filtre a última coluna por um código (por exemplo <code>A16</code>) e você vê, lado a lado, tudo o que as três normas dizem sobre aquele assunto.</div>
 
-<h3>Por que existe uma segunda matriz (aba 4b)</h3>
-<p>Quatro das cinco lacunas da Tabela 3.1 (sistema de qualidade, registro de risco, monitoria interna e ciclo de melhoria) não são assuntos a controlar. São formas de controlar, ou seja, mecanismos. A 2.2.2 manda separar os mecanismos dos atributos, então eles não aparecem na aba 4. A aba 4b aplica a eles a mesma pergunta das três cores, e é dela que as lacunas saem:</p>
+<!-- ============ ABA 2 ============ -->
+<h2 id="a2">Aba 2 · Mecanismos</h2>
+<dl class="kv box">
+<dt>Para que serve</dt><dd>Guarda as exigências que dizem <b>como</b> controlar a qualidade, e não <b>o que</b> controlar. Por exemplo: ter um ciclo de risco, monitorar, auditar, fazer CAPA. A 2.2.2 manda separar essas exigências dos atributos, e é isso que esta aba faz.</dd>
+<dt>Linhas</dt><dd>40.</dd>
+<dt>Diferença da aba 1</dt><dd>"Documentar os desvios" é atributo, porque é algo a proteger (aba 1). "Fazer análise de causa e CAPA quando houver não conformidade" é mecanismo, porque é um jeito de controlar (aba 2).</dd>
+</dl>
+<div class="tablewrap"><table>
+<tr><th>Coluna</th><th>O que significa</th></tr>
+<tr><td>ID</td><td>Código do mecanismo, de <code>M-01</code> a <code>M-40</code>.</td></tr>
+<tr><td>Instrumento</td><td>A norma de origem.</td></tr>
+<tr><td>Cláusula</td><td>O número da cláusula.</td></tr>
+<tr><td>Trecho literal</td><td>O texto exato da norma.</td></tr>
+<tr><td>Mecanismo</td><td>O que o mecanismo faz, em uma frase minha.</td></tr>
+<tr><td>Parte</td><td>Quem a norma manda operar o mecanismo.</td></tr>
+<tr><td>Grupo (aba 4b)</td><td>A família do mecanismo, de <code>MG1</code> a <code>MG8</code> (sistema de qualidade, risco, monitoria, CAPA etc.). Liga esta aba à 4b.</td></tr>
+</table></div>
+<h3>Exemplo real (linha M-40)</h3>
+<div class="tablewrap"><table class="example">
+<tr><td>Instrumento · Cláusula</td><td>ISO 14155:2026 · 10.6 o)</td></tr>
+<tr><td>Trecho literal</td><td>determine the cause and implement appropriate corrective and preventive actions to address significant non-compliance,</td></tr>
+<tr><td>Mecanismo</td><td>PI determines cause and implements CAPA for significant non-compliance</td></tr>
+<tr><td>Parte</td><td>PI</td></tr>
+<tr><td>Grupo</td><td>MG4 Correction: root cause and CAPA</td></tr>
+</table></div>
+<p><b>Como ler:</b> esta linha mostra que a ISO já manda o PI fazer CAPA. É por causa dela que a lacuna 5 da Tabela 3.1 precisa mudar.</p>
+
+<!-- ============ ABA 3 ============ -->
+<h2 id="a3">Aba 3 · Cobertura E8(R1)</h2>
+<dl class="kv box">
+<dt>Para que serve</dt><dd>É uma conferência. A E8(R1), Seção 7, lista 18 pontos a considerar ao identificar fatores CtQ. Esta aba verifica se cada um desses pontos tem pelo menos uma exigência correspondente na aba 1. Se algum ficasse sem nenhuma, a leitura das normas teria deixado algo de fora. É a opção "checagem de cobertura" que está entre colchetes na proposta da 2.2.2.</dd>
+<dt>Linhas</dt><dd>18, uma por consideração da E8.</dd>
+<dt>Resultado</dt><dd>As 18 estão cobertas.</dd>
+</dl>
+<div class="tablewrap"><table>
+<tr><th>Coluna</th><th>O que significa</th></tr>
+<tr><td>Nº na E8(R1) §7</td><td>A posição do ponto na lista da E8, na ordem da própria diretriz.</td></tr>
+<tr><td>Texto literal da E8(R1)</td><td>O texto exato do ponto.</td></tr>
+<tr><td>Rótulo usado na tese</td><td>O nome curto que a tese dá ao ponto na lista da 2.2.2. Serve para você ver que a ordem da tese é diferente da ordem da E8.</td></tr>
+<tr><td>Candidatos E6(R3) / MDR / ISO</td><td>Quantas exigências de cada norma atendem a esse ponto.</td></tr>
+<tr><td>Atributos consolidados</td><td>Os assuntos (<code>A..</code>) ligados a esse ponto.</td></tr>
+<tr><td>Atributos que passam no filtro</td><td>Quais desses assuntos chegam aos domínios do centro. "Nenhum" quer dizer que o ponto só é atendido por exigências do patrocinador.</td></tr>
+<tr><td>Resultado</td><td>"Coberta" se tem pelo menos uma exigência, e "NÃO COBERTA" se não tem.</td></tr>
+</table></div>
+<h3>Exemplo real (linha 1)</h3>
+<div class="tablewrap"><table class="example">
+<tr><td>Texto da E8</td><td>Engagement of all relevant stakeholders, including patients, is considered during study planning and design.</td></tr>
+<tr><td>Rótulo na tese</td><td>Stakeholder engagement</td></tr>
+<tr><td>E6 / MDR / ISO</td><td>1 / 0 / 0</td></tr>
+<tr><td>Atributos</td><td>A41</td></tr>
+<tr><td>Passam no filtro</td><td>nenhum (só atributos do patrocinador)</td></tr>
+</table></div>
+<p><b>Como ler:</b> o ponto 1 da E8 só aparece em uma cláusula da E6(R3), e quem cumpre é o patrocinador. Por isso ele não vira domínio do centro. Seis dos 18 pontos estão nessa situação (1, 2, 4, 14, 17 e 18).</p>
+
+<!-- ============ ABA 4 ============ -->
+<h2 id="a4">Aba 4 · Matriz de atributos</h2>
+<dl class="kv box">
+<dt>Para que serve</dt><dd>É o coração da análise e corresponde à "clause-level comparison" da 2.2.3. As 211 exigências da aba 1 viram 45 assuntos. Para cada assunto, a aba mostra lado a lado o que cada norma diz e quem ela obriga, e classifica o assunto em uma de três categorias.</dd>
+<dt>Linhas</dt><dd>45, uma por assunto, de <code>A01</code> a <code>A45</code>.</dd>
+</dl>
+<div class="tablewrap"><table>
+<tr><th>Coluna</th><th>O que significa</th></tr>
+<tr><td>ID</td><td>Código do assunto.</td></tr>
+<tr><td>Atributo consolidado</td><td>O nome do assunto.</td></tr>
+<tr><td>ICH E6(R3): cláusulas</td><td>As cláusulas da E6(R3) que tratam do assunto. Um travessão (—) quer dizer que a E6(R3) não diz nada sobre ele.</td></tr>
+<tr><td>ICH E6(R3): parte</td><td>Quem a E6(R3) obriga.</td></tr>
+<tr><td>MDR: cláusulas / parte</td><td>O mesmo para o MDR.</td></tr>
+<tr><td>ISO 14155:2026: cláusulas / parte</td><td>O mesmo para a ISO.</td></tr>
+<tr><td>Categoria (2.2.3)</td><td>O veredito. As três categorias estão explicadas no quadro abaixo.</td></tr>
+<tr><td>Justificativa</td><td>Por que o assunto caiu nessa categoria, citando as cláusulas.</td></tr>
+</table></div>
+<div class="tablewrap"><table>
+<tr><th>Categoria</th><th>Quando</th><th>Total</th></tr>
+<tr><td><span class="tag g">Strongly harmonized</span></td><td>As três normas obrigam a mesma parte, do mesmo jeito.</td><td>7</td></tr>
+<tr><td><span class="tag a">Partly harmonized</span></td><td>Concordam no princípio, mas uma obriga outra parte, usa outros termos ou não diz nada.</td><td>23</td></tr>
+<tr><td><span class="tag r">Unaddressed at site level</span></td><td>Nenhuma das três obriga o centro: só o patrocinador ou ninguém.</td><td>15</td></tr>
+</table></div>
+<h3>Exemplo real (linha A11)</h3>
+<div class="tablewrap"><table class="example">
+<tr><td>Atributo</td><td>Protocol/CIP deviations documented, classified, and followed up</td></tr>
+<tr><td>E6(R3)</td><td>2.5.3; 3.9.3 · Investigator; Sponsor</td></tr>
+<tr><td>MDR</td><td>Annex XV, Ch. II, 3.10 · Sponsor (policy); site (applies)</td></tr>
+<tr><td>ISO</td><td>10.6 g) · PI</td></tr>
+<tr><td>Categoria</td><td><span class="tag a">Partly harmonized</span></td></tr>
+</table></div>
+<p><b>Como ler:</b> a E6(R3) e a ISO mandam o investigador documentar os desvios. O MDR só manda pôr uma política de desvios no CIP, que é documento do patrocinador. As três concordam no princípio, mas não obrigam a mesma parte, então o assunto é parcialmente harmonizado. A tese diz que esse assunto é fortemente harmonizado; está na aba 7.</p>
+
+<!-- ============ ABA 4b ============ -->
+<h2 id="a4b">Aba 4b · Matriz de mecanismos</h2>
+<dl class="kv box">
+<dt>Para que serve</dt><dd>Faz com os mecanismos da aba 2 o mesmo que a aba 4 faz com os atributos: mostra, para cada tipo de mecanismo, quem cada norma obriga. <b>É desta aba que saem as lacunas da Tabela 3.1.</b></dd>
+<dt>Linhas</dt><dd>8, de <code>MG1</code> a <code>MG8</code>.</dd>
+</dl>
+<div class="tablewrap"><table>
+<tr><th>Coluna</th><th>O que significa</th></tr>
+<tr><td>ID</td><td>Código do grupo de mecanismos.</td></tr>
+<tr><td>Mecanismo</td><td>O tipo de mecanismo (sistema de qualidade, ciclo de risco, monitoria, CAPA, auditoria, comitês, curva de aprendizagem e calibração).</td></tr>
+<tr><td>ICH E6(R3) / MDR / ISO 14155:2026</td><td>Em cada célula, as cláusulas e quem elas obrigam, no formato "cláusula — parte".</td></tr>
+<tr><td>Categoria para o centro</td><td>As mesmas três categorias da aba 4. Vermelho quer dizer que nenhuma norma dá esse mecanismo ao centro.</td></tr>
+<tr><td>Lacuna da Tabela 3.1</td><td>A qual lacuna da tese a linha corresponde. "Not a gap" quer dizer que não é lacuna.</td></tr>
+<tr><td>Leitura</td><td>A conclusão em uma frase.</td></tr>
+</table></div>
+<h3>Resumo das 8 linhas</h3>
 <div class="tablewrap"><table>
 <tr><th>Mecanismo</th><th>Quem as normas obrigam</th><th>Resultado</th></tr>
-<tr><td>Sistema de qualidade</td><td>Só o patrocinador (E6(R3) 3.10, ISO 9.1)</td><td><span class="tag r">Lacuna 1</span></td></tr>
-<tr><td>Ciclo de risco</td><td>Só o patrocinador (E6(R3) 3.10.1, ISO 6.2 e 7.1)</td><td><span class="tag r">Lacuna 2</span></td></tr>
-<tr><td>Curva de aprendizagem</td><td>Só o patrocinador, no desenho do CIP (ISO A.7(g))</td><td><span class="tag r">Lacuna 3</span></td></tr>
-<tr><td>Monitoria e verificação</td><td>Só o patrocinador (E6(R3) 3.11.4, MDR Art. 72(2), ISO 6.7)</td><td><span class="tag r">Lacuna 4</span></td></tr>
-<tr><td>Causa e CAPA</td><td>Patrocinador <b>e também o PI</b> (ISO 10.6 o); E6(R3) 2.5.3)</td><td><span class="tag a">Lacuna 5 precisa mudar</span></td></tr>
-<tr><td>Calibração de equipamento</td><td>O PI (ISO 10.6 i))</td><td><span class="tag a">Não é lacuna</span></td></tr>
+<tr><td>MG1 Sistema de qualidade</td><td>só o patrocinador</td><td><span class="tag r">Lacuna 1</span></td></tr>
+<tr><td>MG2 Ciclo de risco</td><td>só o patrocinador</td><td><span class="tag r">Lacuna 2</span></td></tr>
+<tr><td>MG3 Monitoria</td><td>só o patrocinador</td><td><span class="tag r">Lacuna 4</span></td></tr>
+<tr><td>MG4 Causa e CAPA</td><td>patrocinador e também o PI (ISO 10.6 o); E6 2.5.3)</td><td><span class="tag a">Lacuna 5, a redefinir</span></td></tr>
+<tr><td>MG5 Auditoria</td><td>só o patrocinador</td><td><span class="tag r">Apoia o DR5</span></td></tr>
+<tr><td>MG6 Comitês centrais</td><td>só o patrocinador</td><td><span class="tag r">Contexto da 3.2.1</span></td></tr>
+<tr><td>MG7 Curva de aprendizagem</td><td>só o patrocinador, no desenho do CIP (ISO A.7 g))</td><td><span class="tag r">Lacuna 3</span></td></tr>
+<tr><td>MG8 Calibração</td><td>o PI (ISO 10.6 i))</td><td><span class="tag a">Não é lacuna</span></td></tr>
 </table></div>
 
-<h2>5. O que muda na tese</h2>
-<p>A lista completa, com 18 itens, está na aba 7. Estes são os que importam:</p>
+<!-- ============ ABA 5 ============ -->
+<h2 id="a5">Aba 5 · Filtro e agrupamento</h2>
+<dl class="kv box">
+<dt>Para que serve</dt><dd>Decide quais dos 45 assuntos interessam ao centro e os agrupa por área de trabalho. É o segundo e o terceiro passo da 2.2.3: o filtro com três critérios (locus, escopo e relevância) e o agrupamento por área operacional.</dd>
+<dt>Linhas</dt><dd>45, os mesmos assuntos da aba 4.</dd>
+<dt>Resultado</dt><dd>31 ficam (<b>Keep</b>) e 14 saem (<b>Exclude</b>).</dd>
+</dl>
+<div class="tablewrap"><table>
+<tr><th>Coluna</th><th>O que significa</th><th>Valores possíveis</th></tr>
+<tr><td>ID · Atributo consolidado</td><td>O assunto, igual à aba 4.</td><td></td></tr>
+<tr><td>Categoria (aba 4)</td><td>A categoria da aba 4, repetida para consulta.</td><td>verde, amarelo, vermelho</td></tr>
+<tr><td>Locus de responsabilidade</td><td><b>Quem controla na prática?</b> É o primeiro critério do filtro.</td><td>"O centro controla" · "Formalmente de outra parte, mas a execução no centro decide" · "Só o patrocinador controla"</td></tr>
+<tr><td>Escopo da tese</td><td>Se o assunto cabe no recorte da tese ou a empurraria para além dele. É o segundo critério.</td><td>In, Out, "Out (author decision)"</td></tr>
+<tr><td>Relevância material</td><td>Quanto o assunto pesa numa investigação cirúrgica com implante. É o terceiro critério.</td><td>High, Medium, Low</td></tr>
+<tr><td>Decisão</td><td>Fica ou sai, e por qual critério saiu.</td><td>Keep · Exclude (locus) · Exclude (scope)</td></tr>
+<tr><td>Grupo operacional</td><td>Para os que ficam, a área de trabalho do centro onde o assunto entra, que vira domínio na aba 6.</td><td><code>G1</code> a <code>G12</code> + nome</td></tr>
+<tr><td>Justificativa</td><td>Por que tomei essa decisão.</td><td></td></tr>
+</table></div>
+<h3>Exemplo real (linha A26)</h3>
+<div class="tablewrap"><table class="example">
+<tr><td>Atributo</td><td>Endpoints and response variables well defined and assessed with valid methods</td></tr>
+<tr><td>Categoria</td><td><span class="tag r">Unaddressed at site level</span></td></tr>
+<tr><td>Locus</td><td>Formalmente de outra parte, mas a execução no centro decide</td></tr>
+<tr><td>Escopo · Relevância</td><td>In · High</td></tr>
+<tr><td>Decisão</td><td>Keep</td></tr>
+<tr><td>Grupo</td><td>G8 Endpoint and outcome assessment</td></tr>
+</table></div>
+<p><b>Como ler:</b> nenhuma norma obriga o centro sobre como avaliar os desfechos, porque isso é do patrocinador. Mas quem mede a amplitude de movimento, aplica os PROMs e faz as radiografias é o centro, então o assunto fica e vai para o G8. É um dos casos que você precisa decidir: pela regra da 2.2.3, ele também seria uma lacuna.</p>
+<div class="warn"><b>Linha para revisar:</b> a <code>A20</code> (confidencialidade) é fortemente harmonizada, mas eu a excluí por escopo, por ser assunto do sistema de proteção de dados da instituição. A decisão é sua.</div>
 
-<div class="card">
-<h3 style="margin-top:0">a) A lacuna 5 está atribuída à norma errada</h3>
-<p>A Tabela 3.1 diz que o MDR tem um dever reativo de CAPA. O MDR não tem esse dever para investigações clínicas. Quem tem é a <b>ISO 10.6 o)</b>, que manda o PI determinar a causa e aplicar CAPA quando há não conformidade significativa. A E6(R3) 2.5.3 também pede ao investigador que evite a recorrência de desvios importantes.</p>
-<p><b>Na prática:</b> o centro já tem um dever de correção, mas só reativo, depois que o problema aparece. A lacuna real é a falta de um ciclo <i>proativo</i>, que dispara por limiares definidos antes e inclui autoinspeção.</p>
-</div>
+<!-- ============ ABA 6 ============ -->
+<h2 id="a6">Aba 6 · Domínios e critérios</h2>
+<dl class="kv box">
+<dt>Para que serve</dt><dd>É o resultado final. Cada grupo da aba 5 é testado contra os quatro critérios da 2.2.2. Se passa, é um domínio CtQ do centro. A última coluna mostra a qual domínio da Tabela 3.2 ele corresponde.</dd>
+<dt>Linhas</dt><dd>11 grupos. Não existe G9 porque o G8 cobre os domínios 8 e 9 da tese juntos.</dd>
+</dl>
+<div class="tablewrap"><table>
+<tr><th>Coluna</th><th>O que significa</th></tr>
+<tr><td>Grupo</td><td>Código do domínio candidato.</td></tr>
+<tr><td>Domínio candidato</td><td>O nome da área de trabalho.</td></tr>
+<tr><td>Atributos</td><td>Os assuntos que formam o domínio. Procure esses códigos na aba 4 para ver as cláusulas.</td></tr>
+<tr><td>1 Proporcionalidade</td><td>A falha nessa área é grave o bastante para justificar controle? "Y" quer dizer sim, seguido do motivo.</td></tr>
+<tr><td>2 Parcimônia</td><td>O domínio fica restrito ao essencial, sem incluir coisas menores?</td></tr>
+<tr><td>3 Responsabilidade atribuída</td><td>Alguma norma põe essa área nas mãos de uma parte do centro? "Partial" quer dizer que nenhuma cláusula dá ao centro, e que o domínio se sustenta porque a execução acontece no centro.</td></tr>
+<tr><td>4 Conhecimento existente</td><td>O que se sabe sobre o dispositivo, a cirurgia e a população torna essa área crítica?</td></tr>
+<tr><td>Resultado</td><td>"Passa" ou "Passa com ressalva" (quando algum critério deu Partial).</td></tr>
+<tr><td>Domínio da Tabela 3.2 correspondente</td><td>O número do domínio na tese.</td></tr>
+</table></div>
+<h3>As 11 linhas, resumidas</h3>
+<div class="tablewrap"><table>
+<tr><th>Grupo</th><th>Domínio</th><th>Resultado</th><th>Tabela 3.2</th></tr>
+<tr><td>G1</td><td>Capacidade e recursos do centro</td><td><span class="tag g">Passa</span></td><td>1</td></tr>
+<tr><td>G2</td><td>Seleção de participantes</td><td><span class="tag g">Passa</span></td><td>2</td></tr>
+<tr><td>G3</td><td>Consentimento e informação</td><td><span class="tag g">Passa</span></td><td>3</td></tr>
+<tr><td>G4</td><td>Gestão e rastreabilidade do dispositivo</td><td><span class="tag g">Passa</span></td><td>4</td></tr>
+<tr><td>G5</td><td>Execução do procedimento</td><td><span class="tag a">Passa com ressalva</span></td><td>5</td></tr>
+<tr><td>G6</td><td>Qualificação, treinamento, delegação e supervisão</td><td><span class="tag g">Passa</span></td><td>6</td></tr>
+<tr><td>G7</td><td>Cuidado médico, seguimento e retenção</td><td><span class="tag g">Passa</span></td><td>7</td></tr>
+<tr><td>G8</td><td>Avaliação de desfechos, incluindo imagem</td><td><span class="tag a">Passa com ressalva</span></td><td>8 + 9</td></tr>
+<tr><td>G10</td><td>Vigilância e notificação de segurança</td><td><span class="tag g">Passa</span></td><td>10</td></tr>
+<tr><td>G11</td><td>Registros e documentação-fonte</td><td><span class="tag g">Passa</span></td><td>11</td></tr>
+<tr><td>G12</td><td>Conformidade, desvios e comunicação com o CE</td><td><span class="tag g">Passa</span></td><td>12</td></tr>
+</table></div>
+<p><b>Como ler:</b> os 12 domínios da tese aparecem, o que confirma a Tabela 3.2. G5 e G8 passam com ressalva porque nenhuma norma dá ao centro o controle da técnica cirúrgica nem da forma de avaliar os desfechos. Eles se sustentam pelo contexto cirúrgico e pela literatura, e a tese precisa dizer isso.</p>
 
-<div class="card">
-<h3 style="margin-top:0">b) "Só o relato de segurança é parcial" não se sustenta</h3>
-<p>A Seção 3.2 diz que três áreas são fortemente harmonizadas e que só o relato de segurança é parcial. Pelo procedimento descrito na própria tese, saem 7 fortemente harmonizados e 23 parciais. A documentação de desvios, que a tese põe como forte, também sai parcial.</p>
-</div>
+<!-- ============ ABA 7 ============ -->
+<h2 id="a7">Aba 7 · Achados</h2>
+<dl class="kv box">
+<dt>Para que serve</dt><dd>É a lista do que o resultado muda no texto da tese. Cada linha é um ponto em que a tese diz uma coisa e a execução do procedimento mostra outra.</dd>
+<dt>Linhas</dt><dd>18: 5 de gravidade alta, 9 média e 4 baixa.</dd>
+</dl>
+<div class="tablewrap"><table>
+<tr><th>Coluna</th><th>O que significa</th></tr>
+<tr><td>Gravidade</td><td><span class="tag r">Alta</span> o argumento da tese está errado ou incompleto. <span class="tag a">Média</span> falta citação ou precisão. <span class="tag g">Baixa</span> é ajuste de forma.</td></tr>
+<tr><td>Onde na tese</td><td>A seção, tabela ou figura afetada.</td></tr>
+<tr><td>Achado</td><td>O que está diferente, citando a cláusula.</td></tr>
+<tr><td>Sugestão</td><td>O que mudar no texto.</td></tr>
+</table></div>
+<h3>Os cinco de gravidade alta, em uma linha cada</h3>
+<div class="tablewrap"><table>
+<tr><th>Onde</th><th>O problema</th></tr>
+<tr><td>3.2</td><td>A tese diz que só o relato de segurança é parcial, mas pelo procedimento 23 assuntos são parciais.</td></tr>
+<tr><td>3.2 e 2.2.3</td><td>A tese põe a documentação de desvios como forte, mas ela sai parcial.</td></tr>
+<tr><td>2.2.3</td><td>A 2.2.3 diz que lacunas são atributos, mas 4 das 5 vêm dos mecanismos (aba 4b).</td></tr>
+<tr><td>Tabela 3.1, lacuna 5</td><td>A CAPA está atribuída ao MDR, mas está na ISO 10.6 o) e cabe ao PI.</td></tr>
+<tr><td>Tabela 3.2, Figura 4.1, Tabela 4.3</td><td>"UDI" está errado, porque os dispositivos em investigação estão fora do UDI (MDR Art. 27(1)).</td></tr>
+</table></div>
 
-<div class="card">
-<h3 style="margin-top:0">c) A 2.2.3 diz de onde vêm as lacunas, mas elas vêm de outro lugar</h3>
-<p>A 2.2.3 define lacuna como um atributo sem obrigação para o centro. Só que quatro das cinco lacunas são mecanismos, e não atributos. O texto precisa dizer que a mesma classificação foi aplicada à lista de mecanismos.</p>
-</div>
-
-<div class="card">
-<h3 style="margin-top:0">d) Correções menores, mas certas</h3>
-<ul>
-<li><b>UDI:</b> o MDR Art. 27(1) exclui os dispositivos em investigação do sistema UDI. É preciso corrigir a Tabela 3.2, a Figura 4.1 e a Tabela 4.3.</li>
-<li><b>Calibração:</b> a Seção 5.5 diz que nenhuma cláusula trata do registro de calibração, mas a ISO 10.6 i) trata.</li>
-<li><b>Critérios 2 e 3 da 2.2.2:</b> agora têm cláusula nas duas diretrizes. A parcimônia está na E6(R3) Principle 7.4. A responsabilidade atribuída está na E8(R1), Seções 3.2 e 3.3.5.</li>
-<li><b>Escopo do MDR:</b> a tese já cita os Arts. 63, 72, 80 e 27, então a leitura foi além do Anexo XV, e o texto deve dizer isso.</li>
-</ul>
-</div>
-
-<h2>6. O que só você pode decidir</h2>
-<div class="decision"><b>1. Lacuna 5.</b> Trocar "MDR" por "ISO 14155:2026, 10.6(o)" na Tabela 3.1 e redefinir a lacuna como a falta de um ciclo proativo?</div>
-<div class="decision"><b>2. Origem das lacunas.</b> Dizer na 2.2.3 que as lacunas 1, 2, 4 e 5 vêm da classificação dos mecanismos?</div>
-<div class="decision"><b>3. Avaliação de desfechos e procedimentos clínicos.</b> Pela regra, nenhuma norma obriga o centro nesses dois assuntos (<code>A26</code> e <code>A29</code>), o que os faria lacunas. Eles entram na Tabela 3.1, ou a tese explica por que viram domínio sem virar lacuna?</div>
-<div class="decision"><b>4. Confidencialidade.</b> Ela sai fortemente harmonizada, mas eu a deixei de fora dos domínios por escopo, porque é assunto do sistema de proteção de dados da instituição. Concorda?</div>
-
-<h2>7. Como abrir a planilha sem se perder</h2>
+<h2>Ordem sugerida de leitura</h2>
 <ol>
-<li>Comece pela <b>aba 6</b>: são só 11 linhas, uma por domínio. É o resultado final.</li>
-<li>Se quiser saber de onde veio um domínio, veja os códigos na coluna "Atributos" (por exemplo <code>A02, A03, A37</code>) e procure esses códigos na <b>aba 4</b>.</li>
-<li>Para ver o texto exato das normas, vá à <b>aba 1</b> e filtre a última coluna pelo código.</li>
-<li>Para as lacunas, olhe a <b>aba 4b</b>. São só 8 linhas.</li>
-<li>Para o que muda no texto, abra a <b>aba 7</b>, ordenada por gravidade.</li>
+<li><b>Aba 6:</b> o resultado, em 11 linhas.</li>
+<li><b>Aba 4b:</b> as lacunas, em 8 linhas.</li>
+<li><b>Aba 7:</b> o que muda na tese, começando pelas linhas vermelhas.</li>
+<li><b>Aba 4:</b> quando quiser saber por que um assunto caiu numa categoria.</li>
+<li><b>Aba 1:</b> quando precisar do texto exato de uma norma para citar.</li>
 </ol>
-<p class="note">As abas 2 (mecanismos) e 3 (cobertura da E8) são de conferência. Não é preciso lê-las para entender o resultado.</p>
+<p>As abas 2, 3 e 5 servem de conferência. Abra quando quiser checar uma decisão minha.</p>
 
 </main>
 </body>
