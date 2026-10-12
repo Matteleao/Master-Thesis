@@ -1,13 +1,13 @@
 # Contexto para continuar a revisão numa sessão nova
 
-Última atualização: 11/10/2026. Este arquivo existe para que uma sessão nova do Claude retome o trabalho sem a conversa anterior. **Leia-o inteiro antes de responder ao autor.**
+Última atualização: 12/10/2026. Este arquivo existe para que uma sessão nova do Claude retome o trabalho sem a conversa anterior. **Leia-o inteiro antes de responder ao autor.**
 
 ## 1. Como trabalhar com o autor
 
 - O autor é **Felipe Gregorio Lima**. Ele escreve em português e chama o Claude de "claudinho". As respostas são **em português**, e o texto acadêmico é entregue **em inglês**.
 - A tese é *Translating ICH E6(R3) into Practice: A Site-Centered Operational Quality Management Framework for Shoulder Medical Device Clinical Investigations* (MSc Pharmaceutical Engineering, Universidade de Lisboa).
 - **Fase atual: coedição parágrafo a parágrafo.** O autor cola um trecho e pede explicação, conferência com a fonte ou reestruturação. Ele escreve as versões finais. Não aplicar nada em `tese/*.md` sem a aprovação dele.
-- O autor não usa o GitHub. Todo o trabalho vai para o branch **`claude/claudinho-status-check-8tzmxz`**. Não abrir PR sem pedido.
+- O autor não usa o GitHub. Todo o trabalho vai para o branch **`claude/loving-cori-50pzx5`** (desde 12/10/2026; antes era `claude/claudinho-status-check-8tzmxz`, que fica só como histórico). Não abrir PR sem pedido.
 - Ele lê mal arquivos `.md`. Para relatórios, gerar HTML e mostrar na barra lateral, como foi feito com `revisao/reescrita/*.html`.
 - Ele quer respostas honestas: discordar quando for o caso e não concordar só para agradar.
 
@@ -30,13 +30,13 @@
 10. Commits terminam com:
     ```
     Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
-    Claude-Session: https://claude.ai/code/session_018xC7Cok8TcW2K2Q15D36dt
+    Claude-Session: https://claude.ai/code/session_014B2xbkEgqyyJJuLiS8BVek
     ```
 
 ## 2. Onde está cada coisa no GitHub
 
 Repositório: **`Matteleao/Master-Thesis`**.
-- **Branch de trabalho:** `claude/claudinho-status-check-8tzmxz`. Tudo o que está abaixo fica nele.
+- **Branch de trabalho:** `claude/loving-cori-50pzx5`. Tudo o que está abaixo fica nele, incluindo o PDF do MDR.
 - **Branch `main`:** só tem o `README.md` e o PDF do MDR (`Regulation on medical devices.pdf`, versão consolidada de 10/01/2025, 233 páginas), que o autor subiu.
 
 | Caminho | O que é | Estado |
@@ -65,7 +65,7 @@ Repositório: **`Matteleao/Master-Thesis`**.
 - **ICH E8(R1):** https://database.ich.org/sites/default/files/E8-R1_Guideline_Step4_2021_1006.pdf
 - **ICH E6(R3):** https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf
 - **ISO 14155:2026:** só existe como upload do autor numa sessão anterior. Numa sessão nova, **peça ao autor para enviá-la de novo** se precisar conferir uma cláusula.
-- **MDR:** no `main`, `Regulation on medical devices.pdf`. Para ler: `git fetch origin main && git show "origin/main:Regulation on medical devices.pdf" > mdr.pdf`.
+- **MDR:** `Regulation on medical devices.pdf`, na raiz do branch de trabalho (e também no `main`).
 
 ## 3. O que já foi verificado nas fontes (não refazer)
 
