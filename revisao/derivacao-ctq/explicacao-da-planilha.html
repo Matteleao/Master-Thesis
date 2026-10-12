@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guia da planilha CtQ</title>
+<style>
+:root{
+  --bg:#fbfaf7; --card:#ffffff; --ink:#1f2328; --muted:#5b6370; --line:#e4e1da;
+  --accent:#1f4e79; --accent-soft:#e8f0f8;
+  --green:#2e7d32; --green-soft:#e8f5e9; --amber:#a15c00; --amber-soft:#fff4e5; --red:#b3261e; --red-soft:#fdecea;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#16181c; --card:#1e2126; --ink:#e7e9ec; --muted:#a3abb7; --line:#30343b;
+    --accent:#8db8e8; --accent-soft:#1f2c3b;
+    --green:#81c784; --green-soft:#1d2e20; --amber:#ffb74d; --amber-soft:#33281a; --red:#ef9a9a; --red-soft:#3a2120;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#16181c; --card:#1e2126; --ink:#e7e9ec; --muted:#a3abb7; --line:#30343b;
+  --accent:#8db8e8; --accent-soft:#1f2c3b;
+  --green:#81c784; --green-soft:#1d2e20; --amber:#ffb74d; --amber-soft:#33281a; --red:#ef9a9a; --red-soft:#3a2120;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:860px;margin:0 auto;padding:32px 16px 80px}
+h1{font-size:1.9rem;line-height:1.25;margin:0 0 8px}
+h2{font-size:1.35rem;margin:48px 0 12px;padding-top:8px;border-top:1px solid var(--line)}
+h3{font-size:1.08rem;margin:24px 0 8px}
+p{margin:0 0 14px}
+.lead{font-size:1.1rem;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:16px 0}
+.big{font-size:1.15rem}
+.tag{display:inline-block;font-size:.8rem;font-weight:600;padding:2px 10px;border-radius:999px;white-space:nowrap}
+.g{background:var(--green-soft);color:var(--green)} .a{background:var(--amber-soft);color:var(--amber)} .r{background:var(--red-soft);color:var(--red)}
+.funnel{display:grid;gap:8px;margin:18px 0}
+.step{display:grid;grid-template-columns:minmax(0,1fr);gap:4px}
+.bar{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:6px;padding:10px 14px}
+.bar b{font-size:1.25rem;color:var(--accent)}
+.bar small{display:block;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600}
+.tablewrap{overflow-x:auto}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;background:var(--accent-soft);padding:1px 5px;border-radius:4px}
+.trace{border-left:3px solid var(--line);margin:0;padding:0 0 0 16px}
+.trace li{margin:0 0 12px}
+ol,ul{padding-left:22px}
+.note{color:var(--muted);font-size:.95rem}
+.decision{border-left:4px solid var(--amber);background:var(--amber-soft);border-radius:8px;padding:14px 16px;margin:12px 0}
+.decision b{color:var(--amber)}
+</style>
+</head>
+<body>
+<main>
+
+<h1>Guia da planilha da derivação dos domínios CtQ</h1>
+<p class="lead">O que é cada aba, como ler uma linha e o que o resultado muda na tese. Ler este guia leva uns 15 minutos.</p>
+
+<div class="card big">
+<b>Em uma frase:</b> a planilha pega tudo o que as três normas exigem de uma investigação clínica, vê quem cada exigência obriga (o centro ou o patrocinador) e, no fim, mostra quais áreas de trabalho o centro precisa controlar. Essas áreas são os domínios CtQ da Tabela 3.2.
+</div>
+
+<h2>1. A ideia, sem jargão</h2>
+<p>Pense numa peneira com quatro telas. Entra em cima uma pilha grande de exigências das normas. A cada tela, sai o que não interessa para o centro. Embaixo sobram poucas áreas de trabalho, que são o que o centro precisa controlar.</p>
+
+<div class="funnel" role="img" aria-label="Funil de 211 exigências até 11 domínios">
+  <div class="step"><div class="bar" style="width:100%"><b>211</b> exigências copiadas das normas<small>E6(R3): 77 · MDR: 57 · ISO 14155: 77 (aba 1)</small></div></div>
+  <div class="step"><div class="bar" style="width:82%"><b>45</b> assuntos, depois de juntar as repetidas<small>"consentimento" aparece nas três normas e vira um assunto só (aba 4)</small></div></div>
+  <div class="step"><div class="bar" style="width:64%"><b>31</b> assuntos que dependem do centro<small>saem os 14 que só o patrocinador controla, como estatística e seguro (aba 5)</small></div></div>
+  <div class="step"><div class="bar" style="width:46%"><b>11</b> áreas de trabalho, que são os domínios<small>cobrem os 12 domínios da Tabela 3.2 (aba 6)</small></div></div>
+</div>
+
+<p>Corre por fora uma segunda pilha: as exigências que dizem <i>como</i> controlar a qualidade, e não <i>o que</i> controlar. Foram 40, e ficaram separadas (abas 2 e 4b). É delas que saem as lacunas da Tabela 3.1. A seção 4 deste guia explica por quê.</p>
+
+<h2>2. Seis palavras que a planilha usa</h2>
+<div class="tablewrap"><table>
+<tr><th>Palavra</th><th>Quer dizer</th><th>Exemplo</th></tr>
+<tr><td><b>Candidato</b></td><td>Uma exigência copiada de uma norma, com o número da cláusula e o texto literal.</td><td>ISO 10.6 g): "document and explain any deviation from the approved CIP"</td></tr>
+<tr><td><b>Atributo</b></td><td>O assunto da exigência: aquilo que, se falhar, prejudica o paciente ou os dados.</td><td>"Desvios documentados e acompanhados"</td></tr>
+<tr><td><b>Atributo consolidado</b></td><td>O mesmo assunto juntado das três normas numa linha só. Tem código <code>A01</code> a <code>A45</code>.</td><td><code>A11</code> junta a E6(R3) 2.5.3, o MDR Anexo XV II.3.10 e a ISO 10.6 g)</td></tr>
+<tr><td><b>Mecanismo</b></td><td>Uma exigência sobre <i>como</i> controlar a qualidade, e não sobre o que controlar.</td><td>Ciclo de risco, monitoria, auditoria, CAPA</td></tr>
+<tr><td><b>Parte obrigada</b></td><td>Quem a norma manda cumprir: investigador/PI (o centro), patrocinador ou ninguém em especial.</td><td>ISO 10.6 g) obriga o PI; MDR II.3.10 põe no CIP, que é do patrocinador</td></tr>
+<tr><td><b>Domínio</b></td><td>Um grupo de atributos da mesma área de trabalho do centro.</td><td>G4 "Gestão e rastreabilidade do dispositivo"</td></tr>
+</table></div>
+
+<h2>3. O caminho de um assunto pela planilha</h2>
+<p>O jeito mais fácil de entender a planilha é seguir um assunto do começo ao fim. O exemplo aqui é o <b>consentimento informado</b>.</p>
+<ol class="trace">
+<li><b>Aba 1 (Candidatos).</b> Filtre a coluna "Atributo consolidado" por <code>A02</code>. Aparecem dez linhas: três da E6(R3) (Principle 2.1, 2.8.3, 2.8.7), quatro do MDR (Anexo XV II.3.13, Art. 62(4)(f), Art. 63(1), Art. 63(2)(c)) e três da ISO (5.2, 5.8.1, 10.5 c)). Cada linha traz o texto literal da cláusula.</li>
+<li><b>Aba 3 (Cobertura E8).</b> Essas linhas cobrem a consideração nº 5 da E8(R1), "proteção dos direitos dos participantes". A aba só confirma que nenhuma das 18 considerações da E8 ficou sem exigência correspondente.</li>
+<li><b>Aba 4 (Matriz de atributos).</b> A linha <code>A02</code> mostra, lado a lado, as cláusulas e quem cada norma obriga. As três obrigam o investigador ou alguém qualificado da equipe dele, então a categoria é <span class="tag g">Fortemente harmonizado</span>.</li>
+<li><b>Aba 5 (Filtro).</b> O consentimento é colhido no centro, então o locus é "o centro controla". A decisão é <b>Keep</b> e o assunto vai para o grupo <code>G3</code>.</li>
+<li><b>Aba 6 (Domínios).</b> O grupo G3 passa nos quatro critérios da 2.2.2 (proporcionalidade, parcimônia, responsabilidade atribuída e conhecimento existente) e corresponde ao domínio 3 da Tabela 3.2.</li>
+</ol>
+<p>Todo assunto faz esse mesmo caminho. Alguns param na aba 5, porque só o patrocinador controla, como o envio de relatórios às autoridades (<code>A14</code>).</p>
+
+<h2>4. As três cores da aba 4</h2>
+<p>A aba 4 aplica a regra da Seção 2.2.3. Para cada assunto, a pergunta é: as três normas obrigam o centro da mesma maneira?</p>
+<div class="tablewrap"><table>
+<tr><th>Categoria</th><th>Quer dizer</th><th>Quantos</th><th>Exemplo</th></tr>
+<tr><td><span class="tag g">Fortemente harmonizado</span></td><td>As três normas obrigam a mesma parte, do mesmo jeito.</td><td>7</td><td>Consentimento, qualificação do investigador, conformidade com o CIP</td></tr>
+<tr><td><span class="tag a">Parcialmente harmonizado</span></td><td>Todas concordam no princípio, mas uma obriga outra parte, usa outros termos ou não diz nada.</td><td>23</td><td>Desvios (<code>A11</code>): a E6(R3) e a ISO obrigam o investigador, mas o MDR só pede uma política de desvios no CIP, que é do patrocinador</td></tr>
+<tr><td><span class="tag r">Sem obrigação para o centro</span></td><td>Nenhuma das três normas manda o centro fazer isso.</td><td>15</td><td>Curva de aprendizagem (<code>A45</code>): só a ISO A.7(g) fala dela, e como item que o patrocinador planeja no CIP</td></tr>
+</table></div>
+
+<h3>Por que existe uma segunda matriz (aba 4b)</h3>
+<p>Quatro das cinco lacunas da Tabela 3.1 (sistema de qualidade, registro de risco, monitoria interna e ciclo de melhoria) não são assuntos a controlar. São formas de controlar, ou seja, mecanismos. A 2.2.2 manda separar os mecanismos dos atributos, então eles não aparecem na aba 4. A aba 4b aplica a eles a mesma pergunta das três cores, e é dela que as lacunas saem:</p>
+<div class="tablewrap"><table>
+<tr><th>Mecanismo</th><th>Quem as normas obrigam</th><th>Resultado</th></tr>
+<tr><td>Sistema de qualidade</td><td>Só o patrocinador (E6(R3) 3.10, ISO 9.1)</td><td><span class="tag r">Lacuna 1</span></td></tr>
+<tr><td>Ciclo de risco</td><td>Só o patrocinador (E6(R3) 3.10.1, ISO 6.2 e 7.1)</td><td><span class="tag r">Lacuna 2</span></td></tr>
+<tr><td>Curva de aprendizagem</td><td>Só o patrocinador, no desenho do CIP (ISO A.7(g))</td><td><span class="tag r">Lacuna 3</span></td></tr>
+<tr><td>Monitoria e verificação</td><td>Só o patrocinador (E6(R3) 3.11.4, MDR Art. 72(2), ISO 6.7)</td><td><span class="tag r">Lacuna 4</span></td></tr>
+<tr><td>Causa e CAPA</td><td>Patrocinador <b>e também o PI</b> (ISO 10.6 o); E6(R3) 2.5.3)</td><td><span class="tag a">Lacuna 5 precisa mudar</span></td></tr>
+<tr><td>Calibração de equipamento</td><td>O PI (ISO 10.6 i))</td><td><span class="tag a">Não é lacuna</span></td></tr>
+</table></div>
+
+<h2>5. O que muda na tese</h2>
+<p>A lista completa, com 18 itens, está na aba 7. Estes são os que importam:</p>
+
+<div class="card">
+<h3 style="margin-top:0">a) A lacuna 5 está atribuída à norma errada</h3>
+<p>A Tabela 3.1 diz que o MDR tem um dever reativo de CAPA. O MDR não tem esse dever para investigações clínicas. Quem tem é a <b>ISO 10.6 o)</b>, que manda o PI determinar a causa e aplicar CAPA quando há não conformidade significativa. A E6(R3) 2.5.3 também pede ao investigador que evite a recorrência de desvios importantes.</p>
+<p><b>Na prática:</b> o centro já tem um dever de correção, mas só reativo, depois que o problema aparece. A lacuna real é a falta de um ciclo <i>proativo</i>, que dispara por limiares definidos antes e inclui autoinspeção.</p>
+</div>
+
+<div class="card">
+<h3 style="margin-top:0">b) "Só o relato de segurança é parcial" não se sustenta</h3>
+<p>A Seção 3.2 diz que três áreas são fortemente harmonizadas e que só o relato de segurança é parcial. Pelo procedimento descrito na própria tese, saem 7 fortemente harmonizados e 23 parciais. A documentação de desvios, que a tese põe como forte, também sai parcial.</p>
+</div>
+
+<div class="card">
+<h3 style="margin-top:0">c) A 2.2.3 diz de onde vêm as lacunas, mas elas vêm de outro lugar</h3>
+<p>A 2.2.3 define lacuna como um atributo sem obrigação para o centro. Só que quatro das cinco lacunas são mecanismos, e não atributos. O texto precisa dizer que a mesma classificação foi aplicada à lista de mecanismos.</p>
+</div>
+
+<div class="card">
+<h3 style="margin-top:0">d) Correções menores, mas certas</h3>
+<ul>
+<li><b>UDI:</b> o MDR Art. 27(1) exclui os dispositivos em investigação do sistema UDI. É preciso corrigir a Tabela 3.2, a Figura 4.1 e a Tabela 4.3.</li>
+<li><b>Calibração:</b> a Seção 5.5 diz que nenhuma cláusula trata do registro de calibração, mas a ISO 10.6 i) trata.</li>
+<li><b>Critérios 2 e 3 da 2.2.2:</b> agora têm cláusula nas duas diretrizes. A parcimônia está na E6(R3) Principle 7.4. A responsabilidade atribuída está na E8(R1), Seções 3.2 e 3.3.5.</li>
+<li><b>Escopo do MDR:</b> a tese já cita os Arts. 63, 72, 80 e 27, então a leitura foi além do Anexo XV, e o texto deve dizer isso.</li>
+</ul>
+</div>
+
+<h2>6. O que só você pode decidir</h2>
+<div class="decision"><b>1. Lacuna 5.</b> Trocar "MDR" por "ISO 14155:2026, 10.6(o)" na Tabela 3.1 e redefinir a lacuna como a falta de um ciclo proativo?</div>
+<div class="decision"><b>2. Origem das lacunas.</b> Dizer na 2.2.3 que as lacunas 1, 2, 4 e 5 vêm da classificação dos mecanismos?</div>
+<div class="decision"><b>3. Avaliação de desfechos e procedimentos clínicos.</b> Pela regra, nenhuma norma obriga o centro nesses dois assuntos (<code>A26</code> e <code>A29</code>), o que os faria lacunas. Eles entram na Tabela 3.1, ou a tese explica por que viram domínio sem virar lacuna?</div>
+<div class="decision"><b>4. Confidencialidade.</b> Ela sai fortemente harmonizada, mas eu a deixei de fora dos domínios por escopo, porque é assunto do sistema de proteção de dados da instituição. Concorda?</div>
+
+<h2>7. Como abrir a planilha sem se perder</h2>
+<ol>
+<li>Comece pela <b>aba 6</b>: são só 11 linhas, uma por domínio. É o resultado final.</li>
+<li>Se quiser saber de onde veio um domínio, veja os códigos na coluna "Atributos" (por exemplo <code>A02, A03, A37</code>) e procure esses códigos na <b>aba 4</b>.</li>
+<li>Para ver o texto exato das normas, vá à <b>aba 1</b> e filtre a última coluna pelo código.</li>
+<li>Para as lacunas, olhe a <b>aba 4b</b>. São só 8 linhas.</li>
+<li>Para o que muda no texto, abra a <b>aba 7</b>, ordenada por gravidade.</li>
+</ol>
+<p class="note">As abas 2 (mecanismos) e 3 (cobertura da E8) são de conferência. Não é preciso lê-las para entender o resultado.</p>
+
+</main>
+</body>
+</html>
