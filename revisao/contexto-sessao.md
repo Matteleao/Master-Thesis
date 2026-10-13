@@ -97,6 +97,8 @@ Repositório: **`Matteleao/Master-Thesis`**.
 
 ### Cap. 2 (em andamento)
 
+0. **Cap. 2 reestruturado por atividade do DSRM** em `revisao/reescrita/cap2-reestruturado.md` (e `.docx`), a pedido do autor: 2.1 desenho; 2.2 identificação do problema (normas, leitura e comparação fundidas, literatura, frameworks existentes, registro); 2.3 objetivos (critérios CtQ, domínios, requisitos); 2.4 desenho e desenvolvimento; 2.5 limitações. Metodologia expositiva: o quê e como, sem porquês desnecessários. O Cap. 3 **não** deve ser reordenado; só as remissões precisam de ajuste (ver relatório da sessão).
+
 1. **MDR:** a leitura foi só do Annex XV, ou incluiu também o Art. 27, o Annex VI e o Cap. VI? A 2.2.3 usa atributos de UDI, que não estão no Annex XV.
 2. **Os 18 itens da E8(R1):** entraram na matriz como atributos ou serviram só como checagem de cobertura?
 3. **Regra de entrada no último parágrafo da 2.2.2:** o critério que o autor de fato usou corresponde ao descrito? E o consentimento informado está na matriz, para servir de exemplo?
