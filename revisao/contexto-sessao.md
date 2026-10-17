@@ -114,6 +114,8 @@ Repositório: **`Matteleao/Master-Thesis`**.
 - A ISO 15189:2022 entrou como **[54]** (citada pela primeira vez na 2.4.1 do Cap. 2 reestruturado). Todas as referências antigas de 54 a 90 subiram uma posição (55 a 91) em `tese/03`–`06` e na lista. O documento de princípios CtQ do CTTI agora é a [55]. Estrutura da norma em `revisao/fontes/iso-15189-2022-estrutura.md`.
 - A ordem Vancouver está correta, com exceção das antigas [38] e [40], que só aparecem no Cap. 5 (pendência do Cap. 1).
 
+- **Ao revisar o Cap. 3, integrar o argumento** (pedido do autor; saiu da metodologia): "No requirement fell outside the four pillars, which indicates that the taxonomy fits the problem. But it does not prove that another, better taxonomy could not exist."
+
 ### Cap. 1 (problemas apontados, sem aprovação do autor)
 
 1. "Delphi process with 21 stakeholders" → 71.
