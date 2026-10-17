@@ -24,25 +24,25 @@ Declaro ter desenvolvido e elaborado o presente trabalho em consonância com o C
 
 # Resumo
 
-A diretriz E6(R3) do International Council for Harmonisation (ICH), baseada na ICH E8(R1), incorpora a qualidade na conceção e na condução do ensaio, proporcionalmente ao risco, e a norma ISO 14155:2026 e o Regulamento (UE) 2017/745 aplicam princípios semelhantes às investigações clínicas de dispositivos médicos. Estes textos atribuem ao centro de investigação uma parte maior da responsabilidade pela qualidade, mas a maioria dos instrumentos analisados foi construída para o promotor. Esta tese deriva um *framework* de qualidade ao nível do centro para investigações clínicas de dispositivos médicos do ombro, complementar ao sistema do promotor, que permita ao centro agir sobre os riscos que o promotor não consegue ver a tempo e demonstrar como controlou a sua própria condução.
+A conceção orientada para a qualidade e a gestão da qualidade proporcional ao risco são princípios centrais das Boas Práticas Clínicas. A diretriz do International Council for Harmonisation (ICH) E6(R3), baseada na ICH E8(R1), incorpora a qualidade na conceção e na condução do ensaio. A norma da International Organization for Standardization (ISO) 14155:2026 e o Regulamento (UE) 2017/745 aplicam esses princípios às investigações de dispositivos médicos. Contudo, a sua tradução para as atividades operadas pelos centros permanece insuficientemente definida. Esta tese teve como objetivo desenvolver uma arquitetura de gestão da qualidade operacional para centros que conduzem investigações clínicas de dispositivos médicos.
 
-Aplicámos a Design Science Research Methodology, combinando uma revisão narrativa, uma comparação cláusula a cláusula da ICH E6(R3), da ISO 14155:2026 e do Anexo XV do Regulamento, e uma análise de registos de 46 investigações e 235 organizações. Identificaram-se 5 lacunas regulamentares e 12 domínios críticos para a qualidade, que originaram 12 requisitos de conceção.
+Aplicámos a Design Science Research Methodology (DSRM) e através de uma revisão narrativa e a análise cruzada dos quatro instrumentos oficiais e análise de registos de 46 investigações e 235 organizações. Foram identificadas 5 lacunas regulamentares, 12 domínios críticos para a qualidade e 12 requisitos de conceção.
 
-O *framework* assenta em quatro pilares: governação, gestão do risco, controlos operacionais e supervisão do desempenho. Vinte e quatro instrumentos compatíveis com papel apoiam a supervisão do investigador, a gestão do risco no centro, a monitorização interna, a vigilância de complicações e a rastreabilidade do dispositivo. Um deles acompanha a curva de aprendizagem cirúrgica durante a condução, função que os instrumentos comparados não atribuem ao centro. Um ciclo de vida de sete fases e três níveis de implementação adaptam o *framework* à capacidade do centro e ao risco da investigação, dirigido a centros privados com investigação recorrente.
+A arquitetura resultante assenta em quatro pilares: governação, gestão da qualidade baseada no risco, controlos operacionais e supervisão do desempenho. Um conjunto integrado de 24 instrumentos compatíveis com suporte em papel apoia a supervisão do investigador, a identificação de riscos, a atribuição de responsabilidades, a monitorização interna, a vigilância da curva de aprendizagem cirúrgica, a deteção de complicações, a rastreabilidade do dispositivo e a avaliação do desempenho. Um ciclo de vida de sete fases e três níveis de implementação adaptam esses componentes à capacidade do centro e ao risco da investigação.
 
-Cada componente é rastreável até um requisito de conceção. Como o *framework* ainda não foi implementado nem avaliado, a sua viabilidade e os seus efeitos requerem avaliação prospetiva.
+A arquitetura fornece um método rastreável para converter princípios regulamentares e lacunas locais em controlos operacionais. Foi concebida para complementar o sistema de qualidade do promotor, preservando a responsabilidade do centro pelos seus processos e registos. Como ainda não foi implementada ou avaliada, a sua viabilidade e os seus efeitos requerem avaliação prospetiva.
 
 **Palavras-chave:** investigação clínica; dispositivos médicos; gestão da qualidade baseada no risco; ICH E6(R3); cirurgia ortopédica
 
 # Abstract
 
-International Council for Harmonisation (ICH) E6(R3), grounded in ICH E8(R1), builds quality into trial design and conduct in proportion to risk, and International Organization for Standardization (ISO) 14155:2026 and Regulation (EU) 2017/745 apply related principles to medical device investigations. These texts give the investigational site a larger share of the responsibility for quality, but most of the instruments reviewed here were built for the sponsor. This thesis aimed to derive a site-level quality framework for shoulder medical device clinical investigations that complements the sponsor's system, so that a site can act on the risks the sponsor cannot see in time and can show how it controlled its own conduct.
+Quality by Design (QbD) and risk-proportionate quality management are central principles of Good Clinical Practice (GCP). International Council for Harmonisation (ICH) E6(R3), grounded in ICH E8(R1), treats quality as a property built into trial design and conduct. International Organization for Standardization (ISO) 14155:2026 and Regulation (EU) 2017/745 apply related principles to medical device investigations. However, their practical translation into the day to day operations at the investigational site remains insufficiently defined. This thesis aimed to develop a site-centered operational quality management architecture for shoulder medical device clinical investigations.
 
-We used a problem-centered Design Science Research Methodology. The study combined a narrative literature review, a clause-level comparison of ICH E6(R3), ISO 14155:2026, and Annex XV of Regulation (EU) 2017/745, and a registry analysis of 46 investigations involving 235 organizations. The analysis identified 5 regulatory gaps and 12 Critical-to-Quality domains, from which 12 design requirements were derived.
+We used problem-centered Design Science Research Methodology (DSRM). The study combined a narrative review, a cross-framework analysis of four regulatory and guidance instruments, and a registry analysis of 46 investigations involving 235 organizations. The analysis identified 5 regulatory gaps, 12 critical-to-quality (CtQ) domains, and directed the creation of 12 design requirements.
 
-The resulting framework has four pillars: Governance, Risk Management, Operational Controls, and Performance Oversight. Twenty-four paper-compatible instruments support investigator oversight and delegation, site risk assessment, internal monitoring, complication surveillance, and device traceability. One of them follows the surgical learning curve during conduct, a function for which the instruments compared assign the site no obligation. A seven-phase lifecycle and three implementation depths adapt the framework to site capacity and investigation risk, with private centers that run investigations recurrently alongside surgical care as the target.
+The resulting architecture comprises four pillars: governance, risk-based quality management (RBQM), operational controls, and performance oversight. An integrated set of 24 paper-compatible instruments supports investigator oversight, risk identification, responsibility allocation, internal monitoring, surgical learning-curve surveillance, complication signal detection, device traceability, deviation control, and performance review. A seven-phase lifecycle and three implementation depths adapt these components to site capacity and investigation risk.
 
-Every component traces back to a design requirement and its regulatory or operational origin. The framework has not been implemented or evaluated at a site, so its feasibility and effects require prospective evaluation.
+The architecture provides a traceable method for converting regulatory principles and identified site-level gaps into operational controls across the clinical investigation lifecycle. It is designed to complement the sponsor's quality system while preserving site ownership of local quality processes and records. The framework has not been implemented or evaluated at a site. Its feasibility and effects on conduct, early signal detection, record completeness, and staff workload therefore require prospective evaluation.
 
 **Keywords:** clinical investigation; medical devices; risk-based quality management; ICH E6(R3); orthopedic surgery
 
@@ -74,6 +74,8 @@ Every component traces back to a design requirement and its regulatory or operat
 
 - CSST — Complication Signal Surveillance Template
 
+- CT — Computed Tomography
+
 - CTIS — Clinical Trials Information System
 
 - CtQ — Critical-to-Quality
@@ -83,6 +85,8 @@ Every component traces back to a design requirement and its regulatory or operat
 - DD — Device Deficiency
 
 - DR — Design Requirement
+
+- DSR — Design Science Research
 
 - DSRM — Design Science Research Methodology
 
@@ -100,6 +104,8 @@ Every component traces back to a design requirement and its regulatory or operat
 
 - GCP — Good Clinical Practice
 
+- ICC — Intraclass Correlation Coefficient
+
 - ICDL — Intraoperative Checklist and Device Log
 
 - ICH — International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use
@@ -116,9 +122,13 @@ Every component traces back to a design requirement and its regulatory or operat
 
 - ISO/TR — ISO Technical Report
 
+- IVDR — In Vitro Diagnostic Medical Devices Regulation
+
+- MDCG — Medical Device Coordination Group
+
 - MDIC — Medical Device Innovation Consortium
 
-- MDR — Regulation (EU) 2017/745 on medical devices
+- MDR — Medical Device Regulation — Regulation (EU) 2017/745
 
 - MRL — Milestone Review Log
 
@@ -136,7 +146,7 @@ Every component traces back to a design requirement and its regulatory or operat
 
 - PRISMA — Preferred Reporting Items for Systematic Reviews and Meta-Analyses
 
-- PROM — Patient-Reported Outcome Measure
+- PRO — Patient-Reported Outcome
 
 - PSEAR — Participant Screening and Eligibility Assessment Record
 
@@ -146,7 +156,9 @@ Every component traces back to a design requirement and its regulatory or operat
 
 - QC — Quality Control
 
-- RACI — Responsibility Assignment Matrix (Responsible, Accountable, Consulted, Informed)
+- QMS — Quality Management System
+
+- RACI — Responsible, Accountable, Consulted, Informed
 
 - RBM — Risk-Based Monitoring
 
@@ -180,32 +192,34 @@ Every component traces back to a design requirement and its regulatory or operat
 
 - UDI — Unique Device Identification
 
+- UDI-DI — Device Identifier
 
+- UDI-PI — Production Identifier
 
 # List of Tables
 
-**Table 3.1** Site-level regulatory gaps
+**Table 3.1** Site-level regulatory gaps [**Erro! Indicador não definido.**](#bm_tbl_31)
 
-**Table 3.2** Site-level CtQ domains
+**Table 3.2** Site-level CtQ domains [35](#bm_tbl_32)
 
-**Table 3.3** Organizational environment
+**Table 3.3** Organizational environment [39](#bm_tbl_33)
 
-**Table 3.4** Design requirements (origin)
+**Table 3.4** Design requirements (origin) [43](#section-11)
 
-**Table 4.1** Design requirements and framework components
+**Table 4.1** Design requirements and framework components [45](#table-4.1.-the-twelve-design-requirements-from-section-3.5-the-framework-component-that-answers-each-one-and-the-section-of-chapter-4-where-that-component-is-developed.)
 
-**Table 4.2** The scalability model
+**Table 4.3** The scalability model [73](#table-4.3.-the-scalability-model-with-the-implementation-depth-of-six-framework-elements-across-type-a-large-or-complex-research-hospital-type-b-medium-private-clinic-or-hospital-and-type-c-small-surgical-center-site-contexts.)
 
-**Table 4.3** The twenty-four instruments
+**Table 4.4** The twenty-four instruments [75](#bm_tbl_44)
 
 # List of Figures
 
-**Figure 4.1** The quality lifecycle
+**Figure 4.1** The quality lifecycle [70](#figure-4.1.-the-seven-phase-quality-lifecycle-and-the-transversal-safety-stream-with-the-actions-entry-conditions-and-objective-of-each-phase-arranged-to-show-that-the-cycle-closes-and-feeds-the-next-investigation.)
 
-**Figure 4.2** The twenty-four instruments grouped by pillar
+**Figure 4.2** The twenty-four instruments grouped by pillar [76](#figure-4.2.-the-twenty-four-instruments-grouped-by-the-pillar-that-owns-each-one-seven-in-governance-five-in-risk-management-nine-in-operational-controls-and-three-in-performance-oversight-each-shown-by-acronym-with-its-full-name.)
 
-**Figure 4.3** Instrument granularity and the information chain
+**Figure 4.3** Instrument granularity and the information chain [77](#figure-4.3.-the-granularity-of-each-instrument-from-individual-evidence-to-the-site-level-decision-it-supports-with-the-arrows-marking-the-chain-through-which-information-rises-and-a-verification-requirement-returns-to-the-evidence-layer.-rows-group-instruments-by-operational-area-so-operational-controls-appears-as-four-groups-safety-surgery-and-device-enrollment-and-follow-up.)
 
-**Figure 4.4** Instruments mapped against CtQ domains
+**Figure 4.4** Instruments mapped against CtQ domains [78](#figure-4.4.-the-twenty-four-instruments-mapped-against-the-twelve-ctq-domains-with-a-filled-marker-for-a-primary-or-emphasis-relationship-and-an-open-marker-where-the-instrument-only-supports-limits-or-scopes-another-instruments-control.)
 
-**Figure 4.5** Instruments mapped against design requirements
+**Figure 4.5** Instruments mapped against design requirements [78](#figure-4.5.-the-twenty-four-instruments-mapped-against-the-twelve-design-requirements-with-a-filled-marker-for-a-direct-answer-an-open-marker-for-a-relationship-inherited-from-a-combined-or-earlier-instrument-a-dashed-marker-for-an-extension-added-to-the-original-set-and-a-small-marker-for-a-supporting-contribution.-dr11-and-dr12-apply-to-all-instruments-as-a-set-and-are-marked-once-for-the-whole-set.)

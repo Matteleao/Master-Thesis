@@ -9,8 +9,8 @@ Este repositório guarda a tese e o trabalho de revisão de escrita: tom, coerê
 
 | Pasta / arquivo | Conteúdo |
 |---|---|
-| `original/` | Arquivos exatamente como foram recebidos (a tese em `.docx` e o PDF do workshop). Não são editados. |
-| `tese/` | A tese convertida para texto (Markdown), um arquivo por capítulo. É a cópia de trabalho: cada revisão vira um commit, então dá para ver o antes e o depois de cada frase. |
+| `original/` | Arquivos exatamente como foram recebidos (a tese em `.docx` e o PDF do workshop). Não são editados. O `.docx` é a versão manual do autor recebida em 17/10/2026, que substituiu a anterior. |
+| `tese/` | A tese convertida para texto (Markdown), um arquivo por capítulo, gerada da versão do autor de 17/10/2026. É a cópia de trabalho: cada revisão vira um commit, então dá para ver o antes e o depois de cada frase. |
 | `tese/figuras/` | Tabelas e figuras extraídas do `.docx` (no Word elas estão como imagem). |
 | `.claude/skills/thesis-writing/SKILL.md` | **A skill de escrita do autor** (prosa científica, estrutura do argumento, evidência e entrega). É a regra principal da revisão e é carregada automaticamente por qualquer sessão do Claude neste repositório. |
 | `revisao/guia-de-estilo.md` | A camada específica desta tese: precedência entre regras, conflitos resolvidos entre a skill do autor e as skills genéricas, terminologia fixa e padrões encontrados no texto. |

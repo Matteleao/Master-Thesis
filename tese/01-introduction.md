@@ -18,7 +18,7 @@ ISO 14155 has followed a parallel path. It was first published in 1996 and revis
 
 Regional regulations supply legal force. In the EU, Regulation (EU) 2017/745 on medical devices (MDR) governs clinical investigations and establishes requirements for authorization, conduct, documentation, and reporting [10]. The United States uses a separate statutory and regulatory framework under the Federal Food, Drug, and Cosmetic Act [11] and Title 21 of the Code of Federal Regulations [12].
 
-Despite the clear direction set by the guidelines, adoption in practice remains uneven. In a global online survey run by the Tufts Center for the Study of Drug Development in late 2022 and early 2023, Florez et al. [13] collected responses from 119 pharmaceutical and biotechnology sponsors on 32 RBQM practices and identifying CtQ factors was among the five with the lowest rates of use. The Late Majority and Resisters cohorts together made up 60 of the 119 sponsors, and 39% of the Late Majority and 68% of the Resisters did not use this practice in any trial. The survey does not show how sites apply CtQ principles, because sites were not its object. It does show that the first step of the QbD approach is still difficult at sponsor level, where the concept was developed and where resources are usually concentrated.
+Despite the clear direction set by the guidelines, adoption in practice remains uneven. In a global online survey run by the Tufts Center for the Study of Drug Development in late 2022 and early 2023, Florez et al. [13] collected responses from 119 pharmaceutical and biotechnology sponsors on 32 RBQM practices and identifying CtQ factors was among the five with the lowest rates of use. The Late Majority and Resisters cohorts together made up 60 of the 119 sponsors, and 39% of the Late Majority and 68% of the Resisters did not use this practice in any trial. The survey does not show how sites apply CtQ principles, because sites were not its object. It does show that the first step of the QbD approach is still difficult at sponsor level, where the concept was developed and where resources are usually concentrated.<span id="_feoe2s2ob3yr" class="anchor"></span>
 
 Together, these instruments raise the standard that a trial is expected to meet. The rest of this chapter examines why meeting that standard is hard in surgical device investigations and what the field has offered so far.
 
@@ -40,10 +40,13 @@ The fifth condition, measurement reliability, arises because many of the assessm
 
 Each of these conditions plays out at the investigational site, because the implant is placed in its operating room and the follow-up assessments that produce the endpoints are carried out by its staff. The standard described in Section 1.1 therefore has to be met at the site as well. Its central principle, risk-proportionate oversight, starts from the observation that the activities in a clinical study do not all carry the same risk, so monitoring, documentation, and oversight should match the importance of each activity and the consequences of its failure. In practice, this asks a study team to do four things:
 
-1. Identify and validate the CtQ factors.
-2. Assess risk at study level and at site level.
-3. Define controls that prevent, detect, and respond.
-4. Set measurable indicators that trigger proportionate action when a signal appears.
+1.  Identify and validate the CtQ factors.
+
+2.  Assess risk at study level and at site level.
+
+3.  Define controls that prevent, detect, and respond.
+
+4.  Set measurable indicators that trigger proportionate action when a signal appears.
 
 Sponsors retain primary responsibility for trial-level quality management and oversight [6, 8, 10]. Investigators, in turn, are responsible for the conduct and oversight of activities delegated at the site, including ensuring qualified staff and adequate resources [6, 8]. The site is therefore directly accountable for the quality of the investigation it conducts, while the sponsor’s quality-management responsibility remains intact.
 
@@ -53,7 +56,7 @@ Accountability of this kind has to be operational to be real. If a site is expec
 
 ## 1.4 What Has Been Built for Sites, and for Whom
 
-The quality instruments that clinical research has built over the past two decades can be sorted by who uses them and on whom. The first group is written for the sponsor and the trial team, who use it to design and monitor a trial and to set the standards every site must follow, including standards for the surgical intervention. Central monitoring methods belong to this group, and Section 1.4.1 reviews it [28]. The second group measures the readiness or the performance of a site, so that a sponsor or a research network can compare sites and decide where to act, and Section 1.4.2 reviews it  [29]. In both groups the site is the party being assessed or controlled. Instruments that a site applies to its own processes are rare in the material reviewed. Two examples are the Clinical Trial Assessment of Infrastructure Matrix, a self-assessment tool for community research sites, and the implementation of ISO 9001 in clinical trial centers [30, 31].
+The quality instruments that clinical research has built over the past two decades can be sorted by who uses them and on whom. The first group is written for the sponsor and the trial team, who use it to design and monitor a trial and to set the standards every site must follow, including standards for the surgical intervention. Central monitoring methods belong to this group, and Section 1.4.1 reviews it [28]. The second group measures the readiness or the performance of a site, so that a sponsor or a research network can compare sites and decide where to act, and Section 1.4.2 reviews it [29]. In both groups the site is the party being assessed or controlled. Instruments that a site applies to its own processes are rare in the material reviewed. Two examples are the Clinical Trial Assessment of Infrastructure Matrix, a self-assessment tool for community research sites, and the implementation of ISO 9001 in clinical trial centers [30, 31].
 
 ### 1.4.1 Instruments written for the sponsor and the trial
 
@@ -85,13 +88,16 @@ ICH E6(R3) and ISO 14155:2026 give the investigational site a larger share of th
 
 The work builds on the literature described in Section 1.4. SQA frameworks define what a trial should require of a site, and site performance measures define how another party should assess it, so this thesis addresses what a site should operate for itself. The work has four objectives:
 
-1. To compare ICH E6(R3), ISO 14155:2026, and MDR Annex XV clause by clause, identifying where the instruments agree, where they differ, and where none creates a structured obligation for the investigational site.
-2. To identify the CtQ domains that apply at site level, as distinct from the trial-level CtQ factors defined by the sponsor.
-3. To derive an explicit and traceable set of requirements for a site-level quality framework from the regulatory analysis, from the operational gaps reported in the literature, and from the operational conditions of surgical device investigations.
-4. To build that framework and show how each component answers a stated requirement and how it relates to prior work that addresses the same subject at a different level.
+1.  To compare ICH E6(R3), ISO 14155:2026, and MDR Annex XV clause by clause, identifying where the instruments agree, where they differ, and where none creates a structured obligation for the investigational site.
+
+2.  To identify the CtQ domains that apply at site level, as distinct from the trial-level CtQ factors defined by the sponsor.
+
+3.  To derive an explicit and traceable set of requirements for a site-level quality framework from the regulatory analysis, from the operational gaps reported in the literature, and from the operational conditions of surgical device investigations.
+
+4.  To build that framework and show how each component answers a stated requirement and how it relates to prior work that addresses the same subject at a different level.
 
 The work was narrowed to orthopedic investigations, because the MDR classifies joint replacements as class III devices and generally requires clinical investigations for them, so a new joint replacement normally reaches the market only after investigations conducted at surgical sites [10]. Within orthopedics, the work focuses on the shoulder, because a framework is usable only if it reaches operational detail, which cannot be achieved across several surgical disciplines at once, and because the shoulder is a widely studied area [20, 21, 26, 27] with a large base of registered trials.
 
 The registry characterization developed for this thesis found that nonhospital organizations made up more than a quarter of the organizations taking part in industry-sponsored shoulder device investigations, and that for more than half of them no permanent research structure was publicly identifiable. The framework was therefore designed for private centers that run investigations recurrently alongside surgical care without a system dedicated to investigation quality.
 
-Finally, this is a design study, whose principal result is an artifact built from documented evidence and reasoned requirements, and Section 2.6 states what that does and does not establish.
+Finally, this is a design study, whose principal result is an artifact built from documented evidence and reasoned requirements, and their limitations are established during discussion.
