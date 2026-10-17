@@ -1,6 +1,13 @@
 # Contexto para continuar a revisão numa sessão nova
 
-Última atualização: 11/10/2026. Este arquivo existe para que uma sessão nova do Claude retome o trabalho sem a conversa anterior. **Leia-o inteiro antes de responder ao autor.**
+Última atualização: 17/10/2026. Este arquivo existe para que uma sessão nova do Claude retome o trabalho sem a conversa anterior. **Leia-o inteiro antes de responder ao autor.**
+
+## 0. Fonte atual da tese (17/10/2026)
+
+- O autor edita a tese **à mão, no Word dele**. Em 17/10/2026 ele enviou a versão atual, que substituiu `original/Revisao_manual_tese.docx`, e os arquivos `tese/*.md` foram regenerados a partir dela (script `split_thesis.py`). **A versão dele é a fonte da verdade.** As reescritas anteriores do Claude ficam no histórico do git (até o commit `ba2ddaa`) e em `revisao/reescrita/`.
+- Decisão do autor: **o ICH E8(R1) não entra na matriz.** Ele é referência conceitual e de desenho e serviu como balizador de achados e perguntas. Os quatro textos foram lidos, mas a matriz, os domínios CtQ e os design requirements foram operacionalizados só com ICH E6(R3), ISO 14155:2026 e MDR.
+- Decisão do autor: **"attribute" / "quality attribute" sai** e vira "requirement" (ou termo equivalente) nos Cap. 2 e 3. Cuidado com a colisão com "design requirement".
+- A lista de referências do autor tem **90 entradas** e ainda **não inclui a ISO 15189:2022** (a [54] dele é o documento CTTI). A renumeração que o Claude fez antes (15189 = [54], 54–90 → 55–91) não está na versão dele.
 
 ## 1. Como trabalhar com o autor
 
