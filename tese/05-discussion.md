@@ -94,7 +94,7 @@ The same logic runs in time through the lifecycle, whose claim is that a quality
 
 None of the six indicators has been validated. Nobody has demonstrated that a growing query backlog predicts a data integrity failure, or that operative time failing to fall within a stratum predicts a complication. A claim about prediction without a validation study is an assumption, and the cost of a wrong assumption is concrete, since a site that acts on a signal with no predictive value spends scarce effort on a process that was working.
 
-The defense rests on what each indicator measures and on when it moves, and neither ground is psychometric. Each indicator measures an attribute with a documented route to a Critical-to-Quality domain identified in Section 3.3, so the connection between the measure and the thing at risk is argued from the domain analysis. Each also moves at a point where the site retains the ability to act. On those two grounds the set is defensible at the design stage, and its predictive value remains unestablished.
+The defense rests on what each indicator measures and on when it moves, and neither ground is psychometric. Each indicator measures an aspect of site conduct with a documented route to a Critical-to-Quality domain identified in Section 3.3, so the connection between the measure and the thing at risk is argued from the domain analysis. Each also moves at a point where the site retains the ability to act. On those two grounds the set is defensible at the design stage, and its predictive value remains unestablished.
 
 Calling the framework sponsor-complementary means nothing until the points where the two quality systems meet are named, since those points decide whether complementarity is real. Three of them can be specified.
 
