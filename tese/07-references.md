@@ -106,76 +106,78 @@
 
 53. International Organization for Standardization. ISO 14971:2019. Medical devices—Application of risk management to medical devices. 3rd ed. Geneva: ISO; 2019.
 
-54. Clinical Trials Transformation Initiative. CTTI quality by design project: Critical to quality (CTQ) factors principles document. Clinical Trials Transformation Initiative; 2015.
+54. International Organization for Standardization. ISO 15189:2022. Medical laboratories—Requirements for quality and competence. 4th ed. Geneva: ISO; 2022.
 
-55. Seibyl J, Marek K, Zubal IG. The Role of the Core Imaging Laboratory in Multicenter Trials. Seminars in Nuclear Medicine. 2010;40(5):338–46. doi:10.1053/j.semnuclmed.2010.03.002 PubMed PMID: 20674593.
+55. Clinical Trials Transformation Initiative. CTTI quality by design project: Critical to quality (CTQ) factors principles document. Clinical Trials Transformation Initiative; 2015.
 
-56. Roemer FW, Collins JE, Hochberg MC, Kompel AJ, Diaz LE, Hayashi D, et al. The Role of Radiography and MRI as Screening Tools and Outcome Measures in Clinical Trials of Knee Osteoarthritis: A Perspective on the Current Status and Outlook. Therapeutic Advances in Musculoskeletal Disease. 2026;18:1759720X251411062. doi:10.1177/1759720X251411062 PubMed PMID: 41488611.
+56. Seibyl J, Marek K, Zubal IG. The Role of the Core Imaging Laboratory in Multicenter Trials. Seminars in Nuclear Medicine. 2010;40(5):338–46. doi:10.1053/j.semnuclmed.2010.03.002 PubMed PMID: 20674593.
 
-57. Ergina PL, Cook JA, Blazeby JM, Boutron I, Clavien PA, Reeves BC, et al. Challenges in Evaluating Surgical Innovation. The Lancet. 2009;374(9695):1097–104. doi:10.1016/S0140-6736(09)61086-2 PubMed PMID: 19782875.
+57. Roemer FW, Collins JE, Hochberg MC, Kompel AJ, Diaz LE, Hayashi D, et al. The Role of Radiography and MRI as Screening Tools and Outcome Measures in Clinical Trials of Knee Osteoarthritis: A Perspective on the Current Status and Outlook. Therapeutic Advances in Musculoskeletal Disease. 2026;18:1759720X251411062. doi:10.1177/1759720X251411062 PubMed PMID: 41488611.
 
-58. Blencowe NS, Mills N, Cook JA, Donovan JL, Rogers CA, Whiting P, et al. Standardizing and Monitoring the Delivery of Surgical Interventions in Randomized Clinical Trials. British Journal of Surgery. 2016;103(10):1377–84. doi:10.1002/bjs.10254 PubMed PMID: 27462835.
+58. Ergina PL, Cook JA, Blazeby JM, Boutron I, Clavien PA, Reeves BC, et al. Challenges in Evaluating Surgical Innovation. The Lancet. 2009;374(9695):1097–104. doi:10.1016/S0140-6736(09)61086-2 PubMed PMID: 19782875.
 
-59. Patra DP, Syal A, Rahme RJ, Abi-Aad KR, Singh R, Turcotte EL, et al. A Comparison of Treating Physician versus Independent Core Lab Assessments of Post-Aneurysm Treatment Imaging Outcomes: An Analysis of Prospectively Collected Data from a Randomized Trial. Journal of Neurosurgery. 2023;139(1):85–93. doi:10.3171/2022.10.JNS22841 PubMed PMID: 36681980.
+59. Blencowe NS, Mills N, Cook JA, Donovan JL, Rogers CA, Whiting P, et al. Standardizing and Monitoring the Delivery of Surgical Interventions in Randomized Clinical Trials. British Journal of Surgery. 2016;103(10):1377–84. doi:10.1002/bjs.10254 PubMed PMID: 27462835.
 
-60. Biscombe K, Porta N, Conaghan PG, Doran SJ, Ribeiro A, Mallett S, et al. PROspectiVe Imaging Research DEsign and coNducT (PROVIDENT): Considerations for Clinical Trials and Studies Using Imaging (Part II). Radiography. 2026;32(3):103329. doi:10.1016/j.radi.2026.103329
+60. Patra DP, Syal A, Rahme RJ, Abi-Aad KR, Singh R, Turcotte EL, et al. A Comparison of Treating Physician versus Independent Core Lab Assessments of Post-Aneurysm Treatment Imaging Outcomes: An Analysis of Prospectively Collected Data from a Randomized Trial. Journal of Neurosurgery. 2023;139(1):85–93. doi:10.3171/2022.10.JNS22841 PubMed PMID: 36681980.
 
-61. Lippe J, Spang JT, Leger RR, Arciero RA, Mazzocca AD, Shea KP. Inter-rater agreement of the Goutallier, Patte, and Warner classification scores using preoperative magnetic resonance imaging in patients with rotator cuff tears. Arthroscopy: The Journal of Arthroscopic & Related Surgery. 2012;28(2):154–9. doi:10.1016/j.arthro.2011.07.016 PubMed PMID: 22019235.
+61. Biscombe K, Porta N, Conaghan PG, Doran SJ, Ribeiro A, Mallett S, et al. PROspectiVe Imaging Research DEsign and coNducT (PROVIDENT): Considerations for Clinical Trials and Studies Using Imaging (Part II). Radiography. 2026;32(3):103329. doi:10.1016/j.radi.2026.103329
 
-62. Majed A, MacLeod I, Bull AMJ, Zyto K, Resch H, Hertel R, et al. Proximal humeral fracture classification systems revisited. Journal of Shoulder and Elbow Surgery. 2011;20(7):1125–32. doi:10.1016/j.jse.2011.01.020 PubMed PMID: 21481611.
+62. Lippe J, Spang JT, Leger RR, Arciero RA, Mazzocca AD, Shea KP. Inter-rater agreement of the Goutallier, Patte, and Warner classification scores using preoperative magnetic resonance imaging in patients with rotator cuff tears. Arthroscopy: The Journal of Arthroscopic & Related Surgery. 2012;28(2):154–9. doi:10.1016/j.arthro.2011.07.016 PubMed PMID: 22019235.
 
-63. Sims MT, Detweiler BN, Scott JT, Howard BM, Detten GR, Vassar M. Inconsistent selection of outcomes and measurement devices found in shoulder arthroplasty research: An analysis of studies on ClinicalTrials.gov. PLOS ONE. 2017;12(11):e0187865. doi:10.1371/journal.pone.0187865 PubMed PMID: 29125866.
+63. Majed A, MacLeod I, Bull AMJ, Zyto K, Resch H, Hertel R, et al. Proximal humeral fracture classification systems revisited. Journal of Shoulder and Elbow Surgery. 2011;20(7):1125–32. doi:10.1016/j.jse.2011.01.020 PubMed PMID: 21481611.
 
-64. Gagnier JJ, Page MJ, Huang H, Verhagen AP, Buchbinder R. Creation of a core outcome set for clinical trials of people with shoulder pain: a study protocol. Trials. 2017;18(1):336. doi:10.1186/s13063-017-2054-9 PubMed PMID: 28728574.
+64. Sims MT, Detweiler BN, Scott JT, Howard BM, Detten GR, Vassar M. Inconsistent selection of outcomes and measurement devices found in shoulder arthroplasty research: An analysis of studies on ClinicalTrials.gov. PLOS ONE. 2017;12(11):e0187865. doi:10.1371/journal.pone.0187865 PubMed PMID: 29125866.
 
-65. Ramiro S, Page MJ, Whittle SL, Huang H, Verhagen AP, Beaton DE, et al. The OMERACT Core Domain Set for Clinical Trials of Shoulder Disorders. The Journal of Rheumatology. 2019;46(8):969–75. doi:10.3899/jrheum.181070 PubMed PMID: 30709947.
+65. Gagnier JJ, Page MJ, Huang H, Verhagen AP, Buchbinder R. Creation of a core outcome set for clinical trials of people with shoulder pain: a study protocol. Trials. 2017;18(1):336. doi:10.1186/s13063-017-2054-9 PubMed PMID: 28728574.
 
-66. Cook JA, Bruckner T, MacLennan GS, Seiler CM. Clustering in Surgical Trials—Database of Intracluster Correlations. Trials. 2012;13:2. doi:10.1186/1745-6215-13-2 PubMed PMID: 22217216.
+66. Ramiro S, Page MJ, Whittle SL, Huang H, Verhagen AP, Beaton DE, et al. The OMERACT Core Domain Set for Clinical Trials of Shoulder Disorders. The Journal of Rheumatology. 2019;46(8):969–75. doi:10.3899/jrheum.181070 PubMed PMID: 30709947.
 
-67. Kahan BC, Morris TP. Assessing Potential Sources of Clustering in Individually Randomised Trials. BMC Medical Research Methodology. 2013;13:58. doi:10.1186/1471-2288-13-58 PubMed PMID: 23590245.
+67. Cook JA, Bruckner T, MacLennan GS, Seiler CM. Clustering in Surgical Trials—Database of Intracluster Correlations. Trials. 2012;13:2. doi:10.1186/1745-6215-13-2 PubMed PMID: 22217216.
 
-68. Oltean H, Gagnier JJ. Use of Clustering Analysis in Randomized Controlled Trials in Orthopaedic Surgery. BMC Medical Research Methodology. 2015;15:17. doi:10.1186/s12874-015-0006-1 PubMed PMID: 25887529.
+68. Kahan BC, Morris TP. Assessing Potential Sources of Clustering in Individually Randomised Trials. BMC Medical Research Methodology. 2013;13:58. doi:10.1186/1471-2288-13-58 PubMed PMID: 23590245.
 
-69. Conroy EJ, Blazeby JM, Burnside G, Cook JA, Gamble C. Managing Clustering Effects and Learning Effects in the Design and Analysis of Randomised Surgical Trials: A Review of Existing Guidance. Trials. 2022;23(1):869. doi:10.1186/s13063-022-06743-6 PubMed PMID: 36221107.
+69. Oltean H, Gagnier JJ. Use of Clustering Analysis in Randomized Controlled Trials in Orthopaedic Surgery. BMC Medical Research Methodology. 2015;15:17. doi:10.1186/s12874-015-0006-1 PubMed PMID: 25887529.
 
-70. Conroy EJ, Blazeby JM, Burnside G, Cook JA, Gamble C. Managing clustering effects and learning effects in the design and analysis of multicentre randomised trials: a survey to establish current practice. Trials. 2020;21(1):433. doi:10.1186/s13063-020-04318-x
+70. Conroy EJ, Blazeby JM, Burnside G, Cook JA, Gamble C. Managing Clustering Effects and Learning Effects in the Design and Analysis of Randomised Surgical Trials: A Review of Existing Guidance. Trials. 2022;23(1):869. doi:10.1186/s13063-022-06743-6 PubMed PMID: 36221107.
 
-71. Conroy EJ, Rosala-Hallas A, Blazeby JM, Burnside G, Cook JA, Gamble C. Randomized Trials Involving Surgery Did Not Routinely Report Considerations of Learning and Clustering Effects. Journal of Clinical Epidemiology. 2019;107:27–35. doi:10.1016/j.jclinepi.2018.11.004 PubMed PMID: 30439544.
+71. Conroy EJ, Blazeby JM, Burnside G, Cook JA, Gamble C. Managing clustering effects and learning effects in the design and analysis of multicentre randomised trials: a survey to establish current practice. Trials. 2020;21(1):433. doi:10.1186/s13063-020-04318-x
 
-72. Mentz RJ, Peterson ED. Site Principal Investigators in Multicenter Clinical Trials: Appropriately Recognizing Key Contributors. Circulation. 2017;135(13):1185–7. doi:10.1161/CIRCULATIONAHA.116.026650
+72. Conroy EJ, Rosala-Hallas A, Blazeby JM, Burnside G, Cook JA, Gamble C. Randomized Trials Involving Surgery Did Not Routinely Report Considerations of Learning and Clustering Effects. Journal of Clinical Epidemiology. 2019;107:27–35. doi:10.1016/j.jclinepi.2018.11.004 PubMed PMID: 30439544.
 
-73. Sramek JJ, Carrillo MS, Cutler NR. Establishing a Clinical Trial Site: A Primer for Aspiring Principal Investigators. Contemporary Clinical Trials Communications. 2025;48:101561. doi:10.1016/j.conctc.2025.101561
+73. Mentz RJ, Peterson ED. Site Principal Investigators in Multicenter Clinical Trials: Appropriately Recognizing Key Contributors. Circulation. 2017;135(13):1185–7. doi:10.1161/CIRCULATIONAHA.116.026650
 
-74. Anderson C, Young PA, Berenbaum A. Food and Drug Administration Guidance: Supervisory Responsibilities of Investigators. Journal of Diabetes Science and Technology. 2011;5(2):433–8. doi:10.1177/193229681100500234
+74. Sramek JJ, Carrillo MS, Cutler NR. Establishing a Clinical Trial Site: A Primer for Aspiring Principal Investigators. Contemporary Clinical Trials Communications. 2025;48:101561. doi:10.1016/j.conctc.2025.101561
 
-75. Feehan AK, Garcia-Diaz J. Investigator Responsibilities in Clinical Research. Ochsner Journal. 2020;20(1):44–9. doi:10.31486/toj.19.0085
+75. Anderson C, Young PA, Berenbaum A. Food and Drug Administration Guidance: Supervisory Responsibilities of Investigators. Journal of Diabetes Science and Technology. 2011;5(2):433–8. doi:10.1177/193229681100500234
 
-76. Vale M, Leite F, Madeira C. Risk Management in Clinical Trials: Assessment of Current Practices at Portuguese Clinical Trial Sites. Risk Management and Healthcare Policy. 2023;16:2187–96. doi:10.2147/RMHP.S426411 PubMed PMID: 37881165; PubMed Central PMCID: PMC10595157.
+76. Feehan AK, Garcia-Diaz J. Investigator Responsibilities in Clinical Research. Ochsner Journal. 2020;20(1):44–9. doi:10.31486/toj.19.0085
 
-77. Testa EJ, Lowe JT, Namdari S, Gillespie RJ, Sears BW, Johnston PS, et al. Operative Duration-Based Learning Period Analysis for Reverse and Total Shoulder Arthroplasty: A Multicenter Study. Shoulder & Elbow. 2018;12(1 Suppl):23–30. doi:10.1177/1758573218811635
+77. Vale M, Leite F, Madeira C. Risk Management in Clinical Trials: Assessment of Current Practices at Portuguese Clinical Trial Sites. Risk Management and Healthcare Policy. 2023;16:2187–96. doi:10.2147/RMHP.S426411 PubMed PMID: 37881165; PubMed Central PMCID: PMC10595157.
 
-78. U.S. Food and Drug Administration. Oversight of clinical investigations: A risk-based approach to monitoring. Guidance for industry. Silver Spring (MD): U.S. Food and Drug Administration; 2013 Aug. Docket No.: FDA-2011-D-0597.
+78. Testa EJ, Lowe JT, Namdari S, Gillespie RJ, Sears BW, Johnston PS, et al. Operative Duration-Based Learning Period Analysis for Reverse and Total Shoulder Arthroplasty: A Multicenter Study. Shoulder & Elbow. 2018;12(1 Suppl):23–30. doi:10.1177/1758573218811635
 
-79. Gottlieb K, Daperno M, Usiskin K, Sands BE, Ahmad H, Howden CW, et al. Endoscopy and Central Reading in Inflammatory Bowel Disease Clinical Trials: Achievements, Challenges and Future Developments. Gut. 2020;70(2):418–26. doi:10.1136/gutjnl-2020-320690
+79. U.S. Food and Drug Administration. Oversight of clinical investigations: A risk-based approach to monitoring. Guidance for industry. Silver Spring (MD): U.S. Food and Drug Administration; 2013 Aug. Docket No.: FDA-2011-D-0597.
 
-80. Suter T, Gerber Popp A, Zhang Y, Zhang C, Tashjian RZ, Henninger HB. The Influence of Radiographic Viewing Perspective and Demographics on the Critical Shoulder Angle. Journal of Shoulder and Elbow Surgery. 2015;24(6):e149–58. doi:10.1016/j.jse.2014.10.021
+80. Gottlieb K, Daperno M, Usiskin K, Sands BE, Ahmad H, Howden CW, et al. Endoscopy and Central Reading in Inflammatory Bowel Disease Clinical Trials: Achievements, Challenges and Future Developments. Gut. 2020;70(2):418–26. doi:10.1136/gutjnl-2020-320690
 
-81. Bouaicha S, Hoch A, Jentzsch T, Moor BK. Impact of Vertical and Horizontal Malrotation on Measurements of Anteroposterior Radiographs of the Scapula: Need for Standardized Images in Modern Omometry. Journal of Shoulder and Elbow Surgery. 2018;27(4):659–66. doi:10.1016/j.jse.2017.10.006
+81. Suter T, Gerber Popp A, Zhang Y, Zhang C, Tashjian RZ, Henninger HB. The Influence of Radiographic Viewing Perspective and Demographics on the Critical Shoulder Angle. Journal of Shoulder and Elbow Surgery. 2015;24(6):e149–58. doi:10.1016/j.jse.2014.10.021
 
-82. Shibayama Y, Imamura R, Hirose T, Sugi A, Mizushima E, Watanabe Y, et al. Reliability and Accuracy of the Critical Shoulder Angle Measured by Anteroposterior Radiographs: Using Digitally Reconstructed Radiograph from Three-Dimensional Computed Tomography Images. Journal of Shoulder and Elbow Surgery. 2023;32(2):286–91. doi:10.1016/j.jse.2022.07.017
+82. Bouaicha S, Hoch A, Jentzsch T, Moor BK. Impact of Vertical and Horizontal Malrotation on Measurements of Anteroposterior Radiographs of the Scapula: Need for Standardized Images in Modern Omometry. Journal of Shoulder and Elbow Surgery. 2018;27(4):659–66. doi:10.1016/j.jse.2017.10.006
 
-83. Deger GU, Davulcu CD, Karaismailoglu B, Palamar D, Guven MF. Are Acromiohumeral Distance Measurements on Conventional Radiographs Reliable? A Prospective Study of Inter-Method Agreement with Ultrasonography, and Assessment of Observer Variability. Joint Diseases and Related Surgery. 2024;35(1):62–71. doi:10.52312/jdrs.2023.1288
+83. Shibayama Y, Imamura R, Hirose T, Sugi A, Mizushima E, Watanabe Y, et al. Reliability and Accuracy of the Critical Shoulder Angle Measured by Anteroposterior Radiographs: Using Digitally Reconstructed Radiograph from Three-Dimensional Computed Tomography Images. Journal of Shoulder and Elbow Surgery. 2023;32(2):286–91. doi:10.1016/j.jse.2022.07.017
 
-84. Sheth M, Khoo K, Telfer S, Schiffman C, Matsen F, Hsu J. How Much Does Radiographic Projection Affect the Measurement of Glenoid Inclination? International Orthopaedics. 2026;50(3):619–24. doi:10.1007/s00264-026-06758-7
+84. Deger GU, Davulcu CD, Karaismailoglu B, Palamar D, Guven MF. Are Acromiohumeral Distance Measurements on Conventional Radiographs Reliable? A Prospective Study of Inter-Method Agreement with Ultrasonography, and Assessment of Observer Variability. Joint Diseases and Related Surgery. 2024;35(1):62–71. doi:10.52312/jdrs.2023.1288
 
-85. Vulcano D. A pragmatic guide for migrating investigator sites to ICH E6(R3). Association of Clinical Research Professionals and Society for Clinical Research Sites; 2026.
+85. Sheth M, Khoo K, Telfer S, Schiffman C, Matsen F, Hsu J. How Much Does Radiographic Projection Affect the Measurement of Glenoid Inclination? International Orthopaedics. 2026;50(3):619–24. doi:10.1007/s00264-026-06758-7
 
-86. Aibinder W, Schoch B, Parsons M, Watling J, Ko JK, Gobbato B, et al. Risk Factors for Complications and Revision Surgery after Anatomic and Reverse Total Shoulder Arthroplasty. Journal of Shoulder and Elbow Surgery. 2021;30(11):e689–701. doi:10.1016/j.jse.2021.04.029
+86. Vulcano D. A pragmatic guide for migrating investigator sites to ICH E6(R3). Association of Clinical Research Professionals and Society for Clinical Research Sites; 2026.
 
-87. Li W, Ailimu K, Jia N, Chu H, Zhao Y, Tao L, et al. Stakeholder Perception of Quality Management of Investigator-Initiated Clinical Trials. BMC Medical Ethics. 2025;27(1):10. doi:10.1186/s12910-025-01354-7
+87. Aibinder W, Schoch B, Parsons M, Watling J, Ko JK, Gobbato B, et al. Risk Factors for Complications and Revision Surgery after Anatomic and Reverse Total Shoulder Arthroplasty. Journal of Shoulder and Elbow Surgery. 2021;30(11):e689–701. doi:10.1016/j.jse.2021.04.029
 
-88. Mullen CG, Houlihan JY, Stroo M, Deeter CE, Freel SA, Padget AM, et al. Leveraging Retooled Clinical Research Infrastructure for Clinical Research Management System Implementation at a Large Academic Medical Center. Journal of Clinical and Translational Science. 2023;7(1):e127. doi:10.1017/cts.2023.550
+88. Li W, Ailimu K, Jia N, Chu H, Zhao Y, Tao L, et al. Stakeholder Perception of Quality Management of Investigator-Initiated Clinical Trials. BMC Medical Ethics. 2025;27(1):10. doi:10.1186/s12910-025-01354-7
 
-89. Hoffmann JM, Bluemle A, Grossmann R, Yau H, Lang B, Bradbury C. Toward a Global Harmonization of Service Infrastructure in Academic Clinical Trial Units: An International Survey. Frontiers in Medicine. 2023;10:1252352. doi:10.3389/fmed.2023.1252352
+89. Mullen CG, Houlihan JY, Stroo M, Deeter CE, Freel SA, Padget AM, et al. Leveraging Retooled Clinical Research Infrastructure for Clinical Research Management System Implementation at a Large Academic Medical Center. Journal of Clinical and Translational Science. 2023;7(1):e127. doi:10.1017/cts.2023.550
 
-90. Adams A, Adelfio A, Barnes B, Berlien R, Branco D, Coogan A, et al. Risk-Based Monitoring in Clinical Trials: 2021 Update. Therapeutic Innovation & Regulatory Science. 2023;57(3):529–37. doi:10.1007/s43441-022-00496-9
+90. Hoffmann JM, Bluemle A, Grossmann R, Yau H, Lang B, Bradbury C. Toward a Global Harmonization of Service Infrastructure in Academic Clinical Trial Units: An International Survey. Frontiers in Medicine. 2023;10:1252352. doi:10.3389/fmed.2023.1252352
+
+91. Adams A, Adelfio A, Barnes B, Berlien R, Branco D, Coogan A, et al. Risk-Based Monitoring in Clinical Trials: 2021 Update. Therapeutic Innovation & Regulatory Science. 2023;57(3):529–37. doi:10.1007/s43441-022-00496-9

@@ -109,6 +109,11 @@ Repositório: **`Matteleao/Master-Thesis`**.
    - levar para a 3.2 o parágrafo da ISO (10.1, 9.1 e 10.6) e o das *quality tolerance limits*, que saíram da 2.1.1 e da 2.2.2.
 6. O autor ainda vai rever 2.2.3, 2.3, 2.4, 2.5 e 2.6.
 
+### Referências (atualizado)
+
+- A ISO 15189:2022 entrou como **[54]** (citada pela primeira vez na 2.4.1 do Cap. 2 reestruturado). Todas as referências antigas de 54 a 90 subiram uma posição (55 a 91) em `tese/03`–`06` e na lista. O documento de princípios CtQ do CTTI agora é a [55]. Estrutura da norma em `revisao/fontes/iso-15189-2022-estrutura.md`.
+- A ordem Vancouver está correta, com exceção das antigas [38] e [40], que só aparecem no Cap. 5 (pendência do Cap. 1).
+
 ### Cap. 1 (problemas apontados, sem aprovação do autor)
 
 1. "Delphi process with 21 stakeholders" → 71.
