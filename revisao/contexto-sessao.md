@@ -11,7 +11,7 @@
 
 ### Decisões e pendências de 17/10/2026 (segunda rodada)
 
-- Aplicado em `entrega/Tese_alteracoes_controladas_17-10-2026.docx` (alterações controladas, autor "Claude") e espelhado em `tese/*.md`:
+- Aplicado direto (sem alterações controladas, a pedido do autor) em `entrega/Revisao_manual_tese.docx`, que passa a ser a versão do autor, e espelhado em `tese/*.md`:
   - ISO 15189:2022 entrou como [54]; as antigas 54–90 viraram 55–91 (42 grupos de citação renumerados);
   - anos das normas (ISO 13485:2016, ISO 14971:2019, ISO/TR 24971:2020);
   - E8 fora da matriz (2.2.2, 3.2, 3.4.1), com a frase do E8 movida para o 3.3;
