@@ -9,6 +9,20 @@
 - Decisão do autor: **"attribute" / "quality attribute" sai** e vira "requirement" (ou termo equivalente) nos Cap. 2 e 3. Cuidado com a colisão com "design requirement".
 - A lista de referências do autor tem **90 entradas** e ainda **não inclui a ISO 15189:2022** (a [54] dele é o documento CTTI). A renumeração que o Claude fez antes (15189 = [54], 54–90 → 55–91) não está na versão dele.
 
+### Decisões e pendências de 17/10/2026 (segunda rodada)
+
+- Aplicado em `entrega/Tese_alteracoes_controladas_17-10-2026.docx` (alterações controladas, autor "Claude") e espelhado em `tese/*.md`:
+  - ISO 15189:2022 entrou como [54]; as antigas 54–90 viraram 55–91 (42 grupos de citação renumerados);
+  - anos das normas (ISO 13485:2016, ISO 14971:2019, ISO/TR 24971:2020);
+  - E8 fora da matriz (2.2.2, 3.2, 3.4.1), com a frase do E8 movida para o 3.3;
+  - "attribute" → "requirement" só onde se refere às entradas da matriz;
+  - atividade do DSRM corrigida no 3.5 e no 4.1; seções erradas no 2.1.1 e no 3.3;
+  - base dos pilares = 2.5.1 (ISO 13485, 14971 e 15189:2022), alinhada no 3.2.1, 4.1 e 5.1. A ISO 14155 saiu da base porque a 9.1 só exige procedimentos do sponsor e remete à ISO 13485 (Note 2);
+  - frase "Even the site-qualification clause…" saiu do 3.2 (fica só no 3.2.1, onde o PI agora é definido).
+- O ISO/TR 24971:2020 é citado no 2.2.1 mas **não está na lista de referências**.
+- **Para o 3.4 (quando chegarmos lá):** refazer a contagem por registro de centro (o autor vai procurar o CSV) e **retirar toda menção a "permanent clinical trial infrastructure"** (3.4.4, 3.4.5, Tabela 3.3 e a nota), porque o autor tirou isso da metodologia.
+- Pendentes de decisão do autor: texto proposto para os prazos de safety no 3.2; Annex ZA (recomendação: tirar a frase); busca de termos do 3.2.1 (não mexer por enquanto); "at each instrument" vs "across" no 2.2.2.
+
 ## 1. Como trabalhar com o autor
 
 - O autor é **Felipe Gregorio Lima**. Ele escreve em português e chama o Claude de "claudinho". As respostas são **em português**, e o texto acadêmico é entregue **em inglês**.
