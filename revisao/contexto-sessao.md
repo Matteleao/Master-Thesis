@@ -1,6 +1,17 @@
 # Contexto para continuar a revisão numa sessão nova
 
-Última atualização: 17/10/2026. Este arquivo existe para que uma sessão nova do Claude retome o trabalho sem a conversa anterior. **Leia-o inteiro antes de responder ao autor.**
+Última atualização: 19/10/2026. Este arquivo existe para que uma sessão nova do Claude retome o trabalho sem a conversa anterior. **Leia-o inteiro antes de responder ao autor.**
+
+## 0.0 Estado em 19/10/2026
+
+- O autor enviou a versão de 18/10 (com o fim do 3.2 e o 3.2.1 reescritos por ele). Ela substituiu `original/Revisao_manual_tese.docx`, e `tese/*.md` foram regenerados a partir dela. **Ela é a fonte da verdade.**
+- O autor enviou três documentos de outra pesquisa (Relatório Site Centered, Tese vs Pesquisa, Propostas de reescrita). Foram conferidos contra a tese e as fontes primárias.
+- Entregas de 19/10 em `entrega/`:
+  - `Revisao_manual_tese_alteracoes_19-10.docx`: 72 alterações controladas, **aguardando aprovação do autor**; os `tese/*.md` ainda não as incluem;
+  - `Relatorio_mudancas_19-10.docx`: mudanças por prioridade, edições de imagem, 17 decisões pendentes e itens descartados.
+- Decisão do autor (19/10): a tese trabalha com **domínios** CtQ do centro; os **fatores** CtQ são de cada ensaio e o centro os identifica dentro dos domínios (mecanismo no SRR, 4.3.1). Números da planilha v5 usados no 3.2 e no 3.3.
+- Fato verificado: a E6(R3) **não** diz que o investigador deve "maintain appropriate site processes"; o texto diz 2.2.2 (tempo, equipe, instalações), 2.3.1 (supervisão proporcional) e Seção 4 (processos de dados, investigador e patrocinador).
+- Script do motor de alterações controladas: `scripts/track.py` + `scripts/changes.py` (scratchpad da sessão).
 
 ## 0. Fonte atual da tese (17/10/2026)
 
