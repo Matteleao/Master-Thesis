@@ -25,3 +25,8 @@ Gerado a partir dos PDFs em main/upload de 25/10. Faltam: POT, SART, IMP, SIFSL,
 
 ## Regra do autor (25/10)
 O texto é a referência: os modelos se ajustam ao texto, salvo quando o modelo estiver mais correto (caso SCR antes do TRE, aceito pelo autor).
+
+## SLCT v0.3 (conferido em 25/10, revisão da 4.3.2)
+- Disposição "Adapt controls" manda "Update TRE, SCR or CCDM". O CCDM só define criticalidade; mudança de escopo de uma pessoa vai para o SCR (decisão) e o RACI (atribuição). Trocar CCDM por RACI.
+- Estratos de complexidade: o SLCT define três contextos (lower, standard, higher), definidos pelo site. A 4.8 diz "five complexity strata used in the learning curve log" (ver lembretes M5).
+- MRL M5 "after first 3-5 cases" e SLCT revisão "Cases 1-5, 6-10": alinhar os dois. São pontos de revisão, não limiar de proficiência (a 4.3.2 diz que o framework não adota contagem fixa).
