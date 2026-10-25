@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>SART_Safety_and_Adverse_Effect_Reporting_Template_v0.3</title><style>
+:root{--navy:#1f4173;--blue:#3478ad;--pale:#d7e6f3;--grid:#aeb4bb;--ink:#101418;--muted:#68727d;--paper:#fff;--canvas:#f2f4f7;--light:#f5f6f7;--draft:#fff8e8;--draft-border:#c99a3e}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--canvas);color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:10.5px;line-height:1.32}
+.page{width:210mm;height:297mm;margin:18px auto;padding:14mm 16mm 13mm;background:var(--paper);box-shadow:0 4px 20px rgba(30,41,59,.14);position:relative;overflow:hidden;page-break-after:always}.page.landscape{width:297mm;height:210mm;padding:12mm 15mm 12mm;page:landscape}
+@page{size:A4 portrait;margin:0}@page landscape{size:A4 landscape;margin:0}@media print{html,body{margin:0;padding:0;background:#fff}.page{width:210mm;height:297mm;margin:0;box-shadow:none}.page.landscape{width:297mm;height:210mm;margin:0;page:landscape}}
+.topbar{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;background:var(--navy);color:#fff;min-height:46px;padding:11px 12px}.title{min-width:0;font-size:14px;font-weight:400;text-transform:uppercase;white-space:nowrap}.version{color:#c8d6e6;font-size:9.6px;white-space:nowrap;padding-left:8px}.page.landscape .topbar{min-height:40px;padding:9px 11px}.page.landscape .title{font-size:15.4px}
+.meta-grid{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid var(--grid);border-top:1px solid var(--grid);margin-top:5px}.meta-cell{min-height:47px;border-right:1px solid var(--grid);border-bottom:1px solid var(--grid);background:var(--pale);padding:6px 7px;color:#163a67;font-size:10px;line-height:1.28}.span2{grid-column:span 2}
+.section{margin-top:12px}.compact{margin-top:9px}.section-header{display:grid;grid-template-columns:40px 1fr;background:var(--navy);color:#fff;min-height:34px}.letter{display:flex;align-items:center;justify-content:center;border-right:1px solid rgba(255,255,255,.18);font-size:17px}.section-title{display:flex;align-items:center;padding:0 10px;font-size:14px;font-weight:400;letter-spacing:.01em}.box{border:1px solid var(--grid);border-top:none;padding:9px 11px;background:#fff;font-size:10.35px;text-align:justify}.box p{margin:0 0 7px}.box p:last-child{margin:0}.note{margin:6px 0 0;color:var(--muted);font-size:9.45px;line-height:1.27;text-align:justify}.draft-note{margin:6px 0 8px;padding:7px 9px;background:var(--draft);border:1px solid var(--draft-border);color:#5a431a;font-size:9.45px;line-height:1.28}
+table{width:100%;border-collapse:collapse;table-layout:fixed;margin-top:6px}th,td{border:1px solid var(--grid);vertical-align:middle;padding:5px;text-align:center;overflow-wrap:anywhere}th{background:var(--blue);color:#fff;font-size:9.45px;font-weight:400;line-height:1.2}td{font-size:9.2px;line-height:1.23}tbody tr:nth-child(even) td{background:var(--light)}.left{text-align:left}.strong{font-weight:700;color:#173c67}.row-no{font-weight:700!important;color:#173c67!important;text-align:center!important;vertical-align:middle!important}
+.check{display:block;width:10px;height:10px;border:1px solid #526070;background:#fff}.check.selected{position:relative;background:var(--blue);border-color:#275e8b}.check.selected:after{content:"";position:absolute;left:2px;top:0;width:4px;height:7px;border:solid #fff;border-width:0 1.4px 1.4px 0;transform:rotate(45deg)}.option{display:grid;grid-template-columns:10px auto;gap:4px;align-items:center;justify-content:start;text-align:left;line-height:1.08;white-space:nowrap}.options{align-items:center;justify-content:center}.options.stack{display:flex;flex-direction:column;gap:2px;align-items:center;justify-content:center}.options.stack .option{width:132px;justify-content:start;text-align:left}.options.compact .option{font-size:8.35px;width:114px}.options.inline{display:flex;flex-wrap:wrap;gap:4px 8px;justify-content:center}.options.inline .option{font-size:8.55px}.options.narrow .option{width:94px;font-size:8.1px}.options.wide .option{width:150px}
+.example td{background:#eef5fa!important;color:#657d91!important;font-style:italic!important;font-weight:400!important;text-align:center!important;vertical-align:middle!important}.example td:first-child{font-weight:400!important;color:#657d91!important;text-align:center!important}.example .left{text-align:left!important}
+.scope td{height:40px;text-align:left}.scope td:first-child,.facts td:first-child,.gate td:first-child,.action td:first-child,.follow td:first-child{font-weight:700;color:#173c67}.facts td{height:45px}.facts.tall td{height:56px}.classification td{height:42px}.classification td:first-child,.relationship td:first-child{font-weight:700;color:#173c67;text-align:left}.relationship td{height:45px}.action td{height:49px}.notification td{height:43px}.reconcile td{height:37px}.follow td{height:57px}.gate td{height:37px}.final td{height:47px}.signature-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:8px}.signature{border:1px solid var(--grid);min-height:155px;padding:12px 7px 7px;color:#173c67;font-size:9.1px}.signature b{display:block;color:#173c67;background:var(--pale);margin:-12px -7px 14px;padding:5px 6px;border-bottom:1px solid var(--grid);font-weight:700}.sig-fields{display:flex;flex-direction:column;justify-content:space-between;height:105px;padding-top:5px}.sig-row{display:grid;grid-template-columns:105px minmax(0,1fr);gap:8px;align-items:end}.sig-row span{color:#52687b;text-align:left}.sig-row i{display:block;height:16px;border-bottom:1.5px solid #52687b}.footer{position:absolute;left:16mm;right:16mm;bottom:7mm;border-top:1px solid #d2d6da;color:var(--muted);display:grid;grid-template-columns:1fr auto;gap:16px;padding-top:4px;font-size:9px}.page.landscape .footer{left:15mm;right:15mm;bottom:6mm}.page.landscape .section{margin-top:10px}.page.landscape .section-header{min-height:30px}.page.landscape .section-title{font-size:14.8px}.page.landscape .box{padding:7px 10px;font-size:9.85px}.page.landscape th{font-size:8.9px}.page.landscape td{font-size:8.8px}.page.landscape .note{font-size:9.15px;margin-top:5px}.page.landscape .classification td{height:35px}.page.landscape .relationship td{height:38px}.page.landscape .action td{height:39px}.page.landscape .notification td{height:37px}.p1 .scope td{height:37px}.p1 .facts td{height:47px}.p2 .facts.tall td{height:59px}.p2 .facts td{height:45px}.p5 .notification td{height:35px}.p5 .reconcile td{height:32px}.p6 .follow td{height:55px}.p7 .signature{min-height:160px}.p7 .sig-fields{height:111px}
+
+.p6 .action td{height:35px}.p6 .note{margin-top:3px}.p9 .follow td{height:58px}.p10 .signature{min-height:164px}.p10 .sig-fields{height:110px}
+.classification-narrative{border:1px solid var(--grid);min-height:106px;margin-top:6px;padding:9px 11px;color:var(--muted);font-size:9.5px;line-height:1.3}
+
+.p11 .signature{min-height:181px}.p11 .sig-fields{height:130px;padding-top:7px}
+</style></head><body class="">
+<main class="page p1"><header class="topbar"><div class="title">SART — Safety and Adverse Effect Reporting Template</div><div class="version">SART · v0.3</div></header><section class="meta-grid">
+<div class="meta-cell">Study / Protocol</div><div class="meta-cell">Current CIP / version</div><div class="meta-cell">Site / code</div><div class="meta-cell">SART case ID / version</div>
+<div class="meta-cell">Participant code</div><div class="meta-cell">Procedure / visit / phase</div><div class="meta-cell">Date / time first known</div><div class="meta-cell">Person who received the information</div>
+<div class="meta-cell">Initial case type</div><div class="meta-cell">Current case status</div><div class="meta-cell">PI / authorized designee</div><div class="meta-cell">Sponsor safety case ID, if issued</div>
+</section><section class="section compact"><div class="section-header"><div class="letter">A</div><div class="section-title">Case opening, scope and immediate factual record</div></div><div class="box"><p><b>Purpose:</b> Open one SART for one occurrence, observed device deficiency or new safety information. The record follows the case from initial awareness to controlled closure and preserves the separate assessment of adverse event, device deficiency, seriousness, expectedness and relationships.</p><p><b>Boundary:</b> This is a site-level controlled record. It does not replace source records, the CRF, sponsor safety forms, device accountability, a deviation record, SCML, CSST, CAPA or regulatory submissions. It links to them only where relevant.</p></div><table class="scope"><thead><tr><th style="width:25%">Element</th><th style="width:39%">Complete when</th><th style="width:36%">Record / interface</th></tr></thead><tbody><tr><td>Unit of analysis</td><td>One SART is opened for one occurrence, deficiency or material new safety information.</td><td>Coded participant, SART ID and controlled case location are linked.</td></tr><tr><td>Decision supported</td><td>The case is triaged, protected, communicated, followed and closed using applicable controlled procedures.</td><td>Current status, classification, communications and closure decision.</td></tr><tr><td>Inputs</td><td>Factual information from source, participant contact, procedure, device accountability, imaging or other authorized source.</td><td>Reference IDs or locations; do not reproduce full clinical narratives.</td></tr><tr><td>Outputs</td><td>Individual safety record, case communications and structured signals for SCML/CSST, CAPA, SRR or PIR when applicable.</td><td>Recipient, reference, owner and next action.</td></tr></tbody></table></section><section class="section"><div class="section-header"><div class="letter">B</div><div class="section-title">Initial case facts and first awareness</div></div><table class="facts"><thead><tr><th style="width: 18.8%;" class="">Opening item</th><th style="width: 14.611%;" class="">Initial status</th><th style="width: 33.641%;" class="">Factual record / reference</th><th style="width: 10.949%;" class="">Responsible person&nbsp;</th><th style="width: 22%;" class="">Limitation or next action</th></tr></thead><tbody><tr style="height: 90px;"><td class="">Date / time of occurrence or deficiency detection</td><td class="" style="text-align: right;"><div class="options stack compact" data-editor-aligned="center" style="justify-content: center; place-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Known</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Estimated</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Not yet known</span></span></div></td><td class=""></td><td class=""></td><td class=""></td></tr><tr style="height: 90px;"><td class="">Date / time information first became known to the site</td><td class=""><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Known</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Estimated</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Not yet known</span></span></div></td><td class=""></td><td></td><td class=""></td></tr><tr style="height: 90px;"><td class="">Initial case type</td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>AE</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Observed deficiency</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>AE + deficiency</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>New information</span></span></div></td><td class=""><br></td><td></td><td></td></tr><tr style="height: 90px;"><td class="">Participant currently requiring urgent clinical review?</td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Yes</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>No</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Not yet determined</span></span></div></td><td class=""></td><td></td><td></td></tr></tbody></table><p class="note"><b>Opening rule:</b> record the factual information available at awareness. Do not delay opening the case until local or sponsor classification is complete.</p></section><footer class="footer"><div>SART v0.3 | Case opening and first factual report</div><div>Page 1 of 11</div></footer></main>
+<main class="page p2"><header class="topbar"><div class="title">SART — Safety and Adverse Effect Reporting Template</div><div class="version">SART · v0.3</div></header><section class="section compact"><div class="section-header"><div class="letter">B</div><div class="section-title">Detailed event or device deficiency facts</div></div><table class="facts tall"><thead><tr><th style="width:22%">Factual field</th><th style="width:44%">Record or factual description</th><th style="width:20%">Source / reference</th><th style="width:14%">Information status</th></tr></thead><tbody><tr style="height: 100px;"><td>Event or deficiency description</td><td class=""></td><td></td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Complete</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Partial</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Pending</span></span></div></td></tr><tr style="height: 100px;"><td>Clinical signs, symptoms, laboratory or imaging finding</td><td class=""></td><td class=""></td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Complete</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Partial</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Pending</span></span></div></td></tr><tr style="height: 100px;"><td>Current clinical status and treatment or care provided</td><td class=""></td><td></td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Complete</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Partial</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Pending</span></span></div></td></tr><tr style="height: 100px;"><td>Device performance, quality, information or usability concern</td><td class=""></td><td></td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Complete</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Partial</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Pending</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>N/A</span></span></div></td></tr></tbody></table><p class="note"><b>Factual rule:</b> record what is observed or reported, the source and what remains unknown. Causality and controlled classifications are assessed in later sections and may change as information becomes available.</p></section><section class="section"><div class="section-header"><div class="letter">B</div><div class="section-title">Device, comparator and procedure context</div></div><table class="facts"><thead><tr><th style="width: 16.149%;" class="">Component / context</th><th style="width: 33%;" class="">Record</th><th style="width: 14.715%;" class="">Authoritative source or reference</th><th style="width: 12.532%;" class="">Adequate?</th><th style="width: 23.604%;" class="">Missing information</th></tr></thead><tbody><tr style="height: 90px;"><td>Investigational device / comparator and component(s) implicated</td><td class=""></td><td class=""></td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Yes</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>No</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Not yet known</span></span></div></td><td></td></tr><tr style="height: 90px;"><td>UDI / model / lot / serial / size, when available</td><td class=""></td><td></td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Yes</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>No</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Not yet known</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>N/A</span></span></div></td><td></td></tr><tr style="height: 90px;"><td>Relevant procedure, technical step or use context</td><td class=""></td><td></td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Yes</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>No</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Not yet known</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>N/A</span></span></div></td><td></td></tr><tr style="height: 90px;"><td>Timing in relation to procedure, visit, exposure or follow-up</td><td class=""></td><td></td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Yes</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>No</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Not yet known</span></span></div></td><td></td></tr></tbody></table></section><footer class="footer"><div>SART v0.3 | Detailed facts and device/procedure context</div><div>Page 2 of 11</div></footer></main>
+<main class="page landscape p3"><header class="topbar"><div class="title">SART — Safety and Adverse Effect Reporting Template</div><div class="version">SART · v0.3</div></header><div class="draft-note"><b>Controlled taxonomy required:</b> use the definitions, seriousness criteria, expectedness terminology and exemptions stated in the current CIP, risk information and sponsor procedures. This template deliberately does not hard-code universal timelines or a closed list of seriousness consequences.</div><section class="section compact"><div class="section-header"><div class="letter">C</div><div class="section-title">Independent classification axes — event, deficiency and relationship</div></div><div class="box"><p>Assess each axis independently. An AE and a device deficiency may coexist. If an AE is associated with a device deficiency, retain both pathways. Use <b>Not yet determined</b> while assessment is ongoing rather than forcing a premature conclusion.</p></div><table class="classification"><thead><tr><th style="width: 6.289%;">No.</th><th style="width: 26.205%;">Independent classification axis</th><th style="width: 13%;" class="">Current result</th><th style="width: 18.868%;">Definition / rule source</th><th style="width: 26.205%;">Evidence, rationale or uncertainty</th><th style="width: 9.434%;">Reviewer / date</th></tr></thead><tbody><tr class="example"><td>Example</td><td>An adverse event exists</td><td class="" style="text-align: center;"><div class="options stack compact"><span class="option"><span class="check"></span><span>Yes</span></span><span class="option"><span class="check"></span><span>No</span></span><span class="option"><span class="check"></span><span>Not yet determined</span></span></div></td><td>Clinical record; controlled definition in CIP / sponsor procedure</td><td>Pain requiring unplanned assessment is recorded; relationship pending.</td><td>AB / 22 Sep 2026</td></tr><tr><td class="" style="text-align: center;"><span class="row-no">1</span></td><td class="">An adverse event exists</td><td><div class="options stack compact"><span class="option"><span class="check"></span><span>Yes</span></span><span class="option"><span class="check"></span><span>No</span></span><span class="option"><span class="check"></span><span>Not yet determined</span></span><span class="option"><span class="check"></span><span>N/A</span></span></div></td><td></td><td></td><td></td></tr><tr><td class="" style="text-align: center;"><span class="row-no">2</span></td><td>An observed device deficiency exists</td><td><div class="options stack compact"><span class="option"><span class="check"></span><span>Yes</span></span><span class="option"><span class="check"></span><span>No</span></span><span class="option"><span class="check"></span><span>Not yet determined</span></span><span class="option"><span class="check"></span><span>N/A</span></span></div></td><td class=""></td><td class=""></td><td></td></tr><tr><td class="" style="text-align: center;"><span class="row-no">3</span></td><td>The AE is related to the investigational device</td><td><div class="options stack compact"><span class="option"><span class="check"></span><span>Yes</span></span><span class="option"><span class="check"></span><span>No</span></span><span class="option"><span class="check"></span><span>Not yet determined</span></span><span class="option"><span class="check"></span><span>N/A</span></span></div></td><td class=""></td><td></td><td></td></tr><tr><td class="" style="text-align: center;"><span class="row-no">4</span></td><td>The AE is related to the comparator, if applicable</td><td><div class="options stack compact"><span class="option"><span class="check"></span><span>Yes</span></span><span class="option"><span class="check"></span><span>No</span></span><span class="option"><span class="check"></span><span>Not yet determined</span></span><span class="option"><span class="check"></span><span>N/A</span></span></div></td><td></td><td></td><td></td></tr><tr><td class="" style="text-align: center;"><span class="row-no">5</span></td><td>The AE is related to a CIP-required procedure outside routine clinical practice</td><td><div class="options stack compact"><span class="option"><span class="check"></span><span>Yes</span></span><span class="option"><span class="check"></span><span>No</span></span><span class="option"><span class="check"></span><span>Not yet determined</span></span><span class="option"><span class="check"></span><span>N/A</span></span></div></td><td></td><td></td><td></td></tr><tr><td class="" style="text-align: center;"><span class="row-no">6</span></td><td class="">The case meets the controlled seriousness criteria</td><td><div class="options stack compact"><span class="option"><span class="check"></span><span>Yes</span></span><span class="option"><span class="check"></span><span>No</span></span><span class="option"><span class="check"></span><span>Not yet determined</span></span><span class="option"><span class="check"></span><span>N/A</span></span></div></td><td></td><td></td><td></td></tr></tbody></table></section><footer class="footer"><div>SART v0.3 | Independent classification axes — Part 1</div><div>Page 3 of 11</div></footer></main>
+<main class="page landscape p4"><header class="topbar"><div class="title">SART — Safety and Adverse Effect Reporting Template</div><div class="version">SART · v0.3</div></header><section class="section compact"><div class="section-header"><div class="letter">C</div><div class="section-title">Independent classification axes — seriousness, expectedness and pathway linkage</div></div><table class="classification"><thead><tr><th style="width:6%">No.</th><th style="width:25%">Independent classification axis</th><th style="width:17%">Current result</th><th style="width:18%">Definition / rule source</th><th style="width:25%">Evidence, rationale or uncertainty</th><th style="width:9%">Reviewer / date</th></tr></thead><tbody><tr><td><span class="row-no">7</span></td><td>If a serious ADE is established, anticipated / unanticipated status is assessable</td><td><div class="options stack compact"><span class="option"><span class="check"></span><span>Yes</span></span><span class="option"><span class="check"></span><span>No</span></span><span class="option"><span class="check"></span><span>Not yet determined</span></span><span class="option"><span class="check"></span><span>N/A</span></span></div></td><td></td><td></td><td></td></tr><tr><td><span class="row-no">8</span></td><td>The device deficiency could have led to a serious adverse device effect</td><td><div class="options stack compact"><span class="option"><span class="check"></span><span>Yes</span></span><span class="option"><span class="check"></span><span>No</span></span><span class="option"><span class="check"></span><span>Not yet determined</span></span><span class="option"><span class="check"></span><span>N/A</span></span></div></td><td></td><td></td><td></td></tr><tr><td><span class="row-no">9</span></td><td>AE and deficiency pathways both require active follow-up</td><td><div class="options stack compact"><span class="option"><span class="check"></span><span>Yes</span></span><span class="option"><span class="check"></span><span>No</span></span><span class="option"><span class="check"></span><span>Not yet determined</span></span><span class="option"><span class="check"></span><span>N/A</span></span></div></td><td></td><td></td><td></td></tr></tbody></table></section><section class="section"><div class="section-header"><div class="letter">C</div><div class="section-title">Clinical severity, outcome and assessment completeness</div></div><table class="classification"><thead><tr><th style="width:29%">Assessment dimension</th><th style="width:22%">Current result</th><th style="width:34%">Controlled reference / rationale</th><th style="width:15%">Assessor / date</th></tr></thead><tbody><tr><td>Clinical severity</td><td></td><td></td><td></td></tr><tr><td>Current outcome</td><td></td><td></td><td></td></tr><tr><td>Expectedness / anticipated status under controlled risk information</td><td></td><td></td><td></td></tr><tr><td>Information completeness sufficient for final local classification</td><td></td><td></td><td></td></tr></tbody></table><div class="classification-narrative"><b>Classification narrative / unresolved uncertainty:</b><br><br><br><br></div></section><footer class="footer"><div>SART v0.3 | Independent classification axes — Part 2</div><div>Page 4 of 11</div></footer></main>
+<main class="page landscape p5"><header class="topbar"><div class="title">SART — Safety and Adverse Effect Reporting Template</div><div class="version">SART · v0.3</div></header><section class="section compact"><div class="section-header"><div class="letter">C</div><div class="section-title">Relationship assessment by separate contributing factor</div></div><div class="box"><p>Do not merge device, procedure and participant factors into one conclusion. Record the current relation of each relevant factor and preserve uncertainty or disagreement. A final event classification may be updated later without overwriting the earlier assessment.</p></div><table class="relationship"><thead><tr><th style="width:6%">No.</th><th style="width:23%">Relationship factor</th><th style="width:20%">Current relationship</th><th style="width:39%">Rationale / source evidence</th><th style="width:12%">Assessor / date</th></tr></thead><tbody><tr class="example"><td>Example</td><td>Investigational device / component</td><td><div class="options stack compact"><span class="option"><span class="check"></span><span>Not related</span></span><span class="option"><span class="check"></span><span>Unlikely</span></span><span class="option"><span class="check"></span><span>Possible</span></span><span class="option"><span class="check"></span><span>Probable</span></span><span class="option"><span class="check"></span><span>Not assessable</span></span></div></td><td>Temporal association; device analysis pending.</td><td>PI / 22 Sep 2026</td></tr><tr><td><span class="row-no">1</span></td><td>Investigational device / component</td><td><div class="options stack compact"><span class="option"><span class="check"></span><span>Not related</span></span><span class="option"><span class="check"></span><span>Unlikely</span></span><span class="option"><span class="check"></span><span>Possible</span></span><span class="option"><span class="check"></span><span>Probable</span></span><span class="option"><span class="check"></span><span>Not assessable</span></span></div></td><td></td><td></td></tr><tr><td><span class="row-no">2</span></td><td>Comparator, if applicable</td><td><div class="options stack compact"><span class="option"><span class="check"></span><span>Not related</span></span><span class="option"><span class="check"></span><span>Unlikely</span></span><span class="option"><span class="check"></span><span>Possible</span></span><span class="option"><span class="check"></span><span>Probable</span></span><span class="option"><span class="check"></span><span>Not assessable</span></span></div></td><td></td><td></td></tr><tr><td><span class="row-no">3</span></td><td>CIP-required procedure outside routine clinical practice</td><td><div class="options stack compact"><span class="option"><span class="check"></span><span>Not related</span></span><span class="option"><span class="check"></span><span>Unlikely</span></span><span class="option"><span class="check"></span><span>Possible</span></span><span class="option"><span class="check"></span><span>Probable</span></span><span class="option"><span class="check"></span><span>Not assessable</span></span></div></td><td></td><td></td></tr><tr><td><span class="row-no">4</span></td><td>Participant condition or baseline disease</td><td class=""><div class="options stack compact"><span class="option"><span class="check"></span><span>Not related</span></span><span class="option"><span class="check"></span><span>Unlikely</span></span><span class="option"><span class="check"></span><span>Possible</span></span><span class="option"><span class="check"></span><span>Probable</span></span><span class="option"><span class="check"></span><span>Not assessable</span></span></div></td><td></td><td></td></tr><tr><td><span class="row-no">5</span></td><td>Operator, technique or use context</td><td><div class="options stack compact"><span class="option"><span class="check"></span><span>Not related</span></span><span class="option"><span class="check"></span><span>Unlikely</span></span><span class="option"><span class="check"></span><span>Possible</span></span><span class="option"><span class="check"></span><span>Probable</span></span><span class="option"><span class="check"></span><span>Not assessable</span></span></div></td><td></td><td></td></tr><tr><td><span class="row-no">6</span></td><td>Concomitant treatment or other factor</td><td><div class="options stack compact"><span class="option"><span class="check"></span><span>Not related</span></span><span class="option"><span class="check"></span><span>Unlikely</span></span><span class="option"><span class="check"></span><span>Possible</span></span><span class="option"><span class="check"></span><span>Probable</span></span><span class="option"><span class="check"></span><span>Not assessable</span></span></div></td><td></td><td></td></tr></tbody></table></section><footer class="footer"><div>SART v0.3 | Relationship assessment</div><div>Page 5 of 11</div></footer></main>
+<main class="page landscape p6"><header class="topbar"><div class="title">SART — Safety and Adverse Effect Reporting Template</div><div class="version">SART · v0.3</div></header><section class="section compact"><div class="section-header"><div class="letter">D</div><div class="section-title">Immediate protection and containment actions</div></div><table class="action"><thead><tr><th style="width:6%">No.</th><th style="width:24%">Protection action / trigger</th><th style="width:28%">Action taken / factual result</th><th style="width:17%">Owner / date-time</th><th style="width:15%">Evidence / reference</th><th style="width:10%">Status</th></tr></thead><tbody><tr class="example"><td>Example</td><td>Participant reviewed; device component retained for assessment.</td><td>Clinical treatment, component preservation and PI notification completed.</td><td>Surgeon / 22 Sep 2026 14:20</td><td>Source note / device record</td><td>Complete</td></tr><tr><td><span class="row-no">1</span></td><td>Participant care, treatment or urgent assessment</td><td></td><td></td><td></td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Complete</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Partial</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Pending</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>N/A</span></span></div></td></tr><tr><td><span class="row-no">2</span></td><td>Use modification, interruption or additional risk reduction</td><td></td><td class=""></td><td></td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Complete</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Partial</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Pending</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>N/A</span></span></div></td></tr><tr><td><span class="row-no">3</span></td><td>Device isolation, return, preservation, revision or explant handling</td><td></td><td></td><td></td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Complete</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Partial</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Pending</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>N/A</span></span></div></td></tr><tr><td><span class="row-no">4</span></td><td>Communication to PI / authorized safety route</td><td></td><td></td><td></td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Complete</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Partial</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Pending</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>N/A</span></span></div></td></tr><tr><td><span class="row-no">5</span></td><td>Other immediate protective action</td><td></td><td></td><td></td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Complete</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Partial</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Pending</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>N/A</span></span></div></td></tr></tbody></table></section><section class="section"><div class="section-header"><div class="letter">D</div><div class="section-title">Escalation gates</div></div><table class="action"><thead><tr><th style="width:28%">Escalation question</th><th style="width:15%">Current result</th><th style="width:31%">Route / authorized decision and rationale</th><th style="width:14%">Owner / date-time</th><th style="width:12%">Status</th></tr></thead><tbody><tr><td>Potentially serious health threat or urgent protection need</td><td><div class="options stack compact"><span class="option"><span class="check"></span><span>Yes</span></span><span class="option"><span class="check"></span><span>No</span></span><span class="option"><span class="check"></span><span>Not yet determined</span></span></div></td><td></td><td></td><td></td></tr><tr><td>SAE, possible SADE, unanticipated serious effect or deficiency with potential to lead to SADE</td><td class=""><div class="options stack compact"><span class="option"><span class="check"></span><span>Yes</span></span><span class="option"><span class="check"></span><span>No</span></span><span class="option"><span class="check"></span><span>Not yet determined</span></span></div></td><td></td><td></td><td></td></tr><tr><td>Other escalation required by CIP, sponsor procedure, EC or local rule</td><td><div class="options stack compact"><span class="option"><span class="check"></span><span>Yes</span></span><span class="option"><span class="check"></span><span>No</span></span><span class="option"><span class="check"></span><span>Not yet determined</span></span></div></td><td></td><td></td><td></td></tr></tbody></table></section><footer class="footer"><div>SART v0.3 | Immediate protection and escalation</div><div>Page 6 of 11</div></footer></main>
+<main class="page landscape p7"><header class="topbar"><div class="title">SART — Safety and Adverse Effect Reporting Template</div><div class="version">SART · v0.3</div></header><section class="section compact"><div class="section-header"><div class="letter">E</div><div class="section-title">Communication and notification route</div></div><div class="box"><p>Record the communication pathway actually used. The list below is a routing framework, not a statement that every recipient or deadline applies to every case. Use the current CIP, sponsor safety procedure, EC requirements and applicable regulation as the authoritative source. A positive or unresolved escalation gate must receive a named route and owner.</p></div><table class="notification"><thead><tr><th style="width:5%">No.</th><th style="width:17%">Recipient / route</th><th style="width:24%">Trigger, controlled rule and applicable window</th><th style="width:13%">Date/time known</th><th style="width:13%">Sent / transmitted</th><th style="width:19%">Receipt / case or form reference</th><th style="width:9%">Owner</th></tr></thead><tbody><tr class="example"><td>Example</td><td>Sponsor safety route</td><td>Trigger and applicable window cited from current CIP / procedure</td><td>22 Sep 2026 10:20</td><td>22 Sep 2026 14:00</td><td>Acknowledged / case reference</td><td>AB</td></tr><tr><td><span class="row-no">1</span></td><td>Sponsor safety route</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><span class="row-no">2</span></td><td>Principal investigator / authorized designee</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><span class="row-no">3</span></td><td>Ethics committee, if required</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><span class="row-no">4</span></td><td>Regulatory authority, if required</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><span class="row-no">5</span></td><td>DMC / CEC or other designated committee, if established</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><span class="row-no">6</span></td><td>Other controlled recipient</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></section><div class="classification-narrative"><b>Communication note / outstanding route:</b><br><br><br><br></div><footer class="footer"><div>SART v0.3 | Communication and notification</div><div>Page 7 of 11</div></footer></main>
+<main class="page landscape p8"><header class="topbar"><div class="title">SART — Safety and Adverse Effect Reporting Template</div><div class="version">SART · v0.3</div></header><section class="section compact"><div class="section-header"><div class="letter">E</div><div class="section-title">Reconciliation of linked safety records</div></div><div class="box"><p>Reconcile the SART with its authorized sources and linked records. Record discrepancies factually and send their resolution to the correct record; do not copy complete source narratives into the SART.</p></div><table class="reconcile"><thead><tr><th style="width:5%">No.</th><th style="width:24%">Record / interface</th><th style="width:26%">Reference or location</th><th style="width:17%">Concordance / discrepancy</th><th style="width:16%">Correction or next action</th><th style="width:12%">Reviewer / status</th></tr></thead><tbody><tr class="example"><td>Example</td><td>Source / medical record</td><td>Record agrees with the current SART facts</td><td>No discrepancy</td><td>AB / 22 Sep</td><td>Complete</td></tr><tr><td><span class="row-no">1</span></td><td>Source / medical record</td><td></td><td></td><td></td><td></td></tr><tr><td><span class="row-no">2</span></td><td>CRF / eCRF</td><td></td><td></td><td></td><td></td></tr><tr><td><span class="row-no">3</span></td><td>ICDL / operative and device accountability</td><td></td><td></td><td></td><td></td></tr><tr><td><span class="row-no">4</span></td><td>Device labels, UDI / lot / serial or other identifiers</td><td></td><td></td><td></td><td></td></tr><tr><td><span class="row-no">5</span></td><td>Deviation record, if applicable</td><td></td><td></td><td></td><td></td></tr><tr><td><span class="row-no">6</span></td><td>SCML / CSST reference</td><td></td><td></td><td></td><td></td></tr><tr><td><span class="row-no">7</span></td><td>Sponsor safety case / EC or authority reference</td><td></td><td></td><td></td><td></td></tr></tbody></table></section><footer class="footer"><div>SART v0.3 | Safety record reconciliation</div><div>Page 8 of 11</div></footer></main>
+<main class="page p9"><header class="topbar"><div class="title">SART — Safety and Adverse Effect Reporting Template</div><div class="version">SART · v0.3</div></header><section class="section compact"><div class="section-header"><div class="letter">F</div><div class="section-title">Follow-up chronology and new information</div></div><div class="box"><p>Add one row whenever new information changes clinical management, technical understanding, classification, causality, notification status or the next required action. Do not overwrite earlier information; preserve the case chronology.</p></div><table class="follow"><thead><tr><th style="width:6%">No.</th><th style="width:12%">Update date</th><th style="width:31%">New clinical, technical or investigational information</th><th style="width:21%">Classification / causality update and rationale</th><th style="width:17%">Communication or evidence reference</th><th style="width:6%">Owner</th><th style="width:7%">Next action</th></tr></thead><tbody><tr class="example"><td>Example</td><td>22 Sep 2026</td><td>Imaging received; participant clinically stable; device analysis remains pending.</td><td>No reclassification; deficiency pathway remains open.</td><td>Sponsor update sent / acknowledgement ref.</td><td>AB</td><td>Next device analysis review</td></tr><tr><td><span class="row-no">1</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><span class="row-no">2</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><span class="row-no">3</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><span class="row-no">4</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><span class="row-no">5</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></section><section class="section"><div class="section-header"><div class="letter">F</div><div class="section-title">Outcome and outstanding evidence summary</div></div><table class="facts"><thead><tr><th style="width:30%">Follow-up element</th><th style="width:49%">Current record</th><th style="width:21%">Source / status</th></tr></thead><tbody><tr><td>Clinical outcome, treatment, readmission or reoperation</td><td></td><td></td></tr><tr><td>Revision, explant or removed component handling, if applicable</td><td></td><td></td></tr><tr><td>Device analysis or manufacturer feedback, if applicable</td><td></td><td></td></tr><tr><td>Outstanding information and active follow-up plan</td><td></td><td></td></tr></tbody></table></section><footer class="footer"><div>SART v0.3 | Follow-up chronology and outcome</div><div>Page 9 of 11</div></footer></main>
+<main class="page p10"><header class="topbar"><div class="title">SART — Safety and Adverse Effect Reporting Template</div><div class="version">SART · v0.3</div></header><section class="section compact"><div class="section-header"><div class="letter">G</div><div class="section-title">Final assessment, outputs and controlled closure</div></div><div class="box"><p>Close only when the documented outcome, current classification, required communication route, outstanding information and downstream interfaces have been reviewed. Closure of the local SART does not override any sponsor, EC, regulatory or committee process that remains open.</p></div><table class="final"><thead><tr><th style="width:32%">Final assessment / closure gate</th><th style="width:24%">Status</th><th style="width:44%">Evidence, limitation or controlled reference</th></tr></thead><tbody><tr><td>Final AE classification and outcome documented</td><td><div class="options inline"><span class="option"><span class="check"></span><span>Complete</span></span><span class="option"><span class="check"></span><span>Incomplete</span></span><span class="option"><span class="check"></span><span>N/A</span></span></div></td><td></td></tr><tr><td>Final device deficiency assessment and potential for SADE documented</td><td><div class="options inline"><span class="option"><span class="check"></span><span>Complete</span></span><span class="option"><span class="check"></span><span>Incomplete</span></span><span class="option"><span class="check"></span><span>N/A</span></span></div></td><td></td></tr><tr><td>Required communications and detailed reports reconciled</td><td><div class="options inline"><span class="option"><span class="check"></span><span>Complete</span></span><span class="option"><span class="check"></span><span>Incomplete</span></span><span class="option"><span class="check"></span><span>N/A</span></span></div></td><td></td></tr><tr><td>PI assessment recorded; sponsor / committee opinion or disagreement captured where applicable</td><td><div class="options inline"><span class="option"><span class="check"></span><span>Complete</span></span><span class="option"><span class="check"></span><span>Incomplete</span></span><span class="option"><span class="check"></span><span>N/A</span></span></div></td><td></td></tr><tr><td>Need for SCML, CSST, CAPA, SRR, PIR or other downstream record assessed</td><td><div class="options inline"><span class="option"><span class="check"></span><span>Complete</span></span><span class="option"><span class="check"></span><span>Incomplete</span></span><span class="option"><span class="check"></span><span>N/A</span></span></div></td><td></td></tr></tbody></table></section><section class="section"><div class="section-header"><div class="letter">G</div><div class="section-title">Outputs and handoff</div></div><table class="gate"><thead><tr><th style="width:6%">No.</th><th style="width:27%">Output / downstream interface</th><th style="width:35%">Reference, decision or rationale</th><th style="width:15%">Owner / date</th><th style="width:17%">Status</th></tr></thead><tbody><tr><td>1</td><td>SCML / CSST signal review</td><td></td><td></td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Linked</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Not required</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Pending</span></span></div></td></tr><tr><td>2</td><td>CAPA or Site Risk Register review</td><td></td><td></td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Linked</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Not required</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Pending</span></span></div></td></tr><tr><td>3</td><td>PIR or PI Oversight communication</td><td></td><td></td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Linked</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Not required</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Pending</span></span></div></td></tr><tr><td>4</td><td>Controlled case closure decision</td><td></td><td></td><td><div class="options stack compact" style="justify-content: center; justify-items: center;"><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Closed</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Open follow-up</span></span><span class="option" style="margin-left: auto; margin-right: auto;"><span class="check"></span><span>Transferred</span></span></div></td></tr></tbody></table></section><footer class="footer"><div>SART v0.3 | Final assessment and outputs</div><div>Page 10 of 11</div></footer></main>
+<main class="page p11"><header class="topbar"><div class="title">SART — Safety and Adverse Effect Reporting Template</div><div class="version">SART · v0.3</div></header><section class="section compact"><div class="section-header"><div class="letter">H</div><div class="section-title">Accountable review, signatures and controlled location</div></div><div class="box"><p>The accountable reviewers confirm that the local case record can be reconstructed from the SART, linked source records and controlled communications. This signature does not substitute for any sponsor, EC, committee or regulatory decision.</p></div><div class="signature-grid">
+<div class="signature"><b>Case reporter / initial assessor</b><div class="sig-fields"><div class="sig-row"><span>Name / role</span><i></i></div><div class="sig-row"><span>Signature / initials</span><i></i></div><div class="sig-row"><span>Date / time</span><i></i></div></div></div>
+<div class="signature"><b>Principal investigator / accountable reviewer</b><div class="sig-fields"><div class="sig-row"><span>Name / role</span><i></i></div><div class="sig-row"><span>Final assessment</span><i></i></div><div class="sig-row"><span>Signature / date</span><i></i></div></div></div>
+<div class="signature"><b>Safety coordinator / authorized site function</b><div class="sig-fields"><div class="sig-row"><span>Name / role</span><i></i></div><div class="sig-row"><span>Communication check</span><i></i></div><div class="sig-row"><span>Signature / date</span><i></i></div></div></div>
+<div class="signature"><b>Controlled case location</b><div class="sig-fields"><div class="sig-row"><span>SART location</span><i></i></div><div class="sig-row"><span>Source / CRF links</span><i></i></div><div class="sig-row"><span>Linked safety records</span><i></i></div></div></div>
+</div></section><footer class="footer"><div>SART v0.3 | Accountable review and signatures</div><div>Page 11 of 11</div></footer></main>
+<style id="sart-editor-static-style">
+  #sart-editor-ui{position:fixed;z-index:2147483000;top:16px;right:16px;font-family:Arial,Helvetica,sans-serif;color:#16243a}
+  #sart-editor-launcher{appearance:none;border:0;border-radius:8px;background:#173c67;color:#fff;padding:10px 14px;font-weight:700;font-size:13px;box-shadow:0 4px 14px rgba(15,35,60,.25);cursor:pointer}
+  #sart-editor-launcher:hover{background:#245889}
+  #sart-editor-panel{display:none;width:324px;max-height:calc(100vh - 80px);overflow:auto;margin-top:8px;border:1px solid #b6c4d3;border-radius:10px;background:#fff;box-shadow:0 12px 34px rgba(15,35,60,.25);font-size:12px;line-height:1.35}
+  body.editor-mode #sart-editor-panel{display:block}
+  body.editor-mode #sart-editor-launcher{background:#80551c}
+  .sart-editor-head{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#173c67;color:#fff;border-radius:9px 9px 0 0;padding:11px 12px}.sart-editor-head strong{font-size:13px}.sart-editor-head button{appearance:none;border:1px solid rgba(255,255,255,.5);background:transparent;color:#fff;border-radius:5px;padding:3px 7px;cursor:pointer}
+  .sart-editor-body{padding:11px 12px 13px}.sart-editor-help{margin:0 0 9px;padding:8px;background:#eef5fa;border-left:3px solid #3478ad;color:#31465c;font-size:11px}
+  .sart-editor-status{min-height:29px;margin-bottom:9px;border:1px solid #d4dde6;border-radius:5px;padding:6px 7px;background:#f8fafc;color:#516170;font-size:11px}.sart-editor-status b{color:#173c67}
+  .sart-editor-group{border-top:1px solid #e1e6eb;padding-top:9px;margin-top:9px}.sart-editor-group h3{font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:#52687b;margin:0 0 7px}
+  .sart-editor-row{display:flex;gap:6px;align-items:center;margin:6px 0}.sart-editor-row label{flex:1;display:flex;align-items:center;justify-content:space-between;gap:7px;color:#31465c}.sart-editor-row input[type=number]{width:67px;padding:4px 5px;border:1px solid #b6c4d3;border-radius:4px;font-size:12px}.sart-editor-row input[type=range]{width:136px;accent-color:#3478ad}.sart-editor-row select{max-width:155px;padding:4px;border:1px solid #b6c4d3;border-radius:4px;background:#fff;font-size:12px}
+  .sart-editor-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px}.sart-editor-actions button,.sart-editor-save{appearance:none;border:1px solid #9eb2c5;border-radius:5px;background:#f8fafc;color:#173c67;padding:7px 6px;font-size:11px;font-weight:700;cursor:pointer}.sart-editor-actions button:hover,.sart-editor-save:hover{background:#e6f0f8}.sart-editor-actions button:disabled{opacity:.42;cursor:not-allowed}.sart-editor-save{width:100%;border-color:#173c67;background:#173c67;color:#fff;font-size:12px;padding:9px}.sart-editor-save:hover{background:#245889;color:#fff}
+  .sart-editor-warning{font-size:10px;line-height:1.3;color:#68727d;margin:8px 0 0}.sart-editor-key{font-size:10px;color:#68727d;margin:5px 0 0}
+  body.editor-mode .page{outline:1px dashed rgba(52,120,173,.38);outline-offset:4px}body.editor-mode [contenteditable=true]{cursor:text}body.editor-mode [contenteditable=true]:focus{outline:2px solid #f0a23c!important;outline-offset:1px;background:#fff8e9}
+  body.editor-mode .editor-selected{outline:2px solid #f0a23c!important;outline-offset:-2px;position:relative}body.editor-mode .options.editor-selected{outline-offset:3px}
+  @media print{#sart-editor-ui{display:none!important}body.editor-mode .page{outline:none!important}body.editor-mode .editor-selected{outline:none!important}body.editor-mode [contenteditable=true]:focus{outline:none!important;background:inherit!important}}
+  @media (max-width:760px){#sart-editor-ui{top:8px;right:8px}#sart-editor-panel{width:min(324px,calc(100vw - 16px));max-height:calc(100vh - 65px)}}
+</style>
+<script id="sart-editor-script">
+(function () {
+  'use strict';
+
+  const state = { enabled: false, selected: null, undo: [], redo: [], editStart: null, fieldStart: null };
+  const ui = {};
+  const editableTextSelector = '.meta-cell,.title,.version,.section-title,.box p,.note,.signature b,.sig-row span';
+
+  function pages() { return Array.from(document.querySelectorAll('main.page')); }
+  function snapshot() { return pages().map(page => page.outerHTML).join('\n'); }
+  function pushSnapshot(before) {
+    if (!before || before === snapshot()) return;
+    state.undo.push(before);
+    if (state.undo.length > 50) state.undo.shift();
+    state.redo = [];
+    updateControls();
+  }
+  function withHistory(action) {
+    const before = snapshot();
+    action();
+    pushSnapshot(before);
+  }
+  function restore(markup) {
+    const holder = document.createElement('template');
+    holder.innerHTML = markup;
+    pages().forEach(page => page.remove());
+    document.body.insertBefore(holder.content, ui.root);
+    state.selected = null;
+    applyEditableState(document, state.enabled);
+    updateControls();
+  }
+  function undo() {
+    if (!state.undo.length) return;
+    const current = snapshot();
+    const previous = state.undo.pop();
+    state.redo.push(current);
+    restore(previous);
+    setStatus('Última alteração desfeita.');
+  }
+  function redo() {
+    if (!state.redo.length) return;
+    const current = snapshot();
+    const next = state.redo.pop();
+    state.undo.push(current);
+    restore(next);
+    setStatus('Alteração refeita.');
+  }
+  function setStatus(message) { if (ui.status) ui.status.innerHTML = message; }
+  function sectionLabel(section) {
+    const letter = section.querySelector('.letter');
+    const title = section.querySelector('.section-title');
+    return (letter ? letter.textContent.trim() : '—') + ' — ' + (title ? title.textContent.trim() : 'Seção');
+  }
+  function buildSectionMenu() {
+    const select = ui.sectionSelect;
+    const current = state.selected && state.selected.closest ? state.selected.closest('.section') : null;
+    select.innerHTML = '<option value="">Selecionar seção…</option>';
+    pages().forEach((page, p) => page.querySelectorAll('.section').forEach((section, i) => {
+      const option = document.createElement('option');
+      option.value = p + ':' + i;
+      option.textContent = sectionLabel(section);
+      if (section === current) option.selected = true;
+      select.appendChild(option);
+    }));
+  }
+  function getSectionByValue(value) {
+    if (!value || !value.includes(':')) return null;
+    const [p, i] = value.split(':').map(Number);
+    const page = pages()[p];
+    return page ? page.querySelectorAll('.section')[i] || null : null;
+  }
+  function applyEditableState(root, enabled) {
+    root.querySelectorAll(editableTextSelector).forEach(el => { el.contentEditable = enabled ? 'true' : 'false'; });
+    root.querySelectorAll('td,th').forEach(cell => {
+      if (!cell.querySelector('.options')) cell.contentEditable = enabled ? 'true' : 'false';
+      else cell.contentEditable = 'false';
+    });
+  }
+  function clearSelection() {
+    document.querySelectorAll('.editor-selected').forEach(el => el.classList.remove('editor-selected'));
+  }
+  function chooseTarget(node) {
+    if (!node || !node.closest) return null;
+    return node.closest('.options') || node.closest('td,th') || node.closest('.box') || node.closest('.section-header')?.closest('.section') || node.closest('.note') || node.closest('.meta-cell,.title,.version,.signature');
+  }
+  function selectElement(el) {
+    clearSelection();
+    state.selected = el || null;
+    if (state.selected) state.selected.classList.add('editor-selected');
+    buildSectionMenu();
+    updateControls();
+  }
+  function selectedTable() {
+    return state.selected && state.selected.closest ? state.selected.closest('table') : null;
+  }
+  function selectedCell() {
+    return state.selected && state.selected.closest ? state.selected.closest('td,th') : null;
+  }
+  function selectedRow() {
+    const cell = selectedCell();
+    return cell ? cell.closest('tbody tr') : null;
+  }
+  function selectedSection() {
+    return state.selected && state.selected.closest ? state.selected.closest('.section') : null;
+  }
+  function selectedOptions() {
+    return state.selected && state.selected.classList && state.selected.classList.contains('options') ? state.selected : state.selected?.closest?.('.options');
+  }
+  function updateControls() {
+    if (!ui.status) return;
+    const el = state.selected;
+    const table = selectedTable();
+    const cell = selectedCell();
+    const row = selectedRow();
+    const section = selectedSection();
+    const options = selectedOptions();
+    ui.undo.disabled = !state.undo.length;
+    ui.redo.disabled = !state.redo.length;
+    ui.addRow.disabled = !table;
+    ui.removeRow.disabled = !row;
+    ui.removeBox.disabled = !(el && el.classList && el.classList.contains('box'));
+    ui.align.disabled = !el;
+    ui.centerOptions.disabled = !options;
+    ui.rowHeight.disabled = !row;
+    ui.columnWidth.disabled = !table || !cell || cell.colSpan > 1;
+    if (!el) {
+      ui.status.innerHTML = '<b>Nada selecionado.</b> Clique em um texto, numa célula, numa seção ou no grupo de caixinhas que deseja ajustar.';
+      ui.fontLabel.textContent = 'Fonte (px)';
+      ui.fontSize.value = '';
+      ui.rowHeight.value = '';
+      ui.columnWidth.value = 20;
+      ui.widthOutput.textContent = '—';
+      return;
+    }
+    if (section && el === section) {
+      const scale = Number(section.dataset.editorFontScale || 1);
+      ui.fontLabel.textContent = 'Fonte da seção (%)';
+      ui.fontSize.value = Math.round(scale * 100);
+      ui.fontSize.min = '60'; ui.fontSize.max = '180'; ui.fontSize.step = '5';
+      ui.status.innerHTML = '<b>Seção selecionada:</b> ' + sectionLabel(section) + '. Ajuste a escala de fonte ou selecione um elemento mais específico.';
+    } else {
+      ui.fontLabel.textContent = 'Fonte (px)';
+      ui.fontSize.min = '6'; ui.fontSize.max = '30'; ui.fontSize.step = '0.25';
+      const source = cell || el;
+      ui.fontSize.value = parseFloat(getComputedStyle(source).fontSize).toFixed(2);
+      let label = cell ? 'Célula' : (options ? 'Grupo de caixinhas' : 'Elemento');
+      ui.status.innerHTML = '<b>' + label + ' selecionado.</b>' + (table ? ' A tabela pode receber linhas e ajustes de coluna.' : '');
+    }
+    if (row) ui.rowHeight.value = Math.round(row.getBoundingClientRect().height);
+    if (table && cell && cell.colSpan === 1) {
+      const widths = getColumnWidths(table);
+      const idx = cell.cellIndex;
+      const value = widths[idx] || 0;
+      ui.columnWidth.value = Math.round(value);
+      ui.widthOutput.textContent = Math.round(value) + '%';
+    } else {
+      ui.widthOutput.textContent = '—';
+    }
+  }
+  function getHeaders(table) { return table && table.tHead && table.tHead.rows[0] ? Array.from(table.tHead.rows[0].cells) : []; }
+  function getColumnWidths(table) {
+    const headers = getHeaders(table);
+    if (!headers.length) return [];
+    const tableWidth = table.getBoundingClientRect().width || 1;
+    return headers.map(header => {
+      const inline = parseFloat(header.style.width);
+      return header.style.width && header.style.width.includes('%') && Number.isFinite(inline) ? inline : (header.getBoundingClientRect().width / tableWidth) * 100;
+    });
+  }
+  function setColumnWidth(table, index, desired) {
+    const headers = getHeaders(table);
+    if (!headers.length || index < 0 || index >= headers.length) return;
+    const widths = getColumnWidths(table);
+    desired = Math.max(4, Math.min(85, Number(desired) || widths[index] || 10));
+    const oldOther = widths.reduce((sum, value, i) => i === index ? sum : sum + value, 0) || (headers.length - 1);
+    const remaining = 100 - desired;
+    headers.forEach((header, i) => {
+      const value = i === index ? desired : Math.max(2, (widths[i] / oldOther) * remaining);
+      header.style.width = value.toFixed(3) + '%';
+    });
+    ui.widthOutput.textContent = Math.round(desired) + '%';
+  }
+  function renumberRows(table) {
+    if (!table || !table.tBodies[0]) return;
+    let number = 1;
+    Array.from(table.tBodies[0].rows).forEach(row => {
+      if (row.classList.contains('example')) return;
+      const cell = row.querySelector('.row-no');
+      if (cell) cell.textContent = number++;
+    });
+  }
+  function prepareNewRow(row) {
+    row.classList.remove('example');
+    row.querySelectorAll('.check.selected').forEach(check => check.classList.remove('selected'));
+    row.querySelectorAll('td').forEach(cell => {
+      if (cell.querySelector('.options')) return;
+      if (cell.classList.contains('row-no')) return;
+      cell.innerHTML = '';
+    });
+    row.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+  }
+  function addRow() {
+    const table = selectedTable();
+    const body = table && table.tBodies[0];
+    if (!body) return setStatus('Selecione uma célula de uma tabela que possua linhas de dados.');
+    withHistory(() => {
+      const candidates = Array.from(body.rows).filter(row => !row.classList.contains('example'));
+      const source = candidates[candidates.length - 1] || body.rows[body.rows.length - 1];
+      if (!source) return;
+      const row = source.cloneNode(true);
+      prepareNewRow(row);
+      body.appendChild(row);
+      renumberRows(table);
+      applyEditableState(row, true);
+      selectElement(row.cells[0] || table);
+    });
+    setStatus('<b>Linha adicionada.</b> Edite os campos ou as caixinhas da nova linha.');
+  }
+  function removeRow() {
+    const row = selectedRow();
+    const table = selectedTable();
+    if (!row || !table) return;
+    withHistory(() => { row.remove(); renumberRows(table); selectElement(table); });
+    setStatus('<b>Linha removida.</b> Use Desfazer se necessário.');
+  }
+  function removeBox() {
+    const box = state.selected;
+    if (!box || !box.classList.contains('box')) return;
+    withHistory(() => { box.remove(); selectElement(null); });
+    setStatus('<b>Caixa removida.</b> Use Desfazer se quiser restaurá-la.');
+  }
+  function setFont(value) {
+    const section = selectedSection();
+    if (!state.selected) return;
+    if (section && state.selected === section) {
+      const scale = Math.max(.6, Math.min(1.8, Number(value) / 100 || 1));
+      section.dataset.editorFontScale = scale.toFixed(2);
+      section.querySelectorAll('.section-title,.letter,.box,.note,th,td').forEach(el => {
+        const base = Number(el.dataset.editorBaseFont || parseFloat(getComputedStyle(el).fontSize));
+        el.dataset.editorBaseFont = String(base);
+        el.style.fontSize = (base * scale).toFixed(2) + 'px';
+      });
+      return;
+    }
+    const target = selectedCell() || state.selected;
+    const size = Math.max(6, Math.min(30, Number(value) || parseFloat(getComputedStyle(target).fontSize)));
+    target.style.fontSize = size + 'px';
+  }
+  function setAlignment(value) {
+    if (!state.selected) return;
+    const options = selectedOptions();
+    if (options) {
+      const map = { left: 'flex-start', center: 'center', right: 'flex-end', justify: 'space-between' };
+      options.style.justifyContent = map[value] || 'center';
+      options.style.justifyItems = value === 'center' ? 'center' : (value === 'right' ? 'end' : 'start');
+      options.querySelectorAll('.option').forEach(option => {
+        option.style.marginLeft = value === 'center' ? 'auto' : '';
+        option.style.marginRight = value === 'center' ? 'auto' : '';
+      });
+      return;
+    }
+    const section = selectedSection();
+    const targets = section && state.selected === section ? section.querySelectorAll('th,td,.box,.note,.section-title') : [selectedCell() || state.selected];
+    targets.forEach(target => { target.style.textAlign = value; });
+  }
+  function centerOptions() {
+    const options = selectedOptions();
+    if (!options) return;
+    options.style.justifyContent = 'center';
+    options.style.justifyItems = 'center';
+    options.style.alignItems = 'center';
+    options.dataset.editorAligned = 'center';
+    options.querySelectorAll('.option').forEach(option => { option.style.marginLeft = 'auto'; option.style.marginRight = 'auto'; });
+  }
+  function setRowHeight(value) {
+    const row = selectedRow();
+    if (row) row.style.height = Math.max(20, Math.min(180, Number(value) || 20)) + 'px';
+  }
+  function beginFieldChange() { if (!state.fieldStart) state.fieldStart = snapshot(); }
+  function finishFieldChange() { pushSnapshot(state.fieldStart); state.fieldStart = null; }
+  function saveHtml() {
+    const clone = document.documentElement.cloneNode(true);
+    clone.querySelectorAll('[data-editor-ui]').forEach(el => el.remove());
+    clone.querySelectorAll('.editor-selected').forEach(el => el.classList.remove('editor-selected'));
+    clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+    clone.querySelector('body')?.classList.remove('editor-mode');
+    const content = '<!DOCTYPE html>\n' + clone.outerHTML;
+    const stamp = new Date().toISOString().replace(/[:.]/g, '-').replace('T', '_').slice(0, 19);
+    const base = (document.title || 'SART').replace(/[^a-z0-9]+/gi, '_').replace(/^_|_$/g, '');
+    const blob = new Blob([content], { type: 'text/html;charset=utf-8' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = base + '_edited_' + stamp + '.html';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(link.href), 1500);
+    setStatus('<b>Download iniciado.</b> O arquivo HTML inclui todas as alterações e mantém o modo editor para futuras revisões.');
+  }
+  function createUi() {
+    const root = document.createElement('div');
+    root.id = 'sart-editor-ui';
+    root.dataset.editorUi = 'true';
+    root.innerHTML = `
+      <button id="sart-editor-launcher" type="button">Modo editor</button>
+      <aside id="sart-editor-panel" aria-label="Ferramentas do editor">
+        <div class="sart-editor-head"><strong>Editor do formulário</strong><button id="sart-editor-close" type="button" title="Sair do modo editor">Fechar</button></div>
+        <div class="sart-editor-body">
+          <p class="sart-editor-help">Clique no <b>texto</b> para escrever. Clique numa <b>célula</b> para mexer em fonte, alinhamento, linha e coluna. Clique num grupo de <b>caixinhas</b> para centralizá-lo. Selecione uma seção pelo menu para escalar sua fonte.</p>
+          <div id="sart-editor-status" class="sart-editor-status"><b>Editor pronto.</b> Selecione um item no formulário.</div>
+          <div class="sart-editor-group"><h3>Seção e tipografia</h3><div class="sart-editor-row"><label>Seção <select id="sart-section-select"></select></label></div><div class="sart-editor-row"><label><span id="sart-font-label">Fonte (px)</span><input id="sart-font-size" type="number" min="6" max="30" step="0.25" disabled></label></div><div class="sart-editor-row"><label>Alinhamento <select id="sart-align" disabled><option value="left">À esquerda</option><option value="center">Centralizado</option><option value="right">À direita</option><option value="justify">Justificado</option></select></label></div></div>
+          <div class="sart-editor-group"><h3>Tabelas e caixinhas</h3><div class="sart-editor-actions"><button id="sart-add-row" type="button" disabled>+ Adicionar linha</button><button id="sart-remove-row" type="button" disabled>Remover linha</button><button id="sart-center-options" type="button" disabled>Centralizar caixinhas</button><button id="sart-remove-box" type="button" disabled>Remover caixa</button></div><div class="sart-editor-row"><label>Largura da coluna <span><input id="sart-column-width" type="range" min="4" max="85" step="1" disabled> <output id="sart-width-output">—</output></span></label></div><div class="sart-editor-row"><label>Altura da linha (px) <input id="sart-row-height" type="number" min="20" max="180" step="1" disabled></label></div></div>
+          <div class="sart-editor-group"><div class="sart-editor-actions"><button id="sart-undo" type="button" disabled>Desfazer</button><button id="sart-redo" type="button" disabled>Refazer</button></div></div>
+          <div class="sart-editor-group"><button id="sart-save" class="sart-editor-save" type="button">Salvar HTML</button><p class="sart-editor-warning">O navegador fará o download de uma nova versão. Guarde-a na pasta desejada e envie essa versão quando quiser uma revisão posterior.</p></div>
+        </div>
+      </aside>`;
+    document.body.appendChild(root);
+    ui.root = root;
+    ui.launcher = root.querySelector('#sart-editor-launcher'); ui.panel = root.querySelector('#sart-editor-panel'); ui.close = root.querySelector('#sart-editor-close');
+    ui.status = root.querySelector('#sart-editor-status'); ui.sectionSelect = root.querySelector('#sart-section-select'); ui.fontSize = root.querySelector('#sart-font-size'); ui.fontLabel = root.querySelector('#sart-font-label'); ui.align = root.querySelector('#sart-align');
+    ui.addRow = root.querySelector('#sart-add-row'); ui.removeRow = root.querySelector('#sart-remove-row'); ui.removeBox = root.querySelector('#sart-remove-box'); ui.centerOptions = root.querySelector('#sart-center-options'); ui.columnWidth = root.querySelector('#sart-column-width'); ui.widthOutput = root.querySelector('#sart-width-output'); ui.rowHeight = root.querySelector('#sart-row-height'); ui.undo = root.querySelector('#sart-undo'); ui.redo = root.querySelector('#sart-redo');
+  }
+  function setEnabled(enabled) {
+    state.enabled = enabled;
+    document.body.classList.toggle('editor-mode', enabled);
+    ui.launcher.textContent = enabled ? 'Sair do editor' : 'Modo editor';
+    if (enabled) { applyEditableState(document, true); buildSectionMenu(); setStatus('<b>Modo editor ativo.</b> As mudanças ficam no navegador até clicar em Salvar HTML.'); }
+    else { applyEditableState(document, false); clearSelection(); state.selected = null; setStatus('Editor fechado. As alterações ainda estão visíveis nesta página, mas só entram em um arquivo ao clicar em Salvar HTML.'); }
+    updateControls();
+  }
+  function bindEvents() {
+    ui.launcher.addEventListener('click', () => setEnabled(!state.enabled));
+    ui.close.addEventListener('click', () => setEnabled(false));
+    ui.sectionSelect.addEventListener('change', () => { const section = getSectionByValue(ui.sectionSelect.value); if (section) selectElement(section); });
+    ui.addRow.addEventListener('click', addRow); ui.removeRow.addEventListener('click', removeRow); ui.removeBox.addEventListener('click', removeBox);
+    ui.centerOptions.addEventListener('click', () => withHistory(centerOptions));
+    ui.undo.addEventListener('click', undo); ui.redo.addEventListener('click', redo); rootQuery('#sart-save').addEventListener('click', saveHtml);
+    ui.align.addEventListener('change', () => withHistory(() => setAlignment(ui.align.value)));
+    [ui.fontSize, ui.columnWidth, ui.rowHeight].forEach(field => {
+      field.addEventListener('focus', beginFieldChange); field.addEventListener('pointerdown', beginFieldChange);
+      field.addEventListener('change', finishFieldChange);
+    });
+    ui.fontSize.addEventListener('input', () => setFont(ui.fontSize.value));
+    ui.columnWidth.addEventListener('input', () => { const cell = selectedCell(); const table = selectedTable(); if (cell && table) setColumnWidth(table, cell.cellIndex, ui.columnWidth.value); });
+    ui.rowHeight.addEventListener('input', () => setRowHeight(ui.rowHeight.value));
+    document.addEventListener('click', event => {
+      if (!state.enabled || event.target.closest('[data-editor-ui]')) return;
+      const check = event.target.closest('.check');
+      if (check) { event.preventDefault(); withHistory(() => { check.classList.toggle('selected'); selectElement(check.closest('.options')); }); return; }
+      selectElement(chooseTarget(event.target));
+    }, true);
+    document.addEventListener('focusin', event => { if (state.enabled && event.target.isContentEditable) state.editStart = snapshot(); });
+    document.addEventListener('focusout', event => { if (state.enabled && event.target.isContentEditable) { pushSnapshot(state.editStart); state.editStart = null; } });
+    document.addEventListener('keydown', event => {
+      if (!state.enabled || event.target.closest('[data-editor-ui]')) return;
+      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key.toLowerCase() === 'z') { event.preventDefault(); redo(); }
+    });
+  }
+  function rootQuery(selector) { return ui.root.querySelector(selector); }
+  function init() { createUi(); bindEvents(); buildSectionMenu(); updateControls(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+</body></html>
