@@ -49,6 +49,7 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 | M8 | 17/10 | Annex ZA da ISO e a frase de busca de termos | Saíram do texto. Conferido em 25/10 |
 | M9 | 24/10 | Alterações controladas palavra a palavra | Cap. 1 a 3: alterações em bloco. Cap. 4 em diante: editar direto, sem marcas |
 | M10 | 24/10 | Remissões a seções e números de cláusula em toda frase | Só o essencial: o que está atrás e é crítico, o que vem e o leitor estranharia, tabelas, figuras e apêndices. Cada cláusula uma vez no capítulo |
+| M12 | 25/10 | FUCR em Operational Controls (9 instrumentos no pilar) | FUCR passa para Performance Oversight (mede o agregado do seguimento). Operational Controls fica com 8 e Performance Oversight com 4: corrigir Figuras 4.2 e 4.3, Tabela 4.3 e legendas. PSEAR, SIFSL e PFVR ganham a nova 4.4.3; o controle de elegibilidade e de visita sai da 4.5.1 e da 4.5.3; as atuais 4.4.3 e 4.4.4 se fundem (com o ICDL). SIFSL e SIRR em Operational Controls aguardam confirmação |
 | M11 | 24/10 | Ordem dos apêndices pela tabela de instrumentos | Ordem da primeira citação no cap. 4. A tabela de instrumentos segue a mesma ordem dentro de cada pilar (o autor corrige a tabela) |
 
 ## 4. Passadas finais já combinadas
@@ -66,6 +67,7 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 - "25% of the MDR entries" (Claude conta cerca de 30%)
 - Citações em subscrito, que devem ficar na linha
 - Apêndices ainda "[Template pending]"
+- IMP (Internal Monitoring Plan) é o único modelo que não está no repositório (25/10)
 - Atualizar sumário e índices (Ctrl+A, F9)
 
 ## 5. Edições de imagem que ficaram com o autor (L1)

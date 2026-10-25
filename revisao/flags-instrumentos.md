@@ -1,5 +1,5 @@
 # Flags: instrumentos x texto (cap. 4) e cap. 2-3
-Gerado a partir dos PDFs em main/upload de 25/10. Faltam: POT, SART, IMP, SIFSL, FUCR, PIR.
+Gerado a partir dos PDFs e HTML enviados em 25/10. Falta só o IMP (Internal Monitoring Plan).
 
 ## Conflito com cap. 2-3 (lei)
 - SRR v0.1, seção C: lista própria de 12 "CtQ domains" diferente da Tabela 3.2 (nomes, número e conteúdo). Não tem "site capability" (dom. 1); cria "PI oversight" e "Delegation and training"; separa "Surgical technique" e "Learning curve"; numeração toda diferente. Substituir pela Tabela 3.2.
@@ -37,3 +37,12 @@ O texto é a referência: os modelos se ajustam ao texto, salvo quando o modelo 
 - CSST: "ISO 14155:2020, Cl. 10.8(b)" (já registrado acima): usar ISO 14155:2026.
 - SART: PDF não está no repositório; a 4.3.3 usa só a descrição da Tabela 4.3.
 - MRL v0.2 M7 (safety / complication signal review): "Monthly, quarterly, or immediately". A 4.3.3 e a Figura 4.1 fixam revisão de tendência de segurança pelo menos mensal; tirar "quarterly" ou deixar como intervalo máximo mensal.
+
+## FUCR, PIR, POT, SIFSL, SART (HTML, conferidos em 25/10)
+- FUCR v0.4 e PIR v0.10 chamam o log de imagem de "ICQL"; o instrumento é IQL (Imaging Quality Log). Unificar.
+- POT v0.9 diz que imprime "eight framework triggers" de escalonamento; a 4.2.1 não fala em oito gatilhos. Conferir na revisão da 4.8 ou ajustar o texto.
+- POT v0.9: campo "Site type (scalability model) Type A/B/C" (depende da 4.7.1) e "meeting architecture" (trocar architecture).
+- PIR v0.10: limiares (FC-01 95%/90%; DC-01 98%/95%, mediana de query 7/14 dias; ST-01 janela de 24 h; PD-01 3 desvios menores) a conferir contra a 4.5 quando revisarmos.
+- PIR v0.10: domínios CtQ dos indicadores batem com a Tabela 3.2 (EQ-01 2, PD-01 12, FC-01 7, ST-01 10, SP-01 5 e 6, DC-01 11). OK.
+- SIFSL v0.2: seção E agrega motivos de não inclusão e sinais de viés de recrutamento, lida pelo PIR EQ-01. Decidir se fica no SIFSL (Operational Controls) ou passa ao PIR.
+- FUCR v0.4: passa para Performance Oversight (decisão do autor, 25/10).
