@@ -1,0 +1,382 @@
+{
+  "data": "2026-10-25",
+  "branch": "codex/thesis-work",
+  "arquivos_no_pacote": 46,
+  "anexos_avulsos": 46,
+  "conferencia": "Todos os anexos avulsos eram idênticos aos respectivos arquivos do ZIP recebido.",
+  "preservacao": "45 documentos idênticos byte a byte; conversa com duas ocorrências de uma chave de API removidas. ZIP reempacotado com os documentos sanitizados. Originais recebidos preservados fora do repositório.",
+  "arquivos": [
+    {
+      "caminho": "01_LEIA_PRIMEIRO_Passagem_de_contexto.md",
+      "bytes_recebidos": 21076,
+      "bytes_publicados": 21076,
+      "sha256_recebido": "1598d5c8e169ee072d415a103801174df1852ff9cc2b50103c3b137be63e462e",
+      "sha256_publicado": "1598d5c8e169ee072d415a103801174df1852ff9cc2b50103c3b137be63e462e",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "02_Conversa_completa_Felipe_e_Claude.md",
+      "bytes_recebidos": 513997,
+      "bytes_publicados": 513877,
+      "sha256_recebido": "fa31800915a9561f571e14eeb63441120b1272ff48b063fc5306781dd14e0fc9",
+      "sha256_publicado": "20434aaa980bddcb653d29ba9b841046403065ddbfe2027cf4d3aff9455a1562",
+      "ocorrencias_de_credencial_removidas": 2
+    },
+    {
+      "caminho": "03_Skills_e_regras/argument-structure/SKILL.md",
+      "bytes_recebidos": 12193,
+      "bytes_publicados": 12193,
+      "sha256_recebido": "4d0dcce9f63fa94b8c4a8ee2cfaafa9b38f1aebe3972c2d3daa29d318ebebd92",
+      "sha256_publicado": "4d0dcce9f63fa94b8c4a8ee2cfaafa9b38f1aebe3972c2d3daa29d318ebebd92",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "03_Skills_e_regras/evidence-and-delivery/SKILL.md",
+      "bytes_recebidos": 9008,
+      "bytes_publicados": 9008,
+      "sha256_recebido": "ba70e72e738dd2a0f51effc10248ac21b3421f8dbc8d32b40557e935d2126b8d",
+      "sha256_publicado": "ba70e72e738dd2a0f51effc10248ac21b3421f8dbc8d32b40557e935d2126b8d",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "03_Skills_e_regras/instrument-review/SKILL.md",
+      "bytes_recebidos": 10172,
+      "bytes_publicados": 10172,
+      "sha256_recebido": "b2fe172572494dfb52ffcfe84d1cd80e98c1c39a5518c1a2e1d748c0b3985a1c",
+      "sha256_publicado": "b2fe172572494dfb52ffcfe84d1cd80e98c1c39a5518c1a2e1d748c0b3985a1c",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "03_Skills_e_regras/instrument-review/reference/baseline.md",
+      "bytes_recebidos": 12559,
+      "bytes_publicados": 12559,
+      "sha256_recebido": "cae111143bf14d09bef9201584cd4db66f49ee3ea12a4f1812e4166d219e929e",
+      "sha256_publicado": "cae111143bf14d09bef9201584cd4db66f49ee3ea12a4f1812e4166d219e929e",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "03_Skills_e_regras/instrument-review/reference/requirements/CCDM.md",
+      "bytes_recebidos": 4993,
+      "bytes_publicados": 4993,
+      "sha256_recebido": "5f3534df8fa1258bf9c444d918a9b73ba4002f5280bc7b5f270c96d51c8eeec3",
+      "sha256_publicado": "5f3534df8fa1258bf9c444d918a9b73ba4002f5280bc7b5f270c96d51c8eeec3",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "03_Skills_e_regras/instrument-review/reference/requirements/DTRM.md",
+      "bytes_recebidos": 3900,
+      "bytes_publicados": 3900,
+      "sha256_recebido": "5efda8f8349fcb189d5e296c16207d433b7a8c24bc684616e7bd325d11c1d346",
+      "sha256_publicado": "5efda8f8349fcb189d5e296c16207d433b7a8c24bc684616e7bd325d11c1d346",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "03_Skills_e_regras/instrument-review/reference/requirements/ICDL.md",
+      "bytes_recebidos": 408,
+      "bytes_publicados": 408,
+      "sha256_recebido": "7b33d4b9ffd1d972a39fcbcbcd2e1579bb20907300e765f4ee59da7c90d94aaa",
+      "sha256_publicado": "7b33d4b9ffd1d972a39fcbcbcd2e1579bb20907300e765f4ee59da7c90d94aaa",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "03_Skills_e_regras/instrument-review/reference/requirements/PFVR.md",
+      "bytes_recebidos": 386,
+      "bytes_publicados": 386,
+      "sha256_recebido": "c667c5c53dc0cacab865804f43ac65a70a210cbf96d53cf1d32283a7545e53c8",
+      "sha256_publicado": "c667c5c53dc0cacab865804f43ac65a70a210cbf96d53cf1d32283a7545e53c8",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "03_Skills_e_regras/instrument-review/reference/requirements/POT.md",
+      "bytes_recebidos": 6326,
+      "bytes_publicados": 6326,
+      "sha256_recebido": "3acd05103d95383c63cdf7f6993e3508706c0e0ecbb94984d51ecdee1ace5964",
+      "sha256_publicado": "3acd05103d95383c63cdf7f6993e3508706c0e0ecbb94984d51ecdee1ace5964",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "03_Skills_e_regras/instrument-review/reference/requirements/RACI.md",
+      "bytes_recebidos": 7567,
+      "bytes_publicados": 7567,
+      "sha256_recebido": "cce3a30e9aa3e885734f91ec75cf50360f5b340a23e428be0956189936607937",
+      "sha256_publicado": "cce3a30e9aa3e885734f91ec75cf50360f5b340a23e428be0956189936607937",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "03_Skills_e_regras/instrument-review/reference/requirements/SCR.md",
+      "bytes_recebidos": 5794,
+      "bytes_publicados": 5794,
+      "sha256_recebido": "f4c1b2d8de988dc6776b5a9fb86282d99cc023800bd796ead7cce89eb86176f0",
+      "sha256_publicado": "f4c1b2d8de988dc6776b5a9fb86282d99cc023800bd796ead7cce89eb86176f0",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "03_Skills_e_regras/instrument-review/reference/requirements/SRR.md",
+      "bytes_recebidos": 1050,
+      "bytes_publicados": 1050,
+      "sha256_recebido": "39031c6e471c25a9ed0674ed49a23d789c7ff3ada1f77be2d28c2bc4afe5a5a6",
+      "sha256_publicado": "39031c6e471c25a9ed0674ed49a23d789c7ff3ada1f77be2d28c2bc4afe5a5a6",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "03_Skills_e_regras/instrument-review/reference/requirements/TRE.md",
+      "bytes_recebidos": 4156,
+      "bytes_publicados": 4156,
+      "sha256_recebido": "d1197ac9e8094153c920cf82cadca05b788b47bb0f3ea886cf21b27bd84397bb",
+      "sha256_publicado": "d1197ac9e8094153c920cf82cadca05b788b47bb0f3ea886cf21b27bd84397bb",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "03_Skills_e_regras/instrument-review/reference/sources.md",
+      "bytes_recebidos": 4624,
+      "bytes_publicados": 4624,
+      "sha256_recebido": "5b655be7977fbee4bfd3d1d2b8ed91dedab44167ad152a28d0986df537885520",
+      "sha256_publicado": "5b655be7977fbee4bfd3d1d2b8ed91dedab44167ad152a28d0986df537885520",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "03_Skills_e_regras/instrument-review/reference/standards.md",
+      "bytes_recebidos": 4145,
+      "bytes_publicados": 4145,
+      "sha256_recebido": "59d59277bb260f9de622f62128b6c63fbf627fe44ebb742e4e8b13b0117d28b3",
+      "sha256_publicado": "59d59277bb260f9de622f62128b6c63fbf627fe44ebb742e4e8b13b0117d28b3",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "03_Skills_e_regras/instrument-review/scripts/check_instrument.py",
+      "bytes_recebidos": 10245,
+      "bytes_publicados": 10245,
+      "sha256_recebido": "523fb90af8b034bcabbfd5de0e621252941ec031c3a2475dfd4f8f34b27bb843",
+      "sha256_publicado": "523fb90af8b034bcabbfd5de0e621252941ec031c3a2475dfd4f8f34b27bb843",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "03_Skills_e_regras/instrument-review/scripts/read_matrix_marks.py",
+      "bytes_recebidos": 3398,
+      "bytes_publicados": 3398,
+      "sha256_recebido": "d70c1d38226c890f759cd110616b5b6843218c9ab374a09e91308e56e5743cef",
+      "sha256_publicado": "d70c1d38226c890f759cd110616b5b6843218c9ab374a09e91308e56e5743cef",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "03_Skills_e_regras/scientific-prose/SKILL.md",
+      "bytes_recebidos": 19234,
+      "bytes_publicados": 19234,
+      "sha256_recebido": "bda5ee7d2b0afcc49ea9639dc8868a28eec4d9fa1460430ceb08be61be4abbd8",
+      "sha256_publicado": "bda5ee7d2b0afcc49ea9639dc8868a28eec4d9fa1460430ceb08be61be4abbd8",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "04_Memorias_do_Claude/MEMORY.md",
+      "bytes_recebidos": 944,
+      "bytes_publicados": 944,
+      "sha256_recebido": "944a9ba82a9bc42e3ad3c86e6f90972af8a00ccbf5a5d6d35e6da1fba3f34420",
+      "sha256_publicado": "944a9ba82a9bc42e3ad3c86e6f90972af8a00ccbf5a5d6d35e6da1fba3f34420",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "04_Memorias_do_Claude/feedback_no-instruments-in-pillars.md",
+      "bytes_recebidos": 1583,
+      "bytes_publicados": 1583,
+      "sha256_recebido": "efb41c7f3a7280261a3345182be29fa1ce8ba83dfe0465a4c96bd5f8fdf809cc",
+      "sha256_publicado": "efb41c7f3a7280261a3345182be29fa1ce8ba83dfe0465a4c96bd5f8fdf809cc",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "04_Memorias_do_Claude/instrument-review-criteria.md",
+      "bytes_recebidos": 4282,
+      "bytes_publicados": 4282,
+      "sha256_recebido": "02dc4a8d03dac0d82febd1e361cbbc21621e858401e7160a25c4774aa3c6c4d1",
+      "sha256_publicado": "02dc4a8d03dac0d82febd1e361cbbc21621e858401e7160a25c4774aa3c6c4d1",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "04_Memorias_do_Claude/pir-instrument-scope-feedback.md",
+      "bytes_recebidos": 1590,
+      "bytes_publicados": 1590,
+      "sha256_recebido": "bf7af521bd03daeba444ed8ca07fce0c896387081a98133a9fb2c375bf744c60",
+      "sha256_publicado": "bf7af521bd03daeba444ed8ca07fce0c896387081a98133a9fb2c375bf744c60",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "04_Memorias_do_Claude/surgical-site-roles.md",
+      "bytes_recebidos": 1621,
+      "bytes_publicados": 1621,
+      "sha256_recebido": "06b706880f048762e378084572f0a6988133aad2f35a8e098c0345da54e378d8",
+      "sha256_publicado": "06b706880f048762e378084572f0a6988133aad2f35a8e098c0345da54e378d8",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "04_Memorias_do_Claude/thesis-file-state-2026-10-02.md",
+      "bytes_recebidos": 1477,
+      "bytes_publicados": 1477,
+      "sha256_recebido": "87449c6271320575c58cfa880f88360d6f1306fec73145a4ed274288ac98173f",
+      "sha256_publicado": "87449c6271320575c58cfa880f88360d6f1306fec73145a4ed274288ac98173f",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "04_Memorias_do_Claude/viz-design-conventions.md",
+      "bytes_recebidos": 2021,
+      "bytes_publicados": 2021,
+      "sha256_recebido": "36ab21c14e7427ecb8fd0e2435441cb37fe1f1d368ec0bb541588c71b7216cd4",
+      "sha256_publicado": "36ab21c14e7427ecb8fd0e2435441cb37fe1f1d368ec0bb541588c71b7216cd4",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "05_Status_e_revisoes/CCDM_revisao_v0.2_2026-10-04.html",
+      "bytes_recebidos": 27158,
+      "bytes_publicados": 27158,
+      "sha256_recebido": "b70a3cf3cdc6d0b9b4fe125d13cd8a2ed972351f5b95fc020474c53c2976eddb",
+      "sha256_publicado": "b70a3cf3cdc6d0b9b4fe125d13cd8a2ed972351f5b95fc020474c53c2976eddb",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "05_Status_e_revisoes/DTRM_revisao_v0.2_2026-10-06.html",
+      "bytes_recebidos": 18899,
+      "bytes_publicados": 18899,
+      "sha256_recebido": "e9876a714e77e15694ee35dc481051eaed81d15e32f9e29b3b7836358d1f8ab6",
+      "sha256_publicado": "e9876a714e77e15694ee35dc481051eaed81d15e32f9e29b3b7836358d1f8ab6",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "05_Status_e_revisoes/POT_revisao_v0.8_2026-10-11.html",
+      "bytes_recebidos": 22966,
+      "bytes_publicados": 22966,
+      "sha256_recebido": "09a95c37241192ab55ec7b65047a0f2743a0759f551b7621a038fb633fb3739e",
+      "sha256_publicado": "09a95c37241192ab55ec7b65047a0f2743a0759f551b7621a038fb633fb3739e",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "05_Status_e_revisoes/RACI_revisao_v0.2_2026-10-08.html",
+      "bytes_recebidos": 34737,
+      "bytes_publicados": 34737,
+      "sha256_recebido": "1c71ad52a3f18a3afe0cee717eab634cdd492baaabb45d2559b540d109bd9094",
+      "sha256_publicado": "1c71ad52a3f18a3afe0cee717eab634cdd492baaabb45d2559b540d109bd9094",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "05_Status_e_revisoes/SCR_revisao_v0.4_2026-10-10.html",
+      "bytes_recebidos": 24642,
+      "bytes_publicados": 24642,
+      "sha256_recebido": "b06f71fb3719dacf0daa72637cf6e5060535fdb28db42c91f20277fd04a73c34",
+      "sha256_publicado": "b06f71fb3719dacf0daa72637cf6e5060535fdb28db42c91f20277fd04a73c34",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "05_Status_e_revisoes/STATUS.md",
+      "bytes_recebidos": 1580,
+      "bytes_publicados": 1580,
+      "sha256_recebido": "40cdf471a4f0604dcc01d9e07f92cc645ae364bddca321513e57c0de87462066",
+      "sha256_publicado": "40cdf471a4f0604dcc01d9e07f92cc645ae364bddca321513e57c0de87462066",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "05_Status_e_revisoes/TRE_revisao_v0.3_2026-10-08.html",
+      "bytes_recebidos": 16243,
+      "bytes_publicados": 16243,
+      "sha256_recebido": "315611ba65d8060743250a76e5515dde769d16e2eb28210937d5f4cc6dd8764f",
+      "sha256_publicado": "315611ba65d8060743250a76e5515dde769d16e2eb28210937d5f4cc6dd8764f",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "06_Instrumentos_versoes_atuais/CCDM_Criticality_Coded_Delegation_Matrix_v0.2_blank_editable_revised.html",
+      "bytes_recebidos": 28972,
+      "bytes_publicados": 28972,
+      "sha256_recebido": "bb4acfbbc3d573e3db01a2554a67cbf97cf12ba1b7e61baa3bd5201003e693e4",
+      "sha256_publicado": "bb4acfbbc3d573e3db01a2554a67cbf97cf12ba1b7e61baa3bd5201003e693e4",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "06_Instrumentos_versoes_atuais/CCDM_Criticality_Coded_Delegation_Matrix_v0.2_simulated_editable_revised.html",
+      "bytes_recebidos": 36267,
+      "bytes_publicados": 36267,
+      "sha256_recebido": "7bd2ba765458827f0b5c7f54b7215c2f50d51c7ddddb874d59232353a9adcabd",
+      "sha256_publicado": "7bd2ba765458827f0b5c7f54b7215c2f50d51c7ddddb874d59232353a9adcabd",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "06_Instrumentos_versoes_atuais/DTRM_Device_and_Study_Training_Requirements_Matrix_v0.2_blank_editable.html",
+      "bytes_recebidos": 33374,
+      "bytes_publicados": 33374,
+      "sha256_recebido": "84ba48088a421646734b3c6af11488b673478b4f35ba31fc3a6252262dc77cb9",
+      "sha256_publicado": "84ba48088a421646734b3c6af11488b673478b4f35ba31fc3a6252262dc77cb9",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "06_Instrumentos_versoes_atuais/DTRM_Device_and_Study_Training_Requirements_Matrix_v0.2_simulated_editable.html",
+      "bytes_recebidos": 45616,
+      "bytes_publicados": 45616,
+      "sha256_recebido": "c3c7c5466f82c0cc7d19ff95617c0ee5c41850c9fd8b833ab71231c15598a691",
+      "sha256_publicado": "c3c7c5466f82c0cc7d19ff95617c0ee5c41850c9fd8b833ab71231c15598a691",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "06_Instrumentos_versoes_atuais/POT_PI_Oversight_Template_v0.9_blank_editable.html",
+      "bytes_recebidos": 45063,
+      "bytes_publicados": 45063,
+      "sha256_recebido": "282a1278e992bf098bf72e69b18bfb3b59983664a284cfb9e492453aef90ea3d",
+      "sha256_publicado": "282a1278e992bf098bf72e69b18bfb3b59983664a284cfb9e492453aef90ea3d",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "06_Instrumentos_versoes_atuais/POT_PI_Oversight_Template_v0.9_simulated_editable.html",
+      "bytes_recebidos": 52262,
+      "bytes_publicados": 52262,
+      "sha256_recebido": "bb4f00de26d330dd2290a7556c5d03556c48398a305d847bde85b369c7259476",
+      "sha256_publicado": "bb4f00de26d330dd2290a7556c5d03556c48398a305d847bde85b369c7259476",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "06_Instrumentos_versoes_atuais/RACI_Responsibility_Assignment_Matrix_v0.3_blank_editable.html",
+      "bytes_recebidos": 60523,
+      "bytes_publicados": 60523,
+      "sha256_recebido": "2692d695e185c2e2098d118b4b8e14b324ce58ba96b4fe6960726348a961e49e",
+      "sha256_publicado": "2692d695e185c2e2098d118b4b8e14b324ce58ba96b4fe6960726348a961e49e",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "06_Instrumentos_versoes_atuais/RACI_Responsibility_Assignment_Matrix_v0.3_simulated_editable.html",
+      "bytes_recebidos": 77519,
+      "bytes_publicados": 77519,
+      "sha256_recebido": "60ba0582f7f91d37e96401c3f15cb8ce1ffd1d7a79b807de92b9abda1369d8d0",
+      "sha256_publicado": "60ba0582f7f91d37e96401c3f15cb8ce1ffd1d7a79b807de92b9abda1369d8d0",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "06_Instrumentos_versoes_atuais/SCR_Surgical_Credentialing_Record_v0.5_blank_editable.html",
+      "bytes_recebidos": 43744,
+      "bytes_publicados": 43744,
+      "sha256_recebido": "84a7c48ba3158459ad38639b3c189b4f46a30903da1b3821fadeb73336bf9124",
+      "sha256_publicado": "84a7c48ba3158459ad38639b3c189b4f46a30903da1b3821fadeb73336bf9124",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "06_Instrumentos_versoes_atuais/SCR_Surgical_Credentialing_Record_v0.5_simulated_editable.html",
+      "bytes_recebidos": 48533,
+      "bytes_publicados": 48533,
+      "sha256_recebido": "90bd35da362768bf45c5f4ed5f2953bd9871e8d6bbb64779611e04bab1f419e3",
+      "sha256_publicado": "90bd35da362768bf45c5f4ed5f2953bd9871e8d6bbb64779611e04bab1f419e3",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "06_Instrumentos_versoes_atuais/TRE_Training_Record_Evaluation_and_Release_v0.4_blank_editable.html",
+      "bytes_recebidos": 32591,
+      "bytes_publicados": 32591,
+      "sha256_recebido": "8e635166e29d9ca6a4c4025baee0908b6a467cc9361a728973b3931432edb6c0",
+      "sha256_publicado": "8e635166e29d9ca6a4c4025baee0908b6a467cc9361a728973b3931432edb6c0",
+      "ocorrencias_de_credencial_removidas": 0
+    },
+    {
+      "caminho": "06_Instrumentos_versoes_atuais/TRE_Training_Record_Evaluation_and_Release_v0.4_simulated_editable.html",
+      "bytes_recebidos": 36956,
+      "bytes_publicados": 36956,
+      "sha256_recebido": "a55b6f6c8d1ab11856883c4db81ca2128924536b436573a29ddcef3d523958b2",
+      "sha256_publicado": "a55b6f6c8d1ab11856883c4db81ca2128924536b436573a29ddcef3d523958b2",
+      "ocorrencias_de_credencial_removidas": 0
+    }
+  ],
+  "zip_publicado": {
+    "caminho": "Pacote_ChatGPT_tese_2026-10-25.zip",
+    "sha256": "5c58518eb6217fb5182da6a7adb12c21589fde5ebe41db0d05a98518558abfd6"
+  }
+}

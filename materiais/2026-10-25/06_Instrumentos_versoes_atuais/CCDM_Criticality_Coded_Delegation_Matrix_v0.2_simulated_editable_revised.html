@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CCDM v0.2 - Simulated Editable - Revised</title>
+<style>
+:root{--navy:#1f4173;--blue:#3478ad;--pale:#d7e6f3;--grid:#aeb4bb;--ink:#101418;--muted:#68727d;--paper:#fff;--canvas:#f2f4f7;--light:#f4f4f4;--green:#e9f4ea;--orange:#ffe2cf;--red:#f5d4d4}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--canvas);color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:10.5px;line-height:1.3}
+.page{width:210mm;height:297mm;margin:18px auto;padding:14mm 16mm 13mm;background:var(--paper);box-shadow:0 4px 20px rgba(30,41,59,.14);position:relative;overflow:hidden;page:portrait;break-after:page}
+.page.landscape{width:297mm;height:210mm;padding:12mm 14mm 11mm;page:landscape}
+.topbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;background:var(--navy);color:#fff;padding:10px 12px;min-height:52px}
+.title{font-size:16.5px;font-weight:700;line-height:1.18}
+.subtitle{font-size:9.4px;line-height:1.25;margin-top:4px}
+.version{font-size:10px;color:#d8e5f2;white-space:nowrap}
+.meta-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-left:1px solid var(--grid);border-top:1px solid var(--grid);margin-top:6px}
+.meta-cell{min-height:46px;background:var(--pale);border-right:1px solid var(--grid);border-bottom:1px solid var(--grid);padding:5px 7px;color:#163a67}
+.meta-label{font-size:9.5px;font-weight:700;line-height:1.2;display:block}
+.blank-entry{display:block;min-height:18px;margin-top:3px}
+.meta-cell.wide{grid-column:span 2}.p1 .meta-cell:nth-last-child(-n+2){min-height:56px}
+.section{margin-top:13px}
+.section-header{display:grid;grid-template-columns:38px 1fr;min-height:34px;background:var(--navy);color:#fff}
+.section-letter{display:flex;align-items:center;justify-content:center;font-size:17px;border-right:1px solid #ffffff29}
+.section-title{display:flex;align-items:center;padding:6px 10px;font-size:14px;line-height:1.25;font-weight:700}
+.text-box{border:1px solid var(--grid);border-top:0;padding:9px 10px;background:#fff;font-size:10.3px;line-height:1.32}
+.text-box p{margin:0}
+table{width:100%;border-collapse:collapse;table-layout:fixed;margin-top:6px}
+th,td{border:1px solid var(--grid);padding:6px;vertical-align:middle;overflow-wrap:anywhere}
+th{font-size:10.3px;font-weight:700;background:var(--blue);color:#fff;text-align:center;line-height:1.2}
+td{font-size:9.9px;line-height:1.27;background:#fff;text-align:left}
+tbody tr:nth-child(even) td{background:var(--light)}
+.guide td{height:48px}.interfaces td{height:44px}
+.guide td:first-child,.interfaces td:first-child{color:#163a67;font-weight:700;text-align:center}
+.legend td{font-size:9.8px;height:56px}.legend td:first-child{text-align:center;font-weight:700}
+.levels .legend td{height:52px}
+.critical-c1{background:var(--red)!important;color:#7c2020;font-weight:700}
+.critical-c2{background:var(--orange)!important;color:#7b3f13;font-weight:700}
+.critical-c3{background:var(--green)!important;color:#25623b;font-weight:700}
+.s0{background:var(--red)!important;color:#7c2020;font-weight:700}
+.s1{background:var(--orange)!important;color:#7b3f13;font-weight:700}
+.s2{background:#fff2c4!important;color:#6b5200;font-weight:700}
+.s3{background:var(--green)!important;color:#25623b;font-weight:700}
+.left{text-align:left}
+.note{font-size:9.8px;color:var(--muted);line-height:1.28;margin:7px 0 0}
+.approval td{height:39px}.approval td:nth-child(2),.approval td:nth-child(3){text-align:center}
+.check{display:inline-block;width:11px;height:11px;border:1.2px solid #526070;position:relative;background:#fff;vertical-align:middle}
+.check.selected{background:#3478ad;border-color:#275e8b}
+.check.selected:after{content:"";position:absolute;left:2px;top:0;width:3px;height:6px;border:solid #fff;border-width:0 1.4px 1.4px 0;transform:rotate(45deg)}
+.signature-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}
+.signature{border:1px solid var(--grid);min-height:80px;padding:8px;color:#163a67;font-size:10px}
+.signature b{display:block;margin-bottom:9px}
+.sig-field{margin-top:5px;min-height:18px}
+.approval-control{display:grid;grid-template-columns:1fr 1fr;gap:0;border-left:1px solid var(--grid);border-top:1px solid var(--grid);margin-top:9px}
+.approval-control .meta-cell{background:#fff;min-height:56px}
+.meta-cell.full{grid-column:span 4}
+.status-opt{display:inline-flex;align-items:center;gap:4px;margin-right:10px;font-family:Arial,Helvetica,sans-serif;font-weight:400;font-size:9.6px;color:#163a67}
+.matrix td,.matrix tbody tr:nth-child(even) td{background:#fff!important;color:var(--ink);height:44px;font-size:10px;padding:7px}
+.matrix th{font-size:10.2px;padding:7px 5px}
+.matrix tbody td:nth-child(1),.matrix tbody td:nth-child(4),.matrix tbody td:nth-child(5){text-align:center}
+.landscape .meta-cell{min-height:40px;padding:4px 6px}
+.landscape .meta-label{font-size:9px}
+.landscape .blank-entry{min-height:15px}
+.landscape .section{margin-top:10px}
+.matrix-instruction{font-size:9.7px;line-height:1.25;margin:7px 0}
+.continuation-note{font-size:10px;color:#31465c;line-height:1.3;margin:9px 0 0}
+.footer{position:absolute;left:16mm;right:16mm;bottom:7mm;border-top:1px solid #d2d6da;color:var(--muted);display:flex;justify-content:space-between;gap:14px;padding-top:4px;font-size:9px}
+.landscape .footer{left:14mm;right:14mm;bottom:7mm}
+@page portrait{size:A4 portrait;margin:0}
+@page landscape{size:A4 landscape;margin:0}
+@media print{html,body{margin:0;background:#fff}.page{margin:0;box-shadow:none}.page:last-of-type{break-after:auto}#ccdm-editor{display:none!important}.ccdm-selected{outline:none!important}[contenteditable]{outline:none!important}}
+
+/* Completion style shared with CAPA and SART simulated examples. */
+.demo-entry,.demo-fill{font-family:"Segoe Print","Bradley Hand","Comic Sans MS",cursive;font-weight:600;color:#174f88;line-height:1.2}
+.demo-entry{display:block;font-size:10px;margin-top:3px;min-height:18px}
+.demo-fill{font-size:9.7px}
+.matrix .demo-fill{display:block;font-size:9px;line-height:1.12}
+.simulated-template .matrix td,.simulated-template .matrix tbody tr:nth-child(even) td{font-family:"Segoe Print","Bradley Hand","Comic Sans MS",cursive;font-size:9px;line-height:1.12;padding:3px 4px}
+.approval .demo-fill{font-size:9.5px}
+.signature .demo-fill{font-size:9.8px}
+</style>
+</head>
+<body class="simulated-template">
+<main class="page p1">
+<header class="topbar"><div><div class="title">CCDM - Criticality-Coded Delegation Matrix</div><div class="subtitle">Site-defined task requirements, delegation boundaries and supervision</div></div><div class="version">SIMULATED · v0.2</div></header>
+<section class="meta-grid">
+<div class="meta-cell "><span class="meta-label">Study / protocol</span><span class="demo-entry">GLENOS-01 / GS-2026-01</span></div>
+<div class="meta-cell "><span class="meta-label">Site / code</span><span class="demo-entry">Riverside Orthopedic Center / 014</span></div>
+<div class="meta-cell "><span class="meta-label">CCDM record ID</span><span class="demo-entry">CCDM-014</span></div>
+<div class="meta-cell "><span class="meta-label">Record revision</span><span class="demo-entry">v0.2</span></div>
+<div class="meta-cell "><span class="meta-label">Applicable CIP / protocol version</span><span class="demo-entry">CIP v4.2</span></div>
+<div class="meta-cell "><span class="meta-label">Task / process scope</span><span class="demo-entry">Surgery, device, imaging, follow-up, safety and data</span></div>
+<div class="meta-cell "><span class="meta-label">Matrix owner / role</span><span class="demo-entry">Maria Silva / Study Coordinator</span></div>
+<div class="meta-cell "><span class="meta-label">Review date</span><span class="demo-entry">29 Sep 2026</span></div>
+<div class="meta-cell "><span class="meta-label">Review basis / type</span><span class="demo-entry">Triggered review: PD-014-07</span></div>
+<div class="meta-cell "><span class="meta-label">Approval status</span><span class="demo-entry"><span class="status-opt"><span class="check" role="checkbox" tabindex="0" aria-checked="false"></span>Approved</span><span class="status-opt"><span class="check selected" role="checkbox" tabindex="0" aria-checked="true"></span>With restrictions</span><span class="status-opt"><span class="check" role="checkbox" tabindex="0" aria-checked="false"></span>Not approved</span></span></div>
+<div class="meta-cell "><span class="meta-label">Effective date</span><span class="demo-entry">30 Sep 2026</span></div>
+<div class="meta-cell "><span class="meta-label">Next scheduled review</span><span class="demo-entry">15 Dec 2026</span></div>
+<div class="meta-cell wide"><span class="meta-label">Supersedes - record ID / revision</span><span class="demo-entry">CCDM-014 v0.1 / 15 Sep 2026</span></div>
+<div class="meta-cell wide"><span class="meta-label">Change trigger / affected scope</span><span class="demo-entry">Unplanned glenoid baseplate substitution not escalated: review intraoperative supervision and device routing.</span></div>
+
+<div class="meta-cell full"><span class="meta-label">Controlled record location / included matrix sheets</span><span class="demo-entry">ISF / Delegation / CCDM-014 / v0.2; 1 matrix sheet.</span></div>
+
+</section>
+<section class="section">
+<div class="section-header"><div class="section-letter">A</div><div class="section-title">Purpose and Use - site-defined delegation matrix</div></div>
+<div class="text-box"><p><b>Purpose and Use:</b> Use one controlled CCDM for a defined site, study and revision. The site identifies its tasks and decisions, assigns criticality and supervision, and records qualifications, permitted boundaries and escalation triggers for approval. The approved matrix defines the task requirements applied in training requirements, person-task assignment and release records. It supports, but does not replace, PI oversight, risk assessment, individual competency evidence or task release.</p></div>
+<table class="guide"><thead><tr><th style="width:18%">Element</th><th style="width:43%">Complete when</th><th style="width:39%">Record / link</th></tr></thead><tbody><tr><td>Unit of analysis</td><td>One controlled matrix for one defined site, study and revision; one row in F for each task or decision.</td><td>Record ID, revision, scope and current task inventory.</td></tr>
+<tr><td>Decision supported</td><td>Approve which tasks are retained or delegable, with the required qualification, supervision, boundaries and escalation.</td><td>Site-completed F rows, approval status and any restrictions.</td></tr>
+<tr><td>Inputs</td><td>Current CIP/protocol, site roles, risk controls, sponsor requirements and applicable procedures.</td><td>Controlled IDs/versions for POT, SRR and relevant specialist records.</td></tr>
+<tr><td>Outputs</td><td>An approved task reference for training requirements, person-task assignment and release, with traceable revision control.</td><td>Feeds DTRM (training per task), RACI (who takes each task, using these codes), TRE (requirements checked at release) and POT (what requires the PI).</td></tr></tbody></table>
+</section>
+<section class="section">
+<div class="section-header"><div class="section-letter">B</div><div class="section-title">Scope boundary and interfaces</div></div>
+<table class="interfaces"><thead><tr><th style="width:24%">Control / interface</th><th style="width:39%">What it defines or evaluates</th><th style="width:37%">Relationship to CCDM</th></tr></thead><tbody><tr><td>RACI</td><td>Who is responsible, accountable, consulted and informed for each task, with role holder, backup and acceptance.</td><td>CCDM sets how critical each task is and how much supervision it needs; RACI assigns people using those codes.</td></tr>
+<tr><td>DTRM / TRE</td><td>Training each role or task requires, and the release of each person.</td><td>CCDM defines task requirements; it does not demonstrate individual competence or release a person.</td></tr>
+<tr><td>SRR</td><td>Site risk identification, assessment and control follow-up.</td><td>CCDM records the resulting task boundaries and supervision; it does not replace risk assessment.</td></tr>
+<tr><td>POT / PI oversight</td><td>PI accountability, review arrangements and final decision boundaries.</td><td>CCDM does not transfer PI accountability to delegated staff.</td></tr>
+<tr><td>Specialist records</td><td>SCR, ICDL, SIRR/IQL, SLCT or other records relevant to the site's task scope.</td><td>CCDM references applicable qualifications and controls; it does not replace their evidence.</td></tr></tbody></table>
+</section>
+<footer class="footer"><div>CCDM v0.2 | Purpose, scope and document control</div><div>Page 1 of 3</div></footer>
+</main>
+<main class="page p2">
+<header class="topbar"><div><div class="title">CCDM - Criticality-Coded Delegation Matrix</div><div class="subtitle">Criticality, supervision and controlled approval</div></div><div class="version">SIMULATED · v0.2</div></header>
+<section class="section definitions">
+<div class="section-header"><div class="section-letter">C</div><div class="section-title">Criticality code definitions</div></div>
+<table class="legend"><thead><tr><th style="width:12%">Code</th><th style="width:24%">Decision boundary</th><th style="width:23%">Delegability</th><th style="width:23%">Allowed supervision levels</th><th style="width:18%">PI trigger</th></tr></thead><tbody><tr><td class="critical-c1">C1</td><td class="left">PI-final decision or accountability cannot be transferred.</td><td class="left"><b>Not delegable.</b> Staff may prepare information or perform administrative support only.</td><td class="left"><b>S0</b> only.</td><td class="left">Any ambiguity, exception, safety concern or disagreement.</td></tr><tr><td class="critical-c2">C2</td><td class="left">Material clinical, procedural, device or endpoint activity requiring active PI review.</td><td class="left">Delegable only within a defined boundary after task-specific release.</td><td class="left"><b>S1</b> or <b>S2</b>.</td><td class="left">Out-of-boundary case, complication, deviation, unexpected result or recurring concern.</td></tr><tr><td class="critical-c3">C3</td><td class="left">Routine operational activity with no independent PI-final decision.</td><td class="left">Delegable after qualification, current training and demonstrated competence.</td><td class="left"><b>S2</b> or <b>S3</b>.</td><td class="left">Uncertainty, repeated failure, missed window, participant concern or data-quality signal.</td></tr></tbody></table>
+</section>
+<section class="section levels">
+<div class="section-header"><div class="section-letter">D</div><div class="section-title">Supervision levels</div></div>
+<table class="legend"><thead><tr><th style="width:12%">Level</th><th style="width:25%">Name</th><th style="width:63%">Operational meaning</th></tr></thead><tbody><tr><td class="s0">S0</td><td class="left"><b>PI-retained</b></td><td class="left">The delegated person may support preparation but may not perform the final decision or act independently within the task.</td></tr><tr><td class="s1">S1</td><td class="left"><b>Active PI review</b></td><td class="left">The person may perform defined steps, but the PI or named specialist reviews specified outputs before or at the defined decision point.</td></tr><tr><td class="s2">S2</td><td class="left"><b>Defined supervision</b></td><td class="left">The person may perform the task after release, with a named supervisor, stated restrictions and case-level escalation triggers.</td></tr><tr><td class="s3">S3</td><td class="left"><b>Routine oversight</b></td><td class="left">The person may perform the task independently within current instructions; performance is reviewed periodically through normal quality controls.</td></tr></tbody></table>
+</section>
+<section class="section">
+<div class="section-header"><div class="section-letter">E</div><div class="section-title">Matrix review and approval</div></div>
+<div class="text-box"><p>Review the matrix when protocol, procedures, devices, risks, task scope, PI/supervision coverage or relevant quality signals change. The owner assesses affected rows and release records. The PI or accountable approver authorizes the matrix and any restrictions before its effective date.</p></div>
+<table class="approval"><thead><tr><th style="width:55%">Approval check</th><th style="width:8%">Yes</th><th style="width:8%">No</th><th style="width:29%">Evidence / action / restriction</th></tr></thead><tbody><tr><td>All tasks have CtQ domain, code, supervision, qualifications, boundaries, escalation and record links.</td><td><span class="check selected" role="checkbox" tabindex="0" aria-checked="true"></span></td><td><span class="check" role="checkbox" tabindex="0" aria-checked="false"></span></td><td><span class="demo-fill">Section F: T01-T10; 2 C1 / 6 C2 / 2 C3.</span></td></tr>
+<tr><td>Task requirements agree with current protocol, risk controls, oversight and applicable procedures.</td><td><span class="check selected" role="checkbox" tabindex="0" aria-checked="true"></span></td><td><span class="check" role="checkbox" tabindex="0" aria-checked="false"></span></td><td><span class="demo-fill">CIP v4.2; POT v0.2; SRR v0.3.</span></td></tr>
+<tr><td>RACI assignments and TRE release records will reference this approved CCDM record ID and revision.</td><td><span class="check selected" role="checkbox" tabindex="0" aria-checked="true"></span></td><td><span class="check" role="checkbox" tabindex="0" aria-checked="false"></span></td><td><span class="demo-fill">RACI-014 updated 29 Sep; linked TRE records checked.</span></td></tr>
+<tr><td>The review date, change triggers, controlled location and any unresolved restriction are documented.</td><td><span class="check selected" role="checkbox" tabindex="0" aria-checked="true"></span></td><td><span class="check" role="checkbox" tabindex="0" aria-checked="false"></span></td><td><span class="demo-fill">Review 15 Dec; restriction: first cases supervised; location on page 1.</span></td></tr></tbody></table>
+<div class="signature-grid">
+<div class="signature"><b>Matrix owner</b><div class="sig-field">Name / role: <span class="demo-fill">Maria Silva / Study Coordinator</span></div><div class="sig-field">Signature / date: <span class="demo-fill">/s/ M. Silva - 29 Sep 2026 (demo)</span></div></div>
+<div class="signature"><b>PI / accountable approver</b><div class="sig-field">Name / role: <span class="demo-fill">Dr Alex Morgan / PI</span></div><div class="sig-field">Signature / date: <span class="demo-fill">/s/ A. Morgan - 29 Sep 2026 (demo)</span></div></div>
+</div>
+</section>
+<footer class="footer"><div>CCDM v0.2 | Definitions and approval</div><div>Page 2 of 3</div></footer>
+</main>
+<main class="page landscape p3">
+<header class="topbar"><div><div class="title">CCDM - Criticality-Coded Delegation Matrix</div><div class="subtitle">Site-completed task matrix / continuation sheet</div></div><div class="version">SIMULATED · v0.2</div></header>
+<section class="meta-grid">
+<div class="meta-cell"><span class="meta-label">Study / site</span><span class="demo-entry">GLENOS-01 / Site 014</span></div>
+<div class="meta-cell"><span class="meta-label">CCDM record ID / revision</span><span class="demo-entry">CCDM-014 / v0.2</span></div>
+<div class="meta-cell"><span class="meta-label">Effective date</span><span class="demo-entry">30 Sep 2026</span></div>
+<div class="meta-cell"><span class="meta-label">Matrix sheet number / total sheets</span><span class="demo-entry">1 / 1</span></div>
+</section>
+<section class="section">
+<div class="section-header"><div class="section-letter">F</div><div class="section-title">Controlled task, criticality and supervision matrix</div></div>
+<p class="matrix-instruction">Use one row per task or decision, with a task ID (T01, T02...) that the DTRM, TRE and RACI cite. Separate activities with different decision boundaries; for inseparable activities, apply the highest relevant criticality. Define the required supervision and escalation for each row.</p>
+<table class="matrix"><thead><tr><th style="width:5%">Task ID</th><th style="width:15%">Task / decision</th><th style="width:9%">CtQ domain</th><th style="width:5%">Code</th><th style="width:7%">Supervision level</th><th style="width:15%">Minimum role / qualification</th><th style="width:18%">Permitted boundary</th><th style="width:16%">PI / specialist escalation trigger</th><th style="width:10%">Linked controlled record</th></tr></thead><tbody><tr><td><span class="demo-fill">T01</span></td><td><span class="demo-fill">Final eligibility decision</span></td><td><span class="demo-fill">CtQ2 Participant selection</span></td><td><span class="demo-fill">C1</span></td><td><span class="demo-fill">S0</span></td><td><span class="demo-fill">PI; protocol and consent training current.</span></td><td><span class="demo-fill">Staff prepare PSEAR; PI decides before enrollment. No protocol waivers.</span></td><td><span class="demo-fill">Borderline imaging, rotator cuff status or consent doubt: pause enrollment; refer to PI.</span></td><td><span class="demo-fill">PSEAR; CIP v4.2; POT</span></td></tr>
+<tr><td><span class="demo-fill">T02</span></td><td><span class="demo-fill">Final clinical safety classification and causality</span></td><td><span class="demo-fill">CtQ10 Safety surveillance</span></td><td><span class="demo-fill">C1</span></td><td><span class="demo-fill">S0</span></td><td><span class="demo-fill">PI; safety procedure training current.</span></td><td><span class="demo-fill">Staff prepare SART and route reports; PI retains seriousness and device-relatedness assessment.</span></td><td><span class="demo-fill">Serious, unexpected or device-related event: PI and sponsor safety contact.</span></td><td><span class="demo-fill">SART; POT</span></td></tr>
+<tr><td><span class="demo-fill">T03</span></td><td><span class="demo-fill">Reverse shoulder arthroplasty implantation per surgical technique</span></td><td><span class="demo-fill">CtQ5 Procedural delivery</span></td><td><span class="demo-fill">C2</span></td><td><span class="demo-fill">S1 + S2</span></td><td><span class="demo-fill">Credentialed shoulder surgeon; SCR and device TRE release current.</span></td><td><span class="demo-fill">Released surgeon follows the approved technique; senior shoulder surgeon supervises the first cases.</span></td><td><span class="demo-fill">Unplanned component substitution, glenoid fixation problem or intraoperative fracture: protect participant, document, notify PI.</span></td><td><span class="demo-fill">SCR; TRE; ICDL; SLCT</span></td></tr>
+<tr><td><span class="demo-fill">T04</span></td><td><span class="demo-fill">Implant identification (UDI, lot, size) and component substitution record</span></td><td><span class="demo-fill">CtQ4 Device traceability</span></td><td><span class="demo-fill">C2</span></td><td><span class="demo-fill">S2</span></td><td><span class="demo-fill">OR nurse; ICDL and device training current.</span></td><td><span class="demo-fill">Record each component before closure; record any substitution with its reason.</span></td><td><span class="demo-fill">Missing or unreadable label, substitution without reason: hold the case record; notify surgeon and PI.</span></td><td><span class="demo-fill">ICDL; TRE</span></td></tr>
+<tr><td><span class="demo-fill">T05</span></td><td><span class="demo-fill">Postoperative radiographs per imaging charter (true AP, axillary)</span></td><td><span class="demo-fill">CtQ9 Imaging and endpoint control</span></td><td><span class="demo-fill">C2</span></td><td><span class="demo-fill">S1 + S2</span></td><td><span class="demo-fill">Radiographer; imaging charter training and TRE release current.</span></td><td><span class="demo-fill">Acquire the charter set; radiology liaison checks quality before transfer.</span></td><td><span class="demo-fill">Non-diagnostic view, wrong projection or outside window: repeat while possible; radiology liaison and PI.</span></td><td><span class="demo-fill">SIRR; IQL; TRE</span></td></tr>
+<tr><td><span class="demo-fill">T06</span></td><td><span class="demo-fill">ROM measurement and PROM administration (Constant-Murley, ASES)</span></td><td><span class="demo-fill">CtQ8 Endpoint assessment</span></td><td><span class="demo-fill">C2</span></td><td><span class="demo-fill">S2</span></td><td><span class="demo-fill">Functional assessor (physiotherapist); assessment method training and TRE release current.</span></td><td><span class="demo-fill">Measure with the calibrated goniometer by the defined method; administer PROMs without interpreting them.</span></td><td><span class="demo-fill">Assessor change, missed method step or participant unable to complete: coordinator and PI.</span></td><td><span class="demo-fill">PFVR; TRE</span></td></tr>
+<tr><td><span class="demo-fill">T07</span></td><td><span class="demo-fill">Follow-up scheduling and window tracking</span></td><td><span class="demo-fill">CtQ7 Care pathway and follow-up</span></td><td><span class="demo-fill">C3</span></td><td><span class="demo-fill">S3</span></td><td><span class="demo-fill">Study coordinator; visit-window training current.</span></td><td><span class="demo-fill">Schedule 6-week, 3-month and 12-month visits within window; record contacts; route symptoms to clinicians.</span></td><td><span class="demo-fill">Missed window, failed contact or participant concern: PI; recovery action.</span></td><td><span class="demo-fill">PFVR; FUCR; CIP v4.2</span></td></tr>
+<tr><td><span class="demo-fill">T08</span></td><td><span class="demo-fill">eCRF transcription and controlled data filing</span></td><td><span class="demo-fill">CtQ11 Data capture and source</span></td><td><span class="demo-fill">C3</span></td><td><span class="demo-fill">S3</span></td><td><span class="demo-fill">Data QA function; EDC and document training and access current.</span></td><td><span class="demo-fill">Transcribe verified sources; file approved records; clinically meaningful discrepancies go to the PI.</span></td><td><span class="demo-fill">Conflicting source, wrong version or unresolved clinical query: data lead and PI.</span></td><td><span class="demo-fill">EDC audit trail; ISF</span></td></tr>
+<tr><td><span class="demo-fill">T09</span></td><td><span class="demo-fill">Device accountability, returns and explant handling</span></td><td><span class="demo-fill">CtQ4 Device traceability</span></td><td><span class="demo-fill">C2</span></td><td><span class="demo-fill">S1 + S2</span></td><td><span class="demo-fill">Device custodian; accountability training and TRE release current.</span></td><td><span class="demo-fill">Reconcile against ICDL; senior shoulder surgeon reviews discrepancies and explants.</span></td><td><span class="demo-fill">Missing device, discrepancy, explant or custody gap: custodian, PI and sponsor device route.</span></td><td><span class="demo-fill">ICDL; sponsor accountability log</span></td></tr>
+<tr><td><span class="demo-fill">T10</span></td><td><span class="demo-fill">Safety intake and initial reporting route</span></td><td><span class="demo-fill">CtQ10 Safety surveillance</span></td><td><span class="demo-fill">C2</span></td><td><span class="demo-fill">S2</span></td><td><span class="demo-fill">Study coordinator and trained deputy; safety procedure training current.</span></td><td><span class="demo-fill">Capture awareness time; alert PI; route reports before final classification.</span></td><td><span class="demo-fill">Uncertain seriousness, device relationship or deadline: immediate PI and sponsor contact.</span></td><td><span class="demo-fill">SART; on-call rota</span></td></tr></tbody></table>
+<p class="continuation-note">If more tasks are needed, reprint this page, number each matrix sheet and include all sheets in the final approved CCDM.</p>
+</section>
+<footer class="footer"><div>CCDM v0.2 | Controlled task matrix / continuation sheet</div><div>Page 3 of 3</div></footer>
+</main>
+<style id="ccdm-editor-style">
+#ccdm-editor{position:fixed;right:16px;top:16px;z-index:99999;width:300px;font:12px Arial,Helvetica,sans-serif;color:#173c67}
+#ccdm-launch{float:right;background:#173c67;color:white;border:0;padding:10px 14px;border-radius:7px;font-weight:700;cursor:pointer}
+#ccdm-panel{clear:both;display:none;position:relative;top:8px;padding:13px;background:white;border:1px solid #b6c4d3;border-radius:9px;box-shadow:0 8px 24px #18395833}
+#ccdm-panel p{font-size:11px;line-height:1.4}
+#ccdm-panel label{display:flex;justify-content:space-between;align-items:center;margin:10px 0;gap:7px}
+#ccdm-panel input{width:78px;border:1px solid #b6c4d3;padding:4px;border-radius:4px}
+#ccdm-panel select{width:118px;border:1px solid #b6c4d3;padding:4px}
+#ccdm-panel button{padding:7px;border:1px solid #9eb2c5;background:#f4f7fa;color:#173c67;border-radius:5px;cursor:pointer}
+#ccdm-panel button:disabled{opacity:.4;cursor:default}
+#ccdm-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:12px}
+#ccdm-save{width:100%;margin-top:10px;background:#173c67!important;color:white!important}
+.ccdm-selected{outline:2px solid #df982e!important;outline-offset:1px}
+body.ccdm-editing .check{cursor:pointer}
+</style>
+<script id="ccdm-editor-script">
+(() => {
+  'use strict';
+  let active=false,selected=null,before=null;
+  const undo=[],redo=[];
+  const root=document.createElement('aside');
+  root.id='ccdm-editor';root.dataset.editorUi='true';
+  root.innerHTML=`<button id="ccdm-launch">Modo editor</button><div id="ccdm-panel"><b>Editor do CCDM</b><p>Clique em texto ou em uma célula para editar. As caixinhas podem ser marcadas no modo editor.</p><p id="ccdm-status">Nenhum elemento selecionado.</p><label>Fonte (px)<input id="ccdm-font" type="number" min="6" max="28" step=".25" disabled></label><label>Alinhamento<select id="ccdm-align" disabled><option value="left">À esquerda</option><option value="center">Centralizado</option><option value="right">À direita</option></select></label><label>Altura da linha (px)<input id="ccdm-height" type="number" min="20" max="180" disabled></label><label>Largura da coluna (%)<input id="ccdm-width" type="number" min="4" max="80" disabled></label><div id="ccdm-actions"><button id="ccdm-add" disabled>+ Linha</button><button id="ccdm-remove" disabled>Remover linha</button><button id="ccdm-undo" disabled>Desfazer</button><button id="ccdm-redo" disabled>Refazer</button></div><button id="ccdm-save">Salvar HTML</button></div>`;
+  document.body.appendChild(root);
+  const q=id=>document.getElementById('ccdm-'+id);
+  const pages=()=>[...document.querySelectorAll('main.page')];
+  const snap=()=>pages().map(p=>p.outerHTML).join('\n');
+  const editable=()=>document.querySelectorAll('td,th,.meta-cell,.title,.section-title,.text-box p,.note,.table-note,.signature').forEach(e=>e.contentEditable=active&&!e.querySelector('.check')?'true':'false');
+  function controls(){
+    const cell=selected?.closest('td,th'),row=cell?.parentElement,table=cell?.closest('table');
+    q('font').disabled=q('align').disabled=!selected;
+    q('height').disabled=!row;q('width').disabled=!cell||!table?.tHead;
+    q('add').disabled=q('remove').disabled=!cell||cell.tagName==='TH';
+    q('undo').disabled=!undo.length;q('redo').disabled=!redo.length;
+    if(selected){
+      q('font').value=parseFloat(getComputedStyle(selected).fontSize).toFixed(2);
+      q('align').value=getComputedStyle(selected).textAlign==='center'?'center':getComputedStyle(selected).textAlign==='right'?'right':'left';
+      if(row)q('height').value=Math.round(row.getBoundingClientRect().height);
+      if(table?.tHead&&cell)q('width').value=(table.tHead.rows[0].cells[cell.cellIndex].getBoundingClientRect().width/table.getBoundingClientRect().width*100).toFixed(1);
+    }
+  }
+  function select(e){
+    document.querySelectorAll('.ccdm-selected').forEach(x=>x.classList.remove('ccdm-selected'));
+    selected=e;if(e)e.classList.add('ccdm-selected');
+    q('status').textContent=e?'Elemento selecionado.':'Nenhum elemento selecionado.';controls();
+  }
+  function record(old){
+    if(old===snap())return;
+    undo.push(old);if(undo.length>40)undo.shift();redo.length=0;controls();
+  }
+  function change(fn){const old=snap();fn();record(old)}
+  function restore(html){
+    pages().forEach(p=>p.remove());
+    const temp=document.createElement('template');temp.innerHTML=html;
+    document.body.insertBefore(temp.content,root);selected=null;editable();select(null);
+  }
+  function toggle(){
+    active=!active;document.body.classList.toggle('ccdm-editing',active);
+    q('panel').style.display=active?'block':'none';
+    q('launch').textContent=active?'Sair do editor':'Modo editor';
+    editable();select(null);
+  }
+  q('launch').onclick=toggle;
+  document.addEventListener('click',e=>{
+    if(!active||e.target.closest('#ccdm-editor'))return;
+    const ch=e.target.closest('.check');
+    if(ch){
+      e.preventDefault();
+      change(()=>{
+        const was=ch.classList.contains('selected');
+        ch.closest('tr').querySelectorAll('.check').forEach(x=>{x.classList.remove('selected');x.setAttribute('aria-checked','false')});
+        if(!was){ch.classList.add('selected');ch.setAttribute('aria-checked','true')}
+      });
+      select(ch.closest('td'));return;
+    }
+    select(e.target.closest('.demo-fill,.demo-entry,td,th,.meta-cell,.title,.section-title,.text-box p,.note,.table-note,.signature'));
+  },true);
+  document.addEventListener('focusin',e=>{if(active&&e.target.isContentEditable&&!e.target.closest('#ccdm-editor'))before=snap()});
+  document.addEventListener('focusout',e=>{if(before&&e.target.isContentEditable&&!e.target.closest('#ccdm-editor')){record(before);before=null}});
+  q('font').onchange=()=>{if(selected)change(()=>selected.style.fontSize=q('font').value+'px')};
+  q('align').onchange=()=>{if(selected)change(()=>selected.style.textAlign=q('align').value)};
+  q('height').onchange=()=>{const r=selected?.closest('tr');if(r)change(()=>{r.style.height=q('height').value+'px';[...r.cells].forEach(c=>c.style.height=q('height').value+'px')})};
+  q('width').onchange=()=>{
+    const c=selected?.closest('td,th'),t=c?.closest('table');
+    if(!t?.tHead)return;
+    change(()=>{
+      const hs=[...t.tHead.rows[0].cells],tw=t.getBoundingClientRect().width;
+      const ws=hs.map(h=>h.getBoundingClientRect().width/tw*100),i=c.cellIndex,v=Math.max(4,Math.min(80,+q('width').value));
+      const others=ws.reduce((n,w,j)=>j===i?n:n+w,0);
+      hs.forEach((h,j)=>h.style.width=(j===i?v:ws[j]/others*(100-v)).toFixed(3)+'%');
+    });
+  };
+  q('add').onclick=()=>{
+    const r=selected?.closest('tr');if(!r||!r.closest('tbody'))return;
+    change(()=>{const n=r.cloneNode(true);n.querySelectorAll('td').forEach(c=>{if(c.querySelector('.check')){c.querySelectorAll('.check').forEach(x=>{x.classList.remove('selected');x.setAttribute('aria-checked','false')})}else c.innerHTML=''});n.querySelectorAll('.ccdm-selected').forEach(e=>e.classList.remove('ccdm-selected'));r.after(n);editable()});
+  };
+  q('remove').onclick=()=>{const r=selected?.closest('tbody tr');if(r)change(()=>{r.remove();select(null)})};
+  q('undo').onclick=()=>{if(undo.length){redo.push(snap());restore(undo.pop())}};
+  q('redo').onclick=()=>{if(redo.length){undo.push(snap());restore(redo.pop())}};
+  q('save').onclick=()=>{
+    const clone=document.documentElement.cloneNode(true);
+    clone.querySelectorAll('[data-editor-ui]').forEach(e=>e.remove());
+    clone.querySelectorAll('[contenteditable]').forEach(e=>e.removeAttribute('contenteditable'));
+    clone.querySelectorAll('.ccdm-selected').forEach(e=>e.classList.remove('ccdm-selected'));
+    clone.querySelector('body').classList.remove('ccdm-editing');
+    const blob=new Blob(['<!DOCTYPE html>\n'+clone.outerHTML],{type:'text/html;charset=utf-8'});
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+    a.download='CCDM_v0_2_simulated_edited_'+new Date().toISOString().slice(0,19).replace(/[:T]/g,'-')+'.html';
+    document.body.appendChild(a);a.click();const url=a.href;a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);
+    q('status').textContent='HTML salvo com as alterações e o editor.';
+  };
+  controls();
+})();
+</script>
+</body>
+</html>

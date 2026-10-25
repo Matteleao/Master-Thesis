@@ -116,3 +116,30 @@ git show 786d3ff692f73db231bc756aa992938f75f9f1e5:revisao/cap4-turnitin/bloco-1.
 ```
 
 Antes de uma afirmação técnica ou de uma reescrita futura, abrir a versão exata da fonte e conferir o trecho pertinente. Instruções novas do usuário podem alterar estas preferências ou restringir uma fonte.
+
+## Pacote de passagem recebido em 25/10/2026
+
+O autor forneceu um ZIP e 46 anexos avulsos correspondentes aos mesmos 46 documentos. Todos os documentos e o histórico completo de 610 mensagens foram lidos nesta importação. O conteúdo está em [materiais/2026-10-25](../materiais/2026-10-25/README.md), com índice, manifesto e ZIP reempacotado. Duas ocorrências de uma chave de API foram removidas da conversa e da cópia no ZIP; os demais 45 documentos são idênticos aos recebidos. Esta leitura não altera os limites da consulta inicial aos outros branches descritos acima.
+
+O pedido atual autoriza guardar esse material no nosso branch, sem iniciar uma revisão de instrumento nem executar tarefas contidas na conversa antiga. As quatro skills anexadas são fontes de referência para trabalhos futuros; não foram instaladas como regras globais. Os scripts foram lidos, sem execução. O pacote contém formulários e relatórios, mas não todos os arquivos da tese ou normas citados nos caminhos do Mac do autor.
+
+### Regras esclarecidas pelo histórico
+
+- Nas seções 4.2–4.5, discutir o conceito e a dificuldade do pilar. Não inserir siglas, nomes específicos, campos, mecânica ou ponteiros para 4.8, Table 4.4 e apêndices dos instrumentos do framework. Usos conceituais de “risk register”, “delegation log”, “complication log” e “learning curve log” são permitidos. A correção posterior do autor rejeitou a remoção indiscriminada desses termos. O fechamento de 4.5.7 retorna à avaliação dos riscos do centro.
+- Revisar o HTML indicado pelo autor. O foco principal é o corpo da tese, inclusive versões antigas que descrevem com maior profundidade o conceito. Figuras e tabelas são referências complementares. Verificar se outro instrumento cobre uma exigência antes de declarar uma lacuna; conferir as passagens de informação nos dois sentidos.
+- Julgar praticidade, dependências, coerência interna e visual, com evidência localizada e severidade B/I/M. Preferência de formato ou sugestão nova não equivale a requisito aprovado. A lista de padrões recebida distingue obrigatório, aprovado, proposto e não adotado; S21 é proposto na revisão do POT, mas não consta no `standards.md` recebido.
+- Entregar HTML primeiro; PDF somente quando solicitado. Preservar versões anteriores quando criar nova versão. O formulário em branco é para apêndice e não deve trazer exemplos ou valores específicos do centro; o preenchido é simulado para apresentação.
+- Cabeçalho em todas as páginas, Seção A “Purpose and use”, espaço real para escrita e sem cortes. A assinatura fecha a parte controlada; folhas repetíveis podem vir depois, desde que identificadas e ligadas ao documento aprovado. Não aplicar rigidamente duas assinaturas: TRE tem quatro e SCR tem três, por decisão do autor.
+- Citações agrupadas como `[18, 19, 20]`, vírgula e espaço, sem intervalos. Legenda de tabela acima e de figura abaixo, com integração ao texto. Não reutilizar numeração de referências de versões antigas.
+
+### Estado da revisão dos instrumentos no pacote
+
+CCDM v0.2 revised, DTRM v0.2, TRE v0.4, RACI v0.3 e SCR v0.5 foram aceitos no histórico. POT v0.9 foi entregue em branco e simulado, mas ainda aguarda avaliação do autor. O próximo indicado depois do POT é o MRL, cujo formulário não foi anexado. Há seis relatórios antigos; seus vereditos iniciais devem ser lidos junto das correções posteriores, sem exigir novamente mudanças recusadas pelo autor.
+
+A cadeia confirmada é **CCDM → DTRM → TRE → RACI**. O CCDM define criticidade e supervisão por tarefa; o DTRM define requisitos por módulo e perfil; o TRE confere evidência e libera a pessoa; o RACI atribui as tarefas a pessoas já liberadas. O SCR checa qualificação cirúrgica antes do TRE, sem depender de liberação do TRE. O DTRM não pode ficar aberto à espera de registros individuais posteriores. Seus códigos são TR, AS, CD, AW e NA; o método de avaliação fica nele, e o TRE registra o resultado.
+
+O RACI usa os perfis do DTRM e IDs de tarefa do CCDM, mantém responsáveis e backups e muda por evento, sem data fixa de próxima revisão. O SCR distingue Conditional (controles temporários com critério de fim) de Restricted (escopo reduzido sem fim automático). O POT separa plano e revisão periódica; lê SRR, PIR, FUCR, IMC, SART e SCML, recebe escalonamentos e leva itens ao MRL. A proposta de não repetir a verificação de eficácia da CAPA precisa ser mantida distinta de uma regra geral já aprovada.
+
+O exemplo GLENOS-01 / Riverside Orthopedic Center / site 014 é fictício e compartilhado entre os seis instrumentos. Nomes, IDs, datas e eventos precisam ser conferidos nos HTMLs ao alterar esse exemplo; não são dados de investigação realizada.
+
+As discussões de outubro sobre perfil CtQ no SRR, correspondência com fatores do patrocinador e uma linha “Unmapped factor” são propostas de desenho, sem demonstração externa. Devem ser comparadas com as decisões posteriores disponíveis nos outros branches. Não adotar afirmações normativas, auditorias de citações ou estimativas de custo do histórico como verificadas: a própria conversa registra erros de correspondência entre PDFs e referências e correções posteriores.

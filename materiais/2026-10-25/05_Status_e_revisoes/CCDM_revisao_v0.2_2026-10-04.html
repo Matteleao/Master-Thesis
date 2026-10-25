@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revisão CCDM v0.2</title>
+<style>
+:root{--ink:#1b2430;--muted:#5d6876;--line:#d5dbe3;--bg:#ffffff;--soft:#f4f6f9;--navy:#1f4173;--b:#b42318;--b-bg:#fdecea;--i:#b54708;--i-bg:#fef3e2;--m:#475467;--m-bg:#eef1f5;--ok:#1d7a46;--ok-bg:#e7f5ec}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:22px;margin:0 0 4px}
+h2{font-size:17px;margin:32px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--navy);color:var(--navy)}
+p{margin:6px 0}
+.meta{color:var(--muted);font-size:13px}
+.verdict{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0;padding:12px 14px;background:var(--soft);border:1px solid var(--line);border-radius:8px}
+.verdict strong{font-size:16px}
+.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap}
+.B{background:var(--b-bg);color:var(--b)}.I{background:var(--i-bg);color:var(--i)}.M{background:var(--m-bg);color:var(--m)}
+.PASS,.COV{background:var(--ok-bg);color:var(--ok)}.PARTIAL,.PAR{background:var(--i-bg);color:var(--i)}.FAIL,.MIS{background:var(--b-bg);color:var(--b)}.NA{background:var(--m-bg);color:var(--m)}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:6px 8px;vertical-align:top;text-align:left}
+th{background:var(--navy);color:#fff;font-weight:600}
+tr:nth-child(even) td{background:var(--soft)}
+ol li,ul li{margin:6px 0}
+code,.en{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;background:var(--soft);padding:0 3px;border-radius:3px}
+.note{color:var(--muted);font-size:12.5px}
+</style>
+</head>
+<body>
+<main>
+<h1>Revisão do CCDM v0.2: Criticality-Coded Delegation Matrix</h1>
+<p class="meta">Arquivo revisado: <code>Forms, templates and tools/CCDM/CCDM_Criticality_Coded_Delegation_Matrix_v0.2_simulated_editable_revised.html</code>, já com as seções renumeradas (A a F). Revisão de 04/10/2026 pela skill <code>instrument-review</code>. Fontes da tese: versão antiga do capítulo 4 (<code>04_Results_The_Quality_Framework.md</code>, 28/09), tese atual e Figuras 4.1, 4.3, 4.4 e 4.5 e Table 4.4.</p>
+
+<div class="verdict" style="background:#e7f5ec;border-color:#b7dfc6"><strong>Atualização de 06/10/2026, depois da discussão com o autor: pronto, exceto duas decisões em aberto (ID de tarefa e nomes na matriz)</strong> <span class="pill B">B 0</span> <span class="pill I">I 1 em aberto</span> <span class="pill M">M 0</span></div>
+<h2>Atualização de 06/10/2026</h2>
+<p><b>Divisão de funções confirmada pelo autor.</b> O CCDM define a criticidade e a supervisão de cada tarefa. O DTRM define o treinamento específico do dispositivo e do estudo para cada função e tarefa. O TRE libera cada pessoa contra o DTRM. O RACI, por último, atribui as tarefas às pessoas liberadas, usando os códigos do CCDM. A ordem de construção, confirmada pelo autor, é CCDM → DTRM → TRE → RACI. O bloqueante (registro por pessoa) caiu, porque essa função é do RACI, do TRE e do DTRM, não do CCDM.</p>
+<p><b>Exigências transferidas para outras revisões</b> (registradas em <code>reference/requirements/</code>):</p>
+<ul>
+<li>RACI: R2, R10, R11 e R19.</li>
+<li>TRE e DTRM: R3, R5 e R7.</li>
+<li>R4: dividido entre RACI, TRE e DTRM.</li>
+<li>R16: SCR, TRE e DTRM.</li>
+<li>R18: SCR.</li>
+<li>Retiradas pelo autor: R12 (cabe a quem conduz o estudo ler o protocolo) e R20 (detalhe).</li>
+</ul>
+<p><b>Aplicado no HTML</b> (cópia anterior guardada no scratchpad):</p>
+<ul>
+<li>seções reordenadas de A a F;</li>
+<li>DTRM retirado das entradas (4);</li>
+<li>"CtQ domain" pelo código da tese (5);</li>
+<li>repetição entre C e D eliminada: a C mostra os níveis permitidos e a D perdeu a coluna "Typical use" (6);</li>
+<li>cores de S0 a S3 no mesmo sentido da criticidade (7);</li>
+<li>exemplo refeito como estudo de artroplastia reversa de ombro (GLENOS-01) em inglês americano (9 e 17);</li>
+<li>Seção A declara que alimenta DTRM, RACI, TRE e POT, e a Seção B cita RACI e DTRM/TRE no lugar do CDTR (14);</li>
+<li>aprovação sem repetição na pág. 1 e status fechado: Approved / With restrictions / Not approved (15);</li>
+<li>PSEAR no lugar de EVF e "Section F" no lugar de "TI-014-02" (18).</li>
+</ul>
+<p>As três páginas foram renderizadas e nada ficou cortado.</p>
+<p><b>Recusado pelo autor:</b> transição entre níveis (8), linhas mínimas pré-impressas (10), verificação de independência (12), gatilhos de revisão concretos (13) e mudança no rodapé da continuação (16).</p>
+<p><b>Ainda em aberto:</b></p>
+<ul>
+<li>(2) coluna "Task ID", para DTRM, RACI e TRE citarem a tarefa.</li>
+<li>(3) nomes e IDs individuais na matriz. No exemplo novo a matriz já ficou no nível de função e tipo de registro; o autor confirma se quer assim.</li>
+<li>Modelo em branco gerado a partir da versão revisada: <code>CCDM_..._v0.2_blank_editable_revised.html</code>, com PDFs em branco e preenchido na pasta do CCDM. O antigo v0.3 em branco não foi alterado.</li>
+</ul>
+<p class="note">O texto abaixo é a revisão original de 04/10, mantida como registro.</p>
+<div class="verdict"><strong>Veredito: precisa de revisão</strong> <span class="pill B">B 1</span> <span class="pill I">I 11</span> <span class="pill M">M 6</span></div>
+<p>O CCDM cumpre bem o que a tese pede da <b>estrutura</b> da delegação: códigos de criticidade, níveis de supervisão, gatilhos por tarefa e controle de versão. O problema central é outro. A tese descreve um <b>registro de delegação por pessoa</b> (quem está autorizado a quê, desde quando, com base em quê). Esse registro não existe neste documento nem em nenhum dos 24 instrumentos, e o CCDM o empurra para um "CDTR" que a tese não tem.</p>
+
+<h2>Pontos fortes</h2>
+<ul>
+<li>Os códigos C1, C2 e C3 da Seção C reproduzem a definição da 4.2.1 antiga e acrescentam o que faltava para aplicar: limite de decisão, delegabilidade e gatilho para o PI.</li>
+<li>Os níveis de supervisão S0 a S3 (Seção D) transformam em regra prática a exigência da 4.2.2 de que a delegação esteja ligada à intensidade de revisão do modelo de supervisão.</li>
+<li>A regra "uma linha por tarefa; atividades inseparáveis recebem a maior criticidade" atende diretamente à propriedade "task-based" da 4.2.2 e ao exemplo da research nurse.</li>
+<li>Controle de versão completo: revisão, documento substituído, gatilho da mudança, data efetiva e próxima revisão.</li>
+<li>A Seção B diz com clareza o que o CCDM não faz: não transfere a responsabilidade do PI e não substitui a evidência de competência. Isso está alinhado com a ICH E6(R3) e com a ISO 14155:2026, Clause 10.1.</li>
+<li>A folha de continuação funciona bem: o cabeçalho com ID do registro, revisão, data efetiva e número da folha liga cada cópia impressa ao documento aprovado.</li>
+<li>Visual limpo e legível, sem conteúdo cortado nas três páginas. O exemplo é coerente por dentro: a contagem "2 C1 / 6 C2 / 2 C3" bate com a matriz, e as datas fecham.</li>
+</ul>
+
+<h2>Cobertura do que o texto da tese exige</h2>
+<p class="note">Lista completa e fontes em <code>~/.claude/skills/instrument-review/reference/requirements/CCDM.md</code>. "Antiga" = capítulo 4 de 28/09; "atual" = tese atual.</p>
+<div class="table-wrap"><table>
+<tr><th>#</th><th>O que o texto exige (fonte)</th><th>Status</th><th>Onde está / outro instrumento</th><th>Mudança</th></tr>
+<tr><td>R1</td><td>Codificar cada atividade delegada em C1, C2 ou C3 pela importância clínica e operacional (4.2.1 antiga)</td><td><span class="pill COV">COBERTO</span></td><td>Seção C e coluna "Code" da F</td><td>Nenhuma</td></tr>
+<tr><td>R2</td><td>Registro das pessoas e partes delegadas, proporcional à importância da atividade (ICH E6(R3) 2.3.3; 4.2.1 e 4.2.2)</td><td><span class="pill MIS">FALTANDO</span></td><td>Não existe; a Seção B manda para o "CDTR", que não está entre os 24</td><td>Ver mudança 1 (B)</td></tr>
+<tr><td>R3</td><td>Pessoas qualificadas e com treinamento documentado antes da atribuição (ICH 2.3.2; ISO 14155:2026 Clause 7.6)</td><td><span class="pill PAR">PARCIAL</span></td><td>A coluna "Minimum role / qualification" da F define o requisito por tarefa; falta o registro por pessoa</td><td>Mudança 1</td></tr>
+<tr><td>R4</td><td>Nomes, iniciais, assinaturas, funções e autorizações (ISO 14155:2026 Clause 7.6)</td><td><span class="pill MIS">FALTANDO</span></td><td>Não existe</td><td>Mudança 1</td></tr>
+<tr><td>R5</td><td>Ligar cada delegação à evidência de competência (4.2.1 antiga: o segundo acréscimo do framework ao log convencional)</td><td><span class="pill PAR">PARCIAL</span></td><td>"Linked controlled record" aponta tipos de registro; a ligação por pessoa não existe</td><td>Mudança 1 (coluna da decisão do TRE ou do SCR)</td></tr>
+<tr><td>R6</td><td>Delegação por tarefa (4.2.2)</td><td><span class="pill COV">COBERTO</span></td><td>Instrução da Seção F</td><td>Nenhuma</td></tr>
+<tr><td>R7</td><td>Delegação condicionada à competência, sem delegar antes da liberação (4.2.2)</td><td><span class="pill PAR">PARCIAL</span></td><td>A regra está na Seção C ("after task-specific release"), mas não há onde verificar que foi cumprida</td><td>Mudança 1</td></tr>
+<tr><td>R8</td><td>Controle de versão (4.2.2)</td><td><span class="pill COV">COBERTO</span></td><td>Cabeçalho da pág. 1 e Seção E</td><td>Nenhuma</td></tr>
+<tr><td>R9</td><td>Ligada à intensidade de revisão do modelo de supervisão (4.2.2; 4.2.1)</td><td><span class="pill COV">COBERTO</span></td><td>Seções C e D</td><td>Definir "S1 + S2" (mudança 8)</td></tr>
+<tr><td>R10</td><td>As seis funções e seus limites, como o coordenador que não decide elegibilidade nem classifica desvios (4.2.2)</td><td><span class="pill PAR">PARCIAL</span></td><td>Funções em texto livre e sem a lista da tese ("Safety coordinator", "Quality lead"...)</td><td>Mudança 11</td></tr>
+<tr><td>R11</td><td>Cada função atribuída a uma pessoa nomeada, podendo acumular funções (4.2.2)</td><td><span class="pill PAR">PARCIAL</span></td><td>Pela Table 4.4 é papel do RACI; o CCDM não faz referência a ele</td><td>Citar o RACI na Seção B</td></tr>
+<tr><td>R12</td><td>Tratar como críticas as tarefas de implante que parecem operacionais: substituição de componente, identificador do implante, desvio intraoperatório, adequação da imagem de seguimento (4.2.1 antiga)</td><td><span class="pill MIS">FALTANDO</span></td><td>Não há orientação nem linhas mínimas</td><td>Mudança 10</td></tr>
+<tr><td>R13</td><td>Gatilhos coerentes com a via de escalonamento: cirurgião não liberado, lote ou UDI ausente, substituição não planejada, elegibilidade incerta, SAE atrasado, janela de imagem perdida, desvio grave, revisão, explante, reoperação, readmissão (4.2.1 antiga)</td><td><span class="pill PAR">PARCIAL</span></td><td>Há gatilho por linha na F e gatilhos gerais na C; o de "cirurgião não liberado" não pode ser detectado sem registro por pessoa</td><td>Mudanças 1 e 10; usar a mesma lista do POT</td></tr>
+<tr><td>R14</td><td>Reservar ao PI os julgamentos insubstituíveis: indicação cirúrgica, interpretação de desvio intraoperatório, relação do evento com o dispositivo, leitura de deriva na execução (4.2.1 antiga)</td><td><span class="pill PAR">PARCIAL</span></td><td>Há linhas C1 de elegibilidade e causalidade; faltam indicação cirúrgica e interpretação de desvio intraoperatório</td><td>Mudança 10</td></tr>
+<tr><td>R15</td><td>Dizer explicitamente o que exige o PI, para evitar supervisão nominal: elegibilidade limítrofe, mudança intraoperatória não planejada, substituição de componente, interpretação de revisão (4.2.1 antiga)</td><td><span class="pill PAR">PARCIAL</span></td><td>Igual a R14</td><td>Mudança 10</td></tr>
+<tr><td>R16</td><td>Registrar quem foi autorizado a fazer o quê, com que base e desde quando, para a prática sobreviver às trocas de equipe (4.2.5 antiga; DR10)</td><td><span class="pill MIS">FALTANDO</span></td><td>Não existe</td><td>Mudança 1</td></tr>
+<tr><td>R17</td><td>Criado no start-up, antes do primeiro participante (Figura 4.1, fase 2; 5.5 atual)</td><td><span class="pill COV">COBERTO</span></td><td>A estrutura pode ser feita no start-up</td><td>Tirar o DTRM das entradas (mudança 4)</td></tr>
+<tr><td>R18</td><td>Decisão de credenciamento do cirurgião ligada ao log de delegação (4.2.3 atual)</td><td><span class="pill MIS">FALTANDO</span></td><td>O SCR aparece só como tipo de registro</td><td>Mudança 1</td></tr>
+<tr><td>R19</td><td>Na visita de monitoria, o site apresenta um log de delegação atual com codificação de criticidade (5.4 atual)</td><td><span class="pill PAR">PARCIAL</span></td><td>A codificação existe; o log atual de pessoas não</td><td>Mudança 1</td></tr>
+<tr><td>R20</td><td>Quando funções se acumulam (Tipo C), conflitos e perda de separação entre executar e supervisionar ficam explícitos (5.3 atual; Table 4.3; DR10)</td><td><span class="pill MIS">FALTANDO</span></td><td>Nenhuma verificação de independência</td><td>Mudança 12</td></tr>
+<tr><td>R21</td><td>Funciona em papel (DR11)</td><td><span class="pill COV">COBERTO</span></td><td>Todo o documento</td><td>Nenhuma</td></tr>
+<tr><td>R22</td><td>Não criar registro paralelo de dados de participante (4.4.4)</td><td><span class="pill COV">COBERTO</span></td><td>Não guarda dados de participante</td><td>Nenhuma</td></tr>
+</table></div>
+<p class="note">Figuras: CtQ6 (marcada como principal na Figura 4.4) fica parcial, porque a regra de liberação existe mas não é verificável sem registro por pessoa. CtQ1 e CtQ12 (apoio) estão referenciadas pelos gatilhos. Na Figura 4.5, DR1 está coberto; DR10 fica parcial (falta o registro datado e a verificação de dependência de uma só pessoa); DR11 está coberto; DR12 não tem orientação para o Tipo C.</p>
+
+<h2>Critérios</h2>
+<div class="table-wrap"><table>
+<tr><th>ID</th><th>Status</th><th>Evidência</th><th>Mudança</th></tr>
+<tr><td>T1</td><td><span class="pill PASS">PASS</span></td><td>O texto da Seção A corresponde à Table 4.4</td><td></td></tr>
+<tr><td>T2</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>Entradas na Seção A incluem o DTRM, que deveria vir depois</td><td>Mudança 4</td></tr>
+<tr><td>T3</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>Produz os limites de delegação e supervisão; não produz o "quem está autorizado"</td><td>Mudança 1</td></tr>
+<tr><td>T4</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>A matriz F mistura regra por tarefa com nomes ("PI (Dr Alex Morgan)", "Dr Lina Costa") e IDs de registros individuais ("TRE-SG03", "CDTR-DM01")</td><td>Mudança 3</td></tr>
+<tr><td>T5</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>CtQ6 parcial (ver nota acima)</td><td>Mudança 1</td></tr>
+<tr><td>T6</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>DR10 parcial; DR12 sem nota para o Tipo C</td><td>Mudanças 1 e 12</td></tr>
+<tr><td>T7</td><td><span class="pill FAIL">FAIL</span></td><td>"Protected CTQ" em texto livre; "CTQ" em vez de "CtQ"; "Centre", "enrolment"</td><td>Mudanças 5 e 17</td></tr>
+<tr><td>T8</td><td><span class="pill FAIL">FAIL</span></td><td>O exemplo é de fechamento vascular femoral com ultrassom duplex ("VASCLOSE-01"); a 4.8 diz que os templates foram feitos para ombro</td><td>Mudança 9</td></tr>
+<tr><td>T9</td><td><span class="pill PASS">PASS</span></td><td>Criado no start-up, revisado por gatilho ou na data prevista</td><td></td></tr>
+<tr><td>D1</td><td><span class="pill FAIL">FAIL</span></td><td>Cita CDTR, EVF e TI ("TI-014-02"), que não existem entre os 24</td><td>Mudanças 1 e 18</td></tr>
+<tr><td>D2</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>A estrutura nasce no start-up, mas declara depender do DTRM</td><td>Mudança 4</td></tr>
+<tr><td>D3</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>Gatilhos de revisão genéricos na Seção E</td><td>Mudança 13</td></tr>
+<tr><td>D4</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>Diz que alimenta o TRE; não diz que alimenta DTRM, RACI e IMC</td><td>Mudança 14</td></tr>
+<tr><td>D5</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>CCDM e DTRM se citam como entrada um do outro</td><td>Mudança 4</td></tr>
+<tr><td>D6</td><td><span class="pill FAIL">FAIL</span></td><td>As linhas da F não têm ID; DTRM, RACI, TRE e o registro por pessoa precisam citar a tarefa</td><td>Mudança 2</td></tr>
+<tr><td>P1</td><td><span class="pill PASS">PASS</span></td><td>Preenchível por um centro Tipo C; a matriz tem 8 colunas legíveis</td><td></td></tr>
+<tr><td>P2</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>Código e supervisão têm respostas fechadas; função e CtQ estão em texto livre</td><td>Mudanças 5 e 11</td></tr>
+<tr><td>P3</td><td><span class="pill PASS">PASS</span></td><td>Sem campo morto (a repetição da aprovação entra em I1)</td><td></td></tr>
+<tr><td>P4</td><td><span class="pill PASS">PASS</span></td><td>Instruções curtas e suficientes</td><td></td></tr>
+<tr><td>P5</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>A continuação funciona, mas o rodapé diz "Page 3 of 3" em toda cópia impressa</td><td>Mudança 16</td></tr>
+<tr><td>P6</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>Checklist sim/não e assinaturas claros; "Approval status" é texto livre</td><td>Mudança 15</td></tr>
+<tr><td>I1</td><td><span class="pill FAIL">FAIL</span></td><td>A coluna "Minimum supervision model" da C e a coluna "Typical use" da D dizem a mesma relação código↔supervisão; "Approval status" e "Approval decision" na pág. 1 repetem a Seção E</td><td>Mudanças 6 e 15</td></tr>
+<tr><td>I2</td><td><span class="pill FAIL">FAIL</span></td><td>Na C, vermelho = mais crítico; na D, S1 (mais supervisão) é verde e S3 (rotina) é vermelho. "S1 + S2" não está definido</td><td>Mudanças 7 e 8</td></tr>
+<tr><td>I3</td><td><span class="pill PASS">PASS</span></td><td>Seções A a F em sequência (corrigido hoje)</td><td></td></tr>
+<tr><td>I4</td><td><span class="pill PASS">PASS</span></td><td>v0.2 no cabeçalho, no rodapé e no campo de revisão</td><td></td></tr>
+<tr><td>I5</td><td><span class="pill PASS">PASS</span></td><td>Contagens e datas do exemplo batem</td><td></td></tr>
+<tr><td>V1</td><td><span class="pill PASS">PASS</span></td><td>Cabeçalho nas 3 páginas</td><td></td></tr>
+<tr><td>V2</td><td><span class="pill PASS">PASS</span></td><td>Seção A = Purpose and Use</td><td></td></tr>
+<tr><td>V3</td><td><span class="pill PASS">PASS</span></td><td>A assinatura fecha a parte controlada; depois dela só vem a folha de continuação, ligada pelo cabeçalho</td><td></td></tr>
+<tr><td>V4</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>Ver P5</td><td>Mudança 16</td></tr>
+<tr><td>V5</td><td><span class="pill PASS">PASS</span></td><td>Nada cortado; espaço suficiente para escrever</td><td></td></tr>
+<tr><td>V6</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>Ver I2 (cores)</td><td>Mudança 7</td></tr>
+<tr><td>V7</td><td><span class="pill PASS">PASS</span></td><td>Retrato para controle, paisagem para a matriz</td><td></td></tr>
+</table></div>
+
+<h2>Mudanças, em ordem de gravidade</h2>
+<ol>
+<li><span class="pill B">B</span> <b>Falta o registro de delegação por pessoa.</b> A tese pressupõe um "delegation log with criticality coding" que registra quem está autorizado a qual tarefa, desde quando e com base em qual liberação (4.2.1 e 4.2.5 antigas, 4.2.3 e 5.4 atuais; ISO 14155:2026 Clause 7.6). O CCDM diz que não autoriza pessoas e manda isso para o "CDTR", que não existe na tese. <b>Acrescentar</b> uma Seção G repetível, como a F, chamada "Person-task authorization register". Colunas: nome, iniciais, rubrica, função, IDs das tarefas (da F), nível de supervisão aplicado, decisão de liberação (ID do TRE ou do SCR), início, fim, iniciais e data do PI. É também o lugar onde entram as liberações do TRE e do SCR, como você descreveu (os registros individuais alimentam o log de delegação). <b>Remover</b> todas as menções ao CDTR.</li>
+<li><span class="pill I">I</span> <b>Acrescentar uma coluna "Task ID"</b> na F (T01, T02...). DTRM, RACI, TRE e o registro da G passam a citar a tarefa pelo ID.</li>
+<li><span class="pill I">I</span> <b>Tirar nomes e IDs de registros individuais da F.</b> A F fica no nível de função e tipo de registro: "Credentialed surgeon (SCR) + device release (TRE)", e não "SCR-014; TRE-SG03". Nomes e IDs vão para a G.</li>
+<li><span class="pill I">I</span> <b>Inverter a dependência com o DTRM.</b> Tirar o DTRM das entradas da Seção A, porque o DTRM é que deve ser montado a partir das tarefas do CCDM. Manter a checagem de coerência com o DTRM só na revisão (Seção E).</li>
+<li><span class="pill I">I</span> <b>CtQ pelo código da tese.</b> Trocar "Protected CTQ" por "CtQ domain" com resposta fechada (CtQ1 a CtQ12, Table 3.2), e "CTQ" por "CtQ" no checklist da E.</li>
+<li><span class="pill I">I</span> <b>Eliminar a repetição entre C e D.</b> Na C, trocar a coluna "Minimum supervision model" por "Allowed supervision levels" (C1: S0; C2: S1 a S2; C3: S2 a S3). Na D, tirar a coluna "Typical use".</li>
+<li><span class="pill I">I</span> <b>Corrigir as cores dos níveis de supervisão</b> para seguirem o mesmo sentido da criticidade (mais restritivo = mais quente): S0 vermelho, S1 laranja, S2 amarelo claro, S3 verde. Ou deixar os níveis em cinza neutro.</li>
+<li><span class="pill I">I</span> <b>Definir a transição entre níveis</b> em vez de "S1 + S2". Formato: "S1 → S2 after &lt;condition&gt;", por exemplo depois de N casos supervisionados e de revisão de liberação. Para cirurgiões, a condição é a revisão do SLCT, o que liga a delegação à curva de aprendizagem da 4.3.2.</li>
+<li><span class="pill I">I</span> <b>Refazer o exemplo como investigação de ombro</b> (artroplastia reversa, por exemplo), em inglês americano.</li>
+<li><span class="pill I">I</span> <b>Acrescentar linhas mínimas pré-impressas para investigações com implante</b>, que o site só codifica. Devem incluir as que a 4.2.1 antiga cita: indicação cirúrgica e elegibilidade final (C1), causalidade e gravidade (C1), interpretação de desvio intraoperatório (C1 ou C2), substituição de componente, captura do identificador do implante, registro de desvio intraoperatório e adequação da imagem de seguimento (todas C2), mais medida de ROM e PROM, contabilidade do dispositivo, agendamento e transcrição.</li>
+<li><span class="pill I">I</span> <b>Usar as funções da 4.2.2</b> como lista fechada na coluna de função: PI, cirurgião credenciado, coordenador, equipe de sala, ligação com a radiologia, avaliador funcional, qualidade de dados. Na Seção C, uma linha deve lembrar os limites de cada função.</li>
+<li><span class="pill I">I</span> <b>Verificar a independência quando houver acúmulo de funções.</b> Acrescentar ao checklist da E: "For S1/S2 rows, the reviewer is not the person who performs the task; combined functions are listed". Acrescentar também uma nota para o Tipo C: revisão por especialista externo ou do patrocinador quando não houver especialista interno (Table 4.3).</li>
+<li><span class="pill M">M</span> <b>Gatilhos de revisão concretos</b> na E: novo risco no SRR que afete uma tarefa, ação de CAPA que mude um limite, achado do IMC de atividade fora do limite, emenda do CIP, condição do MRL.</li>
+<li><span class="pill M">M</span> <b>Declarar o que o CCDM alimenta</b> na Seção A ou B: DTRM e RACI (lista de tarefas), TRE (requisitos), IMC (checagem de delegação) e POT (o que exige o PI).</li>
+<li><span class="pill M">M</span> <b>Não repetir a aprovação na pág. 1.</b> Tirar "Approval decision / restrictions" do cabeçalho, porque já está na E. Deixar "Approval status" com resposta fechada: Approved / Approved with restrictions / Not approved.</li>
+<li><span class="pill M">M</span> <b>Rodapé da folha de continuação</b>: trocar "Page 3 of 3" por "Continuation sheet, see sheet number above".</li>
+<li><span class="pill M">M</span> <b>Grafia americana</b>: "Centre" → "Center", "enrolment" → "enrollment".</li>
+<li><span class="pill M">M</span> <b>Trocar EVF por PSEAR</b> e tirar "TI-014-02", porque a própria F é o inventário de tarefas. Se "DC-2026-447" for um registro de mudança do site, chamá-lo de forma genérica.</li>
+</ol>
+
+<h2>Consequências para outros instrumentos</h2>
+<ul>
+<li><b>TRE:</b> a decisão de liberação passa a ser lançada na Seção G do CCDM e cita os IDs das tarefas da F.</li>
+<li><b>SCR:</b> a decisão de credenciamento é a base das linhas de tarefas cirúrgicas na G (4.2.3 atual).</li>
+<li><b>DTRM:</b> é montado a partir dos IDs de tarefa do CCDM, não o contrário.</li>
+<li><b>RACI:</b> usa os mesmos IDs de tarefa e fica dono do titular e do substituto de cada função, sem repetir o CCDM.</li>
+<li><b>POT:</b> a lista de gatilhos de escalonamento deve ser a mesma usada nos gatilhos do CCDM; o POT é o dono da via.</li>
+<li><b>IMC:</b> uma das checagens verifica se as atividades foram feitas só por pessoas liberadas na G.</li>
+<li><b>SLCT:</b> a revisão do SLCT é a condição para o cirurgião passar de S1 para S2 na G.</li>
+</ul>
+
+<h2>Mudanças na tese que esta revisão sugere</h2>
+<ul>
+<li>Se você adotar a Seção G, a linha do CCDM na Table 4.4 deve dizer isso. "How it works" ganha "and records who is authorized for each task, from when, on which release decision"; "Inputs" ganha "the TRE and SCR decisions"; "Output" ganha "and the current record of authorized persons".</li>
+</ul>
+
+<h2>Decisões para você</h2>
+<ol>
+<li><b>Onde fica o registro por pessoa?</b> (a) Seção G dentro do CCDM, que é a minha recomendação e fecha a cadeia TRE/SCR → delegação. (b) No log de delegação do patrocinador, e então a tese precisa dizer isso na 4.2.2 e na Table 4.4, e o CCDM só cita "the study delegation log".</li>
+<li><b>Linhas mínimas pré-impressas para implante</b> (mudança 10): sim ou não?</li>
+<li><b>Refazer o exemplo como ombro</b> (mudança 9) agora ou depois?</li>
+<li><b>Regras comuns:</b> aprovar S6 (só citar os 24), S7 (CtQ por código) e S11 (ID nas linhas citadas), que esta revisão aplicou, e as duas novas abaixo.</li>
+</ol>
+
+<h2>Regras comuns propostas por esta revisão</h2>
+<ul>
+<li><b>S12:</b> escalas de gravidade, criticidade ou restrição usam o mesmo sentido de cor em todos os instrumentos: mais restritivo ou mais crítico = vermelho, rotina = verde.</li>
+<li><b>S13:</b> folhas de continuação repetíveis têm no rodapé "Continuation sheet" e o número da folha no cabeçalho, nunca "Page n of N".</li>
+</ul>
+</main>
+</body>
+</html>

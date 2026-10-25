@@ -1,0 +1,141 @@
+<!doctype html><html lang="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Revisão SCR v0.4</title><style>
+:root{--ink:#1b2430;--muted:#5d6876;--line:#d5dbe3;--bg:#ffffff;--soft:#f4f6f9;--navy:#1f4173;--b:#b42318;--b-bg:#fdecea;--i:#b54708;--i-bg:#fef3e2;--m:#475467;--m-bg:#eef1f5;--ok:#1d7a46;--ok-bg:#e7f5ec}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:22px;margin:0 0 4px}
+h2{font-size:17px;margin:32px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--navy);color:var(--navy)}
+p{margin:6px 0}
+.meta{color:var(--muted);font-size:13px}
+.verdict{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0;padding:12px 14px;background:var(--soft);border:1px solid var(--line);border-radius:8px}
+.verdict strong{font-size:16px}
+.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap}
+.B{background:var(--b-bg);color:var(--b)}.I{background:var(--i-bg);color:var(--i)}.M{background:var(--m-bg);color:var(--m)}
+.PASS,.COV{background:var(--ok-bg);color:var(--ok)}.PARTIAL,.PAR{background:var(--i-bg);color:var(--i)}.FAIL,.MIS{background:var(--b-bg);color:var(--b)}.NA{background:var(--m-bg);color:var(--m)}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:6px 8px;vertical-align:top;text-align:left}
+th{background:var(--navy);color:#fff;font-weight:600}
+tr:nth-child(even) td{background:var(--soft)}
+ol li,ul li{margin:6px 0}
+code{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;background:var(--soft);padding:0 3px;border-radius:3px}
+.note{color:var(--muted);font-size:12.5px}
+.proposal{border:1px solid var(--line);border-left:4px solid var(--navy);background:var(--soft);padding:10px 14px;border-radius:6px;margin:10px 0}
+.proposal ol{margin:4px 0 0 0;padding-left:20px}
+</style></head><body><main>
+<h1>Revisão do SCR v0.4: Surgical Credentialing Record</h1>
+<p class="meta">Arquivo revisado: <code>Forms, templates and tools/SCR/SCR_Surgical_Credentialing_Record_v0.4_simulated_editable.html</code> (30/09). Nenhum arquivo foi anexado. A v0.4 é a versão atual e existe em branco e simulada; revisei a simulada, que mostra o formulário em uso. Revisão de 10/10/2026 pela skill <code>instrument-review</code>. Fontes: 4.2.3 (antiga e atual), 4.2.1, 4.3.2, 4.6.2 e 4.6.3 antigas; 5.3 atual; Tables 4.3 e 4.4; Figuras 4.4 e 4.5; exigências transferidas (C-R16, C-R18); decisão sua na revisão do TRE de que o SCR é checagem de qualificação e entra no TRE, Seção B.</p>
+<div class="verdict"><strong>Veredito: BLOQUEADO</strong> <span class="pill B">B 1</span> <span class="pill I">I 7</span> <span class="pill M">M 4</span></div>
+<div style="margin:14px 0;padding:12px 14px;border:1px solid #9fd3b4;background:#e7f5ec;border-radius:8px"><b>Atualização de 10/10/2026: v0.5 feito.</b> Você aprovou tudo. Arquivos novos em <code>SCR/</code>: <code>SCR_Surgical_Credentialing_Record_v0.5_blank_editable.html</code> e <code>..._v0.5_simulated_editable.html</code>, com 4 páginas: A Purpose and use; B Professional eligibility; C Procedure-specific competence; D Credentialed scope and temporary controls; E Credentialing decision; F Approval; G Reassessment log. A liberação no dispositivo saiu do SCR e ficou no TRE, o que desfaz o círculo. As saídas agora são as da Table 4.4, há uma coluna para o critério do patrocinador e um campo para a incerteza residual, e os gatilhos viraram caixinhas. O proctoring é uma condição do SCR que se fecha no log; as assinaturas são três caixas; a próxima revisão fica em até 12 meses. O exemplo é do GLENOS-01, com o Dr Paulo Teixeira em credenciamento condicional. O v0.4 ficou intacto.</div><p>O conteúdo é o que a 4.2.3 pede. As Seções D, E e F seguem uma a uma as três camadas de evidência da tese: elegibilidade profissional, competência no procedimento e escopo com supervisão. Há validade por evidência, um histórico de reavaliação em folha de continuação e um avaliador independente quando o cirurgião é o PI. O bloqueio vem da cadeia. O SCR v0.4 usa a liberação do TRE como entrada (Seção F, linha "Current device training and release"), e o TRE v0.4 usa o SCR como entrada (Seção B). Assim um espera o outro. Pela Table 4.4 e pela sua decisão, o SCR vem antes e alimenta o TRE. O resto são ajustes: as saídas da Table 4.4, os gatilhos de reavaliação, o padrão visual e um exemplo simulado que é de outro estudo.</p>
+
+<h2>Pontos fortes</h2><ul>
+<li>As três camadas da 4.2.3 estão no formulário. A Seção D cobre especialidade e registro, privilégios institucionais e experiência no campo anatômico. A Seção E cobre procedimentos comparáveis, volume recente e casos de complexidade semelhante. A Seção F cobre escopo, supervisão e limites de seleção de casos.</li>
+<li>Cada evidência tem data de validade ("Valid through / review date"), o que torna concreta a ideia da tese de que a qualificação é um estado que precisa continuar atual.</li>
+<li>A fronteira está bem escrita: "This record verifies existing privileges; it does not grant them". O SCR não reclassifica a criticidade do CCDM, e os registros especializados guardam a sua própria narrativa, como pede a 4.4.4.</li>
+<li>A Seção H é um histórico de reavaliação em folha de continuação, com ID do registro e do cirurgião. É a mesma lógica de log do RACI.</li>
+<li>Quando o cirurgião é o PI, quem avalia é outra pessoa ("Independent assessment by RC, not self-assessment"). É a separação entre execução e supervisão que o DR10 pede.</li>
+<li>O aviso "Use limit" manda pausar e escalar uma atribuição fora do escopo, que é o gatilho da 4.2.1 antiga ("surgery performed by a surgeon who has not been released").</li></ul>
+
+<h2>Cobertura do que o texto da tese exige</h2>
+<p class="note">Lista completa em <code>~/.claude/skills/instrument-review/reference/requirements/SCR.md</code>.</p>
+<div class="table-wrap"><table><tr><th>#</th><th>O que o texto exige (fonte)</th><th>Status</th><th>Onde está / outro instrumento</th><th>Mudança</th></tr>
+<tr><td>R1</td><td>Decide se o cirurgião tem competência e escopo para o procedimento (Table 4.4)</td><td><span class="pill COV">COBERTO</span></td><td>Decisão na G, escopo na F</td><td>Nenhuma</td></tr>
+<tr><td>R2</td><td>Entradas: formação, experiência, privilégios, treinamento, competência técnica e gatilhos de recredenciamento (Table 4.4)</td><td><span class="pill PAR">PARCIAL</span></td><td>As evidências estão em D e E. A entrada de treinamento é a liberação do TRE (F), o que cria o círculo com o TRE. Os gatilhos de recredenciamento não aparecem como lista</td><td>Mudanças 1 e 4</td></tr>
+<tr><td>R3</td><td>Comparar com os critérios do patrocinador (Table 4.4; 4.2.3)</td><td><span class="pill PAR">PARCIAL</span></td><td>O critério do patrocinador aparece no cabeçalho e numa linha de "Other prerequisite" da D. Não há coluna dizendo, camada por camada, qual é o critério e se foi atendido</td><td>Mudança 3</td></tr>
+<tr><td>R4</td><td>Saída: credentialed, conditional, restricted ou not credentialed (Table 4.4)</td><td><span class="pill PAR">PARCIAL</span></td><td>A G usa "Authorized within stated scope / with additional conditions / Not authorized / Suspended". Falta "restricted", e os nomes são outros</td><td>Mudança 2</td></tr>
+<tr><td>R5</td><td>Três camadas de evidência (4.2.3 antiga)</td><td><span class="pill COV">COBERTO</span></td><td>D, E e F. A terceira camada (liberação no dispositivo) fica no TRE depois da mudança 1, com uma remissão no SCR</td><td>Mudança 1</td></tr>
+<tr><td>R6</td><td>A dificuldade: o critério do patrocinador resolve parte da incerteza, e o centro decide e fecha o restante antes do primeiro caso (4.2.3 atual)</td><td><span class="pill MIS">FALTANDO</span></td><td>Nenhum campo pergunta qual incerteza sobra depois do critério do patrocinador nem como ela é fechada</td><td>Mudança 3</td></tr>
+<tr><td>R7</td><td>Patrocinador define o limiar; o centro aplica e documenta a decisão (ISO 14155:2026 Clauses 6.8, 9.2.1, 10.1, 10.3, 10.6)</td><td><span class="pill COV">COBERTO</span></td><td>Cabeçalho "Sponsor Entry Criteria / Site Qualification Reference"; G datada e assinada</td><td>Nenhuma</td></tr>
+<tr><td>R8</td><td>Controles temporários: proctoring, co-surgery, casos iniciais menos complexos (4.2.3)</td><td><span class="pill COV">COBERTO</span></td><td>F: "Initial supervision / proctoring plan" e "Case-selection limits"</td><td>Decisão 1</td></tr>
+<tr><td>R9</td><td>Reavaliação anual e após emenda, sinal de segurança, cluster de complicações ou drift; confirmar, restringir, suspender ou restaurar (4.2.3)</td><td><span class="pill PAR">PARCIAL</span></td><td>O texto da H cita "evidence expiry, protocol / device changes and competence or safety concerns". Faltam o anual, o cluster de complicações (CSST) e o drift (SLCT) como gatilhos, e o efeito não é um conjunto fechado</td><td>Mudanças 2 e 4</td></tr>
+<tr><td>R10</td><td>O SLCT alimenta a reavaliação (4.2.3 e 4.3.2 antigas)</td><td><span class="pill PAR">PARCIAL</span></td><td>A C cita o SLCT entre os sinais, mas a H não tem a revisão do SLCT como gatilho</td><td>Mudança 4</td></tr>
+<tr><td>R11</td><td>Decisão ligada à delegação (C-R18)</td><td><span class="pill PAR">PARCIAL</span></td><td>O CCDM aparece. O formulário não diz que a decisão entra no TRE, Seção B, nem que o RACI só dá T03 a quem tem SCR atual</td><td>Mudança 8</td></tr>
+<tr><td>R12</td><td>Quem foi autorizado a quê, com base em quê, desde quando (C-R16)</td><td><span class="pill COV">COBERTO</span></td><td>G (escopo, data efetiva, justificativa) e H</td><td>Nenhuma</td></tr>
+<tr><td>R13</td><td>Criado na fase 2, antes da inclusão; verificado antes de cada caso na fase 4</td><td><span class="pill PAR">PARCIAL</span></td><td>A nota da H diz que "the latest approved decision governs". O formulário não diz que o registro nasce antes do TRE e do primeiro caso, nem que é consultado antes de cada caso</td><td>Mudança 8</td></tr>
+<tr><td>R14</td><td>Cirurgia por cirurgião não liberado é gatilho de escalonamento (4.2.1 antiga)</td><td><span class="pill COV">COBERTO</span></td><td>Aviso "Use limit" da F</td><td>Nomear o POT (mudança 8)</td></tr>
+<tr><td>R15</td><td>Table 4.3: no Type C mantém-se autorização documentada; proctoring quando a experiência local é limitada</td><td><span class="pill PAR">PARCIAL</span></td><td>O proctoring existe. Não há regra para quando o único cirurgião é o PI e não há avaliador independente no centro</td><td>M4</td></tr>
+<tr><td>R16</td><td>Registro apresentável em monitoria ou auditoria</td><td><span class="pill COV">COBERTO</span></td><td>D a H, com referências às fontes</td><td>Nenhuma</td></tr>
+<tr><td>R17</td><td>Você decidiu que o SCR é checagem de qualificação e entra no TRE, Seção B</td><td><span class="pill MIS">FALTANDO</span></td><td>O SCR v0.4 faz o caminho inverso e lê o TRE</td><td>Mudança 1</td></tr>
+<tr><td>R18</td><td>Registro de evidência de uma pessoa que cita as fontes sem copiá-las</td><td><span class="pill COV">COBERTO</span></td><td>Cita CV, privilégios e logs de casos por ID</td><td>Nenhuma</td></tr>
+</table></div>
+
+<h2>Critérios</h2>
+<div class="table-wrap"><table><tr><th>ID</th><th>Status</th><th>Evidência</th><th>Mudança</th></tr>
+<tr><td>T1</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>O propósito bate com o da tese, mas o SCR também confere a liberação no dispositivo, que é papel do TRE</td><td>Mudança 1</td></tr>
+<tr><td>T2</td><td><span class="pill FAIL">FAIL</span></td><td>Usa o TRE como entrada (F e C)</td><td>Mudança 1</td></tr>
+<tr><td>T3</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>As saídas da G não são as quatro da Table 4.4</td><td>Mudança 2</td></tr>
+<tr><td>T4</td><td><span class="pill PASS">PASS</span></td><td>Registro de evidência de uma pessoa (Figure 4.3)</td><td>Nenhuma</td></tr>
+<tr><td>T5</td><td><span class="pill PASS">PASS</span></td><td>CtQ5 (escopo e limites de técnica e indicação) e CtQ6 (credenciamento e manutenção) são controlados por F, G e H; CtQ1 aberto (pessoal qualificado) está implícito</td><td>Nenhuma</td></tr>
+<tr><td>T6</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>DR10: há registro datado e avaliador independente. DR3, operador acompanhado durante a condução, é parcial porque o SLCT não é gatilho da H</td><td>Mudança 4</td></tr>
+<tr><td>T7</td><td><span class="pill FAIL">FAIL</span></td><td>"SUR-01 / High criticality" no lugar de T03 / C2 / S1 + S2; "Device Training Matrix" no lugar do nome do DTRM; grafia britânica ("Orthopaedic", "Recognised", "authorised", "licence")</td><td>Mudanças 7 e M2</td></tr>
+<tr><td>T8</td><td><span class="pill FAIL">FAIL</span></td><td>O exemplo é de outro estudo ("Northbridge Shoulder Feasibility Study / NB-014"), não do GLENOS-01 usado no CCDM, no DTRM, no TRE e no RACI</td><td>Mudança 7</td></tr>
+<tr><td>T9</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>O momento de criação e a consulta antes de cada caso não estão escritos</td><td>Mudança 8</td></tr>
+<tr><td>D1</td><td><span class="pill PASS">PASS</span></td><td>Cita CCDM, TRE, SLCT, CSST, SRR, CAPA e SART, todos do conjunto</td><td>Nenhuma</td></tr>
+<tr><td>D2</td><td><span class="pill PASS">PASS</span></td><td>A parte fixa (D a G) e a parte que muda (H) estão separadas</td><td>Nenhuma</td></tr>
+<tr><td>D3</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>Os gatilhos são texto livre e incompletos</td><td>Mudança 4</td></tr>
+<tr><td>D4</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>Não diz o que alimenta (TRE B, RACI, checagem antes do caso, POT)</td><td>Mudança 8</td></tr>
+<tr><td>D5</td><td><span class="pill FAIL">FAIL</span></td><td>Dependência circular com o TRE</td><td>Mudança 1</td></tr>
+<tr><td>D6</td><td><span class="pill PASS">PASS</span></td><td>SCR Record ID; a G é a decisão que o TRE cita</td><td>Nenhuma</td></tr>
+<tr><td>P1</td><td><span class="pill PASS">PASS</span></td><td>São 4 páginas para um cirurgião, preenchíveis por um centro pequeno</td><td>Nenhuma</td></tr>
+<tr><td>P2</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>Na E, a última linha troca "Insufficient" por "Not applicable"; o efeito na H é texto livre</td><td>M1 e mudança 2</td></tr>
+<tr><td>P3</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>No cabeçalho, "Current Credentialing Decision", "Record Status" e "Linked Records" repetem a G e a C</td><td>Mudança 5</td></tr>
+<tr><td>P4</td><td><span class="pill PASS">PASS</span></td><td>As instruções bastam para preencher</td><td>Nenhuma</td></tr>
+<tr><td>P5</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>A folha de continuação tem o ID e o número da folha, mas faltam revisão, data efetiva e "of N"</td><td>M3</td></tr>
+<tr><td>P6</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>A decisão é fechada, mas com categorias diferentes das da tese</td><td>Mudança 2</td></tr>
+<tr><td>I1</td><td><span class="pill FAIL">FAIL</span></td><td>A Seção B ("Credentialing Architecture") repete A e C; o cabeçalho repete a G</td><td>Mudança 5</td></tr>
+<tr><td>I2</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>As cores da decisão estão definidas, mas não são usadas no exemplo; as opções da E não são iguais em todas as linhas</td><td>M1</td></tr>
+<tr><td>I3</td><td><span class="pill PASS">PASS</span></td><td>As letras A a H estão em sequência e as referências cruzadas estão certas</td><td>Nenhuma</td></tr>
+<tr><td>I4</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>A versão só aparece na página 1; nas outras, o lugar da versão traz um subtítulo</td><td>Mudança 6</td></tr>
+<tr><td>I5</td><td><span class="pill PASS">PASS</span></td><td>Dentro do próprio documento, as datas e os IDs batem</td><td>Nenhuma</td></tr>
+<tr><td>V1</td><td><span class="pill PASS">PASS</span></td><td>Há cabeçalho em todas as páginas</td><td>Formato na mudança 6</td></tr>
+<tr><td>V2</td><td><span class="pill FAIL">FAIL</span></td><td>A Seção A se chama "Purpose, Decision and Boundary" (S2)</td><td>Mudança 6</td></tr>
+<tr><td>V3</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>Duas caixas de texto dentro da G, com nome, função, assinatura e data misturados num mesmo campo</td><td>Decisão 2</td></tr>
+<tr><td>V4</td><td><span class="pill PASS">PASS</span></td><td>"Page n of 4" certo</td><td>Nenhuma</td></tr>
+<tr><td>V5</td><td><span class="pill PASS">PASS</span></td><td>Nada cortado e espaço suficiente para escrever</td><td>Nenhuma</td></tr>
+<tr><td>V6</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>Cabeçalho em caixa alta, sem subtítulo e com travessão, diferente do CCDM, do TRE e do RACI</td><td>Mudança 6</td></tr>
+<tr><td>V7</td><td><span class="pill PASS">PASS</span></td><td>Todas as páginas em retrato</td><td>Nenhuma</td></tr>
+</table></div>
+
+<h2>Mudanças, em ordem de gravidade</h2>
+<ol>
+<li><span class="pill B">B</span> <b>Desfazer o círculo com o TRE: o SCR vem antes e alimenta o TRE.</b> Tirar da F a linha "Current device training and release" e, da C, a linha que diz que o SCR recebe a liberação do TRE. A decisão do SCR passa a depender só das evidências de D e E e do critério do patrocinador. A terceira camada da tese (liberação no dispositivo) fica no TRE, onde o DTRM MOD-02 já define o método ("Supervised first cases; senior surgeon sign-off"). O SCR fica só com uma remissão: "Device-specific release: TRE, task T03". A Seção A passa a dizer: "The SCR decision is recorded as a qualification row in TRE Section B. The TRE releases the device task; the RACI assigns T03 only to a surgeon with a current SCR and TRE release."</li>
+<li><span class="pill I">I</span> <b>Usar as saídas da tese.</b> Na G, quatro opções: Credentialed / Conditional / Restricted / Not credentialed, com as cores já definidas no CSS e usadas na mesma direção do resto: verde, amarelo, laranja, vermelho. Na H, o efeito de cada reavaliação vira um conjunto fechado: Confirmed / Restricted / Suspended / Restored, que são os verbos da 4.2.3.</li>
+<li><span class="pill I">I</span> <b>Tratar a dificuldade que a 4.2.3 descreve.</b> Em D e E, uma coluna "Sponsor criterion" ao lado da evidência, para mostrar o limiar do patrocinador e se ele foi atendido. Na G, um campo "Residual uncertainty and how it is closed before the first case", ligado ao controle da F (proctoring, co-surgery, casos menos complexos).</li>
+<li><span class="pill I">I</span> <b>Gatilhos de reavaliação como lista de caixinhas na H</b>, igual à F do TRE: Annual review / CIP amendment / Device or technique change / Safety signal (SART) / Complication cluster (CSST) / SLCT review / Privileges or license change / Other.</li>
+<li><span class="pill I">I</span> <b>Tirar as repetições.</b> A Seção B sai, porque repete A e C. Do cabeçalho saem "Record Status", "Current Credentialing Decision" e "Linked Records", que estão na G e na C.</li>
+<li><span class="pill I">I</span> <b>Padrão visual.</b> A Seção A passa a ser "Purpose and use" (S2). O cabeçalho do CCDM vai para todas as páginas: título, subtítulo da página e "BLANK / SIMULATED · v0.5" (S1, S4).</li>
+<li><span class="pill I">I</span> <b>Refazer o exemplo simulado na cadeia do GLENOS-01.</b> Proponho o Dr Paulo Teixeira, que no RACI é o backup do P-02 com liberação condicional no T03 (TRE-014-03). O exemplo seria: credenciamento condicional por volume recente limitado de artroplastia reversa, primeiros cinco casos com proctoring da Dr Lina Costa, só casos primários eletivos, PI Dr Alex Morgan como aprovador. Usar os códigos do CCDM (T03, C2, S1 + S2) e grafia americana.</li>
+<li><span class="pill I">I</span> <b>Dizer o que o SCR alimenta e quando nasce.</b> Na A: "Completed at start-up, before the surgeon's TRE release and the first study case. Feeds the TRE (Section B) and, through it, the RACI. The current decision (G, or the latest line in H) is checked before each case; a case outside the decision is escalated to the PI (POT)."</li>
+<li><span class="pill M">M</span> <b>M1 Opções iguais em todas as linhas</b> da E: Adequate / Conditional / Insufficient / N/A.</li>
+<li><span class="pill M">M</span> <b>M2 Grafia americana e nomes do conjunto:</b> Orthopedic, Recognized, authorized, license; "DTRM" no lugar de "Device Training Matrix"; hífen no título como nos outros.</li>
+<li><span class="pill M">M</span> <b>M3 Folha de continuação</b> com SCR ID, revisão, data efetiva e "sheet n of N".</li>
+<li><span class="pill M">M</span> <b>M4 Regra para o Type C:</b> se o único cirurgião é o PI, o credenciamento é avaliado por outro cirurgião credenciado, pela instituição ou pelo patrocinador. Escrever isso numa linha da G.</li>
+</ol>
+
+<div class="proposal"><b>Como ficaria o SCR v0.5 (proposta, 4 páginas):</b>
+<ol>
+<li>Página 1: cabeçalho; A Purpose and use (entradas, saídas, momento, o que alimenta); B Professional eligibility (com coluna do critério do patrocinador).</li>
+<li>Página 2: C Procedure-specific competence (com coluna do critério do patrocinador); D Credentialed scope and temporary controls (procedimento, indicação, limite de complexidade, proctoring ou co-surgery com critério de fechamento; remissão ao TRE para a liberação no dispositivo).</li>
+<li>Página 3: E Credentialing decision (quatro saídas, incerteza residual, validade de no máximo 12 meses, próxima revisão) e F Approval (caixas de assinatura, conforme a decisão 2).</li>
+<li>Página 4: G Reassessment log (gatilhos em caixinhas, efeito fechado), em folha de continuação.</li>
+</ol></div>
+
+<h2>Consequências para outros instrumentos</h2><ul>
+<li><b>TRE:</b> nada obrigatório, porque a Seção B já manda registrar "SCR ID and outcome". Uma melhora pequena: na linha do SCR, o resultado poderia usar as quatro saídas do SCR em vez de "Suitable / Gap".</li>
+<li><b>RACI:</b> está coerente. O check (c) da G já pede o SCR atual via TRE, Seção B.</li>
+<li><b>SLCT e CSST</b> (próximas revisões): as saídas do SLCT (por exemplo, proctoring temporário ou restrição a casos menos complexos) e um cluster de complicações do CSST devem chegar à H do SCR como gatilho.</li>
+<li><b>ICDL e POT</b> (próximas revisões): a checagem do cirurgião antes de cada caso deve ler a decisão atual do SCR, e o POT deve receber a escalada de um caso fora do escopo.</li></ul>
+
+<h2>Mudanças na tese que esta revisão sugere</h2><ul>
+<li>Nenhuma obrigatória. Uma opcional: na Table 4.4, linha E, a coluna Inputs diz "training", o que pode ser lido como o treinamento no dispositivo, que é do TRE. Trocar por "prior training" deixaria a divisão com o TRE mais clara.</li></ul>
+
+<h2>Decisões para você</h2><ol>
+<li><b>Onde fica o proctoring inicial?</b> (a) <i>Recomendo:</i> o SCR define a condição de credenciamento (por exemplo, "primeiros cinco casos com proctoring") e a fecha na H citando a avaliação do TRE e a revisão do SLCT, enquanto o TRE guarda o treinamento no dispositivo e a liberação do T03. A 4.2.3 liga os controles temporários ao credenciamento. (b) Tudo no TRE, e o SCR fica só com a qualificação.</li>
+<li><b>Caixas de assinatura.</b> O SCR é um registro individual, como o TRE, que tem quatro caixas. <i>Recomendo</i> três caixas: "Credentialing assessor", "PI / accountable approver" e "Surgeon (acknowledgment)", cada uma com "Name / role" e "Signature / date". Quando o cirurgião é o PI, quem aprova é o avaliador independente.</li>
+<li><b>Caixa de próxima revisão.</b> Aqui ela faz sentido, porque a tese pede reavaliação anual. <i>Recomendo</i> manter "Next scheduled review (at most 12 months)" na decisão.</li>
+</ol>
+
+<h2>Regras comuns propostas por esta revisão</h2><ul>
+<li><b>S20 (proposta): assinaturas dos registros individuais.</b> TRE e SCR têm caixas para o avaliador, o PI / accountable approver e a pessoa avaliada. O TRE acrescenta o supervisor. É uma extensão da exceção que você aprovou para o TRE.</li></ul>
+<p class="note">Itens à espera de decisão não mudam o veredito até você decidir. Não editei o instrumento.</p>
+</main></body></html>

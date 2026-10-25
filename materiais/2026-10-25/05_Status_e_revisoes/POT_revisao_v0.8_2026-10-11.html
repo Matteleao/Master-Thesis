@@ -1,0 +1,154 @@
+<!doctype html><html lang="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Revisão POT v0.8</title><style>
+:root{--ink:#1b2430;--muted:#5d6876;--line:#d5dbe3;--bg:#ffffff;--soft:#f4f6f9;--navy:#1f4173;--b:#b42318;--b-bg:#fdecea;--i:#b54708;--i-bg:#fef3e2;--m:#475467;--m-bg:#eef1f5;--ok:#1d7a46;--ok-bg:#e7f5ec}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:22px;margin:0 0 4px}
+h2{font-size:17px;margin:32px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--navy);color:var(--navy)}
+p{margin:6px 0}
+.meta{color:var(--muted);font-size:13px}
+.verdict{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0;padding:12px 14px;background:var(--soft);border:1px solid var(--line);border-radius:8px}
+.verdict strong{font-size:16px}
+.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap}
+.B{background:var(--b-bg);color:var(--b)}.I{background:var(--i-bg);color:var(--i)}.M{background:var(--m-bg);color:var(--m)}
+.PASS,.COV{background:var(--ok-bg);color:var(--ok)}.PARTIAL,.PAR{background:var(--i-bg);color:var(--i)}.FAIL,.MIS{background:var(--b-bg);color:var(--b)}.NA{background:var(--m-bg);color:var(--m)}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:6px 8px;vertical-align:top;text-align:left}
+th{background:var(--navy);color:#fff;font-weight:600}
+tr:nth-child(even) td{background:var(--soft)}
+ol li,ul li{margin:6px 0}
+code{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;background:var(--soft);padding:0 3px;border-radius:3px;overflow-wrap:anywhere}
+.note{color:var(--muted);font-size:12.5px}
+.proposal{border:1px solid var(--line);border-left:4px solid var(--navy);background:var(--soft);padding:10px 14px;border-radius:6px;margin:10px 0}
+.proposal ol{margin:4px 0 0 0;padding-left:20px}
+</style></head><body><main>
+<h1>Revisão do POT v0.8: PI Oversight Template</h1>
+<p class="meta">Arquivo revisado: <code>Forms, templates and tools/POT/POT_PI_Oversight_Plan_and_Review_Record_v0_8_edited_2026-10-04_10-35-19.html</code> (04/10, em branco com linhas de exemplo). Nenhum arquivo foi anexado. É a versão mais recente na pasta, mais nova que as v0.1 a v0.4. Revisão de 11/10/2026 pela skill <code>instrument-review</code>. Fontes: 4.2.1 (antiga e atual), 4.6.2 antiga, 5.4 e 5.6 atuais, Tables 4.3 e 4.4, Figuras 4.4 e 4.5, e as ligações que o CCDM, o RACI e o SCR já fazem com o POT.</p>
+<div class="verdict"><strong>Veredito: PRECISA DE REVISÃO</strong> <span class="pill B">B 0</span> <span class="pill I">I 8</span> <span class="pill M">M 4</span></div>
+<p>O POT v0.8 separa bem as duas coisas que a tese pede: um <b>plano</b>, aprovado uma vez, e um <b>registro de revisão</b>, aberto a cada ciclo ou gatilho. Mas, dos cinco mecanismos do modelo de supervisão da 4.2.1, ele só implementa o plano. Os gatilhos de escalonamento e a arquitetura de reuniões não aparecem. As decisões reservadas ao PI não vêm do CCDM. O MRL não é citado nenhuma vez. O ciclo de revisão também não lê as seis fontes que a Table 4.4 dá ao POT. Do outro lado, as Seções F, G e H refazem o trabalho da CAPA (ação, prazo, verificação de eficácia), o que aumenta a carga que a 5.6 já reconhece ("The PI Oversight Template and the Milestone Review Log each create reviews and evidence that overlap"). A revisão propõe trocar esse peso pelos mecanismos que faltam, e o POT fica do mesmo tamanho ou menor.</p>
+
+<h2>Pontos fortes</h2><ul>
+<li>A separação entre plano e registro de revisão está na Seção A ("Configure once... Open for each scheduled, milestone or triggered review"). Ela junta a 4.2.1 antiga (o plano) e a Table 4.4 (o registro do ciclo).</li>
+<li>A Seção C faz uma pergunta de supervisão por domínio ("Was the procedure performed within the approved boundary?"), e isso mantém o PI no julgamento, não no visto.</li>
+<li>A Seção D liga cada domínio à cadência ou ao gatilho e ao prazo de resposta, que são três dos cinco elementos que a 4.2.1 antiga pede ao plano.</li>
+<li>Há IDs em todos os níveis (O-01, R-01, A-01), o que permite rastrear do achado à ação.</li>
+<li>A assinatura do PI fecha cada revisão, e "Next Review / Follow-up" leva os pendentes adiante. É o registro escrito, programado e com evidência que o DR10 pede.</li>
+<li>Cabeçalho em todas as páginas, "Page n of 6" certo, nada cortado.</li></ul>
+
+<h2>Cobertura do que o texto da tese exige</h2>
+<p class="note">Lista completa em <code>~/.claude/skills/instrument-review/reference/requirements/POT.md</code>.</p>
+<div class="table-wrap"><table><tr><th>#</th><th>O que o texto exige (fonte)</th><th>Status</th><th>Onde está / outro instrumento</th><th>Mudança</th></tr>
+<tr><td>R1</td><td>Ler SRR, PIR, FUCR, IMC, SART e SCML num ciclo definido, com uma decisão, uma ação e o escalonamento, se houver; alimentar o MRL (Table 4.4)</td><td><span class="pill PAR">PARCIAL</span></td><td>A revisão existe (E), mas as seis fontes não estão impressas como entradas fixas do ciclo, e o MRL não aparece</td><td>Mudanças 1 e 6</td></tr>
+<tr><td>R2</td><td>O plano diz o que exige revisão direta, o que se delega, a frequência, os gatilhos fora da agenda e a evidência (4.2.1 antiga)</td><td><span class="pill PAR">PARCIAL</span></td><td>A D tem a cadência, o gatilho e a saída por domínio. A divisão entre o que é direto e o que é delegado não está explícita</td><td>Mudança 4</td></tr>
+<tr><td>R3</td><td>A supervisão não fica implícita nem depende do costume local</td><td><span class="pill COV">COBERTO</span></td><td>Plano aprovado e revisões assinadas</td><td>Nenhuma</td></tr>
+<tr><td>R4</td><td>O PI responde por tudo (ISO 14155:2026 Clause 10.1)</td><td><span class="pill COV">COBERTO</span></td><td>C: "The PI remains accountable for participant protection and critical site decisions"</td><td>Citar a cláusula (M)</td></tr>
+<tr><td>R5</td><td>Envolvimento escalonado pela criticidade do CCDM</td><td><span class="pill PAR">PARCIAL</span></td><td>O CCDM aparece em B e C, mas o plano não deriva das tarefas C1 (S0) e das tarefas com revisão ativa do PI (S1)</td><td>Mudança 4</td></tr>
+<tr><td>R6</td><td>Julgamentos insubstituíveis do PI: adequação cirúrgica, desvios intraoperatórios, relação do evento com o dispositivo, sinais de drift</td><td><span class="pill MIS">FALTANDO</span></td><td>Não aparecem como lista</td><td>Mudança 4</td></tr>
+<tr><td>R7</td><td>Pontos explícitos de envolvimento direto: elegibilidade limítrofe, mudanças intraoperatórias, substituição de componentes, interpretação de revisão</td><td><span class="pill PAR">PARCIAL</span></td><td>Só a elegibilidade aparece (exemplo O-01)</td><td>Mudança 4</td></tr>
+<tr><td>R8</td><td>A dificuldade: decidir antes o que precisa do julgamento do PI e o que pode ser revisto depois (4.2.1 atual)</td><td><span class="pill PAR">PARCIAL</span></td><td>A coluna "Review mode" da C sugere isso, mas não pede a decisão "antes / no ponto de decisão / depois"</td><td>Mudança 4</td></tr>
+<tr><td>R9</td><td>Criticidade não é intrínseca; esquema copiado de outro centro falha</td><td><span class="pill COV">COBERTO</span></td><td>O plano é configurado pelo centro a partir das referências da B</td><td>Nenhuma</td></tr>
+<tr><td>R10</td><td>Pontos formais de revisão são do MRL; o ciclo do POT alimenta o MRL</td><td><span class="pill PAR">PARCIAL</span></td><td>O POT tem "Milestone" como tipo de revisão e na cadência da D, ou seja, sobrepõe-se ao MRL sem citá-lo</td><td>Mudança 6</td></tr>
+<tr><td>R11</td><td>Via de escalonamento por evento, com os oito gatilhos da tese, até o PI antes do próximo ponto agendado</td><td><span class="pill MIS">FALTANDO</span></td><td>"Triggered" é só um tipo de revisão; não há lista de gatilhos, quem avisa nem em quanto tempo</td><td>Mudança 2</td></tr>
+<tr><td>R12</td><td>Arquitetura de reuniões: huddle semanal, revisão mensal de governance, revisão disparada por caso</td><td><span class="pill MIS">FALTANDO</span></td><td>Não há agenda, participantes nem registro das reuniões</td><td>Mudança 3</td></tr>
+<tr><td>R13</td><td>DR1 e DR10: plano escrito, programado e com evidência</td><td><span class="pill COV">COBERTO</span></td><td>Plano aprovado (D), revisões assinadas (I)</td><td>Nenhuma</td></tr>
+<tr><td>R14</td><td>Fase 2: plano, via de escalonamento e reuniões definidos antes do primeiro participante</td><td><span class="pill PAR">PARCIAL</span></td><td>"Approve the plan at study setup", sem dizer que é antes do primeiro participante</td><td>M3</td></tr>
+<tr><td>R15</td><td>O plano é evidência na qualificação do centro pelo patrocinador (ISO 14155:2026 Clause 6.8)</td><td><span class="pill COV">COBERTO</span></td><td>O plano aprovado serve para isso como está</td><td>Nenhuma</td></tr>
+<tr><td>R16</td><td>Manter pequena a sobreposição com o MRL (5.6)</td><td><span class="pill MIS">FALTANDO</span></td><td>A sobreposição existe (marcos) e é somada à da CAPA (F, G, H)</td><td>Mudanças 5 e 6</td></tr>
+<tr><td>R17</td><td>Type B e Type C: gatilhos explícitos, coordenador como integrador, escalonamento direto ao PI no Type C</td><td><span class="pill PAR">PARCIAL</span></td><td>Sem regra para o Type C</td><td>Mudança 3</td></tr>
+<tr><td>R18</td><td>Receber as escalações do CCDM, do SCR e do RACI</td><td><span class="pill PAR">PARCIAL</span></td><td>O CCDM e o RACI aparecem como referências do plano (B), não como fontes de escalação da revisão</td><td>Mudança 1</td></tr>
+<tr><td>R19</td><td>Sem registro paralelo: a ação vai para o registro dono (CAPA)</td><td><span class="pill FAIL">FAIL</span></td><td>F (ação, dono, prazo), G (verificação de eficácia) e H (mudanças controladas) repetem a CAPA e os logs de revisão de cada instrumento</td><td>Mudança 5</td></tr>
+</table></div>
+
+<h2>Critérios</h2>
+<div class="table-wrap"><table><tr><th>ID</th><th>Status</th><th>Evidência</th><th>Mudança</th></tr>
+<tr><td>T1</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>O propósito bate com o da tese, mas o POT também acompanha a execução e a eficácia das ações, que são da CAPA</td><td>Mudança 5</td></tr>
+<tr><td>T2</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>As seis entradas da Table 4.4 não estão fixas no ciclo</td><td>Mudança 1</td></tr>
+<tr><td>T3</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>A decisão de supervisão é texto livre (E e I)</td><td>Mudança 7</td></tr>
+<tr><td>T4</td><td><span class="pill FAIL">FAIL</span></td><td>Um documento de decisão (Figure 4.3) faz a verificação de eficácia, que é da síntese da CAPA</td><td>Mudança 5</td></tr>
+<tr><td>T5</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>CtQ10 e CtQ12 (preenchidos) aparecem nos domínios da C; CtQ1 e CtQ6 (preenchidos) não têm linha própria. Ficam cobertos se o ciclo ler o RACI, o SCR e o TRE pelas escalações</td><td>Mudança 1</td></tr>
+<tr><td>T6</td><td><span class="pill PASS">PASS</span></td><td>DR1 e DR10 com plano e revisões assinados</td><td>Nenhuma</td></tr>
+<tr><td>T7</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>"ICQL" não existe no conjunto (o nome é IQL); "Summarise" é britânico; "site–study" com meia-risca</td><td>M1 e M2</td></tr>
+<tr><td>T8</td><td><span class="pill FAIL">FAIL</span></td><td>Não há versão simulada de ombro, só linhas de exemplo genéricas</td><td>Mudança 8</td></tr>
+<tr><td>T9</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>O momento de criação é "study setup", sem amarrar ao primeiro participante</td><td>M3</td></tr>
+<tr><td>D1</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>Cita instrumentos do conjunto, mas "ICQL" não está nele</td><td>M1</td></tr>
+<tr><td>D2</td><td><span class="pill PASS">PASS</span></td><td>O plano (fixo) e as revisões (que mudam) estão separados</td><td>Nenhuma</td></tr>
+<tr><td>D3</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>O plano é revisto "when the sources, cadence, triggers or routes change", sem dizer qual achado provoca isso</td><td>Mudança 2</td></tr>
+<tr><td>D4</td><td><span class="pill FAIL">FAIL</span></td><td>O MRL, que a Table 4.4 diz que o POT alimenta, não aparece</td><td>Mudança 6</td></tr>
+<tr><td>D5</td><td><span class="pill PASS">PASS</span></td><td>O plano nasce antes dos registros que o ciclo lê; a revisão lê o que já existe</td><td>Nenhuma</td></tr>
+<tr><td>D6</td><td><span class="pill PASS">PASS</span></td><td>IDs O-, R- e A-</td><td>Nenhuma</td></tr>
+<tr><td>P1</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>São 6 páginas por revisão no Type C, e 4 delas tratam de ações que a CAPA já trata</td><td>Mudança 5</td></tr>
+<tr><td>P2</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>"PI decision or route" e "Overall Review Conclusion" são texto livre</td><td>Mudança 7</td></tr>
+<tr><td>P3</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>"Domains Not Reviewed" e "Study Phase / Site Status" não são usados em outro lugar</td><td>Mudança 1</td></tr>
+<tr><td>P4</td><td><span class="pill PASS">PASS</span></td><td>As instruções bastam para preencher</td><td>Nenhuma</td></tr>
+<tr><td>P5</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>O registro de revisão se repete a cada ciclo, mas não tem cabeçalho de folha de continuação (n de N)</td><td>Mudança 8</td></tr>
+<tr><td>P6</td><td><span class="pill FAIL">FAIL</span></td><td>A decisão de supervisão não é um conjunto fechado</td><td>Mudança 7</td></tr>
+<tr><td>I1</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>A C e a D listam os mesmos domínios duas vezes, com perguntas parecidas</td><td>Mudança 4</td></tr>
+<tr><td>I2</td><td><span class="pill PASS">PASS</span></td><td>Não há escalas</td><td>Nenhuma</td></tr>
+<tr><td>I3</td><td><span class="pill PASS">PASS</span></td><td>A a I em sequência</td><td>Nenhuma</td></tr>
+<tr><td>I4</td><td><span class="pill PASS">PASS</span></td><td>v0.8 no cabeçalho e no rodapé (o arquivo é um export do editor)</td><td>Nenhuma</td></tr>
+<tr><td>I5</td><td><span class="pill NA">N/A</span></td><td>Não há versão simulada</td><td>Mudança 8</td></tr>
+<tr><td>V1</td><td><span class="pill PASS">PASS</span></td><td>Há cabeçalho em todas as páginas</td><td>Formato em M4</td></tr>
+<tr><td>V2</td><td><span class="pill PASS">PASS</span></td><td>A "Purpose and Use"</td><td>Nenhuma</td></tr>
+<tr><td>V3</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>O plano tem uma caixa só de aprovação do PI (D); a revisão tem "PI Review Sign-off" e "Supporting Reviewer"</td><td>Decisão 3</td></tr>
+<tr><td>V4</td><td><span class="pill PASS">PASS</span></td><td>"Page n of 6" certo</td><td>Nenhuma</td></tr>
+<tr><td>V5</td><td><span class="pill PASS">PASS</span></td><td>Nada cortado; caixa grande para a conclusão</td><td>Nenhuma</td></tr>
+<tr><td>V6</td><td><span class="pill PARTIAL">PARTIAL</span></td><td>Título em caixa alta ("PI OVERSIGHT TEMPLATE"), sem subtítulo e sem a sigla no título, diferente do CCDM, do TRE, do RACI e do SCR</td><td>M4</td></tr>
+<tr><td>V7</td><td><span class="pill PASS">PASS</span></td><td>Retrato e uma página em paisagem</td><td>Nenhuma</td></tr>
+</table></div>
+
+<h2>Mudanças, em ordem de gravidade</h2>
+<ol>
+<li><span class="pill I">I</span> <b>Ciclo de revisão com as seis fontes da Table 4.4 impressas.</b> No registro de revisão, uma tabela com as linhas SRR, PIR, FUCR, IMC, SART e SCML, mais uma linha "Escalations received (CCDM, SCR, RACI, other)". Colunas: versão ou período lido / sinal desde a última revisão (Yes / No) / interpretação do PI / decisão (mudança 7) / registro de destino e ID. Isso substitui a tabela livre da E e torna visível a cadeia que a Table 4.4 declara.</li>
+<li><span class="pill I">I</span> <b>Via de escalonamento por evento no plano.</b> Os oito gatilhos da 4.2.1 impressos: surgery by a surgeon not released; missing lot or UDI; unplanned component substitution; substantial eligibility uncertainty; delayed SAE reporting; missed critical imaging window; major PD affecting endpoints; revision, explant, reoperation or readmission. Para cada um: quem avisa (Role ID), em quanto tempo o PI é avisado, ação imediata e onde fica o registro. Mais linhas em branco para gatilhos do estudo. Devem bater com a coluna de gatilhos do CCDM.</li>
+<li><span class="pill I">I</span> <b>Arquitetura de reuniões no plano.</b> Três linhas: huddle operacional semanal, revisão mensal de governance e revisão disparada por caso. Colunas: participantes (Role IDs) / cadência / fontes lidas / onde fica o registro. A revisão mensal é o ciclo do POT. Regra para o Type C: com PI e coordenador apenas, a revisão mensal absorve o huddle, e o escalonamento vai direto ao PI.</li>
+<li><span class="pill I">I</span> <b>Decisões reservadas ao PI derivadas do CCDM.</b> A C e a D viram uma tabela só: "Decisão ou ponto de envolvimento direto / CCDM task ID / quando o PI age (antes / no ponto de decisão / depois) / evidência". Os quatro julgamentos insubstituíveis da 4.2.1 vêm impressos (adequação cirúrgica e elegibilidade limítrofe; interpretação de desvios intraoperatórios e de substituições; relação do evento com o dispositivo; leitura de drift), e as tarefas C1 e S1 do CCDM entram por ID. Isso responde à dificuldade da 4.2.1 atual de decidir antes onde fica a linha.</li>
+<li><span class="pill I">I</span> <b>Tirar o que é da CAPA.</b> Saem a G ("Effectiveness Verification") e a H ("Controlled Updates"). A F vira apenas a coluna de destino da mudança 1: o POT registra a decisão do PI e manda a ação para a CAPA, o SRR ou o instrumento que precisa mudar. Quem verifica a eficácia é a CAPA. Isso reduz o registro de revisão de 4 para cerca de 2 páginas e responde à preocupação de carga da 5.6.</li>
+<li><span class="pill I">I</span> <b>Separar do MRL e alimentá-lo.</b> Tirar "Milestone" dos tipos de revisão e da cadência; os marcos são do MRL. Na conclusão da revisão, um campo "Items carried to the next MRL milestone", que é a entrada do MRL na Table 4.4 ("any gap already logged in the POT").</li>
+<li><span class="pill I">I</span> <b>Decisão em conjunto fechado.</b> Por fonte: No signal / Monitor / Action routed / Escalated. Na conclusão: No action needed / Actions routed / Escalated to the sponsor / Hold (inclusion or surgery paused), mais os pendentes para a próxima revisão.</li>
+<li><span class="pill I">I</span> <b>Versões em branco e simulada.</b> A em branco fica sem linhas de exemplo. A simulada usa o GLENOS-01, a Riverside 014 e o Dr Alex Morgan, e a revisão mensal de outubro lê as seis fontes. Ela registra o SART-014-002 (fratura de tubérculo maior no caso 2 do Dr Teixeira) como escalação recebida e manda a pendência para o próximo marco do MRL. O registro de revisão ganha cabeçalho de folha (POT ID, revisão do plano, review ID, n de N).</li>
+<li><span class="pill M">M</span> <b>M1</b> "ICQL" → IQL (Imaging Quality Log).</li>
+<li><span class="pill M">M</span> <b>M2</b> Grafia americana ("Summarize") e hífen no lugar de meia-risca.</li>
+<li><span class="pill M">M</span> <b>M3</b> Na A: "Approve the plan at start-up, before the first participant (phase 2); the escalation pathway and meeting schedule are agreed at the same time."</li>
+<li><span class="pill M">M</span> <b>M4</b> Cabeçalho do padrão: "POT - PI Oversight Template", subtítulo por página e "BLANK / SIMULATED · v0.9".</li>
+</ol>
+
+<div class="proposal"><b>Como ficaria o POT v0.9 (proposta, cerca de 5 páginas):</b>
+<ol>
+<li><b>Parte 1, plano</b> (aprovado na fase 2):
+ <ul>
+ <li>A Purpose and use;</li>
+ <li>B PI-retained decisions and direct-involvement points (do CCDM);</li>
+ <li>C Event-triggered escalation pathway (oito gatilhos impressos);</li>
+ <li>D Review cycle and meeting architecture;</li>
+ <li>E Plan approval.</li>
+ </ul></li>
+<li><b>Parte 2, registro de revisão</b> (um por ciclo ou gatilho, como folha repetível):
+ <ul>
+ <li>F Review identification;</li>
+ <li>G Cycle sources (as seis fontes mais as escalações recebidas, cada uma com decisão e destino);</li>
+ <li>H PI conclusion and sign-off (decisão fechada, itens para o MRL, próxima revisão).</li>
+ </ul></li>
+</ol></div>
+
+<h2>Consequências para outros instrumentos</h2><ul>
+<li><b>CCDM:</b> a coluna "PI / specialist escalation trigger" deve usar os mesmos gatilhos da via de escalonamento do POT. Hoje são próximos, mas não iguais.</li>
+<li><b>MRL</b> (próxima revisão): deve receber os "items carried to the next MRL milestone" do POT.</li>
+<li><b>CAPA</b> (revisão futura): passa a ser o único lugar de ação, prazo e verificação de eficácia para o que o POT encaminha.</li>
+<li><b>SRR, PIR, FUCR, IMC, SART e SCML</b> (revisões futuras): cada um deve dizer que é lido no ciclo do POT e em que forma, como versão, período ou resumo.</li>
+<li><b>RACI e SCR:</b> já mandam lacunas e casos fora do escopo para o POT; ficam coerentes com a linha de escalações recebidas.</li></ul>
+
+<h2>Mudanças na tese que esta revisão sugere</h2><ul>
+<li><b>Table 4.4, linha F, opcional:</b> acrescentar às entradas "and the escalations routed to the PI from the CCDM, SCR and RACI". Hoje essas ligações existem nos instrumentos e não na tabela.</li>
+<li>Nada nas seções 4.2 a 4.5, por causa da regra dos pilares.</li></ul>
+
+<h2>Decisões para você</h2><ol>
+<li><b>Imprimir no formulário em branco os quatro julgamentos do PI e os oito gatilhos?</b> <i>Recomendo que sim.</i> São conteúdo do framework, definido na 4.2.1, e não conteúdo do centro, como a linha do PI no RACI. O centro acrescenta os seus nas linhas em branco.</li>
+<li><b>Tirar G e H e deixar a eficácia com a CAPA?</b> <i>Recomendo que sim</i> (mudança 5).</li>
+<li><b>Assinatura do plano.</b> O dono do POT é o próprio PI (no RACI, POT: owner P-01). <i>Recomendo</i> duas caixas para seguir o padrão: "Prepared by" (coordenador) e "PI / accountable approver". No registro de revisão, mantém-se a caixa do PI, com o revisor de apoio opcional.</li>
+</ol>
+
+<h2>Regras comuns propostas por esta revisão</h2><ul>
+<li><b>S21 (proposta): uma ação, um dono.</b> Uma ação levantada em qualquer instrumento é encaminhada por referência ao registro que a possui. Correção sistêmica vai para a CAPA, e só a CAPA verifica eficácia. Os outros instrumentos registram a decisão e o ID de destino.</li></ul>
+<p class="note">Itens à espera de decisão não mudam o veredito até você decidir. Não editei o instrumento.</p>
+</main></body></html>

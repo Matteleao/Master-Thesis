@@ -1,0 +1,6 @@
+- [Viz design conventions](viz-design-conventions.md) — valence-shell layout, colour-by-target chips/arrows, hover tooltips, spacing rules for the thesis diagrams
+- [Surgical site roles](surgical-site-roles.md) — which roles to include/exclude for the shoulder device-trial diagrams; key D-decisions
+- [PIR scope feedback](pir-instrument-scope-feedback.md) — user rejected over-built PIR v0.9/v0.10; ask the instrument's role before rebuilding
+- [Thesis file state 2026-10-02](thesis-file-state-2026-10-02.md) — Word overwrite incident, backup, numbering/appendix state, pending items
+- [Instruments in pillars rule](feedback_no-instruments-in-pillars.md) — no specific-instrument refs, but generic "risk register"/"delegation log" concepts are fine; don't over-scrub
+- [Instrument review criteria](instrument-review-criteria.md) — rubric for critiquing the 24 instruments one by one (dependencies, gap coverage, visual uniformity)
