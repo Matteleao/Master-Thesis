@@ -50,3 +50,7 @@ O texto é a referência: os modelos se ajustam ao texto, salvo quando o modelo 
 ## IMC v1.3 (conferido em 25/10, revisão da 4.4.1)
 - Verificação "Early complication pattern review": no texto passa a confirmar que a vigilância de complicações (SCML/CSST) rodou no prazo e que os sinais foram tratados; a análise do padrão fica no CSST. Ajustar o domínio do IMC para não refazer a análise.
 - IMC funciona como a autoinspeção periódica do DR5 (texto da 4.4.1); conferir se a 4.5.7 e o CAPA log tratam a mesma autoinspeção sem criar um segundo cronograma.
+
+## SIRR v0.4 e IQL v0.3 (conferidos em 25/10, revisão da 4.4.2)
+- SIRR organiza a prontidão em quatro elementos (aquisição; exibição, transferência e arquivo; revisão local; tempo e manutenção). O texto da 4.4.2 usa quatro elementos diferentes (definir a aquisição; qualificar e treinar pessoas, com calibração; revisão local; momento da imagem). Alinhar o SIRR ao texto (qualificação e treino como elemento próprio; transferência e arquivo dentro do registro de cada imagem, no IQL).
+- IQL v0.3: "authorised" (grafia britânica); e o nome do instrumento aparece como ICQL no FUCR e no PIR (já registrado).
