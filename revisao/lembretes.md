@@ -75,6 +75,7 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 - Apêndices ainda "[Template pending]"
 - IMP (Internal Monitoring Plan) é o único modelo que não está no repositório (25/10)
 - Atualizar sumário e índices (Ctrl+A, F9)
+- A frase "attendance alone does not show that a visit was complete" aparece na 4.4.1 (verificação Follow-up execution) e na 4.4.3. Deixar em uma só (a 4.5.3 não repete; 25/10)
 
 ## 5. Edições de imagem que ficaram com o autor (L1)
 
