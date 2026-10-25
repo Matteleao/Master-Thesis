@@ -33,6 +33,7 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 | D4 | 4.7.1 | Tipos A, B e C de centro definidos por porte, com o Tipo B como "o contexto para o qual o framework foi desenhado", em conflito com a 3.4.5 (organização não hospitalar, que define o nível mínimo). Resolver ao chegar na 4.7. Afeta também a 5.x ("a small number of Type B centers" no estudo piloto), a Tabela 4.2 e o RACI |
 | D5 | 4.7.2 | "Clauses 10.2 and 10.3" x Clause 7.6, para registro de delegação e treinamento |
 | D6 | Registro | Duplicatas Utah e Johns Hopkins, Levy Shoulder Center, referência do FDAAA |
+| D8 | 4.2.1 | Cadência das oversight meetings: o POT diz revisão mensal e a 4.5.2 diz "monthly oversight meeting"; decidir se a 4.2.1 diz "monthly" ou deixa a cadência para o site |
 | D7 | 4.2.3 | Números dos domínios por área de treinamento (dispositivo e documentação 4 e 5; avaliação 8 e 9; protocolo e segurança a confirmar) e DR10 no fecho (Claude usou o DR10 com base na Figura 4.5) |
 
 ## 3. Decisões em que o autor mudou de ideia ou desistiu (não reabrir)
@@ -53,6 +54,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 | M11 | 24/10 | Ordem dos apêndices pela tabela de instrumentos | Ordem da primeira citação no cap. 4. A tabela de instrumentos segue a mesma ordem dentro de cada pilar (o autor corrige a tabela) |
 
 ## 4. Passadas finais já combinadas
+
+- 4.7.1: o "PD record" do núcleo do Type C é o registro de desvios exigido pelo CIP, não um instrumento do framework (não há registro de desvios entre os 24); ajustar a frase ao revisar a 4.7
 
 - 4.5.1 e 4.5.3: ao revisar, tirar o texto de controle que foi para a nova 4.4.3 (confirmação estruturada de critérios de imagem ou de várias fontes, erro de inclusão irreversível, definição de visita utilizável); a 4.5.1 e a 4.5.3 ficam só com o indicador; nomear o FUCR na 4.5.3 (decidido em 25/10)
 - Apêndices: reordenar os títulos de Q em diante quando a 4.4 e a 4.5 fecharem (Q PSEAR, R SIFSL, S PFVR, T ICDL, U PIR, V FUCR, W CAPA, X PIDLR, Y modelo interativo) e passar a ordem final para a Tabela 4.3 e as Figuras 4.2 e 4.3
