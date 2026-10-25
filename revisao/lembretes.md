@@ -81,6 +81,7 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 - Tabela 4.1 (funções): "PROM workflows" → "PROM administration"; "Data QA" → "Data QA function"
 - Tabela 4.3 (instrumentos): ordem pela primeira citação. Governance: CCDM, MRL, POT, RACI, DTRM, TRE, SCR. Os outros pilares quando a revisão do cap. 4 fechar
 - Figura 4.2: conferir o nome do TRE
+- Figura 4.4: o PIR não tem marcador no domínio CtQ 6, mas o texto da 4.5 diz que a consistência do cirurgião responde aos domínios 5 e 6 (e o PIR v0.10 diz SP-01 CtQ 5, 6)
 - Tabela 4.2 (escalabilidade): grafia britânica (programme, centre, authorisation, specialised); linha "Role architecture and controlled instruments" → role structure; tipos definidos por porte ("Large or complex research hospital", "Medium private clinic/hospital", "Small surgical centre") dependem de D4 (4.7.1 x 3.4.5)
 - Figura 4.1: "PI oversight plan" → PI Oversight Template (POT); "Delegation log" → delegation record (CCDM e RACI); "recognise" → "recognize"; manter "at least monthly" (a 4.3.3 adotou)
 - Antiga tabela de DRs: **FEITO** (refeita como Tabela 4.4 em 24/10)
