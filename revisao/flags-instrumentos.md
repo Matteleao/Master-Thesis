@@ -46,3 +46,7 @@ O texto é a referência: os modelos se ajustam ao texto, salvo quando o modelo 
 - PIR v0.10: domínios CtQ dos indicadores batem com a Tabela 3.2 (EQ-01 2, PD-01 12, FC-01 7, ST-01 10, SP-01 5 e 6, DC-01 11). OK.
 - SIFSL v0.2: fica em Operational Controls; não precisa virar um instrumento de agregação como o FUCR (inclusão gera pouco volume; o PIR EQ-01 calcula direto do PSEAR e do SIFSL). Sugestão: na seção E, manter só a contagem de motivos (desfecho, motivo, contagem, etapa) e tirar as colunas de interpretação e ação, que ficam no PIR.
 - FUCR v0.4: passa para Performance Oversight (decisão do autor, 25/10).
+
+## IMC v1.3 (conferido em 25/10, revisão da 4.4.1)
+- Verificação "Early complication pattern review": no texto passa a confirmar que a vigilância de complicações (SCML/CSST) rodou no prazo e que os sinais foram tratados; a análise do padrão fica no CSST. Ajustar o domínio do IMC para não refazer a análise.
+- IMC funciona como a autoinspeção periódica do DR5 (texto da 4.4.1); conferir se a 4.5.7 e o CAPA log tratam a mesma autoinspeção sem criar um segundo cronograma.
