@@ -30,3 +30,9 @@ O texto é a referência: os modelos se ajustam ao texto, salvo quando o modelo 
 - Disposição "Adapt controls" manda "Update TRE, SCR or CCDM". O CCDM só define criticalidade; mudança de escopo de uma pessoa vai para o SCR (decisão) e o RACI (atribuição). Trocar CCDM por RACI.
 - Estratos de complexidade: o SLCT define três contextos (lower, standard, higher), definidos pelo site. A 4.8 diz "five complexity strata used in the learning curve log" (ver lembretes M5).
 - MRL M5 "after first 3-5 cases" e SLCT revisão "Cases 1-5, 6-10": alinhar os dois. São pontos de revisão, não limiar de proficiência (a 4.3.2 diz que o framework não adota contagem fixa).
+
+## SCML v0.3 e CSST v1.0 (conferido em 25/10, revisão da 4.3.3)
+- CSST seção C traz limiares "Suggested: 5%" (categoria ligada ao dispositivo), "10%" (intraoperatório total) e "5%" (luxação precoce em rTSA), sem fonte. O texto diz que o site define os limiares antes; os números sugeridos precisam de fonte ou devem sair do modelo.
+- CSST: rodapé "Page 3 of 2" (tem 3 páginas).
+- CSST: "ISO 14155:2020, Cl. 10.8(b)" (já registrado acima): usar ISO 14155:2026.
+- SART: PDF não está no repositório; a 4.3.3 usa só a descrição da Tabela 4.3.
