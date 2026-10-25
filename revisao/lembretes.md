@@ -1,0 +1,77 @@
+# Lembretes da revisão da tese
+
+Registro de tudo o que ficou para depois ("depois eu corrijo", "lá na frente a gente vê", "me lembra", "deixa pro final") e das decisões em que o autor mudou de ideia. Serve para duas coisas: conferência periódica durante a revisão e conferência final na revisão geral da tese.
+
+Montado em 25/10/2026 a partir de toda a conversa desde 09/10. O estado de cada item foi conferido contra o arquivo `Revisao_manual_tese_alteracoes_19-10.docx` da entrega de 25/10.
+
+Estados: **ABERTO** (falta fazer), **DECIDIR** (falta uma decisão do autor), **MUDOU** (o autor mudou de ideia; não reabrir), **FEITO** (atendido; só conferir na revisão geral).
+
+Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instrumentos.md`.
+
+---
+
+## 1. Coisas que o autor disse que faria ou veria depois
+
+| # | Data | O que foi dito | Estado em 25/10 |
+|---|---|---|---|
+| L1 | 24/10 | Edição das imagens: "ignora isso, eu já corrijo isso mais tarde" | **ABERTO**. Ver lista na seção 5 |
+| L2 | 22/10 | 3.4.4 com referências autor-ano; "depois, mais tarde, eu vou pedir para você pegar essas referências, colocar na bibliografia, transformar isso em número" | **ABERTO**. O texto ainda tem [Drain 2018], [Karlberg 2009], [Glass 2020], [Getz 2017], [Ebrahimi 2024], [Wang 2022], [Rossier 2026], [Ciupek 2024], [Bastek 2025] e outros. Converter para Vancouver e incluir na bibliografia (Karlberg 2009 é literatura cinzenta) |
+| L3 | 22/10 | "Me recorde se eu falei na metodologia sobre a dificuldade que foi para conseguir dados europeus… e que não foram analisadas outras bases (asiática, americana, africana) para limitar o escopo" | **ABERTO**. A 3.4.4 diz que o Eudamed devolveu poucos dados, mas nem o cap. 2 nem o 3 dizem que as outras bases regionais ficaram fora do escopo de propósito |
+| L4 | 10/10 | P7: dizer que o desenho seguiu o contexto regulatório europeu onde a tese foi feita, e que os dados dos EUA dominaram por estarem mais disponíveis | **ABERTO**. A frase não está no texto (3.4.5 ou 5.7). Redigir de forma neutra, sem apresentar os orientadores como origem do problema. Junta com L3 |
+| L5 | 10/10 | P13: o autor tem uma ideia própria sobre por que a ICH E6 importa para o centro de dispositivos; "deixar e perguntar depois" | **DECIDIR**. A ideia nunca foi enviada. Perguntar ao autor |
+| L6 | 24/10 | Parágrafo histórico da 3.2 ("The instruments have also moved…"), apagado em revisão: "vamos deixar isso pro final" | **DECIDIR**. Manter a exclusão, rejeitá-la ou usar a versão corrigida proposta em 24/10 (sem o trecho truncado e sem dizer que a responsabilidade passou ao site) |
+| L7 | 25/10 | Ao terminar o cap. 4: "gerar um report com todas essas flags" dos instrumentos | **ABERTO**. Gerar a partir de `revisao/flags-instrumentos.md` |
+| L8 | 24/10 | Apêndices na 4.2.4: "eu mesmo adiciono" | **FEITO** por Claude no arquivo, com as letras pela ordem de primeira citação |
+
+## 2. Decisões que o autor ainda precisa tomar (Claude perguntou, sem resposta)
+
+| # | Origem | Decisão |
+|---|---|---|
+| D1 | 4.2.2 | Coluna de domínios na Tabela 4.1. Proposta: coordenador 2, 3 e 7; centro cirúrgico 4 e 5; radiologia 9; avaliador funcional 8; dados 11; PI todos |
+| D2 | 4.2.1 | O texto diz que o PI revisa em quatro marcos; o MRL tem 13 (M0 a M12). Decidir qual versão vale (o texto manda, salvo se o modelo estiver mais certo) |
+| D3 | 1.2, 3.4.1, Tabela 3.4 | Nomes únicos das cinco condições estruturais. Na 3.4.1 hoje: Irreversibility, Operator dependence, Device traceability, The operational weight of follow-up, Limited classification reliability |
+| D4 | 4.7.1 | Tipos A, B e C de centro definidos por porte, com o Tipo B como "o contexto para o qual o framework foi desenhado", em conflito com a 3.4.5 (organização não hospitalar, que define o nível mínimo). Resolver ao chegar na 4.7. Afeta também a 5.x ("a small number of Type B centers" no estudo piloto), a Tabela 4.2 e o RACI |
+| D5 | 4.7.2 | "Clauses 10.2 and 10.3" x Clause 7.6, para registro de delegação e treinamento |
+| D6 | Registro | Duplicatas Utah e Johns Hopkins, Levy Shoulder Center, referência do FDAAA |
+| D7 | 4.2.3 | Números dos domínios por área de treinamento (dispositivo e documentação 4 e 5; avaliação 8 e 9; protocolo e segurança a confirmar) e DR10 no fecho (Claude usou o DR10 com base na Figura 4.5) |
+
+## 3. Decisões em que o autor mudou de ideia ou desistiu (não reabrir)
+
+| # | Data | Antes | Decisão final |
+|---|---|---|---|
+| M1 | 10/10 → 22/10 | Centro-alvo = Tipo B (clínicas privadas com atividade recorrente) | A 3.4.5 fixou a organização não hospitalar como alvo. É lei. O que ainda fala em Tipo B como alvo tem de se ajustar (D4) |
+| M2 | 17/10 | Permanent clinical trial infrastructure na metodologia e nos resultados | Retirada da tese ("vamos fingir que nunca fizemos"). Conferido em 25/10: não aparece mais no texto aceito |
+| M3 | 22/10 | Reclassificar os 5 hospitais ortopédicos de cirurgiões para nonacademic hospital | Não mexer. Ficam as 68 organizações não hospitalares e os números antigos (108 de 347 registros) |
+| M4 | 22/10 → 24/10 | Tirar o filtro de relevância da 2.4.2 | Mantido. Não remove nada, mas continua válido |
+| M5 | 10/10 | "Five complexity strata": ignorar e tirar as menções, porque o instrumento não existia | O SLCT agora existe e define estratos de complexidade definidos pelo site (inferior, padrão, superior). A 4.8 ainda diz "five complexity strata used in the learning curve log". Ajustar na 4.3.2 e na 4.8 |
+| M6 | 25/10 | Ajustar o texto aos modelos dos instrumentos | O texto é a referência e os modelos se ajustam, salvo quando o modelo estiver mais certo (aceito: SCR antes da liberação no TRE) |
+| M7 | 10/10 | Fluxo de registro (recomendação), P12 e P14 | Descartados ("esquece") |
+| M8 | 17/10 | Annex ZA da ISO e a frase de busca de termos | Saíram do texto. Conferido em 25/10 |
+| M9 | 24/10 | Alterações controladas palavra a palavra | Cap. 1 a 3: alterações em bloco. Cap. 4 em diante: editar direto, sem marcas |
+| M10 | 24/10 | Remissões a seções e números de cláusula em toda frase | Só o essencial: o que está atrás e é crítico, o que vem e o leitor estranharia, tabelas, figuras e apêndices. Cada cláusula uma vez no capítulo |
+| M11 | 24/10 | Ordem dos apêndices pela tabela de instrumentos | Ordem da primeira citação no cap. 4. A tabela de instrumentos segue a mesma ordem dentro de cada pilar (o autor corrige a tabela) |
+
+## 4. Passadas finais já combinadas
+
+- "architecture" ainda aparece 16 vezes, inclusive no Abstract e no Resumo e no cap. 5. Trocar por framework. O Abstract também chama o pilar de "risk-based quality management (RBQM)", e o nome do pilar é Risk Management
+- Números novos (68, 108, 347) na 5.3, na 5.7, no cap. 6, no Resumo e no Abstract
+- Cap. 5 repete o estudo português [77] e as três correntes de risco da ISO 6.2, que agora estão na 4.3 e na 4.3.1. Remeter em vez de repetir
+- Vírgula serial nos cap. 1 a 3
+- FDA definida no primeiro uso (1.4.1)
+- Frase que distingue CTAIM e ISO 9001 [30, 31] (o autor confere)
+- E8(R1) "Section 7 lists 18 considerations" e a tríade de risco do E8 na 2.5.2
+- String de busca do ClinicalTrials.gov
+- "25% of the MDR entries" (Claude conta cerca de 30%)
+- Citações em subscrito, que devem ficar na linha
+- Apêndices ainda "[Template pending]"
+- Atualizar sumário e índices (Ctrl+A, F9)
+
+## 5. Edições de imagem que ficaram com o autor (L1)
+
+- Tabela 3.1: referências do Gap 3 → [71, 72]; Gap 5 → ISO 14155:2026 Clause 10.6(o) no lugar do MDR
+- Tabela 3.2: termo "UDI" no domínio 4 (avaliar "batch, serial or unique device code"); itens antigos a confirmar: menção a delegação no domínio 6 e mascaramento do avaliador no domínio 8
+- Tabela 3.4: "architecture" → framework; rótulos das condições (depois de D3); grafia americana
+- Tabela 4.1 (funções): "PROM workflows" → "PROM administration"; "Data QA" → "Data QA function"
+- Tabela 4.3 (instrumentos): ordem pela primeira citação. Governance: CCDM, MRL, POT, RACI, DTRM, TRE, SCR. Os outros pilares quando a revisão do cap. 4 fechar
+- Figura 4.2: conferir o nome do TRE
+- Antiga tabela de DRs: **FEITO** (refeita como Tabela 4.4 em 24/10)
