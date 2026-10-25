@@ -60,3 +60,7 @@ O texto é a referência: os modelos se ajustam ao texto, salvo quando o modelo 
 - Categorias de causa diferentes: o FUCR E2 atribui como Site-controlled, Participant-driven, Protocol/design-related, Mixed ou Not assessable; o PIR FC-01 usa Participant, Site, Workflow, Protocol, Unknown. A 4.5.3 fala em participante, processo do site ou desenho do protocolo. Usar uma lista só nos dois (a do FUCR cobre o texto).
 - PIR FC-01 m2 diz "every critical component"; o FUCR diz "every required component" e a 4.5.3 segue o FUCR ("every component the CIP requires"). Trocar no PIR.
 - FUCR seção F (checagem de método só quando planejada ou quando omissões se repetem) bate com a 4.5.3. OK.
+
+## PIR v0.10, ST-01 (conferido em 25/10, revisão da 4.5.4)
+- ST-01 m1 fixa "(24 h)" como janela de notificação inicial. A ISO 14155:2026 pede "without unjustified delay" com o detalhe que o CIP especificar, e a 4.5.4 diz que o intervalo vem do CIP. Trocar "24 h" por "CIP interval" (o 24 h pode ficar só como exemplo).
+- ST-01 é a única regra que não usa valor escolhido pelo site: o limite vem do CIP (uma notificação inicial atrasada já é ação). Bate com a 4.5.4. OK.

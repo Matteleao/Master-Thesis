@@ -23,6 +23,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 | L7 | 25/10 | Ao terminar o cap. 4: "gerar um report com todas essas flags" dos instrumentos | **ABERTO**. Gerar a partir de `revisao/flags-instrumentos.md` |
 | L8 | 24/10 | Apêndices na 4.2.4: "eu mesmo adiciono" | **FEITO** por Claude no arquivo, com as letras pela ordem de primeira citação |
 
+- 4.5.3: texto final pronto (scratchpad t453.json), mas o autor pediu em 25/10 para não aplicar nada ainda ("aplica nada no texto do git hub ainda"). Aplicar só quando ele mandar; o mesmo vale para as subseções seguintes até nova ordem
+
 ## 2. Decisões que o autor ainda precisa tomar (Claude perguntou, sem resposta)
 
 | # | Origem | Decisão |
