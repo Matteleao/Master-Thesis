@@ -55,3 +55,8 @@ O texto é a referência: os modelos se ajustam ao texto, salvo quando o modelo 
 - SIRR organiza a prontidão em quatro elementos (aquisição; exibição, transferência e arquivo; revisão local; tempo e manutenção). O texto da 4.4.2 usa quatro elementos diferentes (definir a aquisição; qualificar e treinar pessoas, com calibração; revisão local; momento da imagem). Alinhar o SIRR ao texto (qualificação e treino como elemento próprio; transferência e arquivo dentro do registro de cada imagem, no IQL).
 - IQL v0.3: "authorised" (grafia britânica); e o nome do instrumento aparece como ICQL no FUCR e no PIR (já registrado).
 - PIR v0.10, PD-01: usa "domain" para as áreas de desvio (consent/eligibility, procedure/device, imaging, follow-up, safety, documentation); a 4.5.2 usa "area" para não confundir com os 12 domínios CtQ. Trocar no PIR. O texto também diz que os critérios de "important" vêm do sponsor (E6(R3) 3.9.3) e que o PI classifica no site; conferir se o PIR e o CCDM refletem isso.
+
+## FUCR v0.4 e PIR v0.10, FC-01 (conferidos em 25/10, revisão da 4.5.3)
+- Categorias de causa diferentes: o FUCR E2 atribui como Site-controlled, Participant-driven, Protocol/design-related, Mixed ou Not assessable; o PIR FC-01 usa Participant, Site, Workflow, Protocol, Unknown. A 4.5.3 fala em participante, processo do site ou desenho do protocolo. Usar uma lista só nos dois (a do FUCR cobre o texto).
+- PIR FC-01 m2 diz "every critical component"; o FUCR diz "every required component" e a 4.5.3 segue o FUCR ("every component the CIP requires"). Trocar no PIR.
+- FUCR seção F (checagem de método só quando planejada ou quando omissões se repetem) bate com a 4.5.3. OK.
