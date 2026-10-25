@@ -54,6 +54,9 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 
 ## 4. Passadas finais já combinadas
 
+- 4.5.1 e 4.5.3: ao revisar, tirar o texto de controle que foi para a nova 4.4.3 (confirmação estruturada de critérios de imagem ou de várias fontes, erro de inclusão irreversível, definição de visita utilizável); a 4.5.1 e a 4.5.3 ficam só com o indicador; nomear o FUCR na 4.5.3 (decidido em 25/10)
+- Apêndices: reordenar os títulos de Q em diante quando a 4.4 e a 4.5 fecharem (Q PSEAR, R SIFSL, S PFVR, T ICDL, depois Performance Oversight) e passar a ordem final para a Tabela 4.3 e as Figuras 4.2 e 4.3
+
 - 4.5.5 (Surgeon procedural consistency): ao revisar, tirar a lógica de leitura da curva (comparação com o próprio cirurgião, case mix, clustering) e a lista de consequências, que agora estão na 4.3.2; e remeter à 4.3.3 para o padrão de complicações (decidido em 25/10 na revisão da 4.3.2 e da 4.3.3)
 
 - "architecture" ainda aparece 16 vezes, inclusive no Abstract e no Resumo e no cap. 5. Trocar por framework. O Abstract também chama o pilar de "risk-based quality management (RBQM)", e o nome do pilar é Risk Management
