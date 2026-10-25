@@ -53,6 +53,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 
 ## 4. Passadas finais já combinadas
 
+- 4.5.5 (Surgeon procedural consistency): ao revisar, tirar a lógica de leitura da curva (comparação com o próprio cirurgião, case mix, clustering) e a lista de consequências, que agora estão na 4.3.2; e remeter à 4.3.3 para o padrão de complicações (decidido em 25/10 na revisão da 4.3.2 e da 4.3.3)
+
 - "architecture" ainda aparece 16 vezes, inclusive no Abstract e no Resumo e no cap. 5. Trocar por framework. O Abstract também chama o pilar de "risk-based quality management (RBQM)", e o nome do pilar é Risk Management
 - Números novos (68, 108, 347) na 5.3, na 5.7, no cap. 6, no Resumo e no Abstract
 - Cap. 5 repete o estudo português [77] e as três correntes de risco da ISO 6.2, que agora estão na 4.3 e na 4.3.1. Remeter em vez de repetir
@@ -74,4 +76,5 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 - Tabela 4.1 (funções): "PROM workflows" → "PROM administration"; "Data QA" → "Data QA function"
 - Tabela 4.3 (instrumentos): ordem pela primeira citação. Governance: CCDM, MRL, POT, RACI, DTRM, TRE, SCR. Os outros pilares quando a revisão do cap. 4 fechar
 - Figura 4.2: conferir o nome do TRE
+- Figura 4.1: "PI oversight plan" → PI Oversight Template (POT); "Delegation log" → delegation record (CCDM e RACI); "recognise" → "recognize"; manter "at least monthly" (a 4.3.3 adotou)
 - Antiga tabela de DRs: **FEITO** (refeita como Tabela 4.4 em 24/10)

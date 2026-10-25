@@ -36,3 +36,4 @@ O texto é a referência: os modelos se ajustam ao texto, salvo quando o modelo 
 - CSST: rodapé "Page 3 of 2" (tem 3 páginas).
 - CSST: "ISO 14155:2020, Cl. 10.8(b)" (já registrado acima): usar ISO 14155:2026.
 - SART: PDF não está no repositório; a 4.3.3 usa só a descrição da Tabela 4.3.
+- MRL v0.2 M7 (safety / complication signal review): "Monthly, quarterly, or immediately". A 4.3.3 e a Figura 4.1 fixam revisão de tendência de segurança pelo menos mensal; tirar "quarterly" ou deixar como intervalo máximo mensal.
