@@ -44,5 +44,5 @@ O texto é a referência: os modelos se ajustam ao texto, salvo quando o modelo 
 - POT v0.9: campo "Site type (scalability model) Type A/B/C" (depende da 4.7.1) e "meeting architecture" (trocar architecture).
 - PIR v0.10: limiares (FC-01 95%/90%; DC-01 98%/95%, mediana de query 7/14 dias; ST-01 janela de 24 h; PD-01 3 desvios menores) a conferir contra a 4.5 quando revisarmos.
 - PIR v0.10: domínios CtQ dos indicadores batem com a Tabela 3.2 (EQ-01 2, PD-01 12, FC-01 7, ST-01 10, SP-01 5 e 6, DC-01 11). OK.
-- SIFSL v0.2: seção E agrega motivos de não inclusão e sinais de viés de recrutamento, lida pelo PIR EQ-01. Decidir se fica no SIFSL (Operational Controls) ou passa ao PIR.
+- SIFSL v0.2: fica em Operational Controls; não precisa virar um instrumento de agregação como o FUCR (inclusão gera pouco volume; o PIR EQ-01 calcula direto do PSEAR e do SIFSL). Sugestão: na seção E, manter só a contagem de motivos (desfecho, motivo, contagem, etapa) e tirar as colunas de interpretação e ação, que ficam no PIR.
 - FUCR v0.4: passa para Performance Oversight (decisão do autor, 25/10).
