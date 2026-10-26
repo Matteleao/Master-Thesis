@@ -71,3 +71,11 @@ O texto é a referência: os modelos se ajustam ao texto, salvo quando o modelo 
 
 ## IMC v1.3 (26/10, decisão D10)
 - A 4.4.1 passa a ter dez verificações; a nova é "Endpoint data agreement" (amostra de registros, campos críticos de endpoint no CRF conferidos contra a fonte, discrepância corrigida com causa registrada). Acrescentar o domínio ao IMC, e o resultado alimenta a quarta medida do DC-01 no PIR (m4, source–CRF agreement in sample).
+
+## Varredura de split brain (26/10; ver revisao/split-brain-cap4.md)
+- PFVR: tem campos de resultado (ROM, força, escore funcional, PRO). Só servem como fonte se a definição de fonte do site atribuir esses dados ao PFVR. Senão, o campo vira referência ao registro que guarda o resultado. Pôr essa instrução no modelo.
+- RACI: o modelo já diz "the RACI is the site's delegation log" (bate com a troca 10). Acrescentar: quando o sponsor exige o próprio delegation log, o RACI remete a ele.
+- SART: o boundary do modelo já diz que não substitui fonte, CRF nem formulários do sponsor. OK; conferir se os campos de classificação são marcados como "as reported in" e não como registro próprio.
+- SCML: marcar a avaliação de entrada como preliminar e prever a troca pela classificação final do investigador.
+- IMC: a verificação nova vale só para os campos registrados fora do CRF (a ISO 7.8.2 diz que o CIP define o que entra direto no CRF).
+- ICDL: deixar claro que é fonte só do que a definição de fonte do site atribuir a ele.

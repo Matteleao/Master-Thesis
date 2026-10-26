@@ -61,6 +61,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 
 - M (26/10): D10 decidido. A 4.4.1 ganha uma décima verificação, "Endpoint data agreement", entre "Follow-up execution" e "Timeliness and closure", e o 2º parágrafo passa de "nine checks" para "ten checks". O autor colou isso na versão LOCAL dele; o docx de trabalho do Claude ainda não tem. Ao voltar a aplicar, incluir essa mudança e conferir com o autor se a versão local dele tem outras edições que o docx de trabalho não tem. Na 4.5.6, a quarta medida passa a ler "the share of sampled records" (t456.json atualizado)
 
+- M (26/10): varredura de split brain do cap. 4 (4.1 a 4.5.6) em revisao/split-brain-cap4.md, com 13 trocas. A troca 7 substitui o texto da verificação nova da 4.4.1 passado antes; inclui também "across all nine checks" → "ten" no 5º parágrafo da 4.4.1. O autor aplica na versão local; o docx de trabalho do Claude ainda não tem nada disso. Sincronizar antes de voltar a aplicar
+
 ## 4. Passadas finais já combinadas
 
 - 4.7.1: o "PD record" do núcleo do Type C é o registro de desvios exigido pelo CIP, não um instrumento do framework (não há registro de desvios entre os 24); ajustar a frase ao revisar a 4.7
