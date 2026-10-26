@@ -38,7 +38,7 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 | D8 | 4.2.1 | Cadência das oversight meetings: o POT diz revisão mensal e a 4.5.2 diz "monthly oversight meeting"; decidir se a 4.2.1 diz "monthly" ou deixa a cadência para o site |
 | D7 | 4.2.3 | Números dos domínios por área de treinamento (dispositivo e documentação 4 e 5; avaliação 8 e 9; protocolo e segurança a confirmar) e DR10 no fecho (Claude usou o DR10 com base na Figura 4.5) |
 
-- D9 (26/10): 4.5.7. O autor perguntou se a 4.5.7 é necessária e se deveria ficar junto da 4.5.6. Claude recomendou manter a 4.5.7 separada, enxugada e marcada como fechamento do pilar (não é um sétimo indicador); falta decidir se o PIDLR fica na 4.5.7 ou vai para a fase 6 da 4.6.1
+- D10 (26/10): a 4.5.6 mede a concordância fonte × CRF nos campos críticos de endpoint numa amostra da verificação interna, mas nenhuma das nove verificações da 4.4.1 faz essa conferência (a mais próxima só confere identificadores do implante). Decidir: acrescentar uma verificação à 4.4.1 (vira dez; mexe no "nine checks" e na lista numerada) ou deixar a amostra definida só na 4.5.6, como está no texto proposto
 
 ## 3. Decisões em que o autor mudou de ideia ou desistiu (não reabrir)
 
@@ -58,6 +58,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 | M11 | 24/10 | Ordem dos apêndices pela tabela de instrumentos | Ordem da primeira citação no cap. 4. A tabela de instrumentos segue a mesma ordem dentro de cada pilar (o autor corrige a tabela) |
 
 - M (26/10): 4.5.5 fica sem frase sobre quem vê o painel. Os códigos de cirurgião podem ser usados, mas são atribuíveis (pseudonimizados, não anônimos), e o desempenho observado alimenta a reautorização da 4.2.4. Intenção do autor: a revisão de consistência serve para achar problemas cedo e apoiar o cirurgião, não para punir. Não reabrir; texto da 4.5.5 aceito como entregue (t455.json), ainda não aplicado
+
+- M (26/10): 4.5.7 fica separada, com o mesmo título; tirar o acessório e o repetido (autoinspeção = 4.4.1; lista de gatilhos; frase de efeito) e manter: o que torna o ciclo proativo, a mecânica da CAPA com verificação de eficácia, a volta para o risk register, e o CAPA log (Appendix W). Não jogar para a introdução nem dividir a 4.5 em blocos. O PIDLR sai da 4.5.7 e vai para a 4.6.1 (fase 6). O autor acha a 4.6.1 fraca hoje ("meio merda"): revisar com cuidado quando chegar lá
 
 ## 4. Passadas finais já combinadas
 
