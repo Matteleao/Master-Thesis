@@ -68,3 +68,6 @@ O texto é a referência: os modelos se ajustam ao texto, salvo quando o modelo 
 ## PIR v0.10, DC-01 (conferido em 26/10, revisão da 4.5.6)
 - DC-01 m3 fixa "Operative notes finalised inside 48 h"; a 4.5.6 diz que o site define o intervalo. Trocar por "inside the site interval" (48 h só como exemplo). "finalised" é grafia britânica.
 - DC-01 regra (98%/95%, mediana de query 7/14 dias, 3 notas atrasadas, discrepância não corrigida, 2 medidas piores em 2 meses seguidos) bate com a lógica da 4.5.6, que não traz números. OK.
+
+## IMC v1.3 (26/10, decisão D10)
+- A 4.4.1 passa a ter dez verificações; a nova é "Endpoint data agreement" (amostra de registros, campos críticos de endpoint no CRF conferidos contra a fonte, discrepância corrigida com causa registrada). Acrescentar o domínio ao IMC, e o resultado alimenta a quarta medida do DC-01 no PIR (m4, source–CRF agreement in sample).
