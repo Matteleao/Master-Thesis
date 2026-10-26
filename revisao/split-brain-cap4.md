@@ -4,6 +4,16 @@ Critério: há split brain quando o mesmo dado fica em dois registros sem regra 
 
 Status: a 4.1 a 4.5.2 já estão no docx de trabalho; a 4.5.3 a 4.5.6 estão prontas e não aplicadas. O autor está editando a versão local. Nada abaixo foi aplicado.
 
+## Reanálise (26/10, depois da conversa com o autor)
+Com a hierarquia das normas (a fonte vale, o CRF deriva dela, discrepâncias são explicadas) e com o que a 4.1 e a 4.4.4 já dizem (o site usa o registro que já existe; define antes a fonte de cada dado crítico; discrepância entre dois registros é achado da verificação interna), nenhum item abaixo é split brain de verdade.
+
+Ficam só:
+- 7 e 13 (obrigatórias): a verificação nova da 4.4.1 e a quarta medida da 4.5.6 precisam valer só para os campos registrados fora do CRF. Também é preciso trocar "nine" por "ten" nos dois lugares da 4.4.1.
+- 1 (recomendada), em versão curta: a regra da 4.4.4 diz "does not copy it", e o próprio framework copia (duração no SLCT, resultados no PFVR, contagens no PIR). Isso é incoerência interna que a banca pode apontar. Texto final: "No instrument may become a parallel record of a datum that already has a defined source, so an instrument that needs participant-level information refers to the source. Where it carries a value for a count or a comparison, it cites the source, and the source prevails if the two differ."
+- 2 (recomendada, meia frase): dizer que a fonte pode ser o próprio CRF quando o CIP permite, para o leitor entender por que a verificação 7 vale só para parte dos campos.
+
+Descartados (já cobertos pela 4.1 ou pela 4.4.4, ou o texto já está claro): 3, 4, 5, 6, 8, 9, 10, 11, 12. Os flags dos modelos continuam valendo.
+
 ## Trocas (texto antigo → texto novo)
 
 ### 1. 4.4.4, 3º parágrafo: a regra central (a mais importante)

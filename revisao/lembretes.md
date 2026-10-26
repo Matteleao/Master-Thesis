@@ -63,6 +63,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 
 - M (26/10): varredura de split brain do cap. 4 (4.1 a 4.5.6) em revisao/split-brain-cap4.md, com 13 trocas. A troca 7 substitui o texto da verificação nova da 4.4.1 passado antes; inclui também "across all nine checks" → "ten" no 5º parágrafo da 4.4.1. O autor aplica na versão local; o docx de trabalho do Claude ainda não tem nada disso. Sincronizar antes de voltar a aplicar
 
+- M (26/10): reanálise da varredura de split brain. Ficam só as trocas 7 e 13 (obrigatórias), 1 em versão curta e 2 (recomendadas). As trocas 3 a 6 e 8 a 12 foram descartadas; não reabrir. Ver o topo de revisao/split-brain-cap4.md
+
 ## 4. Passadas finais já combinadas
 
 - 4.7.1: o "PD record" do núcleo do Type C é o registro de desvios exigido pelo CIP, não um instrumento do framework (não há registro de desvios entre os 24); ajustar a frase ao revisar a 4.7
