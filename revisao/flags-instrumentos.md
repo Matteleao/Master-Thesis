@@ -79,3 +79,8 @@ O texto é a referência: os modelos se ajustam ao texto, salvo quando o modelo 
 - SCML: marcar a avaliação de entrada como preliminar e prever a troca pela classificação final do investigador.
 - IMC: a verificação nova vale só para os campos registrados fora do CRF (a ISO 7.8.2 diz que o CIP define o que entra direto no CRF).
 - ICDL: deixar claro que é fonte só do que a definição de fonte do site atribuir a ele.
+
+## CAPA v0.10 (conferido em 26/10, revisão da 4.5.7)
+- O modelo se define como "portfolio log" que "does not replace the authorized QMS CAPA" e pede para reconciliar com o "authorised QMS CAPA register". O centro-alvo não tem QMS (Gap 1), então o CAPA log é o próprio registro de cada ação. Ajustar: o log é o registro da CAPA, e só quando a instituição já tem um sistema de CAPA ele remete a esse sistema (regra da 4.1). Hoje, para o centro-alvo, o modelo cria dois registros (Master CAPA Register e QMS CAPA).
+- "authorised" (grafia britânica).
+- Fechamento só com eficácia verificada ou limitação documentada: bate com a 4.5.7 e com o PIR. OK.
