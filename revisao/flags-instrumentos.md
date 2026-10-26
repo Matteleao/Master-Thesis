@@ -64,3 +64,7 @@ O texto é a referência: os modelos se ajustam ao texto, salvo quando o modelo 
 ## PIR v0.10, ST-01 (conferido em 25/10, revisão da 4.5.4)
 - ST-01 m1 fixa "(24 h)" como janela de notificação inicial. A ISO 14155:2026 pede "without unjustified delay" com o detalhe que o CIP especificar, e a 4.5.4 diz que o intervalo vem do CIP. Trocar "24 h" por "CIP interval" (o 24 h pode ficar só como exemplo).
 - ST-01 é a única regra que não usa valor escolhido pelo site: o limite vem do CIP (uma notificação inicial atrasada já é ação). Bate com a 4.5.4. OK.
+
+## PIR v0.10, DC-01 (conferido em 26/10, revisão da 4.5.6)
+- DC-01 m3 fixa "Operative notes finalised inside 48 h"; a 4.5.6 diz que o site define o intervalo. Trocar por "inside the site interval" (48 h só como exemplo). "finalised" é grafia britânica.
+- DC-01 regra (98%/95%, mediana de query 7/14 dias, 3 notas atrasadas, discrepância não corrigida, 2 medidas piores em 2 meses seguidos) bate com a lógica da 4.5.6, que não traz números. OK.

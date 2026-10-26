@@ -38,6 +38,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 | D8 | 4.2.1 | Cadência das oversight meetings: o POT diz revisão mensal e a 4.5.2 diz "monthly oversight meeting"; decidir se a 4.2.1 diz "monthly" ou deixa a cadência para o site |
 | D7 | 4.2.3 | Números dos domínios por área de treinamento (dispositivo e documentação 4 e 5; avaliação 8 e 9; protocolo e segurança a confirmar) e DR10 no fecho (Claude usou o DR10 com base na Figura 4.5) |
 
+- D9 (26/10): 4.5.7. O autor perguntou se a 4.5.7 é necessária e se deveria ficar junto da 4.5.6. Claude recomendou manter a 4.5.7 separada, enxugada e marcada como fechamento do pilar (não é um sétimo indicador); falta decidir se o PIDLR fica na 4.5.7 ou vai para a fase 6 da 4.6.1
+
 ## 3. Decisões em que o autor mudou de ideia ou desistiu (não reabrir)
 
 | # | Data | Antes | Decisão final |
