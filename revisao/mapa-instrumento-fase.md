@@ -1,4 +1,4 @@
-# Mapa instrumento × fase (espinha da nova 4.6), proposta de 26/10
+# Mapa instrumento × fase (espinha da nova 4.6), aprovado pelo autor em 26/10
 
 Fases: 1 Feasibility · 2 Start-up · 3 Enrollment · 4 Surgery · 5 Follow-up · 6 Close-out · 7 Continuous improvement · S = corrente de segurança (atravessa 3 a 5)
 
@@ -13,7 +13,7 @@ Ponto de desenho: as fases 3 a 5 correm por participante e se sobrepõem no site
 | DTRM | Gov | 2 | atualizado em emenda, IFU nova ou mudança de fluxo | 6 | requisitos definidos antes do treino (4.2.3) |
 | TRE | Gov | 2 | 3 a 5, retreino por gatilho | 6 | liberação antes da primeira tarefa crítica (4.2.3) |
 | SCR | Gov | 2 | 4 e 5, reavaliação anual ou por gatilho | 6 | credenciamento antes do primeiro caso (4.2.4) |
-| SRR | Risco | 1 (rascunho) e 2 (completo) | 3 a 6, a cada ciclo e por gatilho | 7 (vira lição) | valor preventivo só antes do primeiro participante (4.3.1, 4.6) |
+| SRR | Risco | 2 (antes do primeiro participante, como diz a 4.3.1) | 3 a 6, a cada ciclo e por gatilho | 7 (vira lição) | valor preventivo só antes do primeiro participante (4.3.1, 4.6) |
 | SLCT | Risco | 2 (base de comparação fixada) | 4, caso a caso, com revisões em pontos definidos | 6 | tem de pegar os primeiros casos (4.3.2, 4.6.2) |
 | SCML | Risco | 2 (preparado) | S, cada evento | 6 | eventos começam com o primeiro participante (4.3.3) |
 | SART | Risco | 2 (preparado) | S, cada caso até o fechamento | 6 | idem |

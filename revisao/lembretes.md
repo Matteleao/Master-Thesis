@@ -69,6 +69,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 
 - M (26/10): D11 decidida. (1) Escalabilidade por capacidade: nível base = condições do centro-alvo (3.4.5), nível integrado = centro com unidade de pesquisa ou sistema de qualidade; o risco ajusta a profundidade dentro de cada nível; sai o núcleo reduzido abaixo do mínimo; somem os nomes Type A/B/C. (2) O MRL vira o registro do lifecycle (passagens de fase + os quatro marcos da 4.2.1), o que resolve a D2; a 4.2.1 ganha meia frase. (3) O Apêndice Y sai (e a frase da 4.6.2); refazer só se sobrar tempo. (4) Saem as Figuras 4.2 e 4.5; a Tabela 4.4 ganha colunas de instrumento e de fase. Ainda pendente: CCDM ou RACI na 4.2.4
 
+- M (26/10): mapa instrumento × fase aprovado. O SRR abre "before the first participant" (fase 2), sem rascunho na viabilidade; não reabrir. Sincronização da seção 0 aplicada no docx (v27) e entregue; o RACI leva a autorização ao delegation record na 4.2.4 (o CCDM foi erro da versão do autor). Ainda não escrever a 4.6: o autor vai mandar outra análise para comparar
+
 ## 4. Passadas finais já combinadas
 
 - 4.7.1: o "PD record" do núcleo do Type C é o registro de desvios exigido pelo CIP, não um instrumento do framework (não há registro de desvios entre os 24); ajustar a frase ao revisar a 4.7
