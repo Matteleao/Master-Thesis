@@ -38,6 +38,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 | D8 | 4.2.1 | Cadência das oversight meetings: o POT diz revisão mensal e a 4.5.2 diz "monthly oversight meeting"; decidir se a 4.2.1 diz "monthly" ou deixa a cadência para o site |
 | D7 | 4.2.3 | Números dos domínios por área de treinamento (dispositivo e documentação 4 e 5; avaliação 8 e 9; protocolo e segurança a confirmar) e DR10 no fecho (Claude usou o DR10 com base na Figura 4.5) |
 
+- D11 (26/10): decisões da 4.6 a 4.8 em revisao/diagnostico-4.6-4.8.md, seção 6 (escalabilidade por capacidade; MRL como registro do lifecycle e fim da D2; Apêndice Y; Figuras 4.2 e 4.5 × Tabela 4.4; CCDM ou RACI na 4.2.4)
+
 ## 3. Decisões em que o autor mudou de ideia ou desistiu (não reabrir)
 
 | # | Data | Antes | Decisão final |
@@ -64,6 +66,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 - M (26/10): varredura de split brain do cap. 4 (4.1 a 4.5.6) em revisao/split-brain-cap4.md, com 13 trocas. A troca 7 substitui o texto da verificação nova da 4.4.1 passado antes; inclui também "across all nine checks" → "ten" no 5º parágrafo da 4.4.1. O autor aplica na versão local; o docx de trabalho do Claude ainda não tem nada disso. Sincronizar antes de voltar a aplicar
 
 - M (26/10): reanálise da varredura de split brain. Ficam só as trocas 7 e 13 (obrigatórias), 1 em versão curta e 2 (recomendadas). As trocas 3 a 6 e 8 a 12 foram descartadas; não reabrir. Ver o topo de revisao/split-brain-cap4.md
+
+- M (26/10): o autor mandou o docx dele de 26/10, que passa a ser a base (scratchpad v26). Sete pontos de sincronização na seção 0 de revisao/diagnostico-4.6-4.8.md (EMA "multidisciplinary" voltou; páginas da [77]; pontos duplos; trocas 7 e 13 incompletas; "nine checks" no 5º parágrafo da 4.4.1; lista de tabelas com erro de indicador; CCDM × RACI; contagem por pilar na 4.8)
 
 ## 4. Passadas finais já combinadas
 
