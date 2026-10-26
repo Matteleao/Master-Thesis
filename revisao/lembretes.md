@@ -77,6 +77,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 - M (26/10, muda a D11-1): a escalabilidade NÃO usa critérios de pessoal dedicado, função de qualidade ou unidade de pesquisa (o autor não quer; não existem no cap. 2 e 3). Os três níveis são as categorias da Tabela 3.3: nonhospital (centro-alvo, nível mínimo), nonacademic hospital e academic. O argumento usa só o que a 3.4.4 e a 3.4.5 já dizem: o nível diz o que o framework pode supor que existe atrás do site ("no hospital system or university stands behind the site"); como a categoria não informa o preparo de um site em particular (3.4.4), um site sem esse apoio opera na profundidade do nível mínimo; o risco da investigação ajusta a profundidade dentro de cada nível (4.7.3). Os 24 instrumentos ficam em uso nos três níveis; sai o núcleo reduzido. Nada é acrescentado aos cap. 2 e 3 nem à 4.1 a 4.5. No abstract só se tira o que falar de pessoal dedicado ou estrutura de pesquisa, sem acrescentar nada. Não reabrir
 - M (26/10): a matriz instrumento × fase da 4.6 entra como figura, na família visual da Fig. 4.4, com marcadores "montado" e "em uso". A Fig. 4.2 sai (confirmado)
 
+- M (26/10): da 4.6 em diante, um pedaço por vez: primeiro só o texto introdutório da 4.6, depois a 4.6.1, depois a 4.6.2, e assim por diante. Nunca entregar a seção inteira de uma vez. Os rascunhos da 4.6.1 e da 4.6.2 (t46.json) e a Fig. 4.2 ficam guardados para quando chegar a vez de cada um
+
 ## 4. Passadas finais já combinadas
 
 - 4.7.1: o "PD record" do núcleo do Type C é o registro de desvios exigido pelo CIP, não um instrumento do framework (não há registro de desvios entre os 24); ajustar a frase ao revisar a 4.7
