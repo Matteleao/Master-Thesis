@@ -55,6 +55,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 | M12 | 25/10 | FUCR em Operational Controls (9 instrumentos no pilar) | FUCR passa para Performance Oversight (mede o agregado do seguimento). Operational Controls fica com 8 e Performance Oversight com 4: corrigir Figuras 4.2 e 4.3, Tabela 4.3 e legendas. PSEAR, SIFSL e PFVR ganham a nova 4.4.3; o controle de elegibilidade e de visita sai da 4.5.1 e da 4.5.3; as atuais 4.4.3 e 4.4.4 se fundem (com o ICDL). SIFSL e SIRR em Operational Controls aguardam confirmação |
 | M11 | 24/10 | Ordem dos apêndices pela tabela de instrumentos | Ordem da primeira citação no cap. 4. A tabela de instrumentos segue a mesma ordem dentro de cada pilar (o autor corrige a tabela) |
 
+- M (26/10): 4.5.5 fica sem frase sobre quem vê o painel. Os códigos de cirurgião podem ser usados, mas são atribuíveis (pseudonimizados, não anônimos), e o desempenho observado alimenta a reautorização da 4.2.4. Intenção do autor: a revisão de consistência serve para achar problemas cedo e apoiar o cirurgião, não para punir. Não reabrir; texto da 4.5.5 aceito como entregue (t455.json), ainda não aplicado
+
 ## 4. Passadas finais já combinadas
 
 - 4.7.1: o "PD record" do núcleo do Type C é o registro de desvios exigido pelo CIP, não um instrumento do framework (não há registro de desvios entre os 24); ajustar a frase ao revisar a 4.7
