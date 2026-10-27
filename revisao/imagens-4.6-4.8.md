@@ -4,7 +4,7 @@ Vale para o capítulo 4 a partir da 4.6, e inclui as pendências antigas de imag
 
 ## 1. Numeração depois das mudanças
 
-Saem a Fig. 4.2 (instrumentos por pilar) e a Fig. 4.5 (instrumentos × DRs). Entram uma figura nova na 4.6 e uma tabela nova na 4.7. A tabela de portas da 4.6.1 foi descartada em 27/10: as condições de cada fase entram na própria Fig. 4.1.
+Saem a Fig. 4.2 (instrumentos por pilar) e a Fig. 4.5 (instrumentos × DRs). Entra uma figura nova na 4.6. A tabela de registros invariantes da 4.7 foi descartada em 27/10 (os registros ficam citados em prosa). A tabela de portas da 4.6.1 foi descartada em 27/10: as condições de cada fase entram na própria Fig. 4.1.
 
 | Hoje | Depois | Onde |
 |---|---|---|
@@ -16,9 +16,8 @@ Saem a Fig. 4.2 (instrumentos por pilar) e a Fig. 4.5 (instrumentos × DRs). Ent
 | Fig. 4.5 instrumentos × DRs | sai | — |
 | Tabela 4.1 funções | Tabela 4.1 | 4.2.2 |
 | Tabela 4.2 escalabilidade | Tabela 4.2 | 4.7.1 |
-| (nova) registros invariantes | Tabela 4.3 | 4.7.2 |
-| Tabela 4.3 instrumentos | Tabela 4.4 | 4.8 |
-| Tabela 4.4 DR × componente | Tabela 4.5 | 4.8 |
+| Tabela 4.3 instrumentos | Tabela 4.3 (o número não muda) | 4.8 |
+| Tabela 4.4 DR × componente | Tabela 4.4 (o número não muda) | 4.8 |
 
 As remissões no texto e as listas de figuras e de tabelas mudam junto (Ctrl+A, F9 no fim).
 

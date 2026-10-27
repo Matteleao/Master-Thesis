@@ -98,6 +98,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 - M (27/10): mínimos RECOMENDADOS por nível: nonhospital 12 (POT, RACI, TRE, SCR, SRR, SART, IMC, PSEAR, ICDL, IQL, FUCR, PIDLR); nonacademic hospital 18 (+ SLCT, SCML, CSST, IMP, PIR, CAPA, o que completa a resposta a todos os gaps); academic 24 (+ CCDM, MRL, DTRM, SIRR, SIFSL, PFVR, instrumentos de estrutura formal). É o mínimo recomendado, não o literal: todo site pode e deve usar mais, e os 24 sempre que possível. O texto da 4.7 tem de dizer isso com clareza
 - Correção (27/10): o proxy da CAPA no mínimo NÃO contradiz o Gap 1. O Gap 1 é a falta de um requisito de sistema de qualidade estruturado no site, e não a falta de qualquer procedimento; um centro que conduz investigações já tem SOPs e registros básicos, e a ISO 14155:2026 (10.6(o)) já pede ao PI causa e CAPA para não conformidade significativa. Proxy: o processo que o site já usa ou que o sponsor pede, acompanhado no POT. O Gap 1 não precisa ser reescrito
 
+- M (27/10): a tabela de registros invariantes da 4.7 saiu (o autor achou que não acrescenta). Os registros ficam citados em prosa no último parágrafo da 4.7, sem números de cláusula, com [8, 10]. Numeração das tabelas: 4.1 funções, 4.2 escalabilidade, 4.3 instrumentos, 4.4 DR × componente (as duas últimas mantêm o número)
+
 ## 4. Passadas finais já combinadas
 
 - 4.7.1: o "PD record" do núcleo do Type C é o registro de desvios exigido pelo CIP, não um instrumento do framework (não há registro de desvios entre os 24); ajustar a frase ao revisar a 4.7
