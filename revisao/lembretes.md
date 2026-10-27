@@ -106,6 +106,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 
 ## 4. Passadas finais já combinadas
 
+- **Regra (27/10, do autor):** o texto nunca descreve figura ou tabela (marcadores, linhas, colunas, cores, forma). Descrição fica na legenda; no texto, só a afirmação sobre o framework com a remissão entre parênteses. Na passada final, varrer os caps. 3 e 4 inteiros com essa regra.
+
 - **Tabela 4.4 saiu (27/10).** Trocar as remissões: 2.5.1 ("Table 4.4 lists each requirement with the components that answer it") → Figure 4.4; 4.1 ("Table 4.4, at the end of the chapter, lists each design requirement…") → Figure 4.4 para os DRs e Table 4.3 para a seção de cada instrumento; lista de tabelas e de figuras.
 - **4.8 reescrita do zero (27/10, t48b).** O argumento: a 3.5 diz que o framework só se justifica pela origem de cada parte; a 4.8 entrega essa justificativa para o conjunto, em duas frentes (os registros se ligam; as partes são completas e necessárias). A versão t48 fica arquivada.
 
