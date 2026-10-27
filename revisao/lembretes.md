@@ -106,6 +106,9 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 
 ## 4. Passadas finais já combinadas
 
+- **Tabela 4.4 saiu (27/10).** Trocar as remissões: 2.5.1 ("Table 4.4 lists each requirement with the components that answer it") → Figure 4.4; 4.1 ("Table 4.4, at the end of the chapter, lists each design requirement…") → Figure 4.4 para os DRs e Table 4.3 para a seção de cada instrumento; lista de tabelas e de figuras.
+- **4.8 reescrita do zero (27/10, t48b).** O argumento: a 3.5 diz que o framework só se justifica pela origem de cada parte; a 4.8 entrega essa justificativa para o conjunto, em duas frentes (os registros se ligam; as partes são completas e necessárias). A versão t48 fica arquivada.
+
 - 4.7.1: o "PD record" do núcleo do Type C é o registro de desvios exigido pelo CIP, não um instrumento do framework (não há registro de desvios entre os 24); ajustar a frase ao revisar a 4.7
 
 - 4.5.1 e 4.5.3: ao revisar, tirar o texto de controle que foi para a nova 4.4.3 (confirmação estruturada de critérios de imagem ou de várias fontes, erro de inclusão irreversível, definição de visita utilizável); a 4.5.1 e a 4.5.3 ficam só com o indicador; nomear o FUCR na 4.5.3 (decidido em 25/10)

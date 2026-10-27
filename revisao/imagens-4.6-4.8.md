@@ -11,13 +11,13 @@ Saem a Fig. 4.2 (instrumentos por pilar) e a Fig. 4.5 (instrumentos × DRs). Ent
 | Fig. 4.1 lifecycle | Fig. 4.1 | 4.6.1 |
 | (nova) matriz instrumento × fase | Fig. 4.2 | 4.6.2 |
 | Fig. 4.3 granularidade | Fig. 4.3 (o número não muda) | 4.8 |
-| Fig. 4.4 instrumentos × domínios | Fig. 4.4 (o número não muda) | 4.8 |
+| Fig. 4.4 instrumentos × domínios | Fig. 4.4 combinada (domínios em cima, DRs embaixo; imagem do autor de 27/10) | 4.8 |
 | Fig. 4.2 por pilar | sai | — |
 | Fig. 4.5 instrumentos × DRs | sai | — |
 | Tabela 4.1 funções | Tabela 4.1 | 4.2.2 |
 | Tabela 4.2 escalabilidade | Tabela 4.2 | 4.7.1 |
 | Tabela 4.3 instrumentos | Tabela 4.3 (o número não muda) | 4.8 |
-| Tabela 4.4 DR × componente | Tabela 4.4 (o número não muda) | 4.8 |
+| Tabela 4.4 DR × componente | sai (27/10): entra na Fig. 4.4 combinada; a seção de cada instrumento vai para a Tabela 4.3 | — |
 
 As remissões no texto e as listas de figuras e de tabelas mudam junto (Ctrl+A, F9 no fim).
 
@@ -136,6 +136,15 @@ Em inglês na imagem. Nada de "quality function", "imaging liaison", "dedicated 
 - **DR10:** CCDM e RACI, mais DTRM e TRE.
 - **DR11:** sai "4.4.3". Fica 4.4.4 e 4.8.
 - **DR12:** "three site contexts" → os três níveis da Tabela 3.3.
+
+### Fig. 4.4 combinada (27/10, imagem do autor)
+Substitui a antiga Fig. 4.4 (domínios) e a Tabela 4.4 (DRs). O autor ainda vai fechar a posição dos marcadores. O texto novo da 4.8 depende só de dois pontos:
+- **Legenda da parte de DRs:** só cheio e vazado, como na parte de domínios. "Inherited from a combined or earlier instrument" e "extension, added to the original set" contam uma história de versões que os caps. 2 a 4 não apresentam, e "combined" bate com a decisão de não haver registros combinados.
+- **DR9:** vira barra, como DR11 e DR12 ("all instruments · each assigned to the phase where it has most effect, Figure 4.2"). O marcador cheio no MRL contradiz o MRL em segundo plano.
+- Quando a figura fechar, conferir no texto da 4.8 (t48b): toda linha de domínio e de DR1 a DR10 com um cheio; toda coluna com um cheio em uma das partes; DTRM, TRE, PFVR e FUCR sem cheio na parte de DRs.
+
+### Tabela 4.3: coluna "Section"
+Ao lado de "Appendix", para não perder a informação que a Tabela 4.4 dava.
 
 ## 4. Pendências antigas (capítulo 3 e 4.2; suas imagens)
 
