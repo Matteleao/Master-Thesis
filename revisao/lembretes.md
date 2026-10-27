@@ -100,6 +100,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 
 - M (27/10): a tabela de registros invariantes da 4.7 saiu (o autor achou que não acrescenta). Os registros ficam citados em prosa no último parágrafo da 4.7, sem números de cláusula, com [8, 10]. Numeração das tabelas: 4.1 funções, 4.2 escalabilidade, 4.3 instrumentos, 4.4 DR × componente (as duas últimas mantêm o número)
 
+- M (27/10): não usar "proxy" para o registro que cobre um instrumento fora do conjunto mínimo (proxy é medida indireta, e "substitute" já é a pessoa substituta do DR10). Usar a forma verbal: "the function of X is covered by Y" / "covered by the record named in its row"
+
 ## 4. Passadas finais já combinadas
 
 - 4.7.1: o "PD record" do núcleo do Type C é o registro de desvios exigido pelo CIP, não um instrumento do framework (não há registro de desvios entre os 24); ajustar a frase ao revisar a 4.7
