@@ -81,6 +81,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 
 - M (27/10): sem tabela de portas na 4.6.1. A condição que fecha cada fase vai para a Fig. 4.1 (lista em imagens-4.6-4.8.md). O MRL fica em segundo plano no texto: uma menção leve às revisões de marco, nada de tabela nem de parágrafo destacando o MRL. A numeração das tabelas volta a: 4.2 escalabilidade, 4.3 registros invariantes, 4.4 instrumentos, 4.5 DR × componente
 
+- Cap. 5 (27/10, da análise da 4.6.2): a hipótese de fases aparece como "predictable phases… predictable forms" no cap. 5 e como "identifiable phases" na 4.6; usar um nome só. Se a universidade exigir declaração de uso de IA, ela vai para a declaração geral ou para os métodos, não para o cap. 4 (o parágrafo do Apêndice Y saiu)
+
 ## 4. Passadas finais já combinadas
 
 - 4.7.1: o "PD record" do núcleo do Type C é o registro de desvios exigido pelo CIP, não um instrumento do framework (não há registro de desvios entre os 24); ajustar a frase ao revisar a 4.7
