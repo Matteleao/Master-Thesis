@@ -162,3 +162,9 @@ Em inglês na imagem. Nada de "quality function", "imaging liaison", "dedicated 
 - **Tipografia:** uma família sem serifa em todas as figuras e tabelas, com monoespaçada só para as siglas dos instrumentos. Hoje as Figs. 4.1, 4.2 e 4.3 misturam títulos com serifa. Tamanho mínimo equivalente a 8 pt impresso (as notas em itálico da Fig. 4.3 estão menores que isso).
 - **Largura e legendas:** todas na largura do texto; legenda acima nas tabelas e abaixo nas figuras; a legenda dos marcadores sempre embaixo à esquerda.
 - **Fig. 4.3:** corrigir os grupos de linhas (o FUCR passou para Performance Oversight; a linha "Surgery and device" tem IMP, IMC, SIRR e IQL, que são verificação e imagem) e trocar a frase do rodapé por "The record of each event is made when the event happens; decisions return as the requirement that the next record is checked against".
+
+### Acréscimos ao padrão visual (27/10, da segunda análise)
+- **Tabelas como imagem (4.2, 4.3, 4.4 são PNG):** se der tempo, convertê-las em tabelas nativas do Word. Ficam pesquisáveis, editáveis e com a fonte da tese. Se converter, usar cabeçalho cinza-claro com filetes finos; se ficarem como imagem, manter o cabeçalho escuro de todas as outras.
+- **Tabela 4.3 em paisagem,** com o cabeçalho repetido na página seguinte, para não cair abaixo de 8 pt; siglas em monoespaçada também na tabela, como nas figuras.
+- **Família de matrizes:** a Fig. 4.2 (fases, sua versão final) tem os instrumentos nas linhas, e a Fig. 4.4 (domínios) nas colunas. Opcional: refazer a Fig. 4.4 com os instrumentos nas linhas, na mesma ordem, para as duas lerem igual.
+- **Daltonismo:** ferrugem (Risk Management) e ocre (Performance Oversight) se confundem em daltonismo vermelho-verde; escurecer um e clarear o outro, e fazer um teste de impressão em preto e branco.
