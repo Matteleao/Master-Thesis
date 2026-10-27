@@ -102,6 +102,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 
 - M (27/10, final): fica "proxy", definido no primeiro uso na 4.7 ("a proxy, another record that the site keeps and that takes on its function"). Não reabrir
 
+- Coerência com a escalabilidade 12/18/24 (27/10), fora da 4.8, para a passada final: (a) 4.1: "The depth at which a site uses each instrument follows the risk…" → quais instrumentos o site usa e com que frequência revisa seguem o risco e o nível; (b) cap. 2: "Figure 4.5 does the same for the 24 instruments" (a Fig. 4.5 saiu; trocar por Table 4.4); (c) cap. 5: "a center that adopts all twenty-four at once will operate none of them well", "can sustain the full set", "a small number of Type B centers"; (d) Fig. 4.1, saída do start-up: "SRR in place, rules of each instrument in use fixed" (IMP e PIR não estão no mínimo). Na 4.6.2 já ajustei: "in its plan or on its checklist" e "each indicator in use"
+
 ## 4. Passadas finais já combinadas
 
 - 4.7.1: o "PD record" do núcleo do Type C é o registro de desvios exigido pelo CIP, não um instrumento do framework (não há registro de desvios entre os 24); ajustar a frase ao revisar a 4.7

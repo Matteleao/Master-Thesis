@@ -68,7 +68,7 @@ As remissões no texto e as listas de figuras e de tabelas mudam junto (Ctrl+A, 
 - **Fase 7:** "Corrective actions closed and their effectiveness assessed" → "No corrective action left open"; as ações fecham durante a condução, quando a revisão mostra eficácia.
 - **Linha nova em cada fase: a condição que fecha a fase** (substitui a tabela de portas):
   - 1 Feasibility: "Closes when capability and imaging readiness are documented and the sponsor decides on selection"
-  - 2 Start-up: "Closes when the site is ready to enroll: tasks released, surgeons credentialed, SRR, PIR rules and IMP in place, implementation level recorded"
+  - 2 Start-up: "Closes when the site is ready to enroll: tasks released, surgeons credentialed, SRR in place, rules of each instrument in use fixed, implementation level recorded"
   - 3 Enrollment: "From the first screened candidate to the last enrolled participant"
   - 4 Surgery: "From the first to the last study procedure"
   - 5 Follow-up: "From the first follow-up to the last required visit"
