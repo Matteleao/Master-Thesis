@@ -151,3 +151,14 @@ Em inglês na imagem. Nada de "quality function", "imaging liaison", "dedicated 
   - rótulos das condições (depois da D3);
   - grafia americana (centre, standardised, afterwards).
 - **Tabela 4.1 (funções):** "PROM workflows" → "PROM administration"; "Data QA" → "Data QA function".
+
+## 5. Padrão visual proposto (27/10)
+
+- **Tabelas neutras, figuras com cor só onde a cor tem significado.** As tabelas são texto de referência: cabeçalho escuro (#1f1e1c) e linhas alternadas em creme (#f5f3ee), como já estão nos cap. 3 e 4. Nas figuras, a cor identifica só o pilar, com uma paleta única: Governance azul #2f5d9e, Risk Management ferrugem #b5492f, Operational Controls verde-azulado #1f6e60, Performance Oversight ocre #a8650f. Nenhuma outra cor carrega significado.
+- **Única exceção nas tabelas:** a Tabela 4.3 (instrumentos) ganha linhas de cabeçalho por pilar com uma barra fina na cor do pilar, para ligar a tabela às figuras.
+- **Fig. 4.1 (lifecycle):** hoje as fases usam marrom, ocre, azul-marinho e verde-azulado, as mesmas cores que nas outras figuras querem dizer pilar. Trocar por tons neutros, um para cada grupo (preparação, condução, fechamento), e a corrente de segurança em ferrugem, igual à coluna S da Fig. 4.2.
+- **Marcadores:** uma convenção só nas figuras de matriz: círculo cheio = carrega o controle ou está em uso; círculo vazio = apoia ou está preparado. Mesmo tamanho e mesma espessura de traço na Fig. 4.2 e na Fig. 4.4. Sem quadrados (a Fig. 4.5, que os usava, saiu).
+- **Impressão em preto e branco:** o significado tem de sobreviver sem cor. Cheio e vazio já fazem isso; conferir o contraste das faixas de pilar em cinza.
+- **Tipografia:** uma família sem serifa em todas as figuras e tabelas, com monoespaçada só para as siglas dos instrumentos. Hoje as Figs. 4.1, 4.2 e 4.3 misturam títulos com serifa. Tamanho mínimo equivalente a 8 pt impresso (as notas em itálico da Fig. 4.3 estão menores que isso).
+- **Largura e legendas:** todas na largura do texto; legenda acima nas tabelas e abaixo nas figuras; a legenda dos marcadores sempre embaixo à esquerda.
+- **Fig. 4.3:** corrigir os grupos de linhas (o FUCR passou para Performance Oversight; a linha "Surgery and device" tem IMP, IMC, SIRR e IQL, que são verificação e imagem) e trocar a frase do rodapé por "The record of each event is made when the event happens; decisions return as the requirement that the next record is checked against".
