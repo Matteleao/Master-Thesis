@@ -1,5 +1,7 @@
 # Mapa instrumento × fase (espinha da nova 4.6), aprovado pelo autor em 26/10
 
+> **27/10: a versão final é a figura do autor (tese/figuras/figura-4.2-nova-matriz.webp), que prevalece sobre esta tabela.** Diferenças: DTRM vazio na fase 2; os registros de participante (IMC, IQL, PSEAR, SIFSL, PFVR, ICDL), o FUCR e a CAPA não têm marcador na fase 2; o MRL não tem marcador na coluna S. O texto da 4.6.2 foi ajustado a ela.
+
 Fases: 1 Feasibility · 2 Start-up · 3 Enrollment · 4 Surgery · 5 Follow-up · 6 Close-out · 7 Continuous improvement · S = corrente de segurança (atravessa 3 a 5)
 
 Ponto de desenho: as fases 3 a 5 correm por participante e se sobrepõem no site, porque um participante está sendo incluído enquanto outro já está em seguimento. No nível do site, as passagens são marcadas pelo primeiro e pelo último evento de cada fase (primeira inclusão, primeira cirurgia, última cirurgia, última visita), e é isso que os marcos M2 a M5 e M9 a M11 do MRL já fazem.
