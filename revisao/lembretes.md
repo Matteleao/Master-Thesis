@@ -83,6 +83,9 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 
 - Cap. 5 (27/10, da análise da 4.6.2): a hipótese de fases aparece como "predictable phases… predictable forms" no cap. 5 e como "identifiable phases" na 4.6; usar um nome só. Se a universidade exigir declaração de uso de IA, ela vai para a declaração geral ou para os métodos, não para o cap. 4 (o parágrafo do Apêndice Y saiu)
 
+- Para a 4.7.1 e a 4.7.3 (27/10, da análise da abertura da 4.7): (a) a ressalva da 3.4.4 (categoria não informa preparo) vira regra: um site sem o apoio que a categoria supõe opera na profundidade do nível mínimo; (b) o nível é decidido na revisão de saída do start-up e revisto quando a capacidade muda durante a condução (por exemplo, saída do coordenador), além do risco; (c) DR10 x nível mínimo: acumular funções numa pessoa não fere o DR10 porque cada função tem substituto nomeado (4.2.2), e o conflito restante segue a regra da 3.5 (a restrição operacional prevalece); (d) a unidade que escala: cadência, independência da revisão, registros combinados, acúmulo de funções
+- Nomenclatura (27/10): um nome só para os níveis, "implementation level" (termo do cap. 3). Trocar "site contexts" (título da 4.7.1), "site types" (cap. 5), "Type A/B/C" (4.7.1, Tabela 4.2, cap. 5) e conferir "three implementation depths" no abstract
+
 ## 4. Passadas finais já combinadas
 
 - 4.7.1: o "PD record" do núcleo do Type C é o registro de desvios exigido pelo CIP, não um instrumento do framework (não há registro de desvios entre os 24); ajustar a frase ao revisar a 4.7
