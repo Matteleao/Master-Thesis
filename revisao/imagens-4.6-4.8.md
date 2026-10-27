@@ -111,6 +111,7 @@ Em inglês na imagem. Nada de "quality function", "imaging liaison", "dedicated 
 - O TRE tem um nome só em toda a tese: Training Record Evaluation and Release.
 
 ### Fig. 4.3 granularidade (sua imagem)
+- **27/10: vale a versão por linhas de pilar com o quadro "The information chain"** (a lista de siglas por nível foi descartada, porque repete a Tabela 4.3). Ajustes que faltam: tirar a nota do MRL ("consolidates the governance evidence at each milestone"), porque o MRL fica em segundo plano; deixar só uma das duas frases sobre o retorno da decisão (fica a do rodapé).
 - **Legenda:** volta para "Operational Controls appears as three groups (surgery and device, enrollment, follow-up), and the safety stream appears as a row of its own". SART, SCML e CSST são de Risk Management.
 - **Linha "Surgery and device":** hoje tem IMP, IMC, SIRR e IQL, que são verificação e imagem. Reagrupar ou renomear a linha.
 - O FUCR passa para Performance Oversight.
