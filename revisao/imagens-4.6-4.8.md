@@ -112,6 +112,7 @@ Em inglês na imagem. Nada de "quality function", "imaging liaison", "dedicated 
 
 ### Fig. 4.3 granularidade (sua imagem)
 - **27/10: vale a versão por linhas de pilar com o quadro "The information chain"** (a lista de siglas por nível foi descartada, porque repete a Tabela 4.3). Ajustes que faltam: tirar a nota do MRL ("consolidates the governance evidence at each milestone"), porque o MRL fica em segundo plano; deixar só uma das duas frases sobre o retorno da decisão (fica a do rodapé).
+- **Conferência de 27/10 (lista final):** (1) MRL passa para a coluna Decision, sem a nota ao lado, porque a 4.2.1 diz que ele "records each decision"; (2) sai a frase "and the action returns as a verification requirement in the evidence layer"; (3) sai a caixa "Action" (a cadeia fica Evidence → Synthesis → Decision, com a seta tracejada da Decision de volta para a Evidence, como no texto e na legenda); (4) "Risk management" e "Performance oversight" nos rótulos das faixas com maiúscula, como na legenda; (5) vírgula serial nas descrições: "image, or occurrence" e "indicators, and learning".
 - **Legenda:** volta para "Operational Controls appears as three groups (surgery and device, enrollment, follow-up), and the safety stream appears as a row of its own". SART, SCML e CSST são de Risk Management.
 - **Linha "Surgery and device":** hoje tem IMP, IMC, SIRR e IQL, que são verificação e imagem. Reagrupar ou renomear a linha.
 - O FUCR passa para Performance Oversight.
