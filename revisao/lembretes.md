@@ -95,6 +95,9 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 
 - M (27/10, muda o conjunto mínimo): o SRR sobe; o mínimo tem 12 instrumentos (POT, RACI, TRE, SCR, SRR, SART, IMC, PSEAR, ICDL, IQL, FUCR, PIDLR). Proxy da CAPA no mínimo: ações decididas na reunião ou pedidas pelo sponsor ficam registradas e acompanhadas no POT (não supor que o centro-alvo tem processo de CAPA próprio, o que contradiria o Gap 1). Argumento para a 4.7: no mínimo, cada gap tem ao menos um instrumento leve (Gap 1 POT e RACI, Gap 2 SRR, Gap 3 reavaliação do SCR, Gap 4 IMC, Gap 5 PIDLR), e as obrigações já existentes vêm primeiro porque o site responde por elas de qualquer jeito (3.5: o framework organiza deveres existentes e responde aos gaps)
 
+- M (27/10): mínimos RECOMENDADOS por nível: nonhospital 12 (POT, RACI, TRE, SCR, SRR, SART, IMC, PSEAR, ICDL, IQL, FUCR, PIDLR); nonacademic hospital 18 (+ SLCT, SCML, CSST, IMP, PIR, CAPA, o que completa a resposta a todos os gaps); academic 24 (+ CCDM, MRL, DTRM, SIRR, SIFSL, PFVR, instrumentos de estrutura formal). É o mínimo recomendado, não o literal: todo site pode e deve usar mais, e os 24 sempre que possível. O texto da 4.7 tem de dizer isso com clareza
+- Correção (27/10): o proxy da CAPA no mínimo NÃO contradiz o Gap 1. O Gap 1 é a falta de um requisito de sistema de qualidade estruturado no site, e não a falta de qualquer procedimento; um centro que conduz investigações já tem SOPs e registros básicos, e a ISO 14155:2026 (10.6(o)) já pede ao PI causa e CAPA para não conformidade significativa. Proxy: o processo que o site já usa ou que o sponsor pede, acompanhado no POT. O Gap 1 não precisa ser reescrito
+
 ## 4. Passadas finais já combinadas
 
 - 4.7.1: o "PD record" do núcleo do Type C é o registro de desvios exigido pelo CIP, não um instrumento do framework (não há registro de desvios entre os 24); ajustar a frase ao revisar a 4.7
