@@ -10,7 +10,7 @@ Redo Table 4.2 (the scalability model) keeping exactly the same visual style as 
 Rules behind the content (do not print them in the table):
 - There is one version of each instrument. No instrument has a "lean" or reduced form, and no two records are ever combined into one file.
 - What scales is how many instruments a site uses. Each level has a recommended minimum (12, 18, and 24 instruments). Any site may use more, and a site that can use all 24 should.
-- The function of every instrument left out at a level is covered by another record, named in its row. Never use the word "proxy".
+- Every instrument left out at a level has a proxy, another record that takes on its function, named in its row.
 
 Header row:
 - Framework element
@@ -44,7 +44,7 @@ Row 5, Performance Oversight
 - Academic: The same four instruments are kept, and the PIR may feed institutional quality dashboards.
 
 Row 6, Role structure and instruments
-- Nonhospital: The recommended minimum is 12 of the 24 instruments: POT, RACI, TRE, SCR, SRR, SART, IMC, PSEAR, ICDL, IQL, FUCR, and PIDLR. The others are optional, each covered by the record named in its row, and a site that can use them should.
+- Nonhospital: The recommended minimum is 12 of the 24 instruments: POT, RACI, TRE, SCR, SRR, SART, IMC, PSEAR, ICDL, IQL, FUCR, and PIDLR. The others are optional, each covered by the proxy named in its row, and a site that can use them should.
 - Nonacademic hospital: The recommended minimum is 18 instruments: the twelve of the minimum level plus the SLCT, the SCML, the CSST, the IMP, the PIR, and the CAPA log. The others are optional.
 - Academic: All 24 instruments are recommended and may be embedded in institutional trial or quality platforms.
 

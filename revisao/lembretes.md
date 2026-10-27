@@ -100,7 +100,7 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 
 - M (27/10): a tabela de registros invariantes da 4.7 saiu (o autor achou que não acrescenta). Os registros ficam citados em prosa no último parágrafo da 4.7, sem números de cláusula, com [8, 10]. Numeração das tabelas: 4.1 funções, 4.2 escalabilidade, 4.3 instrumentos, 4.4 DR × componente (as duas últimas mantêm o número)
 
-- M (27/10): não usar "proxy" para o registro que cobre um instrumento fora do conjunto mínimo (proxy é medida indireta, e "substitute" já é a pessoa substituta do DR10). Usar a forma verbal: "the function of X is covered by Y" / "covered by the record named in its row"
+- M (27/10, final): fica "proxy", definido no primeiro uso na 4.7 ("a proxy, another record that the site keeps and that takes on its function"). Não reabrir
 
 ## 4. Passadas finais já combinadas
 
