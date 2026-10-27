@@ -86,6 +86,19 @@ As remissões no texto e as listas de figuras e de tabelas mudam junto (Ctrl+A, 
 - **Grafia:** specialised, programme, authorisation, centre → americano.
 - O SCML não pode aparecer só numa coluna.
 - O conteúdo final das células sai junto com o texto da 4.7.
+#### Proposta de células da Tabela 4.2 (27/10; para validar com o texto da 4.7)
+
+| Elemento | Nonhospital (nível mínimo, centro-alvo) | Nonacademic hospital | Academic |
+|---|---|---|---|
+| Governance | Supervisão do PI em camadas, funções acumuladas com substituto nomeado; revisões de marco e gatilhos curtos | Funções em pessoas diferentes quando a equipe permite; reuniões de supervisão incluem os serviços do hospital de que o site depende | Supervisão dentro da governança de pesquisa da instituição, sem substituí-la |
+| Risk register and complication surveillance | Registro completo em forma enxuta, revisto pelo PI; complication log e revisão mensal de sinais podem ficar num registro só | Mesmo registro e mesma revisão, em registros separados | Registro ligado aos sistemas de risco da instituição |
+| Procedural competence and stability | Credenciamento, liberação e learning curve log para todo cirurgião; proctoring combinado com o sponsor quando necessário | Igual, com o credenciamento alinhado ao do hospital | Igual, dentro do credenciamento institucional |
+| Internal verification and imaging | Revisão por um par treinado ou pelo PI, nunca por quem fez o trabalho; prontidão de imagem combinada com o prestador externo | Revisão por alguém fora da execução diária quando possível; revisão local de imagem no serviço de radiologia do hospital | Revisão por uma unidade separada da investigação; revisão de imagem integrada à imagem institucional |
+| Performance Oversight | Os seis indicadores, lidos como contagens sobre denominadores; CAPA log como registro próprio | Os seis indicadores, também comparados entre as investigações do site | Indicadores podem entrar nos painéis institucionais; CAPA ligada ao sistema institucional, quando existir |
+| Role structure and instruments | Seis funções em poucas pessoas; instrumentos em papel ou no sistema que o site já usa | Funções distribuídas em cargos; instrumentos dentro dos registros do hospital | Instrumentos dentro das plataformas de pesquisa ou de qualidade da instituição |
+
+Em inglês na imagem. Nada de "quality function", "imaging liaison", "dedicated staff". Os 24 instrumentos aparecem nos três níveis.
+
 
 ### Tabela 4.4 instrumentos (antiga 4.3; sua imagem)
 - Cabeçalhos por pilar.

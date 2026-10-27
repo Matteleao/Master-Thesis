@@ -86,6 +86,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 - Para a 4.7.1 e a 4.7.3 (27/10, da análise da abertura da 4.7): (a) a ressalva da 3.4.4 (categoria não informa preparo) vira regra: um site sem o apoio que a categoria supõe opera na profundidade do nível mínimo; (b) o nível é decidido na revisão de saída do start-up e revisto quando a capacidade muda durante a condução (por exemplo, saída do coordenador), além do risco; (c) DR10 x nível mínimo: acumular funções numa pessoa não fere o DR10 porque cada função tem substituto nomeado (4.2.2), e o conflito restante segue a regra da 3.5 (a restrição operacional prevalece); (d) a unidade que escala: cadência, independência da revisão, registros combinados, acúmulo de funções
 - Nomenclatura (27/10): um nome só para os níveis, "implementation level" (termo do cap. 3). Trocar "site contexts" (título da 4.7.1), "site types" (cap. 5), "Type A/B/C" (4.7.1, Tabela 4.2, cap. 5) e conferir "three implementation depths" no abstract
 
+- M (27/10): a 4.7 perde as subseções 4.7.1 a 4.7.3 (pedido do autor: tudo num bloco só, para dar volume ao argumento da escalabilidade). Proposta de Claude: a 4.7 fica com a abertura e o corpo, sem subtítulos (uma subseção única 4.7.1 não se justifica). Confirmar com o autor. Atualizar o sumário e o cap. 5 se citar 4.7.1 a 4.7.3. As referências [88], [89], [90] e [30] foram mantidas no texto novo
+
 ## 4. Passadas finais já combinadas
 
 - 4.7.1: o "PD record" do núcleo do Type C é o registro de desvios exigido pelo CIP, não um instrumento do framework (não há registro de desvios entre os 24); ajustar a frase ao revisar a 4.7
