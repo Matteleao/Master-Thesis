@@ -79,6 +79,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 
 - M (26/10): da 4.6 em diante, um pedaço por vez: primeiro só o texto introdutório da 4.6, depois a 4.6.1, depois a 4.6.2, e assim por diante. Nunca entregar a seção inteira de uma vez. Os rascunhos da 4.6.1 e da 4.6.2 (t46.json) e a Fig. 4.2 ficam guardados para quando chegar a vez de cada um
 
+- M (27/10): sem tabela de portas na 4.6.1. A condição que fecha cada fase vai para a Fig. 4.1 (lista em imagens-4.6-4.8.md). O MRL fica em segundo plano no texto: uma menção leve às revisões de marco, nada de tabela nem de parágrafo destacando o MRL. A numeração das tabelas volta a: 4.2 escalabilidade, 4.3 registros invariantes, 4.4 instrumentos, 4.5 DR × componente
+
 ## 4. Passadas finais já combinadas
 
 - 4.7.1: o "PD record" do núcleo do Type C é o registro de desvios exigido pelo CIP, não um instrumento do framework (não há registro de desvios entre os 24); ajustar a frase ao revisar a 4.7

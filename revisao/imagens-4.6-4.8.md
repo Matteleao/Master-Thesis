@@ -4,7 +4,7 @@ Vale para o capítulo 4 a partir da 4.6, e inclui as pendências antigas de imag
 
 ## 1. Numeração depois das mudanças
 
-Saem a Fig. 4.2 (instrumentos por pilar) e a Fig. 4.5 (instrumentos × DRs). Entram uma figura nova na 4.6 e duas tabelas novas, uma na 4.6 e outra na 4.7.
+Saem a Fig. 4.2 (instrumentos por pilar) e a Fig. 4.5 (instrumentos × DRs). Entram uma figura nova na 4.6 e uma tabela nova na 4.7. A tabela de portas da 4.6.1 foi descartada em 27/10: as condições de cada fase entram na própria Fig. 4.1.
 
 | Hoje | Depois | Onde |
 |---|---|---|
@@ -15,18 +15,17 @@ Saem a Fig. 4.2 (instrumentos por pilar) e a Fig. 4.5 (instrumentos × DRs). Ent
 | Fig. 4.2 por pilar | sai | — |
 | Fig. 4.5 instrumentos × DRs | sai | — |
 | Tabela 4.1 funções | Tabela 4.1 | 4.2.2 |
-| (nova) portas do lifecycle | Tabela 4.2 | 4.6.1 |
-| Tabela 4.2 escalabilidade | Tabela 4.3 | 4.7.1 |
-| (nova) registros invariantes | Tabela 4.4 | 4.7.2 |
-| Tabela 4.3 instrumentos | Tabela 4.5 | 4.8 |
-| Tabela 4.4 DR × componente | Tabela 4.6 | 4.8 |
+| Tabela 4.2 escalabilidade | Tabela 4.2 | 4.7.1 |
+| (nova) registros invariantes | Tabela 4.3 | 4.7.2 |
+| Tabela 4.3 instrumentos | Tabela 4.4 | 4.8 |
+| Tabela 4.4 DR × componente | Tabela 4.5 | 4.8 |
 
 As remissões no texto e as listas de figuras e de tabelas mudam junto (Ctrl+A, F9 no fim).
 
 ## 2. Novas
 
 ### Fig. 4.2: matriz instrumento × fase (DR9). Eu gero.
-- **Linhas:** os 24 instrumentos agrupados por pilar, na ordem da Tabela 4.5:
+- **Linhas:** os 24 instrumentos agrupados por pilar, na ordem da Tabela 4.4:
   - Governance: CCDM, MRL, POT, RACI, DTRM, TRE, SCR;
   - Risk Management: SRR, SLCT, SCML, SART, CSST;
   - Operational Controls: IMP, IMC, SIRR, IQL, PSEAR, SIFSL, PFVR, ICDL;
@@ -36,12 +35,7 @@ As remissões no texto e as listas de figuras e de tabelas mudam junto (Ctrl+A, 
 - **Conteúdo:** o mapa aprovado (`mapa-instrumento-fase.md`) no formato montado / em uso. A coluna da fase 2 mostra que quase tudo é montado ali.
 - **Estilo:** a mesma família visual da Fig. 4.4.
 
-### Tabela 4.2: portas do lifecycle (Word, sem imagem)
-- **Colunas:** fase | entra quando | sai quando | revisão no MRL.
-- **Linhas:** as 7 fases. As fases 3 a 5 têm a fronteira do site no primeiro e no último caso.
-- O conteúdo sai com o texto da 4.6.1.
-
-### Tabela 4.4: registros invariantes (Word, sem imagem)
+### Tabela 4.3: registros invariantes (Word, sem imagem)
 - **Colunas:** registro | onde fica no framework | fonte.
 - **Linhas:** consentimento, delegação e treino, contabilidade do dispositivo, desvios, eventos adversos, calibração, essential records, documentos fonte.
 - Cada cláusula é conferida na ISO 14155:2026 e no MDR antes de entrar. O conteúdo sai com o texto da 4.7.2.
@@ -64,9 +58,27 @@ As remissões no texto e as listas de figuras e de tabelas mudam junto (Ctrl+A, 
   - "Structured causality assessment separating device, procedure and patient factors" → "Event categorization: related to device use, to a CIP-required procedure, or to neither";
   - "recognise" → "recognize";
   - "at least monthly" fica.
-- **Legenda:** deixa de prometer "entry conditions" na figura. Elas ficam na Tabela 4.2.
+- **Grupos:** os três blocos que a figura já tem (PREPARATION, CONDUCT, CLOSURE) passam a ser citados no texto: preparação e fechamento são do site e sequenciais; condução é por participante.
+- **Objetivo da fase 2:** "Build the Governance pillar before any participant data exist" → "Set up the four pillars before any participant data exist".
+- **Fase 2, dispositivo:** entra "Device receipt, storage and access control ready" (domínio 4).
+- **Fase 2, imagem:** "imaging charter agreed with radiology" → "Imaging readiness (SIRR) submitted to the sponsor" (a charter é do sponsor).
+- **Fase 3:** entra "Consent documented before any study assessment" (domínio 3).
+- **Condução (fases 3 a 5):** entram "Deviations recorded when found" (domínio 12) e "Critical data completeness reviewed monthly" (domínio 11).
+- **Fase 5:** "Late adverse events … captured" sai (pertence à corrente de segurança).
+- **Corrente de segurança:** acrescentar "Implant records kept current while the participant is followed".
+- **Fase 7:** "Corrective actions closed and their effectiveness assessed" → "No corrective action left open"; as ações fecham durante a condução, quando a revisão mostra eficácia.
+- **Linha nova em cada fase: a condição que fecha a fase** (substitui a tabela de portas):
+  - 1 Feasibility: "Closes when capability and imaging readiness are documented and the sponsor decides on selection"
+  - 2 Start-up: "Closes when the site is ready to enroll: tasks released, surgeons credentialed, SRR, PIR rules and IMP in place, implementation level recorded"
+  - 3 Enrollment: "From the first screened candidate to the last enrolled participant"
+  - 4 Surgery: "From the first to the last study procedure"
+  - 5 Follow-up: "From the first follow-up to the last required visit"
+  - Corrente de segurança: "From the first enrolled participant to the last follow-up assessment"
+  - 6 Close-out: "Closes when devices and safety records are reconciled with the sponsor, data are verified and records archived"
+  - 7 Continuous improvement: "Closes when lessons are turned into standing procedures and no corrective action is left open"
+- **Legenda nova:** "Figure 4.1. The seven phases of the quality lifecycle in three groups, with the transversal safety stream and, for each phase, its objective, its actions and checks, and the condition that closes it."
 
-### Tabela 4.3 escalabilidade (antiga 4.2; sua imagem)
+### Tabela 4.2 escalabilidade (sua imagem)
 - **Colunas:** nonhospital (nível mínimo, centro-alvo) | nonacademic hospital | academic. Saem "Type A/B/C" e as descrições por porte ("Large or complex research hospital", "Medium private clinic/hospital", "Small surgical centre").
 - **Sai** qualquer menção a pessoal dedicado, função de qualidade, "imaging liaison" e "formal multidisciplinary reviews".
 - **Os 24 instrumentos em uso nos três níveis.** O que muda por coluna é a cadência, a independência da revisão e a separação ou combinação de registros.
@@ -75,7 +87,7 @@ As remissões no texto e as listas de figuras e de tabelas mudam junto (Ctrl+A, 
 - O SCML não pode aparecer só numa coluna.
 - O conteúdo final das células sai junto com o texto da 4.7.
 
-### Tabela 4.5 instrumentos (antiga 4.3; sua imagem)
+### Tabela 4.4 instrumentos (antiga 4.3; sua imagem)
 - Cabeçalhos por pilar.
 - Coluna nova "Appendix" (A a X).
 - **Ordem pela primeira citação:**
@@ -99,7 +111,7 @@ As remissões no texto e as listas de figuras e de tabelas mudam junto (Ctrl+A, 
 - **PIR:** marcador no domínio 6, porque o SP-01 responde aos domínios 5 e 6.
 - O FUCR fica no grupo Performance Oversight.
 
-### Tabela 4.6 DR × componente (antiga 4.4). Eu refaço, como em 24/10.
+### Tabela 4.5 DR × componente (antiga 4.4). Eu refaço, como em 24/10.
 - **Colunas novas:** instrumento(s) e fase(s).
 - **DR4:** "nine review checks" → ten, com o IMP e o IMC.
 - **DR6:**

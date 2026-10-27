@@ -19,9 +19,7 @@ Contexto: os capítulos 1 a 3 são lei, e o capítulo 4 se adapta a eles. A 4.1 
    - Os quatro marcos da 4.2.1 continuam como revisões dentro das fases, e a 4.2.1 ganha meia frase.
    - A decisão "pronto para incluir" é a porta de saída da fase 2 (marco M1 do modelo do MRL). Não há quinto marco.
    - Isso resolve a diferença entre os 13 marcos do modelo e os 4 do texto.
-3. **4.6 ganha duas peças:**
-   - uma tabela curta de portas (fase | entra quando | sai quando | revisão no MRL);
-   - uma figura nova, a matriz instrumento × fase, na família visual da Fig. 4.4, com marcadores "montado" e "em uso". Ela responde ao DR9.
+3. **4.6 ganha uma figura nova,** a matriz instrumento × fase, na família visual da Fig. 4.4, com marcadores "montado" e "em uso". Ela responde ao DR9. **A tabela de portas foi descartada (27/10):** a condição que fecha cada fase entra na própria Fig. 4.1, e o MRL fica em segundo plano no texto (uma menção às revisões de marco, sem tabela e sem destaque).
 4. **Fases 3 a 5:** correm por participante e se sobrepõem no site. A fronteira de cada uma no nível do site é o primeiro e o último caso. As fases 1, 2, 6 e 7 são do site e sequenciais.
 5. **Mapa instrumento × fase aprovado** (ver `mapa-instrumento-fase.md`):
    - o SRR abre "before the first participant", na fase 2, sem rascunho na viabilidade;
