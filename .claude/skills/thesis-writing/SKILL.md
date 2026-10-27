@@ -352,6 +352,25 @@ Each paragraph has one function and does not restate another. Space should match
 
 Vary the grammatical shape of the first sentence across consecutive paragraphs. A run of paragraphs all opening *The first...*, *The second...*, *The third...* reads as a template, and subject-first openers should stay under about 60% of paragraphs.
 
+### Text around figures and tables
+
+A figure or a table is read by looking at it. The text never reads it aloud for the reader. Describing its layout, its markers, its rows and columns, its colors, its shape, or what sits in which cell is a defect, because the caption already says how to read it and the reader can see it.
+
+What the text does carry is what the reader gains from the figure and might miss: the concept it supports, the argument it closes, an interpretation, a relevant result, a pattern, a gap, an exception, a consequence. These are welcome and often necessary, because a reader who only looks at the figure may not draw them.
+
+| Defect: reads the figure | Welcome: says what follows from it |
+| :-- | :-- |
+| DR9, DR11 and DR12 run across the lower part as one bar each. | DR9 is met by the phase assigned to every instrument (Figure 4.2). |
+| Every column has a filled marker in one of the two parts. | Every instrument either carries the control of a domain or answers a requirement directly, so none is in the set without an origin (Figure 4.4). |
+| Figure 4.1 shows the seven phases in their three groups, and its circular form shows that the cycle closes. | The next investigation starts from the procedures that Phase 7 leaves in place. |
+| Table 4.3 lists the instruments with what each one reads and produces. | (Table 4.3), placed after the claim it supports. |
+
+**The reference goes in parentheses after the claim.** Do not open a paragraph with *Figure X shows*, *Table X lists* or *Figure X places*. State the claim and cite the figure or table at its end.
+
+**An interpretation has to be readable on the first pass.** It is the part of the text the reader is most likely to skip if it is hard, so write it in the plainest words available. Name the thing, then say what it does and why, one step per clause. Abstract verbs that hide the step (*are justified the other way round*, *enter from the requirements*) and a cross-reference dropped in the middle to borrow another section's wording (*as Section 4.5.1 states for eligibility*) make it unreadable. Cite another section only when the reader needs to go there, and never in the middle of the sentence that carries the point.
+
+**The test.** Cover the figure and read the paragraph. If a sentence makes no sense without the image, it is reading the image and goes. If a sentence still says something true about the framework, it stays.
+
 ### Habits to watch
 
 - **Evaluative adjectives without a criterion**: *substantial*, *significant*, *distinctive*, *robust*, *comprehensive*, *crucial*. State relative to what, or delete
@@ -458,6 +477,7 @@ Run these as checks. Do not claim the text is clean without measuring.
 14. Spread of sentence and paragraph lengths, not a mean. If sentences all come out the same size, the text was written to a shape. Check separately that no long sentence has to be read twice and no short ones are stacked
 15. Clefts, fronted participials, pied-piped relatives. `Taken together` is the one that recurs
 16. Meta-commentary about the writing, and any sentence built to be quotable
+16a. Every sentence that cites a figure or a table: it states a concept, an interpretation or a result, never the layout, markers, rows, columns or shape of the image; the reference sits in parentheses after the claim; and the interpretation reads on the first pass with no cross-reference in its middle
 
 **Content.**
 
