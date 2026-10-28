@@ -25,6 +25,8 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 
 - 4.5.3: texto final pronto (scratchpad t453.json), mas o autor pediu em 25/10 para não aplicar nada ainda ("aplica nada no texto do git hub ainda"). Aplicar só quando ele mandar; o mesmo vale para as subseções seguintes até nova ordem
 
+- **Ciclo de revisão, decisão do autor em 28/10.** O framework não deve impor revisão mensal a tudo. Cada instrumento ou categoria tem o seu ritmo (mensal, trimestral, semestral, anual, ou por número de casos, como o SLCT depois dos primeiros 5 e 10 casos). Fixamos o ritmo só onde é necessário (a curva de aprendizagem, por exemplo) e deixamos o resto aberto para o site definir conforme a sua capacidade. Também é preciso falar das revisões por gatilho (triggered review), além das periódicas. Pontos a rever no cap. 4: 4.3.3 ("at least once a month", revisão de eventos); 4.5.2 ("monthly oversight meeting"); 4.5.4 ("at least once a month"); 4.5.6 ("calculated monthly", "three monthly measures", "two consecutive months"); 4.6.1 ("reviews safety cases at least once a month"); 4.7 ("including the monthly review of safety cases"). Ver também o cap. 3 e a Figura 4.1 ("at least monthly"), e alinhar com o cap. 5 (5.3.2 passa a "The review cycle").
+
 ## 2. Decisões que o autor ainda precisa tomar (Claude perguntou, sem resposta)
 
 | # | Origem | Decisão |
