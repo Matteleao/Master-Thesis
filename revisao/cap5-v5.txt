@@ -18,7 +18,7 @@ Observation of the surgeon during conduct, which answers the third gap, is a con
 
 The works we reviewed address four themes that bear on the framework (Table 5.1), and the text below discusses those that shaped the design.
 
-[Table 5.1. Works on quality in clinical investigations grouped by theme, with what each establishes, who holds the instrument and when it is used, and the response of the framework to each theme.]
+[Table 5.1. Works on quality in clinical investigations grouped by theme, with what each establishes and the response of the framework to each theme.]
 
 Risk-based quality management was developed for the party that designs and oversees a trial. The EMA reflection paper and the CTTI principles describe how a sponsor identifies critical factors and directs its oversight toward them [1, 55], and the MDIC supplement carries the same reasoning to devices [34]. Sites meet this work through the sponsor, as a monitoring plan that arrives with the protocol [46]. Only 19.6% of the Portuguese sites in one survey described a tool that captured risk analysis at site level [77], and in the RBQM adoption survey identification of CtQ factors was among the least used practices even among sponsors [13]. These findings shaped the SRR, which applies the sponsor's risk cycle to the risks created by the site's own execution and starts from the CIP so that it can be built even where the sponsor never formalized its critical factors. In those investigations the site register may be the first place where anyone applies CtQ reasoning to local processes.
 
