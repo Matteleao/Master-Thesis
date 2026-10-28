@@ -1,0 +1,327 @@
+[
+ {
+  "page": 3,
+  "n": 19,
+  "text": "Governance rests on their management clauses (ISO 13485 Clause 5, ISO 14971 Clause 4, and ISO 15189 Clause 5)."
+ },
+ {
+  "page": 4,
+  "n": 29,
+  "text": "The operational constraint behind this choice is binding wherever it conflicts with another requirement (Section 3.5), so no component of the framework depends on new software or new staff."
+ },
+ {
+  "page": 4,
+  "n": 19,
+  "text": "A new record is justified only where a critical process would otherwise not be controlled or not be evidenced."
+ },
+ {
+  "page": 5,
+  "n": 79,
+  "text": "It is operationally plausible, because the clinical research coordinator is a core site function [74], and ICH E6(R3) allows delegation while the investigator keeps ultimate responsibility and proportionate oversight [6], a position that FDA guidance on investigator supervision shares [75]. The arrangement fails when oversight becomes nominal, which happens when the site has not stated which decisions need the PI directly and has defined no review structure, no review frequency, and no route for escalation. In a surgical investigation"
+ },
+ {
+  "page": 6,
+  "n": 38,
+  "text": "those decisions include borderline eligibility, unplanned intraoperative changes, component substitutions, the interpretation of revisions, and inconsistencies whose meaning the documentation alone does not show. The framework adopts the third arrangement, a tiered and risk-adjusted model of PI oversight."
+ },
+ {
+  "page": 6,
+  "n": 75,
+  "text": "The arrangement has a cost, because the site has to set thresholds and a review schedule before the first participant is enrolled, and someone has to keep the meetings running for the whole investigation. Five mechanisms turn the principle into controls the site can run. Four of them supply the elements missing from the second arrangement, and the grading of delegated activity by criticality gives the site the criterion on which the other four depend."
+ },
+ {
+  "page": 6,
+  "n": 83,
+  "text": "For each type of activity, the site states in advance what needs the PI’s own judgment and what the PI can review afterward without loss. This is the statement whose absence made the second arrangement nominal. The line depends on the device and the procedure and moves as the team gains experience, so it is revisited at each oversight cycle. A threshold set too low returns the PI to the first arrangement, and a threshold set too high turns oversight into a formality."
+ },
+ {
+  "page": 6,
+  "n": 25,
+  "text": "Criticality grading of delegated activity. Each delegated task carries a grade that sets its level of supervision and its escalation trigger. Criticality depends on context."
+ },
+ {
+  "page": 7,
+  "n": 108,
+  "text": "The PI reviews the investigation formally at four points where the most consequential threats concentrate, which are procedural implementation, the immediate postoperative period, the approach to endpoint assessment, and close-out. These reviews supply the periodicity that the second arrangement did not have. A review placed too early misses problems that appear only after a procedure or a follow-up window has taken place, while a review placed too late lets a correctable pattern continue through several more cases. The four points reflect the risk profile of a shoulder implant investigation and would need revision for another device or procedure. The Milestone Review Log (MRL) records each decision (Appendix B)."
+ },
+ {
+  "page": 7,
+  "n": 63,
+  "text": "Some events threaten participant safety or causal interpretation at once and cannot wait for the next scheduled review, so they require PI notification whatever the review cadence. This is the escalation route that the second arrangement left undefined. The CCDM sets the trigger for each task, and the PI Oversight Template (POT) records the PI’s decision and the action it triggers (Appendix C)."
+ },
+ {
+  "page": 7,
+  "n": 25,
+  "text": "The review runs in a recurring meeting of the site team, which gives oversight a defined structure and removes its dependence on ad hoc contact."
+ },
+ {
+  "page": 10,
+  "n": 27,
+  "text": "4.2.3 Device training documentation Device training documentation is the controlled set of records showing that each person at the site received the training their delegated activities require."
+ },
+ {
+  "page": 10,
+  "n": 27,
+  "text": "Protocol and procedural training: the study objectives, the key eligibility restrictions, the visit windows that matter for endpoints, PDs, and the decision points specific to the study."
+ },
+ {
+  "page": 11,
+  "n": 22,
+  "text": "Device training: the investigational system, its instrumentation and implant components, preparation and handling, and any constraint the study places on the workflow."
+ },
+ {
+  "page": 11,
+  "n": 23,
+  "text": "Operative and perioperative documentation: intraoperative records, component reconciliation, capture of implant lot and UDI, documentation of substitutions and deviations, and chain of custody."
+ },
+ {
+  "page": 11,
+  "n": 19,
+  "text": "Assessment training: radiographic acquisition standards and imaging timing, ROM measurement, and PROM administration where these bear on an endpoint."
+ },
+ {
+  "page": 11,
+  "n": 60,
+  "text": "Safety reporting: recognition and documentation of AEs and DDs, and the escalation pathway for clinically important findings. Each record identifies who was trained, in which area, when, by whom, and on which version of the controlled document, so that after a revised IFU or an amended CIP the site can see at once who was trained on the earlier version."
+ },
+ {
+  "page": 11,
+  "n": 114,
+  "text": "A role that performs only routine clinical care receives no device-specific training unless the CIP requires it, since trial-related training covers only what goes beyond the person’s usual practice. Training effort therefore follows the criticality of the delegated activity. Retraining keeps the training current. The site triggers it when the work itself changes, through a protocol amendment, a revised IFU, a new device iteration, or a change in workflow, and when a task shows signs of being done poorly, such as a safety signal, repeated documentation errors, or another deficiency in a process that affects a CtQ factor. These signs come from deviation records and monitoring findings, and acting on them follows ICH E8(R1),"
+ },
+ {
+  "page": 12,
+  "n": 90,
+  "text": "which recommends retraining when issues related to CtQ factors arise during the study [5]. The records then show that each person was trained before starting and that the training kept pace with the investigation. The component supports DR10, because each function of the role structure acts only with a defined training requirement and a recorded release. The Device and Study Training Requirements Matrix (DTRM) sets the training each role or task requires, and the Training Record Evaluation and Release (TRE) holds each person’s training and release (Appendices E and F)."
+ },
+ {
+  "page": 12,
+  "n": 50,
+  "text": "ISO 14155:2026 divides the work between the two parties. The sponsor sets the selection criteria and verifies qualification before the investigation starts, while the PI documents the qualifications of the team, keeps the team adequate throughout the investigation, and ensures that the device is used only by authorized users [8]."
+ },
+ {
+  "page": 12,
+  "n": 26,
+  "text": "General standing as an orthopedic surgeon and competence in the specific procedure are separate matters, and readiness to use this particular device is a third one."
+ },
+ {
+  "page": 12,
+  "n": 55,
+  "text": "A surgeon can be well established in a comparable procedure and still uncertain in the technique of this device, so the site has to judge how much of that uncertainty the sponsor’s entry criteria and the surgeon’s release on device training resolve, and how much its own decision has to close before the first case."
+ },
+ {
+  "page": 13,
+  "n": 18,
+  "text": "surgeon working under such controls holds a conditional authorization until the conditions set in the decision are met."
+ },
+ {
+  "page": 13,
+  "n": 37,
+  "text": "Risk Management answers Gap 2, the absence of a record in which the site holds the risks that its own execution creates, and it also carries the monitoring of the learning curve that Gap 3 calls for."
+ },
+ {
+  "page": 13,
+  "n": 108,
+  "text": "Risk in a device investigation sits at three levels, and the texts examined give an owner to the first two. At device level the manufacturer manages risk under ISO 14971, and under the MDR the CIP sets out the risks and clinical benefits of the device under investigation [10]. At trial level, ICH E8(R1) and ICH E6(R3) ask the sponsor to manage the risks to critical factors as a cycle that runs from identification to review [5, 6]. The EMA reflection paper, which is nonbinding, describes the same cycle in operational terms and lists tools such as failure mode and effects analysis for setting priorities among risks [1]."
+ },
+ {
+  "page": 14,
+  "n": 19,
+  "text": "The third level, the risk that a specific site’s execution creates, has no owner in any of these texts."
+ },
+ {
+  "page": 14,
+  "n": 15,
+  "text": "Its value is preventive, so the site opens it before the first participant is enrolled."
+ },
+ {
+  "page": 15,
+  "n": 191,
+  "text": "A systematic review of 13 studies estimated that surgeons needed about 25 reverse total shoulder arthroplasties to reach an acceptable position on the learning curve and gave a range of 16 to 86 cases for anatomic arthroplasty, which only two studies had examined [20]. In a multicenter analysis of operative duration, three of four early-career surgeons reached a plateau between 12 and 86 cases [78]. Both figures describe how learning progressed in those samples, and the framework does not adopt them as a proficiency threshold or set a fixed case count of its own. The tracking asks whether surgeon-dependent variation is becoming a material risk to the CtQ factors of the investigation at this site. ICH E8(R1) asks for periodic review of CtQ factors during a study to decide whether risk controls need adjusting, because new or unanticipated issues arise once the study has begun [5], and the learning curve is one such issue at a surgical site. SQA frameworks address the learning curve mainly at selection [37, 39], and the Clinical Trial Site Performance Measure has no indicator for a surgeon’s procedural consistency once a trial is under way [41]."
+ },
+ {
+  "page": 16,
+  "n": 47,
+  "text": "Before the first case, the site fixes how cases will be compared. It defines the levels of case complexity that matter for the investigation, with the operative duration expected for comparable cases, and it states the support, such as proctoring, that the surgeon should have early on."
+ },
+ {
+  "page": 16,
+  "n": 281,
+  "text": "A slower operation or an unplanned substitution means different things in a complex case and in a routine one, and early in a surgeon’s experience with the device and later, so each case is read against the surgeon’s own earlier cases of the same complexity. Comparing a surgeon with that surgeon’s own record avoids most of the case-mix problem that comparisons between surgeons carry, although a change in case complexity over time still has to be taken into account. Read without that context, the record would flag normal variation as drift or miss real drift inside a case dismissed as complex. The site reviews the sequence after the first cases and at set points afterward, and it opens an assessment earlier when a pattern appears, such as repeated substitutions or a cluster of early technical complications. A signal from complication monitoring is also read against this record before it is attributed to the device or to the operator. Each review either confirms that execution is stable or leads to a response of increasing weight, from closer observation at shorter intervals to local controls such as renewed device training or temporary proctoring, and to formal escalation when a pattern is material or recurrent. A restriction of the surgeon’s scope is a change of authorization, so it goes to the credentialing decision of the Governance pillar, and a material pattern enters the site risk register or corrective and preventive action. Because the record is kept as cases occur, it can show procedural drift before it appears as an AE or a PD, and it holds data from the point of care that cannot be rebuilt later, which is part of what DR6 asks."
+ },
+ {
+  "page": 17,
+  "n": 231,
+  "text": "Each event enters a site log as it occurs, whether it is first seen in the operating room or at a later clinical contact, with references to its source records and its safety route, so the log indexes the events without repeating their content. At entry the site records a preliminary assessment of what the event may relate to, which the investigator’s final classification later confirms or replaces. At each review the site counts the events by category, and by component and surgeon, against the number of procedures performed, so each count is read as a rate. A signal is a rate above a threshold the site set in advance or a sharp rise since the previous period, and the review also flags a category of event not seen before and events that concentrate in one surgeon. Each flagged signal is assessed for its likely cause. A signal tied to one surgeon goes to the learning curve review, and one that points to the device goes to the sponsor through the deficiency route. A pattern in a site process enters the site risk register or corrective and preventive action. Under ISO 14155:2026 the sponsor considers establishing a CEC, which reviews and classifies events across all participating centers by consensus [8]. The site review is a local counterpart that uses the site’s own denominator and triggers. The sources we examined do not"
+ },
+ {
+  "page": 18,
+  "n": 106,
+  "text": "show that either level detects a signal first, so the framework gives them different roles. The site acts when its own trigger is met, and a local signal that may matter beyond the site goes to the sponsor, so the local review feeds the assessment that the CEC keeps consistent across the investigation. The Site Complication Monitoring Log (SCML) indexes each event with its route (Appendix J), and the Safety and Adverse Effect Reporting Template (SART) follows each safety case from opening to closure (Appendix K). The Complication Signal Surveillance Template (CSST) holds each periodic review with its counts and the signals it found (Appendix L)."
+ },
+ {
+  "page": 18,
+  "n": 239,
+  "text": "ISO 14155:2026 turns these duties into requirements on source documents and data at the site, together with the accountability of each device [8]. Governance decides who acts, and this pillar sets how the work is done and kept under control. A procedure as the protocol describes it and the same procedure as a team carries it out on a given day in the operating room rarely match exactly, and this pillar works on the distance between them. Part of that distance is hard for an outside party to see in time, because local conduct can drift between sponsor visits and differences in imaging often become clear only when images from different time points are placed side by side. Every control also needs a record, and each new record can become one more place where the same fact is written differently, so the pillar limits what it records as carefully as it adds controls. The pillar works where the investigation is carried out, from surgery and the device to enrollment and follow-up, and internal verification lets the site check its own conduct across these areas between sponsor visits. Imaging standardization fixes how images are acquired and reviewed before they are used, and the records of eligibility and of each follow-up visit document how a participant enters the investigation and what each visit produced. The last component sets the boundary with the site’s source documentation and the rule that keeps the"
+ },
+ {
+  "page": 19,
+  "n": 247,
+  "text": "instruments from becoming a second record. It also presents the one record the framework adds in the operating room, which captures traceability and deviations as they happen. 4.4.1 Internal verification of site conduct Internal verification is a function that the site runs itself to review its own conduct and documentation at set intervals, so that a local failure is found and corrected inside the site’s own sphere of responsibility, and it answers DR4. Under the MDR the sponsor ensures adequate monitoring through a monitor who is independent of the investigational site, and it shows compliance with GCP, for instance through internal or external inspection [10]. ISO 14155:2026 and ICH E6(R3) likewise place monitoring within the sponsor’s quality control [6, 8], and FDA guidance on risk-based monitoring addresses the same sponsor oversight [79]. The instruments compared in this thesis ask the site to support that monitoring and to apply the corrections it receives, and none of them asks the site to check its own conduct between visits (Gap 4). Internal verification covers that interval and replaces no part of the sponsor’s monitoring, which the law keeps independent of the site. The review concentrates where execution most often goes wrong in an implant investigation, at the points where operating room practice meets implant logistics and documentation, and later in imaging and follow-up. Review effort therefore follows the risk to participants and to the data, as risk-based monitoring asks of the sponsor [1, 6], and ten checks set its scope."
+ },
+ {
+  "page": 19,
+  "n": 24,
+  "text": "Sterile release to use. Package integrity, expiry, and storage are confirmed before use, and any breach of sterile handling or intraoperative substitution is reconciled."
+ },
+ {
+  "page": 19,
+  "n": 32,
+  "text": "Implant traceability and component reconciliation. Lot number, serial number, or UDI agree across the operative note, the accountability record, the implant labels, and the CRF, and the implanted configuration matches the plan."
+ },
+ {
+  "page": 19,
+  "n": 32,
+  "text": "Instrumentation and operating room readiness. The correct implant system and instrument set were available, and any incompatibility or malfunction is documented as a procedural issue or, where it applies, as a DD."
+ },
+ {
+  "page": 19,
+  "n": 28,
+  "text": "The operative note has enough detail to interpret the final configuration and the intraoperative decisions later, including substitutions, deviations, and complications, because this record cannot be repaired afterward."
+ },
+ {
+  "page": 20,
+  "n": 25,
+  "text": "Imaging usability and timing. Required imaging was obtained within its window with the correct views and quality, and it was repeated when it was not."
+ },
+ {
+  "page": 20,
+  "n": 22,
+  "text": "Each visit produced the outputs that surveillance and endpoint assessment need, since attendance alone does not show that a visit was complete."
+ },
+ {
+  "page": 20,
+  "n": 30,
+  "text": "Endpoint data agreement. For the endpoint-critical fields that are recorded first outside the CRF, a sample of CRF entries agrees with the source, and any discrepancy is corrected and explained."
+ },
+ {
+  "page": 20,
+  "n": 63,
+  "text": "Timeliness and closure. Notes, data entry, queries, and corrective actions close within the set times. The EMA reflection paper gives delays in data entry and in SAE reporting as examples of metrics that may trigger targeted monitoring [1], but it does not show that a backlog predicts a broader failure at the site, so the framework treats delay as a signal to check."
+ },
+ {
+  "page": 20,
+  "n": 18,
+  "text": "The site reviews literature, registry findings, safety alerts, and field notices for the same implant class or procedure."
+ },
+ {
+  "page": 20,
+  "n": 24,
+  "text": "The complication reviews ran on their cadence and their signals were followed up, while the analysis of the pattern itself stays with complication monitoring."
+ },
+ {
+  "page": 20,
+  "n": 13,
+  "text": "The reviewer should not be the person who did the work under review."
+ },
+ {
+  "page": 21,
+  "n": 33,
+  "text": "Trial-imaging guidance has developed mainly outside orthopedics, in core-imaging and central-reading work that specifies acquisition, equipment, and site qualification in advance, together with the split between local and central reading [56, 61, 80]."
+ },
+ {
+  "page": 21,
+  "n": 40,
+  "text": "In images reconstructed from cadaver scapulae, views only 5 degrees from true anteversion changed the critical shoulder angle by more than 2 degrees [81], and in a cadaveric study measurements stayed stable only within about 9 degrees of malrotation [82]."
+ },
+ {
+  "page": 22,
+  "n": 133,
+  "text": "Third, before the first image is acquired, the site fixes who reviews its images locally and against which criteria, and how a non-conforming image is handled, including when a second reviewer or clinical escalation is needed. Each required image set is then logged as it is acquired, with its timing and technical quality and the reference that makes it retrievable, and an image set that falls short leads to a repeat acquisition or a second review while either can still help. Central review, where the sponsor uses it, needs coordination across sites and stays outside the site’s control, so the site can claim only the consistency of its own review. Fourth, the site schedules each image within the window the CIP sets and at a moment when a reproducible position can be obtained."
+ },
+ {
+  "page": 22,
+  "n": 148,
+  "text": "In a shoulder investigation eligibility often depends on anatomy read from images and on the planned procedure, and an error at inclusion can become irreversible once the implant is in place. The site documents each eligibility decision criterion by criterion against the current CIP, with the source of the evidence behind each criterion and the date it became available. Consent comes before any assessment that requires it, and the decision is recorded before enrollment, so the record shows that the evidence existed when the decision was made. A criterion that depends on imaging interpretation or on information from several sources receives a second, independent review. An unresolved disagreement goes to the PI, and until it is resolved the decision is not ready and the participant is not enrolled. The investigator then signs the decision, and the record allows it to be reconstructed later without relying on undocumented knowledge."
+ },
+ {
+  "page": 23,
+  "n": 64,
+  "text": "The Participant Screening and Eligibility Assessment Record (PSEAR) holds each eligibility decision (Appendix Q), and the Subject Identification and Failure Screening Log (SIFSL) holds the log of everyone screened (Appendix R). The Participant Follow-up Visit Record (PFVR) holds each visit (Appendix S). 4.4.4 Source documentation and parallel records Source documentation belongs to the site’s own documentary system, and the framework works through that system."
+ },
+ {
+  "page": 24,
+  "n": 179,
+  "text": "One rule applies to both groups. No instrument may become a parallel record of a datum that already has a defined source, so an instrument that needs participant-level information refers to the source. Where it carries a value for a count or a comparison, it cites the source, and the source prevails if the two differ. The learning curve log records that a component substitution occurred and points to the operative note, and the complication log records the classification and the reporting action without becoming a second clinical narrative. Where the same event is still documented differently in two places, the discrepancy is itself a finding for internal verification. Keeping to the site’s existing records follows from DR11. A parallel documentation system would add work and cost that the conditions assumed for the target center make hard to sustain, and it would create the duplication that the rule above prevents. The framework therefore stays additive, and its instruments are built around identifiers and decisions. The Intraoperative Checklist and Device Log (ICDL) holds the record of each procedure (Appendix T)."
+ },
+ {
+  "page": 24,
+  "n": 47,
+  "text": "Performance Oversight turns the conduct of the investigation into signals that the site can measure and act on, and it closes the loop through correction. It answers Gap 5, the absence of a proactive improvement cycle at site level, through DR5, and it answers DR8 through a"
+ },
+ {
+  "page": 25,
+  "n": 24,
+  "text": "small set of indicators. The pillar draws on the measurement and improvement clauses of the quality management standards on which the framework was modeled."
+ },
+ {
+  "page": 25,
+  "n": 217,
+  "text": "These values are provisional, because we found no published site-level threshold for most of them, and the site calibrates them as it gains experience across investigations. With the small numbers of a single site, each result is shown as a count over its denominator, and as a percentage only when the denominator is large enough to keep it stable. The indicators read the records that the other components of the framework already keep, from the eligibility and visit records to the safety and learning curve records, so the pillar collects no new data. Where a signal or a finding from internal verification calls for correction, the corrective and preventive action cycle traces it to its cause and checks that the correction worked, and at close-out the site turns what it learned into changes to its standing procedures. The Performance Indicator Record (PIR) holds the rule and the result of each indicator, with the decision taken, for each review period (Appendix U). 4.5.1 Enrollment quality Enrollment quality measures whether each inclusion was correct and supported by evidence available before the decision. It answers CtQ domain 2, where an error affects participant safety and the comparability of the population, and it reads the eligibility records described under Operational Controls, so the eligibility record carries out the control, and the"
+ },
+ {
+  "page": 26,
+  "n": 320,
+  "text": "indicator shows whether the control worked. Recruitment volume stays outside this indicator, and the screening log keeps the counts of candidates screened and enrolled. At each review period the indicator takes every inclusion decision of the period as its denominator, since a single site enrolls few participants and a sample would leave most decisions unread. It counts the inclusions in which every critical criterion was evidenced before the decision, together with the eligibility errors or clarifications found after enrollment and the important deviations related to eligibility, and it flags a criterion that proves ambiguous across several decisions. The review is more frequent during the site’s first cases and after a major protocol amendment. The process is under control when every critical criterion was evidenced before every decision. Evidence completed after the decision but before surgery calls for closer review, and any eligibility error found after enrollment, or any important eligibility deviation, calls for action. Uncertainty that recurs, or that concentrates in one criterion or one assessor, leads to clarification and training, and it goes to the sponsor when the criterion itself is unclear. A failure that recurs after that response enters corrective and preventive action. 4.5.2 Protocol deviation rate The PD rate is read as a profile of where deviations occur and how much they matter, together with whether they recur or concentrate, because a single percentage can hide a few events in consent or safety reporting that matter more than many minor ones. It is therefore reported by area, each with its own denominator, and never as one aggregate percentage. It answers CtQ domain 12, and its recurring deviations feed the correction cycle. How much a deviation matters follows the sponsor’s criteria for classifying deviations as important, which ICH E6(R3) describes as deviations that may significantly affect the reliability of trial data or a participant’s rights, safety, or well-being [6], and at the site the PI applies those criteria."
+ },
+ {
+  "page": 28,
+  "n": 249,
+  "text": "For each reportable event the indicator reads the SART and notes whether the initial notification reached the sponsor within the CIP interval, counted from the moment the site became aware of the event, and whether the first report was complete. It also notes whether follow-up information reached the sponsor within the interval the CIP sets and which cases remain open at the end of the period, and each count is read over the reportable events of the period. A late or incomplete report is traced to the stage where the delay arose, whether recognition of the event, internal escalation, the investigator’s assessment, access to documentation, or transmission, and the correction is directed at that stage. A delay in recognition that recurs, for example, leads to retraining in safety reporting. Here the line between control and action is the interval the CIP fixes, and a single late notification already breaches it, so the site does not choose a value of its own. The process is under control when every initial notification was made within the CIP interval and every first report was complete. A first report that needed correction, or follow-up information sent late, calls for closer review, and any late initial notification, or a case still open beyond the interval the CIP allows, calls for action and goes to the PI. A late initial notification is reviewed as soon as it is found and entered in the deviation record, where the sponsor’s criteria decide whether it counts as important."
+ },
+ {
+  "page": 30,
+  "n": 46,
+  "text": "The fourth is read at each cycle of internal verification, as the share of sampled CRF entries that agree with their source, among the endpoint-critical fields that are recorded first outside the CRF. Measuring during conduct matters because a problem found early can still be corrected."
+ },
+ {
+  "page": 30,
+  "n": 118,
+  "text": "That evidence comes from monitoring at sponsor level and supports acting early on a data signal, which is what this indicator does at the site. The process is under control when each of the three monthly measures stays within the value the site set in advance and every sampled entry agrees with its source. A single measure outside its value, such as one late operative note, calls for closer review. A shortfall beyond a second, lower value, repeated late notes, a discrepancy between source and CRF left uncorrected, or two of the monthly measures worsening from the previous month in two consecutive months call for action. A failure that recurs after that response enters corrective and preventive action."
+ },
+ {
+  "page": 31,
+  "n": 107,
+  "text": "The thresholds of each indicator and each review are set before the first participant, so a signal opens a corrective action before an external finding does and before a failure becomes significant. The cycle also runs on the site’s own calendar, through the oversight meetings and internal verification, independent of the sponsor’s visits. Where the center already holds a morbidity and mortality review, complications are discussed there as well, so that the clinical review of an event and the quality review of the process behind it inform each other. Each corrective action follows the steps that ISO 13485:2016 requires of a manufacturer, adapted to the site [52]."
+ },
+ {
+  "page": 32,
+  "n": 51,
+  "text": "Enrollment covers participant selection and consent, domains 2 and 3, surgery covers device management and procedural delivery, domains 4 and 5, and follow-up covers domains 7, 8, and 9, from retention to the assessment of outcomes and images. Data capture and deviation management, domains 11 and 12, run through every phase."
+ },
+ {
+  "page": 32,
+  "n": 38,
+  "text": "The phases of conduct belong to each participant, so one participant may be in screening while another is already in follow-up, and for the site each of them opens with its first case and closes with its last."
+ },
+ {
+  "page": 36,
+  "n": 148,
+  "text": "Internal verification has its scope and cadence set before conduct begins, so it runs on the site’s own calendar, independent of the sponsor’s visits (Gap 4). The rule of each indicator is fixed before the first participant, which lets a signal open a corrective action before an external finding does (Gap 5). Whether failures also concentrate in particular phases is a separate question, which the evidence answers only in part. Surgical complications may cluster in the early part of a surgeon’s learning curve [22], and loss to follow-up accumulates over the later years [24], but these findings do not show that a site that activates its controls by phase does better than one that acts when the sponsor’s monitoring asks it to. The framework therefore treats its organization by phases as a design hypothesis, consistent with ICH E8(R1), which directs quality resources toward critical activities and risks [5]."
+ },
+ {
+  "page": 42,
+  "n": 81,
+  "text": "The level of granularity at which each instrument works, from the record of one event to the decisions about how the site runs, with the arrows showing how information rises and how a decision returns as the requirement that the next record is checked against. Only five instruments ask for work at the clinical moment, the PSEAR, the ICDL, the IQL, the PFVR, and the SART, and they sit where Chapter 3 placed the data that cannot be recovered once lost."
+ },
+ {
+  "page": 44,
+  "n": 274,
+  "text": "Consent rests on the eligibility record alone, because the regulations already set its process in detail and Chapter 3 gave it no requirement beyond the risk register, so its row holds a single filled marker. The control of endpoint assessment is thinner, since it rests on the visit record alone, which the follow-up review reads, while the qualification and consistency of the assessor, which the domain also covers, sit in the training records. When the endpoints of an investigation depend on readings that vary between observers, the site therefore adds the DTRM on the basis of its risk register, as Section 4.7 describes. The figures show that the records are designed to connect and that each part has an origin. However, no figure can show whether a site reads what it records in time to act, because that depends on the people who run the set and on the time they have. Draft templates for all twenty-four instruments are in Appendices A to X. They were developed for shoulder device investigations, and their content reflects that context mostly in the complication categories and the imaging requirements, and in the complexity levels of the learning curve log. Their structure, from the fields to the escalation logic, was kept as general as that context allowed, so adapting an instrument to another surgical specialty would in most cases mean changing its classification lists, although no such adaptation has been tested. The templates are provided in an open, editable format, so a site can match them to the layout of its own documents and add or remove fields, while the function that each instrument carries stays the same."
+ },
+ {
+  "page": 44,
+  "n": 55,
+  "text": "5.1 The principal contribution and the regulatory gap Conducting an investigation well and showing that one operates a system are separate accomplishments, and a site can reach the first without the second. Section 1.1 described the movement from a prescriptive model of quality toward a governance model, and a governance review looks for the second."
+ }
+]

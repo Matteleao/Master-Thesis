@@ -18,7 +18,7 @@
 | Hyphen | Compound modifier before a noun (*site-level framework*); none after the noun (*at site level*). No hyphen after non, inter, intra, pre, post, re, sub, except established regulatory terms (*post-market clinical follow-up*) | nonhospital, interobserver, predefined |
 | Numbers | Numerals for data, measurements and values with units (12 domains, 24 instruments, 89%). One to nine in words in general prose. Numerals throughout when small and large comparable values appear together. Never open a sentence with a numeral | Sixty of the 65 organizations… |
 | Decimals and percentages | Decimal point; percent symbol | 27.7% |
-| Citations | Vancouver, [n] on the line, before the period, never subscript | …was reported [12]. |
+| Citations | Vancouver, [n] in subscript, before the period (author, 28/10). Each reference is cited at its first appearance in each chapter; within the same chapter it is not repeated for a document already named in the text (ISO 14155:2026, ICH E6(R3), MDR…). An article whose claim is not attributed by name keeps its number where its claim is used | …was reported [12]. |
 | Spelling | American English; proper names keep their official spelling | center, standardized; International Council for Harmonisation |
 | Contractions, exclamation marks | None | |
 
