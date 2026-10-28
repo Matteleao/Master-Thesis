@@ -95,3 +95,21 @@ A 4.1 a 4.5 estão idênticas à versão sincronizada de 26/10. A 4.6 a 4.8 têm
 **Uma edição sua na 4.8 para conferir.** Você trocou a frase dos indicadores por *"An indicator, for example, measures whether…"*. O "for example" faz o indicador parecer um exemplo dos instrumentos da frase anterior, os que executam o controle de um domínio, e ele é o caso contrário. Sugestão: *"An indicator works the other way, since it measures whether…"*.
 
 **Opcional:** a legenda da Figura 4.4 no seu docx não tem a frase final ("DR9, DR11, and DR12 describe the set as a whole and are shown once for all instruments"). Pela regra nova, esse é o lugar certo para essa descrição.
+
+---
+
+## Decisões do autor (28/10) e o que entrou no docx novo
+
+- **Parte 1:** todos aceitos.
+- **Aceitos:** 7, 8, 9, 13, 22 (a aba Matriz da planilha confirma a regra), 24, 26, 32 (a aba Lacunas confirma), 33, 34–35, 41, 42, 43–44, 47, 51–54, 57, 59 (a Tabela 3.3 tem as colunas da legenda nova), 62.
+- **Recusados:**
+  - 10: fica a sua redação do objetivo;
+  - 11: fica "large base of registered trials";
+  - 27: a base não sustenta o critério, porque um estudo retirado (NCT00957255) continua no conjunto de sites.
+- **Aceito com ajuste:**
+  - 12: sem remissão a seções;
+  - 48: "explantation" corrigido e o implant card mantido, conferido na ISO 14155:2026, Cláusula 9.2.2(e): *"if appropriate, prepare template for implant card for investigators to provide to subjects after implantation"*.
+- **Parte 3:** tudo aplicado, mais as mudanças de 27/10 na 4.6 a 4.8, e mais:
+  - listas de tabelas e figuras atualizadas;
+  - marcadores das legendas da 4.6 a 4.8 criados, para o número de página aparecer ao atualizar os campos.
+- **Fica para o cap. 6:** a Conclusão ainda diz "Table 4.4 maps each one to the component that answers it".
