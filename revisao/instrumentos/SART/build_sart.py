@@ -134,11 +134,13 @@ pages.append(('landscape', f'<main class="page landscape">{top("Follow-up and ne
 
 # ---------------- Page 6: F + G
 rowsF = [
-    ('SCML', 'Every adverse event or device deficiency at the site', 'SCML event ID'),
+    ('SCML', 'Every adverse event or device deficiency (DD) at the site', 'SCML event ID'),
     ('Deviation record', 'The initial notification was late; the sponsor\'s criteria decide its importance', 'Deviation ID'),
     ('CSST, early review', 'Serious health threat, cluster, new category, or concentration in one component or surgeon', 'Review reference'),
     ('POT', 'The case, a delay or a pending decision needs the PI\'s oversight', 'POT review ID'),
     ('SRR or CAPA', 'A recurring failure or a weak local control; not for a single case', 'Record ID'),
+    ('PIR', 'Every reportable case enters the safety reporting timeliness count of its review period', 'PIR ID / period'),
+    ('Sponsor device-deficiency route', 'The device deficiency needs return, analysis or action by the sponsor', 'Sponsor DD case ID'),
 ]
 F = (sec('F', 'Links to other records') +
      '<table class="ft"><colgroup><col style="width:16%"><col style="width:40%"><col style="width:24%"><col style="width:20%"></colgroup><thead><tr><th>Record</th><th>When it applies</th><th>ID / date</th><th>Status</th></tr></thead><tbody>' +
