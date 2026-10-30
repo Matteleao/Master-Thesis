@@ -12,8 +12,9 @@ Data: 30/10/2026. Branch: `codex/thesis-work`.
 | SCML v0.7 | 5 / 5 páginas | 5 / 5 páginas | Conferido |
 | SLCT v0.4 | 6 / 6 páginas | 6 / 6 páginas | Conferido |
 | POT v1.1 | 6 / 6 páginas | 6 / 6 páginas | Conferido |
+| SART v1.0 | 6 / 6 páginas | 6 / 6 páginas | Conferido |
 
-Total: 16 HTMLs e 16 PDFs, com 80 páginas de PDF.
+Total: 18 HTMLs e 18 PDFs, com 92 páginas de PDF.
 
 Conferências realizadas:
 
@@ -29,3 +30,5 @@ A exportação não reescreve o conteúdo dos instrumentos. Arial e Comic Sans M
 A conferência verifica a correspondência e a apresentação dos arquivos, sem reabrir o conteúdo já aceito pelo autor. O simulado SLCT foi gerado por autorização expressa nesta organização, sem alterar a versão em branco concluída.
 
 POT v1.1 (30/10/2026): PDFs exportados com Chromium, A4 com páginas 3 e 5 em paisagem, sem transbordamento nas 6 páginas das duas versões. O ambiente desta exportação não tinha Arial, Comic Sans MS nem Z003; foram usadas Liberation Sans (métrica de Arial), Comic Neue e Dancing Script, incorporadas aos PDFs. Os HTMLs não foram alterados para isso.
+
+SART v1.0 (30/10/2026): mesma exportação do POT v1.1 (A4, página 5 em paisagem, sem transbordamento; Liberation Sans, Comic Neue e Dancing Script no lugar de Arial, Comic Sans MS e Z003).

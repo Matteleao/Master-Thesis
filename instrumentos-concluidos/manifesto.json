@@ -178,6 +178,31 @@
       }
     },
     {
+      "instrument": "SART",
+      "version": "1.0",
+      "approval": "Concluído pelo autor em 30/10/2026",
+      "variants": {
+        "blank": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/SART/SART_v1.0_blank.html",
+          "source_sha256": "a8ea58ff6c47ebe190c346b6d7023f1368ae65b95ce92798ab5a3200ca743808",
+          "html": "HTML/blank/SART_v1.0_blank.html",
+          "html_sha256": "a8ea58ff6c47ebe190c346b6d7023f1368ae65b95ce92798ab5a3200ca743808",
+          "pdf": "PDF/blank/SART_v1.0_blank.pdf",
+          "pdf_sha256": "24997e36af81c1607990bff27e59c90f78c5f3d06dcea12739865f0f7b4e2331",
+          "pdf_pages": 6
+        },
+        "filled": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/SART/SART_v1.0_filled.html",
+          "source_sha256": "99a772e2e0c0d47a1e33745f1ca361713e9c985aacba580bfd04970dc8711475",
+          "html": "HTML/filled/SART_v1.0_filled.html",
+          "html_sha256": "99a772e2e0c0d47a1e33745f1ca361713e9c985aacba580bfd04970dc8711475",
+          "pdf": "PDF/filled/SART_v1.0_filled.pdf",
+          "pdf_sha256": "5a8ce5944024b4b505581533983000535ac669dcce1ec376fcdaec2f1045694e",
+          "pdf_pages": 6
+        }
+      }
+    },
+    {
       "instrument": "SLCT",
       "version": "0.4",
       "approval": "Inclusão como concluído confirmada explicitamente pelo autor em 30/10/2026. Preenchido gerado conforme o pedido de organização.",

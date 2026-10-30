@@ -26,6 +26,7 @@ instrumentos-concluidos/
 | **SCR** — Surgical Credentialing Record | v0.5 | [blank](HTML/blank/SCR_v0.5_blank.html) | [filled](HTML/filled/SCR_v0.5_filled.html) | [blank](PDF/blank/SCR_v0.5_blank.pdf) | [filled](PDF/filled/SCR_v0.5_filled.pdf) |
 | **SCML** — Site Complication Monitoring Log | v0.7 | [blank](HTML/blank/SCML_v0.7_blank.html) | [filled](HTML/filled/SCML_v0.7_filled.html) | [blank](PDF/blank/SCML_v0.7_blank.pdf) | [filled](PDF/filled/SCML_v0.7_filled.pdf) |
 
+| **SART** — Safety Assessment, Reporting and Tracking Template | v1.0 | [blank](HTML/blank/SART_v1.0_blank.html) | [filled](HTML/filled/SART_v1.0_filled.html) | [blank](PDF/blank/SART_v1.0_blank.pdf) | [filled](PDF/filled/SART_v1.0_filled.pdf) |
 | **SLCT** — Surgeon Learning Curve Tracking Log | v0.4 | [blank](HTML/blank/SLCT_v0.4_blank.html) | [filled](HTML/filled/SLCT_v0.4_filled.html) | [blank](PDF/blank/SLCT_v0.4_blank.pdf) | [filled](PDF/filled/SLCT_v0.4_filled.pdf) |
 
 ## Pendências que não entram nesta pasta
@@ -37,7 +38,7 @@ instrumentos-concluidos/
 
 Só adicionar um instrumento quando o autor disser que está concluído. Uma versão mais recente, relatório favorável, correção técnica ou pedido para passar ao próximo não substitui essa declaração. Para cada versão aprovada, manter o par blank/filled em HTML e gerar o par PDF correspondente. Se faltar o preenchido, criar um exemplo fictício antes da exportação.
 
-CCDM v0.2, DTRM v0.2, TRE v0.4, RACI v0.3 e SCR v0.5 foram aceitos no histórico recebido. SCML v0.7 foi confirmado pelo autor em 30/10/2026. SLCT v0.4 teve a inclusão como concluído confirmada explicitamente pelo autor em 30/10/2026. POT v1.1 foi revisado a partir da v0.9 (sem nível de implementação, Seção B dividida em B1/B2, Parte 2 em I–III) e declarado concluído pelo autor em 30/10/2026; o preenchido segue o exemplo GLENOS-01 da v0.9. O preenchido SLCT foi criado para esta organização, conforme solicitado; os demais preenchidos já existiam. As versões em branco foram copiadas sem reescrever seu conteúdo.
+CCDM v0.2, DTRM v0.2, TRE v0.4, RACI v0.3 e SCR v0.5 foram aceitos no histórico recebido. SCML v0.7 foi confirmado pelo autor em 30/10/2026. SLCT v0.4 teve a inclusão como concluído confirmada explicitamente pelo autor em 30/10/2026. POT v1.1 foi revisado a partir da v0.9 (sem nível de implementação, Seção B dividida em B1/B2, Parte 2 em I–III) e declarado concluído pelo autor em 30/10/2026; o preenchido segue o exemplo GLENOS-01 da v0.9. SART v1.0 foi reconstruído a partir da análise em `análise instrumentos manuais/` (novo nome: Safety Assessment, Reporting and Tracking Template; contexto contribuinte para o SCML; seção F com PIR e rota de DD do patrocinador) e declarado concluído pelo autor em 30/10/2026. O preenchido SLCT foi criado para esta organização, conforme solicitado; os demais preenchidos já existiam. As versões em branco foram copiadas sem reescrever seu conteúdo.
 
 ## Exportação e rastreabilidade
 
