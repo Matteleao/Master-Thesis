@@ -122,7 +122,7 @@ rowsD = [
 D = (sec('D', 'Reporting to the sponsor', 'Record the proof of reporting, not the content of the sponsor form. Every time limit comes from the CIP or the sponsor procedure. The PIR reads its safety reporting timeliness counts from this section.') +
      '<table class="dt"><colgroup><col style="width:36%"><col style="width:30%"><col style="width:34%"></colgroup><thead><tr><th>Reporting step</th><th>Status</th><th>Record / reference</th></tr></thead><tbody>' +
      ''.join(f'<tr><td class="el">{a}</td><td class="opts-cell">{b}</td><td class="left"></td></tr>' for a, b in rowsD) + '</tbody></table>')
-pages.append(('', f'<main class="page">{top("Reporting to the sponsor")}{strip()}<section class="section compact">{D}</section>{foot("Reporting to the sponsor", 4)}</main>'))
+pages.append(('', f'<main class="page">{top("Reporting to the sponsor")}{strip("Sponsor safety case ID")}<section class="section compact">{D}</section>{foot("Reporting to the sponsor", 4)}</main>'))
 
 # ---------------- Page 5: E (landscape, repeatable)
 E = (sec('E', 'Follow-up and new information', 'One line for each new piece of information or sponsor request. Add lines; never overwrite an earlier one.') +
@@ -142,20 +142,20 @@ rowsF = [
     ('PIR', 'Every reportable case enters the safety reporting timeliness count of its review period', 'PIR ID / period'),
     ('Sponsor device-deficiency route', 'The device deficiency needs return, analysis or action by the sponsor', 'Sponsor DD case ID'),
 ]
-F = (sec('F', 'Links to other records') +
+F = (sec('F', 'Records this case is sent to', 'Each line is a record that receives this case from the SART. Mark whether the link was made and write the receiving record\'s ID.') +
      '<table class="ft"><colgroup><col style="width:16%"><col style="width:40%"><col style="width:24%"><col style="width:20%"></colgroup><thead><tr><th>Record</th><th>When it applies</th><th>ID / date</th><th>Status</th></tr></thead><tbody>' +
      ''.join(f'<tr><td class="el">{a}</td><td class="left">{b}<small> · {c}</small></td><td></td><td>{ck("Linked", "Not required", "Pending")}</td></tr>' for a, b, c in rowsF) + '</tbody></table>')
 gates = ['Immediate protection and care documented (or N/A, with the reason)', 'Source references enough to reconstruct the case', 'Current PI / site assessment documented', 'Sponsor submission and receipt documented', 'Timeliness and completeness known, or the limitation recorded', 'Follow-up completed, transferred or explicitly open', 'Sponsor / CEC determination recorded, or recorded as pending', 'Links in Section F completed']
 G = (sec('G', 'Closing the site\'s part of the case') +
      '<table class="gt"><colgroup><col style="width:56%"><col style="width:16%"><col style="width:28%"></colgroup><thead><tr><th>Before closing, confirm that…</th><th>Result</th><th>Reference / limitation</th></tr></thead><tbody>' +
      ''.join(f'<tr><td class="left">{g}</td><td>{ck("Yes", "No", "N/A")}</td><td></td></tr>' for g in gates) + '</tbody></table>'
-     '<div class="close-row"><div class="meta-cell"><b>Local closure status</b>' + ck('Closed locally', 'Open follow-up', 'Transferred', 'Not yet eligible', cls='opts left') + '</div><div class="meta-cell"><b>Current outcome and open items</b><span class="blank-entry"></span></div></div>'
+     '<div class="close-row"><div class="meta-cell"><b>Local closure status</b><span class="gap"></span>' + ck('Closed locally', 'Open follow-up', 'Transferred', 'Not yet eligible', cls='opts left') + '</div><div class="meta-cell"><b>Current outcome and open items</b><span class="blank-entry"></span></div></div>'
      '<p class="table-note">Local closure does not close the sponsor, CEC, ethics committee or regulatory process.</p>'
      '<div class="sig3"><div class="signature"><b>Case reporter / initial site assessor</b><div class="sig-field">Name / role: </div><div class="sig-field">Signature / date:<span class="sig-line"></span></div></div>'
      '<div class="signature"><b>PI / accountable investigator</b><div class="sig-field">Name / role: </div><div class="sig-field">Signature / date:<span class="sig-line"></span></div></div>'
      '<div class="signature"><b>Safety coordinator (if applicable)</b><div class="sig-field">Name / role: </div><div class="sig-field">Signature / date:<span class="sig-line"></span></div></div></div>'
-     '<div class="writeline" style="border-top:1px solid var(--grid);margin-top:6px"><b>Controlled location of the SART and linked system references:</b> </div>')
-pages.append(('', f'<main class="page">{top("Links and closure")}{strip()}<section class="section compact">{F}</section><section class="section compact">{G}</section>{foot("Links, closure and sign-off", 6)}</main>'))
+     '<div class="writeline loc" style="border-top:1px solid var(--grid);margin-top:6px"><b>Controlled location of the SART and linked system references:</b> </div>')
+pages.append(('', f'<main class="page">{top("Links and closure")}{strip("Local closure date")}<section class="section compact">{F}</section><section class="section compact">{G}</section>{foot("Links, closure and sign-off", 6)}</main>'))
 
 css = '''<style>
 .meta-grid{grid-template-columns:repeat(4,1fr)}.meta-grid .meta-cell{min-height:44px}
@@ -170,9 +170,10 @@ td.opts-cell{text-align:left}td.opts-cell .opts{justify-content:flex-start}
 .ct td{height:32px;font-size:8.8px;padding:3px 6px}.ct .opts{font-size:8px;gap:1px 7px}
 .dt td{height:64px;font-size:9px;padding:4px 6px}
 .et td{height:47px;font-size:8.8px;padding:3px 5px}.et th{font-size:8.4px}
-.ft td{height:38px;font-size:8.8px;padding:3px 6px}.ft small{color:#5f6670}
+.ft td{height:34px;font-size:8.8px;padding:3px 6px}.ft small{color:#5f6670}
 .gt td{height:27px;font-size:8.9px;padding:3px 6px}
 .close-row{display:grid;grid-template-columns:1fr 1.2fr;border-left:1px solid var(--grid);border-top:1px solid var(--grid);margin-top:7px}.close-row .meta-cell{min-height:52px}
+.gap{display:block;height:8px}.writeline.loc{min-height:62px}
 .sig3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:8px}.sig3 .signature{min-height:104px!important}
 .subhead{margin-top:7px}
 .letter{font-size:15px!important}
