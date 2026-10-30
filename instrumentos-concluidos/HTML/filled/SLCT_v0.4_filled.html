@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>SLCT v0.4 - Simulated example (fictitious data)</title><style>
+:root{--navy:#1f4173;--blue:#3478ad;--pale:#d7e6f3;--grid:#aeb4bb;--ink:#101418;--muted:#68727d;--paper:#fff;--canvas:#f2f4f7;--light:#f4f4f4;--teal:#2b7b83;--green:#e9f4ea;--amber:#fff3cf;--orange:#ffe2cf;--red:#f5d4d4;--violet:#eeeaf7}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--canvas);color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:10.5px;line-height:1.32}.page{width:210mm;height:297mm;margin:18px auto;padding:14mm 16mm 13mm;background:var(--paper);box-shadow:0 4px 20px rgba(30,41,59,.14);position:relative;overflow:hidden;page-break-after:always}@page{size:A4 portrait;margin:0}@media print{html,body{margin:0;padding:0;background:#fff}.page{width:210mm;height:297mm;margin:0;box-shadow:none;page-break-after:always}}
+.topbar{display:grid;grid-template-columns:1fr auto;align-items:center;background:var(--navy);color:#fff;min-height:46px;padding:12px}.title{font-size:19px;font-weight:400;text-transform:uppercase;letter-spacing:.01em}.version{color:#c8d6e6;font-size:11px;white-space:nowrap;padding-left:18px}.meta-grid{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid var(--grid);border-top:1px solid var(--grid);margin-top:5px}.meta-cell{min-height:47px;border-right:1px solid var(--grid);border-bottom:1px solid var(--grid);background:var(--pale);padding:6px 7px;color:#163a67;font-size:10px}.span2{grid-column:span 2}.meta-grid .meta-cell:nth-last-child(-n+2){min-height:59px}
+.section{margin-top:14px}.compact{margin-top:9px}.section-header{display:grid;grid-template-columns:40px 1fr;background:var(--navy);color:#fff;min-height:34px}.letter{display:flex;align-items:center;justify-content:center;border-right:1px solid rgba(255,255,255,.18);font-size:17px}.section-title{display:flex;align-items:center;padding:0 10px;font-size:14px;font-weight:400;letter-spacing:.015em}.box{border:1px solid var(--grid);border-top:none;padding:10px 11px 9px;background:#fff;font-size:10.5px;text-align:justify}.box p{margin:0 0 8px}.box p:last-child{margin-bottom:0}.note{margin:7px 0 0;color:var(--muted);font-size:9.6px;line-height:1.35;text-align:justify}.callout{border-left:4px solid var(--teal);background:#edf8f8;padding:10px 11px;margin-top:8px;font-size:10px;line-height:1.4}.callout b{color:var(--navy)}
+table{width:100%;border-collapse:collapse;table-layout:fixed;margin-top:6px}th,td{border:1px solid var(--grid);vertical-align:middle;padding:6px;text-align:center;overflow-wrap:anywhere}th{background:var(--blue);color:#fff;font-weight:400;font-size:9.5px;line-height:1.25}td{font-size:9.3px;line-height:1.30}tbody tr:nth-child(even) td{background:var(--light)}.left{text-align:left}.center{text-align:center}.small{font-size:8.7px}.source-map td{height:51px}.setup td{height:45px}.case-log th{font-size:8.7px;padding:5px}.case-log td{height:62px;font-size:8.7px;padding:5px}.review-log td{height:58px}.trigger-log td{height:62px}.action-log td{height:67px}.check{display:inline-block;width:10px;height:10px;border:1px solid #526070;margin-right:4px;vertical-align:-1px;background:#fff}.choice{display:grid;grid-template-columns:17px 1fr;align-items:center;width:106px;margin:0 auto;text-align:left;line-height:1.35}.choice-wide{width:132px}.signature-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.signature{border:1px solid var(--grid);min-height:72px;padding:7px;color:#173c67;font-size:9.2px}.signature b{display:block;color:var(--navy);margin-bottom:16px}.footer{position:absolute;left:16mm;right:16mm;bottom:7mm;border-top:1px solid #d2d6da;color:var(--muted);display:grid;grid-template-columns:1fr auto;gap:16px;padding-top:4px;font-size:9px}
+.logic-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}.logic-card{border:1px solid var(--grid);padding:9px 10px;background:var(--light);min-height:88px}.logic-card b{display:block;color:var(--navy);font-size:10.5px;margin-bottom:5px}.logic-card p{font-size:9.5px;line-height:1.32;margin:0}.stable{background:var(--green)!important;color:#25623b;font-weight:700}.observation{background:var(--amber)!important;color:#7b5a13;font-weight:700}.action{background:var(--orange)!important;color:#7b3f13;font-weight:700}.escalate{background:var(--red)!important;color:#7c2020;font-weight:700}.example-row td{background:#e7f1f9!important;color:#234d70;font-style:italic}.example-row td:first-child{font-weight:700}
+
+/* SLCT v0.3 — portrait by default; landscape only for the two case-level logs. */
+@page{size:A4 portrait;margin:0}
+@page landscape{size:A4 landscape;margin:0}
+.page.landscape{width:297mm;height:210mm;padding:12mm 15mm 12mm;page:landscape}
+@media print{.page.landscape{width:297mm;height:210mm;margin:0;page:landscape}}
+.page.landscape .footer{left:15mm;right:15mm;bottom:6mm}
+.page.landscape .topbar{min-height:40px;padding:9px 11px}
+.page.landscape .title{font-size:18px}
+.page.landscape .section{margin-top:10px}
+.page.landscape .section-header{min-height:30px}
+.page.landscape .case-log th{font-size:9.4px;line-height:1.22;padding:6px}
+.page.landscape .case-log td{height:88px;font-size:9.3px;padding:7px;vertical-align:top}
+.page.landscape .review-log td{height:55px;font-size:9.4px}
+.comparator td{height:49px}
+.comparator th{font-size:9.6px}
+.result-choice{display:grid;grid-template-columns:16px 1fr;align-items:center;text-align:left;line-height:1.4;width:154px;margin:0 auto}
+.action-log td{height:71px}
+
+/* SLCT v0.3 — writing-space, reference-prompt and title refinements. */
+.review-type{display:grid;grid-template-columns:66px 1fr;column-gap:6px;align-items:start}
+.review-label{font-weight:700;color:#163a67;padding-top:1px}
+.review-options{display:grid;grid-template-columns:1fr 1fr;row-gap:4px;column-gap:5px;line-height:1.1}
+.review-options span{white-space:nowrap}
+.review-options .check{margin-right:3px}
+.comparator td{height:63px;font-size:9.45px;line-height:1.34}
+.comparator td:first-child{text-align:center!important;vertical-align:middle}
+.comparator .ref-prompt{line-height:1.65;font-size:9.25px;padding-top:8px}
+.ref-prompt b{color:#173c67;font-weight:700}
+.page.landscape .section-title{font-size:15.5px}
+.page.landscape .case-log th{font-size:10.15px;line-height:1.22;padding:7px}
+.page.landscape .case-log td{height:96px;font-size:9.85px;padding:8px}
+.page.landscape .case-log td:first-child{vertical-align:middle!important;text-align:center!important;font-size:10.8px;font-weight:700;padding:0}
+.page:nth-of-type(3) .title,.page:nth-of-type(5) .title,.page:nth-of-type(6) .title{font-size:17.2px}
+.page:nth-of-type(3) .review-log th{font-size:10.1px;padding:7px;line-height:1.25}
+.page:nth-of-type(3) .review-log td{font-size:9.7px;line-height:1.34;height:64px}
+.page:nth-of-type(3) .mini-guide{font-size:10px;padding:8px 10px 7px}
+.page:nth-of-type(5) .trigger-log th,.page:nth-of-type(5) .action-log th{font-size:10.4px;padding:7px;line-height:1.23}
+.page:nth-of-type(5) .trigger-log td{height:60px;font-size:9.35px}
+.page:nth-of-type(5) .action-log td{height:62px;font-size:9.35px}
+
+</style><style id="slct-v04-continuation">
+/* v0.4: compact identification on repeatable sheets only. Original CSS retained. */
+.continuation-meta{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid var(--grid);border-top:1px solid var(--grid);margin-top:5px}
+.continuation-cell{min-height:32px;padding:3px 6px;border-right:1px solid var(--grid);border-bottom:1px solid var(--grid);background:var(--pale);color:#163a67;font-size:9.2px;line-height:1.15}
+.continuation-blank{display:block;height:14px}
+</style><style id="slct-simulated-completion">
+.sim-fill{display:block;font-family:"Segoe Print","Bradley Hand","Comic Sans MS",cursive;font-size:9.8px;font-weight:600;line-height:1.18;color:#174f88;text-align:left}
+.meta-cell>.sim-fill{font-size:9.5px;margin-top:4px}
+.continuation-blank .sim-fill{font-size:9px;line-height:1.1}
+.case-log td,.review-log td,.trigger-log td,.action-log td{vertical-align:middle;text-align:left}
+.case-log td:first-child{padding:6px;text-align:left}
+.ref-prompt .sim-fill{font-size:9px}
+.check.selected{position:relative}
+.sim-mark{position:absolute;inset:-2px;display:flex;align-items:center;justify-content:center;font-family:"Segoe Print","Bradley Hand","Comic Sans MS",cursive;font-size:14px;line-height:1;font-weight:600;color:#174f88}
+@media print{.sim-fill,.sim-mark{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+
+.page.landscape .case-log td{vertical-align:middle;text-align:left}
+.page.landscape .case-log td:first-child{text-align:left!important;padding:7px}
+.meta-cell:not(.review-type),.continuation-cell{display:flex;flex-direction:column}
+.sim-meta-label{display:block;flex:none}
+.sim-header-entry{flex:1;display:flex;align-items:center;min-height:0;text-align:left}
+.sim-header-entry>.sim-fill{font-size:9.5px;margin:0}
+.continuation-blank{display:flex;flex:1;align-items:center;height:auto;min-height:14px}
+</style></head><body>
+<main class="page">
+  <header class="topbar"><div class="title">SLCT — Surgeon Learning Curve Tracking</div><div class="version">SIMULATED · v0.4</div></header>
+  <section class="meta-grid">
+    <div class="meta-cell"><span class="sim-meta-label">Study / Protocol</span><div class="sim-header-entry"><span class="sim-fill">GLENOS-01 / GS-2026-01</span></div></div><div class="meta-cell"><span class="sim-meta-label">Site / Code</span><div class="sim-header-entry"><span class="sim-fill">Riverside Orthopedic Center / 014</span></div></div><div class="meta-cell"><span class="sim-meta-label">SLCT Record ID / Revision</span><div class="sim-header-entry"><span class="sim-fill">SLCT-014-S03-2026 / r1</span></div></div><div class="meta-cell"><span class="sim-meta-label">Record Status</span><div class="sim-header-entry"><span class="sim-fill">Active / periodic review</span></div></div>
+    <div class="meta-cell"><span class="sim-meta-label">Surgeon Code</span><div class="sim-header-entry"><span class="sim-fill">S03</span></div></div><div class="meta-cell"><span class="sim-meta-label">Procedure Family / Anatomical Field</span><div class="sim-header-entry"><span class="sim-fill">Primary reverse arthroplasty / shoulder</span></div></div><div class="meta-cell"><span class="sim-meta-label">Device / System</span><div class="sim-header-entry"><span class="sim-fill">GLENOS shoulder system v2</span></div></div><div class="meta-cell"><span class="sim-meta-label">Date Opened</span><div class="sim-header-entry"><span class="sim-fill">29 Sep 2026</span></div></div>
+    <div class="meta-cell span2"><span class="sim-meta-label">Current SCR / CCDM / TRE Reference</span><div class="sim-header-entry"><span class="sim-fill">SCR-014-03 r1; CCDM-014 v0.2 / T03; TRE-014-03 r1</span></div></div><div class="meta-cell"><span class="sim-meta-label">Applicable CIP / Procedure / IFU Version</span><div class="sim-header-entry"><span class="sim-fill">CIP v4.2 / technique v2 / IFU v3.1</span></div></div><div class="meta-cell review-type"><span class="review-label">Review type</span><div class="review-options"><span><span class="check"></span>Initial</span><span><span class="check"></span>Early stabilization</span><span><span class="check selected"><span class="sim-mark">X</span></span>Periodic</span><span><span class="check"></span>Triggered</span></div></div>
+  </section>
+  <section class="section">
+    <div class="section-header"><div class="letter">A</div><div class="section-title">Purpose, Decision and Boundary</div></div>
+    <div class="box">
+      <p>This log follows the procedural stabilization of one <b>surgeon</b> performing one defined <b>procedure family</b> with one defined <b>device/system</b>. It records context-sensitive signals close to the operative act so that surgeon-dependent variation can be reviewed before it appears as a later safety, deviation or data-quality problem.</p>
+      <p><b>Decision produced:</b> Is execution within the defined scope becoming and remaining sufficiently stable for the current case-complexity context, or is intensified review, retraining, proctoring, restriction or formal escalation required?</p>
+      <p>This is not an entry credentialing record, a device-training record, an adverse-event form, a device-deficiency form or an intraoperative source record. It receives selected, traceable information from those records and documents the learning-curve interpretation and resulting control decision. Use the surgeon code in this log; the PI keeps the identity key separately.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-header"><div class="letter">B</div><div class="section-title">Comparable-Case and Complexity Framework</div></div>
+    <div class="box"><p>Complete this framework when the log is activated, before case entry. It is the fixed comparison key for the surgeon, procedure family and device/system. Update it only when the procedure, device, indication, technique, complexity definition or applicable control changes. Each case record then refers to this framework rather than redefining the comparison in every line.</p></div>
+    <table class="comparator">
+      <thead><tr><th style="width:23%">Comparison element</th><th style="width:36%">Local definition or rule to apply</th><th style="width:25%">Evidence source / document reference</th><th style="width:16%">Effective date / update</th></tr></thead>
+      <tbody>
+        <tr><td class="left"><b>Procedure / device scope</b></td><td class="left"><span class="sim-fill">Primary reverse arthroplasty, GLENOS v2. No revision or grafting cases.</span></td><td class="left ref-prompt"><span class="sim-fill">CIP v4.2 / procedure</span><span class="sim-fill">IFU v3.1</span><span class="sim-fill">SCR-014-03 D1</span></td><td><span class="sim-fill">29 Sep 2026</span></td></tr>
+        <tr><td class="left"><b>Case-complexity strata</b></td><td class="left"><span class="sim-fill">Lower: preserved glenoid. Standard: routine cuff-tear arthropathy. Higher: augmentation/revision, excluded.</span></td><td class="left ref-prompt"><span class="sim-fill">Procedure plan PP-014 v1</span><span class="sim-fill">Specialty criteria SC-014 v1</span><span class="sim-fill">SRR-014 / R03</span></td><td><span class="sim-fill">29 Sep 2026</span></td></tr>
+        <tr><td class="left"><b>Operative-duration comparator</b></td><td class="left"><span class="sim-fill">Lower: 80–110 min. Standard: 100–130 min. Planning ranges, not proficiency cutoffs.</span></td><td class="left ref-prompt"><span class="sim-fill">Local plan PP-014 v1</span><span class="sim-fill">Comparable-case basis, Sec. 3</span></td><td><span class="sim-fill">29 Sep 2026</span></td></tr>
+        <tr><td class="left"><b>Expected initial support</b></td><td class="left"><span class="sim-fill">Dr L. Costa at first five cases. Support changes only through the SCR review.</span></td><td class="left ref-prompt"><span class="sim-fill">SCR-014-03 D2</span><span class="sim-fill">Proctor plan PP-014 v1</span><span class="sim-fill">CCDM T03 / S1</span></td><td><span class="sim-fill">29 Sep 2026</span></td></tr>
+        <tr><td class="left"><b>Review triggers</b></td><td class="left"><span class="sim-fill">Two unplanned size changes in comparable cases, unexplained duration drift or a safety signal.</span></td><td class="left ref-prompt"><span class="sim-fill">SRR-014 / R03</span><span class="sim-fill">POT-014 / trigger plan</span></td><td><span class="sim-fill">29 Sep 2026</span></td></tr>
+      </tbody>
+    </table>
+    <p class="note">Enter the supporting document and its version, section or record ID. The source is a controlled document or record, not the name of a reviewer.</p>
+  </section>
+  <footer class="footer"><div>SIMULATED - FICTITIOUS DATA | SLCT v0.4 | Purpose, review type and comparison framework</div><div>Page 1 of 6</div></footer>
+</main>
+<main class="page landscape">
+  <header class="topbar"><div class="title">SLCT — Surgeon Learning Curve Tracking</div><div class="version">Initial case cohort</div></header>
+  <div class="continuation-meta"><div class="continuation-cell"><span class="sim-meta-label">Study / Site Code</span><span class="continuation-blank"><span class="sim-fill">GLENOS-01 / 014</span></span></div><div class="continuation-cell"><span class="sim-meta-label">SLCT Record ID / Revision</span><span class="continuation-blank"><span class="sim-fill">SLCT-014-S03-2026 / r1</span></span></div><div class="continuation-cell"><span class="sim-meta-label">Surgeon Code</span><span class="continuation-blank"><span class="sim-fill">S03</span></span></div><div class="continuation-cell"><span class="sim-meta-label">Sheet No. / Total Sheets</span><span class="continuation-blank"><span class="sim-fill">1 / 1</span></span></div></div>
+  <section class="section compact">
+    <div class="section-header"><div class="letter">C</div><div class="section-title">Case-Level Tracking — Initial Cases 1 to 5</div></div>
+    <table class="case-log">
+      <thead><tr><th style="width:6%">Case<br>seq.</th><th style="width:11%">Date / case source reference</th><th style="width:13%">Procedure / device / configuration</th><th style="width:15%">Complexity class and key factor</th><th style="width:13%">Operative duration / comparator</th><th style="width:17%">Unplanned substitution or technical deviation</th><th style="width:11%">Senior support / proctoring</th><th style="width:14%">Documentation / early technical outcome / linked record</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><span class="sim-fill">29 Sep 2026 / ICDL-014-C01</span></td><td><span class="sim-fill">Reverse / GLENOS v2 / GS36</span></td><td><span class="sim-fill">Standard / routine anatomy</span></td><td><span class="sim-fill">128 min / 100–130</span></td><td><span class="sim-fill">None observed</span></td><td><span class="sim-fill">LC present as planned</span></td><td><span class="sim-fill">Record complete; no early concern. IMG-014-C01.</span></td></tr>
+        <tr><td>2</td><td><span class="sim-fill">01 Oct 2026 / ICDL-014-C02</span></td><td><span class="sim-fill">Reverse / GLENOS v2 / GS36</span></td><td><span class="sim-fill">Lower / preserved glenoid</span></td><td><span class="sim-fill">110 min / 80–110</span></td><td><span class="sim-fill">None observed</span></td><td><span class="sim-fill">LC present as planned</span></td><td><span class="sim-fill">Record complete; no early concern. IMG-014-C02.</span></td></tr>
+        <tr><td>3</td><td><span class="sim-fill">02 Oct 2026 / ICDL-014-C03</span></td><td><span class="sim-fill">Reverse / GLENOS v2 / GS36</span></td><td><span class="sim-fill">Standard / routine anatomy</span></td><td><span class="sim-fill">123 min / 100–130</span></td><td><span class="sim-fill">None observed</span></td><td><span class="sim-fill">LC present as planned</span></td><td><span class="sim-fill">Record complete; no early concern. IMG-014-C03.</span></td></tr>
+        <tr><td>4</td><td><span class="sim-fill">05 Oct 2026 / ICDL-014-C04</span></td><td><span class="sim-fill">Reverse / GLENOS v2 / GS36</span></td><td><span class="sim-fill">Lower / preserved glenoid</span></td><td><span class="sim-fill">102 min / 80–110</span></td><td><span class="sim-fill">None observed</span></td><td><span class="sim-fill">LC present as planned</span></td><td><span class="sim-fill">Record complete; no early concern. IMG-014-C04.</span></td></tr>
+        <tr><td>5</td><td><span class="sim-fill">08 Oct 2026 / ICDL-014-C05</span></td><td><span class="sim-fill">Reverse / GLENOS v2 / GS36</span></td><td><span class="sim-fill">Standard / routine anatomy</span></td><td><span class="sim-fill">118 min / 100–130</span></td><td><span class="sim-fill">None observed</span></td><td><span class="sim-fill">LC present as planned</span></td><td><span class="sim-fill">Record complete; no early concern. IMG-014-C05.</span></td></tr>
+      </tbody>
+    </table>
+    <p class="note">Record a concise source reference, not participant-identifying information. State “none observed” where an expected variation, deviation or support event did not occur; do not leave a negative finding ambiguous.</p>
+  </section>
+  <footer class="footer"><div>SIMULATED - FICTITIOUS DATA | SLCT v0.4 | Initial case cohort</div><div>Page 2 of 6</div></footer>
+</main>
+<main class="page">
+  <header class="topbar"><div class="title">SLCT — Surgeon Learning Curve Tracking</div><div class="version">Cohort and scheduled review</div></header>
+  <div class="continuation-meta"><div class="continuation-cell"><span class="sim-meta-label">Study / Site Code</span><span class="continuation-blank"><span class="sim-fill">GLENOS-01 / 014</span></span></div><div class="continuation-cell"><span class="sim-meta-label">SLCT Record ID / Revision</span><span class="continuation-blank"><span class="sim-fill">SLCT-014-S03-2026 / r1</span></span></div><div class="continuation-cell"><span class="sim-meta-label">Surgeon Code</span><span class="continuation-blank"><span class="sim-fill">S03</span></span></div><div class="continuation-cell"><span class="sim-meta-label">Sheet No. / Total Sheets</span><span class="continuation-blank"><span class="sim-fill">1 / 1</span></span></div></div>
+  <section class="section">
+    <div class="section-header"><div class="letter">D</div><div class="section-title">Initial-Cohort Review</div></div>
+    <div class="box mini-guide"><p>Review the first cohort against the comparison framework. Interpret patterns across comparable cases rather than any isolated event, and record a linked action whenever a concern or material limitation is identified. Compare with this surgeon’s earlier cases of similar complexity and distinguish planned from additional support.</p></div>
+    <table class="review-log">
+      <thead><tr><th style="width:22%">Review question</th><th style="width:34%">Evidence and context assessed</th><th style="width:24%">Conclusion</th><th style="width:20%">Required action / linked record</th></tr></thead>
+      <tbody>
+        <tr><td class="left">Are operative duration and support needs interpretable within comparable complexity strata?</td><td><span class="sim-fill">09 Oct / LC: standard 128, 123, 118 min; lower 110, 102. Planned support in all five.</span></td><td><div class="choice choice-wide"><span class="check selected"><span class="sim-mark">X</span></span>Stable<br><span class="check"></span>Observation<br><span class="check"></span>Concern</div></td><td><span class="sim-fill">No added control. SCR-014-03 G reviewed.</span></td></tr>
+        <tr><td class="left">Are substitutions or technical deviations isolated, expected or showing recurrence?</td><td><span class="sim-fill">09 Oct / LC: no unplanned substitution or technical deviation in cases 1–5.</span></td><td><div class="choice choice-wide"><span class="check selected"><span class="sim-mark">X</span></span>Isolated / expected<br><span class="check"></span>Observation<br><span class="check"></span>Concern</div></td><td><span class="sim-fill">Continue within scope; review 6–10.</span></td></tr>
+        <tr><td class="left">Do documentation, imaging or early technical findings suggest a procedural pattern?</td><td><span class="sim-fill">09 Oct / LC: operative/image records complete; no early technical pattern.</span></td><td><div class="choice choice-wide"><span class="check selected"><span class="sim-mark">X</span></span>No pattern<br><span class="check"></span>Observation<br><span class="check"></span>Concern</div></td><td><span class="sim-fill">Routine capture; no safety handoff needed.</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="section">
+    <div class="section-header"><div class="letter">E</div><div class="section-title">Scheduled Review Register</div></div>
+    <div class="box mini-guide"><p>Use one row for each planned cohort or periodic review. Summarize the complexity range, the observed pattern, the decision made and the next review or linked control record. Include the actual review date and reviewer in each entry.</p></div>
+    <table class="review-log">
+      <thead><tr><th style="width:17%">Review point / period</th><th style="width:29%">Cases and complexity context reviewed</th><th style="width:27%">Pattern across duration, variation, support and evidence quality</th><th style="width:27%">Decision / next review / linked records</th></tr></thead>
+      <tbody>
+        <tr><td class="left">Cases 1–5</td><td><span class="sim-fill">09 Oct 2026 / LC. Cases 1–5: three standard, two lower.</span></td><td><span class="sim-fill">Duration within local ranges; planned support; no technical pattern.</span></td><td><span class="sim-fill">Continue; SCR-014-03 G confirms end criteria of temporary controls. Review 6–10.</span></td></tr>
+        <tr><td class="left">Cases 6–10</td><td><span class="sim-fill">29 Oct 2026 / LC. Cases 6–10: four standard, one lower.</span></td><td><span class="sim-fill">Two size changes interpreted with anatomy; G01 completed. No unexplained drift.</span></td><td><span class="sim-fill">Continue in reviewed scope. Next cohort 11–15; review by 20 Nov.</span></td></tr>
+        <tr><td class="left">Periodic review</td><td><span class="sim-fill">30 Oct 2026 / MS + LC. Ten cases to date.</span></td><td><span class="sim-fill">G01 closed; no new signal since case 10. No fixed-count proficiency claim.</span></td><td><span class="sim-fill">Stable for current scope. Next review 20 Nov 2026.</span></td></tr>
+        <tr><td class="left">Other defined cohort</td><td><span class="sim-fill">Not opened as of 30 Oct 2026.</span></td><td><span class="sim-fill">No additional cohort accrued.</span></td><td><span class="sim-fill">Not due; define if scope or device changes.</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+  <footer class="footer"><div>SIMULATED - FICTITIOUS DATA | SLCT v0.4 | Initial-cohort and scheduled review</div><div>Page 3 of 6</div></footer>
+</main>
+<main class="page landscape">
+  <header class="topbar"><div class="title">SLCT — Surgeon Learning Curve Tracking</div><div class="version">Continuation case cohort</div></header>
+  <div class="continuation-meta"><div class="continuation-cell"><span class="sim-meta-label">Study / Site Code</span><span class="continuation-blank"><span class="sim-fill">GLENOS-01 / 014</span></span></div><div class="continuation-cell"><span class="sim-meta-label">SLCT Record ID / Revision</span><span class="continuation-blank"><span class="sim-fill">SLCT-014-S03-2026 / r1</span></span></div><div class="continuation-cell"><span class="sim-meta-label">Surgeon Code</span><span class="continuation-blank"><span class="sim-fill">S03</span></span></div><div class="continuation-cell"><span class="sim-meta-label">Sheet No. / Total Sheets</span><span class="continuation-blank"><span class="sim-fill">1 / 1</span></span></div></div>
+  <section class="section compact">
+    <div class="section-header"><div class="letter">F</div><div class="section-title">Case-Level Tracking — Continuation</div></div>
+    <table class="case-log">
+      <thead><tr><th style="width:6%">Case<br>seq.</th><th style="width:11%">Date / case source reference</th><th style="width:13%">Procedure / device / configuration</th><th style="width:15%">Complexity class and key factor</th><th style="width:13%">Operative duration / comparator</th><th style="width:17%">Unplanned substitution or technical deviation</th><th style="width:11%">Senior support / proctoring</th><th style="width:14%">Documentation / early technical outcome / linked record</th></tr></thead>
+      <tbody>
+        <tr><td><span class="sim-fill">6</span></td><td><span class="sim-fill">12 Oct 2026 / ICDL-014-C06</span></td><td><span class="sim-fill">Reverse / GLENOS v2 / GS36</span></td><td><span class="sim-fill">Standard / routine anatomy</span></td><td><span class="sim-fill">116 min / 100–130</span></td><td><span class="sim-fill">None observed</span></td><td><span class="sim-fill">No additional support</span></td><td><span class="sim-fill">Record complete; no early concern. IMG-014-C06.</span></td></tr>
+        <tr><td><span class="sim-fill">7</span></td><td><span class="sim-fill">15 Oct 2026 / ICDL-014-C07</span></td><td><span class="sim-fill">Reverse / GLENOS v2 / GS36</span></td><td><span class="sim-fill">Lower / preserved glenoid</span></td><td><span class="sim-fill">98 min / 80–110</span></td><td><span class="sim-fill">None observed</span></td><td><span class="sim-fill">No additional support</span></td><td><span class="sim-fill">Record complete; no early concern. IMG-014-C07.</span></td></tr>
+        <tr><td><span class="sim-fill">8</span></td><td><span class="sim-fill">19 Oct 2026 / ICDL-014-C08</span></td><td><span class="sim-fill">Reverse / GLENOS v2 / GS40</span></td><td><span class="sim-fill">Standard / wider glenoid</span></td><td><span class="sim-fill">121 min / 100–130</span></td><td><span class="sim-fill">GS36 to GS40 after trial; within IFU. ICDL F.</span></td><td><span class="sim-fill">No additional support</span></td><td><span class="sim-fill">Sizing rationale retained; review G01. IMG-014-C08.</span></td></tr>
+        <tr><td><span class="sim-fill">9</span></td><td><span class="sim-fill">22 Oct 2026 / ICDL-014-C09</span></td><td><span class="sim-fill">Reverse / GLENOS v2 / GS40</span></td><td><span class="sim-fill">Standard / eccentric wear</span></td><td><span class="sim-fill">126 min / 100–130</span></td><td><span class="sim-fill">GS36 to GS40 after trial; within IFU. ICDL F.</span></td><td><span class="sim-fill">No additional support</span></td><td><span class="sim-fill">Sizing rationale retained; review G01. IMG-014-C09.</span></td></tr>
+        <tr><td><span class="sim-fill">10</span></td><td><span class="sim-fill">26 Oct 2026 / ICDL-014-C10</span></td><td><span class="sim-fill">Reverse / GLENOS v2 / GS36</span></td><td><span class="sim-fill">Standard / routine anatomy</span></td><td><span class="sim-fill">114 min / 100–130</span></td><td><span class="sim-fill">None observed</span></td><td><span class="sim-fill">No additional support</span></td><td><span class="sim-fill">Record complete; no early concern. IMG-014-C10.</span></td></tr>
+      </tbody>
+    </table>
+    <p class="note">Attach continuation pages using the same column order for additional cases. Enter the next case numbers; do not restart at 6 when this sheet is reprinted. Keep a distinct log for a materially different procedure family or device/system unless the approved comparison framework explicitly permits aggregation.</p>
+  </section>
+  <footer class="footer"><div>SIMULATED - FICTITIOUS DATA | SLCT v0.4 | Continuation case cohort</div><div>Page 4 of 6</div></footer>
+</main>
+<main class="page">
+  <header class="topbar"><div class="title">SLCT — Surgeon Learning Curve Tracking</div><div class="version">Triggered assessment and action</div></header>
+  <div class="continuation-meta"><div class="continuation-cell"><span class="sim-meta-label">Study / Site Code</span><span class="continuation-blank"><span class="sim-fill">GLENOS-01 / 014</span></span></div><div class="continuation-cell"><span class="sim-meta-label">SLCT Record ID / Revision</span><span class="continuation-blank"><span class="sim-fill">SLCT-014-S03-2026 / r1</span></span></div><div class="continuation-cell"><span class="sim-meta-label">Surgeon Code</span><span class="continuation-blank"><span class="sim-fill">S03</span></span></div><div class="continuation-cell"><span class="sim-meta-label">Sheet No. / Total Sheets</span><span class="continuation-blank"><span class="sim-fill">1 / 1</span></span></div></div>
+  <section class="section compact">
+    <div class="section-header"><div class="letter">G</div><div class="section-title">Triggered Learning-Curve Assessment</div></div>
+    <div class="box"><p>Open this assessment when a pre-defined or material signal appears. Triggers may include repeated unplanned component substitutions, duration consistently outside the comparable-case expectation, recurrent technical deviations, clustering of early technical complications, repeated need for senior support, a new device/technique/indication, or an external signal from CSST, SRR, IMC or PI oversight.</p></div>
+    <table class="trigger-log">
+      <thead><tr><th style="width:20%">Trigger and date</th><th style="width:23%">Cases / records reviewed</th><th style="width:29%">Complexity-aware assessment</th><th style="width:14%">Likely control issue, if any</th><th style="width:14%">Immediate disposition</th></tr></thead>
+      <tbody>
+        <tr><td><span class="sim-fill">G01 / 23 Oct 2026: two size changes.</span></td><td><span class="sim-fill">Cases 8/9; ICDL F and images; IFU v3.1.</span></td><td><span class="sim-fill">29 Oct / LC: anatomy explains sizing changes; no unexplained drift.</span></td><td><span class="sim-fill">No technical failure found.</span></td><td><span class="sim-fill">Continue; assessment closed 29 Oct.</span></td></tr>
+        <tr><td><span class="sim-fill">Not used</span></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td><span class="sim-fill">Not used</span></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td><span class="sim-fill">Not used</span></td><td></td><td></td><td></td><td></td></tr>
+      
+        <tr><td><span class="sim-fill">Not used</span></td><td></td><td></td><td></td><td></td></tr></tbody>
+    </table>
+    <p class="note">Do not attribute a safety signal to surgeon performance without reviewing complexity, device, procedure, patient and documentation context. A confirmed complication signal should be assessed against this log before it is attributed to the device or to the operator.</p>
+  </section>
+  <section class="section">
+    <div class="section-header"><div class="letter">H</div><div class="section-title">Action, Restriction and Reassessment</div></div>
+    <table class="action-log">
+      <thead><tr><th style="width:18%">Signal / assessment reference</th><th style="width:23%">Action or restriction</th><th style="width:19%">Owner / due date</th><th style="width:21%">Evidence required for reassessment</th><th style="width:19%">Outcome / linked record / closure</th></tr></thead>
+      <tbody>
+        <tr><td><span class="sim-fill">G01 / cases 8–9</span></td><td><span class="sim-fill">Review anatomy and sizing rationale; no new restriction.</span></td><td><span class="sim-fill">LC / 29 Oct 2026</span></td><td><span class="sim-fill">ICDL F, images and IFU sizing rules.</span></td><td><span class="sim-fill">Completed 29 Oct; PP-014 review note. Continue surveillance.</span></td></tr>
+        <tr><td><span class="sim-fill">Not used</span></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td><span class="sim-fill">Not used</span></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td><span class="sim-fill">Not used</span></td><td></td><td></td><td></td><td></td></tr>
+      
+        <tr><td><span class="sim-fill">Not used</span></td><td></td><td></td><td></td><td></td></tr></tbody>
+    </table>
+    <p class="note">A restriction, training intervention or intensified review is not closed merely because it was initiated. Record the reassessment evidence and whether the control was effective, insufficient or still under review.</p>
+  </section>
+  <footer class="footer"><div>SIMULATED - FICTITIOUS DATA | SLCT v0.4 | Triggered assessment, action and reassessment</div><div>Page 5 of 6</div></footer>
+</main>
+<main class="page">
+  <header class="topbar"><div class="title">SLCT — Surgeon Learning Curve Tracking</div><div class="version">Disposition and certification</div></header>
+  <section class="section">
+    <div class="section-header"><div class="letter">I</div><div class="section-title">Disposition Logic</div></div>
+    <div class="box"><p>Use this logic only after completing the scheduled review or a triggered assessment. It converts the conclusion into a controlled response. The selected outcome is recorded in the action log and in the overall status below; it is not a second assessment or a substitute for the trigger table.</p></div>
+    <table>
+      <thead><tr><th style="width:22%">Disposition</th><th style="width:47%">Meaning</th><th style="width:31%">Required destination or response</th></tr></thead>
+      <tbody>
+        <tr><td class="stable">Continue as planned</td><td class="left">The available evidence is stable within the approved scope and comparable case-complexity context. No material surgeon-dependent drift is identified.</td><td class="left">Record next scheduled review and retain source references.</td></tr>
+        <tr><td class="observation">Intensify review</td><td class="left">A pattern is uncertain, early or limited. It does not yet justify a scope restriction but requires closer observation or a shorter review interval.</td><td class="left">Define additional cases, reviewer and next review date.</td></tr>
+        <tr><td class="action">Adapt controls</td><td class="left">Evidence supports a local intervention such as renewed device training, temporary proctoring, co-surgery, enhanced documentation review or restriction to lower-complexity cases.</td><td class="left">Update TRE, SCR or CCDM as applicable; open a dated action and reassessment point.</td></tr>
+        <tr><td class="escalate">Formal escalation</td><td class="left">A material, recurrent or unresolved pattern requires risk, governance, safety or sponsor review according to the applicable procedure.</td><td class="left">Open or update SRR / CAPA; notify PI oversight, CSST or sponsor route as applicable.</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="section">
+    <div class="section-header"><div class="letter">J</div><div class="section-title">Overall Record Status and Certification</div></div>
+    <div class="box"><p>I confirm that this log was reviewed against the applicable source records for the surgeon, procedure family and device/system stated in the header. The conclusion reflects complexity-aware interpretation of the recorded data. It does not replace safety assessment, device deficiency assessment, participant-level clinical judgment or the PI’s retained responsibility for the clinical investigation.</p></div>
+    <table>
+      <thead><tr><th style="width:25%">Current learning-curve status</th><th style="width:52%">Select one and state the current scope or condition</th><th style="width:23%">Effective date / next review</th></tr></thead>
+      <tbody>
+        <tr><td class="stable">Stable / continue</td><td class="left"><span class="check selected"><span class="sim-mark">X</span></span>Current procedural scope and supervision remain appropriate.</td><td><span class="sim-fill">30 Oct 2026</span><span class="sim-fill">Next: 20 Nov 2026</span></td></tr>
+        <tr><td class="observation">Under intensified review</td><td class="left"><span class="check"></span>Additional cases or a shorter review interval are required.</td><td></td></tr>
+        <tr><td class="action">Control adaptation active</td><td class="left"><span class="check"></span>Training, proctoring, scope or documentation control has been changed.</td><td></td></tr>
+        <tr><td class="escalate">Escalated / restricted</td><td class="left"><span class="check"></span>Formal risk, governance, safety or sponsor route has been activated.</td><td></td></tr>
+      </tbody>
+    </table>
+    <div class="signature-grid">
+      <div class="signature"><b>Primary reviewer</b><span class="sim-fill">Maria Silva / coordinator</span><span class="sim-fill">M. Silva</span><span class="sim-fill">30 Oct 2026</span></div>
+      <div class="signature"><b>Surgical / clinical reviewer</b><span class="sim-fill">Dr Luis Costa / surgeon</span><span class="sim-fill">L. Costa</span><span class="sim-fill">30 Oct 2026</span></div>
+      <div class="signature"><b>Principal Investigator / accountable approver</b><span class="sim-fill">Dr Alex Morgan / PI</span><span class="sim-fill">A. Morgan</span><span class="sim-fill">30 Oct 2026</span></div>
+      <div class="signature"><b>Next scheduled review / controlled record location</b><span class="sim-fill">20 Nov 2026</span><span class="sim-fill">Site file / SLCT-014-S03</span><span class="sim-fill">r1 / v0.4</span></div>
+    </div>
+  </section>
+  <footer class="footer"><div>SIMULATED - FICTITIOUS DATA | SLCT v0.4 | Disposition logic and record certification</div><div>Page 6 of 6</div></footer>
+</main>
+</body></html>

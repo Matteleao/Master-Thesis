@@ -1,0 +1,204 @@
+{
+  "branch": "codex/thesis-work",
+  "updated": "2026-10-30",
+  "instruments": [
+    {
+      "instrument": "CCDM",
+      "version": "0.2",
+      "approval": "Aceito no histórico recebido",
+      "variants": {
+        "blank": {
+          "source": "materiais/2026-10-25/06_Instrumentos_versoes_atuais/CCDM_Criticality_Coded_Delegation_Matrix_v0.2_blank_editable_revised.html",
+          "source_sha256": "bb4acfbbc3d573e3db01a2554a67cbf97cf12ba1b7e61baa3bd5201003e693e4",
+          "html": "HTML/blank/CCDM_v0.2_blank.html",
+          "html_sha256": "bb4acfbbc3d573e3db01a2554a67cbf97cf12ba1b7e61baa3bd5201003e693e4",
+          "pdf": "PDF/blank/CCDM_v0.2_blank.pdf",
+          "pdf_sha256": "e97a516f4e9d42770fa045a6d42900d12fe8a00e80bf3951b28d886b2a9f350b",
+          "pdf_pages": 3
+        },
+        "filled": {
+          "source": "materiais/2026-10-25/06_Instrumentos_versoes_atuais/CCDM_Criticality_Coded_Delegation_Matrix_v0.2_simulated_editable_revised.html",
+          "source_sha256": "7bd2ba765458827f0b5c7f54b7215c2f50d51c7ddddb874d59232353a9adcabd",
+          "html": "HTML/filled/CCDM_v0.2_filled.html",
+          "html_sha256": "7bd2ba765458827f0b5c7f54b7215c2f50d51c7ddddb874d59232353a9adcabd",
+          "pdf": "PDF/filled/CCDM_v0.2_filled.pdf",
+          "pdf_sha256": "11964bfd4db0f67d589798e93c41c65c295b65d1bdc7ae9df58d6783b7a61a38",
+          "pdf_pages": 3
+        }
+      }
+    },
+    {
+      "instrument": "DTRM",
+      "version": "0.2",
+      "approval": "Aceito no histórico recebido",
+      "variants": {
+        "blank": {
+          "source": "materiais/2026-10-25/06_Instrumentos_versoes_atuais/DTRM_Device_and_Study_Training_Requirements_Matrix_v0.2_blank_editable.html",
+          "source_sha256": "84ba48088a421646734b3c6af11488b673478b4f35ba31fc3a6252262dc77cb9",
+          "html": "HTML/blank/DTRM_v0.2_blank.html",
+          "html_sha256": "84ba48088a421646734b3c6af11488b673478b4f35ba31fc3a6252262dc77cb9",
+          "pdf": "PDF/blank/DTRM_v0.2_blank.pdf",
+          "pdf_sha256": "0c1584aede55f9259b15599265918cc9b26bc1ccb77f4a4f46f3416be1b14371",
+          "pdf_pages": 5
+        },
+        "filled": {
+          "source": "materiais/2026-10-25/06_Instrumentos_versoes_atuais/DTRM_Device_and_Study_Training_Requirements_Matrix_v0.2_simulated_editable.html",
+          "source_sha256": "c3c7c5466f82c0cc7d19ff95617c0ee5c41850c9fd8b833ab71231c15598a691",
+          "html": "HTML/filled/DTRM_v0.2_filled.html",
+          "html_sha256": "c3c7c5466f82c0cc7d19ff95617c0ee5c41850c9fd8b833ab71231c15598a691",
+          "pdf": "PDF/filled/DTRM_v0.2_filled.pdf",
+          "pdf_sha256": "6a8abe09fd641841c22ef28205149ac8b32924989d6497f45863d84cd0c18364",
+          "pdf_pages": 5
+        }
+      }
+    },
+    {
+      "instrument": "TRE",
+      "version": "0.4",
+      "approval": "Aceito no histórico recebido",
+      "variants": {
+        "blank": {
+          "source": "materiais/2026-10-25/06_Instrumentos_versoes_atuais/TRE_Training_Record_Evaluation_and_Release_v0.4_blank_editable.html",
+          "source_sha256": "8e635166e29d9ca6a4c4025baee0908b6a467cc9361a728973b3931432edb6c0",
+          "html": "HTML/blank/TRE_v0.4_blank.html",
+          "html_sha256": "8e635166e29d9ca6a4c4025baee0908b6a467cc9361a728973b3931432edb6c0",
+          "pdf": "PDF/blank/TRE_v0.4_blank.pdf",
+          "pdf_sha256": "e980d06cc0b177d99758c9496cfff11681fefdffbf6614b1c7252063b859b9cb",
+          "pdf_pages": 5
+        },
+        "filled": {
+          "source": "materiais/2026-10-25/06_Instrumentos_versoes_atuais/TRE_Training_Record_Evaluation_and_Release_v0.4_simulated_editable.html",
+          "source_sha256": "a55b6f6c8d1ab11856883c4db81ca2128924536b436573a29ddcef3d523958b2",
+          "html": "HTML/filled/TRE_v0.4_filled.html",
+          "html_sha256": "a55b6f6c8d1ab11856883c4db81ca2128924536b436573a29ddcef3d523958b2",
+          "pdf": "PDF/filled/TRE_v0.4_filled.pdf",
+          "pdf_sha256": "eb99015422281b3e64606842e09c3f8a32183f40530170b518ac795249266be6",
+          "pdf_pages": 5
+        }
+      }
+    },
+    {
+      "instrument": "RACI",
+      "version": "0.3",
+      "approval": "Aceito no histórico recebido",
+      "variants": {
+        "blank": {
+          "source": "materiais/2026-10-25/06_Instrumentos_versoes_atuais/RACI_Responsibility_Assignment_Matrix_v0.3_blank_editable.html",
+          "source_sha256": "2692d695e185c2e2098d118b4b8e14b324ce58ba96b4fe6960726348a961e49e",
+          "html": "HTML/blank/RACI_v0.3_blank.html",
+          "html_sha256": "2692d695e185c2e2098d118b4b8e14b324ce58ba96b4fe6960726348a961e49e",
+          "pdf": "PDF/blank/RACI_v0.3_blank.pdf",
+          "pdf_sha256": "204801111e852ccb1c03aacdc5ae4fd2ab583b05c7f515d4f45cef12066703a3",
+          "pdf_pages": 6
+        },
+        "filled": {
+          "source": "materiais/2026-10-25/06_Instrumentos_versoes_atuais/RACI_Responsibility_Assignment_Matrix_v0.3_simulated_editable.html",
+          "source_sha256": "60ba0582f7f91d37e96401c3f15cb8ce1ffd1d7a79b807de92b9abda1369d8d0",
+          "html": "HTML/filled/RACI_v0.3_filled.html",
+          "html_sha256": "60ba0582f7f91d37e96401c3f15cb8ce1ffd1d7a79b807de92b9abda1369d8d0",
+          "pdf": "PDF/filled/RACI_v0.3_filled.pdf",
+          "pdf_sha256": "efea49b92a3ccaa7d801c7992e5f3d6d751d81a3f38e0676825bac3380bb2eef",
+          "pdf_pages": 6
+        }
+      }
+    },
+    {
+      "instrument": "SCR",
+      "version": "0.5",
+      "approval": "Aceito no histórico recebido",
+      "variants": {
+        "blank": {
+          "source": "materiais/2026-10-25/06_Instrumentos_versoes_atuais/SCR_Surgical_Credentialing_Record_v0.5_blank_editable.html",
+          "source_sha256": "84a7c48ba3158459ad38639b3c189b4f46a30903da1b3821fadeb73336bf9124",
+          "html": "HTML/blank/SCR_v0.5_blank.html",
+          "html_sha256": "84a7c48ba3158459ad38639b3c189b4f46a30903da1b3821fadeb73336bf9124",
+          "pdf": "PDF/blank/SCR_v0.5_blank.pdf",
+          "pdf_sha256": "956e0e75d29f860b72340c69740e5ffffdae3778cd9c3e30d8c61e18a8ca5675",
+          "pdf_pages": 4
+        },
+        "filled": {
+          "source": "materiais/2026-10-25/06_Instrumentos_versoes_atuais/SCR_Surgical_Credentialing_Record_v0.5_simulated_editable.html",
+          "source_sha256": "90bd35da362768bf45c5f4ed5f2953bd9871e8d6bbb64779611e04bab1f419e3",
+          "html": "HTML/filled/SCR_v0.5_filled.html",
+          "html_sha256": "90bd35da362768bf45c5f4ed5f2953bd9871e8d6bbb64779611e04bab1f419e3",
+          "pdf": "PDF/filled/SCR_v0.5_filled.pdf",
+          "pdf_sha256": "894c65995e5e49e889705e0c2b5e0e30bbe4024b34c1abaa971e9c395f694245",
+          "pdf_pages": 4
+        }
+      }
+    },
+    {
+      "instrument": "SCML",
+      "version": "0.7",
+      "approval": "Concluído pelo autor em 30/10/2026",
+      "variants": {
+        "blank": {
+          "source": "revisoes/SCML/SCML_Site_Complication_Monitoring_Log_v0.7_blank.html",
+          "source_sha256": "4e25754dfb59a934edd9f9d0fc62ee5c0b98aa8d470e764e535d8c2d77568c37",
+          "html": "HTML/blank/SCML_v0.7_blank.html",
+          "html_sha256": "4e25754dfb59a934edd9f9d0fc62ee5c0b98aa8d470e764e535d8c2d77568c37",
+          "pdf": "PDF/blank/SCML_v0.7_blank.pdf",
+          "pdf_sha256": "78c5e67e65b83edf1adc8754ae687996639b9d0df2f9c53300e39bb8b115ea2b",
+          "pdf_pages": 5
+        },
+        "filled": {
+          "source": "revisoes/SCML/SCML_Site_Complication_Monitoring_Log_v0.7_simulated.html",
+          "source_sha256": "c80cf03a4e351b291c82d568886a99f9001bc2a87f3a945354593967e58254a8",
+          "html": "HTML/filled/SCML_v0.7_filled.html",
+          "html_sha256": "c80cf03a4e351b291c82d568886a99f9001bc2a87f3a945354593967e58254a8",
+          "pdf": "PDF/filled/SCML_v0.7_filled.pdf",
+          "pdf_sha256": "07c992c03723b48d14c74fcd7cad33952344e0a0742c0fca262192d84ca68276",
+          "pdf_pages": 5
+        }
+      }
+    },
+    {
+      "instrument": "SLCT",
+      "version": "0.4",
+      "approval": "Inclusão como concluído confirmada explicitamente pelo autor em 30/10/2026. Preenchido gerado conforme o pedido de organização.",
+      "variants": {
+        "blank": {
+          "source": "revisoes/SLCT/SLCT_Surgeon_Learning_Curve_Tracking_Log_v0.4_blank.html",
+          "source_sha256": "7d4cb4722e7cd54576afd31c4976751c4f1064566abc7300e5c6948128c350e9",
+          "html": "HTML/blank/SLCT_v0.4_blank.html",
+          "html_sha256": "7d4cb4722e7cd54576afd31c4976751c4f1064566abc7300e5c6948128c350e9",
+          "pdf": "PDF/blank/SLCT_v0.4_blank.pdf",
+          "filled_generated": false,
+          "pdf_sha256": "491af9f1aa0dc50bbb712b526c36cc6a8c191afc1ebbdc319981aec8b480fc9a",
+          "pdf_pages": 6
+        },
+        "filled": {
+          "source": "revisoes/SLCT/SLCT_Surgeon_Learning_Curve_Tracking_Log_v0.4_simulated.html",
+          "source_sha256": "3ef15f792ebf7c35d8803b03d2af00e8750eba3dce9347932b540efe977c6a04",
+          "html": "HTML/filled/SLCT_v0.4_filled.html",
+          "html_sha256": "3ef15f792ebf7c35d8803b03d2af00e8750eba3dce9347932b540efe977c6a04",
+          "pdf": "PDF/filled/SLCT_v0.4_filled.pdf",
+          "filled_generated": true,
+          "pdf_sha256": "efc0077307b2c2168ab505d41ea850c54485b536c59be8c6fa6f48474dbf71a4",
+          "pdf_pages": 6
+        }
+      }
+    }
+  ],
+  "pending": {
+    "POT": "Autor pediu nova conferência; não incluído nos concluídos.",
+    "MRL": "Suspenso, sem aprovação final.",
+    "SRR": "Montagem externa, sem aprovação final do HTML nesta conversa."
+  },
+  "export": {
+    "date": "2026-10-30",
+    "engine": "Chromium / Playwright",
+    "print_background": true,
+    "prefer_css_page_size": true,
+    "tagged_pdf": true,
+    "fonts": [
+      "Arial",
+      "Comic Sans MS",
+      "Z003 (signature fallback only)"
+    ],
+    "source_html_unchanged": true,
+    "pdf_count": 14,
+    "pdf_pages": 68,
+    "font_files_redistributed": false
+  }
+}
