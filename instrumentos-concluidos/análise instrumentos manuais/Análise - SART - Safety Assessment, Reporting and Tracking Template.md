@@ -1,8 +1,8 @@
-# Análise de reconstrução — SAART: Safety Assessment, Reporting and Tracking Template
+# Análise de reconstrução — SART: Safety Assessment, Reporting and Tracking Template
 
-**Status:** especificação para reconstrução integral do instrumento.  
-**Instrumento substituído:** `SART — Safety and Adverse Effect Reporting Template v0.3`.  
-**Novo nome aprovado:** **SAART — Safety Assessment, Reporting and Tracking Template**.  
+**Status:** especificação para reconstrução integral do instrumento.
+**Instrumento substituído:** `SART — Safety and Adverse Effect Reporting Template v0.3`.
+**Novo nome aprovado:** **SART — Safety Assessment, Reporting and Tracking Template**.
 **Decisão de arquitetura:** o SART v0.3 não deve receber microajustes. O próximo HTML deve ser reconstruído do zero a partir desta análise, preservando somente a linguagem visual comum dos instrumentos e os princípios úteis de abertura precoce, cronologia, proteção e rastreabilidade.
 
 ---
@@ -25,7 +25,7 @@ O seu objetivo não é reproduzir o SAE form, portal de safety, eCRF, sistema de
 8. tornou identificáveis os efeitos do caso nos demais instrumentos do framework;
 9. consegue distinguir um atraso de reporting, uma deficiência do processo local e uma decisão formal do sponsor/CEC.
 
-O SAART é, portanto, o **dossiê operacional local do caso de safety**. Ele não é uma segunda base de dados de safety.
+O SART é, portanto, o **dossiê operacional local do caso de safety**. Ele não é uma segunda base de dados de safety.
 
 ---
 
@@ -108,11 +108,11 @@ Um caso pode abrir para uma DD, problema de identificação, informação de pro
 
 ### 2.7 A extensão e as páginas do SART v0.3 refletem sua arquitetura antiga
 
-As 11 páginas não são um problema por si. O problema é que elas distribuem longas matrizes de classificação e reconstruções de dados que podem estar em fontes ou sistemas do sponsor. O novo SAART deve alocar o espaço onde ele cria valor local: controle de processo, referências, decisões, pendências, follow-up e saídas. A quantidade final de páginas deve resultar da utilidade e do espaço real de escrita, não de uma obrigação de preservar 11 páginas.
+As 11 páginas não são um problema por si. O problema é que elas distribuem longas matrizes de classificação e reconstruções de dados que podem estar em fontes ou sistemas do sponsor. O novo SART deve alocar o espaço onde ele cria valor local: controle de processo, referências, decisões, pendências, follow-up e saídas. A quantidade final de páginas deve resultar da utilidade e do espaço real de escrita, não de uma obrigação de preservar 11 páginas.
 
 ---
 
-## 3. Linha mestre de raciocínio do novo SAART
+## 3. Linha mestre de raciocínio do novo SART
 
 A lógica não é:
 
@@ -142,7 +142,7 @@ O site acompanha as decisões e liga o caso aos seus próprios controles
 O caso fecha localmente apenas quando a coordenação local está verificável
 ```
 
-A pergunta que o SAART deve responder ao final de seu preenchimento é:
+A pergunta que o SART deve responder ao final de seu preenchimento é:
 
 > **Can the site demonstrate that it recognized, protected, assessed, reported, tracked and locally closed its part of this safety case in accordance with the applicable CIP and sponsor procedure?**
 
@@ -154,9 +154,9 @@ Essa segunda pergunta pertence ao sponsor e, quando aplicável, ao CEC/DMC.
 
 ---
 
-## 4. Fronteira formal entre SAART e o sistema do sponsor
+## 4. Fronteira formal entre SART e o sistema do sponsor
 
-| Elemento | SAART deve fazer | SAART não deve fazer |
+| Elemento | SART deve fazer | SART não deve fazer |
 |---|---|---|
 | Fato clínico e técnico | Registrar um resumo factual local e a localização da fonte. | Copiar integralmente prontuário, narrativa de eCRF ou SAE form. |
 | Atendimento/proteção | Registrar que medida imediata foi tomada, por quem e onde está a evidência. | Substituir o prontuário ou a documentação assistencial. |
@@ -177,9 +177,9 @@ A primeira página deve conter uma frase equivalente a:
 
 ## 5. Taxonomia obrigatória da ISO 14155:2026
 
-A reconstrução deve usar a nomenclatura abaixo. As definições completas continuam controladas pela ISO, CIP, risk assessment, IB e procedimento do sponsor; o SAART deve apresentar uma síntese operacional e referências, não reproduzir o texto da norma integralmente.
+A reconstrução deve usar a nomenclatura abaixo. As definições completas continuam controladas pela ISO, CIP, risk assessment, IB e procedimento do sponsor; o SART deve apresentar uma síntese operacional e referências, não reproduzir o texto da norma integralmente.
 
-| Termo | Uso no SAART |
+| Termo | Uso no SART |
 |---|---|
 | **AE — Adverse Event** | Ocorrência médica adversa, doença/lesão não intencional ou sinal clínico adverso em subject, user ou other person, relacionada ou não ao device. É o ponto de entrada do caminho de evento. |
 | **ADE — Adverse Device Effect** | AE relacionado ao uso do investigational device ou comparator device, incluindo situação ligada a IFU inadequada, deployment, implantation, installation, operation, malfunction, use error ou misuse intencional. |
@@ -191,7 +191,7 @@ A reconstrução deve usar a nomenclatura abaixo. As definições completas cont
 | **DD that could have led to a SADE** | DD que não gerou AE, mas poderia ter levado a SADE se não houvesse ação adequada, intervenção ou circunstância mais favorável. É uma rota reportável própria. |
 | **Serious health threat** | Sinal de AE ou DD que indica risco iminente de morte ou deterioração séria e exige ação corretiva rápida para proteger outras pessoas. |
 
-### Regra que deve aparecer literalmente no novo SAART
+### Regra que deve aparecer literalmente no novo SART
 
 > **If an AE is associated with an observed device deficiency, apply both the adverse-event pathway and the device-deficiency pathway.**
 
@@ -233,7 +233,7 @@ Observed device deficiency?
 
 ### Critérios de seriedade que devem ser apresentados de forma concisa
 
-O SAART deve conter uma lista de escolha controlada para o current PI/site assessment:
+O SART deve conter uma lista de escolha controlada para o current PI/site assessment:
 
 ```text
 □ Death
@@ -250,7 +250,7 @@ O SAART deve conter uma lista de escolha controlada para o current PI/site asses
 
 ### Antecipação e expectedness
 
-O novo SAART não deve ter uma coluna genérica de `expectedness` para todos os AEs. A pergunta precisa ser:
+O novo SART não deve ter uma coluna genérica de `expectedness` para todos os AEs. A pergunta precisa ser:
 
 ```text
 For a confirmed or suspected SADE, is the nature, incidence, severity or outcome identified in the current risk assessment?
@@ -262,7 +262,7 @@ For a confirmed or suspected SADE, is the nature, incidence, severity or outcome
 
 ---
 
-## 6. Arquitetura proposta do novo SAART
+## 6. Arquitetura proposta do novo SART
 
 A estrutura abaixo é funcional. A IA que construir o HTML pode ajustar a distribuição em retrato/paisagem, altura das linhas e número de páginas, mas não deve alterar a sequência operacional.
 
@@ -273,7 +273,7 @@ Máximo de 12 células, organizado em 4 + 4 + 3 quando aplicável. Deve acomodar
 - Study / Protocol;
 - Current CIP / version;
 - Site / code;
-- SAART Case ID / revision;
+- SART Case ID / revision;
 - Participant code / N/A context;
 - Procedure, visit, exposure or N/A context;
 - Initial awareness date/time;
@@ -294,7 +294,7 @@ Esta seção deve manter a tabela obrigatória:
 | **Unit of analysis** | One site safety case: one AE, observed DD or material new safety information. |
 | **Decision support** | Confirma se o site reconheceu, protegeu, avaliou inicialmente, reportou, acompanhou e fechou sua parte do caso de maneira controlada. |
 | **Inputs** | Source record, participant/user contact, device/accountability record, procedure/visit record, sponsor communications, current CIP/risk information. |
-| **Outputs** | Local coordination trail; references to sponsor system; SAART data for ST-01; linked SCML, deviation, CSST, SRR/CAPA/POT records where triggered. |
+| **Outputs** | Local coordination trail; references to sponsor system; SART data for ST-01; linked SCML, deviation, CSST, SRR/CAPA/POT records where triggered. |
 
 A seção deve incluir a boundary formal definida na seção 4 desta análise.
 
@@ -314,7 +314,7 @@ Campos necessários:
 - known missing information e owner/next step;
 - participant / procedure / device context, usando `N/A reason` quando não houver participante específico.
 
-**Regra:** o SAART registra fatos e localizações das fontes. Não copia toda a narrativa do prontuário ou do sponsor form.
+**Regra:** o SART registra fatos e localizações das fontes. Não copia toda a narrativa do prontuário ou do sponsor form.
 
 ### C — Current PI/site assessment against the ISO pathways
 
@@ -399,7 +399,7 @@ Deve haver uma pequena caixa de síntese para:
 
 ### F — Framework interfaces and local process learning
 
-**Objetivo:** impedir que um caso individual seja perdido entre os instrumentos sem transformar o SAART em instrumento agregado.
+**Objetivo:** impedir que um caso individual seja perdido entre os instrumentos sem transformar o SART em instrumento agregado.
 
 Cada saída deve ter uma linha distinta:
 
@@ -439,12 +439,12 @@ Assinaturas:
 
 ---
 
-## 7. Relação do SAART com os demais instrumentos
+## 7. Relação do SART com os demais instrumentos
 
 ```text
 Source record / clinical record / ICDL / PFVR / IQL
                          ↓
-        SAART — individual site safety case coordination
+        SART — individual site safety case coordination
                          ↓
         ├── Sponsor safety system / SAE-DD form / eCRF
         ├── SCML — indexed local event reference
@@ -453,11 +453,11 @@ Source record / clinical record / ICDL / PFVR / IQL
         └── POT / SRR / CAPA / CSST — only when a defined trigger exists
 ```
 
-### SAART → SCML
+### SART → SCML
 
-O SAART envia ao SCML apenas o suficiente para indexar e comparar casos:
+O SART envia ao SCML apenas o suficiente para indexar e comparar casos:
 
-- SAART Case ID / event reference;
+- SART Case ID / event reference;
 - participant code or N/A context;
 - event term/source term;
 - event date/timing;
@@ -466,11 +466,11 @@ O SAART envia ao SCML apenas o suficiente para indexar e comparar casos:
 - relevant relationship context;
 - current assessment status.
 
-O SCML não deve reproduzir a cronologia, os reports e as pendências do SAART.
+O SCML não deve reproduzir a cronologia, os reports e as pendências do SART.
 
-### SAART → CSST
+### SART → CSST
 
-O SAART não calcula taxas nem decide sinais. O CSST recebe referências dos casos que entram em uma revisão agregada e compara eventos contra procedimentos por categoria, componente e cirurgião.
+O SART não calcula taxas nem decide sinais. O CSST recebe referências dos casos que entram em uma revisão agregada e compara eventos contra procedimentos por categoria, componente e cirurgião.
 
 Um caso pode disparar uma revisão antecipada do CSST quando houver:
 
@@ -480,11 +480,11 @@ Um caso pode disparar uma revisão antecipada do CSST quando houver:
 - concentração por componente ou cirurgião;
 - trigger previamente definido.
 
-### SAART → PIR, Safety Reporting Timeliness
+### SART → PIR, Safety Reporting Timeliness
 
-O SAART é a fonte individual do processo de reporting. O PIR recebe contagens e interpretações periódicas, não a narrativa inteira do caso.
+O SART é a fonte individual do processo de reporting. O PIR recebe contagens e interpretações periódicas, não a narrativa inteira do caso.
 
-| Dado do PIR | Campo fonte do SAART |
+| Dado do PIR | Campo fonte do SART |
 |---|---|
 | Denominador do período | `Reportable under current CIP / sponsor procedure?` e date of site awareness. |
 | Initial notification timely | Awareness, applicable due date/time, transmission, receipt and timeliness status. |
@@ -494,11 +494,11 @@ O SAART é a fonte individual do processo de reporting. O PIR recebe contagens e
 | Causa do atraso | Delay point. |
 | Ação/deviation | Correction and deviation record reference. |
 
-### SAART → Deviation record
+### SART → Deviation record
 
-Uma initial notification tardia deve gerar avaliação no deviation record assim que identificada. O SAART registra a referência e o ponto do processo em que o atraso surgiu. O deviation record mantém a avaliação formal de desvio conforme CIP/procedimento do sponsor.
+Uma initial notification tardia deve gerar avaliação no deviation record assim que identificada. O SART registra a referência e o ponto do processo em que o atraso surgiu. O deviation record mantém a avaliação formal de desvio conforme CIP/procedimento do sponsor.
 
-### SAART → SRR, CAPA e POT
+### SART → SRR, CAPA e POT
 
 - Um caso único não abre automaticamente SRR ou CAPA.
 - Um padrão de atrasos, falha de comunicação, vulnerabilidade de processo ou controlo ineficaz pode alimentar o SRR.
@@ -507,18 +507,18 @@ Uma initial notification tardia deve gerar avaliação no deviation record assim
 
 ---
 
-## 8. O que deve mudar na tese quando o SAART for efetivamente aprovado
+## 8. O que deve mudar na tese quando o SART for efetivamente aprovado
 
 A alteração do nome e da função exige revisão de consistência, mas não deve ser feita agora nesta análise. Quando o instrumento estiver aprovado, revisar pelo menos:
 
-1. lista de abreviaturas: `SART` → `SAART`;
+1. lista de abreviaturas: `SART` → `SART`;
 2. Table 4.4 ou outra tabela que lista os instrumentos;
 3. seção 4.3.3 sobre Device-specific complication monitoring;
 4. seção 4.5.4 sobre Safety reporting timeliness;
 5. fluxogramas, mapa de interações e ordem de preenchimento;
 6. Appendix K, seu título e sua descrição;
 7. qualquer referência a `Safety and Adverse Effect Reporting Template` no texto, figuras, tabelas e apêndices;
-8. a descrição de inputs/outputs: explicitar que o SAART é coordenação local e interface com o sponsor safety system, não substituto deste.
+8. a descrição de inputs/outputs: explicitar que o SART é coordenação local e interface com o sponsor safety system, não substituto deste.
 
 A tese já fornece a base conceitual da mudança: o SART acompanhava um caso individual da abertura ao fechamento, o SCML indexava eventos e o CSST registrava a revisão agregada. A alteração necessária é refinar a fronteira do caso individual para não duplicar a função formal do sponsor.
 
@@ -553,8 +553,8 @@ A tese já fornece a base conceitual da mudança: o SART acompanhava um caso ind
 
 ## 10. Instrução de execução para a IA que criará o HTML
 
-1. **Não editar o SART v0.3 por patch.** Criar um novo arquivo de SAART do zero, usando somente a identidade visual comum como referência.
-2. Usar `SAART — Safety Assessment, Reporting and Tracking Template` no título, cabeçalhos e metadados do documento.
+1. **Não editar o SART v0.3 por patch.** Criar um novo arquivo de SART do zero, usando somente a identidade visual comum como referência.
+2. Usar `SART — Safety Assessment, Reporting and Tracking Template` no título, cabeçalhos e metadados do documento.
 3. Construir o formulário como **site safety-case coordination record**, não como sponsor form duplicado.
 4. Incluir a boundary statement na primeira página.
 5. Implementar as seções A–G na ordem definida nesta análise.
@@ -572,8 +572,8 @@ A tese já fornece a base conceitual da mudança: o SART acompanhava um caso ind
 
 ## 11. Checklist de aceitação
 
-- [ ] A sigla e o nome são `SAART — Safety Assessment, Reporting and Tracking Template`.
-- [ ] O primeiro propósito do SAART é coordenação local do caso, não duplicação do sponsor safety form.
+- [ ] A sigla e o nome são `SART — Safety Assessment, Reporting and Tracking Template`.
+- [ ] O primeiro propósito do SART é coordenação local do caso, não duplicação do sponsor safety form.
 - [ ] O documento tem statement explícito de boundary frente a source records, eCRF, sponsor portal, regulatory submission e sponsor/CEC determination.
 - [ ] A unidade é um único site safety case: AE, DD observada ou material new safety information.
 - [ ] A abertura ocorre na awareness e não espera classificação completa.
@@ -596,5 +596,5 @@ A tese já fornece a base conceitual da mudança: o SART acompanhava um caso ind
 ## 12. Fontes verificadas
 
 - **ISO 14155:2026:** Clauses 3.1, 3.2, 3.19, 3.45–3.47, 3.52, 7.4, 9.2.5, 10.8, Annex A.14 e Annex F.
-- **Tese completa (29-10):** Sections 4.3.3 e 4.5.4; descrição dos instrumentos SCML, SART/SAART, CSST e PIR; fluxos de lifecycle e interfaces.
+- **Tese completa (29-10):** Sections 4.3.3 e 4.5.4; descrição dos instrumentos SCML, SART/SART, CSST e PIR; fluxos de lifecycle e interfaces.
 - **SART v0.3 atual:** analisado como fonte histórica a ser substituída, não como estrutura a ser preservada.
