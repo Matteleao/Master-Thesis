@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>POT · guia</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{--bg:#f2f4f7;--paper:#ffffff;--ink:#14202e;--muted:#5b6878;--line:#d4dbe4;--navy:#1f4173;--soft:#eaf1f9;--ok:#2f7a46;--ask:#9a6a12;
+--sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#11161d;--paper:#18202a;--ink:#e3e9f0;--muted:#9aa7b6;--line:#2c3744;--navy:#9cbbe6;--soft:#1e2b3b;--ok:#6cc58a;--ask:#e0b45a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#11161d;--paper:#18202a;--ink:#e3e9f0;--muted:#9aa7b6;--line:#2c3744;--navy:#9cbbe6;--soft:#1e2b3b;--ok:#6cc58a;--ask:#e0b45a;color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--sans)}
+.wrap{max-width:860px;margin:0 auto;padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:18px 22px;margin-bottom:14px}
+h1{font-size:22px;margin:0 0 4px;text-wrap:balance}h2{font-size:16px;margin:0 0 10px;color:var(--navy)}
+.lead{font-size:16.5px;margin:6px 0 0}
+.mono{font-family:var(--mono);font-weight:600}
+p{margin:0 0 10px}p:last-child{margin:0}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{border-top:1px solid var(--line);padding:8px 8px;text-align:left;vertical-align:top}
+th{font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);border-top:0}
+td.sec{font-family:var(--mono);font-weight:600;white-space:nowrap;color:var(--navy)}
+.tag{display:inline-block;font-size:12px;border-radius:999px;padding:1px 9px;white-space:nowrap}
+.ok{color:var(--ok);border:1px solid var(--ok)}.ask{color:var(--ask);border:1px solid var(--ask)}
+.flow{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:center}
+.box{border:1px solid var(--line);border-radius:6px;padding:10px 12px;background:var(--soft);font-size:13.5px;min-width:0}
+.box b{display:block;color:var(--navy);margin-bottom:3px}
+.arrow{color:var(--muted);font-size:18px}
+ul,ol{margin:0;padding-left:20px}li{margin:4px 0}
+@media (max-width:620px){.flow{grid-template-columns:minmax(0,1fr)}.arrow{transform:rotate(90deg);justify-self:center}}
+</style>
+</head>
+<body><div class="wrap">
+
+<div class="card">
+<h1><span class="mono">POT</span> · PI Oversight Template</h1>
+<p class="lead">O POT é o lugar onde o PI planeja a sua supervisão e deixa por escrito cada vez que a exerceu.</p>
+</div>
+
+<div class="card">
+<h2>Que problema ele resolve</h2>
+<p>O PI delega quase todo o trabalho do estudo e continua responsável por tudo. Se ninguém decide antes o que precisa do PI, a supervisão vira assinatura: o coordenador toca o dia a dia, o PI só fica sabendo quando alguém lembra de contar, e não sobra prova de que ele acompanhou.</p>
+<p>O POT fixa três coisas antes do primeiro participante e depois registra cada revisão:</p>
+<ol>
+<li><b>O que só o PI decide</b>, e se ele age antes, no momento ou revisando depois.</li>
+<li><b>O que chega ao PI na hora</b>, sem esperar a próxima reunião.</li>
+<li><b>Quando o PI revisa</b>, com quem, e o que lê em cada revisão.</li>
+</ol>
+</div>
+
+<div class="card">
+<h2>Como a informação passa por ele</h2>
+<div class="flow">
+<div class="box"><b>Entra</b>CCDM e RACI no plano. Na revisão: SART, SCML/CSST, SLCT, PIR, FUCR, IMC, CAPA, SRR e as escalações recebidas.</div>
+<div class="arrow" aria-hidden="true">→</div>
+<div class="box"><b>No POT</b>Uma decisão do PI para cada registro lido, mais a conclusão da revisão assinada.</div>
+<div class="arrow" aria-hidden="true">→</div>
+<div class="box"><b>Sai</b>Cada ação vai para o registro dono dela. Ação corretiva vai para a CAPA. Pendência de marco vai para o MRL.</div>
+</div>
+</div>
+
+<div class="card">
+<h2>O que ele tem que cobrir, e onde está na v1.0</h2>
+<div class="tbl"><table>
+<tr><th>#</th><th>O POT precisa…</th><th>Seção</th><th>Situação</th></tr>
+<tr><td>1</td><td>Listar as decisões que ficam com o PI: adequação cirúrgica e elegibilidade limítrofe, desvios e substituições no intraoperatório, relação de uma complicação com o dispositivo, sinais de drift. Mais as tarefas C1 e S1 do CCDM.</td><td class="sec">B</td><td><span class="tag ok">coberto</span></td></tr>
+<tr><td>2</td><td>Dizer, para cada uma, se o PI age antes, no momento ou depois, e onde fica a prova.</td><td class="sec">B</td><td><span class="tag ok">coberto</span></td></tr>
+<tr><td>3</td><td>Listar os eventos que chegam ao PI na hora, quem avisa, em quanto tempo, a ação imediata e o registro. A lista tem de ser a mesma do CCDM.</td><td class="sec">C</td><td><span class="tag ok">coberto</span></td></tr>
+<tr><td>4</td><td>Definir as reuniões: quem participa, com que frequência, o que se lê e onde fica o registro. A frequência é do centro.</td><td class="sec">D</td><td><span class="tag ok">coberto</span></td></tr>
+<tr><td>5</td><td>Prever quem decide quando o PI também opera e é ele o avaliado.</td><td class="sec">D</td><td><span class="tag ask">novo, conferir</span></td></tr>
+<tr><td>6</td><td>Ser aprovado pelo PI antes do primeiro participante e dizer por que motivos é revisado.</td><td class="sec">E</td><td><span class="tag ok">coberto</span></td></tr>
+<tr><td>7</td><td>Em cada revisão, ler os registros numa ordem fixa (segurança primeiro, risco por último) e dar uma decisão fechada para cada um.</td><td class="sec">F, G</td><td><span class="tag ok">coberto</span></td></tr>
+<tr><td>8</td><td>Mandar cada ação para o registro dono dela, com o ID, sem copiar o conteúdo nem acompanhar a ação até o fim.</td><td class="sec">G</td><td><span class="tag ok">coberto</span></td></tr>
+<tr><td>9</td><td>Fechar a revisão com a decisão mais restritiva (sem ação, ações encaminhadas, escalado ao patrocinador, suspensão), a justificativa, as pendências e a assinatura do PI.</td><td class="sec">H</td><td><span class="tag ok">coberto</span></td></tr>
+<tr><td>10</td><td>Passar ao MRL o que afeta o próximo marco.</td><td class="sec">H</td><td><span class="tag ok">coberto</span></td></tr>
+</table></div>
+</div>
+
+<div class="card">
+<h2>O que ele não faz</h2>
+<ul>
+<li>Não decide a elegibilidade de cada candidato: isso é o PSEAR. O POT só diz que essa decisão é do PI.</li>
+<li>Não acompanha a ação até o fim nem mede eficácia: isso é a CAPA.</li>
+<li>Não decide a passagem de fase: isso é o MRL. O POT só leva as pendências até lá.</li>
+<li>Não repete o que está nos registros que lê: escreve só a leitura do PI e a decisão.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Para você avaliar a v1.0</h2>
+<p>Não precisa julgar o formulário inteiro. Basta responder:</p>
+<ol>
+<li><b>Seção B:</b> os quatro julgamentos impressos são mesmo os que, no seu centro, só o PI pode fazer? Falta algum?</li>
+<li><b>Seção C:</b> os oito gatilhos cobrem o que você esperaria que chegasse ao PI na hora?</li>
+<li><b>Seção D:</b> um centro pequeno faria huddle semanal, revisão programada e revisão por caso, ou isso é demais?</li>
+<li><b>Seção G:</b> a ordem da reunião faz sentido para você?</li>
+<li><b>Linha nova da D:</b> quer manter a regra de quem decide quando o PI é o cirurgião avaliado?</li>
+</ol>
+</div>
+
+</div></body></html>

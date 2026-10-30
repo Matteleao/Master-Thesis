@@ -1,0 +1,81 @@
+<title>Instrumentos da tese</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: one-screen tool; instrument list on the left, the form preview fills the rest */
+:root{--bg:#eef1f5;--panel:#ffffff;--ink:#14202e;--muted:#5b6878;--line:#d4dbe4;--navy:#1f4173;--navy-ink:#ffffff;--sel:#dbe7f5;
+--done:#2f7a46;--new:#1f6fb8;--todo:#9a6a12;--stop:#8a3b3b;--none:#6b7480;
+--sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#11161d;--panel:#18202a;--ink:#e3e9f0;--muted:#9aa7b6;--line:#2c3744;--navy:#9cbbe6;--navy-ink:#0f1722;--sel:#22344b;--done:#6cc58a;--new:#7ab6f0;--todo:#e0b45a;--stop:#e08a8a;--none:#8f99a5;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#11161d;--panel:#18202a;--ink:#e3e9f0;--muted:#9aa7b6;--line:#2c3744;--navy:#9cbbe6;--navy-ink:#0f1722;--sel:#22344b;--done:#6cc58a;--new:#7ab6f0;--todo:#e0b45a;--stop:#e08a8a;--none:#8f99a5;color-scheme:dark}
+html,body{height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;margin:0}
+.app{height:100%;display:grid;grid-template-columns:300px minmax(0,1fr);gap:12px;padding-block:12px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));box-sizing:border-box}
+aside{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:auto;min-height:0}
+.head{padding:14px 14px 10px;border-bottom:1px solid var(--line)}
+.head h1{font-size:17px;margin:0 0 6px;text-wrap:balance}
+.legend{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:11.5px;color:var(--muted)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px;vertical-align:1px}
+.pillar{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:12px 14px 4px}
+button.item{all:unset;box-sizing:border-box;display:grid;grid-template-columns:22px 58px minmax(0,1fr);gap:6px;align-items:center;width:100%;padding:7px 14px;cursor:pointer;border-left:3px solid transparent}
+button.item:hover{background:var(--sel)}
+button.item:focus-visible{outline:2px solid var(--navy);outline-offset:-2px}
+button.item[aria-current="true"]{background:var(--sel);border-left-color:var(--navy)}
+.app-letter{color:var(--muted);font-family:var(--mono);font-size:12px}
+.acr{font-family:var(--mono);font-weight:600;font-size:13px}
+.nm{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.s-done{background:var(--done)}.s-new{background:var(--new)}.s-todo{background:var(--todo)}.s-suspended,.s-external{background:var(--stop)}.s-missing{background:var(--none)}
+main{display:grid;grid-template-rows:auto minmax(0,1fr);gap:8px;min-height:0;min-width:0}
+.bar{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
+.bar h2{font-size:16px;margin:0;font-weight:600}
+.bar h2 .acr{font-size:16px;margin-right:6px}
+.status{font-size:12px;color:var(--muted)}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-left:auto}
+.tab{font:inherit;font-size:12.5px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:4px 11px;cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--navy);color:var(--navy-ink);border-color:var(--navy)}
+.tab:focus-visible{outline:2px solid var(--navy);outline-offset:2px}
+.open{font-size:12.5px;color:var(--navy)}
+.view{background:#c9d0d9;border:1px solid var(--line);border-radius:8px;overflow:hidden;min-height:0;position:relative}
+iframe{width:100%;height:100%;border:0;background:#f2f4f7;display:block}
+.imgs{height:100%;overflow:auto;display:grid;gap:14px;justify-items:center;padding:14px;box-sizing:border-box;background:#f2f4f7}
+.imgs img{max-width:100%;box-shadow:0 2px 12px rgba(20,32,46,.18);background:#fff}
+.empty{display:grid;place-items:center;height:100%;color:#3b4652;font-size:14px;padding:20px;text-align:center;background:#f2f4f7}
+@media (max-width:760px){.app{grid-template-columns:minmax(0,1fr);grid-template-rows:220px minmax(0,1fr);height:auto;min-height:100%}main{min-height:80vh}}
+</style>
+<div class="app">
+<aside aria-label="Instrumentos">
+<div class="head"><h1>Instrumentos da tese</h1>
+<div class="legend"><span><span class="dot s-done"></span>Concluído</span><span><span class="dot s-new"></span>Versão nova para conferir</span><span><span class="dot s-todo"></span>A revisar</span><span><span class="dot s-suspended"></span>Suspenso / externo</span><span><span class="dot s-missing"></span>Sem arquivo</span></div></div>
+<nav id="list"></nav>
+</aside>
+<main>
+<div class="bar"><h2 id="title"></h2><span class="status" id="status"></span><div class="tabs" id="tabs"></div><a class="open" id="open" href="#" target="_blank" rel="noopener">Abrir em nova aba</a></div>
+<div class="view" id="view"></div>
+</main>
+</div>
+<script>
+const DATA=[{"app": "A", "acr": "CCDM", "name": "Criticality-Coded Delegation Matrix", "pillar": "Governance", "status": "done", "versions": [{"label": "v0.2 em branco", "kind": "html", "path": "f/CCDM_v0.2_em_branco.html"}, {"label": "v0.2 preenchido", "kind": "html", "path": "f/CCDM_v0.2_preenchido.html"}]}, {"app": "B", "acr": "MRL", "name": "Milestone Review Log", "pillar": "Governance", "status": "suspended", "versions": [{"label": "v0.7 em branco", "kind": "html", "path": "f/MRL_v0.7_em_branco.html"}]}, {"app": "C", "acr": "POT", "name": "PI Oversight Template", "pillar": "Governance", "status": "new", "versions": [{"label": "Guia: o que o POT faz", "kind": "html", "path": "f/POT_guia.html"}, {"label": "v0.9 em branco", "kind": "html", "path": "f/POT_v0.9_em_branco.html"}, {"label": "v0.9 preenchido", "kind": "html", "path": "f/POT_v0.9_preenchido.html"}, {"label": "v1.0 em branco (refeita)", "kind": "html", "path": "f/POT_v1.0_em_branco_nova_.html"}]}, {"app": "D", "acr": "RACI", "name": "Responsibility Assignment Matrix", "pillar": "Governance", "status": "done", "versions": [{"label": "v0.3 em branco", "kind": "html", "path": "f/RACI_v0.3_em_branco.html"}, {"label": "v0.3 preenchido", "kind": "html", "path": "f/RACI_v0.3_preenchido.html"}]}, {"app": "E", "acr": "DTRM", "name": "Device and Study Training Requirements Matrix", "pillar": "Governance", "status": "done", "versions": [{"label": "v0.2 em branco", "kind": "html", "path": "f/DTRM_v0.2_em_branco.html"}, {"label": "v0.2 preenchido", "kind": "html", "path": "f/DTRM_v0.2_preenchido.html"}]}, {"app": "F", "acr": "TRE", "name": "Training Record Evaluation and Release", "pillar": "Governance", "status": "done", "versions": [{"label": "v0.4 em branco", "kind": "html", "path": "f/TRE_v0.4_em_branco.html"}, {"label": "v0.4 preenchido", "kind": "html", "path": "f/TRE_v0.4_preenchido.html"}]}, {"app": "G", "acr": "SCR", "name": "Surgical Credentialing Record", "pillar": "Governance", "status": "done", "versions": [{"label": "v0.5 em branco", "kind": "html", "path": "f/SCR_v0.5_em_branco.html"}, {"label": "v0.5 preenchido", "kind": "html", "path": "f/SCR_v0.5_preenchido.html"}]}, {"app": "H", "acr": "SRR", "name": "Site Risk Register", "pillar": "Risk Management", "status": "external", "versions": [{"label": "v0.2 em branco", "kind": "html", "path": "f/SRR_v0.2_em_branco.html"}]}, {"app": "I", "acr": "SLCT", "name": "Surgeon Learning Curve Tracking Log", "pillar": "Risk Management", "status": "done", "versions": [{"label": "v0.4 em branco", "kind": "html", "path": "f/SLCT_v0.4_em_branco.html"}, {"label": "v0.4 preenchido", "kind": "html", "path": "f/SLCT_v0.4_preenchido.html"}]}, {"app": "J", "acr": "SCML", "name": "Site Complication Monitoring Log", "pillar": "Risk Management", "status": "done", "versions": [{"label": "v0.7 em branco", "kind": "html", "path": "f/SCML_v0.7_em_branco.html"}, {"label": "v0.7 preenchido", "kind": "html", "path": "f/SCML_v0.7_preenchido.html"}]}, {"app": "K", "acr": "SART", "name": "Safety and Adverse Effect Reporting Template", "pillar": "Risk Management", "status": "todo", "versions": [{"label": "v0.3 em branco", "kind": "html", "path": "f/SART_v0.3_em_branco.html"}]}, {"app": "L", "acr": "CSST", "name": "Complication Signal Surveillance Template", "pillar": "Risk Management", "status": "todo", "versions": [{"label": "v1.0 em branco", "kind": "img", "pages": ["f/CSST_v1.0_em_branco-1.png", "f/CSST_v1.0_em_branco-2.png", "f/CSST_v1.0_em_branco-3.png"]}]}, {"app": "M", "acr": "IMP", "name": "Internal Monitoring Plan", "pillar": "Operational Controls", "status": "missing", "versions": []}, {"app": "N", "acr": "IMC", "name": "Internal Monitoring Checklist", "pillar": "Operational Controls", "status": "todo", "versions": [{"label": "v1.3 em branco", "kind": "img", "pages": ["f/IMC_v1.3_em_branco-1.png", "f/IMC_v1.3_em_branco-2.png", "f/IMC_v1.3_em_branco-3.png", "f/IMC_v1.3_em_branco-4.png", "f/IMC_v1.3_em_branco-5.png", "f/IMC_v1.3_em_branco-6.png", "f/IMC_v1.3_em_branco-7.png"]}]}, {"app": "O", "acr": "SIRR", "name": "Site Imaging Readiness Record", "pillar": "Operational Controls", "status": "todo", "versions": [{"label": "v0.4 em branco", "kind": "img", "pages": ["f/SIRR_v0.4_em_branco-1.png", "f/SIRR_v0.4_em_branco-2.png", "f/SIRR_v0.4_em_branco-3.png", "f/SIRR_v0.4_em_branco-4.png"]}]}, {"app": "P", "acr": "IQL", "name": "Imaging Quality Log", "pillar": "Operational Controls", "status": "todo", "versions": [{"label": "v0.3 em branco", "kind": "img", "pages": ["f/IQL_v0.3_em_branco-1.png", "f/IQL_v0.3_em_branco-2.png", "f/IQL_v0.3_em_branco-3.png", "f/IQL_v0.3_em_branco-4.png"]}]}, {"app": "Q", "acr": "PSEAR", "name": "Participant Screening and Eligibility Assessment Record", "pillar": "Operational Controls", "status": "todo", "versions": [{"label": "v0.7 em branco", "kind": "img", "pages": ["f/PSEAR_v0.7_em_branco-1.png", "f/PSEAR_v0.7_em_branco-2.png", "f/PSEAR_v0.7_em_branco-3.png", "f/PSEAR_v0.7_em_branco-4.png", "f/PSEAR_v0.7_em_branco-5.png", "f/PSEAR_v0.7_em_branco-6.png", "f/PSEAR_v0.7_em_branco-7.png"]}]}, {"app": "R", "acr": "SIFSL", "name": "Subject Identification and Failure Screening Log", "pillar": "Operational Controls", "status": "todo", "versions": [{"label": "v0.2 em branco", "kind": "html", "path": "f/SIFSL_v0.2_em_branco.html"}]}, {"app": "S", "acr": "PFVR", "name": "Participant Follow-up Visit Record", "pillar": "Operational Controls", "status": "todo", "versions": [{"label": "v0.3 em branco", "kind": "html", "path": "f/PFVR_v0.3_em_branco.html"}]}, {"app": "T", "acr": "ICDL", "name": "Intraoperative Checklist and Device Log", "pillar": "Operational Controls", "status": "todo", "versions": [{"label": "v0.12 em branco", "kind": "img", "pages": ["f/ICDL_v0.12_em_branco-1.png", "f/ICDL_v0.12_em_branco-2.png", "f/ICDL_v0.12_em_branco-3.png", "f/ICDL_v0.12_em_branco-4.png", "f/ICDL_v0.12_em_branco-5.png", "f/ICDL_v0.12_em_branco-6.png"]}]}, {"app": "U", "acr": "PIR", "name": "Performance Indicator Record", "pillar": "Performance Oversight", "status": "todo", "versions": [{"label": "v0.10 em branco", "kind": "html", "path": "f/PIR_v0.10_em_branco.html"}]}, {"app": "V", "acr": "FUCR", "name": "Follow-up Compliance Review", "pillar": "Performance Oversight", "status": "todo", "versions": [{"label": "v0.4 em branco", "kind": "html", "path": "f/FUCR_v0.4_em_branco.html"}]}, {"app": "W", "acr": "CAPA", "name": "Corrective and Preventive Action Log", "pillar": "Performance Oversight", "status": "todo", "versions": [{"label": "v0.10 em branco", "kind": "img", "pages": ["f/CAPA_v0.10_em_branco-1.png", "f/CAPA_v0.10_em_branco-2.png", "f/CAPA_v0.10_em_branco-3.png", "f/CAPA_v0.10_em_branco-4.png", "f/CAPA_v0.10_em_branco-5.png", "f/CAPA_v0.10_em_branco-6.png", "f/CAPA_v0.10_em_branco-7.png", "f/CAPA_v0.10_em_branco-8.png", "f/CAPA_v0.10_em_branco-9.png"]}]}, {"app": "X", "acr": "PIDLR", "name": "Post-Investigation Debrief and Lessons Record", "pillar": "Performance Oversight", "status": "todo", "versions": [{"label": "v0.2 em branco", "kind": "img", "pages": ["f/PIDLR_v0.2_em_branco-1.png", "f/PIDLR_v0.2_em_branco-2.png", "f/PIDLR_v0.2_em_branco-3.png", "f/PIDLR_v0.2_em_branco-4.png", "f/PIDLR_v0.2_em_branco-5.png", "f/PIDLR_v0.2_em_branco-6.png", "f/PIDLR_v0.2_em_branco-7.png"]}]}];
+const LABEL={done:'Concluído',new:'Versão nova para conferir',todo:'A revisar',suspended:'Suspenso',external:'Montagem externa',missing:'Arquivo não localizado'};
+const list=document.getElementById('list');let cur=null,curV=0;
+let lastP='';
+DATA.forEach((d,i)=>{if(d.pillar!==lastP){const h=document.createElement('div');h.className='pillar';h.textContent=d.pillar;list.appendChild(h);lastP=d.pillar}
+const b=document.createElement('button');b.className='item';b.id='it-'+d.acr.toLowerCase();
+b.innerHTML=`<span class="app-letter">${d.app}</span><span class="acr"><span class="dot s-${d.status}"></span>${d.acr}</span><span class="nm">${d.name}</span>`;
+b.title=`${d.acr} · ${d.name} · ${LABEL[d.status]}`;b.onclick=()=>{location.hash=d.acr.toLowerCase()};list.appendChild(b)});
+function show(acr){const d=DATA.find(x=>x.acr.toLowerCase()===acr)||DATA.find(x=>x.acr==='POT');
+if(cur!==d){cur=d;curV=d.versions.length-1}
+document.querySelectorAll('button.item').forEach(b=>b.setAttribute('aria-current',b.id==='it-'+d.acr.toLowerCase()));
+document.getElementById('title').innerHTML=`<span class="acr">${d.acr}</span>${d.name} <span class="status">· Apêndice ${d.app}</span>`;
+document.getElementById('status').textContent=LABEL[d.status];
+const tabs=document.getElementById('tabs');tabs.innerHTML='';
+d.versions.forEach((v,i)=>{const t=document.createElement('button');t.className='tab';t.textContent=v.label;t.setAttribute('aria-pressed',i===curV);t.onclick=()=>{curV=i;render()};tabs.appendChild(t)});
+render()}
+function render(){const d=cur,view=document.getElementById('view'),open=document.getElementById('open');
+document.querySelectorAll('.tab').forEach((t,i)=>t.setAttribute('aria-pressed',i===curV));
+if(!d.versions.length){view.innerHTML='<div class="empty">Nenhuma versão deste instrumento foi localizada.</div>';open.hidden=true;return}
+const v=d.versions[curV];open.hidden=false;
+if(v.kind==='html'){view.innerHTML=`<iframe title="${d.acr} ${v.label}" src="${v.path}"></iframe>`;open.href=v.path}
+else{view.innerHTML='<div class="imgs">'+v.pages.map((p,i)=>`<img src="${p}" alt="${d.acr} ${v.label}, página ${i+1}" loading="lazy">`).join('')+'</div>';open.href=v.pages[0]}}
+function route(){show((location.hash||'#pot').slice(1))}
+window.addEventListener('hashchange',route);route();
+</script>
