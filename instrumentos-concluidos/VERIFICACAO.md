@@ -14,7 +14,7 @@ Data: 30/10/2026. Branch: `codex/thesis-work`.
 | POT v1.1 | 6 / 6 páginas | 6 / 6 páginas | Conferido |
 | SART v1.0 | 6 / 6 páginas | 6 / 6 páginas | Conferido |
 
-Total: 18 HTMLs e 18 PDFs, com 92 páginas de PDF.
+Total: 22 HTMLs e 22 PDFs, com 110 páginas de PDF.
 
 Conferências realizadas:
 
@@ -32,3 +32,16 @@ A conferência verifica a correspondência e a apresentação dos arquivos, sem 
 POT v1.1 (30/10/2026): PDFs exportados com Chromium, A4 com páginas 3 e 5 em paisagem, sem transbordamento nas 6 páginas das duas versões. O ambiente desta exportação não tinha Arial, Comic Sans MS nem Z003; foram usadas Liberation Sans (métrica de Arial), Comic Neue e Dancing Script, incorporadas aos PDFs. Os HTMLs não foram alterados para isso.
 
 SART v1.0 (30/10/2026): mesma exportação do POT v1.1 (A4, página 5 em paisagem, sem transbordamento; Liberation Sans, Comic Neue e Dancing Script no lugar de Arial, Comic Sans MS e Z003).
+
+## Adição de PFVR v0.4 e IQL v0.5 — 31/10/2026
+
+Inclusão expressamente autorizada para coexistência, sem apagar ou substituir versões antigas. Os oito arquivos de instrumento são adições; somente o catálogo, o manifesto e este registro de conferência são atualizados.
+
+| Instrumento | HTML blank / PDF blank | HTML filled / PDF filled | Orientação |
+|---|---|---|---|
+| PFVR v0.4 | 5 / 5 páginas | 5 / 5 páginas | Retrato; paisagem; retrato; retrato; retrato |
+| IQL v0.5 | 4 / 4 páginas | 4 / 4 páginas | Retrato; paisagem; retrato; retrato |
+
+Os HTMLs aprovados desta conversa foram copiados sem reescrever seu conteúdo; hashes SHA-256 no manifesto. Os quatro PDFs foram reabertos e conferidos quanto à contagem de páginas, orientação, texto selecionável, identificação de simulação nos preenchidos e fontes incorporadas (Arial e Bradley Hand nos campos simulados). Nenhum arquivo de fonte é redistribuído.
+
+PFVR blank/filled e IQL filled mantêm os arquivos previamente renderizados e inspecionados nesta conversa. O PDF blank do IQL foi gerado em 31/10/2026 com Chromium e inspecionado nas quatro páginas por renderização Poppler; sem cortes ou sobreposição com rodapé. A validação geométrica do HTML blank do IQL registrou 49/35/31/32 px de folga acima do rodapé. Os HTMLs preservam o Editor v2, que não aparece nos PDFs. Esta conferência de exportação não constitui validação clínica ou regulatória.

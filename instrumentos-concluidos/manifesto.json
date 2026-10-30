@@ -1,6 +1,6 @@
 {
   "branch": "codex/thesis-work",
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "instruments": [
     {
       "instrument": "CCDM",
@@ -228,6 +228,89 @@
           "pdf_pages": 6
         }
       }
+    },
+    {
+      "instrument": "PFVR",
+      "version": "0.4",
+      "approval": "Publicação adicional autorizada expressamente pelo autor em 31/10/2026; manter simultaneamente todas as versões antigas, sem substituição ou indicação automática de versão vigente.",
+      "variants": {
+        "blank": {
+          "source": "HTML/blank/PFVR_v0.4_blank.html",
+          "source_origin": "Versão local desta conversa, preservada sem reescrever seu conteúdo.",
+          "source_sha256": "723cd48a8782347996fa1b536e0c5db1cec5fdf3cad5e570f88a825870797a60",
+          "html": "HTML/blank/PFVR_v0.4_blank.html",
+          "html_sha256": "723cd48a8782347996fa1b536e0c5db1cec5fdf3cad5e570f88a825870797a60",
+          "pdf": "PDF/blank/PFVR_v0.4_blank.pdf",
+          "pdf_sha256": "f53e28c79bc38299bd20d44e31f841ba88dba0633d1b08ae96fc7ec79a4abf6c",
+          "pdf_pages": 5
+        },
+        "filled": {
+          "source": "HTML/filled/PFVR_v0.4_filled.html",
+          "source_origin": "Versão local desta conversa, preservada sem reescrever seu conteúdo.",
+          "source_sha256": "3f6aa71f8bdc6a7c9629b37bd0cab19dd65a9489d2492dfe8542c9f813a64955",
+          "html": "HTML/filled/PFVR_v0.4_filled.html",
+          "html_sha256": "3f6aa71f8bdc6a7c9629b37bd0cab19dd65a9489d2492dfe8542c9f813a64955",
+          "pdf": "PDF/filled/PFVR_v0.4_filled.pdf",
+          "pdf_sha256": "8a92bba5ff5950bef578e3c1cdca1c8215855154349bc4f75c24738f1c27dc2c",
+          "pdf_pages": 5
+        }
+      },
+      "verification": {
+        "orientations": [
+          "portrait",
+          "landscape",
+          "portrait",
+          "portrait",
+          "portrait"
+        ],
+        "fonts_embedded": true,
+        "fonts": [
+          "Arial",
+          "Bradley Hand (filled)"
+        ],
+        "simulated_data_only": true
+      }
+    },
+    {
+      "instrument": "IQL",
+      "version": "0.5",
+      "approval": "Publicação adicional autorizada expressamente pelo autor em 31/10/2026; manter simultaneamente todas as versões antigas, sem substituição ou indicação automática de versão vigente.",
+      "variants": {
+        "blank": {
+          "source": "HTML/blank/IQL_v0.5_blank.html",
+          "source_origin": "Versão local desta conversa, preservada sem reescrever seu conteúdo.",
+          "source_sha256": "0d4811a1db2b3cf544cc9a11ca0267263c34054d891bf92322ae84271db01024",
+          "html": "HTML/blank/IQL_v0.5_blank.html",
+          "html_sha256": "0d4811a1db2b3cf544cc9a11ca0267263c34054d891bf92322ae84271db01024",
+          "pdf": "PDF/blank/IQL_v0.5_blank.pdf",
+          "pdf_sha256": "629c89b1caa392777111c43d822d2f3c9a02c55583f4eb9bb7499303ecc3168e",
+          "pdf_pages": 4
+        },
+        "filled": {
+          "source": "HTML/filled/IQL_v0.5_filled.html",
+          "source_origin": "Versão local desta conversa, preservada sem reescrever seu conteúdo.",
+          "source_sha256": "57e0a0ace74cc96cec486c84237e7b5e5aeaafce7f8a471584b1ef213bc9eb26",
+          "html": "HTML/filled/IQL_v0.5_filled.html",
+          "html_sha256": "57e0a0ace74cc96cec486c84237e7b5e5aeaafce7f8a471584b1ef213bc9eb26",
+          "pdf": "PDF/filled/IQL_v0.5_filled.pdf",
+          "pdf_sha256": "a2caab437f8c4dd9c6bdd63aaca99276e48fcc1dc149d41294bf40e099703704",
+          "pdf_pages": 4
+        }
+      },
+      "verification": {
+        "orientations": [
+          "portrait",
+          "landscape",
+          "portrait",
+          "portrait"
+        ],
+        "fonts_embedded": true,
+        "fonts": [
+          "Arial",
+          "Bradley Hand (filled)"
+        ],
+        "simulated_data_only": true
+      }
     }
   ],
   "pending": {
@@ -244,11 +327,13 @@
     "fonts": [
       "Arial",
       "Comic Sans MS",
-      "Z003 (signature fallback only)"
+      "Z003 (signature fallback only)",
+      "Bradley Hand"
     ],
     "source_html_unchanged": true,
-    "pdf_count": 14,
-    "pdf_pages": 68,
-    "font_files_redistributed": false
+    "pdf_count": 22,
+    "pdf_pages": 110,
+    "font_files_redistributed": false,
+    "last_addition_date": "2026-10-31"
   }
 }

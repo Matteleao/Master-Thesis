@@ -29,6 +29,15 @@ instrumentos-concluidos/
 | **SART** — Safety Assessment, Reporting and Tracking Template | v1.0 | [blank](HTML/blank/SART_v1.0_blank.html) | [filled](HTML/filled/SART_v1.0_filled.html) | [blank](PDF/blank/SART_v1.0_blank.pdf) | [filled](PDF/filled/SART_v1.0_filled.pdf) |
 | **SLCT** — Surgeon Learning Curve Tracking Log | v0.4 | [blank](HTML/blank/SLCT_v0.4_blank.html) | [filled](HTML/filled/SLCT_v0.4_filled.html) | [blank](PDF/blank/SLCT_v0.4_blank.pdf) | [filled](PDF/filled/SLCT_v0.4_filled.pdf) |
 
+## Versões adicionais publicadas em 31/10/2026
+
+Inclusão expressamente autorizada pelo autor para coexistir com o acervo anterior. Não remover, substituir nem tratar estas versões automaticamente como sucessoras de outras versões ou análises. Os preenchidos contêm apenas dados fictícios.
+
+| Instrumento | Versão | HTML blank | HTML filled | PDF blank | PDF filled |
+|---|---|---|---|---|---|
+| **PFVR** — Participant Follow-up Visit Record | v0.4 | [blank](HTML/blank/PFVR_v0.4_blank.html) | [filled](HTML/filled/PFVR_v0.4_filled.html) | [blank](PDF/blank/PFVR_v0.4_blank.pdf) | [filled](PDF/filled/PFVR_v0.4_filled.pdf) |
+| **IQL** — Imaging Quality Log | v0.5 | [blank](HTML/blank/IQL_v0.5_blank.html) | [filled](HTML/filled/IQL_v0.5_filled.html) | [blank](PDF/blank/IQL_v0.5_blank.pdf) | [filled](PDF/filled/IQL_v0.5_filled.pdf) |
+
 ## Pendências que não entram nesta pasta
 
 - **MRL:** suspenso, sem aprovação final.
@@ -46,4 +55,4 @@ Os PDFs usam paginação A4 do HTML, incluindo páginas em paisagem, cores e tex
 
 O [manifesto](manifesto.json) registra fontes, hashes e correspondência HTML/PDF. A conferência de exportação é registrada em `VERIFICACAO.md`.
 
-Atualizado em 30/10/2026.
+Atualizado em 31/10/2026.
