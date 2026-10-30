@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auditoria dos 24 instrumentos</title>
+<style>
+:root{--ink:#14181d;--muted:#5d6670;--line:#d9dde2;--bg:#ffffff;--soft:#f4f6f8;--navy:#1f4173;--b:#b42318;--i:#b54708;--m:#3b6e3b;--ok:#2e7d32}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#e7eaee;--muted:#a3abb4;--line:#39414a;--bg:#14181d;--soft:#1d232a;--navy:#8fb3e8;--b:#f97066;--i:#fdb022;--m:#8bc48b;--ok:#81c784}}
+:root[data-theme="dark"]{--ink:#e7eaee;--muted:#a3abb4;--line:#39414a;--bg:#14181d;--soft:#1d232a;--navy:#8fb3e8;--b:#f97066;--i:#fdb022;--m:#8bc48b;--ok:#81c784}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,Segoe UI,Roboto,Arial,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:26px;margin:0 0 4px}h2{font-size:20px;margin:36px 0 10px;color:var(--navy);border-bottom:2px solid var(--line);padding-bottom:4px}
+h3{font-size:16px;margin:20px 0 6px}
+p.lead{color:var(--muted);margin:0 0 18px}
+.box{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:12px 0}
+.tbl{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{border:1px solid var(--line);padding:6px 8px;vertical-align:top;text-align:left}
+th{background:var(--soft)}
+.sev{display:inline-block;min-width:18px;text-align:center;font-weight:700;border-radius:4px;padding:0 5px;color:#fff}
+.B{background:var(--b)}.I{background:var(--i)}.M{background:var(--m)}
+.ok{color:var(--ok);font-weight:700}.no{color:var(--b);font-weight:700}.part{color:var(--i);font-weight:700}
+code{background:var(--soft);padding:0 4px;border-radius:3px;font-size:12.5px}
+li{margin:4px 0}
+</style>
+</head>
+<body><main>
+<h1>Auditoria dos 24 instrumentos (Apêndices A–X)</h1>
+<p class="lead">30/10/2026 · Fontes: tese v6 (Caps. 4 e 5, Tabelas 4.2 e 4.3, Figura 4.3) e versões atuais reunidas no <code>checklist-instrumentos.html</code> do branch <code>codex/thesis-work</code>, mais as regras de <code>instrument-review</code> e <code>standards.md</code>.</p>
+
+<div class="box">
+<b>Resumo.</b> Dos 24 instrumentos, 7 estão concluídos (CCDM, DTRM, TRE, RACI, SCR, SLCT, SCML) e o POT v0.9 aguarda sua conferência. Os 15 restantes existem em versões de trabalho, e o IMP não existe. O conjunto concluído de Governança é sólido e a cadeia CCDM → DTRM → TRE → RACI fecha. Os problemas graves estão em três lugares:
+<ol>
+<li>No <b>nível mínimo</b>, que é o do centro-alvo da tese: instrumentos que ficam no conjunto de 12 dependem de instrumentos que saem dele.</li>
+<li>Em quatro <b>elos quebrados</b> do fluxo de informação.</li>
+<li>No <b>tamanho</b> de cinco registros, que pesam demais para uma equipe de duas pessoas.</li>
+</ol>
+Contagem: <span class="sev B">B</span> 9 · <span class="sev I">I</span> 12 · <span class="sev M">M</span> 6.
+</div>
+
+<h2>1. Bloqueios (B)</h2>
+<div class="tbl"><table>
+<tr><th>#</th><th>Problema</th><th>Evidência</th><th>Correção proposta</th></tr>
+<tr><td>B1</td><td><b>O nível mínimo não funciona com os instrumentos como estão.</b> A Tabela 4.2 tira CCDM, DTRM, MRL, IMP, PFVR, SIFSL, CAPA e PIR dos 12 e põe proxies no lugar. Os instrumentos que ficam foram desenhados para ler os que saem.</td><td>O RACI exige "Linked CCDM record ID" e manda "Copy the task ID, task, code and supervision from the current CCDM". O TRE diz "The training required for this person comes from the DTRM … does not define a separate catalogue". Para o POT, a Tabela 4.2 diz "POT for MRL" e "POT for CAPA", mas o POT não tem onde registrar uma decisão de marco nem uma ação corretiva. O IMC não tem plano próprio (a 4.6.2 aceita escopo e cronograma "either in its plan or on its checklist"). O FUCR só aceita PFVR como fonte.</td><td>Dar a cada instrumento do conjunto de 12 um <b>modo proxy</b> pequeno e explícito:
+<ul>
+<li>RACI: colunas de código e supervisão preenchidas no próprio RACI quando não há CCDM.</li>
+<li>TRE: "DTRM module ID <i>or sponsor training requirement</i>".</li>
+<li>POT: um bloco "Milestone decision (when no MRL)" e um bloco curto de ação corretiva (causa, ação, critério e verificação de eficácia).</li>
+<li>IMC: um quadro "Standing scope and schedule (when no IMP)".</li>
+<li>FUCR: fonte "PFVR <i>or CRF visit records</i>".</li>
+</ul></td></tr>
+<tr><td>B2</td><td><b>A ordem SCR ↔ TRE no texto contradiz a dos instrumentos aceitos.</b></td><td>No texto, a liberação no TRE vem antes e alimenta o SCR: 4.2.3 ("provides one input to the authorization decision"), 4.2.4, 4.6.2 ("release on device training must precede the credentialing decision") e 5.3.1 passo 3. Nos instrumentos aceitos, o SCR vem antes e entra como linha de qualificação no TRE B. Foi a solução da circularidade na revisão SCR v0.4 (“Complete it at start-up, before the surgeon's TRE release”).</td><td>Recomendo corrigir o <b>texto</b>: o SCR decide a qualificação antes do primeiro caso, e o TRE libera o treino no dispositivo para a tarefa cirúrgica citando o SCR. São quatro frases a reescrever (4.2.3, 4.2.4, 4.6.2, 5.3.1). Decisão sua (D1).</td></tr>
+<tr><td>B3</td><td><b>O IMC tem 9 domínios e o texto define 10 checks.</b> Falta "Endpoint data agreement".</td><td>A 4.4.1 lista dez checks. O IMC v1.3 não tem a comparação por amostra entre CRF e fonte. O PIR (DC-01, m4 "Source–CRF agreement in sample") e a 4.5.6 ("calculated during each cycle of internal verification") dependem dela.</td><td>Acrescentar o domínio 10 ao IMC, com tamanho da amostra, campos comparados e discrepâncias. É a fonte do m4 do PIR.</td></tr>
+<tr><td>B4</td><td><b>O CSST v1.0 é anterior ao resto do conjunto e quebra o elo SCML → CSST.</b></td><td>Cita "ISO 14155:2020, Cl. 10.8(b)". Usa limiares fixos ("Suggested: 5%") e percentuais. Suas categorias (intraop device/technique, early ≤90 d…) não são as do SCML (Instability/dislocation, Fracture, Infection/wound…). "PI" é usado como código de "Patient-related". Não há rota para SRR nem para CAPA. O rodapé diz "Page 3 of 2".</td><td>Reconstruir o CSST com quatro elementos:
+<ul>
+<li>as mesmas categorias e grupos de tempo do SCML;</li>
+<li>contagem n/N contra os procedimentos, com % só se N ≥ 10;</li>
+<li>limiares fixados no início do estudo;</li>
+<li>as quatro rotas da 4.3.3: surgeon→SLCT, device→sponsor (DD), local process→SRR/CAPA, e manter vigilância.</li>
+</ul>Meta: 2 páginas.</td></tr>
+<tr><td>B5</td><td><b>O CAPA v0.10 pressupõe um sistema de CAPA que o centro-alvo não tem.</b></td><td>"Use this log as a portfolio review, not as a replacement for the individual QMS CAPA" (9 páginas). O texto da 4.5.7 diz "records each action and its cause, with the effectiveness review and closure", com os passos da ISO 13485 adaptados e o retorno ao SRR.</td><td>Reconstruir como o próprio registro da ação:
+<ul>
+<li>um índice com uma linha por CAPA;</li>
+<li>uma folha por CAPA: problema e extensão, causa, decisão de agir, ação e checagem de que não compromete CIP ou segurança, critério de eficácia, revisão, encerramento ou limitação documentada, e risco levado ao SRR.</li>
+</ul>Meta: 2 a 3 páginas.</td></tr>
+<tr><td>B6</td><td><b>O IMP não existe.</b></td><td>Não localizado no checklist ("Arquivo não localizado"). A Tabela 4.3 lhe dá a saída "A review plan for the IMC to execute".</td><td>Construir o IMP com:
+<ul>
+<li>os 10 checks do IMC, cada um com in scope (sim/não), frequência, amostra, revisor (≠ executor), gatilho de revisão antecipada e rota;</li>
+<li>a regra de independência;</li>
+<li>a primeira revisão logo após as primeiras inclusões (5.3.1 passo 8).</li>
+</ul>Meta: 2 páginas.</td></tr>
+<tr><td>B7</td><td><b>Elo ICDL → SLCT incompleto.</b> O texto diz que o SLCT "takes its case entry from" o ICDL (5.3.1 passo 7).</td><td>O ICDL v0.12 tem horários, mas não tem a classe de complexidade do caso nem o apoio recebido (proctor, co-cirurgião, senior), dois dados que o SLCT C exige. O ICDL B pergunta "Authorised surgeon and current release confirmed" sem citar a decisão do SCR e suas condições. A 4.8 diz que a restrição é "checked in the ICDL for subsequent procedures".</td><td>No ICDL:
+<ul>
+<li>B: "SCR decision / condition in force (e.g., proctoring required)" e "Case complexity class (SLCT framework)";</li>
+<li>D: "Support present: none / proctor / co-surgeon / senior";</li>
+<li>H: "Implant card given (where applicable)", exigência da ISO 14155:2026 citada na 3.3.</li>
+</ul></td></tr>
+<tr><td>B8</td><td><b>O POT não lê os registros na ordem da reunião descrita na 5.3.2 e omite três fontes.</b></td><td>As fontes do POT G são SRR, PIR, FUCR, IMC, SART e SCML. A 5.3.2 fixa a pauta SART → CSST → cirurgiões (SLCT) → indicadores e IMC → SRR, e a CAPA também entra. O POT também fixa "monthly review", enquanto a 5.3.2 deixa ao site a escolha entre mensal e trimestral.</td><td>Reordenar G pela pauta da 5.3.2. Acrescentar CSST, SLCT e CAPA (ações abertas), com "N/A at this level". Trocar "monthly" por "the frequency set in Section D". Acrescentar o registro do nível de implementação na revisão que fecha o start-up (4.6.1).</td></tr>
+<tr><td>B9</td><td><b>A ordem dos Apêndices Q–V no documento não bate com o texto nem com a Tabela 4.3.</b></td><td>Texto e Tabela 4.3: Q PSEAR, R SIFSL, S PFVR, T ICDL, U PIR, V FUCR. Seção Appendices da v6: Q ICDL, R PSEAR, S SIFSL, T PFVR, U FUCR, V PIR.</td><td>Reordenar os títulos dos Apêndices Q–V na seção Appendices. Faço isso na próxima versão do docx.</td></tr>
+</table></div>
+
+<h2>2. Fluxo de informação: quem alimenta quem</h2>
+<p>Cada linha é uma passagem que o texto ou a Tabela 4.3 declaram. "Status" diz se o que o emissor entrega bate com o que o receptor espera.</p>
+<div class="tbl"><table>
+<tr><th>De → Para</th><th>O que passa</th><th>Status</th><th>Nota</th></tr>
+<tr><td>CCDM → DTRM, TRE, RACI, POT</td><td>Task ID, código C1–C3, supervisão S0–S3, gatilho</td><td class="ok">OK</td><td>IDs compartilhados (T01…), conforme S17.</td></tr>
+<tr><td>DTRM → TRE, RACI</td><td>Perfil P-xx, módulo MOD-xx, TR/AS/CD/AW/NA</td><td class="ok">OK</td><td></td></tr>
+<tr><td>SCR → TRE B, RACI</td><td>Decisão e escopo</td><td class="part">Texto diverge</td><td>B2.</td></tr>
+<tr><td>SCR → ICDL</td><td>Condição vigente (proctoring, restrição)</td><td class="no">Falta</td><td>B7.</td></tr>
+<tr><td>ICDL → SLCT</td><td>Complexidade, duração, substituição, apoio</td><td class="part">Parcial</td><td>B7.</td></tr>
+<tr><td>ICDL → SCML, IMC</td><td>Complicação intraoperatória; traceability</td><td class="ok">OK</td><td>Typo "ICQL" em vários lugares (deve ser IQL).</td></tr>
+<tr><td>SART → SCML, PIR (ST)</td><td>Case ID, data de ciência, data de envio, completude</td><td class="ok">OK</td><td>O SART tem 11 páginas (ver 4).</td></tr>
+<tr><td>SCML → CSST</td><td>Eventos por categoria, componente, cirurgião</td><td class="no">Quebrado</td><td>B4: categorias diferentes.</td></tr>
+<tr><td>CSST → SLCT, sponsor, SRR/CAPA</td><td>Sinal e rota</td><td class="part">Parcial</td><td>Faltam SRR e CAPA (B4).</td></tr>
+<tr><td>SLCT → SCR, SRR/CAPA, PIR (SP)</td><td>Disposição</td><td class="ok">OK</td><td></td></tr>
+<tr><td>IMP → IMC</td><td>Escopo, amostra, revisor</td><td class="no">Falta</td><td>B6.</td></tr>
+<tr><td>IMC → PIR (DC m4)</td><td>Concordância CRF–fonte</td><td class="no">Falta</td><td>B3.</td></tr>
+<tr><td>IMC → CAPA, SRR, POT</td><td>Achados</td><td class="ok">OK</td><td>"PDTR review" no IMC F é sigla desconhecida.</td></tr>
+<tr><td>SIRR → IQL</td><td>Classificação Acceptable/Limited/Non-conforming</td><td class="ok">OK</td><td>Definida no SIRR C e usada no IQL B.</td></tr>
+<tr><td>IQL → FUCR, PFVR</td><td>Status por image set</td><td class="ok">OK</td><td></td></tr>
+<tr><td>PSEAR → SIFSL, PIR (EQ)</td><td>Decisão e data de cada evidência</td><td class="part">Parcial</td><td>O EQ conta "criterion evidenced before the decision". O PSEAR G precisa da coluna "date evidence available" por critério.</td></tr>
+<tr><td>PFVR → FUCR</td><td>Visita utilizável (sim/não), causa do atraso ou falta</td><td class="part">Parcial</td><td>O PFVR não tem o campo "usable visit" da 4.4.3 nem a atribuição da causa (participant/site/protocol), que o FUCR recalcula.</td></tr>
+<tr><td>FUCR → PIR (FC)</td><td>Resultado do indicador</td><td class="part">Duplica</td><td>O PIR recalcula os quatro m de FC. Deveria citar o resultado do FUCR.</td></tr>
+<tr><td>PIR → POT, MRL, CAPA</td><td>Status e escalonamento</td><td class="ok">OK</td><td></td></tr>
+<tr><td>CAPA → SRR</td><td>Fraqueza vira risco</td><td class="no">Falta</td><td>B5.</td></tr>
+<tr><td>SRR → nível de implementação</td><td>Instrumentos acrescentados por risco</td><td class="no">Falta</td><td>A 4.7 e a 5.3.1 passo 4 dizem que o registro decide quais instrumentos opcionais entram. O SRR não tem esse campo.</td></tr>
+<tr><td>POT → MRL; todos → PIDLR</td><td>Itens de marco; lições</td><td class="ok">OK</td><td></td></tr>
+</table></div>
+
+<h2>3. Redundâncias</h2>
+<ul>
+<li><span class="sev I">I</span> <b>Dois inventários dos 24 instrumentos.</b> O RACI E registra em uso, dono, backup e accountable. O MRL E registra criação, fase, local e status. O MRL fica fora dos níveis 12 e 18. Proposta: um só inventário, no RACI E, que está em todos os níveis, com a coluna "controlled location". O MRL E sai.</li>
+<li><span class="sev I">I</span> <b>O PIR recalcula o que o FUCR e o SLCT já calculam</b> (FC-01 m1–m4; tabela SP-01 por cirurgião). Proposta: nessas duas linhas o PIR cita o resultado e o status do FUCR e do SLCT. Ele calcula só EQ, PD, ST e DC, que não têm outro dono.</li>
+<li><span class="sev I">I</span> <b>O SRR tem categorias de risco (B) e domínios CtQ (C) que se sobrepõem</b>: Safety ≈ CtQ10, Device ≈ CtQ4, Data ≈ CtQ11, Imaging ≈ CtQ9. Proposta: só o domínio CtQ, que é o que o texto pede.</li>
+<li><span class="sev I">I</span> <b>O SART repete a relação causal duas vezes</b>: os eixos 3–5 de C e as linhas 1–3 da tabela de relação. Os "escalation gates" de D também repetem a rota de E.</li>
+<li><span class="sev I">I</span> <b>O SIFSL tem duas tabelas por candidato</b> (C register e D disposition) com código, datas e desfecho. Proposta: uma linha por candidato.</li>
+<li><span class="sev I">I</span> <b>O PIDLR reconstrói o estudo duas vezes</b>, por fase (C) e por domínio (D), e separa transferência (F) de verificação (H). Proposta: uma reconstrução e um registro de lições com destino e verificação.</li>
+<li><span class="sev I">I</span> <b>O IQL tem revisão periódica, ação e eficácia próprias</b> (C–E), que duplicam o IMC (check de imagem), o FUCR e a CAPA. Proposta: o IQL fica como registro por image set com rota de exceção. A agregação passa ao FUCR e ao IMC.</li>
+</ul>
+
+<h2>4. Facilidade de preenchimento e registros paralelos</h2>
+<p>A 4.4.4 proíbe repetir conteúdo que já tem fonte, e a 5.3.5 trata o tempo da equipe como custo real. Os registros abaixo pesam mais do que o centro-alvo (PI e coordenador) consegue sustentar:</p>
+<div class="tbl"><table>
+<tr><th>Instrumento</th><th>Páginas hoje</th><th>Meta</th><th>O que sai</th></tr>
+<tr><td>SART (por evento)</td><td>11</td><td>4</td><td>Eixos duplicados, folhas de exemplo, tabela de reconciliação longa (fica uma linha por registro ligado).</td></tr>
+<tr><td>CAPA</td><td>9</td><td>2–3</td><td>Reconstrução (B5).</td></tr>
+<tr><td>PSEAR (por candidato)</td><td>7</td><td>3–4</td><td>As seções C–F copiam resultados clínicos que já estão na fonte. Fica o critério a critério (G) com fonte e data da evidência, a segunda revisão (H) e a decisão (I).</td></tr>
+<tr><td>IMC</td><td>7</td><td>4</td><td>Dois guias de classificação (2 páginas). Proposta: uma tabela de códigos compacta.</td></tr>
+<tr><td>FUCR</td><td>7</td><td>4</td><td>D e E1 repetem as medidas de C. Os exemplos saem do branco.</td></tr>
+<tr><td>PIDLR</td><td>7</td><td>3–4</td><td>Ver redundâncias.</td></tr>
+<tr><td>MRL</td><td>6</td><td>4</td><td>O inventário E sai.</td></tr>
+<tr><td>SRR</td><td>6</td><td>4–5</td><td>A nota em seis campos (P, S, Pr, Dv, Da, D) vira três campos, como no texto: impacto no fator CtQ, probabilidade e dificuldade de detecção. As categorias saem.</td></tr>
+<tr><td>PFVR (por visita)</td><td>4</td><td>2</td><td>F e G (relato e exame) copiam a fonte. Fica: componentes exigidos, dentro da janela, método, visita utilizável, causa e rota.</td></tr>
+</table></div>
+
+<h2>5. Situação de cada instrumento</h2>
+<div class="tbl"><table>
+<tr><th>Ap.</th><th>Instr.</th><th>Versão</th><th>Situação</th><th>Ação proposta</th></tr>
+<tr><td>A</td><td>CCDM</td><td>v0.2</td><td>Concluído</td><td>Nenhuma.</td></tr>
+<tr><td>B</td><td>MRL</td><td>v0.7</td><td>Suspenso</td><td>Tirar o inventário E e manter as seções C1/C2/D/F.</td></tr>
+<tr><td>C</td><td>POT</td><td>v0.9</td><td>Aguarda você</td><td>B1 e B8 (pequenos acréscimos).</td></tr>
+<tr><td>D</td><td>RACI</td><td>v0.3</td><td>Concluído</td><td>Modo proxy do CCDM (B1) e coluna de local em E.</td></tr>
+<tr><td>E</td><td>DTRM</td><td>v0.2</td><td>Concluído</td><td>Nenhuma.</td></tr>
+<tr><td>F</td><td>TRE</td><td>v0.4</td><td>Concluído</td><td>Uma palavra (B1: "or sponsor training requirement").</td></tr>
+<tr><td>G</td><td>SCR</td><td>v0.5</td><td>Concluído</td><td>Nenhuma (o texto se ajusta, B2).</td></tr>
+<tr><td>H</td><td>SRR</td><td>v0.2</td><td>Montagem externa</td><td>Simplificar a nota. Campo "instrument added because of this risk".</td></tr>
+<tr><td>I</td><td>SLCT</td><td>v0.4</td><td>Concluído</td><td>Nenhuma.</td></tr>
+<tr><td>J</td><td>SCML</td><td>v0.7</td><td>Concluído</td><td>Nenhuma (o CSST se alinha a ele).</td></tr>
+<tr><td>K</td><td>SART</td><td>v0.3</td><td>A revisar</td><td>Enxugar de 11 para cerca de 4 páginas.</td></tr>
+<tr><td>L</td><td>CSST</td><td>v1.0</td><td>A revisar</td><td>Reconstruir (B4).</td></tr>
+<tr><td>M</td><td>IMP</td><td>—</td><td>Não existe</td><td>Construir (B6).</td></tr>
+<tr><td>N</td><td>IMC</td><td>v1.3</td><td>A revisar</td><td>Check 10, quadro proxy do IMP, enxugar guias.</td></tr>
+<tr><td>O</td><td>SIRR</td><td>v0.4</td><td>A revisar</td><td>Seção G pulada (F → H). Acrescentar o teste de concordância entre avaliadores antes do 1º participante (4.4.2) e a rota "imaging time unsuitable → sponsor" (4.4.2).</td></tr>
+<tr><td>P</td><td>IQL</td><td>v0.3</td><td>A revisar</td><td>Ficar só com o registro por image set e a rota de exceção.</td></tr>
+<tr><td>Q</td><td>PSEAR</td><td>v0.7</td><td>A revisar</td><td>Enxugar. Coluna "date evidence available".</td></tr>
+<tr><td>R</td><td>SIFSL</td><td>v0.2</td><td>A revisar</td><td>Fundir C e D.</td></tr>
+<tr><td>S</td><td>PFVR</td><td>v0.3</td><td>A revisar</td><td>Visita utilizável e causa. Enxugar.</td></tr>
+<tr><td>T</td><td>ICDL</td><td>v0.12</td><td>A revisar</td><td>B7. No mais, está bom.</td></tr>
+<tr><td>U</td><td>PIR</td><td>v0.10</td><td>Rascunho</td><td>Ver D2. Citar FUCR e SLCT em vez de recalcular.</td></tr>
+<tr><td>V</td><td>FUCR</td><td>v0.4</td><td>A revisar</td><td>Fonte "PFVR or CRF", tirar repetição, tirar exemplos do branco.</td></tr>
+<tr><td>W</td><td>CAPA</td><td>v0.10</td><td>A revisar</td><td>Reconstruir (B5).</td></tr>
+<tr><td>X</td><td>PIDLR</td><td>v0.2</td><td>A revisar</td><td>Enxugar.</td></tr>
+</table></div>
+
+<h2>6. Pontos menores comuns (M)</h2>
+<ul>
+<li>Grafia britânica nos PDFs e em alguns HTML: authorised, specialised, enrolment, summarise, finalised, pseudonymised.</li>
+<li>"ICQL" no lugar de IQL (IMC, ICDL, FUCR, PIR) e "PDTR" no IMC.</li>
+<li>Exemplos preenchidos dentro dos formulários em branco (PSEAR, SIFSL, FUCR, PIDLR, SART, ICDL). A sua regra é: branco sem exemplo, exemplo só no simulado.</li>
+<li>Os oito PDFs (CSST, IMC, SIRR, IQL, ICDL, PSEAR, CAPA, PIDLR) não seguem o layout HTML navy dos outros 16 (S4).</li>
+<li>O nível aparece com quatro nomes: "Site type A/B/C" (RACI, POT), "Implementation depth" (SRR), "Risk-based arrangement / MRL Review Depth" (MRL) e, na tese, nonhospital / nonacademic hospital / academic. Proposta: um campo único, "Implementation level: Nonhospital (12) · Nonacademic hospital (18) · Academic (24) + instruments added for risk".</li>
+<li>Faltam regras comuns de ID. Proposta: <code>&lt;ACR&gt;-&lt;study&gt;-&lt;nnn&gt;</code> para registros e o ID do emissor sempre que outro instrumento cita uma linha (S11 e S17 estendidos aos 24).</li>
+</ul>
+
+<h2>7. Decisões que preciso de você</h2>
+<ol>
+<li><b>D1, SCR ↔ TRE.</b> Recomendo manter os instrumentos e ajustar quatro frases do texto (4.2.3, 4.2.4, 4.6.2, 5.3.1).</li>
+<li><b>D2, PIR.</b> O checklist traz a v0.10, que nas notas aparece como rascunho que você recusou ("MUITO complexo", "não entendeu a ideia"). A v0.8, a última feita por você, não está no repositório. Prefere mandar a v0.8 ou que eu parta da v0.10 cortando FC e SP para citações do FUCR e do SLCT? E qual é o papel do PIR na sua ideia: painel que aponta para os outros instrumentos, ou formulário que guarda os números?</li>
+<li><b>D3, CAPA.</b> Reconstruir como registro da própria ação (recomendado) ou manter a revisão de carteira?</li>
+<li><b>D4, apêndice.</b> Só o formulário em branco de cada instrumento (recomendado, conforme a 4.8 "Draft templates") ou branco e simulado?</li>
+<li><b>D5, visual.</b> Passar os oito PDFs para o mesmo layout HTML dos demais, sem mexer no conteúdo aceito?</li>
+<li><b>D6, onde trabalhar.</b> Faço tudo em <code>revisao/instrumentos/</code> neste branch. Quer que eu também publique os arquivos finais no <code>codex/thesis-work</code>? Pelo AGENTS.md, aquele branch é do Codex, então só faço isso com o seu sim.</li>
+</ol>
+
+<h2>8. Plano até o fim do dia</h2>
+<ol>
+<li>Correções que não dependem de decisão:
+<ul>
+<li>ordem Q–V no docx (B9);</li>
+<li>IMP (B6);</li>
+<li>CSST (B4);</li>
+<li>IMC check 10 e quadro proxy (B3, B1);</li>
+<li>ICDL (B7);</li>
+<li>modo proxy no RACI, TRE, POT e FUCR (B1);</li>
+<li>fontes e pauta do POT (B8).</li>
+</ul></li>
+<li>Enxugar os registros por evento: SART, PSEAR, PFVR, SIFSL e IQL.</li>
+<li>Depois das suas decisões: CAPA, PIR, SRR, MRL, PIDLR e FUCR.</li>
+<li>Passar os 24 em branco para um só layout, gerar o PDF de cada um e inserir as páginas nos Apêndices A–X do docx, na largura do texto. Depois, conferir no Word renderizado.</li>
+</ol>
+<p>Cada instrumento alterado ganha versão nova, e a anterior fica preservada. Os sete concluídos não mudam de conteúdo, exceto os acréscimos de modo proxy do B1, que mostro antes de aplicar.</p>
+</main></body></html>
