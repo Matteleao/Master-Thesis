@@ -1,4 +1,4 @@
-# Simulated (filled) SART v1.0: GLENOS-01, Riverside 014, case 2 greater tuberosity fracture (SART-014-002).
+# Simulated (filled) SART v1.0: GLENOS-01, Riverside 014, dislocation from liner separation (SART-014-005): SADE with a device deficiency, late report.
 import sys
 from lxml import html as LH, etree
 SRC, OUT = sys.argv[1], sys.argv[2]
@@ -24,80 +24,68 @@ def rows(cls, idx=0):
     return doc.xpath(f'//table[contains(concat(" ",@class," ")," {cls} ")]')[idx].xpath('./tbody/tr')
 for v in doc.xpath('//div[@class="version"]'): v.text = 'SIMULATED · v1.0'
 doc.find('.//title').text = 'SART v1.0 - Simulated Editable'
-for k, v in [('Study / protocol', 'GLENOS-01 / GS-2026-01'), ('Current CIP / version', 'CIP v4.2'), ('Site / code', 'Riverside Orthopedic Center / 014'), ('SART case ID / revision', 'SART-014-002 / r2'),
-             ('Participant code (or N/A and why)', '014-0002'), ('Procedure, visit or exposure (or N/A)', 'Reverse shoulder arthroplasty, 2 Oct 2026 (ICDL-014-002)'), ('Site awareness: date / time', '2 Oct 2026, 10:42'),
-             ('Person who received the first information', 'Dr R. Teixeira, operating surgeon'), ('PI / authorized site assessor', 'Dr Alex Morgan'), ('Sponsor safety system / route', 'GLENOS EDC, adverse event page'),
-             ('Sponsor safety case ID (if issued)', 'GS-AE-014-0007'), ('Study / site', 'GLENOS-01 / 014'), ('Participant code or N/A', '014-0002'),
-             ('Assessment date', '2 Oct 2026 (PI)'), ('Sponsor safety case ID', 'GS-AE-014-0007'), ('Sheet number / total sheets', '1 / 1'), ('Local closure date', '16 Nov 2026')]:
+for k, v in [('Study / protocol', 'GLENOS-01 / GS-2026-01'), ('Current CIP / version', 'CIP v4.2'), ('Site / code', 'Riverside Orthopedic Center / 014'), ('SART case ID / revision', 'SART-014-005 / r4'),
+             ('Participant code (or N/A and why)', '014-0005'), ('Procedure, visit or exposure (or N/A)', 'Reverse shoulder arthroplasty, 9 Oct 2026 (ICDL-014-005); revision 28 Oct 2026'), ('Site awareness: date / time', '28 Oct 2026, 08:05'),
+             ('Person who received the first information', 'Maria Silva (P-06), from the hospital admission list'), ('PI / authorized site assessor', 'Dr Alex Morgan (on leave 27 Oct to 2 Nov); backup Dr R. Teixeira'), ('Sponsor safety system / route', 'GLENOS EDC: SAE form and DD form'),
+             ('Sponsor safety case ID (if issued)', 'GS-SAE-014-0003'), ('Study / site', 'GLENOS-01 / 014'), ('Participant code or N/A', '014-0005'),
+             ('Assessment date', '28 Oct 2026; updated 13 Nov'), ('Sponsor safety case ID', 'GS-SAE-014-0003'), ('Sheet number / total sheets', '1 / 1'), ('Local closure date', 'Open; next review 15 Jan 2027')]:
     meta(k, v)
-tick(doc.xpath('//section[contains(@class,"meta-grid")]')[0], 'Closed locally')
-# B (page 1)
-r = rows('bt')
-B = [('Known', '2 Oct 2026, 10:40, during humeral preparation'), (None, '2 Oct 2026, 10:42; Dr R. Teixeira, in theatre; ICDL-014-002 Section G'),
-     ('Adverse event', 'Intraoperative event'), ('No', 'Fracture fixed; participant stable at closure'),
-     (None, 'Fixed with two transosseous sutures; PI called before closure (POT trigger 10), 10:55'), (None, 'GLENOS v2 humeral stem 12 mm, lot GS-H12-2609; no device implicated; humeral preparation step')]
-for row, (opt, ref) in zip(r, B):
-    tds = row.findall('td')
-    if opt: tick(tds[1], opt)
-    put(tds[2], ref)
-put(doc.xpath('//div[contains(@class,"wbox") and contains(@class,"fact")]')[0], 'During humeral preparation in case 2, a non-displaced greater tuberosity fracture was seen. It was fixed with two transosseous sutures and the planned implant was placed. The shoulder was stable at closure, and the immediate postoperative radiograph shows the implant and the fixation in position.')
-for row, vals in zip(rows('src2', 0), [('Operative note', 'EHR, 2 Oct 2026', 'Fracture, fixation and final configuration'), ('ICDL', 'ICDL-014-002, Sections F and G', 'Time of the event and of the call to the PI'),
-                                        ('Immediate postoperative image', 'IQL-014-002-PO', 'Implant and fixation position'), ('6-week visit record', 'PFVR-014-002-V1', 'Healing of the tuberosity'), ('eCRF', 'GLENOS EDC, AE-07', 'Report to the sponsor')]):
+tick(doc.xpath('//section[contains(@class,"meta-grid")]')[0], 'Open')
+def fill3(cls, idx, spec):
+    for row, (opts, ref) in zip(rows(cls, idx), spec):
+        tds = row.findall('td')
+        if opts:
+            tick(tds[1], *([opts] if isinstance(opts, str) else opts))
+        put(tds[-1], ref)
+fill3('bt', 0, [('Known', '27 Oct 2026, 21:30, at home, while dressing (day 18)'),
+    (None, '28 Oct 2026, 08:05; Maria Silva (P-06), from the hospital admission list; emergency department note'),
+    ('Adverse event', 'Dislocation. The device deficiency was found at revision (Section E, line 1)'),
+    ('Yes', 'Dislocated shoulder; participant admitted'),
+    (None, 'Closed reduction failed in the emergency department; admitted. Backup PI Dr R. Teixeira informed 28 Oct, 08:40; open revision 28 Oct, 14:00'),
+    (None, 'GLENOS v2; humeral liner 36 mm +3, lot GS-L36-2607 (read from the explant label: missing in ICDL-014-005); assembly of the liner on the stem')])
+put(doc.xpath('//div[contains(@class,"wbox") and contains(@class,"fact")]')[0], 'Eighteen days after a reverse shoulder arthroplasty, the participant felt the shoulder give way while dressing and came to the emergency department, where closed reduction failed. At open revision on 28 Oct the humeral liner was found separated from the stem, with the locking ring not engaged. The liner was replaced, the shoulder was stable at closure, and the removed liner was kept for return to the sponsor.')
+for row, vals in zip(rows('src2', 0), [('Emergency department note and admission', 'EHR, 28 Oct 2026', 'Presentation, failed reduction, admission'), ('Revision operative note', 'EHR / ICDL-014-005-R', 'Liner separated; locking ring not engaged; liner replaced'),
+                                        ('Explant and return record', 'RMA-0045, 30 Oct 2026', 'Liner kept and returned to the sponsor'), ('Index procedure log', 'ICDL-014-005, Section E', 'Liner lot not recorded at the index procedure'),
+                                        ('Sponsor SAE and DD forms', 'GS-SAE-014-0003; GS-DD-014-0012', 'Formal report and follow-up'), ('Device analysis report', 'DA-0045, 19 Nov 2026', 'Locking ring out of tolerance in lot GS-L36-2607')]):
     for td, v in zip(row.findall('td'), vals): put(td, v)
-for row, vals in zip(rows('src2', 1), [('6-week radiograph result', 'P-04', 'At the 6-week visit, 13 Nov 2026')]):
+for row, vals in zip(rows('src2', 1), [('Sponsor lot investigation outcome', 'P-01', 'Sponsor; ask at the next contact'), ('3-month visit after revision', 'P-06', 'Visit window 20 Jan to 3 Feb 2027')]):
     for td, v in zip(row.findall('td'), vals): put(td, v)
-# C
-c = rows('ct', 0)
-spec = [('Yes', ''), ('Does not meet seriousness criteria', ''), ('Mild', 'CIP v4.2 intensity scale'), ('No', 'Bone event during preparation; implant not involved'),
-        ('N/A', 'Single-arm study'), ('No', 'Implantation is the study procedure, not an added one'), ('N/A', 'Not a SADE'), ('Non-serious AE', '')]
-for row, (o, ref) in zip(c, spec):
-    tds = row.findall('td'); tick(tds[1], o); put(tds[2], ref)
-c2 = rows('ct', 1)
-tick(c2[0].findall('td')[1], 'No'); put(c2[0].findall('td')[2], 'No deficiency observed')
-tick(c2[4].findall('td')[1], 'N/A')
-c3 = rows('ct', 2)
-tick(c3[0].findall('td')[1], 'Procedure', 'Operator or technique'); put(c3[0].findall('td')[2], 'Early case in the surgeon\'s sequence (SLCT case 2)')
-tick(c3[1].findall('td')[1], 'No')
-c4 = rows('ct', 3)
-tick(c4[0].findall('td')[1], 'Final (PI)'); put(c4[0].findall('td')[2], 'A. Morgan, 2 Oct 2026')
-tick(c4[1].findall('td')[1], 'Received'); put(c4[1].findall('td')[2], '20 Oct 2026, MM-Q-114 closed')
-tick(c4[2].findall('td')[1], 'Agree'); put(c4[2].findall('td')[2], 'Non-serious, not device-related')
-put(c4[3].findall('td')[1], 'None')
-# D
-d = rows('dt')
-D = [('Yes', 'CIP v4.2 section 9.3: every AE entered in the eCRF within 5 working days'), ('eCRF', 'GLENOS EDC adverse event page'), (None, '2 Oct 2026, 10:42'), (None, '5 working days; due 9 Oct 2026'),
-     (None, '3 Oct 2026, 16:10; M. Silva (P-06); EDC entry AE-07'), ('Yes', 'GS-AE-014-0007'), ('Yes', 'Sent 1 working day after awareness'), ('Complete', 'No query on the first report'),
-     (None, 'N/A: on time and complete'), (None, 'N/A'), ('Not required', 'Not assigned to the site by the CIP')]
-for row, (o, ref) in zip(d, D):
-    tds = row.findall('td')
-    if o: tick(tds[1], o)
-    put(tds[2], ref)
-# E
+fill3('ct', 0, [('Yes', 'Emergency department note, 28 Oct'), ('In-patient or prolonged hospitalization', 'Admitted for revision surgery'), ('Severe', 'CIP v4.2 intensity scale'),
+    ('Yes', 'Liner separation caused the dislocation'), ('N/A', 'Single-arm study'), ('No', 'Event linked to the device, not to an added procedure'),
+    ('Pending', 'Dislocation is in the risk assessment; liner separation is not'), ('SADE', 'Anticipated status for the sponsor')])
+fill3('ct', 1, [('Yes', 'Found at revision'), (['Performance', 'Malfunction'], 'Locking ring did not hold the liner'), ('Yes', 'Both pathways apply'), ('Yes', 'It did lead to one'), ('Done', 'Liner returned, RMA-0045')])
+fill3('ct', 2, [(['Device', 'Operator or technique'], 'Liner seating not documented at the index procedure'), ('Pending', 'Sponsor checking lot GS-L36-2607 at other sites')])
+fill3('ct', 3, [('Final (PI)', 'A. Morgan, 3 Nov 2026'), ('Received', '13 Nov 2026, SAF-GS-0031: USADE, device-related'), ('Agree', 'PI had left the anticipated status to the sponsor'), (None, 'Operator contribution to liner seating; P-01, after the device analysis')])
+fill3('dt', 0, [('Yes', 'CIP v4.2 section 9.4: SAEs and DDs that could have led to a SADE within 72 hours of awareness'), (['SAE form', 'DD form'], 'GLENOS EDC'), (None, '28 Oct 2026, 08:05'), (None, '72 hours; due 31 Oct 2026, 08:05'),
+    (None, '1 Nov 2026, 11:30; M. Silva (P-06); GS-SAE-014-0003 and GS-DD-014-0012'), ('Yes', 'GS-SAE-014-0003'), ('No', 'Sent 27 hours late'), ('Incomplete', 'Liner lot missing; sent 2 Nov after the explant label was read'),
+    ('Internal escalation', 'Backup PI informed but not told the case was reportable; PI on leave'), (None, 'Backup notification rule added to POT Section C; deviation PD-014-12; CAPA-014-2026-004'), ('Not required', 'Not assigned to the site by the CIP')])
 e = rows('et')
-EV = [('6 Oct 2026, 09:00', 'Read at the scheduled oversight review with SLCT case 2; no pattern (POT-014-R-2026-10)', 'None', 'N/A', 'N/A', 'N/A', 'N/A', 'P-01: SLCT review at case 5'),
-      ('14 Oct 2026, 11:20', 'Sponsor medical monitor asks for the fixation details (MM-Q-114)', 'None', 'MM-Q-114', '21 Oct 2026', 'Answered 15 Oct; EDC receipt', 'Yes', 'P-06: await the determination'),
-      ('20 Oct 2026, 15:05', 'Sponsor confirms: non-serious, not device-related; MM-Q-114 closed', 'Confirms the PI assessment', 'MM-Q-114 closure', 'N/A', 'N/A', 'N/A', 'P-06: record in C4'),
-      ('13 Nov 2026, 10:30', '6-week visit: tuberosity healed on radiograph (PFVR-014-002-V1; IQL-014-002-W6)', 'Outcome: recovered', 'N/A', '20 Nov 2026', 'Sent 14 Nov; EDC AE-07 v2', 'Yes', 'P-06: close locally')]
+EV = [('29 Oct 2026, 09:10', 'Revision findings: liner separated, locking ring not engaged; liner kept (ICDL-014-005-R)', 'DD pathway opened; device relation confirmed', 'N/A', 'N/A', 'Added to the first report', 'N/A', 'P-06: complete C2'),
+      ('3 Nov 2026, 14:00', 'Sponsor asks for the liner lot and the assembly steps (MM-Q-131)', 'None', 'MM-Q-131', '6 Nov 2026', 'Answered 5 Nov; EDC receipt', 'Yes', 'P-01: reply with ICDL and explant label'),
+      ('13 Nov 2026, 16:20', 'Sponsor determination: USADE; lot GS-L36-2607 quarantined at all sites', 'Anticipated status resolved', 'SAF-GS-0031', 'N/A', 'N/A', 'N/A', 'P-01: quarantine stock; tell the team'),
+      ('19 Nov 2026, 10:00', 'Device analysis: locking ring out of tolerance (DA-0045)', 'Device cause confirmed; operator contribution reduced', 'DA-0045', 'N/A', 'N/A', 'N/A', 'P-01: update the SCML context'),
+      ('9 Dec 2026, 11:00', '6-week visit after revision: stable, no further dislocation (PFVR-014-005-R6)', 'Outcome: recovering', 'N/A', '16 Dec 2026', 'Sent 10 Dec; EDC update', 'Yes', 'P-06: 3-month visit, Jan 2027')]
 for row, vals in zip(e, EV):
     tds = row.findall('td')
     for td, v in zip(tds[1:7], vals[:6]): put(td, v)
     tick(tds[7], vals[6]); put(tds[8], vals[7])
-# F
-F = [('Linked', 'SCML-014-001, 2 Oct 2026'), ('Not required', ''), ('Not required', 'No trigger'), ('Linked', 'POT-014-R-2026-10, 6 Oct 2026'), ('Not required', 'Single case'), ('Linked', 'PIR-014-2026-10, October 2026'), ('Not required', 'No deficiency')]
+F = [('Linked', 'SCML-014-004, 28 Oct 2026'), ('Linked', 'PD-014-12, 1 Nov 2026'), ('Linked', 'Early CSST review, 4 Nov 2026 (serious event, new category)'), ('Linked', 'POT-014-T-2026-11, triggered review'),
+     ('Linked', 'CAPA-014-2026-004: escalation while the PI is away'), ('Linked', 'PIR-014-2026-11, November 2026'), ('Linked', 'GS-DD-014-0012; RMA-0045')]
 for row, (o, ref) in zip(rows('ft'), F):
     tds = row.findall('td'); put(tds[2], ref); tick(tds[3], o)
-G = ['Clinical record, 2 Oct', 'Section B source map', 'C4', 'D: AE-07 / GS-AE-014-0007', 'D: on time, complete', 'E line 4', 'C4: 20 Oct 2026', 'F']
-for row, ref in zip(rows('gt'), G):
-    tds = row.findall('td'); tick(tds[1], 'Yes'); put(tds[2], ref)
-cr = doc.xpath('//div[@class="close-row"]')[0]; tick(cr, 'Closed locally')
-meta('Current outcome and open items', 'Recovered; tuberosity healed at 6 weeks. No open items.')
+G = [('Yes', 'Emergency department and revision notes'), ('Yes', 'Section B source map'), ('Yes', 'C4, 3 Nov 2026'), ('Yes', 'GS-SAE-014-0003, GS-DD-014-0012'),
+     ('Yes', 'Late and incomplete: D, PD-014-12'), ('Yes', 'Open: 3-month visit, Jan 2027'), ('Yes', 'SAF-GS-0031, 13 Nov 2026'), ('Yes', 'F, all seven linked')]
+for row, (o, ref) in zip(rows('gt'), G):
+    tds = row.findall('td'); tick(tds[1], o); put(tds[2], ref)
+cr = doc.xpath('//div[@class="close-row"]')[0]; tick(cr, 'Open follow-up')
+meta('Current outcome and open items', 'Recovering after revision. Open: sponsor lot investigation and the 3-month visit.')
 def sign(title, name, ink, date):
     sg = [s for s in doc.xpath('//div[@class="signature"]') if s.find('b').text_content().strip() == title][0]
     f = sg.xpath('./div[@class="sig-field"]'); f[0].append(E('span', 'demo-fill', name))
     line = f[1].find('span[@class="sig-line"]'); ik = E('span', 'sig-ink', ink); ik.tail = '   '; line.append(ik); line.append(E('span', 'demo-fill', date))
-sign('Case reporter / initial site assessor', 'Dr R. Teixeira / Sub-investigator', 'R. Teixeira', '2 Oct 2026')
-sign('PI / accountable investigator', 'Dr Alex Morgan / PI', 'A. Morgan', '16 Nov 2026')
-sign('Safety coordinator (if applicable)', 'Maria Silva / Study Coordinator', 'M. Silva', '16 Nov 2026')
-put(doc.xpath('//div[contains(@class,"writeline") and contains(@class,"loc")]')[0], 'Investigator site file, tab 6 (Safety) / SART-014-002; GLENOS EDC AE-07; SCML-014')
+sign('Case reporter / initial site assessor', 'Dr R. Teixeira / Sub-investigator, PI backup', 'R. Teixeira', '28 Oct 2026')
+sign('PI / accountable investigator', 'Dr Alex Morgan / PI', 'A. Morgan', '10 Dec 2026')
+sign('Safety coordinator (if applicable)', 'Maria Silva / Study Coordinator', 'M. Silva', '10 Dec 2026')
+put(doc.xpath('//div[contains(@class,"writeline") and contains(@class,"loc")]')[0], 'Investigator site file, tab 6 (Safety) / SART-014-005; GLENOS EDC GS-SAE-014-0003 and GS-DD-014-0012; SCML-014; RMA-0045')
 st = etree.SubElement(doc.find('.//head'), 'style'); st.text = '.ft td{height:32px!important}.gt td{height:25px!important}.ct .demo-fill,.dt .demo-fill,.et .demo-fill,.ft .demo-fill,.gt .demo-fill,.bt .demo-fill,.src2 .demo-fill{font-size:8.8px}'
 open(OUT, 'w').write(LH.tostring(doc, encoding='unicode', doctype='<!DOCTYPE html>')); print('ok')

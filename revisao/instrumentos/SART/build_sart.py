@@ -51,14 +51,15 @@ A = (sec('A', 'Purpose and use') +
 
 # ---------------- Page 2: B
 rowsB = [
-    ('Occurrence, deficiency detection or new information: date / time', ck('Known', 'Estimated', 'Not yet known')),
+    ('Occurrence, deficiency detection or new information: date / time', ck('Known', 'Estimated')),
     ('Site awareness: date / time, and who brought the information (person and source)', ''),
     ('Initial trigger', ck('Adverse event', 'Observed device deficiency', 'AE associated with an observed DD', 'New safety information', 'Other CIP-defined trigger', cls='opts left')),
     ('Immediate safety concern for the participant, user or another person', ck('Yes', 'No', 'Not yet determined')),
     ('Immediate action taken: clinical care, device containment or communication (who, when)', ''),
     ('Device and procedure context: system and component; model, lot, serial or UDI; size; technical step (or N/A)', ''),
 ]
-tb = ''.join(f'<tr><td class="el">{a}</td><td class="opts-cell">{b}</td><td class="left"></td></tr>' for a, b in rowsB)
+row3 = lambda a, b: f'<tr><td class="el">{a}</td><td class="opts-cell">{b}</td><td class="left"></td></tr>' if b else f'<tr><td class="el">{a}</td><td class="left" colspan="2"></td></tr>'
+tb = ''.join(row3(a, b) for a, b in rowsB)
 B = (sec('B', 'Awareness, immediate protection and source map', 'Record what is known at awareness and where it is documented. Do not copy narratives from the clinical record or the sponsor form.') +
      '<table class="bt"><colgroup><col style="width:34%"><col style="width:24%"><col style="width:42%"></colgroup><thead><tr><th>Item</th><th>Status</th><th>Record / reference</th></tr></thead><tbody>' + tb + '</tbody></table>'
      '')
@@ -71,6 +72,8 @@ pages.append(('', f'<main class="page">{top("Awareness and immediate protection"
 
 # ---------------- Page 3: C
 def q(row, opts, extra=True):
+    if not opts:
+        return f'<tr><td class="el">{row}</td><td class="left" colspan="2"></td></tr>'
     return f'<tr><td class="el">{row}</td><td class="opts-cell">{opts}</td><td class="left"></td></tr>'
 C1 = ''.join([
     q('Adverse event identified?', ck('Yes', 'No', 'Pending')),
@@ -121,7 +124,7 @@ rowsD = [
 ]
 D = (sec('D', 'Reporting to the sponsor', 'Record the proof of reporting, not the content of the sponsor form. Every time limit comes from the CIP or the sponsor procedure. The PIR reads its safety reporting timeliness counts from this section.') +
      '<table class="dt"><colgroup><col style="width:36%"><col style="width:30%"><col style="width:34%"></colgroup><thead><tr><th>Reporting step</th><th>Status</th><th>Record / reference</th></tr></thead><tbody>' +
-     ''.join(f'<tr><td class="el">{a}</td><td class="opts-cell">{b}</td><td class="left"></td></tr>' for a, b in rowsD) + '</tbody></table>')
+     ''.join(row3(a, b) for a, b in rowsD) + '</tbody></table>')
 pages.append(('', f'<main class="page">{top("Reporting to the sponsor")}{strip("Sponsor safety case ID")}<section class="section compact">{D}</section>{foot("Reporting to the sponsor", 4)}</main>'))
 
 # ---------------- Page 5: E (landscape, repeatable)
