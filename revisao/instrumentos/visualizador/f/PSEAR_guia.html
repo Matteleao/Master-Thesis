@@ -1,0 +1,34 @@
+<!doctype html><html lang="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PSEAR · guia</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap"><style>
+:root{--bg:#f2f4f7;--paper:#ffffff;--ink:#14202e;--muted:#5b6878;--line:#d4dbe4;--navy:#1f4173;--soft:#eaf1f9;--ok:#2f7a46;--ask:#9a6a12;
+--sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#11161d;--paper:#18202a;--ink:#e3e9f0;--muted:#9aa7b6;--line:#2c3744;--navy:#9cbbe6;--soft:#1e2b3b;--ok:#6cc58a;--ask:#e0b45a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#11161d;--paper:#18202a;--ink:#e3e9f0;--muted:#9aa7b6;--line:#2c3744;--navy:#9cbbe6;--soft:#1e2b3b;--ok:#6cc58a;--ask:#e0b45a;color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--sans)}
+.wrap{max-width:860px;margin:0 auto;padding-block:24px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:18px 22px;margin-bottom:14px}
+h1{font-size:22px;margin:0 0 4px;text-wrap:balance}h2{font-size:16px;margin:0 0 10px;color:var(--navy)}
+.lead{font-size:16.5px;margin:6px 0 0}
+.mono{font-family:var(--mono);font-weight:600}
+p{margin:0 0 10px}p:last-child{margin:0}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{border-top:1px solid var(--line);padding:8px 8px;text-align:left;vertical-align:top}
+th{font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);border-top:0}
+td.sec{font-family:var(--mono);font-weight:600;white-space:nowrap;color:var(--navy)}
+.tag{display:inline-block;font-size:12px;border-radius:999px;padding:1px 9px;white-space:nowrap}
+.ok{color:var(--ok);border:1px solid var(--ok)}.ask{color:var(--ask);border:1px solid var(--ask)}
+.flow{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);gap:10px;align-items:center}
+.box{border:1px solid var(--line);border-radius:6px;padding:10px 12px;background:var(--soft);font-size:13.5px;min-width:0}
+.box b{display:block;color:var(--navy);margin-bottom:3px}
+.arrow{color:var(--muted);font-size:18px}
+ul,ol{margin:0;padding-left:20px}li{margin:4px 0}
+@media (max-width:620px){.flow{grid-template-columns:minmax(0,1fr)}.arrow{transform:rotate(90deg);justify-self:center}}
+td.sec{white-space:normal;font-family:var(--sans);font-weight:500;font-size:13px;width:22%}td:nth-child(2){width:48%}.src{font-size:12px;color:var(--muted);white-space:nowrap}.part{color:var(--ask);border:1px solid var(--ask)}.miss{color:#b42318;border:1px solid #b42318}.note{font-size:13px;color:var(--muted)}</style></head><body><div class="wrap">
+<div class="card"><h1><span class="mono">PSEAR</span> · Participant Screening and Eligibility Assessment Record</h1><p class="lead">O PSEAR documenta a decisão de elegibilidade de um candidato, critério por critério.</p><p class="note">Base: texto da tese (Caps. 4 e 5, Tabela 4.3). Itens marcados "inferido" não estão escritos na tese. "Onde está" se refere à versão atual, v0.7 (PDF, 7 páginas).</p></div>
+<div class="card"><h2>Que problema ele resolve</h2><p>Num estudo de ombro, a decisão depende muitas vezes de anatomia lida na imagem e do procedimento planejado, e um erro na inclusão vira irreversível depois do implante. A decisão tem de poder ser reconstruída com a evidência que existia no momento.</p></div>
+<div class="card"><h2>Como a informação passa por ele</h2><div class="flow"><div class="box"><b>Entra</b>Os critérios do CIP vigente, a evidência clínica, de imagem e de avaliação, e o consentimento.</div><div class="arrow" aria-hidden="true">→</div><div class="box"><b>No PSEAR</b>Cada critério com a fonte, a data em que a evidência ficou disponível, a segunda revisão quando necessária e a decisão assinada.</div><div class="arrow" aria-hidden="true">→</div><div class="box"><b>Sai</b>A decisão para o SIFSL; os dados do indicador de qualidade da inclusão no PIR; a passagem para a inclusão.</div></div></div>
+<div class="card"><h2>O que ele tem que cobrir</h2><div class="tbl"><table><tr><th>#</th><th>O PSEAR precisa…</th><th>Fonte</th><th>Onde está</th><th>Situação</th></tr><tr><td>1</td><td>Verificar critério por critério contra o CIP vigente.</td><td class="src">4.4.3</td><td class="sec">G</td><td><span class="tag ok">coberto</span></td></tr><tr><td>2</td><td>Registrar a fonte da evidência e a data em que ficou disponível.</td><td class="src">4.4.3, 4.5.1</td><td class="sec">G (só a fonte)</td><td><span class="tag part">parcial</span></td></tr><tr><td>3</td><td>Fazer as avaliações que exigem consentimento só depois dele.</td><td class="src">4.4.3</td><td class="sec">B</td><td><span class="tag ok">coberto</span></td></tr><tr><td>4</td><td>Registrar a decisão antes da inclusão.</td><td class="src">4.4.3</td><td class="sec">K</td><td><span class="tag ok">coberto</span></td></tr><tr><td>5</td><td>Segunda revisão independente para critérios de imagem ou de várias fontes.</td><td class="src">4.4.3</td><td class="sec">H</td><td><span class="tag ok">coberto</span></td></tr><tr><td>6</td><td>Divergência não resolvida vai ao PI, e a inclusão espera.</td><td class="src">4.4.3</td><td class="sec">H</td><td><span class="tag ok">coberto</span></td></tr><tr><td>7</td><td>O investigador assina a decisão.</td><td class="src">4.4.3</td><td class="sec">L</td><td><span class="tag ok">coberto</span></td></tr><tr><td>8</td><td>Não virar registro clínico paralelo.</td><td class="src">4.4.4</td><td class="sec">C a F copiam resultados</td><td><span class="tag miss">falta</span></td></tr><tr><td>9</td><td>Sinalizar o critério que ficou ambíguo, para o indicador ver repetição.</td><td class="src">4.5.1 (inferido)</td><td class="sec">—</td><td><span class="tag miss">falta</span></td></tr></table></div></div>
+<div class="card"><h2>O que ele não faz</h2><ul><li>Não agrega candidatos: isso é o SIFSL.</li><li>Não substitui o termo de consentimento nem a fonte.</li></ul></div>
+<div class="card"><h2>Para você decidir</h2><ol><li>Posso tirar as seções C a F, que copiam resultados clínicos, e deixar o critério a critério com fonte e data?</li><li>Quer a coluna &quot;data em que a evidência ficou disponível&quot;?</li></ol></div>
+</div></body></html>
