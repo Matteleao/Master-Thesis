@@ -28,6 +28,31 @@
       }
     },
     {
+      "instrument": "POT",
+      "version": "1.1",
+      "approval": "Concluído pelo autor em 30/10/2026",
+      "variants": {
+        "blank": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/POT/POT_v1.1_blank.html",
+          "source_sha256": "a923c2ac4a61265ab0c1f81d733c65d5bd33f7b38e052793913e905c49b02d4c",
+          "html": "HTML/blank/POT_v1.1_blank.html",
+          "html_sha256": "a923c2ac4a61265ab0c1f81d733c65d5bd33f7b38e052793913e905c49b02d4c",
+          "pdf": "PDF/blank/POT_v1.1_blank.pdf",
+          "pdf_sha256": "8a1adbefbab99a656f95044e2a36273618b5c15af817f6ebcc819397a2e86dbc",
+          "pdf_pages": 6
+        },
+        "filled": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/POT/POT_v1.1_filled.html",
+          "source_sha256": "b5b2cb78ed4e8f968b61c75cca95fc52fbd06a534a034a3825d058ec082e05fe",
+          "html": "HTML/filled/POT_v1.1_filled.html",
+          "html_sha256": "b5b2cb78ed4e8f968b61c75cca95fc52fbd06a534a034a3825d058ec082e05fe",
+          "pdf": "PDF/filled/POT_v1.1_filled.pdf",
+          "pdf_sha256": "7ddd08ba13d71b6d403afe3ea6fec501a0cc22dfe88eca78da96d5fdfa8f78f4",
+          "pdf_pages": 6
+        }
+      }
+    },
+    {
       "instrument": "DTRM",
       "version": "0.2",
       "approval": "Aceito no histórico recebido",

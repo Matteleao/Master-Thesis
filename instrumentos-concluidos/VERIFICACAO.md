@@ -11,8 +11,9 @@ Data: 30/10/2026. Branch: `codex/thesis-work`.
 | SCR v0.5 | 4 / 4 páginas | 4 / 4 páginas | Conferido |
 | SCML v0.7 | 5 / 5 páginas | 5 / 5 páginas | Conferido |
 | SLCT v0.4 | 6 / 6 páginas | 6 / 6 páginas | Conferido |
+| POT v1.1 | 6 / 6 páginas | 6 / 6 páginas | Conferido |
 
-Total: 14 HTMLs e 14 PDFs, com 68 páginas de PDF.
+Total: 16 HTMLs e 16 PDFs, com 80 páginas de PDF.
 
 Conferências realizadas:
 
@@ -26,3 +27,5 @@ Conferências realizadas:
 A exportação não reescreve o conteúdo dos instrumentos. Arial e Comic Sans MS são carregadas apenas durante a exportação; Z003 é o fallback cursivo das assinaturas específicas. Os HTMLs conservam seu comportamento original e listas de fontes.
 
 A conferência verifica a correspondência e a apresentação dos arquivos, sem reabrir o conteúdo já aceito pelo autor. O simulado SLCT foi gerado por autorização expressa nesta organização, sem alterar a versão em branco concluída.
+
+POT v1.1 (30/10/2026): PDFs exportados com Chromium, A4 com páginas 3 e 5 em paisagem, sem transbordamento nas 6 páginas das duas versões. O ambiente desta exportação não tinha Arial, Comic Sans MS nem Z003; foram usadas Liberation Sans (métrica de Arial), Comic Neue e Dancing Script, incorporadas aos PDFs. Os HTMLs não foram alterados para isso.
