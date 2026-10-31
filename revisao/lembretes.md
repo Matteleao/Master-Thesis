@@ -208,3 +208,7 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 ## 31/10/2026 — IMC v1.5 concluído; SIRR v0.6 em revisão
 - IMC v1.5 concluído pelo autor (Codex: HTML, PDF, manifesto, README, VERIFICACAO, checklist 14/24).
 - SIRR v0.6 (5 páginas): A com tabela; B elementos; C resposta local por categoria (preenchível); D requisitos IMG-01..08 em paisagem com Implementation/Evidence separados; E equipamento e teste de transferência com validade; F pessoas; G caminhos; H gaps e ações ("bloqueia submissão?"); I conclusão do site; J histórico com gatilhos; K atestação e referências do sponsor (ativação é decisão do sponsor).
+
+## 31/10/2026 — regra das caixas no preenchido
+- Nas versões preenchidas, caixa marcada = "X" manuscrito azul (mesma fonte cursiva), caixa sem fundo azul e sem visto de computador. Vale do ICDL v0.15 em diante; os já concluídos ficam como estão (decisão do autor).
+- Concluídos hoje: IMC v1.5, SIRR v0.6, PSEAR v0.94, SIFSL v0.5, PFVR v0.7. Numeração: candidato CAND-014-nnn; PSEAR-014-nnn com o número do candidato; IQL mantém 4 dígitos.
