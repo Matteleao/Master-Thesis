@@ -59,7 +59,7 @@ for r, e in zip(rows('e1t'), [('X-ray, three views', '14 Aug 2026', 'Right shoul
                               ('C-reactive protein', '12 Aug 2026', 'Blood', 'Sample L-88310', 'Yes', '3 mg/L (normal)')]):
     td = r.findall('td'); put(td[1], e[0]); put(td[2], e[1]); put(td[3], e[2]); put(td[4], e[3]); tick(td[5], e[4]); put(td[6], e[5])
 for r, e in zip(rows('e2t'), [('Cuff tear arthropathy present (inclusion 2)?', 'Yes: Hamada 4a meets the CIP definition.', 'RR-55120 · Dr H. Meyer, 15 Aug'),
-                              ('Glenoid bone loss needing a graft (exclusion 4)?', 'No: B2 with 12 degrees retroversion, correctable by reaming. First read by the Sub-I as possible B3; settled by the PI (I-1).', 'RR-55121 · Dr H. Meyer, 15 Aug; PI 21 Aug')]):
+                              ('Glenoid bone loss needing a graft (exclusion 4)?', 'No: B2 with 12 degrees retroversion, correctable by reaming. First read by the Sub-I as possible B3; settled by the PI (H-1).', 'RR-55121 · Dr H. Meyer, 15 Aug; PI 21 Aug')]):
     td = r.findall('td')
     for k in range(3): put(td[k], e[k])
 for r, f in zip(rows('ftb'), [('Cuff tear arthropathy with loss of active elevation', 'Clinic note 11 Aug · L. Ortiz', 'Confirmed'),
@@ -73,16 +73,17 @@ G = [('Inclusion', 'Inclusion 1 · Age 60 years or older', 'ID card copy, 11 Aug
      ('Inclusion', 'Inclusion 4 · Planned primary reverse arthroplasty with GLENOS', 'F-1 to F-3 · 15 Aug', 'Met', 'L. Ortiz 21 Aug', '', ''),
      ('Inclusion', 'Inclusion 5 · Able to attend visits to 24 months', 'Clinic note 11 Aug · 11 Aug', 'Met', 'L. Ortiz 21 Aug', '', ''),
      ('Exclusion', 'Exclusion 1 · Previous arthroplasty of the same shoulder', 'C-2, clinic note · 11 Aug', 'Met', 'L. Ortiz 21 Aug', '', ''),
-     ('Exclusion', 'Exclusion 2 · Shoulder infection in the past 12 months', 'C-7, C-8, E1-3 · 21 Aug', 'Met', 'L. Ortiz 21 Aug', '', 'I-2'),
+     ('Exclusion', 'Exclusion 2 · Shoulder infection in the past 12 months', 'C-7, C-8, E1-3 · 21 Aug', 'Met', 'L. Ortiz 21 Aug', '', 'H-2'),
      ('Exclusion', 'Exclusion 3 · Deltoid deficiency or axillary nerve palsy', 'D-5 · 11 Aug', 'Met', 'L. Ortiz 21 Aug', '', ''),
-     ('Exclusion', 'Exclusion 4 · Glenoid bone loss needing a graft', 'E1-2, E2-2 · 15 Aug; PI 21 Aug', 'Met', 'L. Ortiz 21 Aug', 'H. Meyer 15 Aug', 'I-1'),
+     ('Exclusion', 'Exclusion 4 · Glenoid bone loss needing a graft', 'E1-2, E2-2 · 15 Aug; PI 21 Aug', 'Met', 'L. Ortiz 21 Aug', 'H. Meyer 15 Aug', 'H-1'),
      ('Exclusion', 'Exclusion 5 · Neuromuscular disease of the upper limb', 'Clinic note 11 Aug · 11 Aug', 'Met', 'L. Ortiz 21 Aug', '', ''),
      ('Exclusion', 'Exclusion 6 · In another interventional study', 'Participant statement, SIFSL · 11 Aug', 'Met', 'L. Ortiz 21 Aug', '', '')]
 for r, g in zip(rows('gt'), G):
     td = r.findall('td'); tick(td[1], g[0]); put(td[2], g[1]); put(td[3], g[2]); tick(td[4], g[3]); put(td[5], g[4]); put(td[6], g[5]); put(td[7], g[6])
-for r in rows('ht'): tick(r.findall('td')[1], 'Yes')
+for r, w in zip(rows('ht'), ['C: 8 of 8 activities complete', 'G: 5 of 5 inclusions met; 6 of 6 exclusions absent', 'B: consent 09:10, first activity 09:40 on 11 Aug', 'H: 2 of 2 items resolved by 21 Aug']):
+    tick(r.findall('td')[1], 'Yes'); put(r.findall('td')[2], w)
 hd = rows('hd'); tick(hd[0], 'Eligible')
-hd[1].findall('td')[1].append(E('span', 'demo-fill txt', 'C complete (8 of 8). G: all 5 inclusions met and all 6 exclusions absent; exclusion 4 settled by the PI on 21 Aug (I-1), exclusion 2 by the family doctor letter (I-2). Consent before the first study activity (B-2).'))
+hd[1].findall('td')[1].append(E('span', 'demo-fill txt', 'C complete (8 of 8). G: all 5 inclusions met and all 6 exclusions absent; exclusion 4 settled by the PI on 21 Aug (H-1), exclusion 2 by the family doctor letter (H-2). Consent before the first study activity (B-2).'))
 for r, i in zip(rows('it'), [('Exclusion 4: Sub-I read the CT as possible B3; radiologist read B2', 'No decision until settled; PI to review CT with both readers', 'PI', '22 Aug 2026', 'Resolved: PI agrees B2, no graft (note 21 Aug)'),
                              ('Exclusion 2: infection history before 2024 not in the hospital record', 'No decision until known; letter requested from the family doctor', 'Research nurse', '22 Aug 2026', 'Resolved: letter 21 Aug, no infection')]):
     td = r.findall('td'); put(td[1], i[0]); put(td[2], i[1]); put(td[3], i[2]); put(td[4], i[3]); tick(td[5], 'Resolved'); put(td[5], i[4])

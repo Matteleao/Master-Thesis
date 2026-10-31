@@ -32,16 +32,16 @@ hdr = ''.join([meta('Study / protocol'), meta('CIP version / amendment'), meta('
                meta('Participant code'), meta('Screening number'), meta('Screening log entry (SIFSL)'), meta('Date first identified'),
                meta('Screening opened'), meta('Responsible assessor / role'), meta('Identification key location'), meta('Controlled location')])
 A = (sec('A', 'Purpose and use') +
-     '<div class="box"><p>The PSEAR records one coded participant\'s eligibility decision before enrollment: consent in place (B), the screening done (C), the findings that matter for eligibility (D to F), each criterion of the current CIP checked against its evidence (G), and the decision (H). Open questions go to I, and no participant is eligible while one is open. Enrollment and handoff follow in J.</p>'
+     '<div class="box"><p>The PSEAR records one coded participant\'s eligibility decision before enrollment: consent in place (B), the screening done (C), the findings that matter for eligibility (D to F), each criterion of the current CIP checked against its evidence (G), open questions and exceptions (H), and the decision (I). No participant is eligible while an item in H is open. Enrollment and handoff follow in J.</p>'
      '<p>Write only what changes, explains or qualifies the decision, and cite the source for the rest. Consent forms, clinical notes, image reports and the CRF stay in their own records; the screening log (SIFSL) keeps every candidate and links to this record.</p></div>'
      '<table class="purpose"><colgroup><col style="width:22%"><col style="width:26%"><col style="width:26%"><col style="width:26%"></colgroup>'
      '<thead><tr><th>Unit of analysis</th><th>Decision supported</th><th>Inputs</th><th>Outputs</th></tr></thead><tbody><tr>'
      '<td>One coded participant and one eligibility decision.</td>'
      '<td>Whether the candidate may be enrolled, is not eligible, or is held until an open item is resolved.</td>'
      '<td>Current CIP, consent source, clinical records, image reports and Image Quality Log (IQL), laboratory results.</td>'
-     '<td>The decision with its evidence (H), the screening outcome for the SIFSL and the handoff to enrollment (J).</td></tr></tbody></table>')
-B = (sec('B', 'Before screening starts', 'An incomplete gate blocks an eligible decision; open an item in I. Not applicable needs the CIP basis in the reference column.') +
-     table('bt', [34, 14, 30, 22], ['Gate', 'Status', 'Evidence or reference', 'Limitation · I reference'], [
+     '<td>The decision with its evidence (I), the screening outcome for the SIFSL and the handoff to enrollment (J).</td></tr></tbody></table>')
+B = (sec('B', 'Before screening starts', 'An incomplete gate blocks an eligible decision; open an item in H. Not applicable needs the CIP basis in the reference column.') +
+     table('bt', [34, 14, 30, 22], ['Gate', 'Status', 'Evidence or reference', 'Limitation · H reference'], [
          tr(el(g), td(YN('Confirmed', 'Incomplete', 'N/A')), td('', 'left'), td('', 'left')) for g in
          ['Current CIP and screening pathway confirmed', 'Consent on the current form signed before any study-specific activity (version, date and time)', 'People doing the assessments delegated and trained', 'Candidate entered in the screening log (SIFSL)']]))
 pages.append(f'<main class="page">{top("Participant identification, purpose and screening gates")}<section class="meta-grid">{hdr}</section><section class="section compact">{A}</section><section class="section compact">{B}</section>{foot("Identification, purpose and screening gates", 1)}</main>')
@@ -60,32 +60,32 @@ E1 = (sec('E1', 'Imaging and objective tests', 'One short finding only when it e
 pages.append(f'<main class="page">{top("Clinical findings, imaging and objective tests")}<section class="section compact">{D}</section><section class="section compact">{E1}</section>{foot("Clinical findings, imaging and objective tests", 3)}</main>')
 # ---------- Page 4: E2 + F
 E2 = (sec('E2', 'What the images mean for eligibility', 'Only for image findings that decide a criterion. The criterion outcome itself goes in G.') +
-      table('e2t', [26, 50, 24], ['Imaging question', 'Interpretation for eligibility', 'Source · reviewer'], [tr(td('', 'left'), td('', 'left'), td('', 'left')) for _ in range(3)]))
+      table('e2t', [26, 50, 24], ['Imaging question', 'Interpretation for eligibility', 'Source · reviewer'], [tr(td('', 'left'), td('', 'left'), td('', 'left')) for _ in range(4)]))
 F = (sec('F', 'Indication and planned procedure', 'Complete only when the CIP makes compatibility part of eligibility. Do not repeat D or E.') +
      table('ftb', [28, 38, 20, 14], ['Element', 'Compatibility statement', 'Source · reviewer', 'Status'],
            [tr(el(x), td('', 'left'), td('', 'left'), td(YN('Confirmed', 'Not confirmed', 'N/A'))) for x in
             ['Indication for the planned procedure', 'Procedure or treatment pathway in the CIP', 'Planned device, size or configuration', 'Other study-specific requirement']]))
 pages.append(f'<main class="page">{top("Imaging interpretation and planned procedure")}<section class="section compact">{E2}</section><section class="section compact">{F}</section>{foot("Imaging interpretation and planned procedure", 4)}</main>')
 # ---------- Page 5: G (landscape)
-G = (sec('G', 'Each criterion against its evidence', 'One row per inclusion or exclusion criterion of the current CIP. For an exclusion, Met means the exclusion is absent. Cite where the evidence is and the date it became available. Missing or conflicting evidence is Incomplete: open I. A second reviewer only where the CIP or site pathway requires it; the PI settles a disagreement in I.') +
-     table('gt', [3, 6, 27, 22, 10, 11, 11, 10], ['#', 'Type', 'CIP criterion (number and short text)', 'Evidence location · date available', 'Outcome', 'Primary reviewer · date', 'Second reviewer · date', 'I reference'],
+G = (sec('G', 'Each criterion against its evidence', 'One row per inclusion or exclusion criterion of the current CIP. For an exclusion, Met means the exclusion is absent. Cite where the evidence is and the date it became available. Missing or conflicting evidence is Incomplete: open an item in H. A second reviewer only where the CIP or site pathway requires it; the PI settles a disagreement in H.') +
+     table('gt', [3, 6, 27, 22, 10, 11, 11, 10], ['#', 'Type', 'CIP criterion (number and short text)', 'Evidence location · date available', 'Outcome', 'Primary reviewer · date', 'Second reviewer · date', 'H reference'],
            [tr(num(i), td(YN('Inclusion', 'Exclusion')), td('', 'left'), td('', 'left'), td(YN('Met', 'Not met', 'Incomplete')), td(), td(), td()) for i in range(1, 13)]))
 pages.append(f'<main class="page landscape">{top("Eligibility criteria")}<section class="section compact">{G}</section>{foot("Eligibility criteria", 5)}</main>')
 # ---------- Page 6: H + I
-H = (sec('H', 'Eligibility decision', 'Eligible needs every gate Yes. Cite sections and records in the rationale; do not repeat findings.') +
-     table('ht', [44, 14, 42], ['Gate', 'Result', 'Where it is shown'], [
-         tr(el('Required screening activities complete'), td(ck('Yes', 'No', cls='opts')), td('C', 'left')),
-         tr(el('Every criterion met, including absence of each exclusion'), td(ck('Yes', 'No', cls='opts')), td('G', 'left')),
-         tr(el('Consent confirmed before study-specific activity'), td(ck('Yes', 'No', cls='opts')), td('B', 'left')),
-         tr(el('No open item in I'), td(ck('Yes', 'No', cls='opts')), td('I', 'left'))]) +
-     table('hd', [30, 70], None, [tr(el('Decision'), td(ck('Eligible', 'Not eligible', 'Held until I is resolved', cls='opts left'), 'left')),
+I = (sec('I', 'Eligibility decision', 'Eligible needs every gate Yes. Write what confirms each gate (counts, times, item numbers); cite sections and records in the rationale; do not repeat findings.') +
+     table('ht', [44, 14, 42], ['Gate', 'Result', 'Confirmed in (section and what was checked)'], [
+         tr(el('Required screening activities complete'), td(ck('Yes', 'No', cls='opts')), td('', 'left')),
+         tr(el('Every criterion met, including absence of each exclusion'), td(ck('Yes', 'No', cls='opts')), td('', 'left')),
+         tr(el('Consent confirmed before study-specific activity'), td(ck('Yes', 'No', cls='opts')), td('', 'left')),
+         tr(el('No open item or exception'), td(ck('Yes', 'No', cls='opts')), td('', 'left'))]) +
+     table('hd', [30, 70], None, [tr(el('Decision'), td(ck('Eligible', 'Not eligible', 'Held: item open in H', cls='opts left'), 'left')),
                                   tr(el('Rationale (sections and records)'), td('', 'left tall'))]))
-I = (sec('I', 'Open items and exceptions', 'Only for missing, conflicting or unavailable eligibility information. No eligible decision while an item is open. Routine care and CAPA stay in their own records.') +
+H = (sec('H', 'Open items and exceptions', 'Only for missing, conflicting or unavailable eligibility information. No eligible decision while an item is open. Routine care and CAPA stay in their own records.') +
      table('it', [5, 26, 27, 13, 11, 18], ['#', 'Missing item · criterion affected', 'Effect and immediate action', 'Owner (role)', 'Due date', 'Status · resolution'],
            [tr(num(i), td('', 'left'), td('', 'left'), td(), td(), td(ck('Open', 'Resolved', cls='opts col'))) for i in range(1, 5)]))
-pages.append(f'<main class="page">{top("Decision and open items")}<section class="section compact">{H}</section><section class="section compact">{I}</section>{foot("Decision and open items", 6)}</main>')
+pages.append(f'<main class="page">{top("Open items and decision")}<section class="section compact">{H}</section><section class="section compact">{I}</section>{foot("Open items and decision", 6)}</main>')
 # ---------- Page 7: J + K
-J = (sec('J', 'Enrollment and handoff', 'Enrollment only after an eligible decision. These entries show the sequence; the decision stays in H.') +
+J = (sec('J', 'Enrollment and handoff', 'Enrollment only after an eligible decision. These entries show the sequence; the decision stays in I.') +
      table('jt', [34, 66], None, [tr(el(x), td('', 'left')) for x in ['Decision date and time', 'Enrollment date and time · enrollment record', 'Screening log (SIFSL) entry updated', 'Next record opened (for example the ICDL)', 'If not enrolled: reason entered in the SIFSL']]))
 K = (sec('K', 'Signatures and filing', 'The signatures confirm the current CIP, dated evidence, any required second review and the decision.') +
      '<div class="sig3">' + ''.join(f'<div class="signature"><b>{t}</b><div class="sig-field">Name / role: </div><div class="sig-field">Signature / date and time:<span class="sig-line"></span></div></div>'
@@ -101,13 +101,13 @@ td.num{font-weight:700;color:#173c67;font-size:9px}
 .ct td{height:83px;font-size:8.8px;padding:3px 6px}.ct .opts{font-size:7.8px}
 .dt td{height:70px;font-size:8.8px;padding:3px 6px}
 .e1t td{height:78px;font-size:8.8px;padding:3px 6px}.e1t .opts{font-size:7.8px}
-.e2t td{height:125px;font-size:8.8px;padding:3px 6px}
-.ftb td{height:95px;font-size:8.8px;padding:3px 6px}.ftb .opts{font-size:7.8px}
+.e2t td{height:120px;font-size:8.8px;padding:3px 6px}
+.ftb td{height:68px;font-size:8.8px;padding:3px 6px}.ftb .opts{font-size:7.8px}
 .gt td{height:42px;font-size:8.6px;padding:2px 5px}.gt .opts{font-size:7.4px;line-height:1.15}.gt th{font-size:8.4px}
 .ht td{height:50px;font-size:8.8px;padding:3px 7px}.hd{margin-top:6px}.hd td{height:40px;font-size:8.8px;padding:3px 7px}.hd td.tall{height:150px}
 .it td{height:90px;font-size:8.8px;padding:3px 6px}.it .opts{font-size:7.8px}
-.jt td{height:84px;font-size:8.8px;padding:3px 7px}.kt{margin-top:8px}.kt td{height:70px;font-size:8.8px;padding:3px 7px}
-.sig3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:2px}.sig3 .signature{min-height:170px!important}.letter{font-size:15px!important}
+.jt td{height:62px;font-size:8.8px;padding:3px 7px}.jt td.el{text-align:center;font-size:9.6px}.kt{margin-top:8px}.kt td{height:74px;font-size:8.8px;padding:3px 7px}
+.sig3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:2px}.sig3 .signature{min-height:215px!important}.letter{font-size:15px!important}
 </style>
 '''
 open(OUT, 'w').write(head + '<body class="blank-template">\n' + '\n'.join(pages) + '\n' + css + ed + '\n</body></html>\n')
