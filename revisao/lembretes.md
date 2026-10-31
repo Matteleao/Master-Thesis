@@ -204,3 +204,7 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 - Tese v7 (Tese_completa_31-10_v7.docx): Clavien-Dindo em 4.3.3 (parágrafos do log e da revisão), ref. 80 Dindo 2004; citações 80–95 renumeradas para 81–96. Espelho tese/*.md não atualizado (mais antigo).
 - Visualizador: versões anteriores (SCML v0.7, SART v1.0, CSST antes do grau) com rótulo "(anterior)".
 - Próximo: IMC (incluir verificações 11 e 12 do IMP).
+
+## 31/10/2026 — IMC v1.5 concluído; SIRR v0.6 em revisão
+- IMC v1.5 concluído pelo autor (Codex: HTML, PDF, manifesto, README, VERIFICACAO, checklist 14/24).
+- SIRR v0.6 (5 páginas): A com tabela; B elementos; C resposta local por categoria (preenchível); D requisitos IMG-01..08 em paisagem com Implementation/Evidence separados; E equipamento e teste de transferência com validade; F pessoas; G caminhos; H gaps e ações ("bloqueia submissão?"); I conclusão do site; J histórico com gatilhos; K atestação e referências do sponsor (ativação é decisão do sponsor).
