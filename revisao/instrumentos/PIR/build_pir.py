@@ -50,19 +50,23 @@ B = (sec('B', 'Review boundary', 'Fix the boundary before reading any result.') 
      table('bt', [30, 70], None, [tr(el(x), td('', 'left')) for x in ['Records included (IDs or ranges, cut-off)', 'Records missing, late or excluded, and the effect on denominators', 'Rule or source changes in the period', 'Periods compared and whether they are comparable']]))
 pages.append(f'<main class="page">{top("Review identification, purpose and boundary")}<section class="meta-grid">{hdr}</section><section class="section compact">{A}</section><section class="section compact">{B}</section>{foot("Identification, purpose and boundary", 1)}</main>')
 # ---------- Page 2: C rules (landscape)
-C = (sec('C', 'Indicator rules', 'Set before the first participant and approved by the PI. Write each condition so that two reviewers reach the same decision. Rows 7 and 8 are for indicators the site adds.') +
-     table('ct', [17, 14, 13, 14, 14, 14, 14], ['Indicator', 'Source records', 'Unit (denominator)', 'Within rule when', 'Closer review when', 'Action required when', 'Rule ID · version'],
-           [tr(ind(i), td(IND[i][1] if i < 6 else '', 'src'), td('', 'left'), td('', 'left'), td('', 'left'), td('', 'left'), td()) for i in range(8)]))
-pages.append(f'<main class="page landscape">{top("Indicator rules")}{strip()}<section class="section compact">{C}</section>{foot("Indicator rules", 2)}</main>')
+def rstrip():
+    return '<section class="sheet-strip">' + ''.join(meta(c) for c in ['Rule set ID / version', 'Effective from', 'Approved by (PI) / date', 'Replaces version']) + '</section>'
+C = (sec('C', 'Indicator rules (rule sheet)', 'Filled once before the first participant and signed by the PI; the same sheet is attached to every PIR. A rule changes only by a new version entered in the change log, never because of a result already seen. Rows 7 and 8: indicators the site adds.') +
+     table('ct', [17, 14, 13, 14, 14, 14, 14], ['Indicator', 'Source records', 'Unit (denominator)', 'Within rule when', 'Closer review when', 'Action required when', 'Rule ID'],
+           [tr(ind(i), td(IND[i][1] if i < 6 else '', 'src'), td('', 'left'), td('', 'left'), td('', 'left'), td('', 'left'), td()) for i in range(8)]) +
+     '<div class="exh">Change log</div>' +
+     table('cl', [12, 14, 44, 30], ['Version', 'Effective from', 'What changed and why', 'Approved by (PI) / date'], [tr(td(), td(), td('', 'left'), td()) for _ in range(2)]))
+pages.append(f'<main class="page landscape">{top("Indicator rules (rule sheet)")}{rstrip()}<section class="section compact">{C}</section>{foot("Indicator rules (rule sheet)", 2)}</main>')
 # ---------- Page 3: D results across periods (landscape)
 D = (sec('D', 'Results across periods', 'Copy each result from its source record as count / denominator (%). Direction compares the last four periods: a change counts when it passes the closer-review margin or lasts two periods in a row; with fewer than three periods write Too few periods.') +
-     table('dt', [16, 10, 10, 10, 11, 11, 14, 18], ['Indicator', 'Three periods back', 'Two periods back', 'Last period', 'This period', 'Cumulative', 'Direction', 'Decision (C)'],
+     table('dt', [16, 10, 10, 10, 11, 11, 14, 18], ['Indicator', 'Three periods back', 'Two periods back', 'Last period', 'This period', 'Cumulative', 'Direction', 'Decision (rule in C)'],
            [tr(ind(i), td(), td(), td(), td(), td(), td(ck('Better', 'Stable', 'Worse', 'Too few periods', cls='opts col')), td(DEC)) for i in range(8)]))
 pages.append(f'<main class="page landscape">{top("Results across periods")}{strip()}<section class="section compact">{D}</section>{foot("Results across periods", 3)}</main>')
 # ---------- Page 4: E links (landscape)
 E = (sec('E', 'Links between indicators', 'For every indicator not within its rule, look for the same participants, surgeon, staff member, time point, component or process step in the other indicators and in the source records. Write what was compared and the counts. A shared pattern is a lead to test, not a proof of cause.') +
-     table('et', [4, 22, 14, 22, 20, 18], ['#', 'Pattern seen', 'Indicators involved', 'What was compared (records and counts)', 'Likely shared cause', 'Conclusion'],
-           [tr(num(i), td('', 'left'), td(), td('', 'left'), td('', 'left'), td(ck('Supported', 'Not supported', 'Open: needs more data', cls='opts col'))) for i in range(1, 5)]))
+     table('et', [3, 18, 10, 18, 19, 17, 15], ['#', 'Pattern seen', 'Indicators involved', 'Source records (IDs and sections)', 'Comparison and counts', 'Likely shared cause', 'Conclusion'],
+           [tr(num(i), td('', 'left'), td(), td('', 'left'), td('', 'left'), td('', 'left'), td(ck('Supported', 'Not supported', 'Open: needs more data', cls='opts col'))) for i in range(1, 5)]))
 pages.append(f'<main class="page landscape">{top("Links between indicators")}{strip()}<section class="section compact">{E}</section>{foot("Links between indicators", 4)}</main>')
 # ---------- Page 5: F + G
 F = (sec('F', 'Improvement actions', 'One action per cause found in D or E. Set the check that will show it worked before starting it. The receiving record owns the action.') +
@@ -74,7 +78,7 @@ G = (sec('G', 'Did earlier actions work?', 'Compare the indicator before and aft
 pages.append(f'<main class="page">{top("Improvement actions and their effect")}{strip()}<section class="section compact">{F}</section><section class="section compact">{G}</section>{foot("Improvement actions and their effect", 5)}</main>')
 # ---------- Page 6: H conclusion
 H = (sec('H', 'Period conclusion', 'The conclusion covers only the stated period, records and indicators; it does not certify the site.') +
-     table('hc', [34, 12, 54], ['Decision', 'Count', 'Indicators'], [tr(el(x), td(), td('', 'left')) for x in ['Within rule', 'Closer review', 'Action required', 'Not assessable']]) +
+     table('hc', [26, 10, 64], ['Decision', 'Count', 'Indicators (number and name)'], [tr(el(x), td(), td('', 'left')) for x in ['Within rule', 'Closer review', 'Action required', 'Not assessable']]) +
      table('hd', [34, 66], None, [tr(el('Site performance over the periods'), td(ck('Improving', 'Stable', 'Declining', 'Mixed', cls='opts left'), 'left')),
                                   tr(el('What the site learned this period'), td('', 'left tall')),
                                   tr(el('Routes opened (CAPA, SRR, POT, SLCT, sponsor) or none'), td('', 'left')),
@@ -88,7 +92,7 @@ css = '''<style>
 td.el{text-align:left;font-weight:700;color:#173c67;background:#f7f9fb!important;font-size:8.8px}td.src{font-size:8.2px;color:#4d5b6b}
 td.num{font-weight:700;color:#173c67;font-size:9px}
 .bt td{height:112px;font-size:8.8px;padding:3px 7px}
-.ct td{height:61px;font-size:8.6px;padding:2px 5px}.ct th{font-size:8.4px}
+.ct td{height:47px;font-size:8.6px;padding:2px 5px}.exh{background:#dbe7f3;color:#173c67;font-weight:700;font-size:9px;padding:3px 8px;border:1px solid var(--grid);border-bottom:0;margin-top:6px}.exh+table{margin-top:0!important}.cl td{height:24px;font-size:8.6px;padding:2px 5px}.ct th{font-size:8.4px}
 .dt td{height:59px;font-size:8.6px;padding:2px 5px}.dt .opts{font-size:7.4px;line-height:1.15}
 .et td{height:118px;font-size:8.8px;padding:3px 6px}.et .opts{font-size:7.8px}
 .ft td{height:93px;font-size:8.8px;padding:3px 6px}
