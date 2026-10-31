@@ -56,4 +56,4 @@ IQL v0.6 (31/10/2026): mesma exportação do IMP v1.0 (A4, página 2 em paisagem
 
 SRR v1.0 (31/10/2026): mesma exportação do IMP v1.0 (A4, páginas 3 a 5 em paisagem, sem transbordamento nas 7 páginas das duas versões); preenchimento centralizado, à esquerda só no cabeçalho.
 
-CSST v2.0 (31/10/2026): mesma exportação do SRR v1.0 (A4, páginas 3, 4, 7 e 8 em paisagem, sem transbordamento nas 10 páginas das duas versões); preenchimento centralizado, à esquerda só no cabeçalho.
+CSST v2.0 (31/10/2026): mesma exportação do SRR v1.0 (A4, páginas 3, 4, 7 e 8 em paisagem, sem transbordamento nas 10 páginas das duas versões); preenchimento centralizado, à esquerda só no cabeçalho. Revisão final: C1 sem triagem e com todos os momentos da C2; visão geral com variação e acumulado da revisão anterior; rotas da seção H com o ID do sinal.
