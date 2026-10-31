@@ -76,6 +76,6 @@ if(!d.versions.length){view.innerHTML='<div class="empty">Nenhuma versão deste 
 const v=d.versions[curV];open.hidden=false;
 if(v.kind==='html'){view.innerHTML=`<iframe title="${d.acr} ${v.label}" src="${v.path}"></iframe>`;open.href=v.path}
 else{view.innerHTML='<div class="imgs">'+v.pages.map((p,i)=>`<img src="${p}" alt="${d.acr} ${v.label}, página ${i+1}" loading="lazy">`).join('')+'</div>';open.href=v.pages[0]}}
-function route(){show((location.hash||'#imp').slice(1))}
+function route(){show((location.hash||'#iql').slice(1))}
 window.addEventListener('hashchange',route);route();
 </script>
