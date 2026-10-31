@@ -203,6 +203,31 @@
       }
     },
     {
+      "instrument": "SCML",
+      "version": "0.8",
+      "approval": "Revisão de 31/10/2026 pedida pelo autor (grau de Clavien-Dindo); a versão anterior permanece no acervo",
+      "variants": {
+        "blank": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/SCML/SCML_v0.8_blank.html",
+          "source_sha256": "1bc0d05d679fbbd0c9ce6e16aa3446cbe791d617fc8fdb0f8cd5f5976f7a6719",
+          "html": "HTML/blank/SCML_v0.8_blank.html",
+          "html_sha256": "1bc0d05d679fbbd0c9ce6e16aa3446cbe791d617fc8fdb0f8cd5f5976f7a6719",
+          "pdf": "PDF/blank/SCML_v0.8_blank.pdf",
+          "pdf_sha256": "e2897af7f51afcda558f3781783fefd5f9f270ef8332ccbe6e05931cf4d3941b",
+          "pdf_pages": 5
+        },
+        "filled": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/SCML/SCML_v0.8_filled.html",
+          "source_sha256": "202ff32a228298221ff4491a265b4f7072844d1f75d12fe0c09d8265c5283061",
+          "html": "HTML/filled/SCML_v0.8_filled.html",
+          "html_sha256": "202ff32a228298221ff4491a265b4f7072844d1f75d12fe0c09d8265c5283061",
+          "pdf": "PDF/filled/SCML_v0.8_filled.pdf",
+          "pdf_sha256": "4c67e7e80a1a41bff3086d6c6af1315d25273d22e2a2a9a4b731b5d76ae07b46",
+          "pdf_pages": 5
+        }
+      }
+    },
+    {
       "instrument": "SART",
       "version": "1.0",
       "approval": "Concluído pelo autor em 30/10/2026",
@@ -228,27 +253,52 @@
       }
     },
     {
+      "instrument": "SART",
+      "version": "1.1",
+      "approval": "Revisão de 31/10/2026 pedida pelo autor (grau de Clavien-Dindo); a versão anterior permanece no acervo",
+      "variants": {
+        "blank": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/SART/SART_v1.1_blank.html",
+          "source_sha256": "af2e82950ad39599ab331ddc8fc95beb462b1da3e672a5fff1ed496d6f12fcb0",
+          "html": "HTML/blank/SART_v1.1_blank.html",
+          "html_sha256": "af2e82950ad39599ab331ddc8fc95beb462b1da3e672a5fff1ed496d6f12fcb0",
+          "pdf": "PDF/blank/SART_v1.1_blank.pdf",
+          "pdf_sha256": "afa7504e46dddf99af4b1b11cbec9261d39e2f6e5cc37419837533d487caa62c",
+          "pdf_pages": 6
+        },
+        "filled": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/SART/SART_v1.1_filled.html",
+          "source_sha256": "c534b35b345bc595c925d2c50c606bd974dc83c8afec16a0ca7cbdb7bae1c366",
+          "html": "HTML/filled/SART_v1.1_filled.html",
+          "html_sha256": "c534b35b345bc595c925d2c50c606bd974dc83c8afec16a0ca7cbdb7bae1c366",
+          "pdf": "PDF/filled/SART_v1.1_filled.pdf",
+          "pdf_sha256": "bf3497abec3d482ebf342a25f8b2366e8621966ec780739d3b104a341176a713",
+          "pdf_pages": 6
+        }
+      }
+    },
+    {
       "instrument": "CSST",
       "version": "2.0",
       "approval": "Concluído pelo autor em 31/10/2026",
       "variants": {
         "blank": {
           "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/CSST/CSST_v2.0_blank.html",
-          "source_sha256": "aa61dd39f7b1b609194e7c7a3d0b27c5dac7cb6bfd534dd1ce80f96bfd5eb34b",
+          "source_sha256": "aadf07b4c3a07951c562a180b04dd11555e185f0a1fc96114b915b435447bb2a",
           "html": "HTML/blank/CSST_v2.0_blank.html",
-          "html_sha256": "aa61dd39f7b1b609194e7c7a3d0b27c5dac7cb6bfd534dd1ce80f96bfd5eb34b",
+          "html_sha256": "aadf07b4c3a07951c562a180b04dd11555e185f0a1fc96114b915b435447bb2a",
           "pdf": "PDF/blank/CSST_v2.0_blank.pdf",
-          "pdf_sha256": "958248fa8bd3baec83889a67b548dc04e5a429c4162267b5d3129ebd528e09e1",
-          "pdf_pages": 10
+          "pdf_sha256": "a8957c96d9cea8495a84e427f18e34f2da287cd1e33e1d7b4bf90dae02cca32b",
+          "pdf_pages": 11
         },
         "filled": {
           "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/CSST/CSST_v2.0_filled.html",
-          "source_sha256": "79335f601a8a6365ee7b894059eaf91d1123a0959bb83eb5646753db1c6a0908",
+          "source_sha256": "0738ff608c23ea1374c26be5cedd7060183f9806577b685a1859bc5853a64af3",
           "html": "HTML/filled/CSST_v2.0_filled.html",
-          "html_sha256": "79335f601a8a6365ee7b894059eaf91d1123a0959bb83eb5646753db1c6a0908",
+          "html_sha256": "0738ff608c23ea1374c26be5cedd7060183f9806577b685a1859bc5853a64af3",
           "pdf": "PDF/filled/CSST_v2.0_filled.pdf",
-          "pdf_sha256": "ed8ed4fc005b5f6a33ec2c2f834dbed804b8e40f868637efcbeb6e6b4ede4f27",
-          "pdf_pages": 10
+          "pdf_sha256": "e08bdcb46ccdcaeb1e1395b6c00a9424e667d5d31548b55a29e66b14f090ec78",
+          "pdf_pages": 11
         }
       }
     },
@@ -431,8 +481,8 @@
       "Bradley Hand"
     ],
     "source_html_unchanged": true,
-    "pdf_count": 30,
-    "pdf_pages": 171,
+    "pdf_count": 34,
+    "pdf_pages": 195,
     "font_files_redistributed": false,
     "last_addition_date": "2026-10-31"
   }

@@ -26,8 +26,10 @@ instrumentos-concluidos/
 | **SCR** — Surgical Credentialing Record | v0.5 | [blank](HTML/blank/SCR_v0.5_blank.html) | [filled](HTML/filled/SCR_v0.5_filled.html) | [blank](PDF/blank/SCR_v0.5_blank.pdf) | [filled](PDF/filled/SCR_v0.5_filled.pdf) |
 | **SRR** — Site Risk Register | v1.0 | [blank](HTML/blank/SRR_v1.0_blank.html) | [filled](HTML/filled/SRR_v1.0_filled.html) | [blank](PDF/blank/SRR_v1.0_blank.pdf) | [filled](PDF/filled/SRR_v1.0_filled.pdf) |
 | **SCML** — Site Complication Monitoring Log | v0.7 | [blank](HTML/blank/SCML_v0.7_blank.html) | [filled](HTML/filled/SCML_v0.7_filled.html) | [blank](PDF/blank/SCML_v0.7_blank.pdf) | [filled](PDF/filled/SCML_v0.7_filled.pdf) |
+| **SCML** — Site Complication Monitoring Log | v0.8 | [blank](HTML/blank/SCML_v0.8_blank.html) | [filled](HTML/filled/SCML_v0.8_filled.html) | [blank](PDF/blank/SCML_v0.8_blank.pdf) | [filled](PDF/filled/SCML_v0.8_filled.pdf) |
 
 | **SART** — Safety Assessment, Reporting and Tracking Template | v1.0 | [blank](HTML/blank/SART_v1.0_blank.html) | [filled](HTML/filled/SART_v1.0_filled.html) | [blank](PDF/blank/SART_v1.0_blank.pdf) | [filled](PDF/filled/SART_v1.0_filled.pdf) |
+| **SART** — Safety Assessment, Reporting and Tracking Template | v1.1 | [blank](HTML/blank/SART_v1.1_blank.html) | [filled](HTML/filled/SART_v1.1_filled.html) | [blank](PDF/blank/SART_v1.1_blank.pdf) | [filled](PDF/filled/SART_v1.1_filled.pdf) |
 | **CSST** — Complication Signal Surveillance Template | v2.0 | [blank](HTML/blank/CSST_v2.0_blank.html) | [filled](HTML/filled/CSST_v2.0_filled.html) | [blank](PDF/blank/CSST_v2.0_blank.pdf) | [filled](PDF/filled/CSST_v2.0_filled.pdf) |
 | **IMP** — Internal Monitoring Plan | v1.0 | [blank](HTML/blank/IMP_v1.0_blank.html) | [filled](HTML/filled/IMP_v1.0_filled.html) | [blank](PDF/blank/IMP_v1.0_blank.pdf) | [filled](PDF/filled/IMP_v1.0_filled.pdf) |
 | **IQL** — Imaging Quality Log | v0.6 | [blank](HTML/blank/IQL_v0.6_blank.html) | [filled](HTML/filled/IQL_v0.6_filled.html) | [blank](PDF/blank/IQL_v0.6_blank.pdf) | [filled](PDF/filled/IQL_v0.6_filled.pdf) |
@@ -59,3 +61,5 @@ Os PDFs usam paginação A4 do HTML, incluindo páginas em paisagem, cores e tex
 O [manifesto](manifesto.json) registra fontes, hashes e correspondência HTML/PDF. A conferência de exportação é registrada em `VERIFICACAO.md`.
 
 Atualizado em 31/10/2026.
+
+Revisão de 31/10/2026, pedida pelo autor: o grau de Clavien-Dindo completo (I, II, IIIa, IIIb, IVa, IVb, V, sufixo d) entra no SART v1.1 (avaliação do caso), no SCML v0.8 (copiado do SART, com tabela de referência) e no CSST v2.0 (complicações por grau e momento, comparação por grau IIIa–V e gatilhos ajustados). SART v1.0 e SCML v0.7 permanecem no acervo.
