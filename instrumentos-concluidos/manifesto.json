@@ -548,6 +548,31 @@
       }
     },
     {
+      "instrument": "ICDL",
+      "version": "0.15",
+      "approval": "Concluído pelo autor em 31/10/2026",
+      "variants": {
+        "blank": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/ICDL/ICDL_v0.15_blank.html",
+          "source_sha256": "2cbb6a5a9de5a833e64f548ebc613853e0dbf2c7f65ecfd30cc474cc78edbaf1",
+          "html": "HTML/blank/ICDL_v0.15_blank.html",
+          "html_sha256": "2cbb6a5a9de5a833e64f548ebc613853e0dbf2c7f65ecfd30cc474cc78edbaf1",
+          "pdf": "PDF/blank/ICDL_v0.15_blank.pdf",
+          "pdf_sha256": "90847c3a09ba3f3e973dcbadfa2dfa5efb7739459b8ee46e9a1b298aefbc157d",
+          "pdf_pages": 6
+        },
+        "filled": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/ICDL/ICDL_v0.15_filled.html",
+          "source_sha256": "528e25c9ad97bf5b9840d8e18d4382917364cf3ad3dfd21c87c54348d2bc826a",
+          "html": "HTML/filled/ICDL_v0.15_filled.html",
+          "html_sha256": "528e25c9ad97bf5b9840d8e18d4382917364cf3ad3dfd21c87c54348d2bc826a",
+          "pdf": "PDF/filled/ICDL_v0.15_filled.pdf",
+          "pdf_sha256": "a1f03e9d1cd3544182ec3a160ccae8afbfddfc303b48139cb7132b01298b4893",
+          "pdf_pages": 6
+        }
+      }
+    },
+    {
       "instrument": "IQL",
       "version": "0.5",
       "approval": "Publicação adicional autorizada expressamente pelo autor em 31/10/2026; manter simultaneamente todas as versões antigas, sem substituição ou indicação automática de versão vigente.",

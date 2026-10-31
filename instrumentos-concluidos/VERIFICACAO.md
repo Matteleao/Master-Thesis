@@ -49,6 +49,7 @@ Inclusão expressamente autorizada para coexistência, sem apagar ou substituir 
 | Instrumento | HTML blank / PDF blank | HTML filled / PDF filled | Orientação |
 |---|---|---|---|
 | PFVR v0.4 | 5 / 5 páginas | 5 / 5 páginas | Retrato; paisagem; retrato; retrato; retrato |
+| ICDL v0.15 | 6 / 6 páginas | 6 / 6 páginas | Conferido |
 | IQL v0.5 | 4 / 4 páginas | 4 / 4 páginas | Retrato; paisagem; retrato; retrato |
 
 Os HTMLs aprovados desta conversa foram copiados sem reescrever seu conteúdo; hashes SHA-256 no manifesto. Os quatro PDFs foram reabertos e conferidos quanto à contagem de páginas, orientação, texto selecionável, identificação de simulação nos preenchidos e fontes incorporadas (Arial e Bradley Hand nos campos simulados). Nenhum arquivo de fonte é redistribuído.
@@ -76,3 +77,5 @@ PSEAR v0.94 (31/10/2026): mesma exportação do IMP v1.0, sem transbordamento na
 SIFSL v0.5 (31/10/2026): mesma exportação do IMP v1.0, sem transbordamento nas 5 páginas das duas versões.
 
 PFVR v0.7 (31/10/2026): mesma exportação do IMP v1.0, sem transbordamento nas 5 páginas das duas versões.
+
+ICDL v0.15 (31/10/2026): mesma exportação do IMP v1.0, sem transbordamento nas 6 páginas das duas versões.
