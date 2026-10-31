@@ -53,9 +53,9 @@ Inclusão expressamente autorizada pelo autor para coexistir com o acervo anteri
 | **PIDLR** — Post-Investigation Debrief and Lessons Record | v0.4 | [blank](HTML/blank/PIDLR_v0.4_blank.html) | [filled](HTML/filled/PIDLR_v0.4_filled.html) | [blank](PDF/blank/PIDLR_v0.4_blank.pdf) | [filled](PDF/filled/PIDLR_v0.4_filled.pdf) |
 | **IQL** — Imaging Quality Log | v0.5 | [blank](HTML/blank/IQL_v0.5_blank.html) | [filled](HTML/filled/IQL_v0.5_filled.html) | [blank](PDF/blank/IQL_v0.5_blank.pdf) | [filled](PDF/filled/IQL_v0.5_filled.pdf) |
 
-## Pendências que não entram nesta pasta
+## Situação do MRL
 
-- **MRL:** os HTMLs anterior e novo foram arquivados abaixo por pedido do autor em 31/10/2026. A versão nova continua em conferência, conforme o artefato de origem; não foi registrada aprovação final.
+A versão nova foi selecionada pelo autor em 31/10/2026, após a comparação das duas opções. O conjunto final blank/filled consta abaixo; a versão anterior permanece preservada.
 
 ## Critério de inclusão e manutenção
 
@@ -111,3 +111,14 @@ Entrega do ajuste solicitado sobre os HTMLs FUCR v0.8 em `versões alternativas 
 | **FUCR** — Follow-up Compliance Review | v0.9 | [blank](HTML/blank/FUCR_v0.9_blank.html) | [filled](HTML/filled/FUCR_v0.9_filled.html) | [blank](PDF/blank/FUCR_v0.9_blank.pdf) | [filled](PDF/filled/FUCR_v0.9_filled.pdf) |
 
 No preenchido, as quatro medidas mostram limites por contagens inteiras derivados das metas de exemplo já existentes: pelo menos 90% de completude (arredondar sucessos necessários para cima) e no máximo 5% de perdas (arredondar perdas permitidas para baixo). As faixas não representam novos limites clínicos validados. Contagens observadas e decisões mantidas. Cabeçalhos de metadados repetidos retirados das páginas 3–5 nas duas versões. Cada PDF tem cinco páginas.
+
+
+## MRL v1.0 — versão nova selecionada — 31/10/2026
+
+O autor escolheu a versão nova, com plano A–F e registro de gate I–V, e solicitou preenchimento e PDFs. Esta decisão atualiza o status de conferência registrado no histórico de recuperação acima. A opção anterior continua arquivada, sem substituição dos seus bytes.
+
+| Versão selecionada | HTML blank | HTML filled | PDF blank | PDF filled |
+|---|---|---|---|---|
+| **MRL v1.0 nova** | [blank](HTML/blank/MRL_v1.0_blank.html) | [filled](HTML/filled/MRL_v1.0_filled.html) | [blank](PDF/blank/MRL_v1.0_blank.pdf) | [filled](PDF/filled/MRL_v1.0_filled.pdf) |
+
+O blank conserva o HTML aprovado sem alteração. O preenchido usa dados exclusivamente fictícios do exemplo GLENOS-01 / Riverside 014, equipe Maria Silva / Dr Alex Morgan, escrita manuscrita azul e marcações X. Demonstra o plano inicial, o índice de decisões, a revisão MRL-R04 com condições e a verificação posterior que mantém as restrições. Cada PDF tem oito páginas, sendo a página 2 em paisagem.

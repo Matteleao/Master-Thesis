@@ -130,3 +130,16 @@ Base: par FUCR v0.8 em `versões alternativas instrumentos/Claude/`, commit `9f2
 - Scripts do editor idênticos aos da origem. Testado, em ambas as versões: editar texto e marcação, salvar HTML, reabrir e confirmar persistência. Nenhum erro JavaScript registrado.
 - Exportação Chromium/Playwright com CSS de impressão original, cores, fontes incorporadas e texto selecionável. Interface externa de edição e quebra final ocultadas apenas durante a exportação.
 - Dez páginas de PDF reabertas, renderizadas com Poppler e inspecionadas visualmente. Sem folha vazia adicional, texto cortado, transbordamento ou sobreposição com rodapé detectados. Hashes e correspondência no manifesto.
+
+
+## MRL v1.0 nova selecionada: preenchimento e PDFs — 31/10/2026
+
+Seleção expressa do autor após comparar as duas opções. O histórico de recuperação acima permanece como registro da etapa anterior; a opção nova agora foi escolhida para uso. HTML anterior preservado, HTML blank novo idêntico por Git blob `61b97f9ae116dfa285f688c4aa2db6ab5941b336`.
+
+- Blank e filled: oito páginas no HTML e no PDF; página 2 A4 paisagem, demais A4 retrato.
+- Preenchimento exclusivamente simulado, alinhado ao CAPA/PIR v1.0: GLENOS-01 / GS-2026-01, Riverside/014, Maria Silva, Dr Alex Morgan. Plano rev. 1, revisão MRL-R04 em 6 Nov e verificação em 15 Nov. Nenhuma nova liberação de escopo pela mera conclusão de uma ação; condições permanecem enquanto a efetividade não é demonstrada.
+- Mesma fonte manuscrita e assinaturas do exemplo CAPA; opções marcadas com X. Textos, tabelas e estrutura do template preservados; apenas estilos do preenchimento e ajuste tipográfico do campo preenchido do próximo gatilho.
+- Scripts do editor idênticos aos da origem. Testado nas duas versões: editar texto e marcação, salvar e reabrir o HTML, confirmando persistência. Nenhum erro JavaScript registrado.
+- Exportação Chromium/Playwright com fundos coloridos, CSS de impressão, texto selecionável e fontes incorporadas (Arial; Bradley Hand e Snell Roundhand no filled). Interface externa do editor e quebra final suprimidas somente durante a impressão.
+- Dezesseis páginas reabertas, renderizadas com Poppler e inspecionadas visualmente; contagem e orientações conferidas. Sem folha vazia adicional, interface de edição, corte de texto ou sobreposição com rodapé detectados. A estreita folga original da página 2 foi preservada.
+- Hashes SHA-256 e correspondência HTML/PDF no manifesto. Versões anteriores mantidas.

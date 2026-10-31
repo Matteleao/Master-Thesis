@@ -691,7 +691,7 @@
     {
       "instrument": "MRL",
       "version": "1.0",
-      "approval": "HTMLs anterior e novo arquivados a pedido do autor em 31/10/2026; nova versão em conferência, sem aprovação final registrada",
+      "approval": "Versão nova selecionada pelo autor em 31/10/2026; preenchimento simulado e PDFs blank/filled solicitados. Versão anterior preservada para histórico.",
       "artifact_url": "https://claude.ai/artifact/6fJreZVxYQqJy8zs8fZTzh",
       "variants": {
         "blank_previous": {
@@ -716,10 +716,42 @@
           "html": "HTML/blank/MRL_v1.0_blank.html",
           "html_sha256": "96ec614980e313655bdd73283e2427d923b9f79ac5172611fd88e03bce4b5bb8",
           "html_pages": 8,
-          "pdf": null,
-          "pdf_sha256": null,
-          "pdf_pages": null
+          "pdf": "PDF/blank/MRL_v1.0_blank.pdf",
+          "pdf_sha256": "0946ea765680ad762c0dbda1f3afd53b76813fd5871edeb28b5bbfa8afa7be97",
+          "pdf_pages": 8
+        },
+        "filled": {
+          "source": "instrumentos-concluidos/HTML/blank/MRL_v1.0_blank.html",
+          "source_git_blob": "61b97f9ae116dfa285f688c4aa2db6ab5941b336",
+          "source_sha256": "96ec614980e313655bdd73283e2427d923b9f79ac5172611fd88e03bce4b5bb8",
+          "simulation_reference": "GLENOS-01 / GS-2026-01; Riverside / 014; equipe e fontes do CAPA/PIR v1.0",
+          "html": "HTML/filled/MRL_v1.0_filled.html",
+          "html_sha256": "ed89a9f29a737ac488c56e14b024f01b7ba7c92189956ad560ef05e45a385991",
+          "html_pages": 8,
+          "pdf": "PDF/filled/MRL_v1.0_filled.pdf",
+          "pdf_sha256": "ba9fbac0737dccb29ba4b4dfb4a6c602a308aa2eba5058f2b2370027d09b98ff",
+          "pdf_pages": 8
         }
+      },
+      "selected_variant": "blank",
+      "selection_date": "2026-10-31",
+      "verification": {
+        "blank_html_unchanged": true,
+        "simulated_data_only": true,
+        "original_editor_scripts_preserved": true,
+        "editor_text_and_checkbox_save_reopen": true,
+        "fonts_embedded": true,
+        "pdf_pages_visually_inspected": 16,
+        "orientations": [
+          "portrait",
+          "landscape",
+          "portrait",
+          "portrait",
+          "portrait",
+          "portrait",
+          "portrait",
+          "portrait"
+        ]
       }
     },
     {
@@ -765,8 +797,7 @@
     }
   ],
   "pending": {
-    "POT": "Autor pediu nova conferência; não incluído nos concluídos.",
-    "MRL": "Duas versões HTML arquivadas a pedido; nova versão em conferência, sem aprovação final registrada."
+    "POT": "Autor pediu nova conferência; não incluído nos concluídos."
   },
   "export": {
     "date": "2026-10-30",
@@ -782,8 +813,8 @@
       "Snell Roundhand (PIR/CAPA v1.0 signatures)"
     ],
     "source_html_unchanged": true,
-    "pdf_count": 54,
-    "pdf_pages": 303,
+    "pdf_count": 56,
+    "pdf_pages": 319,
     "font_files_redistributed": false,
     "last_addition_date": "2026-10-31"
   }
