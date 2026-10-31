@@ -36,7 +36,7 @@ for k, v in [('Study / protocol', 'GLENOS-01 / GS-2026-01'), ('CIP version', 'CI
     meta(k, v)
 tick(doc.xpath('//section[contains(@class,"meta-grid")]')[0], 'Scheduled')
 # D: scope and sample
-D = [('Yes', '3 of 3', 'PSEAR-014-006 to -008; consent v3.0', ''),
+D = [('Yes', '3 of 3', 'PSEAR-014-012, -019, -020; consent v3.0', ''),
      ('Yes', '14 of 58', 'Task list 12 Aug to 15 Oct; TRE-014-01 to -11', 'Sample of 10 widened to all 4 tasks of S-03 (IMP expansion trigger).'),
      ('Yes', '4 of 4', 'ICDL-014-005 to -008; storage log Aug to Oct', ''),
      ('Yes', '16 of 16', 'ICDL label sheets, accountability log, CRF implant pages', ''),

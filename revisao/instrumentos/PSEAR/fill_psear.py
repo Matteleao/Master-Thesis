@@ -28,27 +28,27 @@ def fillrow(r, vals, start=1):
     for t, v in zip(td[start:], vals): put(t, v)
 for v in doc.xpath('//div[@class="version"]'): v.text = 'SIMULATED · v0.94'
 doc.find('.//title').text = 'PSEAR v0.94 - Simulated Editable'
-for k, v in [('Study / protocol', 'GLENOS-01 / GS-2026-01'), ('CIP version / amendment', 'CIP v4.2 / none'), ('Site / code', 'Riverside Orthopedic Center / 014'), ('PSEAR ID / revision', 'PSEAR-014-007 / r0'),
-             ('Participant code', '014-007'), ('Screening number', 'SCR-014-019'), ('Screening log entry (SIFSL)', 'SIFSL-014-019'), ('Date first identified', '4 Aug 2026'),
-             ('Screening opened', '11 Aug 2026'), ('Responsible assessor / role', 'Dr Lena Ortiz / Sub-investigator'), ('Identification key location', 'Locked cabinet R-214, key log v2'), ('Controlled location', 'ISF tab 5 (Screening) / PSEAR-014-007')]:
+for k, v in [('Study / protocol', 'GLENOS-01 / GS-2026-01'), ('CIP version / amendment', 'CIP v4.2 / none'), ('Site / code', 'Riverside Orthopedic Center / 014'), ('PSEAR ID / revision', 'PSEAR-014-019 / r0'),
+             ('Participant code', '014-007'), ('Candidate code (SIFSL)', 'CAND-014-019'), ('SIFSL line', 'SIFSL-014, line 19'), ('Date first identified', '4 Aug 2026'),
+             ('Screening opened', '11 Aug 2026'), ('Responsible assessor / role', 'Dr Lena Ortiz / Sub-investigator'), ('Identification key location', 'Locked cabinet R-214, key log v2'), ('Controlled location', 'ISF tab 5 (Screening) / PSEAR-014-019')]:
     meta(k, v)
-for r, v in zip(rows('bt'), [('Confirmed', 'CIP v4.2 §5; screening pathway in site instruction SI-SCR-01 v2', ''),
+for r, v in zip(rows('bt'), [('Confirmed', 'CIP v4.2 §5; screening pathway in site instruction SI-ELIG-01 v2', ''),
                              ('Confirmed', 'ICF v3.0 signed 11 Aug 2026 09:10; first study activity 11 Aug 09:40 (consent folder, ISF tab 4)', ''),
                              ('Confirmed', 'Delegation log rev. 6: L. Ortiz, N. Costa, H. Meyer', ''),
-                             ('Confirmed', 'SIFSL-014-019 entered 4 Aug 2026', '')]):
+                             ('Confirmed', 'SIFSL-014 line 19 entered 4 Aug 2026', '')]):
     td = r.findall('td'); tick(td[1], v[0]); put(td[2], v[1]); put(td[3], v[2])
 C = [('Informed consent (ICF v3.0)', 'Yes', '11 Aug 2026', 'Research nurse', 'Consent folder, ISF tab 4', 'Complete'),
      ('Medical history, prior shoulder surgery and infection', 'Yes', '11 Aug 2026', 'Sub-I', 'Clinic note EHR 11 Aug', 'Complete'),
      ('Physical examination: deltoid and axillary nerve', 'Yes', '11 Aug 2026', 'Sub-I', 'Clinic note EHR 11 Aug', 'Complete'),
-     ('Constant score and ASES at baseline', 'Yes', '11 Aug 2026', 'Research nurse', 'Questionnaires Q-014-007-SCR', 'Complete'),
+     ('Constant score and ASES at baseline', 'Yes', '11 Aug 2026', 'Research nurse', 'Questionnaires Q-014-007-BL', 'Complete'),
      ('Shoulder X-ray, three views', 'Yes', '14 Aug 2026', 'Radiology technologist', 'IQL-014-012; report RR-55120', 'Complete'),
      ('CT shoulder for glenoid assessment', 'Yes', '14 Aug 2026', 'Radiology technologist', 'IQL-014-013; report RR-55121', 'Complete'),
      ('C-reactive protein', 'Yes', '12 Aug 2026', 'Laboratory', 'Lab system, sample L-88310', 'Complete'),
      ('Family doctor record on prior infection', 'Yes', '21 Aug 2026', 'Research nurse', 'Letter scanned to EHR 21 Aug', 'Complete')]
 for r, c in zip(rows('ct'), C):
     td = r.findall('td'); put(td[1], c[0]); tick(td[2], c[1]); put(td[3], c[2]); put(td[4], c[3]); put(td[5], c[4]); tick(td[6], c[5])
-for r, d in zip(rows('dt'), [('Shoulder function', 'Constant score', '11 Aug 2026', '38 / 100', 'Q-014-007-SCR', 'N. Costa'),
-                             ('Shoulder function, self-reported', 'ASES', '11 Aug 2026', '31 / 100', 'Q-014-007-SCR', 'N. Costa'),
+for r, d in zip(rows('dt'), [('Shoulder function', 'Constant score', '11 Aug 2026', '38 / 100', 'Q-014-007-BL', 'N. Costa'),
+                             ('Shoulder function, self-reported', 'ASES', '11 Aug 2026', '31 / 100', 'Q-014-007-BL', 'N. Costa'),
                              ('Pain despite 6 months of non-operative care', 'Pain scale 0 to 10; history', '11 Aug 2026', '7 / 10; physiotherapy since Dec 2025', 'Clinic note 11 Aug', 'L. Ortiz'),
                              ('Active forward elevation', 'Goniometer', '11 Aug 2026', '70 degrees', 'Clinic note 11 Aug', 'L. Ortiz'),
                              ('Deltoid and axillary nerve', 'Muscle grading; sensation', '11 Aug 2026', 'Deltoid M5; sensation intact', 'Clinic note 11 Aug', 'L. Ortiz')]):
@@ -87,9 +87,9 @@ hd[1].findall('td')[1].append(E('span', 'demo-fill txt', 'C complete (8 of 8). G
 for r, i in zip(rows('it'), [('Exclusion 4: Sub-I read the CT as possible B3; radiologist read B2', 'No decision until settled; PI to review CT with both readers', 'PI', '22 Aug 2026', 'Resolved: PI agrees B2, no graft (note 21 Aug)'),
                              ('Exclusion 2: infection history before 2024 not in the hospital record', 'No decision until known; letter requested from the family doctor', 'Research nurse', '22 Aug 2026', 'Resolved: letter 21 Aug, no infection')]):
     td = r.findall('td'); put(td[1], i[0]); put(td[2], i[1]); put(td[3], i[2]); put(td[4], i[3]); tick(td[5], 'Resolved'); put(td[5], i[4])
-for r, j in zip(rows('jt'), ['21 Aug 2026, 16:40', '21 Aug 2026, 17:05 · EDC subject 014-007', 'SIFSL-014-019: enrolled, 21 Aug 2026', 'Surgery booked 2 Oct 2026; ICDL-014-007 opened 1 Oct', 'Not applicable']):
+for r, j in zip(rows('jt'), ['21 Aug 2026, 16:40', '21 Aug 2026, 17:05 · EDC subject 014-007', 'SIFSL-014 line 19: enrolled, 21 Aug 2026', 'Surgery booked 2 Oct 2026; ICDL-014-007 opened 1 Oct', 'Not applicable']):
     put(r.findall('td')[1], j)
-for r, k in zip(rows('kt'), ['ISF tab 5 (Screening) / PSEAR-014-007', 'EHR; consent folder ISF tab 4; IQL-014-012, -013', 'SIFSL-014-019']):
+for r, k in zip(rows('kt'), ['ISF tab 5 (Screening) / PSEAR-014-019', 'EHR; consent folder ISF tab 4; IQL-014-012, -013', 'SIFSL-014, line 19']):
     put(r.findall('td')[1], k)
 def sign(title, name, ink, date):
     sg = [s for s in doc.xpath('//div[@class="signature"]') if s.find('b').text_content().strip() == title][0]

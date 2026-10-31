@@ -29,7 +29,7 @@ pages = []
 YN = lambda *l: ck(*l, cls='opts col')
 # ---------- Page 1
 hdr = ''.join([meta('Study / protocol'), meta('CIP version / amendment'), meta('Site / code'), meta('PSEAR ID / revision'),
-               meta('Participant code'), meta('Screening number'), meta('Screening log entry (SIFSL)'), meta('Date first identified'),
+               meta('Participant code'), meta('Candidate code (SIFSL)'), meta('SIFSL line'), meta('Date first identified'),
                meta('Screening opened'), meta('Responsible assessor / role'), meta('Identification key location'), meta('Controlled location')])
 A = (sec('A', 'Purpose and use') +
      '<div class="box"><p>The PSEAR records one coded participant\'s eligibility decision before enrollment: consent in place (B), the screening done (C), the findings that matter for eligibility (D to F), each criterion of the current CIP checked against its evidence (G), open questions and exceptions (H), and the decision (I). No participant is eligible while an item in H is open. Enrollment and handoff follow in J.</p>'

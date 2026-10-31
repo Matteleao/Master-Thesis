@@ -32,29 +32,29 @@ for k, v in [('Study / protocol', 'GLENOS-01 / GS-2026-01'), ('CIP version', 'CI
              ('Period covered / data cut-off', '16 Jun to 15 Oct 2026 / 15 Oct 2026'), ('Log owner / role', 'Maria Silva / Study Coordinator'),
              ('Identity key location (kept separately)', 'Locked cabinet R-214, key log v2'), ('Controlled location', 'ISF tab 5 (Screening) / SIFSL-014')]:
     meta(k, v)
-L = [('SCR-014-001', '17 Jun', '18 Jun', 'Enrolled', '24 Jun', 'PSEAR-014-001', '', '24 Jun · 014-001', ''),
-     ('SCR-014-002', '17 Jun', '', 'Withdrawn before enrollment', '19 Jun', '', '3', '', ''),
-     ('SCR-014-003', '18 Jun', '22 Jun', 'Enrolled', '30 Jun', 'PSEAR-014-002', '', '30 Jun · 014-002', ''),
-     ('SCR-014-004', '22 Jun', '24 Jun', 'Not eligible', '3 Jul', 'PSEAR-SCR-014-004', '1', '', ''),
-     ('SCR-014-005', '25 Jun', '29 Jun', 'Enrolled', '8 Jul', 'PSEAR-014-003', '', '8 Jul · 014-003', ''),
-     ('SCR-014-006', '1 Jul', '', 'Withdrawn before enrollment', '3 Jul', '', '3', '', ''),
-     ('SCR-014-007', '2 Jul', '6 Jul', 'Enrolled', '15 Jul', 'PSEAR-014-004', '', '15 Jul · 014-004', ''),
-     ('SCR-014-008', '9 Jul', '13 Jul', 'Not eligible', '20 Jul', 'PSEAR-SCR-014-008', '1', '', ''),
-     ('SCR-014-009', '14 Jul', '16 Jul', 'Enrolled', '27 Jul', 'PSEAR-014-005', '', '27 Jul · 014-005', ''),
-     ('SCR-014-010', '20 Jul', '22 Jul', 'Closed: other outcome', '4 Aug', 'PSEAR-SCR-014-010', '2', '', ''),
-     ('SCR-014-011', '23 Jul', '27 Jul', 'Not eligible', '5 Aug', 'PSEAR-SCR-014-011', '1', '', ''),
-     ('SCR-014-012', '28 Jul', '30 Jul', 'Enrolled', '12 Aug', 'PSEAR-014-006', '', '12 Aug · 014-006', ''),
-     ('SCR-014-013', '30 Jul', '', 'Withdrawn before enrollment', '31 Jul', '', '3', '', ''),
-     ('SCR-014-014', '31 Jul', '4 Aug', 'Not eligible', '14 Aug', 'PSEAR-SCR-014-014', '1', '', ''),
-     ('SCR-014-015', '1 Aug', '5 Aug', 'Not eligible', '13 Aug', 'PSEAR-SCR-014-015', '1', '', ''),
-     ('SCR-014-016', '3 Aug', '', 'Considered', '3 Aug', '', '', '', 'REC-01'),
-     ('SCR-014-017', '4 Aug', '7 Aug', 'Not eligible', '19 Aug', 'PSEAR-SCR-014-017', '2', '', ''),
-     ('SCR-014-018', '4 Aug', '10 Aug', 'Withdrawn before enrollment', '28 Aug', 'PSEAR-SCR-014-018', '3', '', ''),
-     ('SCR-014-019', '4 Aug', '11 Aug', 'Enrolled', '21 Aug', 'PSEAR-014-007', '', '21 Aug · 014-007', ''),
-     ('SCR-014-020', '2 Sep', '8 Sep', 'Enrolled', '18 Sep', 'PSEAR-014-008', '', '18 Sep · 014-008', 'REC-02'),
-     ('SCR-014-021', '22 Sep', '25 Sep', 'Awaiting eligibility decision', '6 Oct', 'PSEAR-SCR-014-021', '', '', ''),
-     ('SCR-014-022', '9 Oct', '13 Oct', 'Screening active', '13 Oct', '', '', '', ''),
-     ('SCR-014-023', '12 Oct', '', 'Considered', '12 Oct', '', '', '', '')]
+L = [('CAND-014-001', '17 Jun', '18 Jun', 'Enrolled', '24 Jun', 'PSEAR-014-001', '', '24 Jun · 014-001', ''),
+     ('CAND-014-002', '17 Jun', '', 'Withdrawn before enrollment', '19 Jun', '', '3', '', ''),
+     ('CAND-014-003', '18 Jun', '22 Jun', 'Enrolled', '30 Jun', 'PSEAR-014-003', '', '30 Jun · 014-002', ''),
+     ('CAND-014-004', '22 Jun', '24 Jun', 'Not eligible', '3 Jul', 'PSEAR-014-004', '1', '', ''),
+     ('CAND-014-005', '25 Jun', '29 Jun', 'Enrolled', '8 Jul', 'PSEAR-014-005', '', '8 Jul · 014-003', ''),
+     ('CAND-014-006', '1 Jul', '', 'Withdrawn before enrollment', '3 Jul', '', '3', '', ''),
+     ('CAND-014-007', '2 Jul', '6 Jul', 'Enrolled', '15 Jul', 'PSEAR-014-007', '', '15 Jul · 014-004', ''),
+     ('CAND-014-008', '9 Jul', '13 Jul', 'Not eligible', '20 Jul', 'PSEAR-014-008', '1', '', ''),
+     ('CAND-014-009', '14 Jul', '16 Jul', 'Enrolled', '27 Jul', 'PSEAR-014-009', '', '27 Jul · 014-005', ''),
+     ('CAND-014-010', '20 Jul', '22 Jul', 'Closed: other outcome', '4 Aug', 'PSEAR-014-010', '2', '', ''),
+     ('CAND-014-011', '23 Jul', '27 Jul', 'Not eligible', '5 Aug', 'PSEAR-014-011', '1', '', ''),
+     ('CAND-014-012', '28 Jul', '30 Jul', 'Enrolled', '12 Aug', 'PSEAR-014-012', '', '12 Aug · 014-006', ''),
+     ('CAND-014-013', '30 Jul', '', 'Withdrawn before enrollment', '31 Jul', '', '3', '', ''),
+     ('CAND-014-014', '31 Jul', '4 Aug', 'Not eligible', '14 Aug', 'PSEAR-014-014', '1', '', ''),
+     ('CAND-014-015', '1 Aug', '5 Aug', 'Not eligible', '13 Aug', 'PSEAR-014-015', '1', '', ''),
+     ('CAND-014-016', '3 Aug', '', 'Considered', '3 Aug', '', '', '', 'REC-01'),
+     ('CAND-014-017', '4 Aug', '7 Aug', 'Not eligible', '19 Aug', 'PSEAR-014-017', '2', '', ''),
+     ('CAND-014-018', '4 Aug', '10 Aug', 'Withdrawn before enrollment', '28 Aug', 'PSEAR-014-018', '3', '', ''),
+     ('CAND-014-019', '4 Aug', '11 Aug', 'Enrolled', '21 Aug', 'PSEAR-014-019', '', '21 Aug · 014-007', ''),
+     ('CAND-014-020', '2 Sep', '8 Sep', 'Enrolled', '18 Sep', 'PSEAR-014-020', '', '18 Sep · 014-008', 'REC-02'),
+     ('CAND-014-021', '22 Sep', '25 Sep', 'Awaiting eligibility decision', '6 Oct', 'PSEAR-014-021', '', '', ''),
+     ('CAND-014-022', '9 Oct', '13 Oct', 'Screening active', '13 Oct', 'PSEAR-014-022', '', '', ''),
+     ('CAND-014-023', '12 Oct', '', 'Considered', '12 Oct', '', '', '', '')]
 reg = rows('dt', 0) + rows('dt', 1)
 for i, (r, l) in enumerate(zip(reg, L)):
     td = r.findall('td'); put(td[0], str(i + 1))
@@ -65,7 +65,7 @@ for n, st in enumerate(doc.xpath('//section[@class="sheet-strip"]')):
         val = {'SIFSL ID / revision': 'SIFSL-014 / rev. 23', 'Site / code': 'Riverside / 014', 'Data cut-off': '15 Oct 2026', 'Sheet no. / total sheets': f'{n + 1} of 2'}[lab]
         be.getparent().replace(be, E('span', 'demo-entry', val))
 et = rows('et')
-for r, (res, ev) in zip(et, [('Yes', '23 lines; 11 closed with outcome'), ('Yes', '17 PSEAR IDs, all found in ISF tab 5'), ('No', 'REC-02'), ('No', 'REC-01'), ('Yes', 'EDC export 15 Oct: 8 enrolled, all in the log')]):
+for r, (res, ev) in zip(et, [('Yes', '23 lines; 11 closed with outcome'), ('Yes', '18 PSEAR IDs, all found in ISF tab 5'), ('No', 'REC-02'), ('No', 'REC-01'), ('Yes', 'EDC export 15 Oct: 8 enrolled, all in the log')]):
     td = r.findall('td'); tick(td[1], res); put(td[2], ev)
 for r, v in zip(rows('it'), [('REC-01', 'Line 16: considered since 3 Aug, no follow-up recorded', 'Research nurse to contact the referring clinic; close or open screening', 'Research nurse · 22 Oct', 'Open'),
                              ('REC-02', 'Line 20: log enrollment date 17 Sep, EDC 18 Sep', 'Log corrected to 18 Sep (EDC is the source); note in log rev. 23', 'Coordinator · 16 Oct', 'Resolved')]):

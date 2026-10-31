@@ -31,7 +31,7 @@ def strip():
     return '<section class="sheet-strip">' + ''.join(meta(c) for c in ['SIFSL ID / revision', 'Site / code', 'Data cut-off', 'Sheet no. / total sheets']) + '</section>'
 bar = lambda t: f'<div class="exh">{t}</div>'
 STATUS = [('Considered', 'Considered under a code; no formal screening yet.', 'First considered date'),
-          ('Screening active', 'Screening has started and is in progress.', 'Screening opened date'),
+          ('Screening active', 'Screening has started and is in progress.', 'Screening opened date, PSEAR ID'),
           ('Awaiting eligibility decision', 'Evidence or review pending; never treated as eligible.', 'PSEAR ID'),
           ('Eligible, awaiting enrollment', 'Eligible decision made; not yet enrolled.', 'PSEAR ID'),
           ('Enrolled', 'Enrollment done.', 'PSEAR ID, enrollment record'),
@@ -63,7 +63,7 @@ pages.append(f'<main class="page">{top("Log identification, purpose, status and 
 DH = ['#', 'Candidate code', 'First considered', 'Screening opened', 'Status', 'Status date', 'PSEAR ID', 'Non-inclusion category no.', 'Enrollment date · record', 'Issue ID']
 DW = [4, 11, 9, 9, 17, 9, 12, 9, 12, 8]
 GUIDE = ('One line per coded person, numbered across sheets in the order first considered; update the same line when the status changes. Codes only: no names, initials, birth dates or contact details. '
-         'Write the status name from B, and the category number only for a closed non-inclusion. Cite the PSEAR ID and the enrollment record; the content stays in those records. Issue ID comes from D.')
+         'Write the status name from B, and the category number only for a closed non-inclusion. A PSEAR is opened when screening starts and takes the candidate\'s number. Cite the PSEAR ID and the enrollment record; the content stays in those records. Issue ID comes from D.')
 for k in range(2):
     body = sec('C', 'Candidate register', GUIDE) + table('dt' + (' p2' if k else ''), DW, DH, [tr(td('', 'rid'), *[td() for _ in range(9)]) for i in range(12)])
     pages.append(f'<main class="page landscape">{top("Candidate register")}{strip()}<section class="section compact">{body}</section>{foot("Candidate register", 2 + k)}</main>')
