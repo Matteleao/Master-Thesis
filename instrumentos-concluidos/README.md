@@ -32,6 +32,7 @@ instrumentos-concluidos/
 | **SART** — Safety Assessment, Reporting and Tracking Template | v1.1 | [blank](HTML/blank/SART_v1.1_blank.html) | [filled](HTML/filled/SART_v1.1_filled.html) | [blank](PDF/blank/SART_v1.1_blank.pdf) | [filled](PDF/filled/SART_v1.1_filled.pdf) |
 | **CSST** — Complication Signal Surveillance Template | v2.0 | [blank](HTML/blank/CSST_v2.0_blank.html) | [filled](HTML/filled/CSST_v2.0_filled.html) | [blank](PDF/blank/CSST_v2.0_blank.pdf) | [filled](PDF/filled/CSST_v2.0_filled.pdf) |
 | **IMP** — Internal Monitoring Plan | v1.0 | [blank](HTML/blank/IMP_v1.0_blank.html) | [filled](HTML/filled/IMP_v1.0_filled.html) | [blank](PDF/blank/IMP_v1.0_blank.pdf) | [filled](PDF/filled/IMP_v1.0_filled.pdf) |
+| **IMC** — Internal Monitoring Checklist | v1.5 | [blank](HTML/blank/IMC_v1.5_blank.html) | [filled](HTML/filled/IMC_v1.5_filled.html) | [blank](PDF/blank/IMC_v1.5_blank.pdf) | [filled](PDF/filled/IMC_v1.5_filled.pdf) |
 | **IQL** — Imaging Quality Log | v0.6 | [blank](HTML/blank/IQL_v0.6_blank.html) | [filled](HTML/filled/IQL_v0.6_filled.html) | [blank](PDF/blank/IQL_v0.6_blank.pdf) | [filled](PDF/filled/IQL_v0.6_filled.pdf) |
 | **SLCT** — Surgeon Learning Curve Tracking Log | v0.4 | [blank](HTML/blank/SLCT_v0.4_blank.html) | [filled](HTML/filled/SLCT_v0.4_filled.html) | [blank](PDF/blank/SLCT_v0.4_blank.pdf) | [filled](PDF/filled/SLCT_v0.4_filled.pdf) |
 
@@ -63,3 +64,5 @@ O [manifesto](manifesto.json) registra fontes, hashes e correspondência HTML/PD
 Atualizado em 31/10/2026.
 
 Revisão de 31/10/2026, pedida pelo autor: o grau de Clavien-Dindo completo (I, II, IIIa, IIIb, IVa, IVb, V, sufixo d) entra no SART v1.1 (avaliação do caso), no SCML v0.8 (copiado do SART, com tabela de referência) e no CSST v2.0 (complicações por grau e momento, comparação por grau IIIa–V e gatilhos ajustados). SART v1.0 e SCML v0.7 permanecem no acervo. Concluídos pelo autor em 31/10/2026, depois da reorganização da página 1 do SCML (finalidade com tabela, guia B mais curto, tabela de graus no mesmo estilo), da renumeração do CSST (graus em C3, contexto em C4) e da retirada da coluna de participação percentual em E1–E3.
+
+IMC v1.5 foi concluído pelo autor em 31/10/2026: doze verificações iguais às do IMP v1.0, amostra e registros por verificação (D), revisão em paisagem (E) e rota POT em H.

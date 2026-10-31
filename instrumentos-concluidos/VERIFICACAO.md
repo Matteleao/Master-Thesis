@@ -15,6 +15,7 @@ Data: 30/10/2026. Branch: `codex/thesis-work`.
 | SART v1.0 | 6 / 6 páginas | 6 / 6 páginas | Conferido |
 | CSST v2.0 | 11 / 11 páginas | 11 / 11 páginas | Conferido |
 | IMP v1.0 | 9 / 9 páginas | 9 / 9 páginas | Conferido |
+| IMC v1.5 | 7 / 7 páginas | 7 / 7 páginas | Conferido |
 | IQL v0.6 | 4 / 4 páginas | 5 / 5 páginas (2 folhas de log) | Conferido |
 | SRR v1.0 | 7 / 7 páginas | 7 / 7 páginas | Conferido |
 
@@ -61,3 +62,5 @@ CSST v2.0 (31/10/2026): mesma exportação do SRR v1.0 (A4, páginas 3, 4, 7 e 8
 SART v1.1, SCML v0.8 e CSST v2.0 (31/10/2026, grau de Clavien-Dindo): exportação igual à anterior; SART 6/6, SCML 5/5 e CSST 11/11 páginas nas duas versões, sem transbordamento.
 
 Conclusão de 31/10/2026: SCML v0.8 e CSST v2.0 reexportados após as correções finais; SCML 5/5 e CSST 11/11 páginas nas duas versões, sem transbordamento. SART v1.1 sem alteração.
+
+IMC v1.5 (31/10/2026): mesma exportação do IMP v1.0 (A4, páginas 4 e 5 em paisagem, sem transbordamento nas 7 páginas das duas versões).

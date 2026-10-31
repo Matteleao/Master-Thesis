@@ -328,6 +328,31 @@
       }
     },
     {
+      "instrument": "IMC",
+      "version": "1.5",
+      "approval": "Concluído pelo autor em 31/10/2026",
+      "variants": {
+        "blank": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/IMC/IMC_v1.5_blank.html",
+          "source_sha256": "d2731a6687f7c3b1aa583b2e0e82a8beff467ba7c7cb0a47843fce95917e15bc",
+          "html": "HTML/blank/IMC_v1.5_blank.html",
+          "html_sha256": "d2731a6687f7c3b1aa583b2e0e82a8beff467ba7c7cb0a47843fce95917e15bc",
+          "pdf": "PDF/blank/IMC_v1.5_blank.pdf",
+          "pdf_sha256": "d90ca7851463c3f74f8666e2376a22f835bdbb5cca9a9e193d5916b5771f52bc",
+          "pdf_pages": 7
+        },
+        "filled": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/IMC/IMC_v1.5_filled.html",
+          "source_sha256": "672ada1750f8658856ed28185e9816061f8e1f354f85ef4a45fe8c6c8258ad21",
+          "html": "HTML/filled/IMC_v1.5_filled.html",
+          "html_sha256": "672ada1750f8658856ed28185e9816061f8e1f354f85ef4a45fe8c6c8258ad21",
+          "pdf": "PDF/filled/IMC_v1.5_filled.pdf",
+          "pdf_sha256": "7b68ac2100ecddddba37ce7021bcd7f58b625d3a24a0beabc00a7ec1daa5d2d3",
+          "pdf_pages": 7
+        }
+      }
+    },
+    {
       "instrument": "IQL",
       "version": "0.6",
       "approval": "Concluído pelo autor em 31/10/2026; a v0.5 permanece no acervo",
