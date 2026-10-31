@@ -14,7 +14,7 @@ Branch de trabalho: `codex/thesis-work`.
 - Conferir editor, preenchimento/salvamento e paginação antes de acrescentar uma entrega.
 - Gerar PDFs e demonstrações preenchidas quando solicitados; preservar a identificação blank/filled no nome.
 
-## Inventário: 18 HTMLs, 14 instrumentos
+## Inventário: 19 HTMLs, 15 instrumentos
 
 | HTML | Base / origem |
 |---|---|
@@ -29,6 +29,7 @@ Branch de trabalho: `codex/thesis-work`.
 | [IQL_Imaging_Quality_Log_v0.6_blank_editable.html](IQL_Imaging_Quality_Log_v0.6_blank_editable.html) | Primeira alternativa: evolução local dos rascunhos v0.4/v0.5, inicialmente derivados do v0.3. |
 | [IQL_Imaging_Quality_Log_v0.7_blank_editable.html](IQL_Imaging_Quality_Log_v0.7_blank_editable.html) | Reaplicação direta ao HTML legado v0.3, sem ler o corpo dos IQLs revisados. |
 | [MRL_Milestone_Review_Log_v0.4_blank_editable.html](MRL_Milestone_Review_Log_v0.4_blank_editable.html) | Aplicação da análise ao primário legado v0.2, conferido contra o PDF da raiz do Claude. Não usa o MRL v0.3 já reformulado. |
+| [PFVR_Participant_Follow-up_Visit_Record_v0.6_blank_editable.html](PFVR_Participant_Follow-up_Visit_Record_v0.6_blank_editable.html) | Aplicação da análise v0.5 ao HTML primário v0.3, correspondente ao PDF da raiz do Claude. |
 | [PIDLR_Post_Investigation_Debrief_and_Lessons_Record_v0.3_blank_editable.html](PIDLR_Post_Investigation_Debrief_and_Lessons_Record_v0.3_blank_editable.html) | Aplicação da análise ao PIDLR v0.2 primário editado pelo autor, preservando a estrutura de sete páginas. |
 | [PIR_Performance_Indicator_Record_v0.11_blank_editable.html](PIR_Performance_Indicator_Record_v0.11_blank_editable.html) | Revisão do primário v0.8 citado na análise; v0.10 da raiz conferido como referência de comparação. |
 | [PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.92_blank_editable.html](PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.92_blank_editable.html) | Primeira alternativa: HTML local v0.91. |
@@ -84,3 +85,12 @@ As versões preexistentes nas outras pastas do repositório são preservadas. Es
 - Os controles de função antes repetidos na tabela técnica ficam em F, junto das evidências de qualificação e do estado de prontidão da função; G documenta a operação das rotas. E concentra infraestrutura e teste de arquivo/transferência. Cada registro de imagem permanece no IQL; o SIRR recebe somente sinais que afetam o arranjo local.
 - Conclusão do site para submissão separada de review, resposta e decisão de ativação externos. A assinatura local não autoriza ativação, enrollment ou uso de imagem. Observações exigem dono, prazo, rota e impacto; gaps críticos impedem Ready.
 - Blank sem nomes, datas, estudos ou opções simulados. IDs IMG-01 a IMG-06 são identificadores de linhas de requisito, vinculados ao SIRR, e podem ser continuados sem reutilização. Editor e salvar/reabrir testados; quatro páginas inspecionadas, sem overflow, com folga mínima de 28 px até o rodapé.
+
+## PFVR v0.6: origem e revisão
+
+- Primário: `PFVR_Participant_Follow-up_Visit_Record_v0.3.html` local, Git blob `66f90be50b682ac4b2e06f7e8246c95e31974614`. As alternativas v0.4 locais e os HTMLs já reconstruídos nas pastas de revisão não foram usados como base de conteúdo.
+- Referência da raiz do Claude: `PFVR v0.3 Blank.pdf`, Git blob `4df7dbc1c956ffdc3f62c798b2339b0a53e649c7`; as duas cópias locais conferidas têm o mesmo hash. O conteúdo do HTML primário foi lido; o hash do PDF não implica identidade binária entre formatos.
+- Análise aplicada: `Análise - PFVR - Participant Follow-up Visit Record v0.5.md`, Git blob `6e9e4be5c68ae1310fa1151ee490f5a4a92523b5`.
+- Quatro páginas A–L, com componentes em paisagem: B reduzido a famílias; C documenta ocorrência/timing sem concluir a visita; D registra componente, método especificado/usado, CtQ, data real, completude, timing e evidência; E preserva a lente de utilizabilidade; F/G mantêm síntese clínica e fontes; H é condicional; I deriva a síntese; J limita-se à resposta necessária; K diferencia os seis outcomes; L mantém autoria e filing.
+- Componente tardio permanece no mesmo PFVR/visita, com entrada inicial preservada e atualização/continuação datada e atribuída. Cinco linhas repetíveis para componentes e duas para revisão de imagem/teste. FUCR recebe identificação, contagens, causas e impacto, sem taxas agregadas no PFVR. Uma visita perdida não é automaticamente loss to follow-up.
+- Blank sem dados simulados ou opções selecionadas. Editor testado (texto, fonte/cor/negrito/itálico/alinhamento, linhas, colunas, caixas, opções, undo/redo e salvar/reabrir); quatro páginas inspecionadas, sem overflow e com folga mínima ao rodapé de 28 px.
