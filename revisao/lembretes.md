@@ -190,3 +190,4 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 - SRR v1.0 CONCLUÍDO pelo autor (31/10). Preenchido GLENOS-01: 6 riscos (2 controlados, 4 abertos após o caso SART-014-005 e o IQL-014-10), 2 entradas urgentes, 4 decisões assinadas, avaliação geral na J.
 - Preferência visual do autor (para os próximos): onde der, trocar tabela tipo planilha por linhas com rótulo azul à esquerda e espaço para preencher (como a antiga H e a J do SRR), em 1 ou 2 pares por linha. Espaço entre caixinhas de opção quando couber (pode variar por célula).
 - Próximo: MRL.
+- MRL v1.0 em branco (31/10): a partir da v0.7 do autor + análise Codex (v0.3) + tese 4.2.1/4.6. 6 páginas: A+B índice | C configuração M0–M7 (paisagem) | D evidência e suficiência | E decisão do PI (D/E par reimprimível) | F liberação + G mudanças | H registros em uso. Aguardando o autor.
