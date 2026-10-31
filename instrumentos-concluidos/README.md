@@ -50,7 +50,7 @@ Inclusão expressamente autorizada pelo autor para coexistir com o acervo anteri
 | **ICDL** — Intraoperative Checklist and Device Log | v0.15 | [blank](HTML/blank/ICDL_v0.15_blank.html) | [filled](HTML/filled/ICDL_v0.15_filled.html) | [blank](PDF/blank/ICDL_v0.15_blank.pdf) | [filled](PDF/filled/ICDL_v0.15_filled.pdf) |
 | **PIR** — Performance Indicator Record | v1.0 | [blank](HTML/blank/PIR_v1.0_blank.html) | [filled](HTML/filled/PIR_v1.0_filled.html) | [blank](PDF/blank/PIR_v1.0_blank.pdf) | [filled](PDF/filled/PIR_v1.0_filled.pdf) |
 | **CAPA** — Corrective and Preventive Action Log | v1.0 | [blank](HTML/blank/CAPA_v1.0_blank.html) | [filled](HTML/filled/CAPA_v1.0_filled.html) | [blank](PDF/blank/CAPA_v1.0_blank.pdf) | [filled](PDF/filled/CAPA_v1.0_filled.pdf) |
-| **PIDLR** — Post-Investigation Debrief and Lessons Record | v0.4 | [blank](HTML/blank/PIDLR_v0.4_blank.html) | [filled](HTML/filled/PIDLR_v0.4_filled.html) | PDF pendente | PDF pendente |
+| **PIDLR** — Post-Investigation Debrief and Lessons Record | v0.4 | [blank](HTML/blank/PIDLR_v0.4_blank.html) | [filled](HTML/filled/PIDLR_v0.4_filled.html) | [blank](PDF/blank/PIDLR_v0.4_blank.pdf) | [filled](PDF/filled/PIDLR_v0.4_filled.pdf) |
 | **IQL** — Imaging Quality Log | v0.5 | [blank](HTML/blank/IQL_v0.5_blank.html) | [filled](HTML/filled/IQL_v0.5_filled.html) | [blank](PDF/blank/IQL_v0.5_blank.pdf) | [filled](PDF/filled/IQL_v0.5_filled.pdf) |
 
 ## Pendências que não entram nesta pasta
@@ -87,4 +87,4 @@ ICDL v0.15 foi concluído pelo autor em 31/10/2026: seções A–K mantidas; dad
 
 PIR v1.0 e CAPA v1.0 aceitos pelo autor em 31/10/2026; PDFs blank e filled exportados dos HTMLs concluídos e publicados nas respectivas pastas em 31/10/2026.
 
-PIDLR v0.4 concluído pelo autor em 31/10/2026 (publicado em HTML, PDF pendente). PIR v1.0: "Prepared by" trocado por "Document owner".
+PIDLR v0.4 concluído pelo autor em 31/10/2026; HTML e PDFs blank/filled publicados. PIR v1.0: "Prepared by" trocado por "Document owner".

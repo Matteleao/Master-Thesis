@@ -93,3 +93,15 @@ Exportação solicitada pelo autor dos HTMLs mais recentes de `HTML/blank` e `HT
 Chromium/Playwright, A4 conforme CSS, fundos coloridos e texto selecionável. Apenas para impressão, a interface externa do editor foi ocultada e a quebra após a última folha foi desativada, evitando botão de editor e folha vazia final. Nenhuma alteração foi salva nos HTMLs. Arial, Bradley Hand e Snell Roundhand (assinaturas) foram incorporadas conforme usadas pelo HTML; arquivos de fonte não são redistribuídos.
 
 Os quatro PDFs foram reabertos e as 26 páginas foram renderizadas com Poppler e inspecionadas visualmente. Quantidade/orientação correspondem aos HTMLs, rodapés e texto permanecem dentro das páginas, sem transbordamento detectado nem interface de edição. Hashes SHA-256 e contagens constam no manifesto. Os PDFs novos coexistem com o restante do acervo.
+
+
+## PDFs do PIDLR v0.4 — 31/10/2026
+
+Exportação solicitada pelo autor a partir das versões mais recentes em `HTML/blank` e `HTML/filled`, conferidas no commit `57fb2479bb3dabc9a8bca673b312f6aa02bb6272`. HTMLs mantidos sem alteração, com hashes de origem confirmados.
+
+- Blank: 7 páginas no HTML e no PDF.
+- Filled: 7 páginas no HTML e no PDF.
+- A4, páginas 2–5 em paisagem e demais em retrato, conforme o CSS original.
+- Chromium/Playwright com fundos coloridos, texto selecionável e fontes incorporadas. Interface de edição ocultada e quebra após a última folha desativada apenas durante a impressão, sem salvar alterações nos HTMLs.
+- Os PDFs foram reabertos; as 14 páginas foram renderizadas com Poppler e inspecionadas visualmente. Sem página vazia adicional, interface de edição, transbordamento ou sobreposição com rodapé detectados.
+- Correspondência HTML/PDF, SHA-256 e contagens registradas no manifesto; versões anteriores preservadas.
