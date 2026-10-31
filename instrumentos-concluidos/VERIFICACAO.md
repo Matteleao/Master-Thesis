@@ -117,3 +117,16 @@ Pedido do autor: recuperar e arquivar ambas as opções do artefato `https://cla
 Os links foram identificados na interface do artefato e os arquivos recuperados. Após excluir exclusivamente o bloco `frame-runtime` inserido pelo serviço, os bytes coincidem com os dois originais em `revisao/instrumentos/MRL/` no branch de consulta `claude/claudinho-status-check-8tzmxz` (commit `4d414300c64bcfd70a41e8c324d3d8bea2f85cc9`). Os arquivos arquivados usam esses bytes originais; conteúdo, estilo e editor preservados. SHA-256 no manifesto. O branch de origem não foi alterado.
 
 Verificação de recuperação/identidade, sem nova validação de conteúdo ou afirmação de teste interativo. Nenhum PDF ou filled foi criado. As duas versões coexistem; o status em conferência da versão nova foi preservado.
+
+
+## FUCR v0.9 — revisão e exportação — 31/10/2026
+
+Base: par FUCR v0.8 em `versões alternativas instrumentos/Claude/`, commit `9f2c46d3a9cb7f51e82988a01be7ca89d9c84681`. Os originais permanecem intactos. A v0.9 é adicionada por pedido de revisão/exportação, sem registrar aprovação final que não tenha sido declarada.
+
+- Blank e filled: cinco páginas no HTML e no PDF, todas A4 em retrato.
+- Removidos os cabeçalhos de metadados das páginas 3–5; título do instrumento e rodapés preservados.
+- Filled: somente a coluna Rule limit, suas larguras e a explicação correspondente foram ajustadas, além da versão e dos cabeçalhos solicitados. Contagens atuais/anteriores e decisões selecionadas das quatro medidas conferidas como idênticas às da origem.
+- Metas ilustrativas originais de 90% de completude e máximo 5% de perdas mantidas. Sucessos mínimos = ceil(0.90N); perdas máximas = floor(0.05N). Regras verificadas para N de 1 a 100; N=0 não avaliável. O arredondamento não é estimativa de confiança nem validação de limite clínico.
+- Scripts do editor idênticos aos da origem. Testado, em ambas as versões: editar texto e marcação, salvar HTML, reabrir e confirmar persistência. Nenhum erro JavaScript registrado.
+- Exportação Chromium/Playwright com CSS de impressão original, cores, fontes incorporadas e texto selecionável. Interface externa de edição e quebra final ocultadas apenas durante a exportação.
+- Dez páginas de PDF reabertas, renderizadas com Poppler e inspecionadas visualmente. Sem folha vazia adicional, texto cortado, transbordamento ou sobreposição com rodapé detectados. Hashes e correspondência no manifesto.

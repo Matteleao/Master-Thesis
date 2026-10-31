@@ -100,3 +100,14 @@ Arquivamento expressamente solicitado pelo autor a partir do [artefato compartil
 | v1.0 nova | [HTML novo](HTML/blank/MRL_v1.0_blank.html) | 8 folhas; plano e registro de gate separados |
 
 Os arquivos foram recuperados do artefato. Removido apenas o invólucro de execução adicionado pela plataforma, ambos coincidem por Git blob com os HTMLs originais do branch de consulta. Conteúdo, estilos e editor dos instrumentos não foram reescritos. O artefato não ofereceu preenchidos para essas duas opções; não foram gerados PDFs neste arquivamento.
+
+
+## FUCR v0.9 — revisão e PDFs solicitados em 31/10/2026
+
+Entrega do ajuste solicitado sobre os HTMLs FUCR v0.8 em `versões alternativas instrumentos/Claude/`, que permanecem preservados. Esta inclusão registra a revisão e exportação solicitadas, sem atribuir uma declaração de aprovação final ao autor.
+
+| Instrumento | Versão | HTML blank | HTML filled | PDF blank | PDF filled |
+|---|---|---|---|---|---|
+| **FUCR** — Follow-up Compliance Review | v0.9 | [blank](HTML/blank/FUCR_v0.9_blank.html) | [filled](HTML/filled/FUCR_v0.9_filled.html) | [blank](PDF/blank/FUCR_v0.9_blank.pdf) | [filled](PDF/filled/FUCR_v0.9_filled.pdf) |
+
+No preenchido, as quatro medidas mostram limites por contagens inteiras derivados das metas de exemplo já existentes: pelo menos 90% de completude (arredondar sucessos necessários para cima) e no máximo 5% de perdas (arredondar perdas permitidas para baixo). As faixas não representam novos limites clínicos validados. Contagens observadas e decisões mantidas. Cabeçalhos de metadados repetidos retirados das páginas 3–5 nas duas versões. Cada PDF tem cinco páginas.

@@ -721,6 +721,47 @@
           "pdf_pages": null
         }
       }
+    },
+    {
+      "instrument": "FUCR",
+      "version": "0.9",
+      "approval": "Revisão e exportação blank/filled solicitadas pelo autor em 31/10/2026; inclusão desta entrega sem apagar versões anteriores.",
+      "revision": {
+        "based_on": "0.8",
+        "scope": "Limites ilustrativos por contagens inteiras no filled; retirada dos cabeçalhos de metadados das páginas 3–5 nas duas versões.",
+        "rule_basis": "Metas de exemplo preservadas: completude >=90% (ceil(0.90N) sucessos) e perdas <=5% (floor(0.05N) perdas). Não são novos limites clínicos validados nem limites estatísticos de controle.",
+        "original_measure_counts_and_decisions_preserved": true
+      },
+      "variants": {
+        "blank": {
+          "source": "versões alternativas instrumentos/Claude/FUCR_v0.8_blank.html",
+          "source_commit": "9f2c46d3a9cb7f51e82988a01be7ca89d9c84681",
+          "source_git_blob": "f0fd926e21849313ec6029d120e4b1246d2b6c34",
+          "html": "HTML/blank/FUCR_v0.9_blank.html",
+          "html_sha256": "58cbd04436c3cf79386a4ac4f8ef035278983918f09d6c827d448e5fe766e204",
+          "pdf": "PDF/blank/FUCR_v0.9_blank.pdf",
+          "pdf_sha256": "d5cbb68222b729bae1d816415d8614fa558d832ffc65677c6e0bd52dfe5f81df",
+          "pdf_pages": 5
+        },
+        "filled": {
+          "source": "versões alternativas instrumentos/Claude/FUCR_v0.8_filled.html",
+          "source_commit": "9f2c46d3a9cb7f51e82988a01be7ca89d9c84681",
+          "source_git_blob": "c3567c7111a16ce041b005df566c6a062b909423",
+          "html": "HTML/filled/FUCR_v0.9_filled.html",
+          "html_sha256": "6f937932b2ea1233d1c8a920d059f88e97c55f8eb4c8f8fb426b0db04301f0d4",
+          "pdf": "PDF/filled/FUCR_v0.9_filled.pdf",
+          "pdf_sha256": "07b6bfe397eabdc85cbb500809498fdb4106927b70cf883a6f728370d1be2117",
+          "pdf_pages": 5
+        }
+      },
+      "verification": {
+        "pdf_pages_visually_inspected": 10,
+        "portrait_pages_only": true,
+        "fonts_embedded": true,
+        "editor_text_and_checkbox_save_reopen": true,
+        "editor_script_unchanged": true,
+        "integer_rules_checked_n_1_to_100": true
+      }
     }
   ],
   "pending": {
@@ -741,8 +782,8 @@
       "Snell Roundhand (PIR/CAPA v1.0 signatures)"
     ],
     "source_html_unchanged": true,
-    "pdf_count": 52,
-    "pdf_pages": 293,
+    "pdf_count": 54,
+    "pdf_pages": 303,
     "font_files_redistributed": false,
     "last_addition_date": "2026-10-31"
   }
