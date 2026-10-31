@@ -14,7 +14,7 @@ Branch de trabalho: `codex/thesis-work`.
 - Conferir editor, preenchimento/salvamento e paginação antes de acrescentar uma entrega.
 - Gerar PDFs e demonstrações preenchidas quando solicitados; preservar a identificação blank/filled no nome.
 
-## Inventário: 15 HTMLs, 11 instrumentos
+## Inventário: 16 HTMLs, 12 instrumentos
 
 | HTML | Base / origem |
 |---|---|
@@ -29,6 +29,7 @@ Branch de trabalho: `codex/thesis-work`.
 | [IQL_Imaging_Quality_Log_v0.6_blank_editable.html](IQL_Imaging_Quality_Log_v0.6_blank_editable.html) | Primeira alternativa: evolução local dos rascunhos v0.4/v0.5, inicialmente derivados do v0.3. |
 | [IQL_Imaging_Quality_Log_v0.7_blank_editable.html](IQL_Imaging_Quality_Log_v0.7_blank_editable.html) | Reaplicação direta ao HTML legado v0.3, sem ler o corpo dos IQLs revisados. |
 | [MRL_Milestone_Review_Log_v0.4_blank_editable.html](MRL_Milestone_Review_Log_v0.4_blank_editable.html) | Aplicação da análise ao primário legado v0.2, conferido contra o PDF da raiz do Claude. Não usa o MRL v0.3 já reformulado. |
+| [PIDLR_Post_Investigation_Debrief_and_Lessons_Record_v0.3_blank_editable.html](PIDLR_Post_Investigation_Debrief_and_Lessons_Record_v0.3_blank_editable.html) | Aplicação da análise ao PIDLR v0.2 primário editado pelo autor, preservando a estrutura de sete páginas. |
 | [PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.92_blank_editable.html](PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.92_blank_editable.html) | Primeira alternativa: HTML local v0.91. |
 | [PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.93_blank_editable.html](PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.93_blank_editable.html) | Reaplicação: HTML legado v0.7, versão do PDF original da raiz. |
 | [SIFSL_Subject_Identification_and_Failure_Screening_Log_v0.4_blank_editable.html](SIFSL_Subject_Identification_and_Failure_Screening_Log_v0.4_blank_editable.html) | Construção independente da especificação; original v0.2 conferido. |
@@ -54,3 +55,11 @@ As versões preexistentes nas outras pastas do repositório são preservadas. Es
 - Revisão: fator CtQ específico e sua fonte; prioridade atual/residual pelo maior score aplicável, sem média/produto; N/A e Critical explícitos; controles implementados separados de ações planejadas; risco e estado da ação independentes; revisão com evidência de efetividade; ponte urgente para Risk ID e rota competente; aceitação/fechamento com justificativa.
 - A referência de domínios foi atualizada para o catálogo de 12 domínios, considerando o item X-list do requisito SRR. O perfil separado de fatores CtQ proposto em X-CtQ não foi tornado obrigatório.
 - Seis páginas. Registros de trabalho em branco; ilustração de preenchimento confinada à orientação E, sem estudo, datas, participantes ou Risk IDs simulados. Editor e paginação testados, incluindo salvar/reabrir.
+
+## PIDLR v0.3: origem e revisão
+
+- Primário: `PIDLR_Post_Investigation_Debrief_and_Lessons_Record_v0_2_edited_2026-09-29_13-02-59.html`, Git blob `1480c522f785f586e95eabd3247167271a22ad39`, indicado na análise. O HTML legado v0.2 não editado também foi conferido (`64695fcacc44a4cf8e15a9a868c5b3f621221055`).
+- Referência da raiz do Claude: `PIDLR v0.2 Blank.pdf`, Git blob `a99a8b9d6821cdbacfaf7113b9b022e4fc3de6be`; as cópias locais correspondem a esse hash. Nenhum PIDLR já reconstruído foi usado como base.
+- Análise aplicada: `Análise - PIDLR - Post-Investigation Debrief and Lessons Record v0.2.md`, Git blob `b0be77e0f111f87b6facb7522779a4f0f9cf38cc`.
+- Revisão conservadora em sete páginas A–I: fontes aplicáveis e limitações; revisão seletiva das sete fases e segurança transversal; síntese com contribuintes sustentados por evidência; seis tipos de lição; transferência com escopo, destino e dono; limitações residuais; transferência, implementação e efetividade diferenciadas; fechamento com itens controlados fora do debrief e arquivo recuperável.
+- Registros de trabalho em branco e nenhuma opção pré-selecionada. Cabeçalho em todas as páginas. Editor testado (texto, formatação, linhas, colunas, caixas, opções, desfazer/refazer e salvar/reabrir); sete páginas inspecionadas, sem overflow, com distância mínima ao rodapé de 29 px.
