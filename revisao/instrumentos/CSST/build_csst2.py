@@ -36,56 +36,62 @@ hdr = ''.join(meta(c) for c in ['Study / protocol', 'CIP version', 'Site / code'
                                  'Device / procedure reviewed', 'Previous CSST review ID', 'SCML snapshot ID', 'Analysis file (if used)', 'Prepared by / role', 'Controlled location'])
 hdr = hdr.replace('<b>Review type</b><span class="blank-entry"></span>', '<b>Review type</b>' + ck('Scheduled', 'Triggered', cls='opts left'))
 A = (sec('A', 'Purpose and use') +
-     '<div class="box"><p>The CSST is the site\'s review of its complications taken together. A single event is assessed in the SART and indexed in the SCML; the CSST looks at all of them at once, on the site\'s own schedule and after a trigger, to see whether events that each seemed explicable share a cause: the same component, the same surgeon, the same moment of follow-up or the same kind of case. It counts events against the cases and follow-up actually reached, applies triggers agreed before the first inclusion, and decides where each signal goes. A concentration of events is a question to test, not a conclusion about a device or a surgeon.</p>'
-     '<p class="how"><b>How the review runs</b></p>' +
-     ul('<b>B</b>: name the sources and any limitation. <b>C</b>: count cases and follow-up reached, complications at each time point, and the context of the procedures.',
-        '<b>D</b>: apply the agreed triggers. <b>E</b>: compare surgeons, components and case types. <b>F</b>: assess each triggered signal.',
-        '<b>G</b>: check whether signals from earlier reviews responded. <b>H</b>: send each signal to the record that acts on it, conclude and sign.') + '</div>')
+     '<div class="box"><p>The CSST is the site\'s review of its complications taken together. A single event is assessed in the SART and indexed in the SCML; the CSST looks at all of them at once, on the site\'s own schedule and after a trigger, to see whether events that each seemed explicable share a cause: the same component, the same surgeon, the same moment of follow-up or the same kind of case. A concentration of events is a question to test, not a conclusion about a device or a surgeon.</p></div>'
+     '<table class="purpose"><colgroup><col style="width:22%"><col style="width:26%"><col style="width:26%"><col style="width:26%"></colgroup>'
+     '<thead><tr><th>Unit of analysis</th><th>Decision supported</th><th>Inputs</th><th>Outputs</th></tr></thead><tbody><tr>'
+     '<td>One review of the site\'s complications for one period, or one review opened by a trigger.</td>'
+     '<td>Whether the data show no material pattern, a pattern to watch more closely, a signal to send on, or a result limited by the data.</td>'
+     '<td>SCML events, ICDL procedures and context, PFVR follow-up reached, SLCT surgeon sequence, SART event status and the previous CSST.</td>'
+     '<td>Counts by time point (C)<br>Triggers met (D)<br>Signals assessed (F)<br>Routes to the receiving records (H)</td></tr></tbody></table>')
 src_rows = [('SCML snapshot', 'Events and their categories'), ('ICDL procedure records', 'Procedures, components, configuration, context'), ('PFVR / visit schedule', 'Participants who reached each follow-up time point'),
             ('SLCT', 'Surgeon codes and case sequence'), ('SART', 'Event type, seriousness and status'), ('Previous CSST review', 'Signals to follow up in G')]
 B = (sec('B', 'Sources and their limitations', 'With limitation means the review goes ahead: name the records that are missing or incomplete. Not available means the counts that need that source cannot be made in this review.') +
-     table('bt', [22, 22, 18, 15, 23], ['Source', 'Used for', 'ID · extraction date', 'Status', 'Limitation (records missing or incomplete)'],
+     table('bt', [15, 18, 22, 13, 32], ['Source', 'Used for', 'ID · extraction date', 'Status', 'Limitation (records missing or incomplete)'],
            [tr(td(a, 'dl'), td(b, 'left'), td(), td(ck('Complete', 'With limitation', 'Not available', cls='opts col')), td()) for a, b in src_rows]))
 pages.append(f'<main class="page">{top("Review identification, purpose and sources")}<section class="meta-grid">{hdr}</section><section class="section compact">{A}</section><section class="section compact">{B}</section>{foot("Identification, purpose and sources", 1)}</main>')
 # ---------- Page 2: C1
-c1 = [('Investigational procedures performed', 'ICDL'), ('Participants enrolled', 'SIFSL / PSEAR'), ('Surgeons operating', 'SLCT / SCR'), ('Surgeons with a first study case in this period', 'SLCT'),
-      ('Procedures within a surgeon\'s first ___ study cases', 'SLCT'), ('Revision procedures (component exchanged or removed)', 'ICDL / SART'), ('Explanted components returned', 'SART / accountability')]
-fu = ['6 weeks', '3 months', '6 months', '12 months', '24 months', 'another time point: ______']
-C1 = (sec('C1', 'Cases and follow-up reached', 'These numbers are the denominators for C2 and C3. A complication at a time point can only be counted against participants who reached it; adapt the time points to the CIP visit schedule.') +
-      table('kc1', [50, 14, 14, 22], ['Count', 'This period', 'Cumulative', 'Source'], [tr(td(a, 'left'), td(), td(), td(b)) for a, b in c1] +
-            [grp('Participants who reached each follow-up time point', 4)] + [tr(td(f'Reached {t}', 'left'), td(), td(), td('PFVR')) for t in fu] +
-            [tr(td('Participants withdrawn or lost to follow-up', 'left'), td(), td(), td('PFVR / FUCR'))]))
+c1 = ['Participants screened', 'Screening failures', 'Participants enrolled', 'Investigational procedures performed', 'Surgeons operating', 'Surgeons with a first study case in this period',
+      'Procedures within a surgeon\'s first ___ study cases', 'Revision procedures (component exchanged or removed)', 'Explanted components returned', 'Follow-up visits due', 'Follow-up visits done in window', 'Follow-up visits missed']
+fu = ['first postoperative visit', '6 weeks', '3 months', '6 months', '12 months', '24 months']
+C1 = (sec('C1', 'Cases and follow-up reached', 'These numbers are the denominators for C2 and C3. Procedures and surgeons come from the ICDL and the SLCT, screening from the PSEAR and SIFSL, follow-up from the PFVR. Adapt the time points to the CIP visit schedule.') +
+      table('kc1', [40, 15, 15, 15, 15], ['Count', 'This period (n)', 'Previous period (n)', 'Change (%)', 'Cumulative (N)'], [tr(td(x, 'left'), td(), td(), td(), td()) for x in c1] +
+            [grp('Participants who reached each follow-up time point', 5)] + [tr(td(f'Reached {t}', 'left'), td(), td(), td(), td()) for t in fu] +
+            [tr(td('Participants withdrawn or lost to follow-up', 'left'), td(), td(), td(), td())]))
 pages.append(f'<main class="page">{top("Cases and follow-up reached")}<section class="section compact">{C1}</section>{foot("Cases and follow-up reached", 2)}</main>')
 # ---------- Pages 3-4: C2 by time point (landscape)
-TP = ['Intraoperative', 'To 6 weeks', '3 months', '6 months', '12 months', '24 months']
-C2W = [24] + [10.5] * 6 + [8, 5]
+TP = ['Intraoperative', 'Before discharge', 'First postop visit', '6 weeks', '3 months', '6 months', '12 months', '24 months']
+C2W = [19] + [8.5] * 8 + [6, 7]
 C2H = ['Event (SCML category)'] + [f'{t}<span class="u">(n / N) %</span>' for t in TP] + ['Total (n)', 'New this period']
-nrow = tr(td('<b>N for this column (from C1)</b>', 'left nrow'), *[td('', 'nrow') for _ in range(8)])
+nrow = tr(td('<b>N for this column (from C1)</b>', 'left nrow'), *[td('', 'nrow') for _ in range(10)])
 g1 = [('Instability / dislocation', ['Dislocation', 'Subluxation or instability symptoms']),
       ('Fracture', ['Intraoperative fracture', 'Periprosthetic fracture', 'Acromion or scapular spine fracture']),
       ('Infection / wound', ['Superficial wound problem', 'Deep or periprosthetic infection', 'Hematoma']),
-      ('Neurologic / vascular', ['Nerve injury (axillary nerve, brachial plexus)', 'Vascular injury'])]
-g2 = [('Device performance', ['Component loosening', 'Component disassociation (liner, glenosphere)', 'Implant breakage or wear', 'Radiographic change (notching, lucency, migration)']),
-      ('Function and other', ['Stiffness or loss of motion', 'Persistent pain', 'Thromboembolic event', 'Other (SCML code): ______'])]
-summ = ['Participants with at least one complication', 'Reoperations', 'Revisions (component exchanged or removed)', 'Device deficiencies (all; counted apart from complications)']
+      ('Neurologic / vascular', ['Nerve injury (axillary nerve, brachial plexus)', 'Vascular injury']),
+      ('Device performance', ['Component loosening', 'Component disassociation (liner, glenosphere)', 'Implant breakage or wear', 'Radiographic change (notching, lucency, migration)'])]
+g2 = [('Function and other', ['Stiffness or loss of motion', 'Persistent pain', 'Thromboembolic event', 'Other (SCML code): ______'])]
 def c2rows(groups):
     out = [nrow]
     for g, evs in groups:
-        out.append(grp(g, 9))
-        out += [tr(td(e, 'left ev'), *[td() for _ in range(8)]) for e in evs]
+        out.append(grp(g, 11))
+        out += [tr(td(e, 'left ev'), *[td() for _ in range(10)]) for e in evs]
     return out
 C2a = (sec('C2', 'Complications by follow-up time point', 'Count each event once, in the time point where it occurred, against the N of that column. Reading across a row shows whether a problem appears early or grows with time.') +
        table('kc2', C2W, C2H, c2rows(g1)))
 pages.append(f'<main class="page landscape">{top("Complications by time point · 1 of 2")}<section class="section compact">{C2a}</section>{foot("Complications by follow-up time point", 3)}</main>')
+ov = ['Participants with at least one complication', 'Participants with more than one complication', 'Reoperations', 'Revisions (component exchanged or removed)', 'Serious events (SAE / SADE)', 'Device deficiencies (all; counted apart from complications)']
 C2b = (sec('C2', 'Complications by follow-up time point (continued)') +
-       table('kc2', C2W, C2H, c2rows(g2) + [grp('Summary', 9)] + [tr(td(f'<b>{e}</b>', 'left ev'), *[td() for _ in range(8)]) for e in summ]))
+       table('kc2', C2W, C2H, c2rows(g2)) +
+       '<div class="exh">Overview</div>' +
+       table('ov', [40, 15, 15, 15, 15], ['Measure', 'This period (n)', 'Previous period (n)', 'Cumulative<span class="u">(n / N) %</span>', 'N used'], [tr(td(x, 'left ev'), td(), td(), td(), td()) for x in ov]))
 pages.append(f'<main class="page landscape">{top("Complications by time point · 2 of 2")}<section class="section compact">{C2b}</section>{foot("Complications by follow-up time point", 4)}</main>')
 # ---------- Page 5: C3 context
 mk = ['Unplanned configuration change', 'Component substitution', 'Technical deviation from the surgical technique', 'Intraoperative difficulty (bone quality, deformity, revision case)', 'Senior support or proctoring used',
       'Surgeon within first ___ study cases', 'Operation outside normal hours', 'Instrument or loaner set problem', 'Gap in the operative record', 'Other: ______']
 C3 = (sec('C3', 'Procedure context', 'For each marker, compare the complication rate in procedures with it and without it. Context never changes the counts in C2; it helps explain them.') +
       table('kc3', [30, 16, 18, 18, 18], ['Context marker', 'Procedures with it<span class="u">(n / N) %</span>', 'With it: had a complication<span class="u">(n / n) %</span>', 'Without it: had a complication<span class="u">(n / n) %</span>', 'Source'],
-            [tr(td(m, 'left ev'), td(), td(), td(), td()) for m in mk]))
+            [tr(td(m, 'left ev'), td(), td(), td(), td()) for m in mk]) +
+      '<div class="exh">Links between context and complications</div>' +
+      table('lk', [24, 22, 26, 28], ['Context marker', 'Procedures (ICDL IDs)', 'Complication found (C2 event · SCML ID)', 'Comment'], [tr(td(), td(), td(), td()) for _ in range(4)]))
 pages.append(f'<main class="page">{top("Procedure context")}<section class="section compact">{C3}</section>{foot("Procedure context", 5)}</main>')
 # ---------- Page 6: E comparisons
 E = (sec('E', 'Comparison by surgeon, component and case type', 'A group stands out when its share of complications is clearly larger than its share of procedures. Use the surgeon codes of the SLCT and the component, lot and configuration recorded in the ICDL.') +
@@ -94,7 +100,7 @@ E = (sec('E', 'Comparison by surgeon, component and case type', 'A group stands 
      '<div class="exh">E2 · By component, lot or configuration (ICDL)</div>' +
      table('ex', [26, 16, 18, 16, 24], ['Component · lot · configuration', 'Procedures<span class="u">(n) % of all</span>', 'With a complication<span class="u">(n / n) %</span>', 'Share of all complications<span class="u">%</span>', 'Note'], [tr(*[td() for _ in range(5)]) for _ in range(5)]) +
      '<div class="exh">E3 · By case type</div>' +
-     table('ex', [26, 16, 18, 16, 24], ['Case type (indication, primary or revision)', 'Procedures<span class="u">(n) % of all</span>', 'With a complication<span class="u">(n / n) %</span>', 'Share of all complications<span class="u">%</span>', 'Note'], [tr(*[td() for _ in range(5)]) for _ in range(4)]))
+     table('ex', [26, 16, 18, 16, 24], ['Case type (indication, primary or revision)', 'Procedures<span class="u">(n) % of all</span>', 'With a complication<span class="u">(n / n) %</span>', 'Share of all complications<span class="u">%</span>', 'Note'], [tr(*[td() for _ in range(5)]) for _ in range(5)]))
 pages.append(f'<main class="page">{top("Comparison by surgeon, component and case type")}<section class="section compact">{E}</section>{foot("Comparison by surgeon, component and case type", 6)}</main>')
 # ---------- Page 7: D triggers (landscape)
 tg = [('T1', 'Rate above the agreed limit', 'Any category at any time point (C2).'),
@@ -140,7 +146,7 @@ K = (sec('I', 'Conclusion and sign-off', 'The conclusion reflects the most serio
      '<div class="signature"><b>PI / accountable approver</b><div class="sig-field">Name / role: </div><div class="sig-field">Signature / date:<span class="sig-line"></span></div></div></div>')
 pages.append(f'<main class="page">{top("Conclusion and sign-off")}<section class="section compact">{K}</section>{foot("Conclusion and sign-off", 10)}</main>')
 css = """<style>
-.meta-grid .meta-cell{min-height:56px}.opts.left{justify-content:flex-start}.opts.col{display:grid;grid-template-columns:auto;justify-content:start;text-align:left;gap:3px 0}
+.meta-grid .meta-cell{min-height:64px}.opts.left{justify-content:flex-start}.opts.col{display:grid;grid-template-columns:auto;justify-content:start;text-align:left;gap:3px 0}
 .opts.wide{gap:22px;flex-wrap:wrap}
 th{text-align:center!important}th .u{display:block;font-weight:400;font-size:7.6px;opacity:.9}
 td.cat{text-align:center;font-weight:700;color:#173c67;background:#f3f6f9!important;font-size:9px}
@@ -149,12 +155,12 @@ td.left{text-align:left}td.small{font-size:8.2px!important;line-height:1.25}td.e
 tr.grp td{background:#dbe7f3!important;color:#173c67;font-weight:700;font-size:8.6px;text-align:left;padding:3px 7px;height:auto!important}
 td.nrow{background:#f7f9fb!important;font-size:8.4px;color:#173c67}
 .pl{margin:2px 0 0 0;padding-left:16px}.pl li{margin:2px 0;font-size:9.6px;line-height:1.35}p.how{margin:6px 0 0}
-.bt td{height:75px;font-size:8.6px;padding:3px 6px}.bt .opts{font-size:7.8px}
-.kc1 td{height:52px;font-size:9px;padding:3px 7px}
-.kc2 td{height:39px;font-size:8.4px;padding:2px 5px}.kc2 th{font-size:8.2px;padding:3px 2px}
-.kc3 td{height:60px;font-size:8.8px;padding:3px 6px}.kc3 th{font-size:8.4px}
+.bt td{height:70px;font-size:8.6px;padding:3px 6px}.bt .opts{font-size:7.8px}
+.kc1 td{height:42px;font-size:8.8px;padding:2px 7px}
+.kc2 td{height:28px;font-size:8.2px;padding:1px 4px}.kc2 th{font-size:8px;padding:3px 2px}.ov td{height:44px;font-size:8.6px;padding:2px 6px}
+.kc3 td{height:52px;font-size:8.8px;padding:3px 6px}.kc3 th{font-size:8.4px}
 .exh+table{margin-top:0!important}.exh{background:#dbe7f3;color:#173c67;font-weight:700;font-size:9px;padding:3px 8px;border:1px solid var(--grid);border-bottom:0;margin-top:8px}
-.ex td{height:47px;font-size:8.6px;padding:2px 5px}.ex th{font-size:8.2px}
+.ex td{height:44px;font-size:8.6px;padding:2px 5px}.ex th{font-size:8.2px}
 .dt td{height:46px;font-size:8.6px;padding:2px 5px}.dt .opts{font-size:7.8px}
 .note{margin-top:6px;font-size:8.8px;color:#33475b;border:1px solid var(--grid);border-left:4px solid var(--navy);padding:5px 9px;background:#f7f9fb;line-height:1.35}
 .ft td{height:131px;font-size:8.6px;padding:2px 5px}.ft .opts{font-size:7.8px;line-height:1.15}
@@ -165,6 +171,8 @@ td.lbl{background:#3a78b5!important;color:#fff;font-size:8.4px;text-align:center
 .wbox.lim{min-height:540px;margin-top:8px}
 .sig2 .signature{min-height:110px!important}
 .letter{font-size:15px!important}
+.purpose th{text-align:center}.purpose td{font-size:9px;padding:5px 8px;vertical-align:top;text-align:left;height:56px;line-height:1.4}.purpose td:first-child{font-weight:400;color:inherit;background:none}
+.lk td{height:56px;font-size:8.6px;padding:2px 5px}
 </style>
 """
 open(OUT, 'w').write(head + '<body class="blank-template">\n' + '\n'.join(pages) + '\n' + css + ed + '\n</body></html>\n')
