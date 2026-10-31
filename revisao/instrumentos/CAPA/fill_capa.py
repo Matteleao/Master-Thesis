@@ -56,11 +56,11 @@ for r, e in zip(rows('et'), [('Two CAPAs come from a check made against a list t
     td = r.findall('td')
     for k in range(3): put(td[k + 1], e[k])
     tick(td[4], e[3]); put(td[5], e[4])
-for r, f in zip(rows('ft'), [('CAPA-014-01', 'Reopened', 'Check TRE release before a name goes on the task roster; audit 10 tasks', 'Coordinator', '30 Nov', 'Roster check sheet; audit result', 'POT-014-07'),
-                             ('CAPA-014-03', 'In progress', 'Second check of every endpoint entry since August', 'Coordinator', '15 Nov', 'Second-check log', 'None'),
-                             ('CAPA-014-04', 'Open', 'Root cause with the sponsor; trial liners on the check sheet', 'OR nurse lead', '15 Nov', 'Revised check sheet LS-07 rev. 2', 'PI (high criticality)')]):
+for r, f in zip(rows('ft'), [('CAPA-014-01', 'Check TRE release before a name goes on the task roster; audit 10 tasks', 'Coordinator', '30 Nov', 'Roster check sheet; audit result', 'POT-014-07'),
+                             ('CAPA-014-03', 'Second check of every endpoint entry since August', 'Coordinator', '15 Nov', 'Second-check log', 'None'),
+                             ('CAPA-014-04', 'Root cause with the sponsor; trial liners on the check sheet', 'OR nurse lead', '15 Nov', 'Revised check sheet LS-07 rev. 2', 'PI (high criticality)')]):
     td = r.findall('td')
-    for k in range(7): put(td[k], f[k])
+    for k in range(6): put(td[k], f[k])
 for r, g in zip(rows('gt'), [('CAPA-014-02', 'No late 2-week image set for two months', 'Sep and Oct', 'IQL: 0 late sets of 9', 'Close: effective', 'None · M. Silva, 31 Oct'),
                              ('CAPA-014-01', 'No study task before release for three months', 'Aug to Oct', 'IMC-014-02: 4 tasks by S-03 before release (Oct)', 'Reopen', 'Earlier closure (30 Sep) was too early · M. Silva')]):
     td = r.findall('td')

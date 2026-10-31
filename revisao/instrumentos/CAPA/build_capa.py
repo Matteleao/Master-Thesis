@@ -7,7 +7,7 @@ head = re.sub(r'<title>.*?</title>', '<title>CAPA v1.0 - Blank Editable</title>'
 ed_style = p[p.find('<style id="pot-editor-style">'):]; ed_style = ed_style[:ed_style.find('</style>') + 8]
 ed_script = p[p.find('<script id="pot-editor-script">'):]; ed_script = ed_script[:ed_script.find('</script>') + 9]
 ed = (ed_style + '\n' + ed_script).replace('pot-', 'capa-').replace('Editor do POT', 'Editor do CAPA').replace('POT', 'CAPA')
-V, NP = 'CAPA v1.0', 6
+V, NP = 'CAPA v1.0', 7
 def ck(*labels, cls='opts'):
     return f'<span class="{cls}">' + ''.join(f'<span class="opt"><span class="check"></span>{l}</span>' for l in labels) + '</span>'
 def top(sub):
@@ -70,19 +70,21 @@ D = (sec('D', 'Reconciliation and distribution', 'Check the register against the
      table('xt', [36, 11, 11, 11, 11, 20], ['Category', 'High', 'Medium', 'Low', 'Total', 'CAPA IDs'], [tr(el(f'{i + 1} · {a}'), td(), td(), td(), td(), td('', 'left')) for i, (a, b) in enumerate(CATS)] +
            [tr(el('Total'), td('', 'tot'), td('', 'tot'), td('', 'tot'), td('', 'tot'), td('', 'tot'), cls='tot')]))
 pages.append(f'<main class="page">{top("Reconciliation and distribution")}{strip()}<section class="section compact">{D}</section>{foot("Reconciliation and distribution", 3)}</main>')
-# ---------- Page 4: E + F (landscape)
-E = (sec('E', 'Patterns across CAPAs', 'Look for CAPAs that share a cause, a process step, a person, a supplier or a period, and compare with earlier reviews. Cite the CAPA records; do not repeat their investigation.') +
+# ---------- Page 4: E (landscape)
+E = (sec('E', 'Patterns across CAPAs', 'Look for CAPAs that share a cause, a process step, a person, a supplier or a period, and compare with earlier reviews. Cite the CAPA records; do not repeat their investigation. Reprint this sheet if more rows are needed.') +
      table('et', [4, 22, 12, 26, 18, 18], ['#', 'Pattern seen', 'CAPA IDs', 'What was compared (records and counts)', 'Shared cause?', 'Decision · route'],
-           [tr(num(i), td('', 'left'), td(), td('', 'left'), td(ck('Supported', 'Not supported', 'Open', cls='opts col')), td('', 'left')) for i in range(1, 4)]))
-F = (sec('F', 'Active CAPAs', 'Every CAPA that is open, in progress, effect pending or reopened. The plan stays in the CAPA record.') +
-     table('ft', [10, 12, 26, 12, 10, 18, 12], ['CAPA ID', 'Status', 'Next step', 'Owner', 'Due', 'Evidence expected or missing', 'Escalation'],
-           [tr(td(), td(), td('', 'left'), td(), td(), td('', 'left'), td('', 'left')) for _ in range(5)]))
-pages.append(f'<main class="page landscape">{top("Patterns and active CAPAs")}{strip()}<section class="section compact">{E}</section><section class="section compact">{F}</section>{foot("Patterns and active CAPAs", 4)}</main>')
+           [tr(num(i), td('', 'left'), td(), td('', 'left'), td(ck('Supported', 'Not supported', 'Open', cls='opts col')), td('', 'left')) for i in range(1, 7)]))
+pages.append(f'<main class="page landscape">{top("Patterns across CAPAs")}{strip(True)}<section class="section compact">{E}</section>{foot("Patterns across CAPAs", 4)}</main>')
+# ---------- Page 5: F (landscape)
+F = (sec('F', 'Active CAPAs', 'One line per CAPA still open, in progress, effect pending or reopened (status as in C). The plan stays in the CAPA record. Reprint this sheet if more rows are needed.') +
+     table('ft', [11, 30, 13, 10, 22, 14], ['CAPA ID', 'Next step', 'Owner', 'Due', 'Evidence expected or missing', 'Escalation'],
+           [tr(td('', 'rid'), td('', 'left'), td(), td(), td('', 'left'), td('', 'left')) for _ in range(10)]))
+pages.append(f'<main class="page landscape">{top("Active CAPAs")}{strip(True)}<section class="section compact">{F}</section>{foot("Active CAPAs", 5)}</main>')
 # ---------- Page 5: G effectiveness (landscape)
 G = (sec('G', 'Effectiveness, closure and reopening', 'Use the check set in each CAPA. Done is not the same as effective; a closure with a limit needs the residual risk accepted by the PI.') +
      table('gt', [9, 23, 14, 22, 13, 19], ['CAPA ID', 'Check set in the CAPA', 'Period checked', 'Evidence and result', 'Decision', 'Limit · residual risk · evaluator'],
            [tr(td(), td('', 'left'), td(), td('', 'left'), td(ck('Close: effective', 'Close with limit', 'Keep open', 'Reopen', cls='opts col')), td('', 'left')) for _ in range(5)]))
-pages.append(f'<main class="page landscape">{top("Effectiveness and closure")}{strip()}<section class="section compact">{G}</section>{foot("Effectiveness and closure", 5)}</main>')
+pages.append(f'<main class="page landscape">{top("Effectiveness and closure")}{strip()}<section class="section compact">{G}</section>{foot("Effectiveness and closure", 6)}</main>')
 # ---------- Page 6: H
 H = (sec('H', 'Outputs and conclusion', 'Only outputs created by this review; the receiving record keeps the content.') +
      table('ht', [30, 16, 24, 30], ['Output or update', 'From (CAPA or pattern)', 'Sent to (record)', 'Confirmed (date)'], [tr(td('', 'left'), td(), td('', 'left'), td()) for _ in range(4)]) +
@@ -92,7 +94,7 @@ H = (sec('H', 'Outputs and conclusion', 'Only outputs created by this review; th
                                   tr(el('Next review'), td('', 'left'))]) +
      '<div class="sig2"><div class="signature"><b>Log owner</b><div class="sig-field">Name / role: </div><div class="sig-field">Signature / date:<span class="sig-line"></span></div></div>'
      '<div class="signature"><b>Principal Investigator</b><div class="sig-field">Name: </div><div class="sig-field">Signature / date:<span class="sig-line"></span></div></div></div>')
-pages.append(f'<main class="page">{top("Outputs and conclusion")}{strip()}<section class="section compact">{H}</section>{foot("Outputs and conclusion", 6)}</main>')
+pages.append(f'<main class="page">{top("Outputs and conclusion")}{strip()}<section class="section compact">{H}</section>{foot("Outputs and conclusion", 7)}</main>')
 css = '''<style>
 .meta-grid .meta-cell{min-height:52px}.opts.left{justify-content:flex-start}.opts.col{display:grid;grid-template-columns:auto;justify-content:start;text-align:left;gap:2px 0}
 .purpose td{font-size:9px;padding:4px 8px;vertical-align:top;text-align:left;height:50px;line-height:1.35}.purpose td:first-child{font-weight:400;color:inherit;background:none}.purpose th{text-align:center}
@@ -101,9 +103,9 @@ td.el{text-align:left;font-weight:700;color:#173c67;background:#f7f9fb!important
 .cat td,.crt td,.stt td{height:30px;font-size:8.6px;padding:2px 6px}.crt td{height:60px}.two{display:grid;grid-template-columns:47% 52%;gap:1%}
 .ct td{height:47px;font-size:8.6px;padding:2px 5px}.ct .opts{font-size:7.4px;line-height:1.15}
 .rt td{height:56px;font-size:8.8px;padding:3px 7px}.rt .opts{font-size:7.8px}.xt td{height:51px;font-size:8.8px;padding:2px 6px}tr.tot td{font-weight:700;background:#eef3f9!important}
-.et td{height:62px;font-size:8.8px;padding:3px 6px}.et .opts{font-size:7.8px}.ft td{height:42px;font-size:8.8px;padding:3px 6px}
+.et td{height:82px;font-size:8.8px;padding:3px 6px}.et .opts{font-size:7.8px}.ft td{height:49px;font-size:8.8px;padding:3px 6px}
 .gt td{height:98px;font-size:8.8px;padding:3px 6px}.gt .opts{font-size:7.8px}
-.ht td{height:70px;font-size:8.8px;padding:3px 6px}.hd{margin-top:7px}.hd td{height:56px;font-size:8.8px;padding:3px 7px}.hd td.tall{height:190px}.hd .opts{font-size:7.8px}
+.ht td{height:70px;font-size:8.8px;padding:3px 6px}.hd{margin-top:7px}.hd td.el{background:#dbe7f3!important;text-align:center;vertical-align:middle}.hd td{height:56px;font-size:8.8px;padding:3px 7px}.hd td.tall{height:190px}.hd .opts{font-size:7.8px}
 .sig2 .signature{min-height:120px!important}.letter{font-size:15px!important}
 </style>
 '''
