@@ -27,7 +27,9 @@ def tr(*cells): return '<tr>' + ''.join(cells) + '</tr>'
 el = lambda t: f'<td class="el">{t}</td>'
 td = lambda t='', c='': f'<td class="{c}">{t}</td>' if c else f'<td>{t}</td>'
 num = lambda i: f'<td class="num">{i}</td>'
-CHECKS = [('Sterile release to use', 'Integrity, expiry and storage confirmed before each device is used'),
+CHECKS = [('Participant entry: consent and eligibility', 'Consent signed on the current version before any study procedure; eligibility confirmed by the PI before surgery'),
+          ('Delegation and training', 'Everyone who did a study task was delegated and released for it on that date'),
+          ('Sterile release to use', 'Integrity, expiry and storage confirmed before each device is used'),
           ('Implant traceability and component reconciliation', 'Implanted components match labels, lot/UDI, accountability and CRF'),
           ('Instrumentation and operating-room readiness', 'Instruments available, compatible and checked; substitutions recorded'),
           ('Operative documentation', 'Operative note lets a reader rebuild the final configuration and intraoperative decisions'),
@@ -36,15 +38,13 @@ CHECKS = [('Sterile release to use', 'Integrity, expiry and storage confirmed be
           ('Endpoint data agreement', 'Endpoint-critical fields agree between source and CRF'),
           ('Timeliness and closure', 'Notes, data entry, queries, safety follow-up and actions closed on time'),
           ('External context', 'Safety notices, field actions and new literature on the device were looked for'),
-          ('Complication monitoring', 'Complication reviews took place as planned and their signals were sent on'),
-          ('Participant entry: consent and eligibility', 'Consent signed on the current version before any study procedure; eligibility confirmed by the PI before surgery'),
-          ('Delegation and training', 'Everyone who did a study task was delegated and released for it on that date')]
+          ('Complication monitoring', 'Complication reviews took place as planned and their signals were sent on')]
 chk = lambda i: f'<td class="el"><b>{CHECKS[i][0]}</b><span class="sub">{CHECKS[i][1]}</span></td>' if i < len(CHECKS) else '<td class="el"></td>'
 PARTS = [(range(0, 7), 'checks 1–7'), (range(7, 14), 'checks 8–12 and added checks')]
-ADDNOTE = '<div class="addnote">Rows 13 and 14 are for a check the site adds because a risk in the SRR is not covered by checks 1–12. Use the same row number in C, D and E.</div>'
-def matrix(letter, title, guide, widths, heads, cells, sub, n0):
+ADDNOTE = '<div class="addnote">Rows 13 and 14 are for a check the site adds because a risk in the SRR is not covered by checks 1–12. Use the same row number in C, D, E and F.</div>'
+def matrix(letter, title, guide, widths, heads, cells, sub, n0, cls='lt'):
     for k, (rg, part) in enumerate(PARTS):
-        body = sec(letter, title + (' (continued)' if k else ''), guide if not k else None) + table('lt', widths, heads, [tr(num(i + 1), chk(i), *cells()) for i in rg]) + (ADDNOTE if k else '')
+        body = sec(letter, title + (' (continued)' if k else ''), guide if not k else None) + table(cls + (' p2' if k else ''), widths, heads, [tr(num(i + 1), chk(i), *cells()) for i in rg]) + (ADDNOTE if k else '')
         pages.append(f'<main class="page landscape">{top(sub + " · " + part)}<section class="section compact">{body}</section>{foot(sub, n0 + k)}</main>')
 pages = []
 # ---------- Page 1: header, A, B
@@ -74,20 +74,20 @@ pages.append(f'<main class="page">{top("Plan identification, purpose and boundar
 # ---------- Pages 2-7: C, D, E (landscape, two pages each)
 matrix('C', 'Checks in scope', 'Keep every check unless it truly does not apply. A check left out needs the reason, who agreed and what would bring it back. List the SRR risks whose controls each check verifies; an SRR control with no check here is a gap to raise.',
        [3, 20, 9, 20, 11, 17, 20], ['#', 'Check', 'Included?', 'Control to verify (what must have happened)', 'Source record(s) used', 'SRR risk IDs covered', 'If not included: reason, agreed by, condition to include'],
-       lambda: (td(ck('Included', 'Not included', 'Deferred until:', cls='opts col')), td('', 'left'), td('', 'left'), td('', 'left'), td('', 'left')), 'Checks in scope', 2)
-matrix('D', 'Schedule, reviewer and sample', 'Time each check by how fast its failure would spread. The reviewer is named by role, released for the task, and does not review work they did. Name one unit per check (procedure, image set, visit, field, event…) and say how units are picked; a small population is reviewed in full.',
-       [3, 17, 9, 9, 13, 10, 9, 11, 10, 9], ['#', 'Check', 'Timing basis', 'Routine frequency', 'Earlier review for this check when…', 'Reviewer / backup (roles)', 'Unit and number per period', 'How units are picked', 'Minimum, and when all are reviewed', 'Sample grows when…'],
-       lambda: (td(ck('Calendar', 'Case count', 'Each event', 'Milestone', cls='opts col')),) + tuple(td('', 'left') for _ in range(7)), 'Schedule, reviewer and sample', 4)
+       lambda: (td(ck('Included', 'Not included', 'Deferred until:', cls='opts col')), td('', 'left'), td('', 'left'), td('', 'left'), td('', 'left')), 'Checks in scope', 2, 'lt cc')
+matrix('D', 'Schedule, reviewer and sample', 'Time each check by how fast its failure would spread. The reviewer is named by role, released for the task, and does not review work they did. Unit and volume: what is counted (procedure, image set, visit, field, event…) and how many are expected per period. Selection method: how the units reviewed are chosen. Sample size: the minimum reviewed each cycle, and when every unit is reviewed instead (a small population is reviewed in full). Expansion trigger: what makes the sample larger.',
+       [3, 16, 8, 9, 14, 10, 9, 11, 9, 11], ['#', 'Check', 'Timing basis', 'Routine frequency', 'Early-review trigger', 'Reviewer / backup (roles)', 'Unit and volume', 'Selection method', 'Sample size', 'Expansion trigger'],
+       lambda: (td(ck('Calendar', 'Case count', 'Each event', 'Milestone', cls='opts col')),) + tuple(td('', 'left') for _ in range(7)), 'Schedule, reviewer and sample', 4, 'lt dt')
 matrix('E', 'Criteria the reviewer applies', 'Write each criterion so two reviewers would reach the same answer. The IMC rates each check on these three questions separately.',
        [3, 20, 19, 19, 19, 20], ['#', 'Check', 'Execution: the control was done when…', 'Evidence: the record is sufficient when…', 'Effective: the control worked when…', 'Records the reviewer cites in the IMC'],
-       lambda: tuple(td('', 'left') for _ in range(4)), 'Criteria the reviewer applies', 6)
+       lambda: tuple(td('', 'left') for _ in range(4)), 'Criteria the reviewer applies', 6, 'lt ec')
 # ---------- Page 6: G triggers + H responses
 trig = ['Serious adverse event or serious device effect at the site', 'Complication cluster or signal from the CSST', 'Important protocol deviation', 'Repeated endpoint data discrepancy',
         'Pattern of unusable or late images (IQL)', 'Device, instrument or equipment malfunction', 'CIP amendment', 'Departure or change of a key person or of a reviewer',
-        'Sponsor finding that needs a local response', 'Corrective action that failed or was reopened']
+        'Sponsor finding that needs a local response', 'Corrective action that failed or was reopened', '']
 F = (sec('F', 'Triggers for an earlier review', 'Any trigger marked Yes calls a review before the next scheduled one, for the checks listed. A minor observation is not a trigger.') +
      table('gtt', [41, 13, 20, 14, 12], ['Trigger', 'Applies?', 'Checks reviewed early (#)', 'Called by (role)', 'Within (days)'],
-           [tr(el(t), td(ck('Yes', 'No')), td(), td(), td()) for t in trig]))
+           [tr(el(t) if t else td('', 'left'), td(ck('Yes', 'No')), td(), td(), td()) for t in trig]))
 resp = ['Complete, adequate and effective', 'Observation: isolated, low consequence, corrected at review', 'Partial execution or partial evidence',
         'Not performed, or evidence missing', 'Not effective', 'Not assessable', 'Recurrent, across units, or with material consequence', 'Possible harm to a participant or a reportable event']
 G = (sec('G', 'Where each result goes', 'For each result the IMC can give, write the minimum response the site commits to, the record it goes to, and who owns it.') +
@@ -118,11 +118,11 @@ td.num{font-weight:700;color:#173c67;font-size:9px}
 .inline-blank{display:inline-block;width:46px;border-bottom:1px solid #6d7a88;margin:0 3px}
 .gate{border:1px solid var(--grid);border-left:4px solid var(--navy);background:#f7f9fb;padding:7px 9px;margin-top:7px;font-size:9.4px;color:#173c67}
 .opts.col2{display:grid;grid-template-columns:auto auto;justify-content:start;text-align:left;gap:1px 6px}
-.lt td{height:70px;font-size:8.6px;padding:2px 5px}.lt th{font-size:8.4px}.lt .opts{font-size:7.6px;line-height:1.15}
-.gtt td{height:34px;font-size:8.8px;padding:2px 6px}
+.lt td{height:70px;font-size:8.6px;padding:2px 5px}.lt th{font-size:8.4px}.lt .opts{font-size:7.6px;line-height:1.15}.lt.cc td{height:75px}.lt.dt td{height:72px}.lt.dt.p2 td{height:75px}.lt.ec td{height:77px}
+.gtt td{height:31px;font-size:8.8px;padding:2px 6px}
 .ht td{height:51px;font-size:8.6px;padding:2px 6px}
 .it td{height:38px;font-size:8.8px;padding:3px 6px}
-.jt td{height:57px;font-size:8.6px;padding:2px 5px}
+.jt td{height:56px;font-size:8.6px;padding:2px 5px}
 .sig2 .signature{min-height:96px!important}.letter{font-size:15px!important}
 </style>
 '''
