@@ -39,11 +39,11 @@ B = [('SCML-014 snapshot · 31 Oct', 'Complete', ''), ('ICDL-014-001 to -008 · 
 for r, (a, st, lim) in zip(rows('bt'), B):
     td = r.findall('td'); put(td[2], a); tick(td[3], st); put(td[4], lim)
 k1 = rows('kc1')
-for lab, vals in [('Participants screened', ['6', '7', '-14%', '13']), ('Screening failures', ['2', '3', '-33%', '5']), ('Participants enrolled', ['4', '4', '0%', '8']),
+for lab, vals in [('Participants enrolled', ['4', '4', '0%', '8']),
                   ('Investigational procedures performed', ['4', '4', '0%', '8']), ('Surgeons operating', ['3', '2', '+50%', '3']), ('Surgeons with a first study case', ['1', '2', '-50%', '3']),
                   ('Procedures within', ['3', '4', '-25%', '7']), ('Revision procedures', ['1', '0', '-', '1']), ('Explanted components returned', ['0 (1 pending)', '0', '-', '0']),
                   ('Follow-up visits due', ['9', '4', '+125%', '13']), ('Follow-up visits done in window', ['7', '4', '+75%', '11']), ('Follow-up visits missed', ['1', '0', '-', '1']),
-                  ('Reached first postoperative visit', ['4', '4', '0%', '8']), ('Reached 6 weeks', ['3', '2', '+50%', '5']), ('Reached 3 months', ['2', '0', '-', '2']),
+                  ('Operated', ['4', '4', '0%', '8']), ('Reached discharge', ['4', '4', '0%', '8']), ('Reached first postoperative visit', ['4', '4', '0%', '8']), ('Reached 6 weeks', ['3', '2', '+50%', '5']), ('Reached 3 months', ['2', '0', '-', '2']),
                   ('Reached 6 months', ['0', '0', '-', '0']), ('Reached 12 months', ['0', '0', '-', '0']), ('Reached 24 months', ['0', '0', '-', '0']), ('Participants withdrawn', ['0', '0', '-', '0'])]:
     fillrow(byLabel(k1, lab), vals)
 td = byLabel(k1, 'Procedures within').findall('td')[0]; td.text = None
@@ -60,9 +60,9 @@ for r in k2:
     td = r.findall('td')
     if len(td) == 11 and not any(t.find('span[@class="demo-fill"]') is not None for t in td[1:]) and not r.get('class'):
         for t in td[9:11]: put(t, '0')
-for lab, vals in [('Participants with at least one complication', ['3', '2', '(5 / 8) 62.5%', '8 operated']), ('Participants with more than one', ['1', '0', '(1 / 8) 12.5%', '8 operated']),
-                  ('Reoperations', ['1', '0', '(1 / 8) 12.5%', '8 operated']), ('Revisions', ['1', '0', '(1 / 8) 12.5%', '8 operated']), ('Serious events', ['1', '0', '(1 / 8) 12.5%', '8 operated']),
-                  ('Device deficiencies', ['1', '0', '(1 / 8) 12.5%', '8 operated'])]:
+for lab, vals in [('Participants with at least one complication', ['3', '2', '+50%', '(5 / 8) 62.5%', '(2 / 4) 50%']), ('Participants with more than one', ['1', '0', '-', '(1 / 8) 12.5%', '(0 / 4) 0%']),
+                  ('Reoperations', ['1', '0', '-', '(1 / 8) 12.5%', '(0 / 4) 0%']), ('Revisions', ['1', '0', '-', '(1 / 8) 12.5%', '(0 / 4) 0%']), ('Serious events', ['1', '0', '-', '(1 / 8) 12.5%', '(0 / 4) 0%']),
+                  ('Device deficiencies', ['1', '0', '-', '(1 / 8) 12.5%', '(0 / 4) 0%'])]:
     fillrow(byLabel(rows('ov'), lab), vals)
 k3 = rows('kc3')
 for lab, vals in [('Unplanned configuration change', ['(1 / 8) 12.5%', '(1 / 1) 100%', '(4 / 7) 57%', 'ICDL-014-005']), ('Component substitution', ['(0 / 8) 0%', '-', '(5 / 8) 62.5%', 'ICDL']),
@@ -97,7 +97,7 @@ for r in rows('dt'):
 f = rows('ft')[0].findall('td')
 put(f[0], 'S-01'); put(f[1], 'T1-T4 · SCML-014-07, -08, -09')
 put(f[2], 'Two instability events in 8 procedures, both after discharge and rising at later visits. One with liner disassociation after an unplanned +3 liner (planned +6 missing from the set); one after a loaner set without a trial liner. Fracture sequelae cases and S-03 overlap.')
-tick(f[3], 'Device, component or lot', 'Procedure or technique', 'Surgeon or learning curve'); tick(f[4], 'Sent on (H)')
+tick(f[3], 'Device, component or lot', 'Procedure or technique', 'Surgeon or learning curve'); tick(f[4], 'Sent on (see H)')
 put(f[5], 'No new instability in the next 8 procedures; full liner range and trial liners in every set (ICDL); CSST monthly for 3 months.')
 g = rows('gt')[0].findall('td')
 put(g[0], 'S-01 · CSST-014-01'); put(g[1], 'No further nerve injury in the next 4 procedures'); put(g[2], '0 nerve injuries in 4 procedures (Oct)'); tick(g[3], 'Effective'); put(g[4], 'Close; keep in the routine count')
@@ -105,7 +105,7 @@ H = {'SLCT': ('SLCT S-03 review, 5 Nov 2026', 'Sent'), 'Sponsor device-deficienc
      'SRR': ('SRR-002 reopened; SRR-006, 31 Oct', 'Sent'), 'CAPA log': ('First occurrence; no failed response yet', 'Not required'), 'POT': ('POT review 3 Nov: S-03 proctored for 3 cases', 'Sent'), 'PIR / IMC': ('IMP v1.1 CH-03: CSST monthly', 'Sent')}
 for r in rows('ht'):
     td = r.findall('td'); a = td[0].text_content().strip()
-    if a in H: put(td[2], H[a][0]); tick(td[3], H[a][1])
+    if a in H: put(td[2], 'S-01' if H[a][1] == 'Sent' else '-'); put(td[3], H[a][0]); tick(td[4], H[a][1])
 dt = rows('dtb'); tick(dt[0], 'Signal sent on'); put(dt[1].findall('td')[1], '30 Nov 2026, then monthly to January: instability by time point, liner +3 cases, S-03 cases, liner range in every set.')
 wb = doc.xpath('//div[contains(@class,"lim")]')[0]
 put(wb, 'Very small numbers: 8 procedures, 2 participants at 3 months; the percentages move a lot with one event and no test of difference is attempted. The explanted liner has not yet been returned to the sponsor, so the device route has no result yet. ICDL-014-005 lot was read from the explant label.')
@@ -123,7 +123,7 @@ st = etree.SubElement(doc.find('.//head'), 'style')
 st.text = ('@font-face{font-family:"SimHand";font-weight:400 700;src:url(data:font/ttf;base64,' + hand + ')}'
            '@font-face{font-family:"SimSig";src:url(data:font/ttf;base64,' + sig + ')}'
            '.demo-fill,.demo-entry{font-family:"Segoe Print","Bradley Hand","Comic Sans MS","SimHand",cursive!important;color:#174f88!important;font-weight:600!important;line-height:1.18!important}'
-           'td .demo-fill{display:block;text-align:center!important;font-size:8.2px}td:has(>.demo-fill){text-align:center!important}.demo-fill.inl{display:inline!important}td.left:has(>.demo-fill.inl){text-align:left!important}'
+           'td .demo-fill{display:block;text-align:center!important;font-size:9.2px}.kc2 td .demo-fill,.dt td .demo-fill,.ft td .demo-fill{font-size:8.6px}td:has(>.demo-fill){text-align:center!important}.demo-fill.inl{display:inline!important}td.left:has(>.demo-fill.inl){text-align:left!important}'
            '.meta-cell .demo-entry{display:block;text-align:left;font-size:10px;margin-top:3px}'
            '.wbox.lim .demo-fill{display:block;font-size:10.4px;line-height:1.45!important;margin-top:8px}'
            '.sig-ink{font-family:"Snell Roundhand","Brush Script MT","Segoe Script","Lucida Handwriting","SimSig",cursive!important;font-size:15px!important;color:#174f88}')

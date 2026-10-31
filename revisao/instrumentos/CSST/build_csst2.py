@@ -50,12 +50,12 @@ B = (sec('B', 'Sources and their limitations', 'With limitation means the review
            [tr(td(a, 'dl'), td(b, 'left'), td(), td(ck('Complete', 'With limitation', 'Not available', cls='opts col')), td()) for a, b in src_rows]))
 pages.append(f'<main class="page">{top("Review identification, purpose and sources")}<section class="meta-grid">{hdr}</section><section class="section compact">{A}</section><section class="section compact">{B}</section>{foot("Identification, purpose and sources", 1)}</main>')
 # ---------- Page 2: C1
-c1 = ['Participants screened', 'Screening failures', 'Participants enrolled', 'Investigational procedures performed', 'Surgeons operating', 'Surgeons with a first study case in this period',
+c1 = ['Participants enrolled', 'Investigational procedures performed', 'Surgeons operating', 'Surgeons with a first study case in this period',
       'Procedures within a surgeon\'s first ___ study cases', 'Revision procedures (component exchanged or removed)', 'Explanted components returned', 'Follow-up visits due', 'Follow-up visits done in window', 'Follow-up visits missed']
-fu = ['first postoperative visit', '6 weeks', '3 months', '6 months', '12 months', '24 months']
-C1 = (sec('C1', 'Cases and follow-up reached', 'These numbers are the denominators for C2 and C3. Procedures and surgeons come from the ICDL and the SLCT, screening from the PSEAR and SIFSL, follow-up from the PFVR. Adapt the time points to the CIP visit schedule.') +
+fu = ['Operated (intraoperative)', 'Reached discharge', 'Reached first postoperative visit', 'Reached 6 weeks', 'Reached 3 months', 'Reached 6 months', 'Reached 12 months', 'Reached 24 months']
+C1 = (sec('C1', 'Cases and follow-up reached', 'These numbers are the denominators for C2 and C3. Procedures and surgeons come from the ICDL and the SLCT, enrollment from the PSEAR, follow-up from the PFVR. The time points match the columns of C2. Adapt the time points to the CIP visit schedule.') +
       table('kc1', [40, 15, 15, 15, 15], ['Count', 'This period (n)', 'Previous period (n)', 'Change (%)', 'Cumulative (N)'], [tr(td(x, 'left'), td(), td(), td(), td()) for x in c1] +
-            [grp('Participants who reached each follow-up time point', 5)] + [tr(td(f'Reached {t}', 'left'), td(), td(), td(), td()) for t in fu] +
+            [grp('Participants who reached each time point (N for the columns of C2)', 5)] + [tr(td(t, 'left'), td(), td(), td(), td()) for t in fu] +
             [tr(td('Participants withdrawn or lost to follow-up', 'left'), td(), td(), td(), td())]))
 pages.append(f'<main class="page">{top("Cases and follow-up reached")}<section class="section compact">{C1}</section>{foot("Cases and follow-up reached", 2)}</main>')
 # ---------- Pages 3-4: C2 by time point (landscape)
@@ -82,7 +82,7 @@ ov = ['Participants with at least one complication', 'Participants with more tha
 C2b = (sec('C2', 'Complications by follow-up time point (continued)') +
        table('kc2', C2W, C2H, c2rows(g2)) +
        '<div class="exh">Overview</div>' +
-       table('ov', [40, 15, 15, 15, 15], ['Measure', 'This period (n)', 'Previous period (n)', 'Cumulative<span class="u">(n / N) %</span>', 'N used'], [tr(td(x, 'left ev'), td(), td(), td(), td()) for x in ov]))
+       table('ov', [28, 11, 12, 11, 19, 19], ['Measure', 'This period (n)', 'Previous period (n)', 'Change (%)', 'Cumulative<span class="u">(n / N) %</span>', 'Cumulative at previous review<span class="u">(n / N) %</span>'], [tr(td(x, 'left ev'), td(), td(), td(), td(), td()) for x in ov]))
 pages.append(f'<main class="page landscape">{top("Complications by time point · 2 of 2")}<section class="section compact">{C2b}</section>{foot("Complications by follow-up time point", 4)}</main>')
 # ---------- Page 5: C3 context
 mk = ['Unplanned configuration change', 'Component substitution', 'Technical deviation from the surgical technique', 'Intraoperative difficulty (bone quality, deformity, revision case)', 'Senior support or proctoring used',
@@ -120,7 +120,7 @@ D = (sec('D', 'Signal triggers', 'Apply each trigger and write the value found. 
 pages.append(f'<main class="page landscape">{top("Signal triggers")}<section class="section compact">{D}</section>{foot("Signal triggers", 7)}</main>')
 # ---------- Page 8: F signals (landscape)
 hyp = ck('Device, component or lot', 'Procedure or technique', 'Surgeon or learning curve', 'Case complexity or participant', 'Data or documentation', 'Local process', 'Undetermined', cls='opts col')
-disp = ck('No material pattern', 'Closer surveillance', 'Sent on (H)', 'Inconclusive: data limitation', cls='opts col')
+disp = ck('No material pattern', 'Closer surveillance', 'Sent on (see H)', 'Inconclusive: data limitation', cls='opts col')
 F = (sec('F', 'Assessment of each signal', 'One row per trigger met. Describe the pattern and the explanations still to test; do not conclude the cause. Set how the next review will show whether the response worked.') +
      table('ft', [7, 10, 23, 18, 15, 27], ['Signal ID', 'Trigger (D) · events (SCML IDs)', 'Pattern described', 'Explanations to test', 'Disposition', 'What will show the response worked'],
            [tr(td(), td(), td(), td(hyp), td(disp), td()) for _ in range(4)]))
@@ -133,8 +133,8 @@ routes = [('SLCT', 'Could surgeon-dependent variation explain the pattern?'), ('
           ('SART', 'Are the individual events complete and routed through the safety pathway?'), ('SRR', 'Does the signal show a local process weakness to enter as a risk?'),
           ('CAPA log', 'Did a first response fail, or does a process failure recur?'), ('POT', 'Does the PI need to restrict, supervise more, continue or escalate?'), ('PIR / IMC', 'Should the result inform an indicator or an internal check?')]
 H = (sec('H', 'Where each signal goes', 'The action is followed in the receiving record; this review records only that it was sent.') +
-     table('ht', [16, 42, 24, 18], ['Route', 'Question for this review', 'Receiving record · date sent', 'Status'],
-           [tr(td(a, 'dl'), td(b, 'left'), td(), td(ck('Sent', 'Not required', 'Pending', cls='opts col'))) for a, b in routes]))
+     table('ht', [14, 36, 10, 22, 18], ['Route', 'Question for this review', 'Signal ID (F)', 'Receiving record · date sent', 'Status'],
+           [tr(td(a, 'dl'), td(b, 'left'), td(), td(), td(ck('Sent', 'Not required', 'Pending', cls='opts col'))) for a, b in routes]))
 pages.append(f'<main class="page">{top("Earlier signals and routes")}<section class="section compact">{G}</section><section class="section compact">{H}</section>{foot("Earlier signals and routes", 9)}</main>')
 # ---------- Page 10: conclusion and sign-off
 K = (sec('I', 'Conclusion and sign-off', 'The conclusion reflects the most serious open signal.') +
@@ -157,7 +157,7 @@ td.nrow{background:#f7f9fb!important;font-size:8.4px;color:#173c67}
 .pl{margin:2px 0 0 0;padding-left:16px}.pl li{margin:2px 0;font-size:9.6px;line-height:1.35}p.how{margin:6px 0 0}
 .bt td{height:70px;font-size:8.6px;padding:3px 6px}.bt .opts{font-size:7.8px}
 .kc1 td{height:42px;font-size:8.8px;padding:2px 7px}
-.kc2 td{height:28px;font-size:8.2px;padding:1px 4px}.kc2 th{font-size:8px;padding:3px 2px}.ov td{height:44px;font-size:8.6px;padding:2px 6px}
+.kc2 td{height:28px;font-size:8.2px;padding:1px 4px}.kc2 th{font-size:8px;padding:3px 2px}.ov td{height:56px;font-size:8.6px;padding:2px 6px}
 .kc3 td{height:52px;font-size:8.8px;padding:3px 6px}.kc3 th{font-size:8.4px}
 .exh+table{margin-top:0!important}.exh{background:#dbe7f3;color:#173c67;font-weight:700;font-size:9px;padding:3px 8px;border:1px solid var(--grid);border-bottom:0;margin-top:8px}
 .ex td{height:44px;font-size:8.6px;padding:2px 5px}.ex th{font-size:8.2px}
@@ -165,8 +165,8 @@ td.nrow{background:#f7f9fb!important;font-size:8.4px;color:#173c67}
 .note{margin-top:6px;font-size:8.8px;color:#33475b;border:1px solid var(--grid);border-left:4px solid var(--navy);padding:5px 9px;background:#f7f9fb;line-height:1.35}
 .ft td{height:131px;font-size:8.6px;padding:2px 5px}.ft .opts{font-size:7.8px;line-height:1.15}
 td.lbl{background:#3a78b5!important;color:#fff;font-size:8.4px;text-align:center;font-weight:600;padding:3px 6px}
-.gt td{height:79px;font-size:8.6px;padding:2px 5px}.gt .opts{font-size:7.8px}
-.ht td{height:62px;font-size:8.6px;padding:3px 6px}.ht .opts{font-size:8px;gap:4px 0}
+.gt td{height:74px;font-size:8.6px;padding:2px 5px}.gt .opts{font-size:7.8px}
+.ht td{height:58px;font-size:8.6px;padding:3px 6px}.ht .opts{font-size:8px;gap:4px 0}
 .dtb{margin-top:6px}.dtb td{height:44px;font-size:8.6px;padding:3px 6px}.dtb td.tall{height:90px}.dtb .opts{font-size:8.4px}
 .wbox.lim{min-height:540px;margin-top:8px}
 .sig2 .signature{min-height:110px!important}
