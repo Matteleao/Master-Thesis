@@ -575,50 +575,50 @@
     {
       "instrument": "PIR",
       "version": "1.0",
-      "approval": "Aceito pelo autor em 31/10/2026; PDF pendente",
+      "approval": "Aceito pelo autor em 31/10/2026",
       "variants": {
         "blank": {
           "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/PIR/PIR_v1.0_blank.html",
           "source_sha256": "1d929d2066b8f8d6ff60d7de862ca21650bc10648b334832783fa979802ff174",
           "html": "HTML/blank/PIR_v1.0_blank.html",
           "html_sha256": "1d929d2066b8f8d6ff60d7de862ca21650bc10648b334832783fa979802ff174",
-          "pdf": null,
-          "pdf_sha256": null,
-          "pdf_pages": null
+          "pdf": "PDF/blank/PIR_v1.0_blank.pdf",
+          "pdf_sha256": "7cea354308685ef1e2277096518a189491bbfaf38e2aa0af9f19e45a573ca996",
+          "pdf_pages": 6
         },
         "filled": {
           "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/PIR/PIR_v1.0_filled.html",
           "source_sha256": "d1c940eb70e019f1aef910a40cb17e9beeaaa5e8324d61a1686760040ce78af4",
           "html": "HTML/filled/PIR_v1.0_filled.html",
           "html_sha256": "d1c940eb70e019f1aef910a40cb17e9beeaaa5e8324d61a1686760040ce78af4",
-          "pdf": null,
-          "pdf_sha256": null,
-          "pdf_pages": null
+          "pdf": "PDF/filled/PIR_v1.0_filled.pdf",
+          "pdf_sha256": "72340c4a17d1456a759eb46163afb9e9588cb5b5a63ec42e61915219fd1c7119",
+          "pdf_pages": 6
         }
       }
     },
     {
       "instrument": "CAPA",
       "version": "1.0",
-      "approval": "Aceito pelo autor em 31/10/2026; PDF pendente",
+      "approval": "Aceito pelo autor em 31/10/2026",
       "variants": {
         "blank": {
           "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/CAPA/CAPA_v1.0_blank.html",
           "source_sha256": "7004e72ef1618ec77f1d8ae928bf440b211d37b1fa215dda12c003462d96bd8f",
           "html": "HTML/blank/CAPA_v1.0_blank.html",
           "html_sha256": "7004e72ef1618ec77f1d8ae928bf440b211d37b1fa215dda12c003462d96bd8f",
-          "pdf": null,
-          "pdf_sha256": null,
-          "pdf_pages": null
+          "pdf": "PDF/blank/CAPA_v1.0_blank.pdf",
+          "pdf_sha256": "897daf8e55ec619e2cde691488f387bf9aa57fb86dffd01bf337667352db8ca5",
+          "pdf_pages": 7
         },
         "filled": {
           "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/CAPA/CAPA_v1.0_filled.html",
           "source_sha256": "b840262b3ba3add2de76f213c8cd1097572e6048c362f3e94923876493c10108",
           "html": "HTML/filled/CAPA_v1.0_filled.html",
           "html_sha256": "b840262b3ba3add2de76f213c8cd1097572e6048c362f3e94923876493c10108",
-          "pdf": null,
-          "pdf_sha256": null,
-          "pdf_pages": null
+          "pdf": "PDF/filled/CAPA_v1.0_filled.pdf",
+          "pdf_sha256": "ecb3df3bc0ac0d2d41e8268c6f1872e23a9880e2924648a53421f5d52bc14c31",
+          "pdf_pages": 7
         }
       }
     },
@@ -678,11 +678,12 @@
       "Arial",
       "Comic Sans MS",
       "Z003 (signature fallback only)",
-      "Bradley Hand"
+      "Bradley Hand",
+      "Snell Roundhand (PIR/CAPA v1.0 signatures)"
     ],
     "source_html_unchanged": true,
-    "pdf_count": 34,
-    "pdf_pages": 195,
+    "pdf_count": 50,
+    "pdf_pages": 291,
     "font_files_redistributed": false,
     "last_addition_date": "2026-10-31"
   }

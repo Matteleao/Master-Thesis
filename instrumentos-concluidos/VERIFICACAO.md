@@ -79,3 +79,17 @@ SIFSL v0.5 (31/10/2026): mesma exportação do IMP v1.0, sem transbordamento nas
 PFVR v0.7 (31/10/2026): mesma exportação do IMP v1.0, sem transbordamento nas 5 páginas das duas versões.
 
 ICDL v0.15 (31/10/2026): mesma exportação do IMP v1.0, sem transbordamento nas 6 páginas das duas versões.
+
+
+## PDFs de PIR v1.0 e CAPA v1.0 — 31/10/2026
+
+Exportação solicitada pelo autor dos HTMLs mais recentes de `HTML/blank` e `HTML/filled`, conferidos no commit `afe3fd4bcffe50132acc5be3200f8f9ee558b1de`. Os quatro HTMLs permanecem intactos e seus hashes foram confirmados antes da exportação.
+
+| Instrumento | Blank: HTML / PDF | Filled: HTML / PDF | Orientação |
+|---|---|---|---|
+| PIR v1.0 | 6 / 6 páginas | 6 / 6 páginas | Páginas 2–4 em paisagem; demais em retrato |
+| CAPA v1.0 | 7 / 7 páginas | 7 / 7 páginas | Páginas 2, 4–6 em paisagem; demais em retrato |
+
+Chromium/Playwright, A4 conforme CSS, fundos coloridos e texto selecionável. Apenas para impressão, a interface externa do editor foi ocultada e a quebra após a última folha foi desativada, evitando botão de editor e folha vazia final. Nenhuma alteração foi salva nos HTMLs. Arial, Bradley Hand e Snell Roundhand (assinaturas) foram incorporadas conforme usadas pelo HTML; arquivos de fonte não são redistribuídos.
+
+Os quatro PDFs foram reabertos e as 26 páginas foram renderizadas com Poppler e inspecionadas visualmente. Quantidade/orientação correspondem aos HTMLs, rodapés e texto permanecem dentro das páginas, sem transbordamento detectado nem interface de edição. Hashes SHA-256 e contagens constam no manifesto. Os PDFs novos coexistem com o restante do acervo.

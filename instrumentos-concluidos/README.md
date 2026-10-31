@@ -48,8 +48,8 @@ Inclusão expressamente autorizada pelo autor para coexistir com o acervo anteri
 |---|---|---|---|---|---|
 | **PFVR** — Participant Follow-up Visit Record | v0.4 | [blank](HTML/blank/PFVR_v0.4_blank.html) | [filled](HTML/filled/PFVR_v0.4_filled.html) | [blank](PDF/blank/PFVR_v0.4_blank.pdf) | [filled](PDF/filled/PFVR_v0.4_filled.pdf) |
 | **ICDL** — Intraoperative Checklist and Device Log | v0.15 | [blank](HTML/blank/ICDL_v0.15_blank.html) | [filled](HTML/filled/ICDL_v0.15_filled.html) | [blank](PDF/blank/ICDL_v0.15_blank.pdf) | [filled](PDF/filled/ICDL_v0.15_filled.pdf) |
-| **PIR** — Performance Indicator Record | v1.0 | [blank](HTML/blank/PIR_v1.0_blank.html) | [filled](HTML/filled/PIR_v1.0_filled.html) | PDF pendente | PDF pendente |
-| **CAPA** — Corrective and Preventive Action Log | v1.0 | [blank](HTML/blank/CAPA_v1.0_blank.html) | [filled](HTML/filled/CAPA_v1.0_filled.html) | PDF pendente | PDF pendente |
+| **PIR** — Performance Indicator Record | v1.0 | [blank](HTML/blank/PIR_v1.0_blank.html) | [filled](HTML/filled/PIR_v1.0_filled.html) | [blank](PDF/blank/PIR_v1.0_blank.pdf) | [filled](PDF/filled/PIR_v1.0_filled.pdf) |
+| **CAPA** — Corrective and Preventive Action Log | v1.0 | [blank](HTML/blank/CAPA_v1.0_blank.html) | [filled](HTML/filled/CAPA_v1.0_filled.html) | [blank](PDF/blank/CAPA_v1.0_blank.pdf) | [filled](PDF/filled/CAPA_v1.0_filled.pdf) |
 | **IQL** — Imaging Quality Log | v0.5 | [blank](HTML/blank/IQL_v0.5_blank.html) | [filled](HTML/filled/IQL_v0.5_filled.html) | [blank](PDF/blank/IQL_v0.5_blank.pdf) | [filled](PDF/filled/IQL_v0.5_filled.pdf) |
 
 ## Pendências que não entram nesta pasta
@@ -84,4 +84,4 @@ PFVR v0.7 foi concluído pelo autor em 31/10/2026: guia de componentes na págin
 
 ICDL v0.15 foi concluído pelo autor em 31/10/2026: seções A–K mantidas; dados do caso para o SLCT (complexidade, suporte, entrada), configuração e posição na revisão pós-operatória, IQL no lugar de ICQL.
 
-PIR v1.0 e CAPA v1.0 aceitos pelo autor em 31/10/2026; publicados só em HTML, PDFs pendentes.
+PIR v1.0 e CAPA v1.0 aceitos pelo autor em 31/10/2026; PDFs blank e filled exportados dos HTMLs concluídos e publicados nas respectivas pastas em 31/10/2026.
