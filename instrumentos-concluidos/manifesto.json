@@ -403,6 +403,31 @@
       }
     },
     {
+      "instrument": "SIFSL",
+      "version": "0.5",
+      "approval": "Concluído pelo autor em 31/10/2026",
+      "variants": {
+        "blank": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/SIFSL/SIFSL_v0.5_blank.html",
+          "source_sha256": "a556f7dd06da89de2b3449e545dde62eb75ab927a531c4a21d2fd0a3f23025a0",
+          "html": "HTML/blank/SIFSL_v0.5_blank.html",
+          "html_sha256": "a556f7dd06da89de2b3449e545dde62eb75ab927a531c4a21d2fd0a3f23025a0",
+          "pdf": "PDF/blank/SIFSL_v0.5_blank.pdf",
+          "pdf_sha256": "5eae31803d45cf0a36ac39c3144f8495eea869b212eb37175247b21b955fb308",
+          "pdf_pages": 5
+        },
+        "filled": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/SIFSL/SIFSL_v0.5_filled.html",
+          "source_sha256": "0a55fe26390ab922157003c06a3c36fcb9757ebb6d03726539457202689d7e2f",
+          "html": "HTML/filled/SIFSL_v0.5_filled.html",
+          "html_sha256": "0a55fe26390ab922157003c06a3c36fcb9757ebb6d03726539457202689d7e2f",
+          "pdf": "PDF/filled/SIFSL_v0.5_filled.pdf",
+          "pdf_sha256": "0a11117fcd72935a7732ec68c46b57f972e942a2515cca0653f161cb180f5372",
+          "pdf_pages": 5
+        }
+      }
+    },
+    {
       "instrument": "IQL",
       "version": "0.6",
       "approval": "Concluído pelo autor em 31/10/2026; a v0.5 permanece no acervo",

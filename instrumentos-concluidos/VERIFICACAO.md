@@ -18,6 +18,7 @@ Data: 30/10/2026. Branch: `codex/thesis-work`.
 | IMC v1.5 | 7 / 7 páginas | 7 / 7 páginas | Conferido |
 | SIRR v0.6 | 5 / 5 páginas | 5 / 5 páginas | Conferido |
 | PSEAR v0.94 | 7 / 7 páginas | 7 / 7 páginas | Conferido |
+| SIFSL v0.5 | 5 / 5 páginas | 5 / 5 páginas | Conferido |
 | IQL v0.6 | 4 / 4 páginas | 5 / 5 páginas (2 folhas de log) | Conferido |
 | SRR v1.0 | 7 / 7 páginas | 7 / 7 páginas | Conferido |
 
@@ -70,3 +71,5 @@ IMC v1.5 (31/10/2026): mesma exportação do IMP v1.0 (A4, páginas 4 e 5 em pai
 SIRR v0.6 (31/10/2026): mesma exportação do IMP v1.0, sem transbordamento nas 5 páginas das duas versões.
 
 PSEAR v0.94 (31/10/2026): mesma exportação do IMP v1.0, sem transbordamento nas 7 páginas das duas versões.
+
+SIFSL v0.5 (31/10/2026): mesma exportação do IMP v1.0, sem transbordamento nas 5 páginas das duas versões.
