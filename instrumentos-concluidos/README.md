@@ -34,6 +34,7 @@ instrumentos-concluidos/
 | **IMP** — Internal Monitoring Plan | v1.0 | [blank](HTML/blank/IMP_v1.0_blank.html) | [filled](HTML/filled/IMP_v1.0_filled.html) | [blank](PDF/blank/IMP_v1.0_blank.pdf) | [filled](PDF/filled/IMP_v1.0_filled.pdf) |
 | **IMC** — Internal Monitoring Checklist | v1.5 | [blank](HTML/blank/IMC_v1.5_blank.html) | [filled](HTML/filled/IMC_v1.5_filled.html) | [blank](PDF/blank/IMC_v1.5_blank.pdf) | [filled](PDF/filled/IMC_v1.5_filled.pdf) |
 | **SIRR** — Site Imaging Readiness Record | v0.6 | [blank](HTML/blank/SIRR_v0.6_blank.html) | [filled](HTML/filled/SIRR_v0.6_filled.html) | [blank](PDF/blank/SIRR_v0.6_blank.pdf) | [filled](PDF/filled/SIRR_v0.6_filled.pdf) |
+| **PSEAR** — Participant Screening and Eligibility Assessment Record | v0.94 | [blank](HTML/blank/PSEAR_v0.94_blank.html) | [filled](HTML/filled/PSEAR_v0.94_filled.html) | [blank](PDF/blank/PSEAR_v0.94_blank.pdf) | [filled](PDF/filled/PSEAR_v0.94_filled.pdf) |
 | **IQL** — Imaging Quality Log | v0.6 | [blank](HTML/blank/IQL_v0.6_blank.html) | [filled](HTML/filled/IQL_v0.6_filled.html) | [blank](PDF/blank/IQL_v0.6_blank.pdf) | [filled](PDF/filled/IQL_v0.6_filled.pdf) |
 | **SLCT** — Surgeon Learning Curve Tracking Log | v0.4 | [blank](HTML/blank/SLCT_v0.4_blank.html) | [filled](HTML/filled/SLCT_v0.4_filled.html) | [blank](PDF/blank/SLCT_v0.4_blank.pdf) | [filled](PDF/filled/SLCT_v0.4_filled.pdf) |
 
@@ -69,3 +70,5 @@ Revisão de 31/10/2026, pedida pelo autor: o grau de Clavien-Dindo completo (I, 
 IMC v1.5 foi concluído pelo autor em 31/10/2026: doze verificações iguais às do IMP v1.0, amostra e registros por verificação (D), revisão em paisagem (E) e rota POT em H.
 
 SIRR v0.6 foi concluído pelo autor em 31/10/2026: requisitos com ID fixo (IMG-01 a IMG-08), implementação e evidência separadas, gaps e ações com bloqueio de submissão, conclusão do site separada da ativação pelo sponsor.
+
+PSEAR v0.94 foi concluído pelo autor em 31/10/2026: arquitetura A–K mantida; exceções em H antes da decisão em I, com o que confirma cada gate; critérios por linha com segundo revisor quando exigido.

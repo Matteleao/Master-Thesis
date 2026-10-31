@@ -378,6 +378,31 @@
       }
     },
     {
+      "instrument": "PSEAR",
+      "version": "0.94",
+      "approval": "Concluído pelo autor em 31/10/2026",
+      "variants": {
+        "blank": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/PSEAR/PSEAR_v0.94_blank.html",
+          "source_sha256": "689e6c72a812fda5f91aa3c9e317b571bdcbaa39568cfe7895ecf47fb0a26c1f",
+          "html": "HTML/blank/PSEAR_v0.94_blank.html",
+          "html_sha256": "689e6c72a812fda5f91aa3c9e317b571bdcbaa39568cfe7895ecf47fb0a26c1f",
+          "pdf": "PDF/blank/PSEAR_v0.94_blank.pdf",
+          "pdf_sha256": "1c51ab0b4e5c0c11acacc28ab46598e9854b34002c0fa11400e658a2ba9c7b60",
+          "pdf_pages": 7
+        },
+        "filled": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/PSEAR/PSEAR_v0.94_filled.html",
+          "source_sha256": "52ce0de390317ad197144ea9b0f1d73b0b5cc40d1d67e1c309a611db32fae136",
+          "html": "HTML/filled/PSEAR_v0.94_filled.html",
+          "html_sha256": "52ce0de390317ad197144ea9b0f1d73b0b5cc40d1d67e1c309a611db32fae136",
+          "pdf": "PDF/filled/PSEAR_v0.94_filled.pdf",
+          "pdf_sha256": "e86c27193800a2401de65a8d636c535fa4f6e1bef06665efa564d89cfc05ecee",
+          "pdf_pages": 7
+        }
+      }
+    },
+    {
       "instrument": "IQL",
       "version": "0.6",
       "approval": "Concluído pelo autor em 31/10/2026; a v0.5 permanece no acervo",
