@@ -29,14 +29,16 @@ def fillrow(r, vals, start=1):
 for v in doc.xpath('//div[@class="version"]'): v.text = 'SIMULATED · v0.7'
 doc.find('.//title').text = 'PFVR v0.7 - Simulated Editable'
 for k, v in [('Study / protocol', 'GLENOS-01 / GS-2026-01'), ('CIP version', 'CIP v4.2'), ('Site / code', 'Riverside Orthopedic Center / 014'), ('PFVR ID', 'PFVR-014-002-M3'),
-             ('Participant code', '014-002'), ('Visit (name / nominal day)', '3 months / day 90'), ('Index procedure date (ICDL ID)', '8 Jul 2026 (ICDL-014-002)'), ('Target date', '6 Oct 2026'),
-             ('Window (first and last day)', '22 Sep to 20 Oct 2026 (day 76 to 104)'), ('Completed by / role', 'Nadia Costa / Research nurse'), ('Controlled location', 'ISF tab 6 (Follow-up) / PFVR-014-002-M3')]:
+             ('Participant code', '014-002'), ('Visit (name / nominal day)', '3 months / day 90'), ('Index procedure date (ICDL ID)', '8 Jul 2026 (ICDL-014-002)'), ('Controlled location', 'ISF tab 6 (Follow-up) / PFVR-014-002-M3')]:
     meta(k, v)
-tick(doc.xpath('//section[contains(@class,"meta-grid")]')[0], 'Attended')
-for st in doc.xpath('//section[@class="sheet-strip"]'):
+for st in doc.xpath('//section[contains(@class,"sheet-strip")]'):
     for c in st.xpath('./div[contains(@class,"meta-cell")]'):
         lab = c.find('b').text_content().strip(); be = c.find('.//span[@class="blank-entry"]')
-        be.getparent().replace(be, E('span', 'demo-entry', {'PFVR ID': 'PFVR-014-002-M3', 'Participant code': '014-002', 'Visit': '3 months', 'Window': '22 Sep to 20 Oct 2026'}[lab]))
+        be.getparent().replace(be, E('span', 'demo-entry', {'PFVR ID': 'PFVR-014-002-M3', 'Participant code': '014-002', 'Visit': '3 months', 'Window': '22 Sep to 20 Oct 2026', 'Sheet no. / total sheets': '1 of 1'}[lab]))
+bg = rows('bg')
+tick(bg[0], 'X-ray'); tick(bg[1], 'Pain', 'Function', 'Instability'); tick(bg[2], 'Range of motion', 'Stability', 'Wound', 'Functional score'); tick(bg[3], 'Safety review')
+for td, v in zip(rows('tt')[0].findall('td'), ['6 Oct 2026 (day 90 after surgery)', '22 Sep to 20 Oct 2026 (day 90 ± 14)', '2 Oct 2026', '-4']): put(td, v)
+put(rows('rj')[0].findall('td')[1], 'No delay. Return contact on 9 Oct only to finish the ASES (I-1).')
 for r, b in zip(rows('bt'), [('2 Oct 2026 · in person', '86', '1, 3 to 6; 2 in part', 'Clinic visit; ASES page 2 not done (participant had to leave). Clinic note CN-014-002-M3'),
                              ('9 Oct 2026 · in person', '93', '2', 'ASES page 2 completed in clinic; same questionnaire Q-014-002-M3'), ('', '', '', '')]):
     td = r.findall('td')
@@ -51,7 +53,7 @@ for r, c in zip(rows('ct'), C):
     td = r.findall('td'); put(td[1], c[0]); tick(td[2], c[1]); put(td[3], c[2]); put(td[4], c[3]); tick(td[5], c[4]); tick(td[6], c[5]); put(td[7], c[6]); put(td[8], c[7])
 d = rows('dt')[0].findall('td')
 put(d[0], '4'); put(d[1], 'IQL-014-024'); tick(d[2], 'Adequate'); put(d[3], 'Dr H. Meyer · 3 Oct'); put(d[4], 'Implant seated; humeral head centered; no dislocation'); put(d[5], 'None')
-for r, e in zip(rows('et'), [('"It feels like it slips out at the back when I reach behind me."', 'About 2 weeks; twice a week; moderate', 'Worse', 'Seen by the PI the same day; SART-014-003 opened (H-2)'),
+for r, e in zip(rows('et'), [('"It feels like it slips out at the back when I reach behind me."', 'About 2 weeks; twice a week; moderate', 'Worse', 'Seen by the PI the same day; SART-014-003 opened (I-2)'),
                              ('"The pain is less than at six weeks."', '3 / 10 now; 5 / 10 at 6 weeks', 'Better', 'None'),
                              ('"I can put a cup on the kitchen shelf."', 'Since about 3 weeks', 'Better', 'None')]):
     td = r.findall('td'); put(td[0], e[0]); put(td[1], e[1]); tick(td[2], e[2]); put(td[3], e[3])
@@ -64,11 +66,11 @@ for r, f in zip(rows('ft'), [('Stability', 'Dr L. Ortiz', 'Apprehension test', '
 for r, g in zip(rows('gt'), [('Elena Martin', 'Yes', ''), ('Dr Lena Ortiz', 'Yes', ''), ('Grace Park', 'No', 'N. Costa on leave on 2 Oct; G. Park, trained on Constant scoring (TRE-014-09), scored under Dr L. Ortiz')]):
     td = r.findall('td'); put(td[1], g[0]); tick(td[2], g[1]); put(td[3], g[2])
 for r, h in zip(rows('ht'), [('2: ASES page 2 not done on 2 Oct; participant had to leave', 'Completed 9 Oct, day 93, in window; no data lost', 'Q-014-002-M3', 'Research nurse', '9 Oct', 'Closed'),
-                             ('6 and E-1: new instability symptoms', 'PI review; SART-014-003 (grade I); physiotherapy for stabilization; event indexed in SCML-014-09', 'SART-014-003; SCML-014-09', 'PI', '16 Oct', 'Closed')]):
+                             ('6 and F-1: new instability symptoms', 'PI review; SART-014-003 (grade I); physiotherapy for stabilization; event indexed in SCML-014-09', 'SART-014-003; SCML-014-09', 'PI', '16 Oct', 'Closed')]):
     td = r.findall('td')
     for k in range(5): put(td[k + 1], h[k])
     tick(td[6], h[5])
-for r, w in zip(rows('it'), ['B: first contact day 86, window day 76 to 104', 'C: 6 of 6 complete', 'C and D: 4 of 4 in window; X-ray adequate (IQL-014-024)', 'H: 2 of 2 closed']):
+for r, w in zip(rows('it'), ['C: visit 2 Oct, 4 days before target, in window', 'D: 6 of 6 complete', 'D and E: 4 of 4 in window; X-ray adequate (IQL-014-024)', 'I: 2 of 2 closed']):
     tick(r.findall('td')[1], 'Yes'); put(r.findall('td')[2], w)
 rows('io')[1].xpath('.//span[@class="check"]')[0].set('class', 'check selected')
 rows('ir')[0].findall('td')[1].append(E('span', 'demo-fill txt', 'All components complete and in window; the ASES finished on a second contact inside the window. New instability symptoms were sent to the PI and the SART; they are a clinical finding, not a gap in the visit data.'))
