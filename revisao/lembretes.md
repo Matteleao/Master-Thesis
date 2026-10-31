@@ -212,3 +212,9 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 ## 31/10/2026 — regra das caixas no preenchido
 - Nas versões preenchidas, caixa marcada = "X" manuscrito azul (mesma fonte cursiva), caixa sem fundo azul e sem visto de computador. Vale do ICDL v0.15 em diante; os já concluídos ficam como estão (decisão do autor).
 - Concluídos hoje: IMC v1.5, SIRR v0.6, PSEAR v0.94, SIFSL v0.5, PFVR v0.7. Numeração: candidato CAND-014-nnn; PSEAR-014-nnn com o número do candidato; IQL mantém 4 dígitos.
+
+## 31/10/2026 — críticas do autor ao FUCR v0.7 (voltar depois)
+- Seção B de "base da revisão" (e a B do PIR) é tabela gigante para encher linguiça: NÃO usar tabelas grandes de linhas vazias para ocupar espaço.
+- Tabela C (quatro medidas) ruim: coluna "Change" em pontos percentuais não faz sentido; parece CSST.
+- O documento inteiro virou "quantos esperados, quantos feitos, %" — pobre. Quer algo mais completo: análise de verdade (ex.: teste estatístico adequado a números pequenos, comparação com períodos/estratos), não só contagens.
+- FUCR volta para "a revisar" (bolinha amarela). PIR fica azul (aceito, sem PDF no Codex).
