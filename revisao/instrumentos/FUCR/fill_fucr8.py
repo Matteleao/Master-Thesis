@@ -30,29 +30,29 @@ for v in doc.xpath('//div[@class="version"]'): v.text = 'SIMULATED · v0.8'
 doc.find('.//title').text = 'FUCR v0.8 - Simulated Editable'
 for k, v in [('Study / protocol', 'GLENOS-01 / GS-2026-01'), ('CIP version', 'CIP v4.2'), ('Site / code', 'Riverside Orthopedic Center / 014'), ('FUCR ID', 'FUCR-014-2026-10'),
              ('Period reviewed / data cut-off', '1 to 31 Oct 2026 / 31 Oct 2026'), ('Previous FUCR', 'FUCR-014-2026-09'), ('Review date', '3 Nov 2026'),
-             ('Participants due (n) · visits expected (n)', '7 · 7 this period; 23 since July'), ('PFVRs used (IDs or range)', 'PFVR-014-001-W2 to PFVR-014-007-W2; none for the missed 6-week visit of 014-006'),
+             ('Participants due (n) · visits expected (n)', '7 · 7 this period; 17 to date'), ('PFVRs used (IDs or range)', 'PFVR-014-001-W2 to PFVR-014-007-W2; none for the missed 6-week visit of 014-006'),
              ('Document owner / role', 'Nadia Costa / Research nurse')]:
     meta(k, v)
 tick(doc.xpath('//section[contains(@class,"meta-grid")]')[0], 'Routine')
 for st in doc.xpath('//section[contains(@class,"sheet-strip")]'):
     for c in st.xpath('./div[contains(@class,"meta-cell")]'):
         lab = c.find('b').text_content().strip(); be = c.find('.//span[@class="blank-entry"]')
-        be.getparent().replace(be, E('span', 'demo-entry', {'FUCR ID': 'FUCR-014-2026-10', 'Site / code': 'Riverside / 014', 'Period / data cut-off': 'Oct 2026 / 31 Oct', 'Rule (PIR rule sheet, indicator 3)': 'PIR-03: 90% or more'}[lab]))
+        be.getparent().replace(be, E('span', 'demo-entry', {'FUCR ID': 'FUCR-014-2026-10', 'Site / code': 'Riverside / 014', 'Period / data cut-off': 'Oct 2026 / 31 Oct', 'Rule (PIR rule sheet, indicator 3)': 'PIR-03: 90% or more', 'Sheet no. / total sheets': '1 of 1'}[lab]))
 MAP = [('014-001', 'Complete', 'Complete', 'Complete', 'Not due', '', ''), ('014-002', 'Complete', 'Complete', 'Complete', 'Not due', '', ''),
        ('014-003', 'Complete', 'Complete', 'Incomplete', 'Not due', '', ''), ('014-004', 'Complete', 'Late', 'Complete', 'Not due', '', ''),
        ('014-005', 'Complete', 'Complete', 'Not due', '', '', ''), ('014-006', 'Complete', 'Missed', 'Not due', '', '', ''), ('014-007', 'Complete', 'Not due', '', '', '', '')]
 for r, m in zip(rows('bm'), MAP):
     td = r.findall('td')
     for k in range(7): put(td[k], m[k])
-CM = [('6 / 7', '42 to 100%', '22 / 23', '78 to 100%', '90% or more', 'Cannot tell yet'),
-      ('5 / 6', '36 to 100%', '19 / 22', '65 to 97%', '90% or more', 'Cannot tell yet'),
-      ('1 / 6', '0 to 64%', '2 / 22', '1 to 29%', '5% or less', 'Cannot tell yet'),
-      ('1 / 7', '0 to 58%', '1 / 23', '0 to 22%', '5% or less', 'Cannot tell yet')]
+CM = [('6 / 7 (86%)', '7 / 7 (100%)', '90% or more', 'Closer review'),
+      ('5 / 6 (83%)', '6 / 7 (86%)', '90% or more', 'Action required'),
+      ('1 / 6 (17%)', '1 / 7 (14%)', '5% or less', 'Action required'),
+      ('1 / 7 (14%)', '0 / 7 (0%)', '5% or less', 'Closer review')]
 for r, c in zip(rows('ct'), CM):
     td = r.findall('td')
-    for k in range(5): put(td[k + 1], c[k])
-    tick(td[6], c[5])
-DC = [('7 / 7', '5 / 5', '4 / 4', '', '', ''), ('Not required', '5 / 5', '4 / 4', '', '', ''), ('7 / 7', '5 / 5', '3 / 4', '', '', ''), ('7 / 7', '5 / 5', '4 / 4', '', '', ''), ('7 / 7', '5 / 5', '4 / 4', '', '', '')]
+    for k in range(3): put(td[k + 1], c[k])
+    tick(td[4], c[3])
+DC = [('7 / 7', '5 / 6', '4 / 4', '', '', ''), ('Not required', '5 / 6', '4 / 4', '', '', ''), ('7 / 7', '5 / 6', '3 / 4', '', '', ''), ('7 / 7', '5 / 6', '4 / 4', '', '', ''), ('7 / 7', '5 / 6', '4 / 4', '', '', '')]
 for r, d in zip(rows('dct'), DC):
     td = r.findall('td')
     for k in range(6): put(td[k + 1], d[k])
@@ -60,18 +60,19 @@ for r, e in zip(rows('et'), [('7', '+1', '-2, +4', '0', '± 4 days'), ('5', '+3'
                              ('0', '', '', '', '± 30 days'), ('0', '', '', '', '± 30 days'), ('0', '', '', '', '± 30 days')]):
     td = r.findall('td')
     for k in range(5): put(td[k + 1], e[k])
-for r, f in zip(rows('ft'), [('Research nurse away (questionnaires, data entry)', 'Visits during her absences (Aug and 1 to 14 Oct)', '2 / 4', '1 / 18', '0.07', 'Cannot tell yet'),
-                             ('Participant travel', 'Participants living abroad part of the year', '1 / 1', '0 / 6', '0.14', 'Cannot tell yet')]):
-    td = r.findall('td')
-    for k in range(5): put(td[k], f[k])
-    tick(td[5], f[5])
+FT = {0: ('2', '1, 4', 'Participant', '014-006 (abroad); 014-004 (holiday)', '6-week visits: 2 / 6 vs other visits 0 / 11', 'PFVR-014-004-W6; outreach log OL-014-006'),
+      2: ('2', '2, 3', 'Site', 'Weeks the research nurse was away (Aug; 1 to 14 Oct)', '2 / 4 vs 1 / 13', 'PFVR-014-003-M3; PFVR-014-002-M3')}
+for i, r in enumerate(rows('ft')):
+    if i in FT:
+        td = r.findall('td'); f = FT[i]
+        put(td[1], f[0]); put(td[2], f[1]); tick(td[3], f[2]); put(td[4], f[3]); put(td[5], f[4]); put(td[6], f[5])
 for r, g in zip(rows('gt'), [('FUCR-A1', 'Named backup for questionnaires and data entry during absence', 'SRR R-13; PIR-A2', 'Coordinator', '30 Nov', 'No incomplete questionnaire in Nov and Dec; repeat the test in F'),
                              ('FUCR-A2', 'Ask about travel at consent and book visits around it', 'Consent checklist', 'Research nurse', '15 Nov', 'No visit missed for travel in the next 3 months')]):
     td = r.findall('td')
     for k in range(6): put(td[k], g[k])
 gi = rows('gi')[0].findall('td'); put(gi[0], 'FUCR-09-A1'); put(gi[1], 'Reminder call 3 days before each visit: no visit late for scheduling'); put(gi[2], 'Oct: 0 late for scheduling (E)'); tick(gi[3], 'Worked')
-h = rows('ht'); tick(h[0], 'Watch next period')
-h[1].findall('td')[1].append(E('span', 'demo-fill txt', 'Every interval still contains the 90% limit: four months of data cannot show whether follow-up is below the rule. The map puts the problems on two lines (014-003, 014-006) and the 6-week column; the 6-week visits also drift late (median +3 days). The absence test (p 0.07) points the same way without proving it. PIR indicator 3: 5 of 7 this period.'))
+h = rows('ht'); tick(h[0], 'Action required')
+h[1].findall('td')[1].append(E('span', 'demo-fill txt', 'Two measures need action. The map puts the problems on two participants (014-003, 014-006) and the 6-week column, where visits also drift late (median +3 days). Two causes: participants away at the 6-week visit, and the questionnaires missed while the research nurse was away (2 of 4 visits in those weeks, 1 of 13 otherwise). PIR indicator 3: 5 of 7 this period.'))
 put(h[2].findall('td')[1], 'PIR-014-2026-10, indicator 3; SRR R-13')
 put(h[3].findall('td')[1], 'FUCR-014-2026-11, 3 Dec 2026')
 def sign(title, name, ink, date):
