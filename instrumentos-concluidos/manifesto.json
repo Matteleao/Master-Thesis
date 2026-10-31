@@ -428,6 +428,31 @@
       }
     },
     {
+      "instrument": "PFVR",
+      "version": "0.7",
+      "approval": "Concluído pelo autor em 31/10/2026",
+      "variants": {
+        "blank": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/PFVR/PFVR_v0.7_blank.html",
+          "source_sha256": "e467dffd9f431c852987df153066d86f920fb5d7245a6ec9b1e481e4aeb446a7",
+          "html": "HTML/blank/PFVR_v0.7_blank.html",
+          "html_sha256": "e467dffd9f431c852987df153066d86f920fb5d7245a6ec9b1e481e4aeb446a7",
+          "pdf": "PDF/blank/PFVR_v0.7_blank.pdf",
+          "pdf_sha256": "b807919cecc70d1e1ec22a049e365d6a877ce45dcd38a846af5af186b52df3f8",
+          "pdf_pages": 5
+        },
+        "filled": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/PFVR/PFVR_v0.7_filled.html",
+          "source_sha256": "54ae47490b527739137f59a7f48288fddd66b7900940f0397fe2bf4cb7679df4",
+          "html": "HTML/filled/PFVR_v0.7_filled.html",
+          "html_sha256": "54ae47490b527739137f59a7f48288fddd66b7900940f0397fe2bf4cb7679df4",
+          "pdf": "PDF/filled/PFVR_v0.7_filled.pdf",
+          "pdf_sha256": "de7e9f85a9c6605c10d2327ef5fd17f671b6ae32f7e64d0d8e8e1bc40a8fc161",
+          "pdf_pages": 5
+        }
+      }
+    },
+    {
       "instrument": "IQL",
       "version": "0.6",
       "approval": "Concluído pelo autor em 31/10/2026; a v0.5 permanece no acervo",

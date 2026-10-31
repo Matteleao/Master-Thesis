@@ -36,6 +36,7 @@ instrumentos-concluidos/
 | **SIRR** — Site Imaging Readiness Record | v0.6 | [blank](HTML/blank/SIRR_v0.6_blank.html) | [filled](HTML/filled/SIRR_v0.6_filled.html) | [blank](PDF/blank/SIRR_v0.6_blank.pdf) | [filled](PDF/filled/SIRR_v0.6_filled.pdf) |
 | **PSEAR** — Participant Screening and Eligibility Assessment Record | v0.94 | [blank](HTML/blank/PSEAR_v0.94_blank.html) | [filled](HTML/filled/PSEAR_v0.94_filled.html) | [blank](PDF/blank/PSEAR_v0.94_blank.pdf) | [filled](PDF/filled/PSEAR_v0.94_filled.pdf) |
 | **SIFSL** — Subject Identification and Failure Screening Log | v0.5 | [blank](HTML/blank/SIFSL_v0.5_blank.html) | [filled](HTML/filled/SIFSL_v0.5_filled.html) | [blank](PDF/blank/SIFSL_v0.5_blank.pdf) | [filled](PDF/filled/SIFSL_v0.5_filled.pdf) |
+| **PFVR** — Participant Follow-up Visit Record | v0.7 | [blank](HTML/blank/PFVR_v0.7_blank.html) | [filled](HTML/filled/PFVR_v0.7_filled.html) | [blank](PDF/blank/PFVR_v0.7_blank.pdf) | [filled](PDF/filled/PFVR_v0.7_filled.pdf) |
 | **IQL** — Imaging Quality Log | v0.6 | [blank](HTML/blank/IQL_v0.6_blank.html) | [filled](HTML/filled/IQL_v0.6_filled.html) | [blank](PDF/blank/IQL_v0.6_blank.pdf) | [filled](PDF/filled/IQL_v0.6_filled.pdf) |
 | **SLCT** — Surgeon Learning Curve Tracking Log | v0.4 | [blank](HTML/blank/SLCT_v0.4_blank.html) | [filled](HTML/filled/SLCT_v0.4_filled.html) | [blank](PDF/blank/SLCT_v0.4_blank.pdf) | [filled](PDF/filled/SLCT_v0.4_filled.pdf) |
 
@@ -75,3 +76,5 @@ SIRR v0.6 foi concluído pelo autor em 31/10/2026: requisitos com ID fixo (IMG-0
 PSEAR v0.94 foi concluído pelo autor em 31/10/2026: arquitetura A–K mantida; exceções em H antes da decisão em I, com o que confirma cada gate; critérios por linha com segundo revisor quando exigido.
 
 SIFSL v0.5 foi concluído pelo autor em 31/10/2026: status e categorias na página 1, registro em folhas numeradas, PSEAR com o número do candidato (CAND-014-nnn), reconciliação e contagens por status e por categoria.
+
+PFVR v0.7 foi concluído pelo autor em 31/10/2026: guia de componentes na página 1, momento da visita com contatos e justificativa, componentes com conclusão e janela separadas, uso das imagens, exceções antes do resultado.
