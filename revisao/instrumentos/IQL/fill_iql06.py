@@ -40,9 +40,9 @@ C = [('014-0006 / Screening', 'PSEAR-014-0006', 'Eligibility', 'Original', '', '
 for row, c in zip(rows('quality-log'), C):
     td = row.findall('td')
     put(td[1], c[0]); put(td[2], c[1]); tick(td[3], c[2]); tick(td[4], c[3])
-    if c[4]: td[4].find('span[@class="rel"]').text = 'Related: ' + c[4]
+    if c[4]: rel = td[4].find('span[@class="rel"]'); rel.text = 'Related: '; rel.append(E('span', 'demo-fill inl', c[4]))
     put(td[5], c[5]); put(td[6], c[6]); tick(td[7], c[7]); tick(td[8], c[8]); tick(td[9], c[9]); tick(td[10], c[10]); tick(td[11], *c[11])
-    if c[12]: td[11].find('span[@class="rel"]').text = 'Ref.: ' + c[12]
+    if c[12]: rel = td[11].find('span[@class="rel"]'); rel.text = 'Ref.: '; rel.append(E('span', 'demo-fill inl', c[12]))
     put(td[12], c[13]); put(td[13], c[14])
 # D: period summary
 meta(p[2], 'Image-set IDs Reviewed (range)', 'Sets 01-05, log sheet 1 of 1')
@@ -77,6 +77,17 @@ sign('Local Imaging Reviewer / Radiology Liaison', 'Dr Lena Ortiz / Radiologist'
 sign('PI Review / Acknowledgment — When Required', 'Dr Alex Morgan / PI', 'A. Morgan', '3 Nov 2026')
 pc = doc.xpath('//div[contains(@class,"pi-cell")]')[0]; tick(pc, 'Required'); pc.find('span[@class="meta-entry"]').append(E('span', 'demo-fill', 'Image limitation linked to an SADE (SART-014-005)'))
 meta(p[3], 'Next Review Date / Trigger', '30 Nov 2026, or the sponsor answer to Q-IMG-12')
+import base64
+F = '/tmp/claude-0/-home-user-Master-Thesis/c35b56ea-6e37-57ca-a7f6-4cae380cc50e/scratchpad/fonts/'
+hand = base64.b64encode(open(F + '4UaErEJDsxBrF37olUeD_xHMwps.ttf', 'rb').read()).decode()
+sig = base64.b64encode(open(F + 'dancing.ttf', 'rb').read()).decode()
 st = etree.SubElement(doc.find('.//head'), 'style')
-st.text = '.quality-log .demo-fill{font-size:8.2px;line-height:1.15}.review-log .demo-fill,.resolution-log .demo-fill{font-size:9px;line-height:1.18}.sig-ink{font-family:"Dancing Script","Z003",cursive!important;font-size:13px!important}.record-location .meta-entry,.record-location .demo-fill{text-align:center}'
+st.text = ('@font-face{font-family:"SimHand";font-weight:400 700;src:url(data:font/ttf;base64,' + hand + ')}'
+           '@font-face{font-family:"SimSig";src:url(data:font/ttf;base64,' + sig + ')}'
+           '.demo-fill{font-family:"Segoe Print","Bradley Hand","Comic Sans MS","SimHand",cursive!important;color:#174f88!important;font-weight:700!important;line-height:1.18!important}'
+           '.demo-fill.inl{display:inline;font-size:8.4px!important}'
+           '.meta-entry .demo-fill{font-size:10.4px}.quality-log .demo-fill{font-size:8.8px}.review-log .demo-fill,.resolution-log .demo-fill{font-size:9.6px}'
+           '.conclusion-basis .demo-fill,.conclusion-table .demo-fill{font-size:10.4px}'
+           '.sig-ink{font-family:"Bradley Hand","Segoe Script","SimSig",cursive!important;font-size:15px!important;font-weight:400!important}'
+           '.record-location .meta-entry,.record-location .demo-fill{text-align:center}')
 open(OUT, 'w').write(LH.tostring(doc, encoding='unicode', doctype='<!DOCTYPE html>')); print('ok')
