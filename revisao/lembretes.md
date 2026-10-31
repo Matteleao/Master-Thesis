@@ -169,3 +169,5 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 - Assinatura do responsável: "Plan owner" (padrão "Matrix owner", "SCML owner"), não "Prepared by".
 - Sem "covered by proxy" nem níveis. Linhas em branco extras só se todas as tabelas equivalentes tiverem.
 - Em aberto: incluir checks de consentimento/elegibilidade e de delegação/treinamento (mudaria 4.4.1 e IMC).
+- IMP 2ª rodada: status só Draft/Approved (o "Supersedes" da versão nova já registra a substituição); sem caixa de independência do revisor (regra fica no guia da D); checks 11 consentimento/elegibilidade e 12 delegação/treinamento + linhas 13–14 livres; C, D (agenda+revisor+amostra fundidos) e E em duas páginas cada (7 + 7 linhas); 9 páginas.
+- Pendente na tese: 4.4.1 passa de dez para doze checks; IMC precisa dos dois novos domínios.
