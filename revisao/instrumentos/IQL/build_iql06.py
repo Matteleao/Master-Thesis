@@ -77,8 +77,8 @@ s = re.sub(r'<section class="meta-grid continuation-meta">.*?</section>', '', s,
 rep('Accountable Local Review and Record Location', 'Accountable Local Review')
 strip = '<section class="meta-grid continuation-meta">' + ''.join(f'<div class="meta-cell"><span class="meta-label">{c}</span><span class="meta-entry"></span></div>' for c in ['Study / Site Code', 'IQL Record ID / Revision', 'Review Period', 'Log Sheet No. / Total']) + '</section>'
 k = s.find('</header>', s.find('<main class="page p2')) + len('</header>'); s = s[:k] + strip + s[k:]
-rep('<span class="meta-label">Review Period / Image-set IDs Reviewed (source range)</span>', '<span class="meta-label">Image-set IDs Reviewed (range)</span>')
-rep('<span class="meta-label">Distinct Image Sets Reviewed (N, counted per set, not per participant)</span>', '<span class="meta-label">Distinct Image Sets Reviewed (N, per set)</span>')
+rep('<span class="meta-label">Review Period / Image-set IDs Reviewed (source range)</span>', '<span class="meta-label">Log Sheets Reviewed</span>')
+rep('<span class="meta-label">Distinct Image Sets Reviewed (N, counted per set, not per participant)</span>', '<span class="meta-label">Distinct Image Sets Reviewed (N)</span>')
 i = s.find('<div class="writebox pi-basis">'); j = s.find('</section>', s.find('<section class="meta-grid record-location">')) + len('</section>')
 s = s[:i] + ('<section class="meta-grid record-location"><div class="meta-cell"><span class="meta-label">PI Review · Trigger or Governing Reference</span>'
              '<div class="options inline pi-opts"><span class="option"><span class="check"></span><span>Required</span></span><span class="option"><span class="check"></span><span>Not required</span></span></div><span class="meta-entry"></span></div>'
