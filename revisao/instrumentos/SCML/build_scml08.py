@@ -28,7 +28,7 @@ def rep(a, b):
     global out
     assert a in out, a[:60]; out = out.replace(a, b, 1)
 import re as _re
-A_NEW = ('<div class="box"><p>The SCML indexes the site’s complications, adverse events, adverse device effects and device deficiencies so they can be compared across cases. Each case is assessed in the Safety and Adverse Effect Reporting Template (SART); the log keeps only the current classification and the links to its sources. Urgent care and safety reporting never wait for this log.</p></div>'
+A_NEW = ('<div class="box"><p>The SCML indexes the site’s complications, adverse events, adverse device effects and device deficiencies so they can be compared across cases. Each case is assessed in the Safety Assessment, Reporting and Tracking Template (SART); the log keeps only the current classification and the links to its sources. Urgent care and safety reporting never wait for this log.</p></div>'
          '<table class="purpose"><colgroup><col style="width:22%"><col style="width:26%"><col style="width:26%"><col style="width:26%"></colgroup>'
          '<thead><tr><th>Unit of analysis</th><th>Decision supported</th><th>Inputs</th><th>Outputs</th></tr></thead><tbody><tr>'
          '<td>One event, as assessed in its SART case.</td>'
