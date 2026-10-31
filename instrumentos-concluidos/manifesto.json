@@ -573,6 +573,56 @@
       }
     },
     {
+      "instrument": "PIR",
+      "version": "1.0",
+      "approval": "Aceito pelo autor em 31/10/2026; PDF pendente",
+      "variants": {
+        "blank": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/PIR/PIR_v1.0_blank.html",
+          "source_sha256": "1d929d2066b8f8d6ff60d7de862ca21650bc10648b334832783fa979802ff174",
+          "html": "HTML/blank/PIR_v1.0_blank.html",
+          "html_sha256": "1d929d2066b8f8d6ff60d7de862ca21650bc10648b334832783fa979802ff174",
+          "pdf": null,
+          "pdf_sha256": null,
+          "pdf_pages": null
+        },
+        "filled": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/PIR/PIR_v1.0_filled.html",
+          "source_sha256": "d1c940eb70e019f1aef910a40cb17e9beeaaa5e8324d61a1686760040ce78af4",
+          "html": "HTML/filled/PIR_v1.0_filled.html",
+          "html_sha256": "d1c940eb70e019f1aef910a40cb17e9beeaaa5e8324d61a1686760040ce78af4",
+          "pdf": null,
+          "pdf_sha256": null,
+          "pdf_pages": null
+        }
+      }
+    },
+    {
+      "instrument": "CAPA",
+      "version": "1.0",
+      "approval": "Aceito pelo autor em 31/10/2026; PDF pendente",
+      "variants": {
+        "blank": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/CAPA/CAPA_v1.0_blank.html",
+          "source_sha256": "7004e72ef1618ec77f1d8ae928bf440b211d37b1fa215dda12c003462d96bd8f",
+          "html": "HTML/blank/CAPA_v1.0_blank.html",
+          "html_sha256": "7004e72ef1618ec77f1d8ae928bf440b211d37b1fa215dda12c003462d96bd8f",
+          "pdf": null,
+          "pdf_sha256": null,
+          "pdf_pages": null
+        },
+        "filled": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/CAPA/CAPA_v1.0_filled.html",
+          "source_sha256": "b840262b3ba3add2de76f213c8cd1097572e6048c362f3e94923876493c10108",
+          "html": "HTML/filled/CAPA_v1.0_filled.html",
+          "html_sha256": "b840262b3ba3add2de76f213c8cd1097572e6048c362f3e94923876493c10108",
+          "pdf": null,
+          "pdf_sha256": null,
+          "pdf_pages": null
+        }
+      }
+    },
+    {
       "instrument": "IQL",
       "version": "0.5",
       "approval": "Publicação adicional autorizada expressamente pelo autor em 31/10/2026; manter simultaneamente todas as versões antigas, sem substituição ou indicação automática de versão vigente.",
