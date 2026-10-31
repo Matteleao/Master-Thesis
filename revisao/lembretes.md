@@ -162,3 +162,10 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 
 - **SART v1.0 (autor, 30/10):** reconstruído a partir da análise do Codex. Decisões do autor: nome novo "Safety Assessment, Reporting and Tracking Template" (a tese terá de ser ajustada depois: abreviaturas, Tabela 4.3, 4.3.3, 4.5.4, Apêndice K); contexto contribuinte em C3 mantido; rótulos Pending / Preliminary / Final (PI); seção F com PIR e rota de DD do patrocinador; três caixas de assinatura; sem "Editor v2 canônico" (usa o editor dos concluídos).
 - **SART v1.0 concluído (autor, 30/10):** em branco e preenchido, HTML e PDF, em `revisao/instrumentos/SART/` e em `codex/thesis-work:instrumentos-concluidos/` (9 de 24). O autor não se importa com exemplos fictícios diferentes entre instrumentos (Northbridge no SCML, GLENOS-01 nos demais).
+
+## IMP v1.0 (31-10)
+- Páginas 2–7 sem faixa de cabeçalho repetida (documento grampeado). Vale para os próximos instrumentos.
+- Tabela H: resposta mínima em branco, o centro escreve; sem "checked again".
+- Assinatura do responsável: "Plan owner" (padrão "Matrix owner", "SCML owner"), não "Prepared by".
+- Sem "covered by proxy" nem níveis. Linhas em branco extras só se todas as tabelas equivalentes tiverem.
+- Em aberto: incluir checks de consentimento/elegibilidade e de delegação/treinamento (mudaria 4.4.1 e IMC).
