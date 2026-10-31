@@ -183,3 +183,5 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 - Visualizador: para o instrumento em iteração, mostrar só "anterior" (a versão que o autor criticou) e "nova" (a atual); a anterior de antes sai.
 - Nunca usar siglas de uma ou duas letras nos cabeçalhos (P, S, Pr, Dv…): usar Prob., Safety, Proc., Device, Data, Detect.
 - SRR 3ª rodada: perfil CtQ (B) na p1 com Factor ID e fonte; F cita o ID; gatilhos comuns removidos; faixas Low/Moderate/High/Critical com descrições da v0.1 e cabeçalho azul; J dividida em "Status changes" e "Escalation routes"; 7 páginas.
+- ERRO A NÃO REPETIR: não incluir em instrumento proposta que o autor não decidiu (perfil CtQ entrou sem decisão e foi retirado). Propor primeiro, construir depois.
+- SRR 4ª rodada: perfil CtQ retirado; referência em 2 páginas (p1: A, B, C compactos; p2 paisagem: D + faixas + E exemplo); J = regras em parágrafo + registro assinado de decisões (baixar, aceitar, fechar, escalar); 6 páginas. Em aberto: tabela própria de fatores CtQ (várias linhas por domínio) — o autor decide.
