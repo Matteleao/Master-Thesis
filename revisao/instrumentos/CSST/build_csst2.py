@@ -7,7 +7,7 @@ head = re.sub(r'<title>.*?</title>', '<title>CSST v2.0 - Blank Editable</title>'
 ed_style = p[p.find('<style id="pot-editor-style">'):]; ed_style = ed_style[:ed_style.find('</style>') + 8]
 ed_script = p[p.find('<script id="pot-editor-script">'):]; ed_script = ed_script[:ed_script.find('</script>') + 9]
 ed = (ed_style + '\n' + ed_script).replace('pot-', 'csst-').replace('Editor do POT', 'Editor do CSST').replace('POT', 'CSST')
-V, NP = 'CSST v2.0', 10
+V, NP = 'CSST v2.0', 11
 def ck(*labels, cls='opts'):
     return f'<span class="{cls}">' + ''.join(f'<span class="opt"><span class="check"></span>{l}</span>' for l in labels) + '</span>'
 def top(sub):
@@ -60,9 +60,9 @@ C1 = (sec('C1', 'Cases and follow-up reached', 'These numbers are the denominato
 pages.append(f'<main class="page">{top("Cases and follow-up reached")}<section class="section compact">{C1}</section>{foot("Cases and follow-up reached", 2)}</main>')
 # ---------- Pages 3-4: C2 by time point (landscape)
 TP = ['Intraoperative', 'Before discharge', 'First postop visit', '6 weeks', '3 months', '6 months', '12 months', '24 months']
-C2W = [19] + [8.5] * 8 + [6, 7]
-C2H = ['Event (SCML category)'] + [f'{t}<span class="u">(n / N) %</span>' for t in TP] + ['Total (n)', 'New this period']
-nrow = tr(td('<b>N for this column (from C1)</b>', 'left nrow'), *[td('', 'nrow') for _ in range(10)])
+C2W = [19] + [8] * 8 + [5.5, 6, 5.5]
+C2H = ['Event (SCML category)'] + [f'{t}<span class="u">(n / N) %</span>' for t in TP] + ['Total (n)', 'Grade IIIa or higher (n)', 'New this period']
+nrow = tr(td('<b>N for this column (from C1)</b>', 'left nrow'), *[td('', 'nrow') for _ in range(11)])
 g1 = [('Instability / dislocation', ['Dislocation', 'Subluxation or instability symptoms']),
       ('Fracture', ['Intraoperative fracture', 'Periprosthetic fracture', 'Acromion or scapular spine fracture']),
       ('Infection / wound', ['Superficial wound problem', 'Deep or periprosthetic infection', 'Hematoma']),
@@ -72,18 +72,24 @@ g2 = [('Function and other', ['Stiffness or loss of motion', 'Persistent pain', 
 def c2rows(groups):
     out = [nrow]
     for g, evs in groups:
-        out.append(grp(g, 11))
-        out += [tr(td(e, 'left ev'), *[td() for _ in range(10)]) for e in evs]
+        out.append(grp(g, 12))
+        out += [tr(td(e, 'left ev'), *[td() for _ in range(11)]) for e in evs]
     return out
 C2a = (sec('C2', 'Complications by follow-up time point', 'Count each event once, in the time point where it occurred, against the N of that column. Reading across a row shows whether a problem appears early or grows with time.') +
        table('kc2', C2W, C2H, c2rows(g1)))
 pages.append(f'<main class="page landscape">{top("Complications by time point · 1 of 2")}<section class="section compact">{C2a}</section>{foot("Complications by follow-up time point", 3)}</main>')
-ov = ['Participants with at least one complication', 'Participants with more than one complication', 'Reoperations', 'Revisions (component exchanged or removed)', 'Serious events (SAE / SADE)', 'Device deficiencies (all; counted apart from complications)']
+ov = ['Participants with at least one complication', 'Participants with a complication of grade IIIa or higher', 'Participants with more than one complication', 'Reoperations', 'Revisions (component exchanged or removed)', 'Serious events (SAE / SADE)', 'Device deficiencies (all; counted apart from complications)']
 C2b = (sec('C2', 'Complications by follow-up time point (continued)') +
        table('kc2', C2W, C2H, c2rows(g2)) +
        '<div class="exh">Overview</div>' +
        table('ov', [28, 11, 12, 11, 19, 19], ['Measure', 'This period (n)', 'Previous period (n)', 'Change (%)', 'Cumulative<span class="u">(n / N) %</span>', 'Cumulative at previous review<span class="u">(n / N) %</span>'], [tr(td(x, 'left ev'), td(), td(), td(), td(), td()) for x in ov]))
 pages.append(f'<main class="page landscape">{top("Complications by time point · 2 of 2")}<section class="section compact">{C2b}</section>{foot("Complications by follow-up time point", 4)}</main>')
+GRD = [('I', 'No treatment beyond simple care'), ('II', 'Drug treatment, transfusion'), ('IIIa', 'Intervention without general anesthesia'), ('IIIb', 'Intervention under general anesthesia'), ('IVa', 'Life-threatening, single organ'), ('IVb', 'Life-threatening, multiorgan'), ('V', 'Death')]
+C2g = (sec('C2', 'Complications by Clavien-Dindo grade and time point', 'Grades come from the SCML, which copies them from the SART. Count each complication once, in the column of its time point. Device deficiencies without an adverse event are not graded.') +
+       table('kcg', [22] + [8.5] * 8 + [5, 5], ['Grade'] + [f'{t}<span class="u">(n / N) %</span>' for t in TP] + ['Total (n)', 'New this period'],
+             [tr(td('<b>N for this column (from C1)</b>', 'left nrow'), *[td('', 'nrow') for _ in range(10)])] + [tr(td(f'<b>{g}</b> · {d}', 'left ev'), *[td() for _ in range(10)]) for g, d in GRD] +
+             [tr(td('<b>Disability at discharge (suffix d)</b>', 'left ev'), *[td() for _ in range(10)])]))
+pages.append(f'<main class="page landscape">{top("Complications by grade")}<section class="section compact">{C2g}</section>{foot("Complications by Clavien-Dindo grade", 5)}</main>')
 # ---------- Page 5: C3 context
 mk = ['Unplanned configuration change', 'Component substitution', 'Technical deviation from the surgical technique', 'Intraoperative difficulty (bone quality, deformity, revision case)', 'Senior support or proctoring used',
       'Surgeon within first ___ study cases', 'Operation outside normal hours', 'Instrument or loaner set problem', 'Gap in the operative record', 'Other: ______']
@@ -94,28 +100,29 @@ C3 = (sec('C3', 'Procedure context', 'For each marker, compare the complication 
       table('lk', [24, 22, 26, 28], ['Context marker', 'Procedures (ICDL IDs)', 'Complication found (C2 event · SCML ID)', 'Comment'], [tr(td(), td(), td(), td()) for _ in range(4)]))
 pages.append(f'<main class="page">{top("Procedure context")}<section class="section compact">{C3}</section>{foot("Procedure context", 5)}</main>')
 # ---------- Page 6: E comparisons
-E = (sec('E', 'Comparison by surgeon, component and case type', 'A group stands out when its share of complications is clearly larger than its share of procedures. Use the surgeon codes of the SLCT and the component, lot and configuration recorded in the ICDL.') +
+E = (sec('E', 'Comparison by surgeon, component and case type', 'Grades follow Clavien-Dindo (SCML). A group stands out when its share of grade IIIa–V complications is clearly larger than its share of procedures. Use the surgeon codes of the SLCT and the component, lot and configuration recorded in the ICDL.') +
      '<div class="exh">E1 · By surgeon (SLCT code)</div>' +
-     table('ex', [16, 16, 18, 16, 18, 16], ['Surgeon', 'Procedures<span class="u">(n) % of all</span>', 'With a complication<span class="u">(n / n) %</span>', 'Share of all complications<span class="u">%</span>', 'In the first ___ cases<span class="u">(n / n) %</span>', 'Note'], [tr(*[td() for _ in range(6)]) for _ in range(5)]) +
+     table('ex', [11, 14, 15, 15, 15, 15, 15], ['Surgeon', 'Procedures<span class="u">(n) % of all</span>', 'Grade I–II<span class="u">(n / n) %</span>', 'Grade IIIa–V<span class="u">(n / n) %</span>', 'Share of all IIIa–V<span class="u">%</span>', 'IIIa–V in first ___ cases<span class="u">(n / n) %</span>', 'Note'], [tr(*[td() for _ in range(7)]) for _ in range(5)]) +
      '<div class="exh">E2 · By component, lot or configuration (ICDL)</div>' +
-     table('ex', [26, 16, 18, 16, 24], ['Component · lot · configuration', 'Procedures<span class="u">(n) % of all</span>', 'With a complication<span class="u">(n / n) %</span>', 'Share of all complications<span class="u">%</span>', 'Note'], [tr(*[td() for _ in range(5)]) for _ in range(5)]) +
+     table('ex', [24, 13, 14, 14, 14, 21], ['Component · lot · configuration', 'Procedures<span class="u">(n) % of all</span>', 'Grade I–II<span class="u">(n / n) %</span>', 'Grade IIIa–V<span class="u">(n / n) %</span>', 'Share of all IIIa–V<span class="u">%</span>', 'Note'], [tr(*[td() for _ in range(6)]) for _ in range(5)]) +
      '<div class="exh">E3 · By case type</div>' +
-     table('ex', [26, 16, 18, 16, 24], ['Case type (indication, primary or revision)', 'Procedures<span class="u">(n) % of all</span>', 'With a complication<span class="u">(n / n) %</span>', 'Share of all complications<span class="u">%</span>', 'Note'], [tr(*[td() for _ in range(5)]) for _ in range(5)]))
+     table('ex', [24, 13, 14, 14, 14, 21], ['Case type (indication, primary or revision)', 'Procedures<span class="u">(n) % of all</span>', 'Grade I–II<span class="u">(n / n) %</span>', 'Grade IIIa–V<span class="u">(n / n) %</span>', 'Share of all IIIa–V<span class="u">%</span>', 'Note'], [tr(*[td() for _ in range(6)]) for _ in range(5)]))
 pages.append(f'<main class="page">{top("Comparison by surgeon, component and case type")}<section class="section compact">{E}</section>{foot("Comparison by surgeon, component and case type", 6)}</main>')
 # ---------- Page 7: D triggers (landscape)
-tg = [('T1', 'Rate above the agreed limit', 'Any category at any time point (C2).'),
+tg = [('T1', 'Rate above the agreed limit', 'Any category at any time point; one limit for all grades and a lower one for grade IIIa–V (C2).'),
       ('T2', 'Rate rising with time', 'The same category grows from earlier to later time points (C2 row).'),
       ('T3', 'Rise since the previous review', 'Same category and time point, compared with the previous CSST.'),
       ('T4', 'New category', 'A category with no earlier events now has events (C2, New this period).'),
-      ('T5', 'Surgeon share', 'A surgeon\'s share of complications exceeds their share of procedures (E1).'),
-      ('T6', 'Component or configuration share', 'Same comparison by component, lot or configuration (E2).'),
-      ('T7', 'Early learning cases', 'Complication rate in a surgeon\'s first cases above their later cases (E1, C1).'),
+      ('T5', 'Surgeon share', 'A surgeon\'s share of grade IIIa–V complications exceeds their share of procedures (E1).'),
+      ('T6', 'Component or configuration share', 'Same comparison for grade IIIa–V by component, lot or configuration (E2).'),
+      ('T7', 'Early learning cases', 'Grade IIIa–V rate in a surgeon\'s first cases above their later cases (E1, C1).'),
       ('T8', 'Context association', 'Rate with a context marker above the rate without it (C3).'),
       ('T9', 'Serious events grouped', 'Serious events in one category within a short window (SART, C2).'),
-      ('T10', 'Device deficiencies of one type', 'Repeated deficiencies of the same type or component (C2, SART).')]
+      ('T10', 'Device deficiencies of one type', 'Repeated deficiencies of the same type or component (C2, SART).'),
+      ('T11', 'Same severe complication repeated', 'The same complication of grade IIIa–V in two or more participants (C2).')]
 D = (sec('D', 'Signal triggers', 'Apply each trigger and write the value found. A trigger met opens a signal in F.') +
      table('dt', [5, 17, 25, 14, 12, 15, 12], ['ID', 'Trigger', 'What is compared · where', 'Agreed limit', 'Source of the limit', 'Value found<span class="u">(n / N) %</span>', 'Met?'],
-           [tr(td(i, 'cat'), td(f'<b>{a}</b>', 'left ev'), td(b, 'left small'), td(), td(), td(), td(ck('Yes', 'No', 'Not assessable', cls='opts col'))) for i, a, b in tg]) +
+           [tr(td(i, 'cat'), td(f'<b>{a}</b>', 'left ev'), td(b, 'left small'), td(), td(), td(), td(ck('Yes', 'No', 'Not assessable', cls='opts g2'))) for i, a, b in tg]) +
      '<div class="note">These triggers are examples. Before the first inclusion, review them and set each limit with the site\'s clinical team and, where it applies, the sponsor; write the agreed limit and its source (CIP, sponsor guidance, site procedure). A limit changed later applies only to later reviews.</div>')
 pages.append(f'<main class="page landscape">{top("Signal triggers")}<section class="section compact">{D}</section>{foot("Signal triggers", 7)}</main>')
 # ---------- Page 8: F signals (landscape)
@@ -147,6 +154,7 @@ K = (sec('I', 'Conclusion and sign-off', 'The conclusion reflects the most serio
 pages.append(f'<main class="page">{top("Conclusion and sign-off")}<section class="section compact">{K}</section>{foot("Conclusion and sign-off", 10)}</main>')
 css = """<style>
 .meta-grid .meta-cell{min-height:64px}.opts.left{justify-content:flex-start}.opts.col{display:grid;grid-template-columns:auto;justify-content:start;text-align:left;gap:3px 0}
+.opts.g2{display:grid;grid-template-columns:auto auto;justify-content:start;gap:4px 10px}
 .opts.wide{gap:22px;flex-wrap:wrap}
 th{text-align:center!important}th .u{display:block;font-weight:400;font-size:7.6px;opacity:.9}
 td.cat{text-align:center;font-weight:700;color:#173c67;background:#f3f6f9!important;font-size:9px}
@@ -157,11 +165,11 @@ td.nrow{background:#f7f9fb!important;font-size:8.4px;color:#173c67}
 .pl{margin:2px 0 0 0;padding-left:16px}.pl li{margin:2px 0;font-size:9.6px;line-height:1.35}p.how{margin:6px 0 0}
 .bt td{height:70px;font-size:8.6px;padding:3px 6px}.bt .opts{font-size:7.8px}
 .kc1 td{height:42px;font-size:8.8px;padding:2px 7px}
-.kc2 td{height:28px;font-size:8.2px;padding:1px 4px}.kc2 th{font-size:8px;padding:3px 2px}.ov td{height:56px;font-size:8.6px;padding:2px 6px}
+.kc2 td{height:28px;font-size:8.2px;padding:1px 4px}.kc2 th{font-size:8px;padding:3px 2px}.ov td{height:49px;font-size:8.6px;padding:2px 6px}
 .kc3 td{height:52px;font-size:8.8px;padding:3px 6px}.kc3 th{font-size:8.4px}
 .exh+table{margin-top:0!important}.exh{background:#dbe7f3;color:#173c67;font-weight:700;font-size:9px;padding:3px 8px;border:1px solid var(--grid);border-bottom:0;margin-top:8px}
 .ex td{height:44px;font-size:8.6px;padding:2px 5px}.ex th{font-size:8.2px}
-.dt td{height:46px;font-size:8.6px;padding:2px 5px}.dt .opts{font-size:7.8px}
+.dt td{height:44px;font-size:8.6px;padding:2px 5px}.dt .opts{font-size:7.8px}
 .note{margin-top:6px;font-size:8.8px;color:#33475b;border:1px solid var(--grid);border-left:4px solid var(--navy);padding:5px 9px;background:#f7f9fb;line-height:1.35}
 .ft td{height:131px;font-size:8.6px;padding:2px 5px}.ft .opts{font-size:7.8px;line-height:1.15}
 td.lbl{background:#3a78b5!important;color:#fff;font-size:8.4px;text-align:center;font-weight:600;padding:3px 6px}
@@ -173,7 +181,10 @@ td.lbl{background:#3a78b5!important;color:#fff;font-size:8.4px;text-align:center
 .letter{font-size:15px!important}
 .purpose th{text-align:center}.purpose td{font-size:9px;padding:5px 8px;vertical-align:top;text-align:left;height:56px;line-height:1.4}.purpose td:first-child{font-weight:400;color:inherit;background:none}
 .lk td{height:56px;font-size:8.6px;padding:2px 5px}
+.kcg td{height:60px;font-size:8.6px;padding:2px 5px}.kcg th{font-size:8px;padding:3px 2px}
 </style>
 """
+import re as _re
+pages = [_re.sub(r'Page \d+ of \d+', f'Page {k + 1} of {len(pages)}', p) for k, p in enumerate(pages)]
 open(OUT, 'w').write(head + '<body class="blank-template">\n' + '\n'.join(pages) + '\n' + css + ed + '\n</body></html>\n')
 print('ok')

@@ -50,17 +50,17 @@ td = byLabel(k1, 'Procedures within').findall('td')[0]; td.text = None
 for c in list(td): td.remove(c)
 td.text = 'Procedures within a surgeon\'s first '; u = E('span', 'demo-fill inl', '5'); u.tail = ' study cases'; td.append(u)
 k2 = rows('kc2', 0) + rows('kc2', 1)
-nr = ['8', '8', '8', '5', '2', '0', '0', '0', '', '']
+nr = ['8', '8', '8', '5', '2', '0', '0', '0', '', '', '']
 for r in [x for x in k2 if x.findall('td') and x.findall('td')[0].text_content().strip().startswith('N for this column')]: fillrow(r, nr)
-C2 = {'Dislocation': ['', '', '', '(1 / 5) 20%', '', '', '', '', '1', '1'], 'Subluxation or instability symptoms': ['', '', '', '', '(1 / 2) 50%', '', '', '', '1', '1'],
-      'Superficial wound problem': ['', '(1 / 8) 12.5%', '', '', '', '', '', '', '1', '0'], 'Hematoma': ['', '(1 / 8) 12.5%', '', '', '', '', '', '', '1', '1'],
-      'Nerve injury': ['', '', '(1 / 8) 12.5%', '', '', '', '', '', '1', '0'], 'Component disassociation': ['', '', '', '(1 / 5) 20%', '', '', '', '', '1', '1']}
+C2 = {'Dislocation': ['', '', '', '(1 / 5) 20%', '', '', '', '', '1', '1', '1'], 'Subluxation or instability symptoms': ['', '', '', '', '(1 / 2) 50%', '', '', '', '1', '0', '1'],
+      'Superficial wound problem': ['', '(1 / 8) 12.5%', '', '', '', '', '', '', '1', '0', '0'], 'Hematoma': ['', '(1 / 8) 12.5%', '', '', '', '', '', '', '1', '0', '1'],
+      'Nerve injury': ['', '', '(1 / 8) 12.5%', '', '', '', '', '', '1', '0', '0'], 'Component disassociation': ['', '', '', '(1 / 5) 20%', '', '', '', '', '1', '1', '1']}
 for lab, vals in C2.items(): fillrow(byLabel(k2, lab), vals)
 for r in k2:
     td = r.findall('td')
-    if len(td) == 11 and not any(t.find('span[@class="demo-fill"]') is not None for t in td[1:]) and not r.get('class'):
-        for t in td[9:11]: put(t, '0')
-for lab, vals in [('Participants with at least one complication', ['3', '2', '+50%', '(5 / 8) 62.5%', '(2 / 4) 50%']), ('Participants with more than one', ['1', '0', '-', '(1 / 8) 12.5%', '(0 / 4) 0%']),
+    if len(td) == 12 and not any(t.find('span[@class="demo-fill"]') is not None for t in td[1:]) and not r.get('class'):
+        for t in td[9:12]: put(t, '0')
+for lab, vals in [('Participants with at least one complication', ['3', '2', '+50%', '(5 / 8) 62.5%', '(2 / 4) 50%']), ('Participants with a complication of grade IIIa', ['1', '0', '-', '(1 / 8) 12.5%', '(0 / 4) 0%']), ('Participants with more than one', ['1', '0', '-', '(1 / 8) 12.5%', '(0 / 4) 0%']),
                   ('Reoperations', ['1', '0', '-', '(1 / 8) 12.5%', '(0 / 4) 0%']), ('Revisions', ['1', '0', '-', '(1 / 8) 12.5%', '(0 / 4) 0%']), ('Serious events', ['1', '0', '-', '(1 / 8) 12.5%', '(0 / 4) 0%']),
                   ('Device deficiencies', ['1', '0', '-', '(1 / 8) 12.5%', '(0 / 4) 0%'])]:
     fillrow(byLabel(rows('ov'), lab), vals)
@@ -74,29 +74,36 @@ for lab, vals in [('Unplanned configuration change', ['(1 / 8) 12.5%', '(1 / 1) 
 for r, vals in zip(rows('lk'), [['Unplanned configuration change', 'ICDL-014-005', 'Dislocation and liner disassociation (SCML-014-07, -08)', 'Planned +6 liner not in the set; +3 used. Same case had the weekend list and the missing lot.'],
                                  ['Instrument or loaner set problem', 'ICDL-014-002', 'Subluxation symptoms at 3 months (SCML-014-09)', 'Trial liner missing from the loaner set; liner chosen without a trial reduction.']]):
     fillrow(r, vals, 0)
-for r, vals in zip(rows('ex', 0), [['S-01', '(3) 37.5%', '(1 / 3) 33%', '20%', '(1 / 3) 33%', 'PI; experienced'], ['S-02', '(3) 37.5%', '(2 / 3) 67%', '40%', '(2 / 3) 67%', 'Sub-I'], ['S-03', '(2) 25%', '(2 / 2) 100%', '40%', '(2 / 2) 100%', 'New in Oct; both cases with a complication']]):
+for r, vals in zip(rows('ex', 0), [['S-01', '(3) 37.5%', '(1 / 3) 33%', '(0 / 3) 0%', '0%', '(0 / 3) 0%', 'PI; experienced'], ['S-02', '(3) 37.5%', '(2 / 3) 67%', '(0 / 3) 0%', '0%', '(0 / 3) 0%', 'Sub-I; grade I and II only'], ['S-03', '(2) 25%', '(1 / 2) 50%', '(1 / 2) 50%', '100%', '(1 / 2) 50%', 'New in Oct; the only IIIb']]):
     fillrow(r, vals, 0)
-for r, vals in zip(rows('ex', 1), [['Liner 36 +3 · lot GS-L36-2607', '(2) 25%', '(2 / 2) 100%', '40%', 'Includes ICDL-014-005 (dislocation)'], ['Liner 36 +6', '(4) 50%', '(1 / 4) 25%', '20%', ''], ['Glenosphere 36 · all cases', '(8) 100%', '(5 / 8) 62.5%', '100%', 'No comparison possible']]):
+for r, vals in zip(rows('ex', 1), [['Liner 36 +3 · lot GS-L36-2607', '(2) 25%', '(1 / 2) 50%', '(1 / 2) 50%', '100%', 'Includes ICDL-014-005'], ['Liner 36 +6', '(4) 50%', '(2 / 4) 50%', '(0 / 4) 0%', '0%', ''], ['Glenosphere 36 · all cases', '(8) 100%', '(4 / 8) 50%', '(1 / 8) 12.5%', '100%', 'No comparison possible']]):
     fillrow(r, vals, 0)
-for r, vals in zip(rows('ex', 2), [['Cuff tear arthropathy, primary', '(5) 62.5%', '(2 / 5) 40%', '40%', ''], ['Fracture sequelae, primary', '(2) 25%', '(2 / 2) 100%', '40%', 'Both instability events'], ['Massive cuff tear with arthritis', '(1) 12.5%', '(1 / 1) 100%', '20%', '']]):
+for r, vals in zip(rows('ex', 2), [['Cuff tear arthropathy, primary', '(5) 62.5%', '(2 / 5) 40%', '(0 / 5) 0%', '0%', ''], ['Fracture sequelae, primary', '(2) 25%', '(1 / 2) 50%', '(1 / 2) 50%', '100%', 'Both instability events'], ['Massive cuff tear with arthritis', '(1) 12.5%', '(1 / 1) 100%', '(0 / 1) 0%', '0%', '']]):
     fillrow(r, vals, 0)
-D = {'T1': ('Instability > 10% at any time point', 'Site rule, 20 Aug 2026 (POT)', '(1 / 5) 20% at 6 wk; (1 / 2) 50% at 3 mo', 'Yes'),
+kg = rows('kcg')
+fillrow(kg[0], ['8', '8', '8', '5', '2', '0', '0', '0', '', ''])
+for lab, vals in [('I ·', ['', '(1 / 8) 12.5%', '(1 / 8) 12.5%', '', '(1 / 2) 50%', '', '', '', '3', '2']), ('II ·', ['', '(1 / 8) 12.5%', '', '', '', '', '', '', '1', '0']),
+                  ('IIIa', ['', '', '', '', '', '', '', '', '0', '0']), ('IIIb', ['', '', '', '(2 / 5) 40%', '', '', '', '', '2', '2']), ('IVa', ['', '', '', '', '', '', '', '', '0', '0']),
+                  ('IVb', ['', '', '', '', '', '', '', '', '0', '0']), ('V ·', ['', '', '', '', '', '', '', '', '0', '0']), ('Disability', ['', '', '', '', '', '', '', '', '0', '0'])]:
+    fillrow(byLabel(kg, lab), vals)
+D = {'T1': ('Instability: all grades > 10%; IIIa–V > 5%', 'Site rule, 20 Aug 2026 (POT)', 'All: (1 / 2) 50% at 3 mo; IIIa–V: (1 / 5) 20% at 6 wk', 'Yes'),
      'T2': ('Higher at a later time point, 2+ events', 'Site rule, 20 Aug 2026', 'Instability 0% → 20% → 50%', 'Yes'),
      'T3': ('Double the previous review', 'Site rule, 20 Aug 2026', 'Instability 0 → 2 events', 'Yes'),
      'T4': ('Any first event in a category', 'Site rule, 20 Aug 2026', 'Instability; device performance', 'Yes'),
-     'T5': ('Share of complications 2x share of procedures, 2+ events', 'Site rule, 20 Aug 2026', 'S-03: 40% vs 25% (1.6x)', 'No'),
-     'T6': ('Same rule as T5', 'Site rule, 20 Aug 2026', 'Liner +3: 40% vs 25% (1.6x)', 'No'),
+     'T5': ('IIIa–V share 2x share of procedures, 2+ events', 'Site rule, 20 Aug 2026', 'S-03: 100% vs 25%, but 1 event', 'No'),
+     'T6': ('Same rule as T5', 'Site rule, 20 Aug 2026', 'Liner +3: 100% vs 25%, but 1 event', 'No'),
      'T7': ('Assessable from 6 cases per surgeon', 'Sponsor guidance GS-RA-01', 'All surgeons have 3 cases or fewer', 'Not assessable'),
      'T8': ('Rate with marker 2x without, 2+ events', 'Site rule, 20 Aug 2026', 'Each marker has 1 event only', 'No'),
      'T9': ('2 serious events, same category, 90 days', 'CIP 11.6', '1 SADE (dislocation)', 'No'),
-     'T10': ('2 deficiencies of the same type', 'CIP 11.6', '1 (liner disassociation)', 'No')}
+     'T10': ('2 deficiencies of the same type', 'CIP 11.6', '1 (liner disassociation)', 'No'),
+     'T11': ('Same IIIa–V complication in 2 participants', 'Site rule, 20 Aug 2026', 'Dislocation IIIb: 1 participant', 'No')}
 for r in rows('dt'):
     td = r.findall('td'); a = td[0].text_content().strip()
     if a in D:
         lim, srcl, val, met = D[a]; put(td[3], lim); put(td[4], srcl); put(td[5], val); tick(td[6], met)
 f = rows('ft')[0].findall('td')
 put(f[0], 'S-01'); put(f[1], 'T1-T4 · SCML-014-07, -08, -09')
-put(f[2], 'Two instability events in 8 procedures, both after discharge and rising at later visits. One with liner disassociation after an unplanned +3 liner (planned +6 missing from the set); one after a loaner set without a trial liner. Fracture sequelae cases and S-03 overlap.')
+put(f[2], 'Two instability events in 8 procedures, both after discharge and rising at later visits. One grade IIIb (dislocation with liner disassociation, revised) after an unplanned +3 liner; one grade I (subluxation) after a loaner set without a trial liner. The only IIIb is in S-03 and a fracture-sequelae case.')
 tick(f[3], 'Device, component or lot', 'Procedure or technique', 'Surgeon or learning curve'); tick(f[4], 'Sent on (see H)')
 put(f[5], 'No new instability in the next 8 procedures; full liner range and trial liners in every set (ICDL); CSST monthly for 3 months.')
 g = rows('gt')[0].findall('td')
