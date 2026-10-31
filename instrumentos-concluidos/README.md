@@ -62,4 +62,4 @@ O [manifesto](manifesto.json) registra fontes, hashes e correspondência HTML/PD
 
 Atualizado em 31/10/2026.
 
-Revisão de 31/10/2026, pedida pelo autor: o grau de Clavien-Dindo completo (I, II, IIIa, IIIb, IVa, IVb, V, sufixo d) entra no SART v1.1 (avaliação do caso), no SCML v0.8 (copiado do SART, com tabela de referência) e no CSST v2.0 (complicações por grau e momento, comparação por grau IIIa–V e gatilhos ajustados). SART v1.0 e SCML v0.7 permanecem no acervo.
+Revisão de 31/10/2026, pedida pelo autor: o grau de Clavien-Dindo completo (I, II, IIIa, IIIb, IVa, IVb, V, sufixo d) entra no SART v1.1 (avaliação do caso), no SCML v0.8 (copiado do SART, com tabela de referência) e no CSST v2.0 (complicações por grau e momento, comparação por grau IIIa–V e gatilhos ajustados). SART v1.0 e SCML v0.7 permanecem no acervo. Concluídos pelo autor em 31/10/2026, depois da reorganização da página 1 do SCML (finalidade com tabela, guia B mais curto, tabela de graus no mesmo estilo), da renumeração do CSST (graus em C3, contexto em C4) e da retirada da coluna de participação percentual em E1–E3.

@@ -205,24 +205,24 @@
     {
       "instrument": "SCML",
       "version": "0.8",
-      "approval": "Revisão de 31/10/2026 pedida pelo autor (grau de Clavien-Dindo); a versão anterior permanece no acervo",
+      "approval": "Concluído pelo autor em 31/10/2026 (grau de Clavien-Dindo); a versão anterior permanece no acervo",
       "variants": {
         "blank": {
           "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/SCML/SCML_v0.8_blank.html",
-          "source_sha256": "1bc0d05d679fbbd0c9ce6e16aa3446cbe791d617fc8fdb0f8cd5f5976f7a6719",
+          "source_sha256": "a5c3062d58d9015db4f40476265a28141046b69b945d7ef9422f514e620c8bfc",
           "html": "HTML/blank/SCML_v0.8_blank.html",
-          "html_sha256": "1bc0d05d679fbbd0c9ce6e16aa3446cbe791d617fc8fdb0f8cd5f5976f7a6719",
+          "html_sha256": "a5c3062d58d9015db4f40476265a28141046b69b945d7ef9422f514e620c8bfc",
           "pdf": "PDF/blank/SCML_v0.8_blank.pdf",
-          "pdf_sha256": "e2897af7f51afcda558f3781783fefd5f9f270ef8332ccbe6e05931cf4d3941b",
+          "pdf_sha256": "86caa10596c99569f36adc322ab806b3552590b40bbd0e8db28f893b7db08569",
           "pdf_pages": 5
         },
         "filled": {
           "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/SCML/SCML_v0.8_filled.html",
-          "source_sha256": "202ff32a228298221ff4491a265b4f7072844d1f75d12fe0c09d8265c5283061",
+          "source_sha256": "5a670f6c02d0caa33acd74dee07fe899a0c92974f76f8e5d3fbe0a271b575056",
           "html": "HTML/filled/SCML_v0.8_filled.html",
-          "html_sha256": "202ff32a228298221ff4491a265b4f7072844d1f75d12fe0c09d8265c5283061",
+          "html_sha256": "5a670f6c02d0caa33acd74dee07fe899a0c92974f76f8e5d3fbe0a271b575056",
           "pdf": "PDF/filled/SCML_v0.8_filled.pdf",
-          "pdf_sha256": "4c67e7e80a1a41bff3086d6c6af1315d25273d22e2a2a9a4b731b5d76ae07b46",
+          "pdf_sha256": "a746dbf48efd952ac8e9d842d547520cbe359b3456a95c79b9cf4bd3aa068ba8",
           "pdf_pages": 5
         }
       }
@@ -255,7 +255,7 @@
     {
       "instrument": "SART",
       "version": "1.1",
-      "approval": "Revisão de 31/10/2026 pedida pelo autor (grau de Clavien-Dindo); a versão anterior permanece no acervo",
+      "approval": "Concluído pelo autor em 31/10/2026 (grau de Clavien-Dindo); a versão anterior permanece no acervo",
       "variants": {
         "blank": {
           "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/SART/SART_v1.1_blank.html",
@@ -284,20 +284,20 @@
       "variants": {
         "blank": {
           "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/CSST/CSST_v2.0_blank.html",
-          "source_sha256": "aadf07b4c3a07951c562a180b04dd11555e185f0a1fc96114b915b435447bb2a",
+          "source_sha256": "e8e74bda1b8abe80c93f03d4e7e80156309b57849aa9eadd07e92d4043987afa",
           "html": "HTML/blank/CSST_v2.0_blank.html",
-          "html_sha256": "aadf07b4c3a07951c562a180b04dd11555e185f0a1fc96114b915b435447bb2a",
+          "html_sha256": "e8e74bda1b8abe80c93f03d4e7e80156309b57849aa9eadd07e92d4043987afa",
           "pdf": "PDF/blank/CSST_v2.0_blank.pdf",
-          "pdf_sha256": "a8957c96d9cea8495a84e427f18e34f2da287cd1e33e1d7b4bf90dae02cca32b",
+          "pdf_sha256": "9b9bf24c02774dc67ca63c420134171ec01f9e8a523346944d1fbd52217b4d19",
           "pdf_pages": 11
         },
         "filled": {
           "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/CSST/CSST_v2.0_filled.html",
-          "source_sha256": "0738ff608c23ea1374c26be5cedd7060183f9806577b685a1859bc5853a64af3",
+          "source_sha256": "07e1605f593a3a1f5b48b005de0d3bd0a172d79010779a6f63c00c57cba2dfa3",
           "html": "HTML/filled/CSST_v2.0_filled.html",
-          "html_sha256": "0738ff608c23ea1374c26be5cedd7060183f9806577b685a1859bc5853a64af3",
+          "html_sha256": "07e1605f593a3a1f5b48b005de0d3bd0a172d79010779a6f63c00c57cba2dfa3",
           "pdf": "PDF/filled/CSST_v2.0_filled.pdf",
-          "pdf_sha256": "e08bdcb46ccdcaeb1e1395b6c00a9424e667d5d31548b55a29e66b14f090ec78",
+          "pdf_sha256": "c91dee402e91e41718949ec84de5c5d5002339b9ac26cf3a2ae6a9f22814160c",
           "pdf_pages": 11
         }
       }

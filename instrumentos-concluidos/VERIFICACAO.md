@@ -59,3 +59,5 @@ SRR v1.0 (31/10/2026): mesma exportação do IMP v1.0 (A4, páginas 3 a 5 em pai
 CSST v2.0 (31/10/2026): mesma exportação do SRR v1.0 (A4, páginas 3, 4, 7 e 8 em paisagem, sem transbordamento nas 10 páginas das duas versões); preenchimento centralizado, à esquerda só no cabeçalho. Revisão final: C1 sem triagem e com todos os momentos da C2; visão geral com variação e acumulado da revisão anterior; rotas da seção H com o ID do sinal.
 
 SART v1.1, SCML v0.8 e CSST v2.0 (31/10/2026, grau de Clavien-Dindo): exportação igual à anterior; SART 6/6, SCML 5/5 e CSST 11/11 páginas nas duas versões, sem transbordamento.
+
+Conclusão de 31/10/2026: SCML v0.8 e CSST v2.0 reexportados após as correções finais; SCML 5/5 e CSST 11/11 páginas nas duas versões, sem transbordamento. SART v1.1 sem alteração.
