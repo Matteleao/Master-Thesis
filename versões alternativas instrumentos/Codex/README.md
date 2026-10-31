@@ -14,7 +14,7 @@ Branch de trabalho: `codex/thesis-work`.
 - Conferir editor, preenchimento/salvamento e paginação antes de acrescentar uma entrega.
 - Gerar PDFs e demonstrações preenchidas quando solicitados; preservar a identificação blank/filled no nome.
 
-## Inventário: 16 HTMLs, 12 instrumentos
+## Inventário: 17 HTMLs, 13 instrumentos
 
 | HTML | Base / origem |
 |---|---|
@@ -30,6 +30,7 @@ Branch de trabalho: `codex/thesis-work`.
 | [IQL_Imaging_Quality_Log_v0.7_blank_editable.html](IQL_Imaging_Quality_Log_v0.7_blank_editable.html) | Reaplicação direta ao HTML legado v0.3, sem ler o corpo dos IQLs revisados. |
 | [MRL_Milestone_Review_Log_v0.4_blank_editable.html](MRL_Milestone_Review_Log_v0.4_blank_editable.html) | Aplicação da análise ao primário legado v0.2, conferido contra o PDF da raiz do Claude. Não usa o MRL v0.3 já reformulado. |
 | [PIDLR_Post_Investigation_Debrief_and_Lessons_Record_v0.3_blank_editable.html](PIDLR_Post_Investigation_Debrief_and_Lessons_Record_v0.3_blank_editable.html) | Aplicação da análise ao PIDLR v0.2 primário editado pelo autor, preservando a estrutura de sete páginas. |
+| [PIR_Performance_Indicator_Record_v0.11_blank_editable.html](PIR_Performance_Indicator_Record_v0.11_blank_editable.html) | Revisão do primário v0.8 citado na análise; v0.10 da raiz conferido como referência de comparação. |
 | [PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.92_blank_editable.html](PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.92_blank_editable.html) | Primeira alternativa: HTML local v0.91. |
 | [PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.93_blank_editable.html](PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.93_blank_editable.html) | Reaplicação: HTML legado v0.7, versão do PDF original da raiz. |
 | [SIFSL_Subject_Identification_and_Failure_Screening_Log_v0.4_blank_editable.html](SIFSL_Subject_Identification_and_Failure_Screening_Log_v0.4_blank_editable.html) | Construção independente da especificação; original v0.2 conferido. |
@@ -63,3 +64,12 @@ As versões preexistentes nas outras pastas do repositório são preservadas. Es
 - Análise aplicada: `Análise - PIDLR - Post-Investigation Debrief and Lessons Record v0.2.md`, Git blob `b0be77e0f111f87b6facb7522779a4f0f9cf38cc`.
 - Revisão conservadora em sete páginas A–I: fontes aplicáveis e limitações; revisão seletiva das sete fases e segurança transversal; síntese com contribuintes sustentados por evidência; seis tipos de lição; transferência com escopo, destino e dono; limitações residuais; transferência, implementação e efetividade diferenciadas; fechamento com itens controlados fora do debrief e arquivo recuperável.
 - Registros de trabalho em branco e nenhuma opção pré-selecionada. Cabeçalho em todas as páginas. Editor testado (texto, formatação, linhas, colunas, caixas, opções, desfazer/refazer e salvar/reabrir); sete páginas inspecionadas, sem overflow, com distância mínima ao rodapé de 29 px.
+
+## PIR v0.11: origem e revisão
+
+- Primário da análise: `Performance_Indicator_Record_v0.8.html` local, Git blob `5bd168384f5b8c3ff4fc5a0cf7ad3211e7ddb5e4`. Seu conteúdo e o v0.8 preenchido descrito na análise orientaram a revisão, sem importar dados simulados para o blank.
+- Referência da raiz de `claude/claudinho-status-check-8tzmxz`: `Performance_Indicator_Record_v0.10.html`, Git blob `7dd00dbc153b5c674a7cdaa5fb8fd41acfa777a9`, idêntico à cópia local conferida. Não foi usado um PIR reconstruído das pastas de revisão.
+- Análise aplicada: `Análise - PIR - Performance Indicator Record v0.8.md`, Git blob `5ee74a66110da052d55e0b8242422d64a945f4fc`.
+- Sete páginas: escopo; catálogo/configuração; reconciliação e resultado com interpretação integrada; duas folhas de detalhes dos seis indicadores; ações/efetividade; conclusão e revisão. Os IDs EQ-01, PD-01, FC-01, ST-01, SP-01 e DC-01 permanecem consistentes. Bases de cálculo distinguem decisões, visitas, procedimentos, casos, campos, queries e entradas amostradas.
+- Regras configuradas prospectivamente, com versão/data, condições de decisão e referência controlada. Sem valores universais impostos para intervalos CIP, notas operatórias ou percentuais. Mantidas as quatro medidas de follow-up e de dados críticos; resultados e interpretações limitados ao período/fontes. Ações têm rota, destino, dono, prazo e verificação separada da conclusão da ação.
+- Blank sem valores simulados ou opções selecionadas. Catálogo em paisagem e demais folhas em retrato. Sete páginas renderizadas/inspecionadas, sem overflow e com folga mínima de 28 px até o rodapé. Editor testado, incluindo salvar/reabrir com texto, formatação e opções preservados.
