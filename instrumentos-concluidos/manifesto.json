@@ -109,20 +109,20 @@
       "variants": {
         "blank": {
           "source": "materiais/2026-10-25/06_Instrumentos_versoes_atuais/RACI_Responsibility_Assignment_Matrix_v0.3_blank_editable.html",
-          "source_sha256": "2692d695e185c2e2098d118b4b8e14b324ce58ba96b4fe6960726348a961e49e",
+          "source_sha256": "322b5f52f42b8dc0c755cd84396951fe22ff6ba268f6d455a6d998b1f0c59833",
           "html": "HTML/blank/RACI_v0.3_blank.html",
-          "html_sha256": "2692d695e185c2e2098d118b4b8e14b324ce58ba96b4fe6960726348a961e49e",
+          "html_sha256": "322b5f52f42b8dc0c755cd84396951fe22ff6ba268f6d455a6d998b1f0c59833",
           "pdf": "PDF/blank/RACI_v0.3_blank.pdf",
-          "pdf_sha256": "204801111e852ccb1c03aacdc5ae4fd2ab583b05c7f515d4f45cef12066703a3",
+          "pdf_sha256": "31c7e6fdbac4a7ec28d7c76a2c1d29eb11cd20a694479867323eb59c88e8d716",
           "pdf_pages": 6
         },
         "filled": {
           "source": "materiais/2026-10-25/06_Instrumentos_versoes_atuais/RACI_Responsibility_Assignment_Matrix_v0.3_simulated_editable.html",
-          "source_sha256": "60ba0582f7f91d37e96401c3f15cb8ce1ffd1d7a79b807de92b9abda1369d8d0",
+          "source_sha256": "f78821e4b9b207ce9294f31493656a2740f6b17b880e984edf408d8c13b18e4b",
           "html": "HTML/filled/RACI_v0.3_filled.html",
-          "html_sha256": "60ba0582f7f91d37e96401c3f15cb8ce1ffd1d7a79b807de92b9abda1369d8d0",
+          "html_sha256": "f78821e4b9b207ce9294f31493656a2740f6b17b880e984edf408d8c13b18e4b",
           "pdf": "PDF/filled/RACI_v0.3_filled.pdf",
-          "pdf_sha256": "efea49b92a3ccaa7d801c7992e5f3d6d751d81a3f38e0676825bac3380bb2eef",
+          "pdf_sha256": "2f6eb214decb7f2dcf5ad3e47fb9d7c10b6d317edd51ef11139503d34d578316",
           "pdf_pages": 6
         }
       }
@@ -209,20 +209,20 @@
       "variants": {
         "blank": {
           "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/SCML/SCML_v0.8_blank.html",
-          "source_sha256": "a5c3062d58d9015db4f40476265a28141046b69b945d7ef9422f514e620c8bfc",
+          "source_sha256": "bd0784119b485c7d6a2bad1cd9290d6db75cc87bf004b4bcb1f6dea1c4c2c70f",
           "html": "HTML/blank/SCML_v0.8_blank.html",
-          "html_sha256": "a5c3062d58d9015db4f40476265a28141046b69b945d7ef9422f514e620c8bfc",
+          "html_sha256": "bd0784119b485c7d6a2bad1cd9290d6db75cc87bf004b4bcb1f6dea1c4c2c70f",
           "pdf": "PDF/blank/SCML_v0.8_blank.pdf",
-          "pdf_sha256": "86caa10596c99569f36adc322ab806b3552590b40bbd0e8db28f893b7db08569",
+          "pdf_sha256": "7339701ee0d1cbb40669dc59cd1e89b07131e67052bb640e4d0f8689f6e0edb8",
           "pdf_pages": 5
         },
         "filled": {
           "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/SCML/SCML_v0.8_filled.html",
-          "source_sha256": "5a670f6c02d0caa33acd74dee07fe899a0c92974f76f8e5d3fbe0a271b575056",
+          "source_sha256": "b431d97cbe82161056dd7bb02082be08386e15515558839331e5d480f7c196bd",
           "html": "HTML/filled/SCML_v0.8_filled.html",
-          "html_sha256": "5a670f6c02d0caa33acd74dee07fe899a0c92974f76f8e5d3fbe0a271b575056",
+          "html_sha256": "b431d97cbe82161056dd7bb02082be08386e15515558839331e5d480f7c196bd",
           "pdf": "PDF/filled/SCML_v0.8_filled.pdf",
-          "pdf_sha256": "a746dbf48efd952ac8e9d842d547520cbe359b3456a95c79b9cf4bd3aa068ba8",
+          "pdf_sha256": "7e22b590b87c8be538d69eed909e1fd243d3da1b4c54f4b54505ba5b909e9c86",
           "pdf_pages": 5
         }
       }
