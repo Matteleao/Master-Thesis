@@ -14,6 +14,7 @@ Data: 30/10/2026. Branch: `codex/thesis-work`.
 | POT v1.1 | 6 / 6 páginas | 6 / 6 páginas | Conferido |
 | SART v1.0 | 6 / 6 páginas | 6 / 6 páginas | Conferido |
 | IMP v1.0 | 9 / 9 páginas | 9 / 9 páginas | Conferido |
+| IQL v0.6 | 4 / 4 páginas | 4 / 4 páginas | Conferido |
 
 Total: 22 HTMLs e 22 PDFs, com 110 páginas de PDF.
 
@@ -48,3 +49,5 @@ Os HTMLs aprovados desta conversa foram copiados sem reescrever seu conteúdo; h
 PFVR blank/filled e IQL filled mantêm os arquivos previamente renderizados e inspecionados nesta conversa. O PDF blank do IQL foi gerado em 31/10/2026 com Chromium e inspecionado nas quatro páginas por renderização Poppler; sem cortes ou sobreposição com rodapé. A validação geométrica do HTML blank do IQL registrou 49/35/31/32 px de folga acima do rodapé. Os HTMLs preservam o Editor v2, que não aparece nos PDFs. Esta conferência de exportação não constitui validação clínica ou regulatória.
 
 IMP v1.0 (31/10/2026): mesma exportação do POT v1.1 e do SART v1.0 (A4, páginas 2 a 7 em paisagem, sem transbordamento nas 9 páginas das duas versões; Liberation Sans, Comic Neue e Dancing Script no lugar de Arial, Comic Sans MS e Z003).
+
+IQL v0.6 (31/10/2026): mesma exportação do IMP v1.0 (A4, página 2 em paisagem, sem transbordamento nas 4 páginas das duas versões). A v0.5 e seus PDFs não foram alterados.

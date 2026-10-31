@@ -228,6 +228,31 @@
       }
     },
     {
+      "instrument": "IQL",
+      "version": "0.6",
+      "approval": "Concluído pelo autor em 31/10/2026; a v0.5 permanece no acervo",
+      "variants": {
+        "blank": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/IQL/IQL_v0.6_blank.html",
+          "source_sha256": "1f0581ca9880c8e0b22be1fc8b77d881deb54b23b50ca037df0423df665433f5",
+          "html": "HTML/blank/IQL_v0.6_blank.html",
+          "html_sha256": "1f0581ca9880c8e0b22be1fc8b77d881deb54b23b50ca037df0423df665433f5",
+          "pdf": "PDF/blank/IQL_v0.6_blank.pdf",
+          "pdf_sha256": "0e6af85e15d1b669867fa2d7860249237c5ef95b7d89fac414b1099503d85931",
+          "pdf_pages": 4
+        },
+        "filled": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/IQL/IQL_v0.6_filled.html",
+          "source_sha256": "4e0aec4472a4beb2f167d56eeb3e3263851cd4306b3360209aa1614e2f73d3f6",
+          "html": "HTML/filled/IQL_v0.6_filled.html",
+          "html_sha256": "4e0aec4472a4beb2f167d56eeb3e3263851cd4306b3360209aa1614e2f73d3f6",
+          "pdf": "PDF/filled/IQL_v0.6_filled.pdf",
+          "pdf_sha256": "f3ab1de413fd1b0430a8168512e41b4e6ca618c44a1917c9a982cec3f960d4c2",
+          "pdf_pages": 4
+        }
+      }
+    },
+    {
       "instrument": "SLCT",
       "version": "0.4",
       "approval": "Inclusão como concluído confirmada explicitamente pelo autor em 30/10/2026. Preenchido gerado conforme o pedido de organização.",
@@ -356,8 +381,8 @@
       "Bradley Hand"
     ],
     "source_html_unchanged": true,
-    "pdf_count": 24,
-    "pdf_pages": 128,
+    "pdf_count": 26,
+    "pdf_pages": 136,
     "font_files_redistributed": false,
     "last_addition_date": "2026-10-31"
   }
