@@ -55,7 +55,7 @@ Inclusão expressamente autorizada pelo autor para coexistir com o acervo anteri
 
 ## Pendências que não entram nesta pasta
 
-- **MRL:** suspenso, sem aprovação final.
+- **MRL:** os HTMLs anterior e novo foram arquivados abaixo por pedido do autor em 31/10/2026. A versão nova continua em conferência, conforme o artefato de origem; não foi registrada aprovação final.
 
 ## Critério de inclusão e manutenção
 
@@ -88,3 +88,15 @@ ICDL v0.15 foi concluído pelo autor em 31/10/2026: seções A–K mantidas; dad
 PIR v1.0 e CAPA v1.0 aceitos pelo autor em 31/10/2026; PDFs blank e filled exportados dos HTMLs concluídos e publicados nas respectivas pastas em 31/10/2026.
 
 PIDLR v0.4 concluído pelo autor em 31/10/2026; HTML e PDFs blank/filled publicados. PIR v1.0: "Prepared by" trocado por "Document owner".
+
+
+## MRL: versões anterior e nova arquivadas — 31/10/2026
+
+Arquivamento expressamente solicitado pelo autor a partir do [artefato compartilhado](https://claude.ai/artifact/6fJreZVxYQqJy8zs8fZTzh). As duas opções são HTMLs em branco e ambas se identificam como v1.0; os nomes distintos preservam a comparação. A origem apresenta a nova versão como **Versão nova para conferir**. Esta inclusão não declara aprovação final e não substitui versões anteriores.
+
+| Identificação no artefato | Arquivo arquivado | Estrutura |
+|---|---|---|
+| v1.0 anterior | [HTML anterior](HTML/blank/MRL_v1.0_blank_anterior.html) | 6 folhas |
+| v1.0 nova | [HTML novo](HTML/blank/MRL_v1.0_blank.html) | 8 folhas; plano e registro de gate separados |
+
+Os arquivos foram recuperados do artefato. Removido apenas o invólucro de execução adicionado pela plataforma, ambos coincidem por Git blob com os HTMLs originais do branch de consulta. Conteúdo, estilos e editor dos instrumentos não foram reescritos. O artefato não ofereceu preenchidos para essas duas opções; não foram gerados PDFs neste arquivamento.

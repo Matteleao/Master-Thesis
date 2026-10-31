@@ -105,3 +105,15 @@ Exportação solicitada pelo autor a partir das versões mais recentes em `HTML/
 - Chromium/Playwright com fundos coloridos, texto selecionável e fontes incorporadas. Interface de edição ocultada e quebra após a última folha desativada apenas durante a impressão, sem salvar alterações nos HTMLs.
 - Os PDFs foram reabertos; as 14 páginas foram renderizadas com Poppler e inspecionadas visualmente. Sem página vazia adicional, interface de edição, transbordamento ou sobreposição com rodapé detectados.
 - Correspondência HTML/PDF, SHA-256 e contagens registradas no manifesto; versões anteriores preservadas.
+
+
+## Recuperação dos HTMLs MRL anterior e novo — 31/10/2026
+
+Pedido do autor: recuperar e arquivar ambas as opções do artefato `https://claude.ai/artifact/6fJreZVxYQqJy8zs8fZTzh` em `instrumentos-concluidos`.
+
+- `v1.0 anterior`: `HTML/blank/MRL_v1.0_blank_anterior.html`, 56.593 bytes, 6 elementos de página, Git blob `2612acfbe76b32cb2470f2a39b639c756b05e798`.
+- `v1.0 nova`: `HTML/blank/MRL_v1.0_blank.html`, 64.149 bytes, 8 elementos de página, Git blob `61b97f9ae116dfa285f688c4aa2db6ab5941b336`.
+
+Os links foram identificados na interface do artefato e os arquivos recuperados. Após excluir exclusivamente o bloco `frame-runtime` inserido pelo serviço, os bytes coincidem com os dois originais em `revisao/instrumentos/MRL/` no branch de consulta `claude/claudinho-status-check-8tzmxz` (commit `4d414300c64bcfd70a41e8c324d3d8bea2f85cc9`). Os arquivos arquivados usam esses bytes originais; conteúdo, estilo e editor preservados. SHA-256 no manifesto. O branch de origem não foi alterado.
+
+Verificação de recuperação/identidade, sem nova validação de conteúdo ou afirmação de teste interativo. Nenhum PDF ou filled foi criado. As duas versões coexistem; o status em conferência da versão nova foi preservado.

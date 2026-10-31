@@ -687,11 +687,45 @@
         ],
         "simulated_data_only": true
       }
+    },
+    {
+      "instrument": "MRL",
+      "version": "1.0",
+      "approval": "HTMLs anterior e novo arquivados a pedido do autor em 31/10/2026; nova versão em conferência, sem aprovação final registrada",
+      "artifact_url": "https://claude.ai/artifact/6fJreZVxYQqJy8zs8fZTzh",
+      "variants": {
+        "blank_previous": {
+          "label": "v1.0 anterior",
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/MRL/MRL_v1.0_blank_anterior.html",
+          "source_git_blob": "2612acfbe76b32cb2470f2a39b639c756b05e798",
+          "source_sha256": "8d217e020bc54ac33d7bd833c5d2b460c0bd442e6c614b20dc1048ee5064293c",
+          "artifact_filename": "MRL_v1.0_anterior.html",
+          "html": "HTML/blank/MRL_v1.0_blank_anterior.html",
+          "html_sha256": "8d217e020bc54ac33d7bd833c5d2b460c0bd442e6c614b20dc1048ee5064293c",
+          "html_pages": 6,
+          "pdf": null,
+          "pdf_sha256": null,
+          "pdf_pages": null
+        },
+        "blank": {
+          "label": "v1.0 nova",
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/MRL/MRL_v1.0_blank.html",
+          "source_git_blob": "61b97f9ae116dfa285f688c4aa2db6ab5941b336",
+          "source_sha256": "96ec614980e313655bdd73283e2427d923b9f79ac5172611fd88e03bce4b5bb8",
+          "artifact_filename": "MRL_v1.0_em_branco.html",
+          "html": "HTML/blank/MRL_v1.0_blank.html",
+          "html_sha256": "96ec614980e313655bdd73283e2427d923b9f79ac5172611fd88e03bce4b5bb8",
+          "html_pages": 8,
+          "pdf": null,
+          "pdf_sha256": null,
+          "pdf_pages": null
+        }
+      }
     }
   ],
   "pending": {
     "POT": "Autor pediu nova conferência; não incluído nos concluídos.",
-    "MRL": "Suspenso, sem aprovação final."
+    "MRL": "Duas versões HTML arquivadas a pedido; nova versão em conferência, sem aprovação final registrada."
   },
   "export": {
     "date": "2026-10-30",
