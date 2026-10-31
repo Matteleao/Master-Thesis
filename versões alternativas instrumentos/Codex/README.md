@@ -14,7 +14,7 @@ Branch de trabalho: `codex/thesis-work`.
 - Conferir editor, preenchimento/salvamento e paginação antes de acrescentar uma entrega.
 - Gerar PDFs e demonstrações preenchidas quando solicitados; preservar a identificação blank/filled no nome.
 
-## Inventário: 17 HTMLs, 13 instrumentos
+## Inventário: 18 HTMLs, 14 instrumentos
 
 | HTML | Base / origem |
 |---|---|
@@ -34,6 +34,7 @@ Branch de trabalho: `codex/thesis-work`.
 | [PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.92_blank_editable.html](PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.92_blank_editable.html) | Primeira alternativa: HTML local v0.91. |
 | [PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.93_blank_editable.html](PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.93_blank_editable.html) | Reaplicação: HTML legado v0.7, versão do PDF original da raiz. |
 | [SIFSL_Subject_Identification_and_Failure_Screening_Log_v0.4_blank_editable.html](SIFSL_Subject_Identification_and_Failure_Screening_Log_v0.4_blank_editable.html) | Construção independente da especificação; original v0.2 conferido. |
+| [SIRR_Site_Imaging_Readiness_Record_v0.5_blank_editable.html](SIRR_Site_Imaging_Readiness_Record_v0.5_blank_editable.html) | Revisão do HTML primário v0.4, correspondente à referência PDF da raiz do Claude. |
 | [SRR_Site_Risk_Register_v0.92_blank_editable.html](SRR_Site_Risk_Register_v0.92_blank_editable.html) | Aplicação da análise ao HTML primário v0.1, correspondente ao PDF da raiz do Claude; sem usar o SRR v0.9/v1.0 já reformulado. |
 
 Para IMC, IQL e PSEAR, os PDFs antigos locais foram identificados por Git blob como idênticos aos originais da raiz do branch Claude; os HTMLs legados locais da mesma versão serviram como contrapartes editáveis. O hash do PDF não afirma equivalência binária entre PDF e HTML.
@@ -73,3 +74,13 @@ As versões preexistentes nas outras pastas do repositório são preservadas. Es
 - Sete páginas: escopo; catálogo/configuração; reconciliação e resultado com interpretação integrada; duas folhas de detalhes dos seis indicadores; ações/efetividade; conclusão e revisão. Os IDs EQ-01, PD-01, FC-01, ST-01, SP-01 e DC-01 permanecem consistentes. Bases de cálculo distinguem decisões, visitas, procedimentos, casos, campos, queries e entradas amostradas.
 - Regras configuradas prospectivamente, com versão/data, condições de decisão e referência controlada. Sem valores universais impostos para intervalos CIP, notas operatórias ou percentuais. Mantidas as quatro medidas de follow-up e de dados críticos; resultados e interpretações limitados ao período/fontes. Ações têm rota, destino, dono, prazo e verificação separada da conclusão da ação.
 - Blank sem valores simulados ou opções selecionadas. Catálogo em paisagem e demais folhas em retrato. Sete páginas renderizadas/inspecionadas, sem overflow e com folga mínima de 28 px até o rodapé. Editor testado, incluindo salvar/reabrir com texto, formatação e opções preservados.
+
+## SIRR v0.5: origem e revisão
+
+- Primário: `SIRR_Site_Imaging_Readiness_Record_v0.4_blank_editable.html` local, Git blob `97ffaa54c403b8dbfe2e70c67f7e71a361dda45a`. Nenhum SIRR reconstruído nas pastas de revisão foi usado como base.
+- Referência da raiz do Claude: `SIRR v0.4 Blank.pdf`, Git blob `d5f86050a800d353a1160736f23e48afd1b07320`; as duas cópias locais conferidas têm o mesmo hash. O hash do PDF não implica identidade binária com o HTML.
+- Análise aplicada: `Análise - SIRR - Site Imaging Readiness Record v0.4.md`, Git blob `d6e0e717b60fc951e80a50c42558a7c071974636`.
+- Preservadas quatro páginas, com mapping em paisagem. Purpose and Use padronizado; controle de fonte/versão/vigência/recebimento; IDs de requisito estáveis por SIRR; implementação, evidência, gap e ação distinguíveis; manutenção/calibração com validade; teste de transferência/recuperação referenciado; funções com treinamento/delegação/liberação; rotas e gatilhos de reavaliação explícitos.
+- Os controles de função antes repetidos na tabela técnica ficam em F, junto das evidências de qualificação e do estado de prontidão da função; G documenta a operação das rotas. E concentra infraestrutura e teste de arquivo/transferência. Cada registro de imagem permanece no IQL; o SIRR recebe somente sinais que afetam o arranjo local.
+- Conclusão do site para submissão separada de review, resposta e decisão de ativação externos. A assinatura local não autoriza ativação, enrollment ou uso de imagem. Observações exigem dono, prazo, rota e impacto; gaps críticos impedem Ready.
+- Blank sem nomes, datas, estudos ou opções simulados. IDs IMG-01 a IMG-06 são identificadores de linhas de requisito, vinculados ao SIRR, e podem ser continuados sem reutilização. Editor e salvar/reabrir testados; quatro páginas inspecionadas, sem overflow, com folga mínima de 28 px até o rodapé.
