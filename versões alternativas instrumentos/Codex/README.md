@@ -14,7 +14,7 @@ Branch de trabalho: `codex/thesis-work`.
 - Conferir editor, preenchimento/salvamento e paginação antes de acrescentar uma entrega.
 - Gerar PDFs e demonstrações preenchidas quando solicitados; preservar a identificação blank/filled no nome.
 
-## Inventário: 14 HTMLs, 10 instrumentos
+## Inventário: 15 HTMLs, 11 instrumentos
 
 | HTML | Base / origem |
 |---|---|
@@ -32,6 +32,7 @@ Branch de trabalho: `codex/thesis-work`.
 | [PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.92_blank_editable.html](PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.92_blank_editable.html) | Primeira alternativa: HTML local v0.91. |
 | [PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.93_blank_editable.html](PSEAR_Participant_Screening_and_Eligibility_Assessment_Record_v0.93_blank_editable.html) | Reaplicação: HTML legado v0.7, versão do PDF original da raiz. |
 | [SIFSL_Subject_Identification_and_Failure_Screening_Log_v0.4_blank_editable.html](SIFSL_Subject_Identification_and_Failure_Screening_Log_v0.4_blank_editable.html) | Construção independente da especificação; original v0.2 conferido. |
+| [SRR_Site_Risk_Register_v0.92_blank_editable.html](SRR_Site_Risk_Register_v0.92_blank_editable.html) | Aplicação da análise ao HTML primário v0.1, correspondente ao PDF da raiz do Claude; sem usar o SRR v0.9/v1.0 já reformulado. |
 
 Para IMC, IQL e PSEAR, os PDFs antigos locais foram identificados por Git blob como idênticos aos originais da raiz do branch Claude; os HTMLs legados locais da mesma versão serviram como contrapartes editáveis. O hash do PDF não afirma equivalência binária entre PDF e HTML.
 
@@ -44,3 +45,12 @@ As versões preexistentes nas outras pastas do repositório são preservadas. Es
 - Análise aplicada: `Análise - MRL - Milestone Review Log v0.3.md`, Git blob `5c5853432ba41a24f97995727b5b90a2d083e592`.
 - Escopo: decisão formal de gate, com unidade/denominador, configuração prospectiva, evidência, suficiência, escopo permitido/bloqueado, condições e re-review. Rotinas do POT e registros especializados conservam suas avaliações próprias.
 - Entrega blank em sete páginas, sem dados simulados nem opções selecionadas. Editor e paginação testados, incluindo salvar/reabrir o HTML.
+
+## SRR v0.92: origem e revisão
+
+- Primário: HTML legado `HTML/Desatualizados/SRR_Site_Risk_Register.html`, Git blob `08a3a9b5627ed85b9f69d6dbac79b7b350d7f66e`.
+- PDF de referência: `SRR v0.1 Blank.pdf`, Git blob `3d73db9639aee27b19341e0e499136d9c8c3843c`; as cópias locais têm o mesmo hash.
+- Análise: `Análise - SRR - Site Risk Register v0.91.md`, Git blob `1283248480814900f9864316474c6a68ce9541e2`.
+- Revisão: fator CtQ específico e sua fonte; prioridade atual/residual pelo maior score aplicável, sem média/produto; N/A e Critical explícitos; controles implementados separados de ações planejadas; risco e estado da ação independentes; revisão com evidência de efetividade; ponte urgente para Risk ID e rota competente; aceitação/fechamento com justificativa.
+- A referência de domínios foi atualizada para o catálogo de 12 domínios, considerando o item X-list do requisito SRR. O perfil separado de fatores CtQ proposto em X-CtQ não foi tornado obrigatório.
+- Seis páginas. Registros de trabalho em branco; ilustração de preenchimento confinada à orientação E, sem estudo, datas, participantes ou Risk IDs simulados. Editor e paginação testados, incluindo salvar/reabrir.
