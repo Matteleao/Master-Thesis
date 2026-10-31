@@ -15,6 +15,7 @@ Data: 30/10/2026. Branch: `codex/thesis-work`.
 | SART v1.0 | 6 / 6 páginas | 6 / 6 páginas | Conferido |
 | IMP v1.0 | 9 / 9 páginas | 9 / 9 páginas | Conferido |
 | IQL v0.6 | 4 / 4 páginas | 5 / 5 páginas (2 folhas de log) | Conferido |
+| SRR v1.0 | 7 / 7 páginas | 7 / 7 páginas | Conferido |
 
 Total: 22 HTMLs e 22 PDFs, com 110 páginas de PDF.
 
@@ -51,3 +52,5 @@ PFVR blank/filled e IQL filled mantêm os arquivos previamente renderizados e in
 IMP v1.0 (31/10/2026): mesma exportação do POT v1.1 e do SART v1.0 (A4, páginas 2 a 7 em paisagem, sem transbordamento nas 9 páginas das duas versões; Liberation Sans, Comic Neue e Dancing Script no lugar de Arial, Comic Sans MS e Z003).
 
 IQL v0.6 (31/10/2026): mesma exportação do IMP v1.0 (A4, página 2 em paisagem, sem transbordamento nas 4 páginas das duas versões). A v0.5 e seus PDFs não foram alterados. O preenchido foi regenerado no mesmo dia com o preenchimento todo em letra manuscrita azul (fonte manuscrita incorporada ao HTML, para não depender das fontes do computador). Nova regeneração: preenchimento centralizado nas células, mesmas fontes manuscritas dos demais preenchidos, duas folhas de log (10 conjuntos) e contagens da seção D no formato "n of N". Versão final: coluna "Resolution / Route ID" retirada da seção C (a ligação fica na seção E); preenchimento centralizado, exceto no cabeçalho.
+
+SRR v1.0 (31/10/2026): mesma exportação do IMP v1.0 (A4, páginas 3 a 5 em paisagem, sem transbordamento nas 7 páginas das duas versões); preenchimento centralizado, à esquerda só no cabeçalho.

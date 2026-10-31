@@ -153,6 +153,31 @@
       }
     },
     {
+      "instrument": "SRR",
+      "version": "1.0",
+      "approval": "Concluído pelo autor em 31/10/2026",
+      "variants": {
+        "blank": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/SRR/SRR_v1.0_blank.html",
+          "source_sha256": "77ab9bf74a2a98c8cb78f27b9c1b4b355b9c155861159a40398d4c2dd003c0e3",
+          "html": "HTML/blank/SRR_v1.0_blank.html",
+          "html_sha256": "77ab9bf74a2a98c8cb78f27b9c1b4b355b9c155861159a40398d4c2dd003c0e3",
+          "pdf": "PDF/blank/SRR_v1.0_blank.pdf",
+          "pdf_sha256": "39797857f3e146a320b926ecfa4d7943a8e01e452fb51b2105f0e1b457b6ace7",
+          "pdf_pages": 7
+        },
+        "filled": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/SRR/SRR_v1.0_filled.html",
+          "source_sha256": "5041850d7bf47da226f66feeb52439217c0e771bfb49d221da28b6c87ab4e65d",
+          "html": "HTML/filled/SRR_v1.0_filled.html",
+          "html_sha256": "5041850d7bf47da226f66feeb52439217c0e771bfb49d221da28b6c87ab4e65d",
+          "pdf": "PDF/filled/SRR_v1.0_filled.pdf",
+          "pdf_sha256": "51db68db06504883ca7ec6dfc034f2a351bda4e959ac1a3ea3b2c4061a16536b",
+          "pdf_pages": 7
+        }
+      }
+    },
+    {
       "instrument": "SCML",
       "version": "0.7",
       "approval": "Concluído pelo autor em 30/10/2026",
@@ -366,8 +391,7 @@
   ],
   "pending": {
     "POT": "Autor pediu nova conferência; não incluído nos concluídos.",
-    "MRL": "Suspenso, sem aprovação final.",
-    "SRR": "Montagem externa, sem aprovação final do HTML nesta conversa."
+    "MRL": "Suspenso, sem aprovação final."
   },
   "export": {
     "date": "2026-10-30",
@@ -382,8 +406,8 @@
       "Bradley Hand"
     ],
     "source_html_unchanged": true,
-    "pdf_count": 26,
-    "pdf_pages": 137,
+    "pdf_count": 28,
+    "pdf_pages": 151,
     "font_files_redistributed": false,
     "last_addition_date": "2026-10-31"
   }
