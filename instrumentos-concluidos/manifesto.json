@@ -203,6 +203,31 @@
       }
     },
     {
+      "instrument": "IMP",
+      "version": "1.0",
+      "approval": "Concluído pelo autor em 31/10/2026",
+      "variants": {
+        "blank": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/IMP/IMP_v1.0_blank.html",
+          "source_sha256": "e9756c4895a806326e639804d9b27145b4ce84e4105af500348c5a433cea6e36",
+          "html": "HTML/blank/IMP_v1.0_blank.html",
+          "html_sha256": "e9756c4895a806326e639804d9b27145b4ce84e4105af500348c5a433cea6e36",
+          "pdf": "PDF/blank/IMP_v1.0_blank.pdf",
+          "pdf_sha256": "fa2ab939ae343ddf38699ee445ab5d514f052b55f379a93ee7f106e837a3d1d0",
+          "pdf_pages": 9
+        },
+        "filled": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/IMP/IMP_v1.0_filled.html",
+          "source_sha256": "c9ead2b4164c6dfcf78154bf10a14b8ab22bf993cad52385332228ad2d919aef",
+          "html": "HTML/filled/IMP_v1.0_filled.html",
+          "html_sha256": "c9ead2b4164c6dfcf78154bf10a14b8ab22bf993cad52385332228ad2d919aef",
+          "pdf": "PDF/filled/IMP_v1.0_filled.pdf",
+          "pdf_sha256": "7cf379cc46785a6fc6b7cd5a8577e47704aed1fc611938c58b4209621b50a91c",
+          "pdf_pages": 9
+        }
+      }
+    },
+    {
       "instrument": "SLCT",
       "version": "0.4",
       "approval": "Inclusão como concluído confirmada explicitamente pelo autor em 30/10/2026. Preenchido gerado conforme o pedido de organização.",
@@ -331,8 +356,8 @@
       "Bradley Hand"
     ],
     "source_html_unchanged": true,
-    "pdf_count": 22,
-    "pdf_pages": 110,
+    "pdf_count": 24,
+    "pdf_pages": 128,
     "font_files_redistributed": false,
     "last_addition_date": "2026-10-31"
   }
