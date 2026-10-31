@@ -684,7 +684,218 @@ Um CAPA pode exigir aumento temporário de sample, revisão triggered ou novo ch
 
 ---
 
-## 14. Escalabilidade
+## 14. Integração operacional: IMP → IMC → CAPA Log
+
+A relação entre os três instrumentos deve ser entendida como um ciclo operacional, não como três documentos que repetem a mesma informação.
+
+```text
+IMP defines the planned verification
+        ↓
+IMC executes one defined review cycle
+        ↓
+IMC records findings, evidence, action and effectiveness follow-up
+        ↓
+CAPA Log receives only actions that require portfolio-level tracking
+        ↓
+CAPA status/effectiveness may trigger a prospective IMP change
+```
+
+### 14.1. O que o IMP entrega ao IMC
+
+Antes de cada revisão, o IMC deve recuperar do IMP, por referência e versão:
+
+- checks em escopo;
+- período ou trigger;
+- população e regra de amostragem;
+- frequência e primeira revisão;
+- fontes autoritativas;
+- reviewer e backup;
+- critérios de execução, evidência e efetividade;
+- regra de escalonamento;
+- versão do plano executada.
+
+O IMC não deve obrigar o reviewer a reconstruir essas regras a partir de uma SOP, reunião ou memória pessoal.
+
+### 14.2. O que o IMC devolve ao IMP
+
+O IMC registra a execução real de um ciclo:
+
+- review ID e IMP version;
+- período ou trigger;
+- domínios em escopo;
+- população/amostra efetivamente revisada;
+- resultados de execution, evidence e effectiveness/response;
+- limitações, findings e resposta imediata;
+- linked record, owner e due date;
+- effectiveness follow-up;
+- recomendação de manter ou alterar o plano.
+
+O IMC pode recomendar alteração de frequência, amostra ou escopo, mas não deve alterar silenciosamente o IMP durante o preenchimento. A mudança passa pelo change control e vale prospectivamente.
+
+### 14.3. Quando o IMC é suficiente
+
+Um finding pode ser encerrado no próprio IMC quando for isolado, de baixa consequência, corrigível imediatamente, sem recorrência, sem falha sistêmica e sem necessidade de acompanhamento de portfólio. Mesmo assim, o IMC deve registrar ação, owner, prazo e evidência de efetividade quando aplicável.
+
+### 14.4. Quando o finding deve entrar no CAPA Log
+
+O IMC deve encaminhar um finding para o CAPA Log quando houver:
+
+- recorrência após resposta inicial;
+- falha de controle com consequência material;
+- pattern across participants, procedures, visits, reviewers or periods;
+- repeated endpoint discrepancy;
+- persistent delay or backlog;
+- failure of an implemented corrective action;
+- systemic weakness affecting more than one process;
+- necessidade de preventive action em processo relacionado;
+- ação com vários milestones ou horizonte longo de efetividade;
+- necessidade de accountability e closure em nível de portfólio.
+
+O IMC encaminha a referência e a decisão, não a investigação inteira. O CAPA individual continua sendo a fonte da análise causal e do plano detalhado.
+
+### 14.5. Handoff mínimo do IMC para o CAPA Log
+
+| Campo | Conteúdo esperado |
+|---|---|
+| Source review | IMC ID, review date, IMP version and domain |
+| Finding | Short factual description |
+| Evidence | Source or linked record supporting the finding |
+| Impact | Participant, data, device, process or endpoint consequence |
+| Initial response | What was done immediately |
+| CAPA rationale | Why an individual CAPA is required instead of IMC closure |
+| Linked records | SRR, PIR, POT, SART, CSST, FUCR or other applicable records |
+| Owner and trigger | Accountable role and condition for follow-up/escalation |
+
+O CAPA Log então registra o CAPA na população, classifica-o, acompanha milestones e avalia efetividade/fechamento. Ele não recalcula a revisão do IMC.
+
+### 14.6. O que o CAPA Log devolve ao IMP
+
+O CAPA Log pode recomendar, para períodos futuros:
+
+- aumento temporário ou permanente da frequência;
+- aumento da amostra ou passagem para census;
+- inclusão de um check antes excluído;
+- novo early-review trigger;
+- reviewer mais independente;
+- redução de frequência após controle demonstrado;
+- alteração da source boundary ou do critério de efetividade.
+
+Essa recomendação não substitui a aprovação. O IMP deve registrar motivo, data efetiva, responsável pela aprovação e período a partir do qual a nova regra vale.
+
+### 14.7. Exemplo operacional
+
+```text
+IMP: endpoint data agreement is reviewed quarterly using a defined sample.
+IMC: finds repeated discrepancies in the sampled endpoint fields.
+Immediate response: reconcile affected records and notify the accountable role.
+CAPA Log: records a CAPA because the discrepancy recurred after the initial response.
+CAPA review: follows implementation and tests effectiveness in later cycles.
+IMP change: increases the sample or adds an early trigger for future periods.
+```
+
+O período anterior continua vinculado à versão original do IMP. A nova amostra não deve ser usada retroativamente sem uma re-review formal documentada.
+
+---
+
+## 15. Critérios práticos de amostra e frequência
+
+Não existe um tamanho universal adequado para todos os sites e checks. Os valores abaixo são pontos de partida de desenho, não limites regulatórios nem regras que possam ser alteradas depois de o resultado ser conhecido.
+
+### 15.1. Variáveis que determinam a regra
+
+O IMP deve considerar:
+
+- volume esperado de participantes, visitas, procedimentos, image sets, events ou fields;
+- consequência potencial e velocidade de propagação da falha;
+- tempo até que uma correção ainda seja útil;
+- qualidade e estabilidade da fonte;
+- experiência da equipe;
+- resultados dos ciclos anteriores;
+- existência de trigger independente;
+- capacidade real do reviewer;
+- necessidade de census por segurança, rastreabilidade ou reporte.
+
+### 15.2. Regra geral por volume de inclusão
+
+| Situação do site | Frequência inicial | Amostra inicial | Ajuste esperado |
+|---|---|---|---|
+| Baixa inclusão / poucos eventos | Após primeiras inclusões e depois trimestral para checks lentos; mensal para checks rápidos | Census dos primeiros casos; census do período quando a população for pequena | Manter census para população pequena; não usar porcentagem instável sozinha |
+| Inclusão intermediária | Após primeiras inclusões e mensal ou trimestral conforme risco | Primeiro bloco em census; depois mínimo fixo mais fração definida | Aumentar após finding, recorrência ou piora do indicador |
+| Alta inclusão / fluxo rápido | Primeira revisão precoce; mensal para controles rápidos; trimestral apenas para fenômenos lentos | Primeiro bloco em census; depois amostra baseada em volume e risco | Trigger retorna a revisão ampliada ou census; não esperar o próximo trimestre |
+
+O calendário deve ser escolhido por check. Um site de baixa inclusão pode precisar de revisão mensal por safety ou device accountability; um site de alta inclusão pode revisar external context trimestralmente se esse fenômeno mudar lentamente.
+
+### 15.3. Site de baixa inclusão
+
+Em baixa inclusão, 10% ou 20% podem resultar em zero ou uma unidade. Como ponto de partida operacional:
+
+1. revisar após as primeiras inclusões;
+2. fazer census dos primeiros procedimentos, image sets e follow-up records;
+3. fazer census do período quando a população for pequena;
+4. usar trimestral para checks lentos;
+5. usar mensal para safety, timeliness, device accountability ou processos que deterioram rapidamente;
+6. usar milestone por surgeon para learning curve;
+7. executar trigger imediato quando não for seguro esperar o calendário.
+
+Uma regra inicial que o site pode justificar é:
+
+```text
+population ≤ 10 units in the review period: census;
+population 11–30: fixed minimum sample plus all triggered/high-risk units;
+population > 30: predefined fraction with a minimum floor, unless census is required.
+```
+
+Essas faixas são propostas para calibração, não exigências universais.
+
+### 15.4. Site de alta inclusão
+
+Em alta inclusão, revisar tudo mensalmente pode tornar a revisão superficial. Como ponto de partida:
+
+1. census do primeiro bloco para confirmar o workflow;
+2. amostra mínima fixa por ciclo;
+3. fração adicional ou seleção sistemática/randomizada;
+4. inclusão de todos os casos com trigger, independentemente da amostra;
+5. aumento temporário após erro, recorrência ou fonte instável;
+6. retorno à amostra basal somente após evidência de efetividade.
+
+Uma regra inicial de desenho pode ser:
+
+```text
+first 10–20 units: census;
+routine high-volume review: fixed minimum sample + predefined fraction;
+triggered/high-risk units: census;
+repeated finding: expanded sample or temporary census;
+stable control over predefined cycles: return to the approved baseline sample.
+```
+
+O IMP deve registrar como as unidades foram selecionadas. “Review a sample” não é uma regra reproduzível.
+
+### 15.5. Critérios por tipo de check
+
+| Tipo de check | Regra prática preferida |
+|---|---|
+| Sterile release and implant traceability | Census dos procedimentos iniciais e de qualquer breach, substitution, mismatch, deficiency ou missing identifier; amostra somente após estabilidade demonstrada. |
+| Operative documentation | Census dos primeiros procedimentos de cada surgeon ou após mudança; amostra periódica após estabilização; census quando faltar informação essencial. |
+| Imaging usability and timing | Census do primeiro conjunto relevante e de qualquer quality concern; amostra periódica de image sets com seleção rastreável. |
+| Follow-up execution | Mensal em fluxo rápido ou trimestral em fluxo lento; census quando o número de visitas for pequeno; separar timing de completude. |
+| Endpoint data agreement | Amostra definida de fields/participants; aumentar para census dos affected fields após discrepância recorrente. |
+| Timeliness and closure | Census de safety reports e overdue/high-risk items; amostra para atrasos administrativos de baixo risco em populações grandes. |
+| External context | Revisão geralmente trimestral; trigger imediato para safety alert, field notice ou mudança material de risco. |
+| Complication monitoring | Eventos relevantes geralmente em census; análise de padrão periódica e escalada por cluster, concentração ou threshold. |
+
+### 15.6. Aumentar, reduzir ou substituir
+
+O IMP deve fixar antecipadamente triggers para aumentar a amostra, como discrepância endpoint-critical, recurrence, CAPA novo, signal do sponsor, mudança de equipe/equipamento, source unavailable ou cluster de complicações. A expansão pode ser duplicar a amostra, revisar o período inteiro ou iniciar census.
+
+Redução de amostra ou frequência só deve ocorrer após estabilidade demonstrada, ausência de findings materiais, avaliação de risco, aprovação e mudança prospectiva do IMP.
+
+Se um registro selecionado estiver indisponível, não deve ser substituído silenciosamente. Deve-se registrar a indisponibilidade, aplicar a regra de substituição predefinida e aumentar a amostra quando a perda comprometer a confiança do resultado.
+
+Para pequenos denominadores, priorizar contagem, denominador, unidades revisadas, limitações e decisão fundamentada. Evitar falsa precisão com percentuais sem `n/N`.
+
+---
+
+## 16. Escalabilidade
 
 O IMP precisa funcionar em diferentes níveis de implementação.
 
@@ -712,7 +923,7 @@ A forma muda, mas a obrigação de demonstrar que a verificação ocorreu e que 
 
 ---
 
-## 15. Arquitetura da decisão no IMP
+## 17. Arquitetura da decisão no IMP
 
 Cada linha operacional precisa seguir esta cadeia:
 
@@ -741,7 +952,7 @@ O exemplo serve para demonstrar a lógica, não para impor esses números a todo
 
 ---
 
-## 16. O que o IMP deve produzir
+## 18. O que o IMP deve produzir
 
 O IMP produz cinco resultados controlados:
 
@@ -755,7 +966,7 @@ Não produz findings ou counts do estudo. Isso será produzido pelo IMC, PIR, FU
 
 ---
 
-## 17. Checklist de validação do futuro HTML
+## 19. Checklist de validação do futuro HTML
 
 1. O documento deixa claro, na primeira página, que IMP planeja e IMC executa?
 2. Existe um IMP ID e uma versão controlada?
@@ -790,7 +1001,7 @@ Não produz findings ou counts do estudo. Isso será produzido pelo IMC, PIR, FU
 
 ---
 
-## 18. Conclusão
+## 20. Conclusão
 
 O IMP é o documento que transforma a intenção de “o site vai se monitorar” em um compromisso operacional verificável.
 
@@ -823,7 +1034,7 @@ SRR and site capacity
 
 ---
 
-## 19. Fontes verificadas
+## 21. Fontes verificadas
 
 - Tese completa (29-10), seção 4.4.1: internal verification, dez checks, frequência, amostra, reviewer, triggers e relação IMP–IMC.
 - Tese completa (29-10), seção 4.5: performance indicators, regras fixadas antes da inclusão, thresholds e relação com CAPA.
