@@ -197,3 +197,10 @@ Os flags dos instrumentos (modelos em PDF x texto) ficam em `revisao/flags-instr
 - CSST v2.0 CONCLUÍDO pelo autor (31/10). Seção A: parágrafo + tabela Unit/Decision/Inputs/Outputs horizontal (a lista "How the form works" é exclusiva do SRR; não usar em outros). Colunas com larguras proporcionais ao que se escreve. Preenchido: CSST-014-02 disparado pela luxação do SART-014-005; sinal de instabilidade crescente (T1–T4) enviado a SLCT, patrocinador, SART, SRR, POT, IMP.
 - CSST final: C1 sem triagem, com momentos iguais às colunas da C2 (operado, alta, 1ª visita, 6 sem…24 m); Overview sem 'N used', com Change (%) e acumulado da revisão anterior; H com coluna Signal ID (liga ao 'Sent on (see H)' da F); preenchimento 9.2px.
 - Clavien-Dindo completo (31/10): SART v1.1 (campo de grau na C1), SCML v0.8 (coluna de grau copiada do SART + tabela de referência com exemplos de ombro e sufixo d), CSST v2.0 (coluna 'Grade IIIa or higher' na C2, página por grau × momento, E1–E3 com Grade I–II e IIIa–V, gatilhos T1/T5–T7 por grau e T11 'mesma complicação grave repetida'). Versões antigas mantidas no Codex.
+
+## 31/10/2026 — conclusão SCML v0.8, SART v1.1, CSST v2.0
+- SCML p.1: A = parágrafo curto + tabela Unit/Decision/Inputs/Outputs; B com textos curtos; nota sob B reduzida a "One event keeps one Event ID, even when both the AE and DD pathways apply."; nota sob Clavien-Dindo removida; tabela de graus no estilo de B (mesma fonte, linhas de 42px).
+- CSST: graus × momento = C3; contexto = C4 (referências T1, T8, T11, C1 atualizadas). E1–E3 sem "Share of all IIIa–V"; T5/T6 comparam a taxa IIIa–V com o resto do site. Fonte do preenchido maior (10.4–10.6px; 9.8px nas tabelas largas).
+- Tese v7 (Tese_completa_31-10_v7.docx): Clavien-Dindo em 4.3.3 (parágrafos do log e da revisão), ref. 80 Dindo 2004; citações 80–95 renumeradas para 81–96. Espelho tese/*.md não atualizado (mais antigo).
+- Visualizador: versões anteriores (SCML v0.7, SART v1.0, CSST antes do grau) com rótulo "(anterior)".
+- Próximo: IMC (incluir verificações 11 e 12 do IMP).

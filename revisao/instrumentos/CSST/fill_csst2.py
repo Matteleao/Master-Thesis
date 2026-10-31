@@ -74,11 +74,11 @@ for lab, vals in [('Unplanned configuration change', ['(1 / 8) 12.5%', '(1 / 1) 
 for r, vals in zip(rows('lk'), [['Unplanned configuration change', 'ICDL-014-005', 'Dislocation and liner disassociation (SCML-014-07, -08)', 'Planned +6 liner not in the set; +3 used. Same case had the weekend list and the missing lot.'],
                                  ['Instrument or loaner set problem', 'ICDL-014-002', 'Subluxation symptoms at 3 months (SCML-014-09)', 'Trial liner missing from the loaner set; liner chosen without a trial reduction.']]):
     fillrow(r, vals, 0)
-for r, vals in zip(rows('ex', 0), [['S-01', '(3) 37.5%', '(1 / 3) 33%', '(0 / 3) 0%', '0%', '(0 / 3) 0%', 'PI; experienced'], ['S-02', '(3) 37.5%', '(2 / 3) 67%', '(0 / 3) 0%', '0%', '(0 / 3) 0%', 'Sub-I; grade I and II only'], ['S-03', '(2) 25%', '(1 / 2) 50%', '(1 / 2) 50%', '100%', '(1 / 2) 50%', 'New in Oct; the only IIIb']]):
+for r, vals in zip(rows('ex', 0), [['S-01', '(3) 37.5%', '(1 / 3) 33%', '(0 / 3) 0%', '(0 / 3) 0%', 'PI; experienced'], ['S-02', '(3) 37.5%', '(2 / 3) 67%', '(0 / 3) 0%', '(0 / 3) 0%', 'Sub-I; grade I and II only'], ['S-03', '(2) 25%', '(1 / 2) 50%', '(1 / 2) 50%', '(1 / 2) 50%', 'New in Oct; the only IIIb']]):
     fillrow(r, vals, 0)
-for r, vals in zip(rows('ex', 1), [['Liner 36 +3 · lot GS-L36-2607', '(2) 25%', '(1 / 2) 50%', '(1 / 2) 50%', '100%', 'Includes ICDL-014-005'], ['Liner 36 +6', '(4) 50%', '(2 / 4) 50%', '(0 / 4) 0%', '0%', ''], ['Glenosphere 36 · all cases', '(8) 100%', '(4 / 8) 50%', '(1 / 8) 12.5%', '100%', 'No comparison possible']]):
+for r, vals in zip(rows('ex', 1), [['Liner 36 +3 · lot GS-L36-2607', '(2) 25%', '(1 / 2) 50%', '(1 / 2) 50%', 'Includes ICDL-014-005'], ['Liner 36 +6', '(4) 50%', '(2 / 4) 50%', '(0 / 4) 0%', ''], ['Glenosphere 36 · all cases', '(8) 100%', '(4 / 8) 50%', '(1 / 8) 12.5%', 'No comparison possible']]):
     fillrow(r, vals, 0)
-for r, vals in zip(rows('ex', 2), [['Cuff tear arthropathy, primary', '(5) 62.5%', '(2 / 5) 40%', '(0 / 5) 0%', '0%', ''], ['Fracture sequelae, primary', '(2) 25%', '(1 / 2) 50%', '(1 / 2) 50%', '100%', 'Both instability events'], ['Massive cuff tear with arthritis', '(1) 12.5%', '(1 / 1) 100%', '(0 / 1) 0%', '0%', '']]):
+for r, vals in zip(rows('ex', 2), [['Cuff tear arthropathy, primary', '(5) 62.5%', '(2 / 5) 40%', '(0 / 5) 0%', ''], ['Fracture sequelae, primary', '(2) 25%', '(1 / 2) 50%', '(1 / 2) 50%', 'Both instability events'], ['Massive cuff tear with arthritis', '(1) 12.5%', '(1 / 1) 100%', '(0 / 1) 0%', '']]):
     fillrow(r, vals, 0)
 kg = rows('kcg')
 fillrow(kg[0], ['8', '8', '8', '5', '2', '0', '0', '0', '', ''])
@@ -90,8 +90,8 @@ D = {'T1': ('Instability: all grades > 10%; IIIa–V > 5%', 'Site rule, 20 Aug 2
      'T2': ('Higher at a later time point, 2+ events', 'Site rule, 20 Aug 2026', 'Instability 0% → 20% → 50%', 'Yes'),
      'T3': ('Double the previous review', 'Site rule, 20 Aug 2026', 'Instability 0 → 2 events', 'Yes'),
      'T4': ('Any first event in a category', 'Site rule, 20 Aug 2026', 'Instability; device performance', 'Yes'),
-     'T5': ('IIIa–V share 2x share of procedures, 2+ events', 'Site rule, 20 Aug 2026', 'S-03: 100% vs 25%, but 1 event', 'No'),
-     'T6': ('Same rule as T5', 'Site rule, 20 Aug 2026', 'Liner +3: 100% vs 25%, but 1 event', 'No'),
+     'T5': ('IIIa–V rate 2x the rest of the site, 2+ events', 'Site rule, 20 Aug 2026', 'S-03: 50% vs 0%, but 1 event', 'No'),
+     'T6': ('Same rule as T5', 'Site rule, 20 Aug 2026', 'Liner +3: 50% vs 0%, but 1 event', 'No'),
      'T7': ('Assessable from 6 cases per surgeon', 'Sponsor guidance GS-RA-01', 'All surgeons have 3 cases or fewer', 'Not assessable'),
      'T8': ('Rate with marker 2x without, 2+ events', 'Site rule, 20 Aug 2026', 'Each marker has 1 event only', 'No'),
      'T9': ('2 serious events, same category, 90 days', 'CIP 11.6', '1 SADE (dislocation)', 'No'),
@@ -130,7 +130,7 @@ st = etree.SubElement(doc.find('.//head'), 'style')
 st.text = ('@font-face{font-family:"SimHand";font-weight:400 700;src:url(data:font/ttf;base64,' + hand + ')}'
            '@font-face{font-family:"SimSig";src:url(data:font/ttf;base64,' + sig + ')}'
            '.demo-fill,.demo-entry{font-family:"Segoe Print","Bradley Hand","Comic Sans MS","SimHand",cursive!important;color:#174f88!important;font-weight:600!important;line-height:1.18!important}'
-           'td .demo-fill{display:block;text-align:center!important;font-size:9.2px}.kc2 td .demo-fill,.dt td .demo-fill,.ft td .demo-fill{font-size:8.6px}td:has(>.demo-fill){text-align:center!important}.demo-fill.inl{display:inline!important}td.left:has(>.demo-fill.inl){text-align:left!important}'
+           'td .demo-fill{display:block;text-align:center!important;font-size:10.4px}.kc2 td .demo-fill,.dt td .demo-fill,.ft td .demo-fill{font-size:9.8px}.kcg td .demo-fill,.ov td .demo-fill,.kc1 td .demo-fill{font-size:10.6px!important}td:has(>.demo-fill){text-align:center!important}.demo-fill.inl{display:inline!important}td.left:has(>.demo-fill.inl){text-align:left!important}'
            '.meta-cell .demo-entry{display:block;text-align:left;font-size:10px;margin-top:3px}'
            '.wbox.lim .demo-fill{display:block;font-size:10.4px;line-height:1.45!important;margin-top:8px}'
            '.sig-ink{font-family:"Snell Roundhand","Brush Script MT","Segoe Script","Lucida Handwriting","SimSig",cursive!important;font-size:15px!important;color:#174f88}')

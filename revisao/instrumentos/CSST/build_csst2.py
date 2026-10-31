@@ -53,7 +53,7 @@ pages.append(f'<main class="page">{top("Review identification, purpose and sourc
 c1 = ['Participants enrolled', 'Investigational procedures performed', 'Surgeons operating', 'Surgeons with a first study case in this period',
       'Procedures within a surgeon\'s first ___ study cases', 'Revision procedures (component exchanged or removed)', 'Explanted components returned', 'Follow-up visits due', 'Follow-up visits done in window', 'Follow-up visits missed']
 fu = ['Operated (intraoperative)', 'Reached discharge', 'Reached first postoperative visit', 'Reached 6 weeks', 'Reached 3 months', 'Reached 6 months', 'Reached 12 months', 'Reached 24 months']
-C1 = (sec('C1', 'Cases and follow-up reached', 'These numbers are the denominators for C2 and C3. Procedures and surgeons come from the ICDL and the SLCT, enrollment from the PSEAR, follow-up from the PFVR. The time points match the columns of C2. Adapt the time points to the CIP visit schedule.') +
+C1 = (sec('C1', 'Cases and follow-up reached', 'These numbers are the denominators for C2 to C4. Procedures and surgeons come from the ICDL and the SLCT, enrollment from the PSEAR, follow-up from the PFVR. The time points match the columns of C2. Adapt the time points to the CIP visit schedule.') +
       table('kc1', [40, 15, 15, 15, 15], ['Count', 'This period (n)', 'Previous period (n)', 'Change (%)', 'Cumulative (N)'], [tr(td(x, 'left'), td(), td(), td(), td()) for x in c1] +
             [grp('Participants who reached each time point (N for the columns of C2)', 5)] + [tr(td(t, 'left'), td(), td(), td(), td()) for t in fu] +
             [tr(td('Participants withdrawn or lost to follow-up', 'left'), td(), td(), td(), td())]))
@@ -85,7 +85,7 @@ C2b = (sec('C2', 'Complications by follow-up time point (continued)') +
        table('ov', [28, 11, 12, 11, 19, 19], ['Measure', 'This period (n)', 'Previous period (n)', 'Change (%)', 'Cumulative<span class="u">(n / N) %</span>', 'Cumulative at previous review<span class="u">(n / N) %</span>'], [tr(td(x, 'left ev'), td(), td(), td(), td(), td()) for x in ov]))
 pages.append(f'<main class="page landscape">{top("Complications by time point · 2 of 2")}<section class="section compact">{C2b}</section>{foot("Complications by follow-up time point", 4)}</main>')
 GRD = [('I', 'No treatment beyond simple care'), ('II', 'Drug treatment, transfusion'), ('IIIa', 'Intervention without general anesthesia'), ('IIIb', 'Intervention under general anesthesia'), ('IVa', 'Life-threatening, single organ'), ('IVb', 'Life-threatening, multiorgan'), ('V', 'Death')]
-C2g = (sec('C2', 'Complications by Clavien-Dindo grade and time point', 'Grades come from the SCML, which copies them from the SART. Count each complication once, in the column of its time point. Device deficiencies without an adverse event are not graded.') +
+C2g = (sec('C3', 'Complications by Clavien-Dindo grade and time point', 'Grades come from the SCML, which copies them from the SART. Count each complication once, in the column of its time point. Device deficiencies without an adverse event are not graded.') +
        table('kcg', [22] + [8.5] * 8 + [5, 5], ['Grade'] + [f'{t}<span class="u">(n / N) %</span>' for t in TP] + ['Total (n)', 'New this period'],
              [tr(td('<b>N for this column (from C1)</b>', 'left nrow'), *[td('', 'nrow') for _ in range(10)])] + [tr(td(f'<b>{g}</b> · {d}', 'left ev'), *[td() for _ in range(10)]) for g, d in GRD] +
              [tr(td('<b>Disability at discharge (suffix d)</b>', 'left ev'), *[td() for _ in range(10)])]))
@@ -93,33 +93,33 @@ pages.append(f'<main class="page landscape">{top("Complications by grade")}<sect
 # ---------- Page 5: C3 context
 mk = ['Unplanned configuration change', 'Component substitution', 'Technical deviation from the surgical technique', 'Intraoperative difficulty (bone quality, deformity, revision case)', 'Senior support or proctoring used',
       'Surgeon within first ___ study cases', 'Operation outside normal hours', 'Instrument or loaner set problem', 'Gap in the operative record', 'Other: ______']
-C3 = (sec('C3', 'Procedure context', 'For each marker, compare the complication rate in procedures with it and without it. Context never changes the counts in C2; it helps explain them.') +
+C3 = (sec('C4', 'Procedure context', 'For each marker, compare the complication rate in procedures with it and without it. Context never changes the counts in C2; it helps explain them.') +
       table('kc3', [30, 16, 18, 18, 18], ['Context marker', 'Procedures with it<span class="u">(n / N) %</span>', 'With it: had a complication<span class="u">(n / n) %</span>', 'Without it: had a complication<span class="u">(n / n) %</span>', 'Source'],
             [tr(td(m, 'left ev'), td(), td(), td(), td()) for m in mk]) +
       '<div class="exh">Links between context and complications</div>' +
       table('lk', [24, 22, 26, 28], ['Context marker', 'Procedures (ICDL IDs)', 'Complication found (C2 event · SCML ID)', 'Comment'], [tr(td(), td(), td(), td()) for _ in range(4)]))
 pages.append(f'<main class="page">{top("Procedure context")}<section class="section compact">{C3}</section>{foot("Procedure context", 5)}</main>')
 # ---------- Page 6: E comparisons
-E = (sec('E', 'Comparison by surgeon, component and case type', 'Grades follow Clavien-Dindo (SCML). A group stands out when its share of grade IIIa–V complications is clearly larger than its share of procedures. Use the surgeon codes of the SLCT and the component, lot and configuration recorded in the ICDL.') +
+E = (sec('E', 'Comparison by surgeon, component and case type', 'Grades follow Clavien-Dindo (SCML). A group stands out when its rate of grade IIIa–V complications is clearly above the rate of the rest of the site. Use the surgeon codes of the SLCT and the component, lot and configuration recorded in the ICDL.') +
      '<div class="exh">E1 · By surgeon (SLCT code)</div>' +
-     table('ex', [11, 14, 15, 15, 15, 15, 15], ['Surgeon', 'Procedures<span class="u">(n) % of all</span>', 'Grade I–II<span class="u">(n / n) %</span>', 'Grade IIIa–V<span class="u">(n / n) %</span>', 'Share of all IIIa–V<span class="u">%</span>', 'IIIa–V in first ___ cases<span class="u">(n / n) %</span>', 'Note'], [tr(*[td() for _ in range(7)]) for _ in range(5)]) +
+     table('ex', [11, 16, 17, 17, 19, 20], ['Surgeon', 'Procedures<span class="u">(n) % of all</span>', 'Grade I–II<span class="u">(n / n) %</span>', 'Grade IIIa–V<span class="u">(n / n) %</span>', 'IIIa–V in first ___ cases<span class="u">(n / n) %</span>', 'Note'], [tr(*[td() for _ in range(6)]) for _ in range(5)]) +
      '<div class="exh">E2 · By component, lot or configuration (ICDL)</div>' +
-     table('ex', [24, 13, 14, 14, 14, 21], ['Component · lot · configuration', 'Procedures<span class="u">(n) % of all</span>', 'Grade I–II<span class="u">(n / n) %</span>', 'Grade IIIa–V<span class="u">(n / n) %</span>', 'Share of all IIIa–V<span class="u">%</span>', 'Note'], [tr(*[td() for _ in range(6)]) for _ in range(5)]) +
+     table('ex', [28, 16, 17, 17, 22], ['Component · lot · configuration', 'Procedures<span class="u">(n) % of all</span>', 'Grade I–II<span class="u">(n / n) %</span>', 'Grade IIIa–V<span class="u">(n / n) %</span>', 'Note'], [tr(*[td() for _ in range(5)]) for _ in range(5)]) +
      '<div class="exh">E3 · By case type</div>' +
-     table('ex', [24, 13, 14, 14, 14, 21], ['Case type (indication, primary or revision)', 'Procedures<span class="u">(n) % of all</span>', 'Grade I–II<span class="u">(n / n) %</span>', 'Grade IIIa–V<span class="u">(n / n) %</span>', 'Share of all IIIa–V<span class="u">%</span>', 'Note'], [tr(*[td() for _ in range(6)]) for _ in range(5)]))
+     table('ex', [28, 16, 17, 17, 22], ['Case type (indication, primary or revision)', 'Procedures<span class="u">(n) % of all</span>', 'Grade I–II<span class="u">(n / n) %</span>', 'Grade IIIa–V<span class="u">(n / n) %</span>', 'Note'], [tr(*[td() for _ in range(5)]) for _ in range(5)]))
 pages.append(f'<main class="page">{top("Comparison by surgeon, component and case type")}<section class="section compact">{E}</section>{foot("Comparison by surgeon, component and case type", 6)}</main>')
 # ---------- Page 7: D triggers (landscape)
-tg = [('T1', 'Rate above the agreed limit', 'Any category at any time point; one limit for all grades and a lower one for grade IIIa–V (C2).'),
+tg = [('T1', 'Rate above the agreed limit', 'Any category at any time point; one limit for all grades and a lower one for grade IIIa–V (C2, C3).'),
       ('T2', 'Rate rising with time', 'The same category grows from earlier to later time points (C2 row).'),
       ('T3', 'Rise since the previous review', 'Same category and time point, compared with the previous CSST.'),
       ('T4', 'New category', 'A category with no earlier events now has events (C2, New this period).'),
-      ('T5', 'Surgeon share', 'A surgeon\'s share of grade IIIa–V complications exceeds their share of procedures (E1).'),
-      ('T6', 'Component or configuration share', 'Same comparison for grade IIIa–V by component, lot or configuration (E2).'),
+      ('T5', 'Surgeon rate', 'A surgeon\'s rate of grade IIIa–V complications is clearly above that of the other surgeons (E1).'),
+      ('T6', 'Component or configuration rate', 'A component, lot or configuration has a grade IIIa–V rate clearly above the others (E2).'),
       ('T7', 'Early learning cases', 'Grade IIIa–V rate in a surgeon\'s first cases above their later cases (E1, C1).'),
-      ('T8', 'Context association', 'Rate with a context marker above the rate without it (C3).'),
+      ('T8', 'Context association', 'Rate with a context marker above the rate without it (C4).'),
       ('T9', 'Serious events grouped', 'Serious events in one category within a short window (SART, C2).'),
       ('T10', 'Device deficiencies of one type', 'Repeated deficiencies of the same type or component (C2, SART).'),
-      ('T11', 'Same severe complication repeated', 'The same complication of grade IIIa–V in two or more participants (C2).')]
+      ('T11', 'Same severe complication repeated', 'The same complication of grade IIIa–V in two or more participants (C3).')]
 D = (sec('D', 'Signal triggers', 'Apply each trigger and write the value found. A trigger met opens a signal in F.') +
      table('dt', [5, 17, 25, 14, 12, 15, 12], ['ID', 'Trigger', 'What is compared · where', 'Agreed limit', 'Source of the limit', 'Value found<span class="u">(n / N) %</span>', 'Met?'],
            [tr(td(i, 'cat'), td(f'<b>{a}</b>', 'left ev'), td(b, 'left small'), td(), td(), td(), td(ck('Yes', 'No', 'Not assessable', cls='opts g2'))) for i, a, b in tg]) +
