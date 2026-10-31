@@ -42,9 +42,9 @@ A = (sec('A', 'Purpose and use') +
      '<table class="purpose"><colgroup><col style="width:22%"><col style="width:26%"><col style="width:26%"><col style="width:26%"></colgroup>'
      '<thead><tr><th>Unit of analysis</th><th>Decision supported</th><th>Inputs</th><th>Outputs</th></tr></thead><tbody><tr>'
      '<td>One local risk to a CtQ factor of this investigation</td>'
-     '<td>Is the risk under control?<br>What happens next, and who acts?</td>'
-     '<td>CIP<br>Sponsor risk information<br>Local workflow and capacity<br>IMC, PIR, CSST, SLCT, SART, CAPA findings</td>'
-     '<td>Controls for the IMP to verify<br>PI decisions (POT)<br>Phase-gate conditions (MRL)<br>CAPA, sponsor and SART routes</td></tr></tbody></table>')
+     '<td>What threatens the factor, what risk remains with the controls in place, what happens next, who owns it and when it is reviewed again.</td>'
+     '<td>CIP, sponsor risk information, local workflow and capacity, and findings from the IMC, PIR, CSST, SLCT, SART and CAPA log.</td>'
+     '<td>Controls to verify (IMP)<br>PI decisions (POT)<br>Phase-gate conditions (MRL)<br>CAPA, sponsor and SART routes</td></tr></tbody></table>')
 cats = [('Safety / clinical event', 'Delayed safety awareness, incomplete assessment or missed reporting.', 'Participant protection and timely clinical decisions.'),
         ('Procedure / surgeon performance', 'Learning-curve drift, unplanned substitution or inconsistent technique.', 'Procedural consistency and interpretation of outcomes.'),
         ('Device accountability', 'Mixed or poorly segregated stock, missing identifiers or reconciliation gaps.', 'Component selection and participant-device traceability.'),
@@ -80,10 +80,10 @@ rate = [('Probability', 'Unlikely or isolated vulnerability.', 'Plausible in nor
 D = (sec('D', 'Risk rating guide', 'Rate with the controls already in place; a planned action does not lower a score. Write N/A, with a short reason, when a dimension does not apply. Do not average or multiply. A reportable event follows its CIP route at every priority.') +
      table('dt', [16, 28, 28, 28], ['Rating field', '1', '2', '3'], [tr(td(a, 'cat'), td(b, 'left'), td(c, 'left'), td(d, 'left')) for a, b, c, d in rate]) +
      table('pt', [25, 25, 25, 25], ['Low', 'Moderate', 'High', 'Critical'], [tr(
-         td('All impact dimensions are 1, probability is low and the problem is easy to detect.', 'left b1'),
-         td('At least one dimension is 2, or probability is medium, but no dimension is 3 and controls appear adequate.', 'left b2'),
-         td('Any dimension is 3, or the problem recurs, is poorly controlled, hard to detect or needs active PI review.', 'left b3'),
-         td('Immediate or unresolved safety risk, broken participant-device link, unrecoverable endpoint data, or an event to escalate now.', 'left b4'))]))
+         td('All impact dimensions are 1, probability is low and the problem is easy to detect.', 'b1'),
+         td('At least one dimension is 2, or probability is medium, but no dimension is 3 and controls appear adequate.', 'b2'),
+         td('Any dimension is 3, or the problem recurs, is poorly controlled, hard to detect or needs active PI review.', 'b3'),
+         td('Immediate or unresolved safety risk, broken participant-device link, unrecoverable endpoint data, or an event to escalate now.', 'b4'))]))
 FH = ['Risk ID', 'Date opened', 'Category', 'CtQ domain, factor and source', 'Local vulnerability and possible consequence', 'Existing controls and evidence', 'Prob.', 'Safety', 'Proc.', 'Device', 'Data', 'Detect.', 'Priority']
 GW = [5, 9, 15, 18, 13, 12, 12, 9, 7]
 GH = ['Risk ID', 'Risk owner (role)', 'Review trigger or threshold', 'Planned action / owner / due', 'Linked records and evidence', 'PI / sponsor route and deadline', 'Risk status', 'Action status', 'Last / next review']
@@ -135,10 +135,10 @@ th{text-align:center!important}
 td.cat{text-align:center;font-weight:400;color:#1d2a38;background:#f3f6f9!important;font-size:8.4px}
 td.left{text-align:left}
 .purpose th{text-align:center}.purpose td{font-size:9px;padding:5px 8px;vertical-align:top;text-align:left;height:50px;line-height:1.45}.purpose td:first-child{font-weight:400;color:inherit;background:none}
-.bt td{height:34px;font-size:9.2px;padding:3px 7px}.bt th,.ct th{font-size:9px;padding:4px}
+.bt td{height:42px;font-size:9.2px;padding:3px 7px}.bt th,.ct th{font-size:9px;padding:4px}
 .ct td{height:28px;font-size:8.8px;padding:2px 6px}
 .dt td{height:52px;font-size:8.6px;padding:3px 6px;line-height:1.22}.dt th{font-size:8.8px;padding:3px}
-.pt{margin-top:6px}.pt td{height:62px;font-size:8.6px;padding:4px 6px;vertical-align:top;line-height:1.25}.pt th{font-size:8.8px;padding:3px}
+.pt{margin-top:6px}.pt td{height:62px;font-size:8.6px;padding:4px 8px;vertical-align:middle;text-align:center;line-height:1.25}.pt th{font-size:8.8px;padding:3px}
 td.b1{background:#e6f2e7!important}td.b2{background:#fff3cf!important}td.b3{background:#fde3cf!important}td.b4{background:#f6d6d6!important}
 .exh+table{margin-top:0!important}.exh{background:#dbe7f3;color:#173c67;font-weight:700;font-size:8.6px;padding:2px 8px;border:1px solid var(--grid);border-bottom:0;margin-top:9px}
 .exrow{display:grid;grid-template-columns:57fr 43fr;gap:8px}
@@ -157,6 +157,7 @@ td.lbl{background:#3a78b5!important;color:#fff;font-size:8.4px;text-align:center
 .htl .opts,.ulog .opts{font-size:7.6px;line-height:1.15}.ulog td{height:104px;font-size:8.4px;padding:2px 5px}.ulog th{font-size:8.4px}
 .wbox.assess{min-height:450px;margin-top:8px}.cert{margin-top:8px;border:1px solid var(--grid);background:#f7f9fb;padding:7px 9px;font-size:9.2px;line-height:1.35;color:#173c67}
 .sig2 .signature{min-height:110px!important}
+.ft .opts.col{gap:3px 0}.gt .opts.g2{gap:9px 6px}.htl td:nth-child(3) .opts.col{gap:4px 0}.htl td:nth-child(5) .opts.col{gap:2px 0}.ulog .opts.col{gap:5px 0}.jlog .opts.col{gap:4px 0}
 </style>
 '''
 open(OUT, 'w').write(head + '<body class="blank-template">\n' + '\n'.join(pages) + '\n' + css + ed + '\n</body></html>\n')
