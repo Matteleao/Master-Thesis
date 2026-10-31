@@ -30,7 +30,7 @@ for v in doc.xpath('//div[@class="version"]'): v.text = 'SIMULATED · v1.0'
 doc.find('.//title').text = 'PIR v1.0 - Simulated Editable'
 for k, v in [('Study / protocol', 'GLENOS-01 / GS-2026-01'), ('CIP version', 'CIP v4.2'), ('Site / code', 'Riverside Orthopedic Center / 014'), ('PIR ID', 'PIR-014-2026-10'),
              ('Period reviewed / data cut-off', '1 to 31 Oct 2026 / 31 Oct 2026'), ('Previous PIR', 'PIR-014-2026-09'), ('Rule set (version, effective date)', 'PIR-RS-014 v1, 12 Aug 2026'), ('Review date', '5 Nov 2026'),
-             ('Prepared by / role', 'Maria Silva / Study Coordinator'), ('Accountable reviewer / role', 'Dr Alex Morgan / PI'), ('Controlled location', 'ISF tab 3 (Quality) / PIR-014-2026-10')]:
+             ('Document owner / role', 'Maria Silva / Study Coordinator'), ('Accountable reviewer / role', 'Dr Alex Morgan / PI'), ('Controlled location', 'ISF tab 3 (Quality) / PIR-014-2026-10')]:
     meta(k, v)
 tick(doc.xpath('//section[contains(@class,"meta-grid")]')[0], 'Routine')
 for st in doc.xpath('//section[contains(@class,"sheet-strip")]'):
@@ -88,7 +88,7 @@ def sign(title, name, ink, date):
     sg = [s for s in doc.xpath('//div[@class="signature"]') if s.find('b').text_content().strip() == title][0]
     fl = sg.xpath('./div[@class="sig-field"]'); fl[0].append(E('span', 'demo-fill inl', name))
     line = fl[1].find('span[@class="sig-line"]'); ik = E('span', 'sig-ink', ink); ik.tail = '  '; line.append(ik); line.append(E('span', 'demo-fill inl', date))
-sign('Prepared by', 'Maria Silva / Study Coordinator', 'M. Silva', '5 Nov 2026')
+sign('Document owner', 'Maria Silva / Study Coordinator', 'M. Silva', '5 Nov 2026')
 sign('Principal Investigator', 'Dr Alex Morgan', 'A. Morgan', '6 Nov 2026')
 F = '/tmp/claude-0/-home-user-Master-Thesis/c35b56ea-6e37-57ca-a7f6-4cae380cc50e/scratchpad/fonts/'
 hand = base64.b64encode(open(F + '4UaErEJDsxBrF37olUeD_xHMwps.ttf', 'rb').read()).decode()

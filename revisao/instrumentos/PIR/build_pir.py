@@ -36,7 +36,7 @@ DEC = ck('Within rule', 'Closer review', 'Action required', 'Not assessable', cl
 # ---------- Page 1
 hdr = ''.join([meta('Study / protocol'), meta('CIP version'), meta('Site / code'), meta('PIR ID'),
                meta('Period reviewed / data cut-off'), meta('Previous PIR'), meta('Rule set (version, effective date)'), meta('Review date'),
-               meta('Review type', ck('Routine', 'Early cases', 'Triggered', 'Action check', cls='opts left')), meta('Prepared by / role'), meta('Accountable reviewer / role'), meta('Controlled location')])
+               meta('Review type', ck('Routine', 'Early cases', 'Triggered', 'Action check', cls='opts left')), meta('Document owner / role'), meta('Accountable reviewer / role'), meta('Controlled location')])
 A = (sec('A', 'Purpose and use') +
      '<div class="box"><p>The PIR reviews the site\'s performance over one period through six indicators fixed before the first participant, plus any the site adds. It takes the results already reported by the source records (FUCR, SLCT, CSST, IMC, SART and others) and does not recount them. What it adds is the reading across time and across indicators: how each result moves over the last periods (D), and whether problems in different indicators share the same participants, surgeon, staff, time or process step (E). From that it decides what to correct (F), checks whether earlier actions worked (G) and concludes on the period (H).</p>'
      '<p>Every result keeps its count and denominator; a percentage alone hides small numbers. A rule is never changed to fit a result; a new rule applies from its effective date.</p></div>'
@@ -83,7 +83,7 @@ H = (sec('H', 'Period conclusion', 'The conclusion covers only the stated period
                                   tr(el('What the site learned this period'), td('', 'left tall')),
                                   tr(el('Routes opened (CAPA, SRR, POT, SLCT, sponsor) or none'), td('', 'left')),
                                   tr(el('Next review (date or trigger)'), td('', 'left'))]) +
-     '<div class="sig2"><div class="signature"><b>Prepared by</b><div class="sig-field">Name / role: </div><div class="sig-field">Signature / date:<span class="sig-line"></span></div></div>'
+     '<div class="sig2"><div class="signature"><b>Document owner</b><div class="sig-field">Name / role: </div><div class="sig-field">Signature / date:<span class="sig-line"></span></div></div>'
      '<div class="signature"><b>Principal Investigator</b><div class="sig-field">Name: </div><div class="sig-field">Signature / date:<span class="sig-line"></span></div></div></div>')
 pages.append(f'<main class="page">{top("Period conclusion")}{strip()}<section class="section compact">{H}</section>{foot("Period conclusion", 6)}</main>')
 css = '''<style>

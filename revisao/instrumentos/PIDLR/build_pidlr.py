@@ -29,13 +29,13 @@ pages = []
 pages = []
 YN = lambda *l: ck(*l, cls='opts col')
 def strip():
-    return '<section class="sheet-strip">' + ''.join(meta(c) for c in ['PIDLR ID', 'Study / site', 'Debrief type / evidence cut-off', 'Sheet no. / total sheets']) + '</section>'
+    return '<section class="sheet-strip">' + ''.join(meta(c) for c in ['PIDLR ID', 'Study / site', 'Investigation status / evidence cut-off', 'Sheet no. / total sheets']) + '</section>'
 # ---------- Page 1
 hdr = ''.join([meta('Study / protocol'), meta('CIP version'), meta('Site / code'), meta('PIDLR ID / revision'),
-               meta('Investigation status', ck('Completed', 'Suspended', 'Terminated', 'Ongoing', cls='opts left')), meta('Debrief type', ck('Final', 'Interim', 'Early closure', cls='opts left')),
-               meta('Period covered / close-out date'), meta('Evidence cut-off'), meta('Prepared by / role'), meta('PI'), meta('Reason for an interim or early debrief', cls=' span2')])
+               meta('Investigation status', ck('Completed', 'Suspended', 'Terminated', cls='opts left')), meta('Debrief type', ck('Final', 'Early closure', cls='opts left')),
+               meta('Period covered / close-out date'), meta('Evidence cut-off'), meta('Document owner / role'), meta('PI'), meta('Reason for an early closure (if any)', cls=' span2')])
 A = (sec('A', 'Purpose and use') +
-     '<div class="box"><p>The PIDLR turns what the site learned in one investigation into lessons that reach a controlled destination. It reviews the investigation by phase (C) and by domain (D), records each lesson with its evidence (E), sends it to the record that will own the change (F), states what remains uncertain (G) and checks that the transfer happened (H) before the debrief is closed (I). It never reclassifies a safety event or a deviation, and it does not replace the CAPA log: it cites them.</p></div>'
+     '<div class="box"><p>The PIDLR turns what the site learned in one investigation into lessons that reach a controlled destination. It reviews the investigation by phase (C) and by domain (D), records each lesson with its evidence (E), sends it to the record that will own the change (F), states the residual limitations (G) and confirms that each lesson was applied to the instrument, workflow or document concerned (H) before the debrief is closed (I). It never reclassifies a safety event or a deviation, and it does not replace the CAPA log: it cites them.</p></div>'
      '<table class="purpose"><colgroup><col style="width:22%"><col style="width:26%"><col style="width:26%"><col style="width:26%"></colgroup>'
      '<thead><tr><th>Unit of analysis</th><th>Decision supported</th><th>Inputs</th><th>Outputs</th></tr></thead><tbody><tr>'
      '<td>One investigation at one site, up to a stated evidence cut-off.</td>'
@@ -66,26 +66,26 @@ E = (sec('E', 'Lessons', 'A lesson names a practice to keep or change, its evide
            [tr(td('', 'rid'), td(), td(ck('Keep', 'Change', 'Add', 'Stop', 'Escalate', 'Limit', cls='opts col2')), td('', 'left'), td('', 'left'), td('', 'left'), td(ck('High', 'Medium', 'Low', cls='opts col'))) for _ in range(7)]))
 pages.append(f'<main class="page landscape">{top("Lessons")}{strip()}<section class="section compact">{E}</section>{foot("Lessons", 4)}</main>')
 # ---------- Page 5: F (landscape)
-F = (sec('F', 'Transfer of lessons', 'The Lesson ID goes into each receiving record, which owns the change. A document released is not yet a practice in use.') +
+F = (sec('F', 'Transfer of lessons', 'The Lesson ID goes into each receiving record, which owns the change.') +
      table('ft', [8, 15, 23, 17, 11, 8, 18], ['Lesson ID', 'Scope', 'Change needed', 'Receiving record · version', 'Owner', 'Due', 'Stage'],
-           [tr(td('', 'rid'), td(ck('Site practice', 'Future study', 'Ongoing study', 'Sponsor', 'No transfer', cls='opts col')), td('', 'left'), td('', 'left'), td(), td(), td(ck('Planned', 'Accepted', 'Transferred', 'In use', cls='opts col2'))) for _ in range(6)]))
+           [tr(td('', 'rid'), td(ck('Site practice', 'Future study', 'Sponsor', 'No transfer', cls='opts col')), td('', 'left'), td('', 'left'), td(), td(), td(ck('Planned', 'Accepted', 'Applied', cls='opts col'))) for _ in range(6)]))
 pages.append(f'<main class="page landscape">{top("Transfer of lessons")}{strip()}<section class="section compact">{F}</section>{foot("Transfer of lessons", 5)}</main>')
 # ---------- Page 6: G + H
-G = (sec('G', 'What remains uncertain', 'What could not be settled here, why, and who reviews it next.') +
-     table('gt', [10, 30, 22, 20, 18], ['Lesson ID', 'Uncertainty', 'Why it remains', 'Receiving record · owner', 'Next review'], [tr(td(), td('', 'left'), td('', 'left'), td('', 'left'), td()) for _ in range(3)]))
-H = (sec('H', 'Was the transfer made, and did it work?', 'Transferred: handoff documented. In use: evidence the practice is used. Effective: the planned check is met, which may happen after the debrief closes.') +
-     table('ht', [10, 22, 26, 20, 22], ['Lesson ID', 'Receiving record', 'Evidence checked · date', 'Effect', 'Next decision · owner'],
-           [tr(td(), td('', 'left'), td('', 'left'), td(ck('Pending', 'Supported', 'Not supported', cls='opts col')), td('', 'left')) for _ in range(4)]))
-pages.append(f'<main class="page">{top("Uncertainties and transfer check")}{strip()}<section class="section compact">{G}</section><section class="section compact">{H}</section>{foot("Uncertainties and transfer check", 6)}</main>')
+G = (sec('G', 'Residual limitations', 'What could not be settled by this investigation, why, and which record carries it forward.') +
+     table('gt', [10, 30, 22, 20, 18], ['Lesson ID', 'Limitation', 'Why it remains', 'Receiving record · owner', 'Next review'], [tr(td(), td('', 'left'), td('', 'left'), td('', 'left'), td()) for _ in range(3)]))
+H = (sec('H', 'Implementation of lessons', 'Confirm that each lesson was applied to the instrument, workflow or document concerned. Whether the change works is followed in the receiving record, not here.') +
+     table('ht', [9, 18, 27, 20, 13, 13], ['Lesson ID', 'Receiving record', 'Change made', 'Evidence (record · version · date)', 'Status', 'Owner of what remains'],
+           [tr(td(), td('', 'left'), td('', 'left'), td('', 'left'), td(ck('Applied', 'Partly applied', 'Not yet applied', cls='opts col')), td('', 'left')) for _ in range(5)]))
+pages.append(f'<main class="page">{top("Residual limitations and implementation")}{strip()}<section class="section compact">{G}</section><section class="section compact">{H}</section>{foot("Residual limitations and implementation", 6)}</main>')
 # ---------- Page 7: I
-I = (sec('I', 'Closing the debrief', 'Closing the debrief, putting a change into practice and showing it works are three separate decisions.') +
+I = (sec('I', 'Closing the debrief', 'The debrief closes when each lesson is applied or has a receiving record, an owner and a date.') +
      table('io', [34, 56, 10], ['Closure', 'Use when', 'Select'], [tr(el(a), td(b, 'left'), td(ck('', cls='opts'))) for a, b in [
-         ('Debrief closed', 'All lessons transferred; no open limitation of the debrief.'),
-         ('Closed with tracked transfers', 'Each open transfer or limit has a receiving record, owner and review date.'),
+         ('Debrief closed', 'All lessons applied; no open limitation of the debrief.'),
+         ('Closed with tracked transfers', 'Each lesson not yet applied, and each limitation, has a receiving record, an owner and a date.'),
          ('Not ready to close', 'A lesson lacks evidence, a destination or an owner.')]]) +
      table('id', [34, 66], None, [tr(el(x), td('', 'left')) for x in ['Open transfers (lesson IDs · owners)', 'Revised procedures (version · release date)', 'Other studies notified', 'Debrief file location and retention']] +
            [tr(el('Rationale and remaining limits'), td('', 'left tall'))]) +
-     '<div class="sig2"><div class="signature"><b>Prepared by</b><div class="sig-field">Name / role: </div><div class="sig-field">Signature / date:<span class="sig-line"></span></div></div>'
+     '<div class="sig2"><div class="signature"><b>Document owner</b><div class="sig-field">Name / role: </div><div class="sig-field">Signature / date:<span class="sig-line"></span></div></div>'
      '<div class="signature"><b>Principal Investigator</b><div class="sig-field">Name: </div><div class="sig-field">Signature / date:<span class="sig-line"></span></div></div></div>')
 pages.append(f'<main class="page">{top("Closing the debrief")}{strip()}<section class="section compact">{I}</section>{foot("Closing the debrief", 7)}</main>')
 css = '''<style>
@@ -97,7 +97,7 @@ td.el{text-align:left;font-weight:700;color:#173c67;background:#f7f9fb!important
 .dt td{height:61px;font-size:8.6px;padding:2px 5px}
 .et td{height:68px;font-size:8.6px;padding:2px 5px}.et .opts{font-size:7.6px;line-height:1.15}
 .ft td{height:81px;font-size:8.6px;padding:2px 5px}.ft .opts{font-size:7.4px;line-height:1.15}
-.gt td{height:105px;font-size:8.8px;padding:3px 6px}.ht td{height:100px;font-size:8.8px;padding:3px 6px}.ht .opts{font-size:7.8px}
+.gt td{height:100px;font-size:8.8px;padding:3px 6px}.ht td{height:75px;font-size:8.8px;padding:3px 6px}.ht .opts{font-size:7.8px}
 .io td{height:60px;font-size:8.8px;padding:3px 7px}.id{margin-top:7px}.id td{height:64px;font-size:8.8px;padding:3px 7px}.id td.el{background:#dbe7f3!important;text-align:center;vertical-align:middle}.id td.tall{height:200px}
 .sig2 .signature{min-height:150px!important}.letter{font-size:15px!important}
 </style>
