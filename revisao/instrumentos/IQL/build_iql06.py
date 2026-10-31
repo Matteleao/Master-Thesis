@@ -30,8 +30,8 @@ s = s[:m.start(2)] + rows + s[m.end(2):]
 # C table: new columns
 t0 = s.find('<table class="quality-log">'); t1 = s.find('</table>', t0) + len('</table>')
 hdr = ['Set ID', 'Participant /<br>Time Point', 'Linked Record ID', 'Purpose', 'Set Type /<br>Related Set', 'Modality /<br>Required Set', 'Window /<br>Acquired',
-       'Timing', 'Completeness', 'Technical Quality', 'Local Use', 'Archive', 'Reviewer /<br>Date', 'Resolution /<br>Route ID']
-w = [4, 8, 8, 8, 8, 8, 8, 7, 7, 7, 7, 7, 6, 7]
+       'Timing', 'Completeness', 'Technical Quality', 'Local Use', 'Archive', 'Reviewer /<br>Date']
+w = [4, 8, 8, 8, 8, 10, 9, 7, 7, 9, 7, 7, 8]
 col = ''.join(f'<col style="width:{x}%">' for x in w)
 body = ''
 for i in range(1, 6):
@@ -40,7 +40,7 @@ for i in range(1, 6):
              f'<td>{opts("Original", "Repeat", "Supplemental")}<span class="rel">Related: ____</span></td><td></td><td></td>'
              f'<td>{opts("In window", "Outside", "Pending", "N/A")}</td><td>{opts("Complete", "Partial", "Missing", "N/A")}</td>'
              f'<td>{opts("Adequate", "Limited", "Non-conforming", "Not assessed")}</td><td>{opts("Usable", "Limited use", "Pending", "Not usable")}</td>'
-             f'<td>{opts("Archived", "Transferred", "Receipt confirmed")}<span class="rel">Ref.: ____</span></td><td></td><td></td></tr>')
+             f'<td>{opts("Archived", "Transferred", "Receipt confirmed")}<span class="rel">Ref.: ____</span></td><td></td></tr>')
 s = s[:t0] + f'<table class="quality-log"><colgroup>{col}</colgroup><thead><tr>' + ''.join(f'<th>{h}</th>' for h in hdr) + f'</tr></thead><tbody>{body}</tbody></table>' + s[t1:]
 rep('<div class="guide">One row per image set. Link PSEAR/PFVR when applicable.', '<div class="guide">One row per image set. Link the PSEAR, ICDL or PFVR that uses it, and state the purpose for which the set is judged.')
 # D: period, denominator, unit, overlap; extra rows
@@ -77,7 +77,7 @@ s = re.sub(r'<section class="meta-grid continuation-meta">.*?</section>', '', s,
 rep('Accountable Local Review and Record Location', 'Accountable Local Review')
 strip = '<section class="meta-grid continuation-meta">' + ''.join(f'<div class="meta-cell"><span class="meta-label">{c}</span><span class="meta-entry"></span></div>' for c in ['Study / Site Code', 'IQL Record ID / Revision', 'Review Period', 'Log Sheet No. / Total']) + '</section>'
 k = s.find('</header>', s.find('<main class="page p2')) + len('</header>'); s = s[:k] + strip + s[k:]
-rep('<span class="meta-label">Review Period / Image-set IDs Reviewed (source range)</span>', '<span class="meta-label">Log Sheets Reviewed</span>')
+rep('<span class="meta-label">Review Period / Image-set IDs Reviewed (source range)</span>', '<span class="meta-label">Image-set IDs / Scope Reviewed</span>')
 rep('<span class="meta-label">Distinct Image Sets Reviewed (N, counted per set, not per participant)</span>', '<span class="meta-label">Distinct Image Sets Reviewed (N)</span>')
 i = s.find('<div class="writebox pi-basis">'); j = s.find('</section>', s.find('<section class="meta-grid record-location">')) + len('</section>')
 s = s[:i] + ('<section class="meta-grid record-location"><div class="meta-cell"><span class="meta-label">PI Review · Trigger or Governing Reference</span>'
@@ -91,6 +91,7 @@ rep('<th>Resolution ID / Set ID / Issue / Use Impact</th><th>Immediate Response 
 i = s.find('<table class="resolution-log"'); j = s.find('</tbody>', i); k = s.rfind('<tr>', i, j)
 s = s[:j] + s[k:j] + s[j:]
 rep('<div class="meta-cell"><span class="meta-label">PI Review · Trigger or Governing Reference</span>', '<div class="meta-cell pi-cell"><span class="meta-label">PI Review · Trigger or Governing Reference</span>')
+rep('Use Resolution / Route ID only for an exception, repeat, second review or other response; otherwise enter N/A.', 'Open a line in Section E for any exception, repeat, second review or other response.')
 css = '<style>.quality-log .rel{display:block;margin-top:2px;font-size:7.4px;color:#5f6670;text-align:left}.quality-log th{font-size:7.6px;padding:3px 2px}.quality-log .options{font-size:7.2px}.review-log td{height:50px!important;padding:3px 6px!important}.reference-guide td{height:58px!important;padding:3px 6px!important;line-height:1.22}.scope-table td{padding:3px 6px!important;line-height:1.22}.topbar .subtitle{font-size:9.5px;color:#d7e2ee;margin-top:2px;text-transform:none}.purpose-h th{text-align:center}.purpose-h td{height:40px;vertical-align:top;text-align:left;font-weight:400!important;color:inherit!important;background:none!important}.log-meta .meta-cell{min-height:58px!important}.pi-opts{display:flex;gap:28px;margin:10px 7px 0;justify-content:center}.record-location .meta-label{text-align:center}.reference-guide th,.review-log th,.resolution-log th,.conclusion-table th{text-align:center!important}.log-meta .meta-cell{min-height:66px!important}.reference-guide td{height:84px!important}.quality-log td{height:91px!important}.review-log td{height:55px!important}.resolution-log td{height:75px!important}.conclusion-table td{height:62px!important}.conclusion-basis{min-height:240px!important}.signature{min-height:170px!important}.record-location .meta-cell{min-height:62px}</style>\n'
 i = s.rfind('</head>'); s = s[:i] + css + s[i:]
 open(OUT, 'w').write(s); print('ok')

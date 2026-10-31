@@ -52,9 +52,9 @@ for row, c in zip(rows('quality-log', 0) + rows('quality-log', 1), C):
     if c[4]: rel = td[4].find('span[@class="rel"]'); rel.text = 'Related: '; rel.append(E('span', 'demo-fill inl', c[4]))
     put(td[5], c[5]); put(td[6], c[6]); tick(td[7], c[7]); tick(td[8], c[8]); tick(td[9], c[9]); tick(td[10], c[10]); tick(td[11], *c[11])
     if c[12]: rel = td[11].find('span[@class="rel"]'); rel.text = 'Ref.: '; rel.append(E('span', 'demo-fill inl', c[12]))
-    put(td[12], c[13]); put(td[13], c[14])
+    put(td[12], c[13])
 # D: period summary
-meta(p[3], 'Log Sheets Reviewed', '2')
+meta(p[3], 'Image-set IDs / Scope Reviewed', '01-10 (log sheets 1-2): screening, day 1, after revision, 6 weeks, 3 months')
 meta(p[3], 'Distinct Image Sets Reviewed (N)', '10')
 D = [('1 of 10', 'Set 04: axillary view not taken (pain). Repeated as set 05, complete.'),
      ('3 of 10', 'Sets 02 and 07 rotated on the ward (liner seating not visible); set 09 wrong Y-view projection. R01, R04.'),
@@ -95,7 +95,7 @@ st = etree.SubElement(doc.find('.//head'), 'style')
 st.text = ('@font-face{font-family:"SimHand";font-weight:400 700;src:url(data:font/ttf;base64,' + hand + ')}'
            '@font-face{font-family:"SimSig";src:url(data:font/ttf;base64,' + sig + ')}'
            '.demo-fill{font-family:"Segoe Print","Bradley Hand","Comic Sans MS","SimHand",cursive!important;color:#174f88!important;font-weight:600!important;line-height:1.18!important}'
-           'td:has(>.demo-fill),td .demo-fill,.meta-entry,.meta-entry .demo-fill{text-align:center!important}.meta-entry .demo-fill{display:block!important;width:100%}.demo-fill.inl{display:inline;font-size:8.4px!important}'
+           'td:has(>.demo-fill),td .demo-fill,.meta-entry,.meta-entry .demo-fill{text-align:center!important}.log-meta .meta-entry,.log-meta .meta-entry .demo-fill,.continuation-meta .meta-entry,.continuation-meta .meta-entry .demo-fill{text-align:left!important}.meta-entry .demo-fill{display:block!important;width:100%}.demo-fill.inl{display:inline;font-size:8.4px!important}'
            '.meta-entry .demo-fill{font-size:10.4px}.quality-log .demo-fill{font-size:8.8px}.review-log .demo-fill,.resolution-log .demo-fill{font-size:9.6px}'
            '.conclusion-basis .demo-fill,.conclusion-table .demo-fill{font-size:10.4px}'
            '.sig-ink{font-family:"Snell Roundhand","Brush Script MT","Segoe Script","Lucida Handwriting","SimSig",cursive!important;font-size:15px!important;font-weight:400!important;text-align:left!important}')
