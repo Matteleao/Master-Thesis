@@ -234,21 +234,22 @@
       "variants": {
         "blank": {
           "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/IQL/IQL_v0.6_blank.html",
-          "source_sha256": "1f0581ca9880c8e0b22be1fc8b77d881deb54b23b50ca037df0423df665433f5",
+          "source_sha256": "fe1ed0c719b3b66ac413bed95182ab192778f6a18a98d49b51be6abe2d687f25",
           "html": "HTML/blank/IQL_v0.6_blank.html",
-          "html_sha256": "1f0581ca9880c8e0b22be1fc8b77d881deb54b23b50ca037df0423df665433f5",
+          "html_sha256": "fe1ed0c719b3b66ac413bed95182ab192778f6a18a98d49b51be6abe2d687f25",
           "pdf": "PDF/blank/IQL_v0.6_blank.pdf",
-          "pdf_sha256": "0e6af85e15d1b669867fa2d7860249237c5ef95b7d89fac414b1099503d85931",
+          "pdf_sha256": "6cc63684fa28f4c9e66420445543628d85ae1ad8dddc695b7b6cfde48a1956b3",
           "pdf_pages": 4
         },
         "filled": {
           "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/IQL/IQL_v0.6_filled.html",
-          "source_sha256": "7cffb3c5334c60a474feba21a95ecd2ff4c91126a739e933581f614b53743cfc",
+          "source_sha256": "9f78ebbab840dd40f724c13988c11cf5e2d4bceaccfbfdee2dd669acbaed26ab",
           "html": "HTML/filled/IQL_v0.6_filled.html",
-          "html_sha256": "7cffb3c5334c60a474feba21a95ecd2ff4c91126a739e933581f614b53743cfc",
+          "html_sha256": "9f78ebbab840dd40f724c13988c11cf5e2d4bceaccfbfdee2dd669acbaed26ab",
           "pdf": "PDF/filled/IQL_v0.6_filled.pdf",
-          "pdf_sha256": "e3f6904a1724c266f3f05837df23ef2481851e2e42440616cc776c071b7641d1",
-          "pdf_pages": 4
+          "pdf_sha256": "943268f319e91f436188a65a201c2feee7338914b05e19f333b9b7057ae67478",
+          "pdf_pages": 5,
+          "note": "Simula duas folhas de log (página 2 reimpressa): 10 conjuntos de imagem."
         }
       }
     },
@@ -382,7 +383,7 @@
     ],
     "source_html_unchanged": true,
     "pdf_count": 26,
-    "pdf_pages": 136,
+    "pdf_pages": 137,
     "font_files_redistributed": false,
     "last_addition_date": "2026-10-31"
   }
