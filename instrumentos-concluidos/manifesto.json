@@ -579,21 +579,21 @@
       "variants": {
         "blank": {
           "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/PIR/PIR_v1.0_blank.html",
-          "source_sha256": "1d929d2066b8f8d6ff60d7de862ca21650bc10648b334832783fa979802ff174",
+          "source_sha256": "93d1feffc11735205f4a9682a584ae75495982e339e43109096a2f57ce567b69",
           "html": "HTML/blank/PIR_v1.0_blank.html",
-          "html_sha256": "1d929d2066b8f8d6ff60d7de862ca21650bc10648b334832783fa979802ff174",
-          "pdf": "PDF/blank/PIR_v1.0_blank.pdf",
-          "pdf_sha256": "7cea354308685ef1e2277096518a189491bbfaf38e2aa0af9f19e45a573ca996",
-          "pdf_pages": 6
+          "html_sha256": "93d1feffc11735205f4a9682a584ae75495982e339e43109096a2f57ce567b69",
+          "pdf": null,
+          "pdf_sha256": null,
+          "pdf_pages": null
         },
         "filled": {
           "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/PIR/PIR_v1.0_filled.html",
-          "source_sha256": "d1c940eb70e019f1aef910a40cb17e9beeaaa5e8324d61a1686760040ce78af4",
+          "source_sha256": "3daf45410667bbb114e28137c1708390e59dc901ec1bc40804b0651408038b49",
           "html": "HTML/filled/PIR_v1.0_filled.html",
-          "html_sha256": "d1c940eb70e019f1aef910a40cb17e9beeaaa5e8324d61a1686760040ce78af4",
-          "pdf": "PDF/filled/PIR_v1.0_filled.pdf",
-          "pdf_sha256": "72340c4a17d1456a759eb46163afb9e9588cb5b5a63ec42e61915219fd1c7119",
-          "pdf_pages": 6
+          "html_sha256": "3daf45410667bbb114e28137c1708390e59dc901ec1bc40804b0651408038b49",
+          "pdf": null,
+          "pdf_sha256": null,
+          "pdf_pages": null
         }
       }
     },
@@ -619,6 +619,31 @@
           "pdf": "PDF/filled/CAPA_v1.0_filled.pdf",
           "pdf_sha256": "ecb3df3bc0ac0d2d41e8268c6f1872e23a9880e2924648a53421f5d52bc14c31",
           "pdf_pages": 7
+        }
+      }
+    },
+    {
+      "instrument": "PIDLR",
+      "version": "0.4",
+      "approval": "Concluído pelo autor em 31/10/2026; PDF pendente",
+      "variants": {
+        "blank": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/PIDLR/PIDLR_v0.4_blank.html",
+          "source_sha256": "5ff1d989e447b0d91a968ac1f0c5b6853e5bf8d47c54f44bd5daf3a987fca8d5",
+          "html": "HTML/blank/PIDLR_v0.4_blank.html",
+          "html_sha256": "5ff1d989e447b0d91a968ac1f0c5b6853e5bf8d47c54f44bd5daf3a987fca8d5",
+          "pdf": null,
+          "pdf_sha256": null,
+          "pdf_pages": null
+        },
+        "filled": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/PIDLR/PIDLR_v0.4_filled.html",
+          "source_sha256": "3589df78191db245c102ef738723f4d66ecee8ed4b137f0516f2ac31f47b594f",
+          "html": "HTML/filled/PIDLR_v0.4_filled.html",
+          "html_sha256": "3589df78191db245c102ef738723f4d66ecee8ed4b137f0516f2ac31f47b594f",
+          "pdf": null,
+          "pdf_sha256": null,
+          "pdf_pages": null
         }
       }
     },
