@@ -59,8 +59,11 @@ reg = rows('dt', 0) + rows('dt', 1)
 for i, (r, l) in enumerate(zip(reg, L)):
     td = r.findall('td'); put(td[0], str(i + 1))
     for k, v in enumerate(l): put(td[k + 1], v)
-for n, sh in zip(['1', '2'], doc.xpath('//div[@class="sheet"]')):
-    ib = sh.find('.//span[@class="inline-blank"]'); ib.getparent().replace(ib, E('span', 'demo-fill inl', ' ' + n + ' '))
+for n, st in enumerate(doc.xpath('//section[@class="sheet-strip"]')):
+    for c in st.xpath('./div[contains(@class,"meta-cell")]'):
+        lab = c.find('b').text_content().strip(); be = c.find('.//span[@class="blank-entry"]')
+        val = {'SIFSL ID / revision': 'SIFSL-014 / rev. 23', 'Site / code': 'Riverside / 014', 'Data cut-off': '15 Oct 2026', 'Sheet no. / total sheets': f'{n + 1} of 2'}[lab]
+        be.getparent().replace(be, E('span', 'demo-entry', val))
 et = rows('et')
 for r, (res, ev) in zip(et, [('Yes', '23 lines; 11 closed with outcome'), ('Yes', '17 PSEAR IDs, all found in ISF tab 5'), ('No', 'REC-02'), ('No', 'REC-01'), ('Yes', 'EDC export 15 Oct: 8 enrolled, all in the log')]):
     td = r.findall('td'); tick(td[1], res); put(td[2], ev)
@@ -69,11 +72,13 @@ for r, v in zip(rows('it'), [('REC-01', 'Line 16: considered since 3 Aug, no fol
     td = r.findall('td')
     for k in range(4): put(td[k], v[k])
     tick(td[4], v[4])
-counts_s = ['2', '1', '1', '0', '8', '6', '4', '1', '23']; counts_c = ['5', '2', '4', '0', '0', '0', '11']
-for i, r in enumerate(rows('ft')):
+NT = [('2', '16, 23'), ('1', '22'), ('1', '21'), ('0', ''), ('8', '1, 3, 5, 7, 9, 12, 19, 20'), ('6', '4, 8, 11, 14, 15, 17'), ('4', '2, 6, 13, 18'), ('1', '10'), ('23', '1 to 23')]
+for r, (c, l) in zip(rows('nt'), NT):
+    td = r.findall('td'); put(td[1], c); put(td[2], l)
+XT = [('5', '0', '0', '5'), ('1', '0', '1', '2'), ('0', '4', '0', '4'), ('0', '0', '0', '0'), ('0', '0', '0', '0'), ('0', '0', '0', '0'), ('6', '4', '1', '11')]
+for r, x in zip(rows('xt'), XT):
     td = r.findall('td')
-    if i < len(counts_s): put(td[1], counts_s[i])
-    if i < len(counts_c): put(td[3], counts_c[i])
+    for k in range(4): put(td[k + 1], x[k])
 put(rows('rt')[0].findall('td')[1], 'PIR-014-Q3 enrollment section · coordinator · 20 Oct 2026: counts and categories; no pattern needing action')
 g = rows('gt'); tick(g[0], 'Reconciled with open issues'); put(g[1].findall('td')[1], 'REC-01 open until 22 Oct; line 16 stays Considered meanwhile.')
 def sign(title, name, ink, date):
