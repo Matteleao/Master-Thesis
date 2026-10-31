@@ -79,7 +79,7 @@ XT = [('5', '0', '0', '5'), ('1', '0', '1', '2'), ('0', '4', '0', '4'), ('0', '0
 for r, x in zip(rows('xt'), XT):
     td = r.findall('td')
     for k in range(4): put(td[k + 1], x[k])
-put(rows('rt')[0].findall('td')[1], 'PIR-014-Q3 enrollment section · coordinator · 20 Oct 2026: counts and categories; no pattern needing action')
+put(rows('rt')[0].findall('td')[1], 'PIR-014-2026-10, indicator 1 · coordinator · 20 Oct 2026: counts and categories; no pattern needing action')
 g = rows('gt'); tick(g[0], 'Reconciled with open issues'); put(g[1].findall('td')[1], 'REC-01 open until 22 Oct; line 16 stays Considered meanwhile.')
 def sign(title, name, ink, date):
     sg = [s for s in doc.xpath('//div[@class="signature"]') if s.find('b').text_content().strip() == title][0]
