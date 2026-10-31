@@ -7,7 +7,7 @@ head = re.sub(r'<title>.*?</title>', '<title>SRR v1.0 - Blank Editable</title>',
 ed_style = p[p.find('<style id="pot-editor-style">'):]; ed_style = ed_style[:ed_style.find('</style>') + 8]
 ed_script = p[p.find('<script id="pot-editor-script">'):]; ed_script = ed_script[:ed_script.find('</script>') + 9]
 ed = (ed_style + '\n' + ed_script).replace('pot-', 'srr-').replace('Editor do POT', 'Editor do SRR').replace('POT', 'SRR')
-V, NP = 'SRR v1.0', 6
+V, NP = 'SRR v1.0', 7
 def ck(*labels, cls='opts'):
     return f'<span class="{cls}">' + ''.join(f'<span class="opt"><span class="check"></span>{l}</span>' for l in labels) + '</span>'
 def top(sub):
@@ -31,15 +31,20 @@ lbl = lambda t, cs='': f'<td class="lbl"{cs}>{t}</td>'
 # ---------- Page 1: header, A, B, C
 hdr = ''.join(meta(c) for c in ['Study / protocol', 'CIP version / date', 'Site / code', 'SRR ID / revision', 'Principal Investigator', 'Register owner / role',
                                  'Sponsor risk information (ID / version)', 'Study phase', 'Date opened', 'Last review / next review', 'Current reviewer / role', 'Controlled location'])
+ul = lambda *xs: '<ul class="pl">' + ''.join(f'<li>{x}</li>' for x in xs) + '</ul>'
 A = (sec('A', 'Purpose and use') +
-     '<div class="box"><p>The SRR is the site\'s own record of the risks that its execution of the investigation creates: where local staffing, workflow, equipment or experience can compromise a condition that is critical to quality (CtQ). It is opened before the first participant is included, kept current until close-out, and complements the sponsor\'s risk assessment and the manufacturer\'s device risk file without copying them.</p>'
-     '<p>Pages 1 and 2 are reference. The register is E and F: one row per risk, with the same Risk ID on both pages; reprint the pair when it fills. Every review of a risk goes in G, and an urgent local risk is captured in H before it enters the register. Decisions that change a risk\'s status or escalate it are signed in I; J closes each review of the register.</p></div>'
+     '<div class="box"><p>The SRR records the risks that this site\'s own way of working creates for the investigation: gaps in staff, workflow, equipment or experience that could compromise a condition critical to quality (CtQ). The sponsor\'s risk assessment and the manufacturer\'s device risk file cannot see these from outside, and the SRR does not copy them. Open it before the first participant is included and keep it current until close-out.</p>'
+     '<p class="how"><b>How the form works</b></p>' +
+     ul('<b>Pages 1 and 2</b> are reference: risk categories, CtQ domains and the rating guide.',
+        '<b>E and F</b> are the register: one row per risk, with the same Risk ID on both pages. Reprint the pair when it fills.',
+        '<b>G</b> records every review of a risk; <b>H</b> captures an urgent risk before it enters the register. Each is reprinted on its own.',
+        '<b>I</b> holds the signed decisions to lower, accept, close or escalate a risk; <b>J</b> closes each review of the whole register.') + '</div>'
      '<table class="purpose"><colgroup><col style="width:22%"><col style="width:26%"><col style="width:26%"><col style="width:26%"></colgroup>'
      '<thead><tr><th>Unit of analysis</th><th>Decision supported</th><th>Inputs</th><th>Outputs</th></tr></thead><tbody><tr>'
-     '<td>One local risk to one CtQ factor of this investigation.</td>'
-     '<td>What threatens the factor, what risk remains with the controls in place, what happens next, who owns it and when it is reviewed again.</td>'
-     '<td>CIP, sponsor risk information, local workflow and capacity; findings from the IMC, PIR, CSST, SLCT, SART and CAPA log.</td>'
-     '<td>Controls for the IMP to verify; PI decisions in the POT; milestone conditions for the MRL; CAPA, sponsor and safety routes.</td></tr></tbody></table>')
+     '<td>One local risk to a CtQ factor of this investigation</td>'
+     '<td>Is the risk under control?<br>What happens next, and who acts?</td>'
+     '<td>CIP<br>Sponsor risk information<br>Local workflow and capacity<br>IMC, PIR, CSST, SLCT, SART, CAPA findings</td>'
+     '<td>Controls for the IMP to verify<br>PI decisions (POT)<br>Phase-gate conditions (MRL)<br>CAPA, sponsor and SART routes</td></tr></tbody></table>')
 cats = [('Safety / clinical event', 'Delayed safety awareness, incomplete assessment or missed reporting.', 'Participant protection and timely clinical decisions.'),
         ('Procedure / surgeon performance', 'Learning-curve drift, unplanned substitution or inconsistent technique.', 'Procedural consistency and interpretation of outcomes.'),
         ('Device accountability', 'Mixed or poorly segregated stock, missing identifiers or reconciliation gaps.', 'Component selection and participant-device traceability.'),
@@ -94,44 +99,43 @@ pages.append(f'<main class="page landscape">{top("Main register · identificatio
 G = (sec('F', 'Main register · ownership, action and status', 'Risk status says whether the risk still applies; action status says where the response stands. Implemented is not Effective until a review in G shows the control works.') +
      table('gt', GW, GH, [tr(td(), td(), td(), td(), td(), td(), td(ck('Open', 'Controlled', 'Accepted', 'Closed', cls='opts g2')), td(ck('Not started', 'In progress', 'Implemented', 'Effective', 'Not effective', cls='opts col')), td()) for _ in range(7)]))
 pages.append(f'<main class="page landscape">{top("Main register · ownership, action and status")}{strip("Register sheet no. / total")}<section class="section compact">{G}</section>{foot("Main register · ownership, action and status", 4)}</main>')
-# ---------- Page 5: H review log, I urgent entry
-H = (sec('G', 'Risk review log', 'One line per risk reviewed, at the scheduled review or when a trigger occurs. Never overwrite an earlier line.') +
-     table('htl', [11, 8, 24, 15, 13, 18, 11], ['Date / reviewer', 'Risk ID', 'Trigger and evidence reviewed', 'Control effectiveness', 'Current priority and status', 'Decision / linked record', 'Next review'],
-           [tr(td(), td(), td(), td(ck('Effective', 'Partly effective', 'Not effective', 'Not assessable', cls='opts col')), td(), td(), td()) for _ in range(6)]))
-I = (sec('H', 'Emerging or urgent risk entry', 'Act on the safety, PI or sponsor route at once; enter the risk in the register afterwards. Clinical details stay in the SART or the source record.') +
-     table('itb', [22, 28, 22, 28], None, [
-         tr(lbl('Date / time identified'), td(), lbl('Detected by / role'), td()),
-         tr(lbl('Category'), td(ck('Safety', 'Procedure', 'Device', 'Data / endpoint', 'Consent / eligibility', 'Imaging', 'Follow-up', 'Other', cls='opts left wrap'), 'left" colspan="3')),
-         tr(lbl('Local risk identified'), td('', 'tall" colspan="3')),
-         tr(lbl('Immediate containment and receiving record'), td('', 'tall" colspan="3')),
-         tr(lbl('PI notified'), td(ck('Yes', 'Pending', 'Not required', cls='opts left')), lbl('Register entry'), td(ck('New risk', 'Update', 'Not required', cls='opts left'))),
-         tr(lbl('Risk ID / owner / due'), td('', '" colspan="3'))]))
-pages.append(f'<main class="page">{top("Review log and emerging risk")}{strip("Review log sheet no. / total")}<section class="section compact">{H}</section><section class="section compact">{I}</section>{foot("Review log and emerging risk", 5)}</main>')
-# ---------- Page 6: J decision log, K certification
+# ---------- Page 5: G review log (landscape)
+H = (sec('G', 'Risk review log', 'One line per risk reviewed. Mark whether it is a scheduled review, a trigger or an urgent entry from H. Never overwrite an earlier line.') +
+     table('htl', [9, 6, 11, 23, 12, 12, 18, 9], ['Date / reviewer', 'Risk ID', 'Review type', 'Trigger and evidence reviewed', 'Control effectiveness', 'Current priority and status', 'Decision / linked record', 'Next review'],
+           [tr(td(), td(), td(ck('Scheduled', 'Trigger', 'Urgent (H)', cls='opts col')), td(), td(ck('Effective', 'Partly effective', 'Not effective', 'Not assessable', cls='opts col')), td(), td(), td()) for _ in range(7)]))
+pages.append(f'<main class="page landscape">{top("Risk review log")}{strip("Review log sheet no. / total")}<section class="section compact">{H}</section>{foot("Risk review log", 5)}</main>')
+# ---------- Page 6: H urgent entries, I decision log
+I = (sec('H', 'Emerging or urgent risks', 'Act on the safety, PI or sponsor route at once; enter the risk in the register afterwards and review it in G. Clinical details stay in the SART or the source record.') +
+     table('ulog', [12, 11, 23, 23, 13, 18], ['No. · date / time', 'Detected by (role)', 'Local risk identified', 'Immediate containment and receiving record', 'PI notified', 'Register entry'],
+           [tr(td(), td(), td(), td(), td(ck('Yes', 'Pending', 'Not required', cls='opts col')), td(ck('New risk', 'Update', 'Not required', cls='opts col') + '<span class="lab">Risk ID:</span>')) for _ in range(3)]))
 rules = ('<div class="rules"><b>Lower the priority:</b> only after a review in G shows the controls work; a planned or completed action is not enough. '
          '<b>Accept the residual risk:</b> no further action is proportionate; record why and keep the trigger. '
          '<b>Close the risk:</b> the condition no longer applies or the vulnerability was removed with evidence; a closed CAPA alone does not close a risk. '
          '<b>Escalate:</b> to the CAPA log when a control failed or the problem recurs; to the PI (POT) or a milestone review (MRL) when a decision or a phase gate is affected; to the sponsor when the effect may reach beyond the site or the CIP requires it; to the SART when a safety event may be involved.</div>')
-J = (sec('I', 'Status and escalation decisions', 'Lowering a High or Critical risk, accepting, closing and escalating are decided and signed here; F is then updated.') + rules +
-     table('jlog', [10, 8, 20, 30, 18, 14], ['Date', 'Risk ID', 'Decision', 'Rule met and evidence', 'Route / record link', 'Decided by (PI or delegate)'],
-           [tr(td(), td(), td(ck('Lower priority', 'Accept residual', 'Close', 'Escalate', cls='opts col')), td(), td(), td()) for _ in range(6)]))
-K = (sec('J', 'Register review certification') +
+J = (sec('I', 'Status and escalation decisions', 'Decided and signed here; F is then updated. The PI decides on High and Critical risks and may delegate Low and Moderate.') + rules +
+     table('jlog', [10, 8, 18, 30, 18, 16], ['Date', 'Risk ID', 'Decision', 'Rule met and evidence', 'Route / record link', 'Decided by (PI or delegate)'],
+           [tr(td(), td(), td(ck('Lower priority', 'Accept residual', 'Close', 'Escalate', cls='opts col')), td(), td(), td()) for _ in range(4)]))
+pages.append(f'<main class="page">{top("Urgent risks and decisions")}{strip("Sheet no. / total")}<section class="section compact">{I}</section><section class="section compact">{J}</section>{foot("Urgent risks and decisions", 6)}</main>')
+# ---------- Page 7: J certification
+K = (sec('J', 'Register review certification', 'At each review of the whole register. The site sets how often this happens.') +
      table('ktb', [24, 26, 24, 26], None, [
-         tr(lbl('Certification'), td('I confirm that the risks in this register were reviewed against current evidence and the controls in place, and that actions, triggers and communications are assigned or linked. This does not mean the risks are gone.', 'left stmt" colspan="3')),
+         tr(lbl('Review date'), td(), lbl('Review frequency set by the site'), td()),
          tr(lbl('Open High / Critical risks'), td('', '" colspan="3')),
          tr(lbl('Accepted residual risks'), td('', '" colspan="3')),
-         tr(lbl('Next scheduled SRR review'), td(), lbl('Linked POT / MRL review ID'), td()),
-         tr(lbl('Register owner · name / role'), td(), lbl('Signature / date'), td()),
-         tr(lbl('Principal Investigator · name'), td(), lbl('Signature / date'), td())]))
-pages.append(f'<main class="page">{top("Decisions and review certification")}<section class="section compact">{J}</section><section class="section compact">{K}</section>{foot("Decisions and review certification", 6)}</main>')
+         tr(lbl('Next scheduled SRR review'), td(), lbl('Linked POT / MRL review ID'), td())]) +
+     '<div class="wbox assess"><b>Overall assessment · what changed since the last review, where the site is most exposed, what needs attention next</b></div>'
+     '<div class="cert">I confirm that the risks in this register were reviewed against current evidence and the controls in place, and that actions, triggers and communications are assigned or linked. This does not mean the risks are gone.</div>'
+     '<div class="sig2"><div class="signature"><b>Register owner</b><div class="sig-field">Name / role: </div><div class="sig-field">Signature / date:<span class="sig-line"></span></div></div>'
+     '<div class="signature"><b>Principal Investigator</b><div class="sig-field">Name: </div><div class="sig-field">Signature / date:<span class="sig-line"></span></div></div></div>')
+pages.append(f'<main class="page">{top("Register review certification")}<section class="section compact">{K}</section>{foot("Register review certification", 7)}</main>')
 css = '''<style>
-.meta-grid .meta-cell{min-height:52px}.opts.left{justify-content:flex-start}.opts.col{display:grid;grid-template-columns:auto;justify-content:start;text-align:left;gap:1px 0}
+.meta-grid .meta-cell{min-height:62px}.opts.left{justify-content:flex-start}.opts.col{display:grid;grid-template-columns:auto;justify-content:start;text-align:left;gap:1px 0}
 .opts.g2{display:grid;grid-template-columns:auto auto;justify-content:start;text-align:left;gap:2px 6px}.opts.wrap{flex-wrap:wrap;gap:3px 12px}
 th{text-align:center!important}
 td.cat{text-align:center;font-weight:400;color:#1d2a38;background:#f3f6f9!important;font-size:8.4px}
 td.left{text-align:left}
-.purpose th{text-align:center}.purpose td{font-size:9px;padding:4px 7px;vertical-align:top;text-align:left;height:50px}.purpose td:first-child{font-weight:400;color:inherit;background:none}
-.bt td{height:60px;font-size:9.2px;padding:3px 7px}.bt th,.ct th{font-size:9px;padding:4px}
+.purpose th{text-align:center}.purpose td{font-size:9px;padding:5px 8px;vertical-align:top;text-align:left;height:50px;line-height:1.45}.purpose td:first-child{font-weight:400;color:inherit;background:none}
+.bt td{height:34px;font-size:9.2px;padding:3px 7px}.bt th,.ct th{font-size:9px;padding:4px}
 .ct td{height:28px;font-size:8.8px;padding:2px 6px}
 .dt td{height:52px;font-size:8.6px;padding:3px 6px;line-height:1.22}.dt th{font-size:8.8px;padding:3px}
 .pt{margin-top:6px}.pt td{height:62px;font-size:8.6px;padding:4px 6px;vertical-align:top;line-height:1.25}.pt th{font-size:8.8px;padding:3px}
@@ -142,13 +146,17 @@ td.b1{background:#e6f2e7!important}td.b2{background:#fff3cf!important}td.b3{back
 .lab{display:block;font-size:7.6px;color:#5f6670;text-align:left}.lab.f2{margin-top:12px}
 .ft td{height:69px;font-size:8.6px;padding:2px 5px}.ft th,.gt th{font-size:8.2px}
 .gt td{height:69px;font-size:8.6px;padding:2px 5px}.gt .opts,.htl .opts,.ft .opts,.jlog .opts{font-size:7.6px;line-height:1.15}
-.htl td{height:67px;font-size:8.6px;padding:2px 5px}.htl th{font-size:8.4px}
+.htl td{height:70px;font-size:8.6px;padding:2px 5px}.htl th{font-size:8.4px}
 td.lbl{background:#3a78b5!important;color:#fff;font-size:8.4px;text-align:center;font-weight:600;padding:3px 6px}
 .itb td{height:40px;font-size:8.4px;padding:3px 6px}.itb td.tall{height:78px}.itb .opts{font-size:8px}
 .rules{border:1px solid var(--grid);background:#f7f9fb;padding:5px 8px;font-size:8.4px;line-height:1.35;color:#1d2a38;margin-top:5px}.rules b{color:#173c67}
-.jlog{margin-top:5px}.jlog td{height:70px;font-size:8.4px;padding:2px 5px}
+.jlog{margin-top:5px}.jlog td{height:78px;font-size:8.4px;padding:2px 5px}
 .ktb td{height:52px;font-size:8.4px;padding:3px 6px}.ktb td.stmt{line-height:1.3;height:52px}
 .letter{font-size:15px!important}
+.pl{margin:2px 0 0 0;padding-left:16px}.pl li{margin:2px 0;font-size:9.6px;line-height:1.35}p.how{margin:6px 0 0}
+.htl .opts,.ulog .opts{font-size:7.6px;line-height:1.15}.ulog td{height:104px;font-size:8.4px;padding:2px 5px}.ulog th{font-size:8.4px}
+.wbox.assess{min-height:450px;margin-top:8px}.cert{margin-top:8px;border:1px solid var(--grid);background:#f7f9fb;padding:7px 9px;font-size:9.2px;line-height:1.35;color:#173c67}
+.sig2 .signature{min-height:110px!important}
 </style>
 '''
 open(OUT, 'w').write(head + '<body class="blank-template">\n' + '\n'.join(pages) + '\n' + css + ed + '\n</body></html>\n')
