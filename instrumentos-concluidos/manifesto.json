@@ -228,6 +228,31 @@
       }
     },
     {
+      "instrument": "CSST",
+      "version": "2.0",
+      "approval": "Concluído pelo autor em 31/10/2026",
+      "variants": {
+        "blank": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/CSST/CSST_v2.0_blank.html",
+          "source_sha256": "9b3c79592c11a7b0085174a026073a9394fef02fbc016ba84e93737be1f201c8",
+          "html": "HTML/blank/CSST_v2.0_blank.html",
+          "html_sha256": "9b3c79592c11a7b0085174a026073a9394fef02fbc016ba84e93737be1f201c8",
+          "pdf": "PDF/blank/CSST_v2.0_blank.pdf",
+          "pdf_sha256": "dee610f3371c9f66014fe9c4886368571bffb170b03a02711b0d352ae098508c",
+          "pdf_pages": 10
+        },
+        "filled": {
+          "source": "claude/claudinho-status-check-8tzmxz:revisao/instrumentos/CSST/CSST_v2.0_filled.html",
+          "source_sha256": "13792b1cee694db27295cc5ce7ca5d19ba686b9076f6014f7c0bb1b9ccf951e7",
+          "html": "HTML/filled/CSST_v2.0_filled.html",
+          "html_sha256": "13792b1cee694db27295cc5ce7ca5d19ba686b9076f6014f7c0bb1b9ccf951e7",
+          "pdf": "PDF/filled/CSST_v2.0_filled.pdf",
+          "pdf_sha256": "50554848f244336e4aad92d142c7293f0ec711465fe2fc72eb95e59b1582a507",
+          "pdf_pages": 10
+        }
+      }
+    },
+    {
       "instrument": "IMP",
       "version": "1.0",
       "approval": "Concluído pelo autor em 31/10/2026",
@@ -406,8 +431,8 @@
       "Bradley Hand"
     ],
     "source_html_unchanged": true,
-    "pdf_count": 28,
-    "pdf_pages": 151,
+    "pdf_count": 30,
+    "pdf_pages": 171,
     "font_files_redistributed": false,
     "last_addition_date": "2026-10-31"
   }
