@@ -18,27 +18,27 @@ instrumentos-concluidos/
 
 | Instrumento | Versão | HTML blank | HTML filled | PDF blank | PDF filled |
 |---|---|---|---|---|---|
-| **CCDM** — Criticality-Coded Delegation Matrix | v0.2 | [blank](HTML/blank/CCDM_v0.2_blank.html) | [filled](HTML/filled/CCDM_v0.2_filled.html) | [blank](PDF/blank/CCDM_v0.2_blank.pdf) | [filled](PDF/filled/CCDM_v0.2_filled.pdf) |
-| **POT** — PI Oversight Template | v1.1 | [blank](HTML/blank/POT_v1.1_blank.html) | [filled](HTML/filled/POT_v1.1_filled.html) | [blank](PDF/blank/POT_v1.1_blank.pdf) | [filled](PDF/filled/POT_v1.1_filled.pdf) |
-| **DTRM** — Device and Study Training Requirements Matrix | v0.2 | [blank](HTML/blank/DTRM_v0.2_blank.html) | [filled](HTML/filled/DTRM_v0.2_filled.html) | [blank](PDF/blank/DTRM_v0.2_blank.pdf) | [filled](PDF/filled/DTRM_v0.2_filled.pdf) |
-| **TRE** — Training Record Evaluation and Release | v0.4 | [blank](HTML/blank/TRE_v0.4_blank.html) | [filled](HTML/filled/TRE_v0.4_filled.html) | [blank](PDF/blank/TRE_v0.4_blank.pdf) | [filled](PDF/filled/TRE_v0.4_filled.pdf) |
-| **RACI** — Responsibility Assignment Matrix | v0.3 | [blank](HTML/blank/RACI_v0.3_blank.html) | [filled](HTML/filled/RACI_v0.3_filled.html) | [blank](PDF/blank/RACI_v0.3_blank.pdf) | [filled](PDF/filled/RACI_v0.3_filled.pdf) |
-| **SCR** — Surgical Credentialing Record | v0.5 | [blank](HTML/blank/SCR_v0.5_blank.html) | [filled](HTML/filled/SCR_v0.5_filled.html) | [blank](PDF/blank/SCR_v0.5_blank.pdf) | [filled](PDF/filled/SCR_v0.5_filled.pdf) |
-| **SRR** — Site Risk Register | v1.0 | [blank](HTML/blank/SRR_v1.0_blank.html) | [filled](HTML/filled/SRR_v1.0_filled.html) | [blank](PDF/blank/SRR_v1.0_blank.pdf) | [filled](PDF/filled/SRR_v1.0_filled.pdf) |
+| **CCDM** — Criticality-Coded Delegation Matrix | v0.2 | [blank](HTML/blank/CCDM_v0.2_blank.html) | [filled](HTML/filled/CCDM_v0.2_filled.html) | [blank](PDF/blank/CCDM-blank.pdf) | [filled](PDF/filled/CCDM-filled.pdf) |
+| **POT** — PI Oversight Template | v1.1 | [blank](HTML/blank/POT_v1.1_blank.html) | [filled](HTML/filled/POT_v1.1_filled.html) | [blank](PDF/blank/POT-blank.pdf) | [filled](PDF/filled/POT-filled.pdf) |
+| **DTRM** — Device and Study Training Requirements Matrix | v0.2 | [blank](HTML/blank/DTRM_v0.2_blank.html) | [filled](HTML/filled/DTRM_v0.2_filled.html) | [blank](PDF/blank/DTRM-blank.pdf) | [filled](PDF/filled/DTRM-filled.pdf) |
+| **TRE** — Training Record Evaluation and Release | v0.4 | [blank](HTML/blank/TRE_v0.4_blank.html) | [filled](HTML/filled/TRE_v0.4_filled.html) | [blank](PDF/blank/TRE-blank.pdf) | [filled](PDF/filled/TRE-filled.pdf) |
+| **RACI** — Responsibility Assignment Matrix | v0.3 | [blank](HTML/blank/RACI_v0.3_blank.html) | [filled](HTML/filled/RACI_v0.3_filled.html) | [blank](PDF/blank/RACI-blank.pdf) | [filled](PDF/filled/RACI-filled.pdf) |
+| **SCR** — Surgical Credentialing Record | v0.5 | [blank](HTML/blank/SCR_v0.5_blank.html) | [filled](HTML/filled/SCR_v0.5_filled.html) | [blank](PDF/blank/SCR-blank.pdf) | [filled](PDF/filled/SCR-filled.pdf) |
+| **SRR** — Site Risk Register | v1.0 | [blank](HTML/blank/SRR_v1.0_blank.html) | [filled](HTML/filled/SRR_v1.0_filled.html) | [blank](PDF/blank/SRR-blank.pdf) | [filled](PDF/filled/SRR-filled.pdf) |
 | **SCML** — Site Complication Monitoring Log | v0.7 | [blank](HTML/blank/SCML_v0.7_blank.html) | [filled](HTML/filled/SCML_v0.7_filled.html) | [blank](PDF/blank/SCML_v0.7_blank.pdf) | [filled](PDF/filled/SCML_v0.7_filled.pdf) |
-| **SCML** — Site Complication Monitoring Log | v0.8 | [blank](HTML/blank/SCML_v0.8_blank.html) | [filled](HTML/filled/SCML_v0.8_filled.html) | [blank](PDF/blank/SCML_v0.8_blank.pdf) | [filled](PDF/filled/SCML_v0.8_filled.pdf) |
+| **SCML** — Site Complication Monitoring Log | v0.8 | [blank](HTML/blank/SCML_v0.8_blank.html) | [filled](HTML/filled/SCML_v0.8_filled.html) | [blank](PDF/blank/SCML-blank.pdf) | [filled](PDF/filled/SCML-filled.pdf) |
 
 | **SART** — Safety Assessment, Reporting and Tracking Template | v1.0 | [blank](HTML/blank/SART_v1.0_blank.html) | [filled](HTML/filled/SART_v1.0_filled.html) | [blank](PDF/blank/SART_v1.0_blank.pdf) | [filled](PDF/filled/SART_v1.0_filled.pdf) |
-| **SART** — Safety Assessment, Reporting and Tracking Template | v1.1 | [blank](HTML/blank/SART_v1.1_blank.html) | [filled](HTML/filled/SART_v1.1_filled.html) | [blank](PDF/blank/SART_v1.1_blank.pdf) | [filled](PDF/filled/SART_v1.1_filled.pdf) |
-| **CSST** — Complication Signal Surveillance Template | v2.0 | [blank](HTML/blank/CSST_v2.0_blank.html) | [filled](HTML/filled/CSST_v2.0_filled.html) | [blank](PDF/blank/CSST_v2.0_blank.pdf) | [filled](PDF/filled/CSST_v2.0_filled.pdf) |
-| **IMP** — Internal Monitoring Plan | v1.0 | [blank](HTML/blank/IMP_v1.0_blank.html) | [filled](HTML/filled/IMP_v1.0_filled.html) | [blank](PDF/blank/IMP_v1.0_blank.pdf) | [filled](PDF/filled/IMP_v1.0_filled.pdf) |
-| **IMC** — Internal Monitoring Checklist | v1.5 | [blank](HTML/blank/IMC_v1.5_blank.html) | [filled](HTML/filled/IMC_v1.5_filled.html) | [blank](PDF/blank/IMC_v1.5_blank.pdf) | [filled](PDF/filled/IMC_v1.5_filled.pdf) |
-| **SIRR** — Site Imaging Readiness Record | v0.6 | [blank](HTML/blank/SIRR_v0.6_blank.html) | [filled](HTML/filled/SIRR_v0.6_filled.html) | [blank](PDF/blank/SIRR_v0.6_blank.pdf) | [filled](PDF/filled/SIRR_v0.6_filled.pdf) |
-| **PSEAR** — Participant Screening and Eligibility Assessment Record | v0.94 | [blank](HTML/blank/PSEAR_v0.94_blank.html) | [filled](HTML/filled/PSEAR_v0.94_filled.html) | [blank](PDF/blank/PSEAR_v0.94_blank.pdf) | [filled](PDF/filled/PSEAR_v0.94_filled.pdf) |
-| **SIFSL** — Subject Identification and Failure Screening Log | v0.5 | [blank](HTML/blank/SIFSL_v0.5_blank.html) | [filled](HTML/filled/SIFSL_v0.5_filled.html) | [blank](PDF/blank/SIFSL_v0.5_blank.pdf) | [filled](PDF/filled/SIFSL_v0.5_filled.pdf) |
-| **PFVR** — Participant Follow-up Visit Record | v0.7 | [blank](HTML/blank/PFVR_v0.7_blank.html) | [filled](HTML/filled/PFVR_v0.7_filled.html) | [blank](PDF/blank/PFVR_v0.7_blank.pdf) | [filled](PDF/filled/PFVR_v0.7_filled.pdf) |
-| **IQL** — Imaging Quality Log | v0.6 | [blank](HTML/blank/IQL_v0.6_blank.html) | [filled](HTML/filled/IQL_v0.6_filled.html) | [blank](PDF/blank/IQL_v0.6_blank.pdf) | [filled](PDF/filled/IQL_v0.6_filled.pdf) |
-| **SLCT** — Surgeon Learning Curve Tracking Log | v0.4 | [blank](HTML/blank/SLCT_v0.4_blank.html) | [filled](HTML/filled/SLCT_v0.4_filled.html) | [blank](PDF/blank/SLCT_v0.4_blank.pdf) | [filled](PDF/filled/SLCT_v0.4_filled.pdf) |
+| **SART** — Safety Assessment, Reporting and Tracking Template | v1.1 | [blank](HTML/blank/SART_v1.1_blank.html) | [filled](HTML/filled/SART_v1.1_filled.html) | [blank](PDF/blank/SART-blank.pdf) | [filled](PDF/filled/SART-filled.pdf) |
+| **CSST** — Complication Signal Surveillance Template | v2.0 | [blank](HTML/blank/CSST_v2.0_blank.html) | [filled](HTML/filled/CSST_v2.0_filled.html) | [blank](PDF/blank/CSST-blank.pdf) | [filled](PDF/filled/CSST-filled.pdf) |
+| **IMP** — Internal Monitoring Plan | v1.0 | [blank](HTML/blank/IMP_v1.0_blank.html) | [filled](HTML/filled/IMP_v1.0_filled.html) | [blank](PDF/blank/IMP-blank.pdf) | [filled](PDF/filled/IMP-filled.pdf) |
+| **IMC** — Internal Monitoring Checklist | v1.5 | [blank](HTML/blank/IMC_v1.5_blank.html) | [filled](HTML/filled/IMC_v1.5_filled.html) | [blank](PDF/blank/IMC-blank.pdf) | [filled](PDF/filled/IMC-filled.pdf) |
+| **SIRR** — Site Imaging Readiness Record | v0.6 | [blank](HTML/blank/SIRR_v0.6_blank.html) | [filled](HTML/filled/SIRR_v0.6_filled.html) | [blank](PDF/blank/SIRR-blank.pdf) | [filled](PDF/filled/SIRR-filled.pdf) |
+| **PSEAR** — Participant Screening and Eligibility Assessment Record | v0.94 | [blank](HTML/blank/PSEAR_v0.94_blank.html) | [filled](HTML/filled/PSEAR_v0.94_filled.html) | [blank](PDF/blank/PSEAR-blank.pdf) | [filled](PDF/filled/PSEAR-filled.pdf) |
+| **SIFSL** — Subject Identification and Failure Screening Log | v0.5 | [blank](HTML/blank/SIFSL_v0.5_blank.html) | [filled](HTML/filled/SIFSL_v0.5_filled.html) | [blank](PDF/blank/SIFSL-blank.pdf) | [filled](PDF/filled/SIFSL-filled.pdf) |
+| **PFVR** — Participant Follow-up Visit Record | v0.7 | [blank](HTML/blank/PFVR_v0.7_blank.html) | [filled](HTML/filled/PFVR_v0.7_filled.html) | [blank](PDF/blank/PFVR-blank.pdf) | [filled](PDF/filled/PFVR-filled.pdf) |
+| **IQL** — Imaging Quality Log | v0.6 | [blank](HTML/blank/IQL_v0.6_blank.html) | [filled](HTML/filled/IQL_v0.6_filled.html) | [blank](PDF/blank/IQL-blank.pdf) | [filled](PDF/filled/IQL-filled.pdf) |
+| **SLCT** — Surgeon Learning Curve Tracking Log | v0.4 | [blank](HTML/blank/SLCT_v0.4_blank.html) | [filled](HTML/filled/SLCT_v0.4_filled.html) | [blank](PDF/blank/SLCT-blank.pdf) | [filled](PDF/filled/SLCT-filled.pdf) |
 
 ## Versões adicionais publicadas em 31/10/2026
 
@@ -47,10 +47,10 @@ Inclusão expressamente autorizada pelo autor para coexistir com o acervo anteri
 | Instrumento | Versão | HTML blank | HTML filled | PDF blank | PDF filled |
 |---|---|---|---|---|---|
 | **PFVR** — Participant Follow-up Visit Record | v0.4 | [blank](HTML/blank/PFVR_v0.4_blank.html) | [filled](HTML/filled/PFVR_v0.4_filled.html) | [blank](PDF/blank/PFVR_v0.4_blank.pdf) | [filled](PDF/filled/PFVR_v0.4_filled.pdf) |
-| **ICDL** — Intraoperative Checklist and Device Log | v0.15 | [blank](HTML/blank/ICDL_v0.15_blank.html) | [filled](HTML/filled/ICDL_v0.15_filled.html) | [blank](PDF/blank/ICDL_v0.15_blank.pdf) | [filled](PDF/filled/ICDL_v0.15_filled.pdf) |
-| **PIR** — Performance Indicator Record | v1.0 | [blank](HTML/blank/PIR_v1.0_blank.html) | [filled](HTML/filled/PIR_v1.0_filled.html) | [blank](PDF/blank/PIR_v1.0_blank.pdf) | [filled](PDF/filled/PIR_v1.0_filled.pdf) |
-| **CAPA** — Corrective and Preventive Action Log | v1.0 | [blank](HTML/blank/CAPA_v1.0_blank.html) | [filled](HTML/filled/CAPA_v1.0_filled.html) | [blank](PDF/blank/CAPA_v1.0_blank.pdf) | [filled](PDF/filled/CAPA_v1.0_filled.pdf) |
-| **PIDLR** — Post-Investigation Debrief and Lessons Record | v0.4 | [blank](HTML/blank/PIDLR_v0.4_blank.html) | [filled](HTML/filled/PIDLR_v0.4_filled.html) | [blank](PDF/blank/PIDLR_v0.4_blank.pdf) | [filled](PDF/filled/PIDLR_v0.4_filled.pdf) |
+| **ICDL** — Intraoperative Checklist and Device Log | v0.15 | [blank](HTML/blank/ICDL_v0.15_blank.html) | [filled](HTML/filled/ICDL_v0.15_filled.html) | [blank](PDF/blank/ICDL-blank.pdf) | [filled](PDF/filled/ICDL-filled.pdf) |
+| **PIR** — Performance Indicator Record | v1.0 | [blank](HTML/blank/PIR_v1.0_blank.html) | [filled](HTML/filled/PIR_v1.0_filled.html) | [blank](PDF/blank/PIR-blank.pdf) | [filled](PDF/filled/PIR-filled.pdf) |
+| **CAPA** — Corrective and Preventive Action Log | v1.0 | [blank](HTML/blank/CAPA_v1.0_blank.html) | [filled](HTML/filled/CAPA_v1.0_filled.html) | [blank](PDF/blank/CAPA-blank.pdf) | [filled](PDF/filled/CAPA-filled.pdf) |
+| **PIDLR** — Post-Investigation Debrief and Lessons Record | v0.4 | [blank](HTML/blank/PIDLR_v0.4_blank.html) | [filled](HTML/filled/PIDLR_v0.4_filled.html) | [blank](PDF/blank/PIDLR-blank.pdf) | [filled](PDF/filled/PIDLR-filled.pdf) |
 | **IQL** — Imaging Quality Log | v0.5 | [blank](HTML/blank/IQL_v0.5_blank.html) | [filled](HTML/filled/IQL_v0.5_filled.html) | [blank](PDF/blank/IQL_v0.5_blank.pdf) | [filled](PDF/filled/IQL_v0.5_filled.pdf) |
 
 ## Situação do MRL
@@ -108,7 +108,7 @@ Entrega do ajuste solicitado sobre os HTMLs FUCR v0.8 em `versões alternativas 
 
 | Instrumento | Versão | HTML blank | HTML filled | PDF blank | PDF filled |
 |---|---|---|---|---|---|
-| **FUCR** — Follow-up Compliance Review | v0.9 | [blank](HTML/blank/FUCR_v0.9_blank.html) | [filled](HTML/filled/FUCR_v0.9_filled.html) | [blank](PDF/blank/FUCR_v0.9_blank.pdf) | [filled](PDF/filled/FUCR_v0.9_filled.pdf) |
+| **FUCR** — Follow-up Compliance Review | v0.9 | [blank](HTML/blank/FUCR_v0.9_blank.html) | [filled](HTML/filled/FUCR_v0.9_filled.html) | [blank](PDF/blank/FUCR-blank.pdf) | [filled](PDF/filled/FUCR-filled.pdf) |
 
 No preenchido, as quatro medidas mostram limites por contagens inteiras derivados das metas de exemplo já existentes: pelo menos 90% de completude (arredondar sucessos necessários para cima) e no máximo 5% de perdas (arredondar perdas permitidas para baixo). As faixas não representam novos limites clínicos validados. Contagens observadas e decisões mantidas. Cabeçalhos de metadados repetidos retirados das páginas 3–5 nas duas versões. Cada PDF tem cinco páginas.
 
@@ -119,6 +119,6 @@ O autor escolheu a versão nova, com plano A–F e registro de gate I–V, e sol
 
 | Versão selecionada | HTML blank | HTML filled | PDF blank | PDF filled |
 |---|---|---|---|---|
-| **MRL v1.0 nova** | [blank](HTML/blank/MRL_v1.0_blank.html) | [filled](HTML/filled/MRL_v1.0_filled.html) | [blank](PDF/blank/MRL_v1.0_blank.pdf) | [filled](PDF/filled/MRL_v1.0_filled.pdf) |
+| **MRL v1.0 nova** | [blank](HTML/blank/MRL_v1.0_blank.html) | [filled](HTML/filled/MRL_v1.0_filled.html) | [blank](PDF/blank/MRL-blank.pdf) | [filled](PDF/filled/MRL-filled.pdf) |
 
 O blank conserva o HTML aprovado sem alteração. O preenchido usa dados exclusivamente fictícios do exemplo GLENOS-01 / Riverside 014, equipe Maria Silva / Dr Alex Morgan, escrita manuscrita azul e marcações X. Demonstra o plano inicial, o índice de decisões, a revisão MRL-R04 com condições e a verificação posterior que mantém as restrições. Cada PDF tem oito páginas, sendo a página 2 em paisagem.
