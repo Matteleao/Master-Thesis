@@ -400,7 +400,7 @@ Governance draws on the management clauses of the three standards (ISO 13485 Cla
 
 The instruments form one set that can work on paper or within an electronic system the site already uses (DR11). This operational constraint takes precedence wherever it conflicts with another requirement, so no component depends on new software or new staff. We designed the instruments after defining the functions of all four pillars. Each instrument therefore belongs to one pillar but can use records produced under another.
 
-The conditions of the small independent clinic shaped the instruments and set the minimum implementation level. Because the components are described as functions, centers with different staffing structures can assign their own posts to those functions.
+The conditions of the small independent clinic shaped the instruments. Because the components are described as functions, centers with different staffing structures can assign their own posts to those functions.
 
 Each instrument describes a control function, so a site that already keeps a record performing that function uses it without opening a new one. The instruments are not regulatory requirements and do not replace sponsor procedures or the controls defined in the CIP. Records already required by the regulations remain in place. A new record is justified only where a critical process would otherwise lack a control or a record of its execution.
 
