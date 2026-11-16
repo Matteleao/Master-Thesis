@@ -242,7 +242,9 @@ The third category holds the 14 themes that carry no obligation for the site. Si
 
 Under the responsibility filter, sponsor-assigned requirements were retained when site activities determined whether they were fulfilled. Events relevant to these functions arise in the operating room, during follow-up visits, and in site records. The site therefore contributes directly to detecting and controlling these events, while the instruments generally assign the overarching systems to the sponsor.
 
-**Table 3.1.** Site-level regulatory gaps identified in the clause-by-clause comparison of ICH E6(R3), ISO 14155:2026, and MDR Annex XV. MDR, Medical Device Regulation; PI, principal investigator; QMS, quality management system.
+**Table 3.1.** Five gaps in explicit requirements for site-operated quality management identified through the comparison of ICH E6(R3), ISO 14155:2026, and MDR Annex XV, alongside the related provisions in these documents.
+
+MDR, Medical Device Regulation; PI, principal investigator; QMS, quality management system.
 
 | Regulatory gap | What the instruments provide |
 |---|---|
@@ -282,7 +284,9 @@ The device supplement of the MDIC to the CTTI principles offers an external chec
 
 These twelve domains govern the framework in two ways. Every component is introduced to control the risks associated with one or more domains, and every performance indicator is anchored in at least one domain.
 
-**Table 3.2.** Site-level Critical-to-Quality (CtQ) domains, with the scope of each domain and the principal threat to quality when it is not controlled. AE, adverse event; DD, device deficiency; PD, protocol deviation; PRO, patient-reported outcome; UDI, unique device identification.
+**Table 3.2.** Twelve site-level critical-to-quality (CtQ) domains, their scope, and the principal threats to quality associated with each domain.
+
+AE, adverse event; DD, device deficiency; MDR, Medical Device Regulation; PD, protocol deviation; PRO, patient-reported outcome; UDI, unique device identification.
 
 | CtQ domain |  | What it covers | Principal threat to quality |
 |---|---|---|---|
@@ -343,7 +347,9 @@ All of these studies concern drug trials, and investigations of implantable shou
 
 The registry search produced 46 eligible industry-sponsored investigations of implantable shoulder devices with 355 site records. Eight records could not be resolved to a clinical organization and were excluded. One investigation lost its only listed site with this exclusion, which left 347 site records from 45 investigations and 238 organizations. We grouped the organizations into the three categories of Table 3.3, because academic status and ownership could be identified consistently from public institutional descriptions.
 
-**Table 3.3.** Organizational environment of the 347 site records and 238 organizations in the registry dataset, including the organizations located in the United States.
+**Table 3.3.** Distribution of investigational sites by organizational environment in 45 industry-sponsored investigations of implantable shoulder devices.
+
+The dataset comprises 347 site records representing 238 distinct organizations. Each site record represents one organization participating in one investigation. Site records are reported as n (% of 347); organization counts include the subset located in the United States.
 
 | Organizational environment | Site records | Organizations | Organizations in the US |
 |---|---|---|---|
@@ -382,7 +388,9 @@ Meeting one requirement can also make another harder to meet. DR11 rules out cap
 
 No instrument examined here requires a site to operate a quality system (Gap 1), so the framework cannot be justified by pointing to a rule that demands it. Its justification comes from tracing each part back to its origin. Each component answers a requirement, and each requirement comes from a regulatory gap, a CtQ domain or an operating condition (Table 3.4). The gaps and domains trace back to the clause comparison, with Gap 3 checked against the surgical trials literature, and the operating conditions to the literature and registry evidence. Where the framework adds a control that no instrument requires, that control answers a gap the comparison documented. Everywhere else, the framework organizes duties the instruments already assign, so that a site can carry them out under the conditions in which it works.
 
-**Table 3.4.** Design requirements (DR1 to DR12) for a site-level operational quality framework and their origin in the regulatory gaps, the CtQ domains, or the structural and operating conditions of surgical investigation and of the sites. CAPA, corrective and preventive action; CtQ, critical to quality.
+**Table 3.4.** Twelve design requirements (DR1 to DR12) for the site-level quality framework and their derivation from regulatory gaps, critical-to-quality (CtQ) domains, and the structural and operating conditions examined in this thesis.
+
+CAPA, corrective and preventive action.
 
 *[Image in the thesis; content not transcribed here.]*
 
@@ -444,7 +452,9 @@ A conventional delegation log records who performs each trial-related activity. 
 
 The role structure comprises six functions covering the work of an orthopedic implant investigation, each with a defined limit of authority (Table 4.1). Under ISO 14155:2026, delegation transfers execution while the PI retains responsibility. The limits of authority distinguish responsibility for individual tasks from the authority to make decisions. Clinical judgments remain with the PI or surgeon, and endpoint adjudication belongs to the central reader where one is used.
 
-**Table 4.1.** The six functions of the role structure, with their main responsibilities and limits of authority.
+**Table 4.1.** Six site functions in the proposed quality framework, with their main responsibilities and limits of authority.
+
+PD, protocol deviation; PI, principal investigator; PROM, patient-reported outcome measure; QA, quality assurance; ROM, range of motion.
 
 *[Image in the thesis; content not transcribed here.]*
 
@@ -708,7 +718,9 @@ At closure, the site can assess what the investigation has taught it about its o
 
 *[Image in the thesis; content not transcribed here.]*
 
-**Figure 4.1.** The quality lifecycle. Seven phases in three groups, with the safety stream running across the phases of conduct; each phase shows its objective, its main actions and checks, and its exit condition.
+**Figure 4.1.** The proposed site-level quality lifecycle, comprising seven phases grouped into preparation, conduct, and closure.
+
+Each phase shows its objectives, principal controls, and completion criteria or period of activity. The safety stream spans enrollment, surgery, and follow-up. The dashed arrow indicates how lessons from one investigation inform the next. Instrument abbreviations are defined in Table 4.3.
 
 ### 4.6.2 Where each instrument acts
 
@@ -716,7 +728,9 @@ Fifteen of the twenty-four instruments are prepared or used during start-up (Fig
 
 *[Image in the thesis; content not transcribed here.]*
 
-**Figure 4.2.** Use of the twenty-four instruments across the lifecycle phases. Open marker, instrument prepared and its rules fixed; filled marker, instrument in use.
+**Figure 4.2.** Preparation and use of the 24 framework instruments across the quality lifecycle.
+
+Open circles indicate preparation and definition of operating rules; filled circles indicate use. The safety stream spans phases 3 to 5 and is shown separately from the seven lifecycle phases. Instruments are grouped by pillar; their full names are listed in Table 4.3.
 
 Within start-up, preparation follows the dependencies between instruments. Training requirements and criticality grades must be defined before anyone is released for a task, and release on device training must precede the credentialing decision that uses it. The site also sets the plan for internal verification before the first review.
 
@@ -738,7 +752,9 @@ A nonacademic hospital provides services such as radiology and controlled storag
 
 In an academic organization, the hospital also has university support and may already have a research unit and an institutional quality system. All twenty-four instruments are recommended at this level. The six additions give larger teams a more formal structure through the graded delegation matrix, milestone review log, training requirements matrix, and records of imaging readiness, screening, and visits. Where the institution already keeps training records or a corrective action system, the instruments refer to it, as DR11 requires. They add the information needed to follow the named surgeon, device, and investigation where the institutional system does not already provide it. The services available from clinical trial units nevertheless vary<sup>41,42</sup>.
 
-**Table 4.2.** Scalability model: recommended minimum set of instruments at each implementation level and the proxy that takes on the function of each instrument left out.
+**Table 4.2.** Recommended instrument sets at the three implementation levels of the framework, with the proxies, existing records or processes that perform the functions of omitted instruments.
+
+The levels assume increasing organizational support and are adjusted to the site's actual capacity and the investigation's risks. Instrument names and abbreviations are listed in Table 4.3.
 
 *[Image in the thesis; content not transcribed here.]*
 
@@ -756,7 +772,7 @@ The instruments work at three levels (Figure 4.3). At the event or person level,
 
 The component substitution illustrates how these levels connect in a site using the full set. The event is recorded in the ICDL during surgery, then reviewed alongside the surgeon's other cases in the learning curve log and reported in the procedural consistency indicator for that period. If the review confirms a pattern, the PI records a decision in the POT. That decision may change the surgeon's authorization to require proctoring, which is documented in the credentialing record and checked in the ICDL for subsequent procedures. The sequence begins under Operational Controls, is reviewed under Risk Management and Performance Oversight, and leads to a decision under Governance. We designed the instruments after defining the functions of all four pillars so that these exchanges could be built into the set.
 
-**Table 4.3.** The twenty-four instruments by pillar, with their purpose, inputs and outputs, and the section and appendix where each is developed.
+**Table 4.3.** Overview of the 24 framework instruments, organized by pillar, showing each instrument's purpose, inputs, operation, outputs, and corresponding appendix.
 
 *[Image in the thesis; content not transcribed here.]*
 
@@ -764,7 +780,9 @@ The component substitution illustrates how these levels connect in a site using 
 
 *[Image in the thesis; content not transcribed here.]*
 
-**Figure 4.3.** Levels at which the instruments work, from the record of one event to decisions about how the site runs. Arrows show information moving from evidence to decision, and decisions returning as the condition against which the next record is checked.
+**Figure 4.3.** Organization of the framework instruments across three functional levels: evidence, synthesis, and decision.
+
+Solid arrows show the progression from individual records to aggregated review and site decisions. The dashed return arrow indicates how decisions establish requirements for subsequent activities and records. Colors identify the four pillars. Instrument names and abbreviations are listed in Table 4.3.
 
 Five instruments require recording at the clinical encounter: the PSEAR, ICDL, IQL, PFVR, and SART. They cover the points where data cannot be recovered once lost. The other nineteen use existing records, either these five or the site's clinical records, which follows DR11 and the rule on source documentation. Four of the five clinical records remain as instruments at every implementation level, so the underlying evidence remains when the site uses fewer instruments for synthesis. The time required for the periodic work of the other nineteen instruments has not been measured in a small team.
 
@@ -774,7 +792,9 @@ The requirements identify a further need to assess whether those controls work. 
 
 *[Image in the thesis; content not transcribed here.]*
 
-**Figure 4.4.** Coverage of the twelve CtQ domains and the twelve design requirements by the twenty-four instruments. Filled marker, the instrument carries the control or answers the requirement directly; open marker, it supports a control or answer carried by another instrument. DR9, DR11, and DR12 apply to the set as a whole.
+**Figure 4.4.** Mapping of the 24 framework instruments to the twelve critical-to-quality (CtQ) domains and twelve design requirements (DRs).
+
+Filled circles indicate instruments that provide a domain's control; open circles indicate instruments that support, limit, or define its scope. Filled squares indicate a direct response to a design requirement; open squares indicate supporting contributions. DR9, DR11, and DR12 apply to the instrument set as a whole. Colors identify the four pillars; instrument abbreviations are defined in Table 4.3.
 
 Domains 5, 6, 8, and 9 depend wholly or partly on requirements that the regulatory texts examined do not assign to the site. Their controls are provided through site instruments, including the credentialing record, learning curve log, ICDL, and imaging records. Most of these instruments directly meet requirements derived from these four domains and provide controls beyond the duties assigned to the site in those texts. In the other domains, the framework mainly organizes existing duties, such as delegation and adverse event reporting. Additional controls in these domains also follow a design requirement, as the review of complication patterns follows DR8.
 
